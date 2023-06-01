@@ -19,7 +19,7 @@ namespace MacacaGames.EffectSystem.Editor
             sb.AppendLine();
             sb.AppendLine("namespace MacacaGames.EffectSystem");
             sb.AppendLine("{");
-            sb.AppendLine("	public struct EffectSystemScriptable");
+            sb.AppendLine("	public partial struct EffectSystemScriptable");
             sb.AppendLine("	{");
             sb.AppendLine();
 
@@ -37,7 +37,11 @@ namespace MacacaGames.EffectSystem.Editor
 
             string ScriptFile = GetPathToGeneratedScriptLocalization();
 
+            
+
+
             var filePath = Application.dataPath + ScriptFile.Substring("Assets".Length);
+            
 
             System.IO.File.WriteAllText(filePath, sb.ToString(), Encoding.UTF8);
 
@@ -55,7 +59,7 @@ namespace MacacaGames.EffectSystem.Editor
             {
                 return;
             }
-            sb.AppendLine($"		public struct {varibaleName}");
+            sb.AppendLine($"		public partial struct {varibaleName}");
             sb.AppendLine("		{");
             foreach (var item in bp)
             {
@@ -69,7 +73,8 @@ namespace MacacaGames.EffectSystem.Editor
         {
 
             CheckAndCreateResourceFolder();
-            string[] assets = AssetDatabase.FindAssets("EffectSystemScriptable");
+            string[] searchFolder = new [] {"Assets"};
+            string[] assets = AssetDatabase.FindAssets("EffectSystemScriptable", searchFolder);
             if (assets.Length > 0)
             {
                 try
@@ -81,12 +86,12 @@ namespace MacacaGames.EffectSystem.Editor
                 { }
             }
 
-            return "Packages/MacacaGamesEffectSystem/Runtime/Utility/EffectSystemScriptable.cs";
+            return "Assets/EffectSystemResources/EffectSystemScriptable.cs";
         }
 
         public static void CheckAndCreateResourceFolder()
         {
-            string effectSystemFolder =  "Packages/MacacaGamesEffectSystem/Runtime/Utility/";
+            string effectSystemFolder =  "Assets/EffectSystemResources/";
             if (!Directory.Exists(effectSystemFolder))
             {
                 Directory.CreateDirectory(effectSystemFolder);
