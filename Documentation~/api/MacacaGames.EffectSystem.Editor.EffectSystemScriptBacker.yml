@@ -1,0 +1,171 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker
+  commentId: T:MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker
+  id: EffectSystemScriptBacker
+  parent: MacacaGames.EffectSystem.Editor
+  children:
+  - MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker.BakeAllEffectEnum(System.String)
+  - MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker.CheckAndCreateResourceFolder
+  - MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker.ModifyString(System.String)
+  langs:
+  - csharp
+  - vb
+  name: EffectSystemScriptBacker
+  nameWithType: EffectSystemScriptBacker
+  fullName: MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker
+  type: Class
+  source:
+    remote:
+      path: Editor/BackEditor/EffectSystemScriptBacker.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: EffectSystemScriptBacker
+    path: ../Editor/BackEditor/EffectSystemScriptBacker.cs
+    startLine: 10
+  assemblies:
+  - Macaca.EffectSystem.Editor
+  namespace: MacacaGames.EffectSystem.Editor
+  syntax:
+    content: 'public class EffectSystemScriptBacker : object'
+    content.vb: >-
+      Public Class EffectSystemScriptBacker
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker.BakeAllEffectEnum(System.String)
+  commentId: M:MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker.BakeAllEffectEnum(System.String)
+  id: BakeAllEffectEnum(System.String)
+  parent: MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker
+  langs:
+  - csharp
+  - vb
+  name: BakeAllEffectEnum(String)
+  nameWithType: EffectSystemScriptBacker.BakeAllEffectEnum(String)
+  fullName: MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker.BakeAllEffectEnum(System.String)
+  type: Method
+  source:
+    remote:
+      path: Editor/BackEditor/EffectSystemScriptBacker.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: BakeAllEffectEnum
+    path: ../Editor/BackEditor/EffectSystemScriptBacker.cs
+    startLine: 13
+  assemblies:
+  - Macaca.EffectSystem.Editor
+  namespace: MacacaGames.EffectSystem.Editor
+  syntax:
+    content: public static void BakeAllEffectEnum(string effectEnumJson)
+    parameters:
+    - id: effectEnumJson
+      type: System.String
+    content.vb: Public Shared Sub BakeAllEffectEnum(effectEnumJson As String)
+  overload: MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker.BakeAllEffectEnum*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker.CheckAndCreateResourceFolder
+  commentId: M:MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker.CheckAndCreateResourceFolder
+  id: CheckAndCreateResourceFolder
+  parent: MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker
+  langs:
+  - csharp
+  - vb
+  name: CheckAndCreateResourceFolder()
+  nameWithType: EffectSystemScriptBacker.CheckAndCreateResourceFolder()
+  fullName: MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker.CheckAndCreateResourceFolder()
+  type: Method
+  source:
+    remote:
+      path: Editor/BackEditor/EffectSystemScriptBacker.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: CheckAndCreateResourceFolder
+    path: ../Editor/BackEditor/EffectSystemScriptBacker.cs
+    startLine: 86
+  assemblies:
+  - Macaca.EffectSystem.Editor
+  namespace: MacacaGames.EffectSystem.Editor
+  syntax:
+    content: public static void CheckAndCreateResourceFolder()
+    content.vb: Public Shared Sub CheckAndCreateResourceFolder
+  overload: MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker.CheckAndCreateResourceFolder*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker.ModifyString(System.String)
+  commentId: M:MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker.ModifyString(System.String)
+  id: ModifyString(System.String)
+  parent: MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker
+  langs:
+  - csharp
+  - vb
+  name: ModifyString(String)
+  nameWithType: EffectSystemScriptBacker.ModifyString(String)
+  fullName: MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker.ModifyString(System.String)
+  type: Method
+  source:
+    remote:
+      path: Editor/BackEditor/EffectSystemScriptBacker.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: ModifyString
+    path: ../Editor/BackEditor/EffectSystemScriptBacker.cs
+    startLine: 102
+  assemblies:
+  - Macaca.EffectSystem.Editor
+  namespace: MacacaGames.EffectSystem.Editor
+  syntax:
+    content: public static string ModifyString(string json)
+    parameters:
+    - id: json
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function ModifyString(json As String) As String
+  overload: MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker.ModifyString*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: MacacaGames.EffectSystem.Editor
+  commentId: N:MacacaGames.EffectSystem.Editor
+  name: MacacaGames.EffectSystem.Editor
+  nameWithType: MacacaGames.EffectSystem.Editor
+  fullName: MacacaGames.EffectSystem.Editor
+- uid: MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker.BakeAllEffectEnum*
+  commentId: Overload:MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker.BakeAllEffectEnum
+  name: BakeAllEffectEnum
+  nameWithType: EffectSystemScriptBacker.BakeAllEffectEnum
+  fullName: MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker.BakeAllEffectEnum
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker.CheckAndCreateResourceFolder*
+  commentId: Overload:MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker.CheckAndCreateResourceFolder
+  name: CheckAndCreateResourceFolder
+  nameWithType: EffectSystemScriptBacker.CheckAndCreateResourceFolder
+  fullName: MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker.CheckAndCreateResourceFolder
+- uid: MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker.ModifyString*
+  commentId: Overload:MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker.ModifyString
+  name: ModifyString
+  nameWithType: EffectSystemScriptBacker.ModifyString
+  fullName: MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker.ModifyString

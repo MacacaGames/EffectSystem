@@ -1,0 +1,367 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.EffectFilter
+  commentId: T:MacacaGames.EffectSystem.EffectFilter
+  id: EffectFilter
+  parent: MacacaGames.EffectSystem
+  children:
+  - MacacaGames.EffectSystem.EffectFilter.Init
+  - MacacaGames.EffectSystem.EffectFilter.skillEffectGroups
+  langs:
+  - csharp
+  - vb
+  name: EffectFilter
+  nameWithType: EffectFilter
+  fullName: MacacaGames.EffectSystem.EffectFilter
+  type: Class
+  source:
+    remote:
+      path: Runtime/EffectFilter.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: EffectFilter
+    path: ../Runtime/EffectFilter.cs
+    startLine: 14
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: 'public class EffectFilter : ScriptableObjectLifeCycle, IApplicationLifeCycle'
+    content.vb: >-
+      Public Class EffectFilter
+          Inherits ScriptableObjectLifeCycle
+          Implements IApplicationLifeCycle
+  inheritance:
+  - System.Object
+  - MacacaGames.GameSystem.ScriptableObjectLifeCycle
+  implements:
+  - MacacaGames.GameSystem.IApplicationLifeCycle
+  inheritedMembers:
+  - MacacaGames.GameSystem.ScriptableObjectLifeCycle.OnApplicationUpdate
+  - MacacaGames.GameSystem.ScriptableObjectLifeCycle.OnEnterLobby
+  - MacacaGames.GameSystem.ScriptableObjectLifeCycle.OnGamePlayUpdate
+  - MacacaGames.GameSystem.ScriptableObjectLifeCycle.OnUnPauseGamePlayUpdate
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MacacaGames.EffectSystem.EffectFilter.skillEffectGroups
+  commentId: F:MacacaGames.EffectSystem.EffectFilter.skillEffectGroups
+  id: skillEffectGroups
+  parent: MacacaGames.EffectSystem.EffectFilter
+  langs:
+  - csharp
+  - vb
+  name: skillEffectGroups
+  nameWithType: EffectFilter.skillEffectGroups
+  fullName: MacacaGames.EffectSystem.EffectFilter.skillEffectGroups
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectFilter.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: skillEffectGroups
+    path: ../Runtime/EffectFilter.cs
+    startLine: 73
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public List<EffectGroup> skillEffectGroups
+    return:
+      type: List{MacacaGames.EffectSystem.EffectGroup}
+    content.vb: Public skillEffectGroups As List(Of EffectGroup)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectFilter.Init
+  commentId: M:MacacaGames.EffectSystem.EffectFilter.Init
+  id: Init
+  parent: MacacaGames.EffectSystem.EffectFilter
+  langs:
+  - csharp
+  - vb
+  name: Init()
+  nameWithType: EffectFilter.Init()
+  fullName: MacacaGames.EffectSystem.EffectFilter.Init()
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectFilter.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Init
+    path: ../Runtime/EffectFilter.cs
+    startLine: 76
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public override Task Init()
+    return:
+      type: Task
+    content.vb: Public Overrides Function Init As Task
+  overridden: MacacaGames.GameSystem.ScriptableObjectLifeCycle.Init
+  overload: MacacaGames.EffectSystem.EffectFilter.Init*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: MacacaGames.EffectSystem
+  commentId: N:MacacaGames.EffectSystem
+  name: MacacaGames.EffectSystem
+  nameWithType: MacacaGames.EffectSystem
+  fullName: MacacaGames.EffectSystem
+- uid: MacacaGames.GameSystem.ScriptableObjectLifeCycle
+  commentId: T:MacacaGames.GameSystem.ScriptableObjectLifeCycle
+  parent: MacacaGames.GameSystem
+  name: ScriptableObjectLifeCycle
+  nameWithType: ScriptableObjectLifeCycle
+  fullName: MacacaGames.GameSystem.ScriptableObjectLifeCycle
+- uid: MacacaGames.GameSystem.IApplicationLifeCycle
+  commentId: T:MacacaGames.GameSystem.IApplicationLifeCycle
+  parent: MacacaGames.GameSystem
+  name: IApplicationLifeCycle
+  nameWithType: IApplicationLifeCycle
+  fullName: MacacaGames.GameSystem.IApplicationLifeCycle
+- uid: MacacaGames.GameSystem.ScriptableObjectLifeCycle.OnApplicationUpdate
+  commentId: M:MacacaGames.GameSystem.ScriptableObjectLifeCycle.OnApplicationUpdate
+  parent: MacacaGames.GameSystem.ScriptableObjectLifeCycle
+  name: OnApplicationUpdate()
+  nameWithType: ScriptableObjectLifeCycle.OnApplicationUpdate()
+  fullName: MacacaGames.GameSystem.ScriptableObjectLifeCycle.OnApplicationUpdate()
+  spec.csharp:
+  - uid: MacacaGames.GameSystem.ScriptableObjectLifeCycle.OnApplicationUpdate
+    name: OnApplicationUpdate
+    nameWithType: ScriptableObjectLifeCycle.OnApplicationUpdate
+    fullName: MacacaGames.GameSystem.ScriptableObjectLifeCycle.OnApplicationUpdate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: MacacaGames.GameSystem.ScriptableObjectLifeCycle.OnApplicationUpdate
+    name: OnApplicationUpdate
+    nameWithType: ScriptableObjectLifeCycle.OnApplicationUpdate
+    fullName: MacacaGames.GameSystem.ScriptableObjectLifeCycle.OnApplicationUpdate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MacacaGames.GameSystem.ScriptableObjectLifeCycle.OnEnterLobby
+  commentId: M:MacacaGames.GameSystem.ScriptableObjectLifeCycle.OnEnterLobby
+  parent: MacacaGames.GameSystem.ScriptableObjectLifeCycle
+  name: OnEnterLobby()
+  nameWithType: ScriptableObjectLifeCycle.OnEnterLobby()
+  fullName: MacacaGames.GameSystem.ScriptableObjectLifeCycle.OnEnterLobby()
+  spec.csharp:
+  - uid: MacacaGames.GameSystem.ScriptableObjectLifeCycle.OnEnterLobby
+    name: OnEnterLobby
+    nameWithType: ScriptableObjectLifeCycle.OnEnterLobby
+    fullName: MacacaGames.GameSystem.ScriptableObjectLifeCycle.OnEnterLobby
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: MacacaGames.GameSystem.ScriptableObjectLifeCycle.OnEnterLobby
+    name: OnEnterLobby
+    nameWithType: ScriptableObjectLifeCycle.OnEnterLobby
+    fullName: MacacaGames.GameSystem.ScriptableObjectLifeCycle.OnEnterLobby
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MacacaGames.GameSystem.ScriptableObjectLifeCycle.OnGamePlayUpdate
+  commentId: M:MacacaGames.GameSystem.ScriptableObjectLifeCycle.OnGamePlayUpdate
+  parent: MacacaGames.GameSystem.ScriptableObjectLifeCycle
+  name: OnGamePlayUpdate()
+  nameWithType: ScriptableObjectLifeCycle.OnGamePlayUpdate()
+  fullName: MacacaGames.GameSystem.ScriptableObjectLifeCycle.OnGamePlayUpdate()
+  spec.csharp:
+  - uid: MacacaGames.GameSystem.ScriptableObjectLifeCycle.OnGamePlayUpdate
+    name: OnGamePlayUpdate
+    nameWithType: ScriptableObjectLifeCycle.OnGamePlayUpdate
+    fullName: MacacaGames.GameSystem.ScriptableObjectLifeCycle.OnGamePlayUpdate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: MacacaGames.GameSystem.ScriptableObjectLifeCycle.OnGamePlayUpdate
+    name: OnGamePlayUpdate
+    nameWithType: ScriptableObjectLifeCycle.OnGamePlayUpdate
+    fullName: MacacaGames.GameSystem.ScriptableObjectLifeCycle.OnGamePlayUpdate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MacacaGames.GameSystem.ScriptableObjectLifeCycle.OnUnPauseGamePlayUpdate
+  commentId: M:MacacaGames.GameSystem.ScriptableObjectLifeCycle.OnUnPauseGamePlayUpdate
+  parent: MacacaGames.GameSystem.ScriptableObjectLifeCycle
+  name: OnUnPauseGamePlayUpdate()
+  nameWithType: ScriptableObjectLifeCycle.OnUnPauseGamePlayUpdate()
+  fullName: MacacaGames.GameSystem.ScriptableObjectLifeCycle.OnUnPauseGamePlayUpdate()
+  spec.csharp:
+  - uid: MacacaGames.GameSystem.ScriptableObjectLifeCycle.OnUnPauseGamePlayUpdate
+    name: OnUnPauseGamePlayUpdate
+    nameWithType: ScriptableObjectLifeCycle.OnUnPauseGamePlayUpdate
+    fullName: MacacaGames.GameSystem.ScriptableObjectLifeCycle.OnUnPauseGamePlayUpdate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: MacacaGames.GameSystem.ScriptableObjectLifeCycle.OnUnPauseGamePlayUpdate
+    name: OnUnPauseGamePlayUpdate
+    nameWithType: ScriptableObjectLifeCycle.OnUnPauseGamePlayUpdate
+    fullName: MacacaGames.GameSystem.ScriptableObjectLifeCycle.OnUnPauseGamePlayUpdate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MacacaGames.GameSystem
+  commentId: N:MacacaGames.GameSystem
+  name: MacacaGames.GameSystem
+  nameWithType: MacacaGames.GameSystem
+  fullName: MacacaGames.GameSystem
+- uid: List{MacacaGames.EffectSystem.EffectGroup}
+  commentId: '!:List{MacacaGames.EffectSystem.EffectGroup}'
+  definition: List`1
+  name: List<EffectGroup>
+  nameWithType: List<EffectGroup>
+  fullName: List<MacacaGames.EffectSystem.EffectGroup>
+  nameWithType.vb: List(Of EffectGroup)
+  fullName.vb: List(Of MacacaGames.EffectSystem.EffectGroup)
+  name.vb: List(Of EffectGroup)
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: MacacaGames.EffectSystem.EffectGroup
+    name: EffectGroup
+    nameWithType: EffectGroup
+    fullName: MacacaGames.EffectSystem.EffectGroup
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: MacacaGames.EffectSystem.EffectGroup
+    name: EffectGroup
+    nameWithType: EffectGroup
+    fullName: MacacaGames.EffectSystem.EffectGroup
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MacacaGames.GameSystem.ScriptableObjectLifeCycle.Init
+  commentId: M:MacacaGames.GameSystem.ScriptableObjectLifeCycle.Init
+  parent: MacacaGames.GameSystem.ScriptableObjectLifeCycle
+  name: Init()
+  nameWithType: ScriptableObjectLifeCycle.Init()
+  fullName: MacacaGames.GameSystem.ScriptableObjectLifeCycle.Init()
+  spec.csharp:
+  - uid: MacacaGames.GameSystem.ScriptableObjectLifeCycle.Init
+    name: Init
+    nameWithType: ScriptableObjectLifeCycle.Init
+    fullName: MacacaGames.GameSystem.ScriptableObjectLifeCycle.Init
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: MacacaGames.GameSystem.ScriptableObjectLifeCycle.Init
+    name: Init
+    nameWithType: ScriptableObjectLifeCycle.Init
+    fullName: MacacaGames.GameSystem.ScriptableObjectLifeCycle.Init
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MacacaGames.EffectSystem.EffectFilter.Init*
+  commentId: Overload:MacacaGames.EffectSystem.EffectFilter.Init
+  name: Init
+  nameWithType: EffectFilter.Init
+  fullName: MacacaGames.EffectSystem.EffectFilter.Init
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task

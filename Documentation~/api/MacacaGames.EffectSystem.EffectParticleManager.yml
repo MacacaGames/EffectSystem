@@ -1,0 +1,324 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.EffectParticleManager
+  commentId: T:MacacaGames.EffectSystem.EffectParticleManager
+  id: EffectParticleManager
+  parent: MacacaGames.EffectSystem
+  children:
+  - MacacaGames.EffectSystem.EffectParticleManager.Init
+  - MacacaGames.EffectSystem.EffectParticleManager.PlayOneShot(System.String,Vector3)
+  - MacacaGames.EffectSystem.EffectParticleManager.PlayOneShot(System.String,Vector3,Vector3)
+  langs:
+  - csharp
+  - vb
+  name: EffectParticleManager
+  nameWithType: EffectParticleManager
+  fullName: MacacaGames.EffectSystem.EffectParticleManager
+  type: Class
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: EffectParticleManager
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 6
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: 'public class EffectParticleManager : UnitySingleton<EffectParticleManager>'
+    content.vb: >-
+      Public Class EffectParticleManager
+          Inherits UnitySingleton(Of EffectParticleManager)
+  inheritance:
+  - System.Object
+  - UnitySingleton{MacacaGames.EffectSystem.EffectParticleManager}
+  inheritedMembers:
+  - UnitySingleton{MacacaGames.EffectSystem.EffectParticleManager}.Instance
+  - UnitySingleton{MacacaGames.EffectSystem.EffectParticleManager}.OnDestroy
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MacacaGames.EffectSystem.EffectParticleManager.Init
+  commentId: M:MacacaGames.EffectSystem.EffectParticleManager.Init
+  id: Init
+  parent: MacacaGames.EffectSystem.EffectParticleManager
+  langs:
+  - csharp
+  - vb
+  name: Init()
+  nameWithType: EffectParticleManager.Init()
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.Init()
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Init
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 60
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public void Init()
+    content.vb: Public Sub Init
+  overload: MacacaGames.EffectSystem.EffectParticleManager.Init*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectParticleManager.PlayOneShot(System.String,Vector3)
+  commentId: M:MacacaGames.EffectSystem.EffectParticleManager.PlayOneShot(System.String,Vector3)
+  id: PlayOneShot(System.String,Vector3)
+  parent: MacacaGames.EffectSystem.EffectParticleManager
+  langs:
+  - csharp
+  - vb
+  name: PlayOneShot(String, Vector3)
+  nameWithType: EffectParticleManager.PlayOneShot(String, Vector3)
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.PlayOneShot(System.String, Vector3)
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: PlayOneShot
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 71
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public void PlayOneShot(string type, Vector3 pos)
+    parameters:
+    - id: type
+      type: System.String
+    - id: pos
+      type: Vector3
+    content.vb: Public Sub PlayOneShot(type As String, pos As Vector3)
+  overload: MacacaGames.EffectSystem.EffectParticleManager.PlayOneShot*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectParticleManager.PlayOneShot(System.String,Vector3,Vector3)
+  commentId: M:MacacaGames.EffectSystem.EffectParticleManager.PlayOneShot(System.String,Vector3,Vector3)
+  id: PlayOneShot(System.String,Vector3,Vector3)
+  parent: MacacaGames.EffectSystem.EffectParticleManager
+  langs:
+  - csharp
+  - vb
+  name: PlayOneShot(String, Vector3, Vector3)
+  nameWithType: EffectParticleManager.PlayOneShot(String, Vector3, Vector3)
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.PlayOneShot(System.String, Vector3, Vector3)
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: PlayOneShot
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 76
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public void PlayOneShot(string type, Vector3 pos, Vector3 scale)
+    parameters:
+    - id: type
+      type: System.String
+    - id: pos
+      type: Vector3
+    - id: scale
+      type: Vector3
+    content.vb: Public Sub PlayOneShot(type As String, pos As Vector3, scale As Vector3)
+  overload: MacacaGames.EffectSystem.EffectParticleManager.PlayOneShot*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: MacacaGames.EffectSystem
+  commentId: N:MacacaGames.EffectSystem
+  name: MacacaGames.EffectSystem
+  nameWithType: MacacaGames.EffectSystem
+  fullName: MacacaGames.EffectSystem
+- uid: UnitySingleton{MacacaGames.EffectSystem.EffectParticleManager}
+  commentId: T:UnitySingleton{MacacaGames.EffectSystem.EffectParticleManager}
+  definition: UnitySingleton`1
+  name: UnitySingleton<EffectParticleManager>
+  nameWithType: UnitySingleton<EffectParticleManager>
+  fullName: UnitySingleton<MacacaGames.EffectSystem.EffectParticleManager>
+  nameWithType.vb: UnitySingleton(Of EffectParticleManager)
+  fullName.vb: UnitySingleton(Of MacacaGames.EffectSystem.EffectParticleManager)
+  name.vb: UnitySingleton(Of EffectParticleManager)
+  spec.csharp:
+  - uid: UnitySingleton`1
+    name: UnitySingleton
+    nameWithType: UnitySingleton
+    fullName: UnitySingleton
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: MacacaGames.EffectSystem.EffectParticleManager
+    name: EffectParticleManager
+    nameWithType: EffectParticleManager
+    fullName: MacacaGames.EffectSystem.EffectParticleManager
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: UnitySingleton`1
+    name: UnitySingleton
+    nameWithType: UnitySingleton
+    fullName: UnitySingleton
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: MacacaGames.EffectSystem.EffectParticleManager
+    name: EffectParticleManager
+    nameWithType: EffectParticleManager
+    fullName: MacacaGames.EffectSystem.EffectParticleManager
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: UnitySingleton{MacacaGames.EffectSystem.EffectParticleManager}.Instance
+  commentId: P:UnitySingleton{MacacaGames.EffectSystem.EffectParticleManager}.Instance
+  parent: UnitySingleton{MacacaGames.EffectSystem.EffectParticleManager}
+  definition: UnitySingleton`1.Instance
+  name: Instance
+  nameWithType: UnitySingleton<EffectParticleManager>.Instance
+  fullName: UnitySingleton<MacacaGames.EffectSystem.EffectParticleManager>.Instance
+  nameWithType.vb: UnitySingleton(Of EffectParticleManager).Instance
+  fullName.vb: UnitySingleton(Of MacacaGames.EffectSystem.EffectParticleManager).Instance
+- uid: UnitySingleton{MacacaGames.EffectSystem.EffectParticleManager}.OnDestroy
+  commentId: M:UnitySingleton{MacacaGames.EffectSystem.EffectParticleManager}.OnDestroy
+  parent: UnitySingleton{MacacaGames.EffectSystem.EffectParticleManager}
+  definition: UnitySingleton`1.OnDestroy
+  name: OnDestroy()
+  nameWithType: UnitySingleton<EffectParticleManager>.OnDestroy()
+  fullName: UnitySingleton<MacacaGames.EffectSystem.EffectParticleManager>.OnDestroy()
+  nameWithType.vb: UnitySingleton(Of EffectParticleManager).OnDestroy()
+  fullName.vb: UnitySingleton(Of MacacaGames.EffectSystem.EffectParticleManager).OnDestroy()
+  spec.csharp:
+  - uid: UnitySingleton`1.OnDestroy
+    name: OnDestroy
+    nameWithType: UnitySingleton<EffectParticleManager>.OnDestroy
+    fullName: UnitySingleton<MacacaGames.EffectSystem.EffectParticleManager>.OnDestroy
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: UnitySingleton`1.OnDestroy
+    name: OnDestroy
+    nameWithType: UnitySingleton(Of EffectParticleManager).OnDestroy
+    fullName: UnitySingleton(Of MacacaGames.EffectSystem.EffectParticleManager).OnDestroy
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: UnitySingleton`1
+  commentId: T:UnitySingleton`1
+  name: UnitySingleton<T>
+  nameWithType: UnitySingleton<T>
+  fullName: UnitySingleton<T>
+  nameWithType.vb: UnitySingleton(Of T)
+  fullName.vb: UnitySingleton(Of T)
+  name.vb: UnitySingleton(Of T)
+  spec.csharp:
+  - uid: UnitySingleton`1
+    name: UnitySingleton
+    nameWithType: UnitySingleton
+    fullName: UnitySingleton
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: UnitySingleton`1
+    name: UnitySingleton
+    nameWithType: UnitySingleton
+    fullName: UnitySingleton
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: UnitySingleton`1.Instance
+  commentId: P:UnitySingleton`1.Instance
+  name: Instance
+  nameWithType: UnitySingleton<T>.Instance
+  fullName: UnitySingleton<T>.Instance
+  nameWithType.vb: UnitySingleton(Of T).Instance
+  fullName.vb: UnitySingleton(Of T).Instance
+- uid: UnitySingleton`1.OnDestroy
+  commentId: M:UnitySingleton`1.OnDestroy
+  name: OnDestroy()
+  nameWithType: UnitySingleton<T>.OnDestroy()
+  fullName: UnitySingleton<T>.OnDestroy()
+  nameWithType.vb: UnitySingleton(Of T).OnDestroy()
+  fullName.vb: UnitySingleton(Of T).OnDestroy()
+  spec.csharp:
+  - uid: UnitySingleton`1.OnDestroy
+    name: OnDestroy
+    nameWithType: UnitySingleton<T>.OnDestroy
+    fullName: UnitySingleton<T>.OnDestroy
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: UnitySingleton`1.OnDestroy
+    name: OnDestroy
+    nameWithType: UnitySingleton(Of T).OnDestroy
+    fullName: UnitySingleton(Of T).OnDestroy
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MacacaGames.EffectSystem.EffectParticleManager.Init*
+  commentId: Overload:MacacaGames.EffectSystem.EffectParticleManager.Init
+  name: Init
+  nameWithType: EffectParticleManager.Init
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.Init
+- uid: MacacaGames.EffectSystem.EffectParticleManager.PlayOneShot*
+  commentId: Overload:MacacaGames.EffectSystem.EffectParticleManager.PlayOneShot
+  name: PlayOneShot
+  nameWithType: EffectParticleManager.PlayOneShot
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.PlayOneShot
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Vector3
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: Vector3

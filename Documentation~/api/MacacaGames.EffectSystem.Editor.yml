@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.Editor
+  commentId: N:MacacaGames.EffectSystem.Editor
+  id: MacacaGames.EffectSystem.Editor
+  children:
+  - MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker
+  langs:
+  - csharp
+  - vb
+  name: MacacaGames.EffectSystem.Editor
+  nameWithType: MacacaGames.EffectSystem.Editor
+  fullName: MacacaGames.EffectSystem.Editor
+  type: Namespace
+  assemblies:
+  - Macaca.EffectSystem.Editor
+references:
+- uid: MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker
+  commentId: T:MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker
+  name: EffectSystemScriptBacker
+  nameWithType: EffectSystemScriptBacker
+  fullName: MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker

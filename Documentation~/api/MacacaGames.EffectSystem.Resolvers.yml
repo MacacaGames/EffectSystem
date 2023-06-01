@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.Resolvers
+  commentId: N:MacacaGames.EffectSystem.Resolvers
+  id: MacacaGames.EffectSystem.Resolvers
+  children:
+  - MacacaGames.EffectSystem.Resolvers.EffectSystemResolver
+  langs:
+  - csharp
+  - vb
+  name: MacacaGames.EffectSystem.Resolvers
+  nameWithType: MacacaGames.EffectSystem.Resolvers
+  fullName: MacacaGames.EffectSystem.Resolvers
+  type: Namespace
+  assemblies:
+  - Macaca.EffectSystem.Model
+references:
+- uid: MacacaGames.EffectSystem.Resolvers.EffectSystemResolver
+  commentId: T:MacacaGames.EffectSystem.Resolvers.EffectSystemResolver
+  name: EffectSystemResolver
+  nameWithType: EffectSystemResolver
+  fullName: MacacaGames.EffectSystem.Resolvers.EffectSystemResolver

@@ -1,0 +1,249 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.Resolvers.EffectSystemResolver
+  commentId: T:MacacaGames.EffectSystem.Resolvers.EffectSystemResolver
+  id: EffectSystemResolver
+  parent: MacacaGames.EffectSystem.Resolvers
+  children:
+  - MacacaGames.EffectSystem.Resolvers.EffectSystemResolver.GetFormatter``1
+  - MacacaGames.EffectSystem.Resolvers.EffectSystemResolver.Instance
+  langs:
+  - csharp
+  - vb
+  name: EffectSystemResolver
+  nameWithType: EffectSystemResolver
+  fullName: MacacaGames.EffectSystem.Resolvers.EffectSystemResolver
+  type: Class
+  source:
+    remote:
+      path: Model/EffectSystem.Generated.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: EffectSystemResolver
+    path: ../Model/EffectSystem.Generated.cs
+    startLine: 15
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Resolvers
+  syntax:
+    content: 'public class EffectSystemResolver : object, IFormatterResolver'
+    content.vb: >-
+      Public Class EffectSystemResolver
+          Inherits Object
+          Implements IFormatterResolver
+  inheritance:
+  - System.Object
+  implements:
+  - MessagePack.IFormatterResolver
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MacacaGames.EffectSystem.Resolvers.EffectSystemResolver.Instance
+  commentId: F:MacacaGames.EffectSystem.Resolvers.EffectSystemResolver.Instance
+  id: Instance
+  parent: MacacaGames.EffectSystem.Resolvers.EffectSystemResolver
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: EffectSystemResolver.Instance
+  fullName: MacacaGames.EffectSystem.Resolvers.EffectSystemResolver.Instance
+  type: Field
+  source:
+    remote:
+      path: Model/EffectSystem.Generated.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Instance
+    path: ../Model/EffectSystem.Generated.cs
+    startLine: 17
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Resolvers
+  syntax:
+    content: public static readonly IFormatterResolver Instance
+    return:
+      type: MessagePack.IFormatterResolver
+    content.vb: Public Shared ReadOnly Instance As IFormatterResolver
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: MacacaGames.EffectSystem.Resolvers.EffectSystemResolver.GetFormatter``1
+  commentId: M:MacacaGames.EffectSystem.Resolvers.EffectSystemResolver.GetFormatter``1
+  id: GetFormatter``1
+  parent: MacacaGames.EffectSystem.Resolvers.EffectSystemResolver
+  langs:
+  - csharp
+  - vb
+  name: GetFormatter<T>()
+  nameWithType: EffectSystemResolver.GetFormatter<T>()
+  fullName: MacacaGames.EffectSystem.Resolvers.EffectSystemResolver.GetFormatter<T>()
+  type: Method
+  source:
+    remote:
+      path: Model/EffectSystem.Generated.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: GetFormatter
+    path: ../Model/EffectSystem.Generated.cs
+    startLine: 23
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Resolvers
+  syntax:
+    content: public IMessagePackFormatter<T> GetFormatter<T>()
+    typeParameters:
+    - id: T
+    return:
+      type: MessagePack.Formatters.IMessagePackFormatter{{T}}
+    content.vb: Public Function GetFormatter(Of T) As IMessagePackFormatter(Of T)
+  overload: MacacaGames.EffectSystem.Resolvers.EffectSystemResolver.GetFormatter*
+  implements:
+  - MessagePack.IFormatterResolver.GetFormatter``1
+  nameWithType.vb: EffectSystemResolver.GetFormatter(Of T)()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: MacacaGames.EffectSystem.Resolvers.EffectSystemResolver.GetFormatter(Of T)()
+  name.vb: GetFormatter(Of T)()
+references:
+- uid: MacacaGames.EffectSystem.Resolvers
+  commentId: N:MacacaGames.EffectSystem.Resolvers
+  name: MacacaGames.EffectSystem.Resolvers
+  nameWithType: MacacaGames.EffectSystem.Resolvers
+  fullName: MacacaGames.EffectSystem.Resolvers
+- uid: MessagePack.IFormatterResolver
+  commentId: T:MessagePack.IFormatterResolver
+  parent: MessagePack
+  name: IFormatterResolver
+  nameWithType: IFormatterResolver
+  fullName: MessagePack.IFormatterResolver
+- uid: MessagePack
+  commentId: N:MessagePack
+  name: MessagePack
+  nameWithType: MessagePack
+  fullName: MessagePack
+- uid: MacacaGames.EffectSystem.Resolvers.EffectSystemResolver.GetFormatter*
+  commentId: Overload:MacacaGames.EffectSystem.Resolvers.EffectSystemResolver.GetFormatter
+  name: GetFormatter
+  nameWithType: EffectSystemResolver.GetFormatter
+  fullName: MacacaGames.EffectSystem.Resolvers.EffectSystemResolver.GetFormatter
+- uid: MessagePack.IFormatterResolver.GetFormatter``1
+  commentId: M:MessagePack.IFormatterResolver.GetFormatter``1
+  parent: MessagePack.IFormatterResolver
+  name: GetFormatter<T>()
+  nameWithType: IFormatterResolver.GetFormatter<T>()
+  fullName: MessagePack.IFormatterResolver.GetFormatter<T>()
+  nameWithType.vb: IFormatterResolver.GetFormatter(Of T)()
+  fullName.vb: MessagePack.IFormatterResolver.GetFormatter(Of T)()
+  name.vb: GetFormatter(Of T)()
+  spec.csharp:
+  - uid: MessagePack.IFormatterResolver.GetFormatter``1
+    name: GetFormatter<T>
+    nameWithType: IFormatterResolver.GetFormatter<T>
+    fullName: MessagePack.IFormatterResolver.GetFormatter<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: MessagePack.IFormatterResolver.GetFormatter``1
+    name: GetFormatter(Of T)
+    nameWithType: IFormatterResolver.GetFormatter(Of T)
+    fullName: MessagePack.IFormatterResolver.GetFormatter(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MessagePack.Formatters.IMessagePackFormatter{{T}}
+  commentId: T:MessagePack.Formatters.IMessagePackFormatter{``0}
+  parent: MessagePack.Formatters
+  definition: MessagePack.Formatters.IMessagePackFormatter`1
+  name: IMessagePackFormatter<T>
+  nameWithType: IMessagePackFormatter<T>
+  fullName: MessagePack.Formatters.IMessagePackFormatter<T>
+  nameWithType.vb: IMessagePackFormatter(Of T)
+  fullName.vb: MessagePack.Formatters.IMessagePackFormatter(Of T)
+  name.vb: IMessagePackFormatter(Of T)
+  spec.csharp:
+  - uid: MessagePack.Formatters.IMessagePackFormatter`1
+    name: IMessagePackFormatter
+    nameWithType: IMessagePackFormatter
+    fullName: MessagePack.Formatters.IMessagePackFormatter
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: MessagePack.Formatters.IMessagePackFormatter`1
+    name: IMessagePackFormatter
+    nameWithType: IMessagePackFormatter
+    fullName: MessagePack.Formatters.IMessagePackFormatter
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MessagePack.Formatters.IMessagePackFormatter`1
+  commentId: T:MessagePack.Formatters.IMessagePackFormatter`1
+  name: IMessagePackFormatter<T>
+  nameWithType: IMessagePackFormatter<T>
+  fullName: MessagePack.Formatters.IMessagePackFormatter<T>
+  nameWithType.vb: IMessagePackFormatter(Of T)
+  fullName.vb: MessagePack.Formatters.IMessagePackFormatter(Of T)
+  name.vb: IMessagePackFormatter(Of T)
+  spec.csharp:
+  - uid: MessagePack.Formatters.IMessagePackFormatter`1
+    name: IMessagePackFormatter
+    nameWithType: IMessagePackFormatter
+    fullName: MessagePack.Formatters.IMessagePackFormatter
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: MessagePack.Formatters.IMessagePackFormatter`1
+    name: IMessagePackFormatter
+    nameWithType: IMessagePackFormatter
+    fullName: MessagePack.Formatters.IMessagePackFormatter
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MessagePack.Formatters
+  commentId: N:MessagePack.Formatters
+  name: MessagePack.Formatters
+  nameWithType: MessagePack.Formatters
+  fullName: MessagePack.Formatters

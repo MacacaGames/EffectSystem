@@ -1,0 +1,416 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.EffectViewBase
+  commentId: T:MacacaGames.EffectSystem.EffectViewBase
+  id: EffectViewBase
+  parent: MacacaGames.EffectSystem
+  children:
+  - MacacaGames.EffectSystem.EffectViewBase.info
+  - MacacaGames.EffectSystem.EffectViewBase.Init(MacacaGames.EffectSystem.Model.EffectInfo,MacacaGames.EffectSystem.Model.EffectViewInfo)
+  - MacacaGames.EffectSystem.EffectViewBase.OnActive
+  - MacacaGames.EffectSystem.EffectViewBase.OnColdDownEnd
+  - MacacaGames.EffectSystem.EffectViewBase.OnDeactive
+  - MacacaGames.EffectSystem.EffectViewBase.OnEffectApply
+  - MacacaGames.EffectSystem.EffectViewBase.OnEnd
+  - MacacaGames.EffectSystem.EffectViewBase.OnStart
+  - MacacaGames.EffectSystem.EffectViewBase.viewInfo
+  langs:
+  - csharp
+  - vb
+  name: EffectViewBase
+  nameWithType: EffectViewBase
+  fullName: MacacaGames.EffectSystem.EffectViewBase
+  type: Class
+  source:
+    remote:
+      path: Runtime/EffectView/EffectViewBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: EffectViewBase
+    path: ../Runtime/EffectView/EffectViewBase.cs
+    startLine: 7
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: 'public abstract class EffectViewBase : MonoBehaviour'
+    content.vb: >-
+      Public MustInherit Class EffectViewBase
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - MacacaGames.EffectSystem.EffectView_Animator
+  - MacacaGames.EffectSystem.EffectView_MultiController
+  - MacacaGames.EffectSystem.EffectView_Particle
+  - MacacaGames.EffectSystem.EffectView_ParticleByManager
+  - MacacaGames.EffectSystem.EffectView_Scale
+  - MacacaGames.EffectSystem.EffectView_StateIcon
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: MacacaGames.EffectSystem.EffectViewBase.info
+  commentId: F:MacacaGames.EffectSystem.EffectViewBase.info
+  id: info
+  parent: MacacaGames.EffectSystem.EffectViewBase
+  langs:
+  - csharp
+  - vb
+  name: info
+  nameWithType: EffectViewBase.info
+  fullName: MacacaGames.EffectSystem.EffectViewBase.info
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectView/EffectViewBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: info
+    path: ../Runtime/EffectView/EffectViewBase.cs
+    startLine: 10
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: protected EffectInfo info
+    return:
+      type: MacacaGames.EffectSystem.Model.EffectInfo
+    content.vb: Protected info As EffectInfo
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: MacacaGames.EffectSystem.EffectViewBase.viewInfo
+  commentId: P:MacacaGames.EffectSystem.EffectViewBase.viewInfo
+  id: viewInfo
+  parent: MacacaGames.EffectSystem.EffectViewBase
+  langs:
+  - csharp
+  - vb
+  name: viewInfo
+  nameWithType: EffectViewBase.viewInfo
+  fullName: MacacaGames.EffectSystem.EffectViewBase.viewInfo
+  type: Property
+  source:
+    remote:
+      path: Runtime/EffectView/EffectViewBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: viewInfo
+    path: ../Runtime/EffectView/EffectViewBase.cs
+    startLine: 11
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public EffectViewInfo viewInfo { get; protected set; }
+    parameters: []
+    return:
+      type: MacacaGames.EffectSystem.Model.EffectViewInfo
+    content.vb: Public Property viewInfo As EffectViewInfo
+  overload: MacacaGames.EffectSystem.EffectViewBase.viewInfo*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: MacacaGames.EffectSystem.EffectViewBase.Init(MacacaGames.EffectSystem.Model.EffectInfo,MacacaGames.EffectSystem.Model.EffectViewInfo)
+  commentId: M:MacacaGames.EffectSystem.EffectViewBase.Init(MacacaGames.EffectSystem.Model.EffectInfo,MacacaGames.EffectSystem.Model.EffectViewInfo)
+  id: Init(MacacaGames.EffectSystem.Model.EffectInfo,MacacaGames.EffectSystem.Model.EffectViewInfo)
+  parent: MacacaGames.EffectSystem.EffectViewBase
+  langs:
+  - csharp
+  - vb
+  name: Init(EffectInfo, EffectViewInfo)
+  nameWithType: EffectViewBase.Init(EffectInfo, EffectViewInfo)
+  fullName: MacacaGames.EffectSystem.EffectViewBase.Init(MacacaGames.EffectSystem.Model.EffectInfo, MacacaGames.EffectSystem.Model.EffectViewInfo)
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectView/EffectViewBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Init
+    path: ../Runtime/EffectView/EffectViewBase.cs
+    startLine: 35
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public virtual void Init(EffectInfo info, EffectViewInfo viewInfo)
+    parameters:
+    - id: info
+      type: MacacaGames.EffectSystem.Model.EffectInfo
+    - id: viewInfo
+      type: MacacaGames.EffectSystem.Model.EffectViewInfo
+    content.vb: Public Overridable Sub Init(info As EffectInfo, viewInfo As EffectViewInfo)
+  overload: MacacaGames.EffectSystem.EffectViewBase.Init*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: MacacaGames.EffectSystem.EffectViewBase.OnStart
+  commentId: M:MacacaGames.EffectSystem.EffectViewBase.OnStart
+  id: OnStart
+  parent: MacacaGames.EffectSystem.EffectViewBase
+  langs:
+  - csharp
+  - vb
+  name: OnStart()
+  nameWithType: EffectViewBase.OnStart()
+  fullName: MacacaGames.EffectSystem.EffectViewBase.OnStart()
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectView/EffectViewBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnStart
+    path: ../Runtime/EffectView/EffectViewBase.cs
+    startLine: 41
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public virtual void OnStart()
+    content.vb: Public Overridable Sub OnStart
+  overload: MacacaGames.EffectSystem.EffectViewBase.OnStart*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: MacacaGames.EffectSystem.EffectViewBase.OnActive
+  commentId: M:MacacaGames.EffectSystem.EffectViewBase.OnActive
+  id: OnActive
+  parent: MacacaGames.EffectSystem.EffectViewBase
+  langs:
+  - csharp
+  - vb
+  name: OnActive()
+  nameWithType: EffectViewBase.OnActive()
+  fullName: MacacaGames.EffectSystem.EffectViewBase.OnActive()
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectView/EffectViewBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnActive
+    path: ../Runtime/EffectView/EffectViewBase.cs
+    startLine: 50
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public virtual void OnActive()
+    content.vb: Public Overridable Sub OnActive
+  overload: MacacaGames.EffectSystem.EffectViewBase.OnActive*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: MacacaGames.EffectSystem.EffectViewBase.OnDeactive
+  commentId: M:MacacaGames.EffectSystem.EffectViewBase.OnDeactive
+  id: OnDeactive
+  parent: MacacaGames.EffectSystem.EffectViewBase
+  langs:
+  - csharp
+  - vb
+  name: OnDeactive()
+  nameWithType: EffectViewBase.OnDeactive()
+  fullName: MacacaGames.EffectSystem.EffectViewBase.OnDeactive()
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectView/EffectViewBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnDeactive
+    path: ../Runtime/EffectView/EffectViewBase.cs
+    startLine: 59
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public virtual void OnDeactive()
+    content.vb: Public Overridable Sub OnDeactive
+  overload: MacacaGames.EffectSystem.EffectViewBase.OnDeactive*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: MacacaGames.EffectSystem.EffectViewBase.OnEnd
+  commentId: M:MacacaGames.EffectSystem.EffectViewBase.OnEnd
+  id: OnEnd
+  parent: MacacaGames.EffectSystem.EffectViewBase
+  langs:
+  - csharp
+  - vb
+  name: OnEnd()
+  nameWithType: EffectViewBase.OnEnd()
+  fullName: MacacaGames.EffectSystem.EffectViewBase.OnEnd()
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectView/EffectViewBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnEnd
+    path: ../Runtime/EffectView/EffectViewBase.cs
+    startLine: 68
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public virtual void OnEnd()
+    content.vb: Public Overridable Sub OnEnd
+  overload: MacacaGames.EffectSystem.EffectViewBase.OnEnd*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: MacacaGames.EffectSystem.EffectViewBase.OnColdDownEnd
+  commentId: M:MacacaGames.EffectSystem.EffectViewBase.OnColdDownEnd
+  id: OnColdDownEnd
+  parent: MacacaGames.EffectSystem.EffectViewBase
+  langs:
+  - csharp
+  - vb
+  name: OnColdDownEnd()
+  nameWithType: EffectViewBase.OnColdDownEnd()
+  fullName: MacacaGames.EffectSystem.EffectViewBase.OnColdDownEnd()
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectView/EffectViewBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnColdDownEnd
+    path: ../Runtime/EffectView/EffectViewBase.cs
+    startLine: 77
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public virtual void OnColdDownEnd()
+    content.vb: Public Overridable Sub OnColdDownEnd
+  overload: MacacaGames.EffectSystem.EffectViewBase.OnColdDownEnd*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: MacacaGames.EffectSystem.EffectViewBase.OnEffectApply
+  commentId: M:MacacaGames.EffectSystem.EffectViewBase.OnEffectApply
+  id: OnEffectApply
+  parent: MacacaGames.EffectSystem.EffectViewBase
+  langs:
+  - csharp
+  - vb
+  name: OnEffectApply()
+  nameWithType: EffectViewBase.OnEffectApply()
+  fullName: MacacaGames.EffectSystem.EffectViewBase.OnEffectApply()
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectView/EffectViewBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnEffectApply
+    path: ../Runtime/EffectView/EffectViewBase.cs
+    startLine: 86
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public virtual void OnEffectApply()
+    content.vb: Public Overridable Sub OnEffectApply
+  overload: MacacaGames.EffectSystem.EffectViewBase.OnEffectApply*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+references:
+- uid: MacacaGames.EffectSystem
+  commentId: N:MacacaGames.EffectSystem
+  name: MacacaGames.EffectSystem
+  nameWithType: MacacaGames.EffectSystem
+  fullName: MacacaGames.EffectSystem
+- uid: MacacaGames.EffectSystem.Model.EffectInfo
+  commentId: T:MacacaGames.EffectSystem.Model.EffectInfo
+  parent: MacacaGames.EffectSystem.Model
+  name: EffectInfo
+  nameWithType: EffectInfo
+  fullName: MacacaGames.EffectSystem.Model.EffectInfo
+- uid: MacacaGames.EffectSystem.Model
+  commentId: N:MacacaGames.EffectSystem.Model
+  name: MacacaGames.EffectSystem.Model
+  nameWithType: MacacaGames.EffectSystem.Model
+  fullName: MacacaGames.EffectSystem.Model
+- uid: MacacaGames.EffectSystem.EffectViewBase.viewInfo*
+  commentId: Overload:MacacaGames.EffectSystem.EffectViewBase.viewInfo
+  name: viewInfo
+  nameWithType: EffectViewBase.viewInfo
+  fullName: MacacaGames.EffectSystem.EffectViewBase.viewInfo
+- uid: MacacaGames.EffectSystem.Model.EffectViewInfo
+  commentId: T:MacacaGames.EffectSystem.Model.EffectViewInfo
+  parent: MacacaGames.EffectSystem.Model
+  name: EffectViewInfo
+  nameWithType: EffectViewInfo
+  fullName: MacacaGames.EffectSystem.Model.EffectViewInfo
+- uid: MacacaGames.EffectSystem.EffectViewBase.Init*
+  commentId: Overload:MacacaGames.EffectSystem.EffectViewBase.Init
+  name: Init
+  nameWithType: EffectViewBase.Init
+  fullName: MacacaGames.EffectSystem.EffectViewBase.Init
+- uid: MacacaGames.EffectSystem.EffectViewBase.OnStart*
+  commentId: Overload:MacacaGames.EffectSystem.EffectViewBase.OnStart
+  name: OnStart
+  nameWithType: EffectViewBase.OnStart
+  fullName: MacacaGames.EffectSystem.EffectViewBase.OnStart
+- uid: MacacaGames.EffectSystem.EffectViewBase.OnActive*
+  commentId: Overload:MacacaGames.EffectSystem.EffectViewBase.OnActive
+  name: OnActive
+  nameWithType: EffectViewBase.OnActive
+  fullName: MacacaGames.EffectSystem.EffectViewBase.OnActive
+- uid: MacacaGames.EffectSystem.EffectViewBase.OnDeactive*
+  commentId: Overload:MacacaGames.EffectSystem.EffectViewBase.OnDeactive
+  name: OnDeactive
+  nameWithType: EffectViewBase.OnDeactive
+  fullName: MacacaGames.EffectSystem.EffectViewBase.OnDeactive
+- uid: MacacaGames.EffectSystem.EffectViewBase.OnEnd*
+  commentId: Overload:MacacaGames.EffectSystem.EffectViewBase.OnEnd
+  name: OnEnd
+  nameWithType: EffectViewBase.OnEnd
+  fullName: MacacaGames.EffectSystem.EffectViewBase.OnEnd
+- uid: MacacaGames.EffectSystem.EffectViewBase.OnColdDownEnd*
+  commentId: Overload:MacacaGames.EffectSystem.EffectViewBase.OnColdDownEnd
+  name: OnColdDownEnd
+  nameWithType: EffectViewBase.OnColdDownEnd
+  fullName: MacacaGames.EffectSystem.EffectViewBase.OnColdDownEnd
+- uid: MacacaGames.EffectSystem.EffectViewBase.OnEffectApply*
+  commentId: Overload:MacacaGames.EffectSystem.EffectViewBase.OnEffectApply
+  name: OnEffectApply
+  nameWithType: EffectViewBase.OnEffectApply
+  fullName: MacacaGames.EffectSystem.EffectViewBase.OnEffectApply

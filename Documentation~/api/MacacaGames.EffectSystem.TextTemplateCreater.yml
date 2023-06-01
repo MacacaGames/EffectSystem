@@ -1,0 +1,132 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.TextTemplateCreater
+  commentId: T:MacacaGames.EffectSystem.TextTemplateCreater
+  id: TextTemplateCreater
+  parent: MacacaGames.EffectSystem
+  children:
+  - MacacaGames.EffectSystem.TextTemplateCreater.ConvertDataStr(System.String)
+  - MacacaGames.EffectSystem.TextTemplateCreater.CreateText
+  langs:
+  - csharp
+  - vb
+  name: TextTemplateCreater
+  nameWithType: TextTemplateCreater
+  fullName: MacacaGames.EffectSystem.TextTemplateCreater
+  type: Class
+  source:
+    remote:
+      path: Editor/EditorWindow/TextTemplateCreater.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: TextTemplateCreater
+    path: ../Editor/EditorWindow/TextTemplateCreater.cs
+    startLine: 12
+  assemblies:
+  - Macaca.EffectSystem.Editor
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: 'public class TextTemplateCreater : OdinEditorWindow'
+    content.vb: >-
+      Public Class TextTemplateCreater
+          Inherits OdinEditorWindow
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MacacaGames.EffectSystem.TextTemplateCreater.ConvertDataStr(System.String)
+  commentId: M:MacacaGames.EffectSystem.TextTemplateCreater.ConvertDataStr(System.String)
+  id: ConvertDataStr(System.String)
+  parent: MacacaGames.EffectSystem.TextTemplateCreater
+  langs:
+  - csharp
+  - vb
+  name: ConvertDataStr(String)
+  nameWithType: TextTemplateCreater.ConvertDataStr(String)
+  fullName: MacacaGames.EffectSystem.TextTemplateCreater.ConvertDataStr(System.String)
+  type: Method
+  source:
+    remote:
+      path: Editor/EditorWindow/TextTemplateCreater.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: ConvertDataStr
+    path: ../Editor/EditorWindow/TextTemplateCreater.cs
+    startLine: 38
+  assemblies:
+  - Macaca.EffectSystem.Editor
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public DataTable ConvertDataStr(string data)
+    parameters:
+    - id: data
+      type: System.String
+    return:
+      type: DataTable
+    content.vb: Public Function ConvertDataStr(data As String) As DataTable
+  overload: MacacaGames.EffectSystem.TextTemplateCreater.ConvertDataStr*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.TextTemplateCreater.CreateText
+  commentId: M:MacacaGames.EffectSystem.TextTemplateCreater.CreateText
+  id: CreateText
+  parent: MacacaGames.EffectSystem.TextTemplateCreater
+  langs:
+  - csharp
+  - vb
+  name: CreateText()
+  nameWithType: TextTemplateCreater.CreateText()
+  fullName: MacacaGames.EffectSystem.TextTemplateCreater.CreateText()
+  type: Method
+  source:
+    remote:
+      path: Editor/EditorWindow/TextTemplateCreater.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: CreateText
+    path: ../Editor/EditorWindow/TextTemplateCreater.cs
+    startLine: 68
+  assemblies:
+  - Macaca.EffectSystem.Editor
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public void CreateText()
+    content.vb: Public Sub CreateText
+  overload: MacacaGames.EffectSystem.TextTemplateCreater.CreateText*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: MacacaGames.EffectSystem
+  commentId: N:MacacaGames.EffectSystem
+  name: MacacaGames.EffectSystem
+  nameWithType: MacacaGames.EffectSystem
+  fullName: MacacaGames.EffectSystem
+- uid: MacacaGames.EffectSystem.TextTemplateCreater.ConvertDataStr*
+  commentId: Overload:MacacaGames.EffectSystem.TextTemplateCreater.ConvertDataStr
+  name: ConvertDataStr
+  nameWithType: TextTemplateCreater.ConvertDataStr
+  fullName: MacacaGames.EffectSystem.TextTemplateCreater.ConvertDataStr
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: DataTable
+  commentId: '!:DataTable'
+  isExternal: true
+  name: DataTable
+  nameWithType: DataTable
+  fullName: DataTable
+- uid: MacacaGames.EffectSystem.TextTemplateCreater.CreateText*
+  commentId: Overload:MacacaGames.EffectSystem.TextTemplateCreater.CreateText
+  name: CreateText
+  nameWithType: TextTemplateCreater.CreateText
+  fullName: MacacaGames.EffectSystem.TextTemplateCreater.CreateText

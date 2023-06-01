@@ -1,0 +1,319 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.IEffectableObject
+  commentId: T:MacacaGames.EffectSystem.IEffectableObject
+  id: IEffectableObject
+  parent: MacacaGames.EffectSystem
+  children:
+  - MacacaGames.EffectSystem.IEffectableObject.ApprovedAddEffect(MacacaGames.EffectSystem.Model.EffectInfo)
+  - MacacaGames.EffectSystem.IEffectableObject.DestoryEffectableObject
+  - MacacaGames.EffectSystem.IEffectableObject.GetEffectViewParent(System.String)
+  - MacacaGames.EffectSystem.IEffectableObject.GetInputTypeValue(System.String)
+  - MacacaGames.EffectSystem.IEffectableObject.IsAlive
+  - MacacaGames.EffectSystem.IEffectableObject.OnEffectActive(MacacaGames.EffectSystem.Model.EffectInfo)
+  - MacacaGames.EffectSystem.IEffectableObject.OnEffectDeactive(MacacaGames.EffectSystem.Model.EffectInfo)
+  langs:
+  - csharp
+  - vb
+  name: IEffectableObject
+  nameWithType: IEffectableObject
+  fullName: MacacaGames.EffectSystem.IEffectableObject
+  type: Interface
+  source:
+    remote:
+      path: Runtime/Interface/IEffectableObject.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: IEffectableObject
+    path: ../Runtime/Interface/IEffectableObject.cs
+    startLine: 5
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public interface IEffectableObject
+    content.vb: Public Interface IEffectableObject
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: MacacaGames.EffectSystem.IEffectableObject.DestoryEffectableObject
+  commentId: M:MacacaGames.EffectSystem.IEffectableObject.DestoryEffectableObject
+  id: DestoryEffectableObject
+  parent: MacacaGames.EffectSystem.IEffectableObject
+  langs:
+  - csharp
+  - vb
+  name: DestoryEffectableObject()
+  nameWithType: IEffectableObject.DestoryEffectableObject()
+  fullName: MacacaGames.EffectSystem.IEffectableObject.DestoryEffectableObject()
+  type: Method
+  source:
+    remote:
+      path: Runtime/Interface/IEffectableObject.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: DestoryEffectableObject
+    path: ../Runtime/Interface/IEffectableObject.cs
+    startLine: 7
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: void DestoryEffectableObject()
+    content.vb: Sub DestoryEffectableObject
+  overload: MacacaGames.EffectSystem.IEffectableObject.DestoryEffectableObject*
+- uid: MacacaGames.EffectSystem.IEffectableObject.GetEffectViewParent(System.String)
+  commentId: M:MacacaGames.EffectSystem.IEffectableObject.GetEffectViewParent(System.String)
+  id: GetEffectViewParent(System.String)
+  parent: MacacaGames.EffectSystem.IEffectableObject
+  langs:
+  - csharp
+  - vb
+  name: GetEffectViewParent(String)
+  nameWithType: IEffectableObject.GetEffectViewParent(String)
+  fullName: MacacaGames.EffectSystem.IEffectableObject.GetEffectViewParent(System.String)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Interface/IEffectableObject.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: GetEffectViewParent
+    path: ../Runtime/Interface/IEffectableObject.cs
+    startLine: 9
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: Transform GetEffectViewParent(string viewRoot)
+    parameters:
+    - id: viewRoot
+      type: System.String
+    return:
+      type: Transform
+    content.vb: Function GetEffectViewParent(viewRoot As String) As Transform
+  overload: MacacaGames.EffectSystem.IEffectableObject.GetEffectViewParent*
+- uid: MacacaGames.EffectSystem.IEffectableObject.ApprovedAddEffect(MacacaGames.EffectSystem.Model.EffectInfo)
+  commentId: M:MacacaGames.EffectSystem.IEffectableObject.ApprovedAddEffect(MacacaGames.EffectSystem.Model.EffectInfo)
+  id: ApprovedAddEffect(MacacaGames.EffectSystem.Model.EffectInfo)
+  parent: MacacaGames.EffectSystem.IEffectableObject
+  langs:
+  - csharp
+  - vb
+  name: ApprovedAddEffect(EffectInfo)
+  nameWithType: IEffectableObject.ApprovedAddEffect(EffectInfo)
+  fullName: MacacaGames.EffectSystem.IEffectableObject.ApprovedAddEffect(MacacaGames.EffectSystem.Model.EffectInfo)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Interface/IEffectableObject.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: ApprovedAddEffect
+    path: ../Runtime/Interface/IEffectableObject.cs
+    startLine: 11
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: bool ApprovedAddEffect(EffectInfo info)
+    parameters:
+    - id: info
+      type: MacacaGames.EffectSystem.Model.EffectInfo
+    return:
+      type: System.Boolean
+    content.vb: Function ApprovedAddEffect(info As EffectInfo) As Boolean
+  overload: MacacaGames.EffectSystem.IEffectableObject.ApprovedAddEffect*
+- uid: MacacaGames.EffectSystem.IEffectableObject.OnEffectActive(MacacaGames.EffectSystem.Model.EffectInfo)
+  commentId: M:MacacaGames.EffectSystem.IEffectableObject.OnEffectActive(MacacaGames.EffectSystem.Model.EffectInfo)
+  id: OnEffectActive(MacacaGames.EffectSystem.Model.EffectInfo)
+  parent: MacacaGames.EffectSystem.IEffectableObject
+  langs:
+  - csharp
+  - vb
+  name: OnEffectActive(EffectInfo)
+  nameWithType: IEffectableObject.OnEffectActive(EffectInfo)
+  fullName: MacacaGames.EffectSystem.IEffectableObject.OnEffectActive(MacacaGames.EffectSystem.Model.EffectInfo)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Interface/IEffectableObject.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnEffectActive
+    path: ../Runtime/Interface/IEffectableObject.cs
+    startLine: 13
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: void OnEffectActive(EffectInfo info)
+    parameters:
+    - id: info
+      type: MacacaGames.EffectSystem.Model.EffectInfo
+    content.vb: Sub OnEffectActive(info As EffectInfo)
+  overload: MacacaGames.EffectSystem.IEffectableObject.OnEffectActive*
+- uid: MacacaGames.EffectSystem.IEffectableObject.OnEffectDeactive(MacacaGames.EffectSystem.Model.EffectInfo)
+  commentId: M:MacacaGames.EffectSystem.IEffectableObject.OnEffectDeactive(MacacaGames.EffectSystem.Model.EffectInfo)
+  id: OnEffectDeactive(MacacaGames.EffectSystem.Model.EffectInfo)
+  parent: MacacaGames.EffectSystem.IEffectableObject
+  langs:
+  - csharp
+  - vb
+  name: OnEffectDeactive(EffectInfo)
+  nameWithType: IEffectableObject.OnEffectDeactive(EffectInfo)
+  fullName: MacacaGames.EffectSystem.IEffectableObject.OnEffectDeactive(MacacaGames.EffectSystem.Model.EffectInfo)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Interface/IEffectableObject.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnEffectDeactive
+    path: ../Runtime/Interface/IEffectableObject.cs
+    startLine: 15
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: void OnEffectDeactive(EffectInfo info)
+    parameters:
+    - id: info
+      type: MacacaGames.EffectSystem.Model.EffectInfo
+    content.vb: Sub OnEffectDeactive(info As EffectInfo)
+  overload: MacacaGames.EffectSystem.IEffectableObject.OnEffectDeactive*
+- uid: MacacaGames.EffectSystem.IEffectableObject.IsAlive
+  commentId: M:MacacaGames.EffectSystem.IEffectableObject.IsAlive
+  id: IsAlive
+  parent: MacacaGames.EffectSystem.IEffectableObject
+  langs:
+  - csharp
+  - vb
+  name: IsAlive()
+  nameWithType: IEffectableObject.IsAlive()
+  fullName: MacacaGames.EffectSystem.IEffectableObject.IsAlive()
+  type: Method
+  source:
+    remote:
+      path: Runtime/Interface/IEffectableObject.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: IsAlive
+    path: ../Runtime/Interface/IEffectableObject.cs
+    startLine: 17
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: bool IsAlive()
+    return:
+      type: System.Boolean
+    content.vb: Function IsAlive As Boolean
+  overload: MacacaGames.EffectSystem.IEffectableObject.IsAlive*
+- uid: MacacaGames.EffectSystem.IEffectableObject.GetInputTypeValue(System.String)
+  commentId: M:MacacaGames.EffectSystem.IEffectableObject.GetInputTypeValue(System.String)
+  id: GetInputTypeValue(System.String)
+  parent: MacacaGames.EffectSystem.IEffectableObject
+  langs:
+  - csharp
+  - vb
+  name: GetInputTypeValue(String)
+  nameWithType: IEffectableObject.GetInputTypeValue(String)
+  fullName: MacacaGames.EffectSystem.IEffectableObject.GetInputTypeValue(System.String)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Interface/IEffectableObject.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: GetInputTypeValue
+    path: ../Runtime/Interface/IEffectableObject.cs
+    startLine: 18
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: float GetInputTypeValue(string inputType)
+    parameters:
+    - id: inputType
+      type: System.String
+    return:
+      type: System.Single
+    content.vb: Function GetInputTypeValue(inputType As String) As Single
+  overload: MacacaGames.EffectSystem.IEffectableObject.GetInputTypeValue*
+references:
+- uid: MacacaGames.EffectSystem
+  commentId: N:MacacaGames.EffectSystem
+  name: MacacaGames.EffectSystem
+  nameWithType: MacacaGames.EffectSystem
+  fullName: MacacaGames.EffectSystem
+- uid: MacacaGames.EffectSystem.IEffectableObject.DestoryEffectableObject*
+  commentId: Overload:MacacaGames.EffectSystem.IEffectableObject.DestoryEffectableObject
+  name: DestoryEffectableObject
+  nameWithType: IEffectableObject.DestoryEffectableObject
+  fullName: MacacaGames.EffectSystem.IEffectableObject.DestoryEffectableObject
+- uid: MacacaGames.EffectSystem.IEffectableObject.GetEffectViewParent*
+  commentId: Overload:MacacaGames.EffectSystem.IEffectableObject.GetEffectViewParent
+  name: GetEffectViewParent
+  nameWithType: IEffectableObject.GetEffectViewParent
+  fullName: MacacaGames.EffectSystem.IEffectableObject.GetEffectViewParent
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Transform
+  commentId: '!:Transform'
+  isExternal: true
+  name: Transform
+  nameWithType: Transform
+  fullName: Transform
+- uid: MacacaGames.EffectSystem.IEffectableObject.ApprovedAddEffect*
+  commentId: Overload:MacacaGames.EffectSystem.IEffectableObject.ApprovedAddEffect
+  name: ApprovedAddEffect
+  nameWithType: IEffectableObject.ApprovedAddEffect
+  fullName: MacacaGames.EffectSystem.IEffectableObject.ApprovedAddEffect
+- uid: MacacaGames.EffectSystem.Model.EffectInfo
+  commentId: T:MacacaGames.EffectSystem.Model.EffectInfo
+  parent: MacacaGames.EffectSystem.Model
+  name: EffectInfo
+  nameWithType: EffectInfo
+  fullName: MacacaGames.EffectSystem.Model.EffectInfo
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: MacacaGames.EffectSystem.Model
+  commentId: N:MacacaGames.EffectSystem.Model
+  name: MacacaGames.EffectSystem.Model
+  nameWithType: MacacaGames.EffectSystem.Model
+  fullName: MacacaGames.EffectSystem.Model
+- uid: MacacaGames.EffectSystem.IEffectableObject.OnEffectActive*
+  commentId: Overload:MacacaGames.EffectSystem.IEffectableObject.OnEffectActive
+  name: OnEffectActive
+  nameWithType: IEffectableObject.OnEffectActive
+  fullName: MacacaGames.EffectSystem.IEffectableObject.OnEffectActive
+- uid: MacacaGames.EffectSystem.IEffectableObject.OnEffectDeactive*
+  commentId: Overload:MacacaGames.EffectSystem.IEffectableObject.OnEffectDeactive
+  name: OnEffectDeactive
+  nameWithType: IEffectableObject.OnEffectDeactive
+  fullName: MacacaGames.EffectSystem.IEffectableObject.OnEffectDeactive
+- uid: MacacaGames.EffectSystem.IEffectableObject.IsAlive*
+  commentId: Overload:MacacaGames.EffectSystem.IEffectableObject.IsAlive
+  name: IsAlive
+  nameWithType: IEffectableObject.IsAlive
+  fullName: MacacaGames.EffectSystem.IEffectableObject.IsAlive
+- uid: MacacaGames.EffectSystem.IEffectableObject.GetInputTypeValue*
+  commentId: Overload:MacacaGames.EffectSystem.IEffectableObject.GetInputTypeValue
+  name: GetInputTypeValue
+  nameWithType: IEffectableObject.GetInputTypeValue
+  fullName: MacacaGames.EffectSystem.IEffectableObject.GetInputTypeValue
+- uid: System.Single
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single

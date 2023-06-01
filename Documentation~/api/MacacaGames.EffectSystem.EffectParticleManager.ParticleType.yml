@@ -1,0 +1,1134 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  commentId: T:MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  id: EffectParticleManager.ParticleType
+  parent: MacacaGames.EffectSystem
+  children:
+  - MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Boost_Crit
+  - MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Boost_Defend
+  - MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Boost_Invincible
+  - MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Boost_Power
+  - MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Boost_Recover
+  - MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Boost_Speed
+  - MacacaGames.EffectSystem.EffectParticleManager.ParticleType.BossDie
+  - MacacaGames.EffectSystem.EffectParticleManager.ParticleType.BossDieBG
+  - MacacaGames.EffectSystem.EffectParticleManager.ParticleType.BossDust
+  - MacacaGames.EffectSystem.EffectParticleManager.ParticleType.BossMagicBallExplosion
+  - MacacaGames.EffectSystem.EffectParticleManager.ParticleType.BurnOnce
+  - MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Explosion
+  - MacacaGames.EffectSystem.EffectParticleManager.ParticleType.FirstStrike
+  - MacacaGames.EffectSystem.EffectParticleManager.ParticleType.HeroDie
+  - MacacaGames.EffectSystem.EffectParticleManager.ParticleType.HeroHeal
+  - MacacaGames.EffectSystem.EffectParticleManager.ParticleType.HeroWakeUp
+  - MacacaGames.EffectSystem.EffectParticleManager.ParticleType.HeroWakeUpBG
+  - MacacaGames.EffectSystem.EffectParticleManager.ParticleType.None
+  - MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot01
+  - MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot02
+  - MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot03
+  - MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot04
+  - MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot05
+  - MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot06
+  - MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot07
+  - MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot08
+  - MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot09
+  - MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot10
+  - MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Poison
+  - MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Pumpkin_Disappear_Left
+  - MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Pumpkin_Disappear_Right
+  - MacacaGames.EffectSystem.EffectParticleManager.ParticleType.WeakStrike
+  langs:
+  - csharp
+  - vb
+  name: EffectParticleManager.ParticleType
+  nameWithType: EffectParticleManager.ParticleType
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  type: Enum
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: ParticleType
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 8
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: 'public enum ParticleType : int'
+    content.vb: Public Enum ParticleType As Integer
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.None
+  commentId: F:MacacaGames.EffectSystem.EffectParticleManager.ParticleType.None
+  id: None
+  parent: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: EffectParticleManager.ParticleType.None
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.None
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: None
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 10
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: None = null
+    return:
+      type: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+    content.vb: None = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Poison
+  commentId: F:MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Poison
+  id: Poison
+  parent: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  langs:
+  - csharp
+  - vb
+  name: Poison
+  nameWithType: EffectParticleManager.ParticleType.Poison
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Poison
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Poison
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 11
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: Poison = null
+    return:
+      type: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+    content.vb: Poison = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.BossDie
+  commentId: F:MacacaGames.EffectSystem.EffectParticleManager.ParticleType.BossDie
+  id: BossDie
+  parent: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  langs:
+  - csharp
+  - vb
+  name: BossDie
+  nameWithType: EffectParticleManager.ParticleType.BossDie
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.BossDie
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: BossDie
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 12
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: BossDie = null
+    return:
+      type: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+    content.vb: BossDie = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.BossDust
+  commentId: F:MacacaGames.EffectSystem.EffectParticleManager.ParticleType.BossDust
+  id: BossDust
+  parent: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  langs:
+  - csharp
+  - vb
+  name: BossDust
+  nameWithType: EffectParticleManager.ParticleType.BossDust
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.BossDust
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: BossDust
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 13
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: BossDust = null
+    return:
+      type: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+    content.vb: BossDust = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.BossDieBG
+  commentId: F:MacacaGames.EffectSystem.EffectParticleManager.ParticleType.BossDieBG
+  id: BossDieBG
+  parent: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  langs:
+  - csharp
+  - vb
+  name: BossDieBG
+  nameWithType: EffectParticleManager.ParticleType.BossDieBG
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.BossDieBG
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: BossDieBG
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 14
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: BossDieBG = null
+    return:
+      type: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+    content.vb: BossDieBG = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Explosion
+  commentId: F:MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Explosion
+  id: Explosion
+  parent: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  langs:
+  - csharp
+  - vb
+  name: Explosion
+  nameWithType: EffectParticleManager.ParticleType.Explosion
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Explosion
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Explosion
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 15
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: Explosion = null
+    return:
+      type: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+    content.vb: Explosion = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.BurnOnce
+  commentId: F:MacacaGames.EffectSystem.EffectParticleManager.ParticleType.BurnOnce
+  id: BurnOnce
+  parent: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  langs:
+  - csharp
+  - vb
+  name: BurnOnce
+  nameWithType: EffectParticleManager.ParticleType.BurnOnce
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.BurnOnce
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: BurnOnce
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 16
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: BurnOnce = null
+    return:
+      type: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+    content.vb: BurnOnce = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.FirstStrike
+  commentId: F:MacacaGames.EffectSystem.EffectParticleManager.ParticleType.FirstStrike
+  id: FirstStrike
+  parent: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  langs:
+  - csharp
+  - vb
+  name: FirstStrike
+  nameWithType: EffectParticleManager.ParticleType.FirstStrike
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.FirstStrike
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: FirstStrike
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 17
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: FirstStrike = null
+    return:
+      type: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+    content.vb: FirstStrike = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.WeakStrike
+  commentId: F:MacacaGames.EffectSystem.EffectParticleManager.ParticleType.WeakStrike
+  id: WeakStrike
+  parent: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  langs:
+  - csharp
+  - vb
+  name: WeakStrike
+  nameWithType: EffectParticleManager.ParticleType.WeakStrike
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.WeakStrike
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: WeakStrike
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 18
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: WeakStrike = null
+    return:
+      type: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+    content.vb: WeakStrike = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Boost_Crit
+  commentId: F:MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Boost_Crit
+  id: Boost_Crit
+  parent: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  langs:
+  - csharp
+  - vb
+  name: Boost_Crit
+  nameWithType: EffectParticleManager.ParticleType.Boost_Crit
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Boost_Crit
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Boost_Crit
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 19
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: Boost_Crit = null
+    return:
+      type: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+    content.vb: Boost_Crit = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Boost_Defend
+  commentId: F:MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Boost_Defend
+  id: Boost_Defend
+  parent: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  langs:
+  - csharp
+  - vb
+  name: Boost_Defend
+  nameWithType: EffectParticleManager.ParticleType.Boost_Defend
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Boost_Defend
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Boost_Defend
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 20
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: Boost_Defend = null
+    return:
+      type: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+    content.vb: Boost_Defend = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Boost_Power
+  commentId: F:MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Boost_Power
+  id: Boost_Power
+  parent: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  langs:
+  - csharp
+  - vb
+  name: Boost_Power
+  nameWithType: EffectParticleManager.ParticleType.Boost_Power
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Boost_Power
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Boost_Power
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 21
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: Boost_Power = null
+    return:
+      type: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+    content.vb: Boost_Power = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Boost_Recover
+  commentId: F:MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Boost_Recover
+  id: Boost_Recover
+  parent: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  langs:
+  - csharp
+  - vb
+  name: Boost_Recover
+  nameWithType: EffectParticleManager.ParticleType.Boost_Recover
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Boost_Recover
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Boost_Recover
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 22
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: Boost_Recover = null
+    return:
+      type: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+    content.vb: Boost_Recover = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Boost_Speed
+  commentId: F:MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Boost_Speed
+  id: Boost_Speed
+  parent: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  langs:
+  - csharp
+  - vb
+  name: Boost_Speed
+  nameWithType: EffectParticleManager.ParticleType.Boost_Speed
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Boost_Speed
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Boost_Speed
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 23
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: Boost_Speed = null
+    return:
+      type: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+    content.vb: Boost_Speed = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Boost_Invincible
+  commentId: F:MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Boost_Invincible
+  id: Boost_Invincible
+  parent: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  langs:
+  - csharp
+  - vb
+  name: Boost_Invincible
+  nameWithType: EffectParticleManager.ParticleType.Boost_Invincible
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Boost_Invincible
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Boost_Invincible
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 24
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: Boost_Invincible = null
+    return:
+      type: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+    content.vb: Boost_Invincible = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.HeroDie
+  commentId: F:MacacaGames.EffectSystem.EffectParticleManager.ParticleType.HeroDie
+  id: HeroDie
+  parent: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  langs:
+  - csharp
+  - vb
+  name: HeroDie
+  nameWithType: EffectParticleManager.ParticleType.HeroDie
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.HeroDie
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: HeroDie
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 25
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: HeroDie = null
+    return:
+      type: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+    content.vb: HeroDie = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.HeroWakeUp
+  commentId: F:MacacaGames.EffectSystem.EffectParticleManager.ParticleType.HeroWakeUp
+  id: HeroWakeUp
+  parent: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  langs:
+  - csharp
+  - vb
+  name: HeroWakeUp
+  nameWithType: EffectParticleManager.ParticleType.HeroWakeUp
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.HeroWakeUp
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: HeroWakeUp
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 26
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: HeroWakeUp = null
+    return:
+      type: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+    content.vb: HeroWakeUp = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.HeroWakeUpBG
+  commentId: F:MacacaGames.EffectSystem.EffectParticleManager.ParticleType.HeroWakeUpBG
+  id: HeroWakeUpBG
+  parent: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  langs:
+  - csharp
+  - vb
+  name: HeroWakeUpBG
+  nameWithType: EffectParticleManager.ParticleType.HeroWakeUpBG
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.HeroWakeUpBG
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: HeroWakeUpBG
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 27
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: HeroWakeUpBG = null
+    return:
+      type: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+    content.vb: HeroWakeUpBG = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Pumpkin_Disappear_Left
+  commentId: F:MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Pumpkin_Disappear_Left
+  id: Pumpkin_Disappear_Left
+  parent: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  langs:
+  - csharp
+  - vb
+  name: Pumpkin_Disappear_Left
+  nameWithType: EffectParticleManager.ParticleType.Pumpkin_Disappear_Left
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Pumpkin_Disappear_Left
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Pumpkin_Disappear_Left
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 28
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: Pumpkin_Disappear_Left = null
+    return:
+      type: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+    content.vb: Pumpkin_Disappear_Left = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Pumpkin_Disappear_Right
+  commentId: F:MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Pumpkin_Disappear_Right
+  id: Pumpkin_Disappear_Right
+  parent: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  langs:
+  - csharp
+  - vb
+  name: Pumpkin_Disappear_Right
+  nameWithType: EffectParticleManager.ParticleType.Pumpkin_Disappear_Right
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Pumpkin_Disappear_Right
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Pumpkin_Disappear_Right
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 29
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: Pumpkin_Disappear_Right = null
+    return:
+      type: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+    content.vb: Pumpkin_Disappear_Right = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.HeroHeal
+  commentId: F:MacacaGames.EffectSystem.EffectParticleManager.ParticleType.HeroHeal
+  id: HeroHeal
+  parent: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  langs:
+  - csharp
+  - vb
+  name: HeroHeal
+  nameWithType: EffectParticleManager.ParticleType.HeroHeal
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.HeroHeal
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: HeroHeal
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 30
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: HeroHeal = null
+    return:
+      type: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+    content.vb: HeroHeal = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.BossMagicBallExplosion
+  commentId: F:MacacaGames.EffectSystem.EffectParticleManager.ParticleType.BossMagicBallExplosion
+  id: BossMagicBallExplosion
+  parent: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  langs:
+  - csharp
+  - vb
+  name: BossMagicBallExplosion
+  nameWithType: EffectParticleManager.ParticleType.BossMagicBallExplosion
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.BossMagicBallExplosion
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: BossMagicBallExplosion
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 31
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: BossMagicBallExplosion = null
+    return:
+      type: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+    content.vb: BossMagicBallExplosion = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot01
+  commentId: F:MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot01
+  id: Particle_Slot01
+  parent: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  langs:
+  - csharp
+  - vb
+  name: Particle_Slot01
+  nameWithType: EffectParticleManager.ParticleType.Particle_Slot01
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot01
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Particle_Slot01
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 32
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: Particle_Slot01 = null
+    return:
+      type: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+    content.vb: Particle_Slot01 = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot02
+  commentId: F:MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot02
+  id: Particle_Slot02
+  parent: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  langs:
+  - csharp
+  - vb
+  name: Particle_Slot02
+  nameWithType: EffectParticleManager.ParticleType.Particle_Slot02
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot02
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Particle_Slot02
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 33
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: Particle_Slot02 = null
+    return:
+      type: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+    content.vb: Particle_Slot02 = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot03
+  commentId: F:MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot03
+  id: Particle_Slot03
+  parent: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  langs:
+  - csharp
+  - vb
+  name: Particle_Slot03
+  nameWithType: EffectParticleManager.ParticleType.Particle_Slot03
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot03
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Particle_Slot03
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 34
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: Particle_Slot03 = null
+    return:
+      type: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+    content.vb: Particle_Slot03 = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot04
+  commentId: F:MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot04
+  id: Particle_Slot04
+  parent: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  langs:
+  - csharp
+  - vb
+  name: Particle_Slot04
+  nameWithType: EffectParticleManager.ParticleType.Particle_Slot04
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot04
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Particle_Slot04
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 35
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: Particle_Slot04 = null
+    return:
+      type: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+    content.vb: Particle_Slot04 = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot05
+  commentId: F:MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot05
+  id: Particle_Slot05
+  parent: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  langs:
+  - csharp
+  - vb
+  name: Particle_Slot05
+  nameWithType: EffectParticleManager.ParticleType.Particle_Slot05
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot05
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Particle_Slot05
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 36
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: Particle_Slot05 = null
+    return:
+      type: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+    content.vb: Particle_Slot05 = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot06
+  commentId: F:MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot06
+  id: Particle_Slot06
+  parent: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  langs:
+  - csharp
+  - vb
+  name: Particle_Slot06
+  nameWithType: EffectParticleManager.ParticleType.Particle_Slot06
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot06
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Particle_Slot06
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 37
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: Particle_Slot06 = null
+    return:
+      type: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+    content.vb: Particle_Slot06 = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot07
+  commentId: F:MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot07
+  id: Particle_Slot07
+  parent: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  langs:
+  - csharp
+  - vb
+  name: Particle_Slot07
+  nameWithType: EffectParticleManager.ParticleType.Particle_Slot07
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot07
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Particle_Slot07
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 38
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: Particle_Slot07 = null
+    return:
+      type: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+    content.vb: Particle_Slot07 = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot08
+  commentId: F:MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot08
+  id: Particle_Slot08
+  parent: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  langs:
+  - csharp
+  - vb
+  name: Particle_Slot08
+  nameWithType: EffectParticleManager.ParticleType.Particle_Slot08
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot08
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Particle_Slot08
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 39
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: Particle_Slot08 = null
+    return:
+      type: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+    content.vb: Particle_Slot08 = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot09
+  commentId: F:MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot09
+  id: Particle_Slot09
+  parent: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  langs:
+  - csharp
+  - vb
+  name: Particle_Slot09
+  nameWithType: EffectParticleManager.ParticleType.Particle_Slot09
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot09
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Particle_Slot09
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 40
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: Particle_Slot09 = null
+    return:
+      type: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+    content.vb: Particle_Slot09 = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot10
+  commentId: F:MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot10
+  id: Particle_Slot10
+  parent: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  langs:
+  - csharp
+  - vb
+  name: Particle_Slot10
+  nameWithType: EffectParticleManager.ParticleType.Particle_Slot10
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.ParticleType.Particle_Slot10
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Particle_Slot10
+    path: ../Runtime/EffectParticleManager.cs
+    startLine: 41
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: Particle_Slot10 = null
+    return:
+      type: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+    content.vb: Particle_Slot10 = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: MacacaGames.EffectSystem
+  commentId: N:MacacaGames.EffectSystem
+  name: MacacaGames.EffectSystem
+  nameWithType: MacacaGames.EffectSystem
+  fullName: MacacaGames.EffectSystem
+- uid: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  commentId: T:MacacaGames.EffectSystem.EffectParticleManager.ParticleType
+  parent: MacacaGames.EffectSystem
+  name: EffectParticleManager.ParticleType
+  nameWithType: EffectParticleManager.ParticleType
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.ParticleType

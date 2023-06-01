@@ -1,0 +1,1678 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.Model.ColliderType
+  commentId: T:MacacaGames.EffectSystem.Model.ColliderType
+  id: ColliderType
+  parent: MacacaGames.EffectSystem.Model
+  children:
+  - MacacaGames.EffectSystem.Model.ColliderType.Around_Fire
+  - MacacaGames.EffectSystem.Model.ColliderType.Around_Frozen
+  - MacacaGames.EffectSystem.Model.ColliderType.Around_Poison
+  - MacacaGames.EffectSystem.Model.ColliderType.Around_Storm
+  - MacacaGames.EffectSystem.Model.ColliderType.Assault_Wave_M_Boss
+  - MacacaGames.EffectSystem.Model.ColliderType.Bat_WaveL_S
+  - MacacaGames.EffectSystem.Model.ColliderType.Bat_WaveR_S
+  - MacacaGames.EffectSystem.Model.ColliderType.BigExplosion_Fire
+  - MacacaGames.EffectSystem.Model.ColliderType.BigExplosion_Frozen
+  - MacacaGames.EffectSystem.Model.ColliderType.BigExplosion_Poison
+  - MacacaGames.EffectSystem.Model.ColliderType.BigExplosion_Storm
+  - MacacaGames.EffectSystem.Model.ColliderType.BounceProjectile_C03_Damage
+  - MacacaGames.EffectSystem.Model.ColliderType.BounceProjectile_C03_Heal
+  - MacacaGames.EffectSystem.Model.ColliderType.BounceProjectile_Fire
+  - MacacaGames.EffectSystem.Model.ColliderType.BounceProjectile_Forzen
+  - MacacaGames.EffectSystem.Model.ColliderType.BounceProjectile_Poison
+  - MacacaGames.EffectSystem.Model.ColliderType.BounceProjectile_Storm
+  - MacacaGames.EffectSystem.Model.ColliderType.Explosion_Fire
+  - MacacaGames.EffectSystem.Model.ColliderType.Explosion_Frozen
+  - MacacaGames.EffectSystem.Model.ColliderType.Explosion_Poison
+  - MacacaGames.EffectSystem.Model.ColliderType.Explosion_Storm
+  - MacacaGames.EffectSystem.Model.ColliderType.FireHit_Circle_M
+  - MacacaGames.EffectSystem.Model.ColliderType.Frozen_Circle_M
+  - MacacaGames.EffectSystem.Model.ColliderType.Frozen_Wave_M
+  - MacacaGames.EffectSystem.Model.ColliderType.FrozenZone_Circle_L
+  - MacacaGames.EffectSystem.Model.ColliderType.MagicBall_Wave_L_Boss
+  - MacacaGames.EffectSystem.Model.ColliderType.MagicBall_Wave_S_Boss
+  - MacacaGames.EffectSystem.Model.ColliderType.None
+  - MacacaGames.EffectSystem.Model.ColliderType.Poison_Wave_M
+  - MacacaGames.EffectSystem.Model.ColliderType.Projectile_Assault_Boss
+  - MacacaGames.EffectSystem.Model.ColliderType.Projectile_Bat
+  - MacacaGames.EffectSystem.Model.ColliderType.Projectile_Fire
+  - MacacaGames.EffectSystem.Model.ColliderType.Projectile_Forzen
+  - MacacaGames.EffectSystem.Model.ColliderType.Projectile_MagicBall_Boss
+  - MacacaGames.EffectSystem.Model.ColliderType.Projectile_Poison
+  - MacacaGames.EffectSystem.Model.ColliderType.Projectile_Spike_Boss
+  - MacacaGames.EffectSystem.Model.ColliderType.Projectile_Storm
+  - MacacaGames.EffectSystem.Model.ColliderType.Pumpkin_Side_S
+  - MacacaGames.EffectSystem.Model.ColliderType.Side_Pumpkin
+  - MacacaGames.EffectSystem.Model.ColliderType.Spike_Wave_M_Boss
+  - MacacaGames.EffectSystem.Model.ColliderType.Storm_Circle_M
+  - MacacaGames.EffectSystem.Model.ColliderType.Storm_Wave_M
+  - MacacaGames.EffectSystem.Model.ColliderType.WeakAtk_Circle_M
+  - MacacaGames.EffectSystem.Model.ColliderType.Zone_C04_Blade
+  - MacacaGames.EffectSystem.Model.ColliderType.Zone_Fire
+  - MacacaGames.EffectSystem.Model.ColliderType.Zone_Frozen
+  - MacacaGames.EffectSystem.Model.ColliderType.Zone_Poison
+  - MacacaGames.EffectSystem.Model.ColliderType.Zone_Storm
+  langs:
+  - csharp
+  - vb
+  name: ColliderType
+  nameWithType: ColliderType
+  fullName: MacacaGames.EffectSystem.Model.ColliderType
+  type: Enum
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: ColliderType
+    path: ../Model/Effect.cs
+    startLine: 175
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: 'public enum ColliderType : int'
+    content.vb: Public Enum ColliderType As Integer
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: MacacaGames.EffectSystem.Model.ColliderType.None
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.None
+  id: None
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: ColliderType.None
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.None
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: None
+    path: ../Model/Effect.cs
+    startLine: 177
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: None = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: None = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.Explosion_Fire
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.Explosion_Fire
+  id: Explosion_Fire
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: Explosion_Fire
+  nameWithType: ColliderType.Explosion_Fire
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.Explosion_Fire
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Explosion_Fire
+    path: ../Model/Effect.cs
+    startLine: 178
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Explosion_Fire = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: Explosion_Fire = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.Explosion_Frozen
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.Explosion_Frozen
+  id: Explosion_Frozen
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: Explosion_Frozen
+  nameWithType: ColliderType.Explosion_Frozen
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.Explosion_Frozen
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Explosion_Frozen
+    path: ../Model/Effect.cs
+    startLine: 179
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Explosion_Frozen = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: Explosion_Frozen = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.Explosion_Poison
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.Explosion_Poison
+  id: Explosion_Poison
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: Explosion_Poison
+  nameWithType: ColliderType.Explosion_Poison
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.Explosion_Poison
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Explosion_Poison
+    path: ../Model/Effect.cs
+    startLine: 180
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Explosion_Poison = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: Explosion_Poison = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.Explosion_Storm
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.Explosion_Storm
+  id: Explosion_Storm
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: Explosion_Storm
+  nameWithType: ColliderType.Explosion_Storm
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.Explosion_Storm
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Explosion_Storm
+    path: ../Model/Effect.cs
+    startLine: 181
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Explosion_Storm = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: Explosion_Storm = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.Zone_Fire
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.Zone_Fire
+  id: Zone_Fire
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: Zone_Fire
+  nameWithType: ColliderType.Zone_Fire
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.Zone_Fire
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Zone_Fire
+    path: ../Model/Effect.cs
+    startLine: 182
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Zone_Fire = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: Zone_Fire = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.Zone_Frozen
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.Zone_Frozen
+  id: Zone_Frozen
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: Zone_Frozen
+  nameWithType: ColliderType.Zone_Frozen
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.Zone_Frozen
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Zone_Frozen
+    path: ../Model/Effect.cs
+    startLine: 183
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Zone_Frozen = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: Zone_Frozen = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.Zone_Poison
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.Zone_Poison
+  id: Zone_Poison
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: Zone_Poison
+  nameWithType: ColliderType.Zone_Poison
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.Zone_Poison
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Zone_Poison
+    path: ../Model/Effect.cs
+    startLine: 184
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Zone_Poison = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: Zone_Poison = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.Zone_Storm
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.Zone_Storm
+  id: Zone_Storm
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: Zone_Storm
+  nameWithType: ColliderType.Zone_Storm
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.Zone_Storm
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Zone_Storm
+    path: ../Model/Effect.cs
+    startLine: 185
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Zone_Storm = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: Zone_Storm = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.Projectile_Fire
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.Projectile_Fire
+  id: Projectile_Fire
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: Projectile_Fire
+  nameWithType: ColliderType.Projectile_Fire
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.Projectile_Fire
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Projectile_Fire
+    path: ../Model/Effect.cs
+    startLine: 186
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Projectile_Fire = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: Projectile_Fire = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.Projectile_Forzen
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.Projectile_Forzen
+  id: Projectile_Forzen
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: Projectile_Forzen
+  nameWithType: ColliderType.Projectile_Forzen
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.Projectile_Forzen
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Projectile_Forzen
+    path: ../Model/Effect.cs
+    startLine: 187
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Projectile_Forzen = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: Projectile_Forzen = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.Projectile_Poison
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.Projectile_Poison
+  id: Projectile_Poison
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: Projectile_Poison
+  nameWithType: ColliderType.Projectile_Poison
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.Projectile_Poison
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Projectile_Poison
+    path: ../Model/Effect.cs
+    startLine: 188
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Projectile_Poison = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: Projectile_Poison = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.Projectile_Storm
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.Projectile_Storm
+  id: Projectile_Storm
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: Projectile_Storm
+  nameWithType: ColliderType.Projectile_Storm
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.Projectile_Storm
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Projectile_Storm
+    path: ../Model/Effect.cs
+    startLine: 189
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Projectile_Storm = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: Projectile_Storm = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.Around_Fire
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.Around_Fire
+  id: Around_Fire
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: Around_Fire
+  nameWithType: ColliderType.Around_Fire
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.Around_Fire
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Around_Fire
+    path: ../Model/Effect.cs
+    startLine: 190
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Around_Fire = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: Around_Fire = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.Around_Frozen
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.Around_Frozen
+  id: Around_Frozen
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: Around_Frozen
+  nameWithType: ColliderType.Around_Frozen
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.Around_Frozen
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Around_Frozen
+    path: ../Model/Effect.cs
+    startLine: 191
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Around_Frozen = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: Around_Frozen = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.Around_Poison
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.Around_Poison
+  id: Around_Poison
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: Around_Poison
+  nameWithType: ColliderType.Around_Poison
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.Around_Poison
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Around_Poison
+    path: ../Model/Effect.cs
+    startLine: 192
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Around_Poison = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: Around_Poison = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.Around_Storm
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.Around_Storm
+  id: Around_Storm
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: Around_Storm
+  nameWithType: ColliderType.Around_Storm
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.Around_Storm
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Around_Storm
+    path: ../Model/Effect.cs
+    startLine: 193
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Around_Storm = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: Around_Storm = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.Projectile_Bat
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.Projectile_Bat
+  id: Projectile_Bat
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: Projectile_Bat
+  nameWithType: ColliderType.Projectile_Bat
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.Projectile_Bat
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Projectile_Bat
+    path: ../Model/Effect.cs
+    startLine: 194
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Projectile_Bat = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: Projectile_Bat = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.Side_Pumpkin
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.Side_Pumpkin
+  id: Side_Pumpkin
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: Side_Pumpkin
+  nameWithType: ColliderType.Side_Pumpkin
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.Side_Pumpkin
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Side_Pumpkin
+    path: ../Model/Effect.cs
+    startLine: 195
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Side_Pumpkin = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: Side_Pumpkin = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.Projectile_Assault_Boss
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.Projectile_Assault_Boss
+  id: Projectile_Assault_Boss
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: Projectile_Assault_Boss
+  nameWithType: ColliderType.Projectile_Assault_Boss
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.Projectile_Assault_Boss
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Projectile_Assault_Boss
+    path: ../Model/Effect.cs
+    startLine: 196
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Projectile_Assault_Boss = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: Projectile_Assault_Boss = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.Projectile_MagicBall_Boss
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.Projectile_MagicBall_Boss
+  id: Projectile_MagicBall_Boss
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: Projectile_MagicBall_Boss
+  nameWithType: ColliderType.Projectile_MagicBall_Boss
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.Projectile_MagicBall_Boss
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Projectile_MagicBall_Boss
+    path: ../Model/Effect.cs
+    startLine: 197
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Projectile_MagicBall_Boss = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: Projectile_MagicBall_Boss = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.Projectile_Spike_Boss
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.Projectile_Spike_Boss
+  id: Projectile_Spike_Boss
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: Projectile_Spike_Boss
+  nameWithType: ColliderType.Projectile_Spike_Boss
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.Projectile_Spike_Boss
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Projectile_Spike_Boss
+    path: ../Model/Effect.cs
+    startLine: 198
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Projectile_Spike_Boss = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: Projectile_Spike_Boss = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.BigExplosion_Fire
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.BigExplosion_Fire
+  id: BigExplosion_Fire
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: BigExplosion_Fire
+  nameWithType: ColliderType.BigExplosion_Fire
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.BigExplosion_Fire
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: BigExplosion_Fire
+    path: ../Model/Effect.cs
+    startLine: 199
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: BigExplosion_Fire = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: BigExplosion_Fire = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.BigExplosion_Frozen
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.BigExplosion_Frozen
+  id: BigExplosion_Frozen
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: BigExplosion_Frozen
+  nameWithType: ColliderType.BigExplosion_Frozen
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.BigExplosion_Frozen
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: BigExplosion_Frozen
+    path: ../Model/Effect.cs
+    startLine: 200
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: BigExplosion_Frozen = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: BigExplosion_Frozen = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.BigExplosion_Poison
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.BigExplosion_Poison
+  id: BigExplosion_Poison
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: BigExplosion_Poison
+  nameWithType: ColliderType.BigExplosion_Poison
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.BigExplosion_Poison
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: BigExplosion_Poison
+    path: ../Model/Effect.cs
+    startLine: 201
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: BigExplosion_Poison = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: BigExplosion_Poison = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.BigExplosion_Storm
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.BigExplosion_Storm
+  id: BigExplosion_Storm
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: BigExplosion_Storm
+  nameWithType: ColliderType.BigExplosion_Storm
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.BigExplosion_Storm
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: BigExplosion_Storm
+    path: ../Model/Effect.cs
+    startLine: 202
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: BigExplosion_Storm = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: BigExplosion_Storm = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.BounceProjectile_Fire
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.BounceProjectile_Fire
+  id: BounceProjectile_Fire
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: BounceProjectile_Fire
+  nameWithType: ColliderType.BounceProjectile_Fire
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.BounceProjectile_Fire
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: BounceProjectile_Fire
+    path: ../Model/Effect.cs
+    startLine: 203
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: BounceProjectile_Fire = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: BounceProjectile_Fire = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.BounceProjectile_Forzen
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.BounceProjectile_Forzen
+  id: BounceProjectile_Forzen
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: BounceProjectile_Forzen
+  nameWithType: ColliderType.BounceProjectile_Forzen
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.BounceProjectile_Forzen
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: BounceProjectile_Forzen
+    path: ../Model/Effect.cs
+    startLine: 204
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: BounceProjectile_Forzen = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: BounceProjectile_Forzen = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.BounceProjectile_Poison
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.BounceProjectile_Poison
+  id: BounceProjectile_Poison
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: BounceProjectile_Poison
+  nameWithType: ColliderType.BounceProjectile_Poison
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.BounceProjectile_Poison
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: BounceProjectile_Poison
+    path: ../Model/Effect.cs
+    startLine: 205
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: BounceProjectile_Poison = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: BounceProjectile_Poison = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.BounceProjectile_Storm
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.BounceProjectile_Storm
+  id: BounceProjectile_Storm
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: BounceProjectile_Storm
+  nameWithType: ColliderType.BounceProjectile_Storm
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.BounceProjectile_Storm
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: BounceProjectile_Storm
+    path: ../Model/Effect.cs
+    startLine: 206
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: BounceProjectile_Storm = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: BounceProjectile_Storm = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.BounceProjectile_C03_Damage
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.BounceProjectile_C03_Damage
+  id: BounceProjectile_C03_Damage
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: BounceProjectile_C03_Damage
+  nameWithType: ColliderType.BounceProjectile_C03_Damage
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.BounceProjectile_C03_Damage
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: BounceProjectile_C03_Damage
+    path: ../Model/Effect.cs
+    startLine: 207
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: BounceProjectile_C03_Damage = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: BounceProjectile_C03_Damage = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.BounceProjectile_C03_Heal
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.BounceProjectile_C03_Heal
+  id: BounceProjectile_C03_Heal
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: BounceProjectile_C03_Heal
+  nameWithType: ColliderType.BounceProjectile_C03_Heal
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.BounceProjectile_C03_Heal
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: BounceProjectile_C03_Heal
+    path: ../Model/Effect.cs
+    startLine: 208
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: BounceProjectile_C03_Heal = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: BounceProjectile_C03_Heal = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.Zone_C04_Blade
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.Zone_C04_Blade
+  id: Zone_C04_Blade
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: Zone_C04_Blade
+  nameWithType: ColliderType.Zone_C04_Blade
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.Zone_C04_Blade
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Zone_C04_Blade
+    path: ../Model/Effect.cs
+    startLine: 209
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Zone_C04_Blade = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: Zone_C04_Blade = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.FireHit_Circle_M
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.FireHit_Circle_M
+  id: FireHit_Circle_M
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: FireHit_Circle_M
+  nameWithType: ColliderType.FireHit_Circle_M
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.FireHit_Circle_M
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: FireHit_Circle_M
+    path: ../Model/Effect.cs
+    startLine: 211
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: FireHit_Circle_M = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: FireHit_Circle_M = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.Frozen_Circle_M
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.Frozen_Circle_M
+  id: Frozen_Circle_M
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: Frozen_Circle_M
+  nameWithType: ColliderType.Frozen_Circle_M
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.Frozen_Circle_M
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Frozen_Circle_M
+    path: ../Model/Effect.cs
+    startLine: 212
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Frozen_Circle_M = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: Frozen_Circle_M = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.Storm_Circle_M
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.Storm_Circle_M
+  id: Storm_Circle_M
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: Storm_Circle_M
+  nameWithType: ColliderType.Storm_Circle_M
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.Storm_Circle_M
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Storm_Circle_M
+    path: ../Model/Effect.cs
+    startLine: 213
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Storm_Circle_M = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: Storm_Circle_M = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.WeakAtk_Circle_M
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.WeakAtk_Circle_M
+  id: WeakAtk_Circle_M
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: WeakAtk_Circle_M
+  nameWithType: ColliderType.WeakAtk_Circle_M
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.WeakAtk_Circle_M
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: WeakAtk_Circle_M
+    path: ../Model/Effect.cs
+    startLine: 214
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: WeakAtk_Circle_M = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: WeakAtk_Circle_M = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.Frozen_Wave_M
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.Frozen_Wave_M
+  id: Frozen_Wave_M
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: Frozen_Wave_M
+  nameWithType: ColliderType.Frozen_Wave_M
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.Frozen_Wave_M
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Frozen_Wave_M
+    path: ../Model/Effect.cs
+    startLine: 215
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Frozen_Wave_M = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: Frozen_Wave_M = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.Poison_Wave_M
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.Poison_Wave_M
+  id: Poison_Wave_M
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: Poison_Wave_M
+  nameWithType: ColliderType.Poison_Wave_M
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.Poison_Wave_M
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Poison_Wave_M
+    path: ../Model/Effect.cs
+    startLine: 216
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Poison_Wave_M = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: Poison_Wave_M = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.Storm_Wave_M
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.Storm_Wave_M
+  id: Storm_Wave_M
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: Storm_Wave_M
+  nameWithType: ColliderType.Storm_Wave_M
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.Storm_Wave_M
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Storm_Wave_M
+    path: ../Model/Effect.cs
+    startLine: 217
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Storm_Wave_M = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: Storm_Wave_M = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.Bat_WaveL_S
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.Bat_WaveL_S
+  id: Bat_WaveL_S
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: Bat_WaveL_S
+  nameWithType: ColliderType.Bat_WaveL_S
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.Bat_WaveL_S
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Bat_WaveL_S
+    path: ../Model/Effect.cs
+    startLine: 218
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Bat_WaveL_S = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: Bat_WaveL_S = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.Bat_WaveR_S
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.Bat_WaveR_S
+  id: Bat_WaveR_S
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: Bat_WaveR_S
+  nameWithType: ColliderType.Bat_WaveR_S
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.Bat_WaveR_S
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Bat_WaveR_S
+    path: ../Model/Effect.cs
+    startLine: 219
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Bat_WaveR_S = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: Bat_WaveR_S = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.Pumpkin_Side_S
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.Pumpkin_Side_S
+  id: Pumpkin_Side_S
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: Pumpkin_Side_S
+  nameWithType: ColliderType.Pumpkin_Side_S
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.Pumpkin_Side_S
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Pumpkin_Side_S
+    path: ../Model/Effect.cs
+    startLine: 220
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Pumpkin_Side_S = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: Pumpkin_Side_S = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.MagicBall_Wave_S_Boss
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.MagicBall_Wave_S_Boss
+  id: MagicBall_Wave_S_Boss
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: MagicBall_Wave_S_Boss
+  nameWithType: ColliderType.MagicBall_Wave_S_Boss
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.MagicBall_Wave_S_Boss
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: MagicBall_Wave_S_Boss
+    path: ../Model/Effect.cs
+    startLine: 221
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: MagicBall_Wave_S_Boss = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: MagicBall_Wave_S_Boss = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.MagicBall_Wave_L_Boss
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.MagicBall_Wave_L_Boss
+  id: MagicBall_Wave_L_Boss
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: MagicBall_Wave_L_Boss
+  nameWithType: ColliderType.MagicBall_Wave_L_Boss
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.MagicBall_Wave_L_Boss
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: MagicBall_Wave_L_Boss
+    path: ../Model/Effect.cs
+    startLine: 222
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: MagicBall_Wave_L_Boss = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: MagicBall_Wave_L_Boss = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.Spike_Wave_M_Boss
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.Spike_Wave_M_Boss
+  id: Spike_Wave_M_Boss
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: Spike_Wave_M_Boss
+  nameWithType: ColliderType.Spike_Wave_M_Boss
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.Spike_Wave_M_Boss
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Spike_Wave_M_Boss
+    path: ../Model/Effect.cs
+    startLine: 223
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Spike_Wave_M_Boss = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: Spike_Wave_M_Boss = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.Assault_Wave_M_Boss
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.Assault_Wave_M_Boss
+  id: Assault_Wave_M_Boss
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: Assault_Wave_M_Boss
+  nameWithType: ColliderType.Assault_Wave_M_Boss
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.Assault_Wave_M_Boss
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Assault_Wave_M_Boss
+    path: ../Model/Effect.cs
+    startLine: 224
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Assault_Wave_M_Boss = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: Assault_Wave_M_Boss = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ColliderType.FrozenZone_Circle_L
+  commentId: F:MacacaGames.EffectSystem.Model.ColliderType.FrozenZone_Circle_L
+  id: FrozenZone_Circle_L
+  parent: MacacaGames.EffectSystem.Model.ColliderType
+  langs:
+  - csharp
+  - vb
+  name: FrozenZone_Circle_L
+  nameWithType: ColliderType.FrozenZone_Circle_L
+  fullName: MacacaGames.EffectSystem.Model.ColliderType.FrozenZone_Circle_L
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: FrozenZone_Circle_L
+    path: ../Model/Effect.cs
+    startLine: 225
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: FrozenZone_Circle_L = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ColliderType
+    content.vb: FrozenZone_Circle_L = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: MacacaGames.EffectSystem.Model
+  commentId: N:MacacaGames.EffectSystem.Model
+  name: MacacaGames.EffectSystem.Model
+  nameWithType: MacacaGames.EffectSystem.Model
+  fullName: MacacaGames.EffectSystem.Model
+- uid: MacacaGames.EffectSystem.Model.ColliderType
+  commentId: T:MacacaGames.EffectSystem.Model.ColliderType
+  parent: MacacaGames.EffectSystem.Model
+  name: ColliderType
+  nameWithType: ColliderType
+  fullName: MacacaGames.EffectSystem.Model.ColliderType

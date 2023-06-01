@@ -1,0 +1,113 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.TriggerTransType
+  commentId: T:MacacaGames.EffectSystem.EffectSystemScriptable.TriggerTransType
+  id: EffectSystemScriptable.TriggerTransType
+  parent: MacacaGames.EffectSystem
+  children:
+  - MacacaGames.EffectSystem.EffectSystemScriptable.TriggerTransType.CutOldOne
+  - MacacaGames.EffectSystem.EffectSystemScriptable.TriggerTransType.SkipNewOne
+  langs:
+  - csharp
+  - vb
+  name: EffectSystemScriptable.TriggerTransType
+  nameWithType: EffectSystemScriptable.TriggerTransType
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.TriggerTransType
+  type: Struct
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: TriggerTransType
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 338
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public struct TriggerTransType
+    content.vb: Public Structure TriggerTransType
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.TriggerTransType.SkipNewOne
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.TriggerTransType.SkipNewOne
+  id: SkipNewOne
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.TriggerTransType
+  langs:
+  - csharp
+  - vb
+  name: SkipNewOne
+  nameWithType: EffectSystemScriptable.TriggerTransType.SkipNewOne
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.TriggerTransType.SkipNewOne
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: SkipNewOne
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 340
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string SkipNewOne = null
+    return:
+      type: System.String
+    content.vb: Public Const SkipNewOne As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.TriggerTransType.CutOldOne
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.TriggerTransType.CutOldOne
+  id: CutOldOne
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.TriggerTransType
+  langs:
+  - csharp
+  - vb
+  name: CutOldOne
+  nameWithType: EffectSystemScriptable.TriggerTransType.CutOldOne
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.TriggerTransType.CutOldOne
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: CutOldOne
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 342
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string CutOldOne = null
+    return:
+      type: System.String
+    content.vb: Public Const CutOldOne As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: MacacaGames.EffectSystem
+  commentId: N:MacacaGames.EffectSystem
+  name: MacacaGames.EffectSystem
+  nameWithType: MacacaGames.EffectSystem
+  fullName: MacacaGames.EffectSystem
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

@@ -1,0 +1,40 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable
+  commentId: T:MacacaGames.EffectSystem.EffectSystemScriptable
+  id: EffectSystemScriptable
+  parent: MacacaGames.EffectSystem
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: EffectSystemScriptable
+  nameWithType: EffectSystemScriptable
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable
+  type: Struct
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: EffectSystemScriptable
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 4
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public struct EffectSystemScriptable
+    content.vb: Public Structure EffectSystemScriptable
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+references:
+- uid: MacacaGames.EffectSystem
+  commentId: N:MacacaGames.EffectSystem
+  name: MacacaGames.EffectSystem
+  nameWithType: MacacaGames.EffectSystem
+  fullName: MacacaGames.EffectSystem

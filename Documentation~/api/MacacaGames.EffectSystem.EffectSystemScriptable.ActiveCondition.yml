@@ -1,0 +1,1609 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  commentId: T:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  id: EffectSystemScriptable.ActiveCondition
+  parent: MacacaGames.EffectSystem
+  children:
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnEffectStart
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnHeroUseProactiveSkill
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterDied
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterDoAttack
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterDoHit
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterDoSupport
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterGetAttack
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterGetHit
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterGetMagicalAttack
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterGetPhysicalAttack
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterGetSupport
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterHeal
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAttackTargetHpGreaterEqual0
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAttackTargetHpGreaterEqual100
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAttackTargetHpGreaterEqual60
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAttackTargetHpGreaterEqual80
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAttackTargetHpLess0
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAttackTargetHpLess50
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAttackTargetPoisonStackMax
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerBeforeApproveEffect
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerBeforeAttackLastRow
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerBeforeDoAttack
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerBeforeDoSupport
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerBeforeGetAttack
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerBeforeGetHit
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerBeforeGetSupport
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerBeforeHeal
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerBePicked
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerCritAndAfterDoHit
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerCritAndBeforeDoAttack
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerEnterAttackLine
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerFallingEnd
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerGetAttackMiss
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpGreaterEqual100
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpGreaterEqual20
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpGreaterEqual40
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpGreaterEqual60
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpGreaterEqual80
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpLess100
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpLess20
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpLess40
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpLess60
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpLess80
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerKillOther
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerLeaveAttackLine
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerTriggerNearDeath
+  langs:
+  - csharp
+  - vb
+  name: EffectSystemScriptable.ActiveCondition
+  nameWithType: EffectSystemScriptable.ActiveCondition
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  type: Struct
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: ActiveCondition
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 150
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public struct ActiveCondition
+    content.vb: Public Structure ActiveCondition
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnEffectStart
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnEffectStart
+  id: OnEffectStart
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnEffectStart
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnEffectStart
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnEffectStart
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnEffectStart
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 152
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnEffectStart = null
+    return:
+      type: System.String
+    content.vb: Public Const OnEffectStart As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerBeforeGetAttack
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerBeforeGetAttack
+  id: OnOwnerBeforeGetAttack
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerBeforeGetAttack
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerBeforeGetAttack
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerBeforeGetAttack
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerBeforeGetAttack
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 154
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerBeforeGetAttack = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerBeforeGetAttack As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterGetAttack
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterGetAttack
+  id: OnOwnerAfterGetAttack
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerAfterGetAttack
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerAfterGetAttack
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterGetAttack
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerAfterGetAttack
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 156
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerAfterGetAttack = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerAfterGetAttack As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerBeforeDoAttack
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerBeforeDoAttack
+  id: OnOwnerBeforeDoAttack
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerBeforeDoAttack
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerBeforeDoAttack
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerBeforeDoAttack
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerBeforeDoAttack
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 158
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerBeforeDoAttack = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerBeforeDoAttack As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterDoAttack
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterDoAttack
+  id: OnOwnerAfterDoAttack
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerAfterDoAttack
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerAfterDoAttack
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterDoAttack
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerAfterDoAttack
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 160
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerAfterDoAttack = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerAfterDoAttack As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerBeforeGetHit
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerBeforeGetHit
+  id: OnOwnerBeforeGetHit
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerBeforeGetHit
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerBeforeGetHit
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerBeforeGetHit
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerBeforeGetHit
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 162
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerBeforeGetHit = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerBeforeGetHit As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterGetHit
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterGetHit
+  id: OnOwnerAfterGetHit
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerAfterGetHit
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerAfterGetHit
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterGetHit
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerAfterGetHit
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 164
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerAfterGetHit = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerAfterGetHit As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerKillOther
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerKillOther
+  id: OnOwnerKillOther
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerKillOther
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerKillOther
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerKillOther
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerKillOther
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 166
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerKillOther = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerKillOther As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerCritAndBeforeDoAttack
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerCritAndBeforeDoAttack
+  id: OnOwnerCritAndBeforeDoAttack
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerCritAndBeforeDoAttack
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerCritAndBeforeDoAttack
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerCritAndBeforeDoAttack
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerCritAndBeforeDoAttack
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 168
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerCritAndBeforeDoAttack = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerCritAndBeforeDoAttack As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerGetAttackMiss
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerGetAttackMiss
+  id: OnOwnerGetAttackMiss
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerGetAttackMiss
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerGetAttackMiss
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerGetAttackMiss
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerGetAttackMiss
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 170
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerGetAttackMiss = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerGetAttackMiss As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerTriggerNearDeath
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerTriggerNearDeath
+  id: OnOwnerTriggerNearDeath
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerTriggerNearDeath
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerTriggerNearDeath
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerTriggerNearDeath
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerTriggerNearDeath
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 172
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerTriggerNearDeath = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerTriggerNearDeath As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerBeforeHeal
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerBeforeHeal
+  id: OnOwnerBeforeHeal
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerBeforeHeal
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerBeforeHeal
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerBeforeHeal
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerBeforeHeal
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 174
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerBeforeHeal = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerBeforeHeal As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterHeal
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterHeal
+  id: OnOwnerAfterHeal
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerAfterHeal
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerAfterHeal
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterHeal
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerAfterHeal
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 176
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerAfterHeal = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerAfterHeal As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerEnterAttackLine
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerEnterAttackLine
+  id: OnOwnerEnterAttackLine
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerEnterAttackLine
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerEnterAttackLine
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerEnterAttackLine
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerEnterAttackLine
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 178
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerEnterAttackLine = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerEnterAttackLine As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerLeaveAttackLine
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerLeaveAttackLine
+  id: OnOwnerLeaveAttackLine
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerLeaveAttackLine
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerLeaveAttackLine
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerLeaveAttackLine
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerLeaveAttackLine
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 180
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerLeaveAttackLine = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerLeaveAttackLine As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterDoHit
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterDoHit
+  id: OnOwnerAfterDoHit
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerAfterDoHit
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerAfterDoHit
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterDoHit
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerAfterDoHit
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 182
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerAfterDoHit = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerAfterDoHit As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerFallingEnd
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerFallingEnd
+  id: OnOwnerFallingEnd
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerFallingEnd
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerFallingEnd
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerFallingEnd
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerFallingEnd
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 184
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerFallingEnd = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerFallingEnd As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnHeroUseProactiveSkill
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnHeroUseProactiveSkill
+  id: OnHeroUseProactiveSkill
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnHeroUseProactiveSkill
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnHeroUseProactiveSkill
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnHeroUseProactiveSkill
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnHeroUseProactiveSkill
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 186
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnHeroUseProactiveSkill = null
+    return:
+      type: System.String
+    content.vb: Public Const OnHeroUseProactiveSkill As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerCritAndAfterDoHit
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerCritAndAfterDoHit
+  id: OnOwnerCritAndAfterDoHit
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerCritAndAfterDoHit
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerCritAndAfterDoHit
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerCritAndAfterDoHit
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerCritAndAfterDoHit
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 188
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerCritAndAfterDoHit = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerCritAndAfterDoHit As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerBePicked
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerBePicked
+  id: OnOwnerBePicked
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerBePicked
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerBePicked
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerBePicked
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerBePicked
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 190
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerBePicked = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerBePicked As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAttackTargetPoisonStackMax
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAttackTargetPoisonStackMax
+  id: OnOwnerAttackTargetPoisonStackMax
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerAttackTargetPoisonStackMax
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerAttackTargetPoisonStackMax
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAttackTargetPoisonStackMax
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerAttackTargetPoisonStackMax
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 192
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerAttackTargetPoisonStackMax = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerAttackTargetPoisonStackMax As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerBeforeAttackLastRow
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerBeforeAttackLastRow
+  id: OnOwnerBeforeAttackLastRow
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerBeforeAttackLastRow
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerBeforeAttackLastRow
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerBeforeAttackLastRow
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerBeforeAttackLastRow
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 194
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerBeforeAttackLastRow = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerBeforeAttackLastRow As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerBeforeApproveEffect
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerBeforeApproveEffect
+  id: OnOwnerBeforeApproveEffect
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerBeforeApproveEffect
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerBeforeApproveEffect
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerBeforeApproveEffect
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerBeforeApproveEffect
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 196
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerBeforeApproveEffect = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerBeforeApproveEffect As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterGetPhysicalAttack
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterGetPhysicalAttack
+  id: OnOwnerAfterGetPhysicalAttack
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerAfterGetPhysicalAttack
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerAfterGetPhysicalAttack
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterGetPhysicalAttack
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerAfterGetPhysicalAttack
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 198
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerAfterGetPhysicalAttack = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerAfterGetPhysicalAttack As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterGetMagicalAttack
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterGetMagicalAttack
+  id: OnOwnerAfterGetMagicalAttack
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerAfterGetMagicalAttack
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerAfterGetMagicalAttack
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterGetMagicalAttack
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerAfterGetMagicalAttack
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 200
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerAfterGetMagicalAttack = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerAfterGetMagicalAttack As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterDoSupport
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterDoSupport
+  id: OnOwnerAfterDoSupport
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerAfterDoSupport
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerAfterDoSupport
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterDoSupport
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerAfterDoSupport
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 202
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerAfterDoSupport = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerAfterDoSupport As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterGetSupport
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterGetSupport
+  id: OnOwnerAfterGetSupport
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerAfterGetSupport
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerAfterGetSupport
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterGetSupport
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerAfterGetSupport
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 204
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerAfterGetSupport = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerAfterGetSupport As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerBeforeDoSupport
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerBeforeDoSupport
+  id: OnOwnerBeforeDoSupport
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerBeforeDoSupport
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerBeforeDoSupport
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerBeforeDoSupport
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerBeforeDoSupport
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 206
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerBeforeDoSupport = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerBeforeDoSupport As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerBeforeGetSupport
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerBeforeGetSupport
+  id: OnOwnerBeforeGetSupport
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerBeforeGetSupport
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerBeforeGetSupport
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerBeforeGetSupport
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerBeforeGetSupport
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 208
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerBeforeGetSupport = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerBeforeGetSupport As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterDied
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterDied
+  id: OnOwnerAfterDied
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerAfterDied
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerAfterDied
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAfterDied
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerAfterDied
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 210
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerAfterDied = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerAfterDied As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpGreaterEqual20
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpGreaterEqual20
+  id: OnOwnerHpGreaterEqual20
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerHpGreaterEqual20
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerHpGreaterEqual20
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpGreaterEqual20
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerHpGreaterEqual20
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 212
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerHpGreaterEqual20 = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerHpGreaterEqual20 As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpGreaterEqual40
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpGreaterEqual40
+  id: OnOwnerHpGreaterEqual40
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerHpGreaterEqual40
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerHpGreaterEqual40
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpGreaterEqual40
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerHpGreaterEqual40
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 214
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerHpGreaterEqual40 = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerHpGreaterEqual40 As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpGreaterEqual60
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpGreaterEqual60
+  id: OnOwnerHpGreaterEqual60
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerHpGreaterEqual60
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerHpGreaterEqual60
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpGreaterEqual60
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerHpGreaterEqual60
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 216
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerHpGreaterEqual60 = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerHpGreaterEqual60 As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpGreaterEqual80
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpGreaterEqual80
+  id: OnOwnerHpGreaterEqual80
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerHpGreaterEqual80
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerHpGreaterEqual80
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpGreaterEqual80
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerHpGreaterEqual80
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 218
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerHpGreaterEqual80 = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerHpGreaterEqual80 As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpGreaterEqual100
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpGreaterEqual100
+  id: OnOwnerHpGreaterEqual100
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerHpGreaterEqual100
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerHpGreaterEqual100
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpGreaterEqual100
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerHpGreaterEqual100
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 220
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerHpGreaterEqual100 = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerHpGreaterEqual100 As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpLess20
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpLess20
+  id: OnOwnerHpLess20
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerHpLess20
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerHpLess20
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpLess20
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerHpLess20
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 222
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerHpLess20 = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerHpLess20 As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpLess40
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpLess40
+  id: OnOwnerHpLess40
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerHpLess40
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerHpLess40
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpLess40
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerHpLess40
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 224
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerHpLess40 = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerHpLess40 As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpLess60
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpLess60
+  id: OnOwnerHpLess60
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerHpLess60
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerHpLess60
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpLess60
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerHpLess60
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 226
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerHpLess60 = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerHpLess60 As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpLess80
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpLess80
+  id: OnOwnerHpLess80
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerHpLess80
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerHpLess80
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpLess80
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerHpLess80
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 228
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerHpLess80 = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerHpLess80 As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpLess100
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpLess100
+  id: OnOwnerHpLess100
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerHpLess100
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerHpLess100
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerHpLess100
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerHpLess100
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 230
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerHpLess100 = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerHpLess100 As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAttackTargetHpGreaterEqual0
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAttackTargetHpGreaterEqual0
+  id: OnOwnerAttackTargetHpGreaterEqual0
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerAttackTargetHpGreaterEqual0
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerAttackTargetHpGreaterEqual0
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAttackTargetHpGreaterEqual0
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerAttackTargetHpGreaterEqual0
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 232
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerAttackTargetHpGreaterEqual0 = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerAttackTargetHpGreaterEqual0 As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAttackTargetHpGreaterEqual60
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAttackTargetHpGreaterEqual60
+  id: OnOwnerAttackTargetHpGreaterEqual60
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerAttackTargetHpGreaterEqual60
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerAttackTargetHpGreaterEqual60
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAttackTargetHpGreaterEqual60
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerAttackTargetHpGreaterEqual60
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 234
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerAttackTargetHpGreaterEqual60 = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerAttackTargetHpGreaterEqual60 As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAttackTargetHpGreaterEqual80
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAttackTargetHpGreaterEqual80
+  id: OnOwnerAttackTargetHpGreaterEqual80
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerAttackTargetHpGreaterEqual80
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerAttackTargetHpGreaterEqual80
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAttackTargetHpGreaterEqual80
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerAttackTargetHpGreaterEqual80
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 236
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerAttackTargetHpGreaterEqual80 = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerAttackTargetHpGreaterEqual80 As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAttackTargetHpGreaterEqual100
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAttackTargetHpGreaterEqual100
+  id: OnOwnerAttackTargetHpGreaterEqual100
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerAttackTargetHpGreaterEqual100
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerAttackTargetHpGreaterEqual100
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAttackTargetHpGreaterEqual100
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerAttackTargetHpGreaterEqual100
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 238
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerAttackTargetHpGreaterEqual100 = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerAttackTargetHpGreaterEqual100 As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAttackTargetHpLess0
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAttackTargetHpLess0
+  id: OnOwnerAttackTargetHpLess0
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerAttackTargetHpLess0
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerAttackTargetHpLess0
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAttackTargetHpLess0
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerAttackTargetHpLess0
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 240
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerAttackTargetHpLess0 = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerAttackTargetHpLess0 As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAttackTargetHpLess50
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAttackTargetHpLess50
+  id: OnOwnerAttackTargetHpLess50
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: OnOwnerAttackTargetHpLess50
+  nameWithType: EffectSystemScriptable.ActiveCondition.OnOwnerAttackTargetHpLess50
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnOwnerAttackTargetHpLess50
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnOwnerAttackTargetHpLess50
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 242
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnOwnerAttackTargetHpLess50 = null
+    return:
+      type: System.String
+    content.vb: Public Const OnOwnerAttackTargetHpLess50 As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: MacacaGames.EffectSystem
+  commentId: N:MacacaGames.EffectSystem
+  name: MacacaGames.EffectSystem
+  nameWithType: MacacaGames.EffectSystem
+  fullName: MacacaGames.EffectSystem
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

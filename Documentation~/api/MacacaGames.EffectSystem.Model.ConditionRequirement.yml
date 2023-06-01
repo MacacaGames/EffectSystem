@@ -1,0 +1,183 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.Model.ConditionRequirement
+  commentId: T:MacacaGames.EffectSystem.Model.ConditionRequirement
+  id: ConditionRequirement
+  parent: MacacaGames.EffectSystem.Model
+  children:
+  - MacacaGames.EffectSystem.Model.ConditionRequirement.conditionValue
+  - MacacaGames.EffectSystem.Model.ConditionRequirement.inputType
+  - MacacaGames.EffectSystem.Model.ConditionRequirement.isCheckOwner
+  - MacacaGames.EffectSystem.Model.ConditionRequirement.requirementLogic
+  langs:
+  - csharp
+  - vb
+  name: ConditionRequirement
+  nameWithType: ConditionRequirement
+  fullName: MacacaGames.EffectSystem.Model.ConditionRequirement
+  type: Struct
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: ConditionRequirement
+    path: ../Model/Effect.cs
+    startLine: 166
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: public struct ConditionRequirement
+    content.vb: Public Structure ConditionRequirement
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: MacacaGames.EffectSystem.Model.ConditionRequirement.inputType
+  commentId: F:MacacaGames.EffectSystem.Model.ConditionRequirement.inputType
+  id: inputType
+  parent: MacacaGames.EffectSystem.Model.ConditionRequirement
+  langs:
+  - csharp
+  - vb
+  name: inputType
+  nameWithType: ConditionRequirement.inputType
+  fullName: MacacaGames.EffectSystem.Model.ConditionRequirement.inputType
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: inputType
+    path: ../Model/Effect.cs
+    startLine: 169
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: public string inputType
+    return:
+      type: System.String
+    content.vb: Public inputType As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.Model.ConditionRequirement.requirementLogic
+  commentId: F:MacacaGames.EffectSystem.Model.ConditionRequirement.requirementLogic
+  id: requirementLogic
+  parent: MacacaGames.EffectSystem.Model.ConditionRequirement
+  langs:
+  - csharp
+  - vb
+  name: requirementLogic
+  nameWithType: ConditionRequirement.requirementLogic
+  fullName: MacacaGames.EffectSystem.Model.ConditionRequirement.requirementLogic
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: requirementLogic
+    path: ../Model/Effect.cs
+    startLine: 170
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: public string requirementLogic
+    return:
+      type: System.String
+    content.vb: Public requirementLogic As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.Model.ConditionRequirement.isCheckOwner
+  commentId: F:MacacaGames.EffectSystem.Model.ConditionRequirement.isCheckOwner
+  id: isCheckOwner
+  parent: MacacaGames.EffectSystem.Model.ConditionRequirement
+  langs:
+  - csharp
+  - vb
+  name: isCheckOwner
+  nameWithType: ConditionRequirement.isCheckOwner
+  fullName: MacacaGames.EffectSystem.Model.ConditionRequirement.isCheckOwner
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: isCheckOwner
+    path: ../Model/Effect.cs
+    startLine: 171
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: public bool isCheckOwner
+    return:
+      type: System.Boolean
+    content.vb: Public isCheckOwner As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.Model.ConditionRequirement.conditionValue
+  commentId: F:MacacaGames.EffectSystem.Model.ConditionRequirement.conditionValue
+  id: conditionValue
+  parent: MacacaGames.EffectSystem.Model.ConditionRequirement
+  langs:
+  - csharp
+  - vb
+  name: conditionValue
+  nameWithType: ConditionRequirement.conditionValue
+  fullName: MacacaGames.EffectSystem.Model.ConditionRequirement.conditionValue
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: conditionValue
+    path: ../Model/Effect.cs
+    startLine: 172
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: public int conditionValue
+    return:
+      type: System.Int32
+    content.vb: Public conditionValue As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: MacacaGames.EffectSystem.Model
+  commentId: N:MacacaGames.EffectSystem.Model
+  name: MacacaGames.EffectSystem.Model
+  nameWithType: MacacaGames.EffectSystem.Model
+  fullName: MacacaGames.EffectSystem.Model
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Int32
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

@@ -1,0 +1,354 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.Model.EffectViewInfo
+  commentId: T:MacacaGames.EffectSystem.Model.EffectViewInfo
+  id: EffectViewInfo
+  parent: MacacaGames.EffectSystem.Model
+  children:
+  - MacacaGames.EffectSystem.Model.EffectViewInfo.GetPrefab
+  - MacacaGames.EffectSystem.Model.EffectViewInfo.id
+  - MacacaGames.EffectSystem.Model.EffectViewInfo.prefab
+  - MacacaGames.EffectSystem.Model.EffectViewInfo.prefabAddress
+  - MacacaGames.EffectSystem.Model.EffectViewInfo.prefabName
+  - MacacaGames.EffectSystem.Model.EffectViewInfo.viewRootType
+  langs:
+  - csharp
+  - vb
+  name: EffectViewInfo
+  nameWithType: EffectViewInfo
+  fullName: MacacaGames.EffectSystem.Model.EffectViewInfo
+  type: Struct
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: EffectViewInfo
+    path: ../Model/Effect.cs
+    startLine: 149
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: public struct EffectViewInfo
+    content.vb: Public Structure EffectViewInfo
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: MacacaGames.EffectSystem.Model.EffectViewInfo.id
+  commentId: F:MacacaGames.EffectSystem.Model.EffectViewInfo.id
+  id: id
+  parent: MacacaGames.EffectSystem.Model.EffectViewInfo
+  langs:
+  - csharp
+  - vb
+  name: id
+  nameWithType: EffectViewInfo.id
+  fullName: MacacaGames.EffectSystem.Model.EffectViewInfo.id
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: id
+    path: ../Model/Effect.cs
+    startLine: 152
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: public string id
+    return:
+      type: System.String
+    content.vb: Public id As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.Model.EffectViewInfo.viewRootType
+  commentId: F:MacacaGames.EffectSystem.Model.EffectViewInfo.viewRootType
+  id: viewRootType
+  parent: MacacaGames.EffectSystem.Model.EffectViewInfo
+  langs:
+  - csharp
+  - vb
+  name: viewRootType
+  nameWithType: EffectViewInfo.viewRootType
+  fullName: MacacaGames.EffectSystem.Model.EffectViewInfo.viewRootType
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: viewRootType
+    path: ../Model/Effect.cs
+    startLine: 154
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: public string viewRootType
+    return:
+      type: System.String
+    content.vb: Public viewRootType As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.Model.EffectViewInfo.prefabAddress
+  commentId: F:MacacaGames.EffectSystem.Model.EffectViewInfo.prefabAddress
+  id: prefabAddress
+  parent: MacacaGames.EffectSystem.Model.EffectViewInfo
+  langs:
+  - csharp
+  - vb
+  name: prefabAddress
+  nameWithType: EffectViewInfo.prefabAddress
+  fullName: MacacaGames.EffectSystem.Model.EffectViewInfo.prefabAddress
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: prefabAddress
+    path: ../Model/Effect.cs
+    startLine: 157
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: public string prefabAddress
+    return:
+      type: System.String
+    content.vb: Public prefabAddress As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.Model.EffectViewInfo.prefab
+  commentId: F:MacacaGames.EffectSystem.Model.EffectViewInfo.prefab
+  id: prefab
+  parent: MacacaGames.EffectSystem.Model.EffectViewInfo
+  langs:
+  - csharp
+  - vb
+  name: prefab
+  nameWithType: EffectViewInfo.prefab
+  fullName: MacacaGames.EffectSystem.Model.EffectViewInfo.prefab
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: prefab
+    path: ../Model/Effect.cs
+    startLine: 160
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: public GameObject prefab
+    return:
+      type: GameObject
+    content.vb: Public prefab As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.Model.EffectViewInfo.GetPrefab
+  commentId: F:MacacaGames.EffectSystem.Model.EffectViewInfo.GetPrefab
+  id: GetPrefab
+  parent: MacacaGames.EffectSystem.Model.EffectViewInfo
+  langs:
+  - csharp
+  - vb
+  name: GetPrefab
+  nameWithType: EffectViewInfo.GetPrefab
+  fullName: MacacaGames.EffectSystem.Model.EffectViewInfo.GetPrefab
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: GetPrefab
+    path: ../Model/Effect.cs
+    startLine: 162
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: public static Func<string, GameObject> GetPrefab
+    return:
+      type: Func{System.String,GameObject}
+    content.vb: Public Shared GetPrefab As Func(Of String, GameObject)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: MacacaGames.EffectSystem.Model.EffectViewInfo.prefabName
+  commentId: F:MacacaGames.EffectSystem.Model.EffectViewInfo.prefabName
+  id: prefabName
+  parent: MacacaGames.EffectSystem.Model.EffectViewInfo
+  langs:
+  - csharp
+  - vb
+  name: prefabName
+  nameWithType: EffectViewInfo.prefabName
+  fullName: MacacaGames.EffectSystem.Model.EffectViewInfo.prefabName
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: prefabName
+    path: ../Model/Effect.cs
+    startLine: 163
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: public string prefabName
+    return:
+      type: System.String
+    content.vb: Public prefabName As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: MacacaGames.EffectSystem.Model
+  commentId: N:MacacaGames.EffectSystem.Model
+  name: MacacaGames.EffectSystem.Model
+  nameWithType: MacacaGames.EffectSystem.Model
+  fullName: MacacaGames.EffectSystem.Model
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: GameObject
+  commentId: '!:GameObject'
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: Func{System.String,GameObject}
+  commentId: '!:Func{System.String,GameObject}'
+  definition: Func`2
+  name: Func<String, GameObject>
+  nameWithType: Func<String, GameObject>
+  fullName: Func<System.String, GameObject>
+  nameWithType.vb: Func(Of String, GameObject)
+  fullName.vb: Func(Of System.String, GameObject)
+  name.vb: Func(Of String, GameObject)
+  spec.csharp:
+  - uid: Func`2
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: GameObject
+    name: GameObject
+    nameWithType: GameObject
+    fullName: GameObject
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Func`2
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: GameObject
+    name: GameObject
+    nameWithType: GameObject
+    fullName: GameObject
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Func`2
+  isExternal: true
+  name: Func<, >
+  nameWithType: Func<, >
+  fullName: Func<, >
+  nameWithType.vb: Func(Of , )
+  fullName.vb: Func(Of , )
+  name.vb: Func(Of , )
+  spec.csharp:
+  - uid: Func`2
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Func`2
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

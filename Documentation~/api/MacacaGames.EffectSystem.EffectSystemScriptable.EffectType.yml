@@ -1,0 +1,1609 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  commentId: T:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  id: EffectSystemScriptable.EffectType
+  parent: MacacaGames.EffectSystem
+  children:
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.AllStatsRatio
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Atk_Constant
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Atk_Ratio
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.AttackDamageRatio
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.AttackRangeBlock
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Bleed
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.BuffPrevention
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Burning
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.CCPrevention
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.CritMultiplier_Constant
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.CritRate_Constant
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.DamageReductionRate
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.DamageTaken
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.DamgeRatioAgainstLastRow
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.DebuffPrevention
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.DodgeRate_Constant
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Freeze
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Hp_Constant
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Hp_Ratio
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.IgnoreReflect
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.IncreasedHealConstant
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.IncreasedHealRatio
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.MagicalDamageReductionRate
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.MagicalDamageTaken
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.MysterySkill
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.PhysicalDamageReductionRate
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.PhysicalDamageTaken
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.ReducedHealConstant
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.ReducedHealRatio
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Sleep
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Taunt
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_Attach
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_Attach_Self
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_AttachAllies
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_AttachWithFixedInput
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_ExplodeTargetBuff
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_Heal_Constant
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_Heal_Ratio
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_HitSelf_Constant
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_HitSelf_Ratio
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_HitTarget_Constant
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_HitTarget_Ratio
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_KillSelf
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_RemoveCC
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_RemoveTargetBuff
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_RemoveTargetDebuff
+  langs:
+  - csharp
+  - vb
+  name: EffectSystemScriptable.EffectType
+  nameWithType: EffectSystemScriptable.EffectType
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  type: Struct
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: EffectType
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 7
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public struct EffectType
+    content.vb: Public Structure EffectType
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.AllStatsRatio
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.AllStatsRatio
+  id: AllStatsRatio
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: AllStatsRatio
+  nameWithType: EffectSystemScriptable.EffectType.AllStatsRatio
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.AllStatsRatio
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: AllStatsRatio
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 9
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string AllStatsRatio = null
+    return:
+      type: System.String
+    content.vb: Public Const AllStatsRatio As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Atk_Constant
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Atk_Constant
+  id: Atk_Constant
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: Atk_Constant
+  nameWithType: EffectSystemScriptable.EffectType.Atk_Constant
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Atk_Constant
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Atk_Constant
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 11
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string Atk_Constant = null
+    return:
+      type: System.String
+    content.vb: Public Const Atk_Constant As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Atk_Ratio
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Atk_Ratio
+  id: Atk_Ratio
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: Atk_Ratio
+  nameWithType: EffectSystemScriptable.EffectType.Atk_Ratio
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Atk_Ratio
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Atk_Ratio
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 13
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string Atk_Ratio = null
+    return:
+      type: System.String
+    content.vb: Public Const Atk_Ratio As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.AttackRangeBlock
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.AttackRangeBlock
+  id: AttackRangeBlock
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: AttackRangeBlock
+  nameWithType: EffectSystemScriptable.EffectType.AttackRangeBlock
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.AttackRangeBlock
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: AttackRangeBlock
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 15
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string AttackRangeBlock = null
+    return:
+      type: System.String
+    content.vb: Public Const AttackRangeBlock As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Bleed
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Bleed
+  id: Bleed
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: Bleed
+  nameWithType: EffectSystemScriptable.EffectType.Bleed
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Bleed
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Bleed
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 17
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string Bleed = null
+    return:
+      type: System.String
+    content.vb: Public Const Bleed As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.BuffPrevention
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.BuffPrevention
+  id: BuffPrevention
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: BuffPrevention
+  nameWithType: EffectSystemScriptable.EffectType.BuffPrevention
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.BuffPrevention
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: BuffPrevention
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 19
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string BuffPrevention = null
+    return:
+      type: System.String
+    content.vb: Public Const BuffPrevention As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Burning
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Burning
+  id: Burning
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: Burning
+  nameWithType: EffectSystemScriptable.EffectType.Burning
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Burning
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Burning
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 21
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string Burning = null
+    return:
+      type: System.String
+    content.vb: Public Const Burning As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.CCPrevention
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.CCPrevention
+  id: CCPrevention
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: CCPrevention
+  nameWithType: EffectSystemScriptable.EffectType.CCPrevention
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.CCPrevention
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: CCPrevention
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 23
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string CCPrevention = null
+    return:
+      type: System.String
+    content.vb: Public Const CCPrevention As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.CritMultiplier_Constant
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.CritMultiplier_Constant
+  id: CritMultiplier_Constant
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: CritMultiplier_Constant
+  nameWithType: EffectSystemScriptable.EffectType.CritMultiplier_Constant
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.CritMultiplier_Constant
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: CritMultiplier_Constant
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 25
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string CritMultiplier_Constant = null
+    return:
+      type: System.String
+    content.vb: Public Const CritMultiplier_Constant As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.CritRate_Constant
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.CritRate_Constant
+  id: CritRate_Constant
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: CritRate_Constant
+  nameWithType: EffectSystemScriptable.EffectType.CritRate_Constant
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.CritRate_Constant
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: CritRate_Constant
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 27
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string CritRate_Constant = null
+    return:
+      type: System.String
+    content.vb: Public Const CritRate_Constant As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.DamageReductionRate
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.DamageReductionRate
+  id: DamageReductionRate
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: DamageReductionRate
+  nameWithType: EffectSystemScriptable.EffectType.DamageReductionRate
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.DamageReductionRate
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: DamageReductionRate
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 29
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string DamageReductionRate = null
+    return:
+      type: System.String
+    content.vb: Public Const DamageReductionRate As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.DamageTaken
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.DamageTaken
+  id: DamageTaken
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: DamageTaken
+  nameWithType: EffectSystemScriptable.EffectType.DamageTaken
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.DamageTaken
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: DamageTaken
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 31
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string DamageTaken = null
+    return:
+      type: System.String
+    content.vb: Public Const DamageTaken As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.DamgeRatioAgainstLastRow
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.DamgeRatioAgainstLastRow
+  id: DamgeRatioAgainstLastRow
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: DamgeRatioAgainstLastRow
+  nameWithType: EffectSystemScriptable.EffectType.DamgeRatioAgainstLastRow
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.DamgeRatioAgainstLastRow
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: DamgeRatioAgainstLastRow
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 33
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string DamgeRatioAgainstLastRow = null
+    return:
+      type: System.String
+    content.vb: Public Const DamgeRatioAgainstLastRow As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.DebuffPrevention
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.DebuffPrevention
+  id: DebuffPrevention
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: DebuffPrevention
+  nameWithType: EffectSystemScriptable.EffectType.DebuffPrevention
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.DebuffPrevention
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: DebuffPrevention
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 35
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string DebuffPrevention = null
+    return:
+      type: System.String
+    content.vb: Public Const DebuffPrevention As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.DodgeRate_Constant
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.DodgeRate_Constant
+  id: DodgeRate_Constant
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: DodgeRate_Constant
+  nameWithType: EffectSystemScriptable.EffectType.DodgeRate_Constant
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.DodgeRate_Constant
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: DodgeRate_Constant
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 37
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string DodgeRate_Constant = null
+    return:
+      type: System.String
+    content.vb: Public Const DodgeRate_Constant As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Freeze
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Freeze
+  id: Freeze
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: Freeze
+  nameWithType: EffectSystemScriptable.EffectType.Freeze
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Freeze
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Freeze
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 39
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string Freeze = null
+    return:
+      type: System.String
+    content.vb: Public Const Freeze As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.IncreasedHealRatio
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.IncreasedHealRatio
+  id: IncreasedHealRatio
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: IncreasedHealRatio
+  nameWithType: EffectSystemScriptable.EffectType.IncreasedHealRatio
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.IncreasedHealRatio
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: IncreasedHealRatio
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 41
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string IncreasedHealRatio = null
+    return:
+      type: System.String
+    content.vb: Public Const IncreasedHealRatio As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Hp_Constant
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Hp_Constant
+  id: Hp_Constant
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: Hp_Constant
+  nameWithType: EffectSystemScriptable.EffectType.Hp_Constant
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Hp_Constant
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Hp_Constant
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 43
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string Hp_Constant = null
+    return:
+      type: System.String
+    content.vb: Public Const Hp_Constant As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Hp_Ratio
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Hp_Ratio
+  id: Hp_Ratio
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: Hp_Ratio
+  nameWithType: EffectSystemScriptable.EffectType.Hp_Ratio
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Hp_Ratio
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Hp_Ratio
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 45
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string Hp_Ratio = null
+    return:
+      type: System.String
+    content.vb: Public Const Hp_Ratio As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.IgnoreReflect
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.IgnoreReflect
+  id: IgnoreReflect
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: IgnoreReflect
+  nameWithType: EffectSystemScriptable.EffectType.IgnoreReflect
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.IgnoreReflect
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: IgnoreReflect
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 47
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string IgnoreReflect = null
+    return:
+      type: System.String
+    content.vb: Public Const IgnoreReflect As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.MagicalDamageReductionRate
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.MagicalDamageReductionRate
+  id: MagicalDamageReductionRate
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: MagicalDamageReductionRate
+  nameWithType: EffectSystemScriptable.EffectType.MagicalDamageReductionRate
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.MagicalDamageReductionRate
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: MagicalDamageReductionRate
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 49
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string MagicalDamageReductionRate = null
+    return:
+      type: System.String
+    content.vb: Public Const MagicalDamageReductionRate As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.MagicalDamageTaken
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.MagicalDamageTaken
+  id: MagicalDamageTaken
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: MagicalDamageTaken
+  nameWithType: EffectSystemScriptable.EffectType.MagicalDamageTaken
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.MagicalDamageTaken
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: MagicalDamageTaken
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 51
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string MagicalDamageTaken = null
+    return:
+      type: System.String
+    content.vb: Public Const MagicalDamageTaken As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.MysterySkill
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.MysterySkill
+  id: MysterySkill
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: MysterySkill
+  nameWithType: EffectSystemScriptable.EffectType.MysterySkill
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.MysterySkill
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: MysterySkill
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 53
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string MysterySkill = null
+    return:
+      type: System.String
+    content.vb: Public Const MysterySkill As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.PhysicalDamageReductionRate
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.PhysicalDamageReductionRate
+  id: PhysicalDamageReductionRate
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: PhysicalDamageReductionRate
+  nameWithType: EffectSystemScriptable.EffectType.PhysicalDamageReductionRate
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.PhysicalDamageReductionRate
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: PhysicalDamageReductionRate
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 55
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string PhysicalDamageReductionRate = null
+    return:
+      type: System.String
+    content.vb: Public Const PhysicalDamageReductionRate As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.PhysicalDamageTaken
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.PhysicalDamageTaken
+  id: PhysicalDamageTaken
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: PhysicalDamageTaken
+  nameWithType: EffectSystemScriptable.EffectType.PhysicalDamageTaken
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.PhysicalDamageTaken
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: PhysicalDamageTaken
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 57
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string PhysicalDamageTaken = null
+    return:
+      type: System.String
+    content.vb: Public Const PhysicalDamageTaken As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Sleep
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Sleep
+  id: Sleep
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: Sleep
+  nameWithType: EffectSystemScriptable.EffectType.Sleep
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Sleep
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Sleep
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 59
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string Sleep = null
+    return:
+      type: System.String
+    content.vb: Public Const Sleep As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Taunt
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Taunt
+  id: Taunt
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: Taunt
+  nameWithType: EffectSystemScriptable.EffectType.Taunt
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Taunt
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Taunt
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 61
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string Taunt = null
+    return:
+      type: System.String
+    content.vb: Public Const Taunt As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_Attach
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_Attach
+  id: Trigger_Attach
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: Trigger_Attach
+  nameWithType: EffectSystemScriptable.EffectType.Trigger_Attach
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_Attach
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Trigger_Attach
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 63
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string Trigger_Attach = null
+    return:
+      type: System.String
+    content.vb: Public Const Trigger_Attach As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_Attach_Self
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_Attach_Self
+  id: Trigger_Attach_Self
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: Trigger_Attach_Self
+  nameWithType: EffectSystemScriptable.EffectType.Trigger_Attach_Self
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_Attach_Self
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Trigger_Attach_Self
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 65
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string Trigger_Attach_Self = null
+    return:
+      type: System.String
+    content.vb: Public Const Trigger_Attach_Self As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_AttachAllies
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_AttachAllies
+  id: Trigger_AttachAllies
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: Trigger_AttachAllies
+  nameWithType: EffectSystemScriptable.EffectType.Trigger_AttachAllies
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_AttachAllies
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Trigger_AttachAllies
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 67
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string Trigger_AttachAllies = null
+    return:
+      type: System.String
+    content.vb: Public Const Trigger_AttachAllies As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_ExplodeTargetBuff
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_ExplodeTargetBuff
+  id: Trigger_ExplodeTargetBuff
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: Trigger_ExplodeTargetBuff
+  nameWithType: EffectSystemScriptable.EffectType.Trigger_ExplodeTargetBuff
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_ExplodeTargetBuff
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Trigger_ExplodeTargetBuff
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 69
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string Trigger_ExplodeTargetBuff = null
+    return:
+      type: System.String
+    content.vb: Public Const Trigger_ExplodeTargetBuff As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_Heal_Constant
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_Heal_Constant
+  id: Trigger_Heal_Constant
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: Trigger_Heal_Constant
+  nameWithType: EffectSystemScriptable.EffectType.Trigger_Heal_Constant
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_Heal_Constant
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Trigger_Heal_Constant
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 71
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string Trigger_Heal_Constant = null
+    return:
+      type: System.String
+    content.vb: Public Const Trigger_Heal_Constant As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_Heal_Ratio
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_Heal_Ratio
+  id: Trigger_Heal_Ratio
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: Trigger_Heal_Ratio
+  nameWithType: EffectSystemScriptable.EffectType.Trigger_Heal_Ratio
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_Heal_Ratio
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Trigger_Heal_Ratio
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 73
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string Trigger_Heal_Ratio = null
+    return:
+      type: System.String
+    content.vb: Public Const Trigger_Heal_Ratio As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_HitSelf_Constant
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_HitSelf_Constant
+  id: Trigger_HitSelf_Constant
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: Trigger_HitSelf_Constant
+  nameWithType: EffectSystemScriptable.EffectType.Trigger_HitSelf_Constant
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_HitSelf_Constant
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Trigger_HitSelf_Constant
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 75
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string Trigger_HitSelf_Constant = null
+    return:
+      type: System.String
+    content.vb: Public Const Trigger_HitSelf_Constant As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_HitSelf_Ratio
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_HitSelf_Ratio
+  id: Trigger_HitSelf_Ratio
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: Trigger_HitSelf_Ratio
+  nameWithType: EffectSystemScriptable.EffectType.Trigger_HitSelf_Ratio
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_HitSelf_Ratio
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Trigger_HitSelf_Ratio
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 77
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string Trigger_HitSelf_Ratio = null
+    return:
+      type: System.String
+    content.vb: Public Const Trigger_HitSelf_Ratio As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_KillSelf
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_KillSelf
+  id: Trigger_KillSelf
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: Trigger_KillSelf
+  nameWithType: EffectSystemScriptable.EffectType.Trigger_KillSelf
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_KillSelf
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Trigger_KillSelf
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 79
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string Trigger_KillSelf = null
+    return:
+      type: System.String
+    content.vb: Public Const Trigger_KillSelf As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_RemoveCC
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_RemoveCC
+  id: Trigger_RemoveCC
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: Trigger_RemoveCC
+  nameWithType: EffectSystemScriptable.EffectType.Trigger_RemoveCC
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_RemoveCC
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Trigger_RemoveCC
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 81
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string Trigger_RemoveCC = null
+    return:
+      type: System.String
+    content.vb: Public Const Trigger_RemoveCC As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_RemoveTargetBuff
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_RemoveTargetBuff
+  id: Trigger_RemoveTargetBuff
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: Trigger_RemoveTargetBuff
+  nameWithType: EffectSystemScriptable.EffectType.Trigger_RemoveTargetBuff
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_RemoveTargetBuff
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Trigger_RemoveTargetBuff
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 83
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string Trigger_RemoveTargetBuff = null
+    return:
+      type: System.String
+    content.vb: Public Const Trigger_RemoveTargetBuff As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_RemoveTargetDebuff
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_RemoveTargetDebuff
+  id: Trigger_RemoveTargetDebuff
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: Trigger_RemoveTargetDebuff
+  nameWithType: EffectSystemScriptable.EffectType.Trigger_RemoveTargetDebuff
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_RemoveTargetDebuff
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Trigger_RemoveTargetDebuff
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 85
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string Trigger_RemoveTargetDebuff = null
+    return:
+      type: System.String
+    content.vb: Public Const Trigger_RemoveTargetDebuff As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.AttackDamageRatio
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.AttackDamageRatio
+  id: AttackDamageRatio
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: AttackDamageRatio
+  nameWithType: EffectSystemScriptable.EffectType.AttackDamageRatio
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.AttackDamageRatio
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: AttackDamageRatio
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 87
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string AttackDamageRatio = null
+    return:
+      type: System.String
+    content.vb: Public Const AttackDamageRatio As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_AttachWithFixedInput
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_AttachWithFixedInput
+  id: Trigger_AttachWithFixedInput
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: Trigger_AttachWithFixedInput
+  nameWithType: EffectSystemScriptable.EffectType.Trigger_AttachWithFixedInput
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_AttachWithFixedInput
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Trigger_AttachWithFixedInput
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 89
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string Trigger_AttachWithFixedInput = null
+    return:
+      type: System.String
+    content.vb: Public Const Trigger_AttachWithFixedInput As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.ReducedHealRatio
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.ReducedHealRatio
+  id: ReducedHealRatio
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: ReducedHealRatio
+  nameWithType: EffectSystemScriptable.EffectType.ReducedHealRatio
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.ReducedHealRatio
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: ReducedHealRatio
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 91
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string ReducedHealRatio = null
+    return:
+      type: System.String
+    content.vb: Public Const ReducedHealRatio As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.IncreasedHealConstant
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.IncreasedHealConstant
+  id: IncreasedHealConstant
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: IncreasedHealConstant
+  nameWithType: EffectSystemScriptable.EffectType.IncreasedHealConstant
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.IncreasedHealConstant
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: IncreasedHealConstant
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 93
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string IncreasedHealConstant = null
+    return:
+      type: System.String
+    content.vb: Public Const IncreasedHealConstant As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.ReducedHealConstant
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.ReducedHealConstant
+  id: ReducedHealConstant
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: ReducedHealConstant
+  nameWithType: EffectSystemScriptable.EffectType.ReducedHealConstant
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.ReducedHealConstant
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: ReducedHealConstant
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 95
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string ReducedHealConstant = null
+    return:
+      type: System.String
+    content.vb: Public Const ReducedHealConstant As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_HitTarget_Ratio
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_HitTarget_Ratio
+  id: Trigger_HitTarget_Ratio
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: Trigger_HitTarget_Ratio
+  nameWithType: EffectSystemScriptable.EffectType.Trigger_HitTarget_Ratio
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_HitTarget_Ratio
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Trigger_HitTarget_Ratio
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 97
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string Trigger_HitTarget_Ratio = null
+    return:
+      type: System.String
+    content.vb: Public Const Trigger_HitTarget_Ratio As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_HitTarget_Constant
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_HitTarget_Constant
+  id: Trigger_HitTarget_Constant
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
+  langs:
+  - csharp
+  - vb
+  name: Trigger_HitTarget_Constant
+  nameWithType: EffectSystemScriptable.EffectType.Trigger_HitTarget_Constant
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.Trigger_HitTarget_Constant
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Trigger_HitTarget_Constant
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 99
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string Trigger_HitTarget_Constant = null
+    return:
+      type: System.String
+    content.vb: Public Const Trigger_HitTarget_Constant As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: MacacaGames.EffectSystem
+  commentId: N:MacacaGames.EffectSystem
+  name: MacacaGames.EffectSystem
+  nameWithType: MacacaGames.EffectSystem
+  fullName: MacacaGames.EffectSystem
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

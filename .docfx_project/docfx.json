@@ -1,0 +1,72 @@
+{
+    "metadata": [
+        {
+            "src": [
+                {
+                    "files": [
+                        "Macaca.EffectSystem.Editor.csproj",
+                        "Macaca.EffectSystem.Model.csproj",
+                        "Macaca.EffectSystem.csproj"
+                    ],
+                    "src": "../../../"
+                }
+            ],
+            "dest": "../Documentation~/api",
+            "disableGitFeatures": false,
+            "disableDefaultFilter": false,
+            "filter": ""
+        }
+    ],
+    "build": {
+        "content": [
+            {
+                "src": "",
+                "files": [
+                    "index.md",
+                    "**.yml",
+                    "api/**.yml",
+                    "api/index.md"
+                ]
+            },
+            {
+                "src": "../Documentation~",
+                "files": [
+                    "*.md",
+                    "*.yml",
+                    "**/*.md",
+                    "**/*.yml"
+                ]
+            }
+        ],
+        "resource": [
+            {
+                "src": "",
+                "files": [
+                    "images/**",
+                    "favicon.ico",
+                    "logo.svg"
+                ]
+            }
+        ],
+        "overwrite": [
+            {
+                "files": [
+                    "apidoc/**.md"
+                ],
+                "exclude": [
+                    "obj/**",
+                    "_site/**"
+                ]
+            }
+        ],
+        "dest": "../docs~",
+        "template": [
+            "default"
+        ],
+        "markdownEngineName": "markdig",
+        "noLangKeyword": false,
+        "keepFileLink": false,
+        "cleanupCacheHistory": false,
+        "disableGitFeatures": false
+    }
+}

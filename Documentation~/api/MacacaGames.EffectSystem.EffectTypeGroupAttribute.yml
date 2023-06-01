@@ -1,0 +1,120 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.EffectTypeGroupAttribute
+  commentId: T:MacacaGames.EffectSystem.EffectTypeGroupAttribute
+  id: EffectTypeGroupAttribute
+  parent: MacacaGames.EffectSystem
+  children:
+  - MacacaGames.EffectSystem.EffectTypeGroupAttribute.#ctor(System.String)
+  - MacacaGames.EffectSystem.EffectTypeGroupAttribute.group
+  langs:
+  - csharp
+  - vb
+  name: EffectTypeGroupAttribute
+  nameWithType: EffectTypeGroupAttribute
+  fullName: MacacaGames.EffectSystem.EffectTypeGroupAttribute
+  type: Class
+  source:
+    remote:
+      path: Runtime/EffectManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: EffectTypeGroupAttribute
+    path: ../Runtime/EffectManager.cs
+    startLine: 1074
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: 'public class EffectTypeGroupAttribute : Attribute'
+    content.vb: >-
+      Public Class EffectTypeGroupAttribute
+          Inherits Attribute
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MacacaGames.EffectSystem.EffectTypeGroupAttribute.#ctor(System.String)
+  commentId: M:MacacaGames.EffectSystem.EffectTypeGroupAttribute.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: MacacaGames.EffectSystem.EffectTypeGroupAttribute
+  langs:
+  - csharp
+  - vb
+  name: EffectTypeGroupAttribute(String)
+  nameWithType: EffectTypeGroupAttribute.EffectTypeGroupAttribute(String)
+  fullName: MacacaGames.EffectSystem.EffectTypeGroupAttribute.EffectTypeGroupAttribute(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: Runtime/EffectManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: .ctor
+    path: ../Runtime/EffectManager.cs
+    startLine: 1077
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public EffectTypeGroupAttribute(string group)
+    parameters:
+    - id: group
+      type: System.String
+    content.vb: Public Sub New(group As String)
+  overload: MacacaGames.EffectSystem.EffectTypeGroupAttribute.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectTypeGroupAttribute.group
+  commentId: F:MacacaGames.EffectSystem.EffectTypeGroupAttribute.group
+  id: group
+  parent: MacacaGames.EffectSystem.EffectTypeGroupAttribute
+  langs:
+  - csharp
+  - vb
+  name: group
+  nameWithType: EffectTypeGroupAttribute.group
+  fullName: MacacaGames.EffectSystem.EffectTypeGroupAttribute.group
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: group
+    path: ../Runtime/EffectManager.cs
+    startLine: 1081
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public string group
+    return:
+      type: System.String
+    content.vb: Public group As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: MacacaGames.EffectSystem
+  commentId: N:MacacaGames.EffectSystem
+  name: MacacaGames.EffectSystem
+  nameWithType: MacacaGames.EffectSystem
+  fullName: MacacaGames.EffectSystem
+- uid: MacacaGames.EffectSystem.EffectTypeGroupAttribute.#ctor*
+  commentId: Overload:MacacaGames.EffectSystem.EffectTypeGroupAttribute.#ctor
+  name: EffectTypeGroupAttribute
+  nameWithType: EffectTypeGroupAttribute.EffectTypeGroupAttribute
+  fullName: MacacaGames.EffectSystem.EffectTypeGroupAttribute.EffectTypeGroupAttribute
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

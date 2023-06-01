@@ -1,0 +1,56 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.Model
+  commentId: N:MacacaGames.EffectSystem.Model
+  id: MacacaGames.EffectSystem.Model
+  children:
+  - MacacaGames.EffectSystem.Model.ColliderType
+  - MacacaGames.EffectSystem.Model.ConditionRequirement
+  - MacacaGames.EffectSystem.Model.EffectInfo
+  - MacacaGames.EffectSystem.Model.EffectInfo.EffectTaxonomy
+  - MacacaGames.EffectSystem.Model.EffectViewInfo
+  langs:
+  - csharp
+  - vb
+  name: MacacaGames.EffectSystem.Model
+  nameWithType: MacacaGames.EffectSystem.Model
+  fullName: MacacaGames.EffectSystem.Model
+  type: Namespace
+  assemblies:
+  - Macaca.EffectSystem.Model
+references:
+- uid: MacacaGames.EffectSystem.Model.EffectInfo
+  commentId: T:MacacaGames.EffectSystem.Model.EffectInfo
+  parent: MacacaGames.EffectSystem.Model
+  name: EffectInfo
+  nameWithType: EffectInfo
+  fullName: MacacaGames.EffectSystem.Model.EffectInfo
+- uid: MacacaGames.EffectSystem.Model.EffectInfo.EffectTaxonomy
+  commentId: T:MacacaGames.EffectSystem.Model.EffectInfo.EffectTaxonomy
+  parent: MacacaGames.EffectSystem.Model
+  name: EffectInfo.EffectTaxonomy
+  nameWithType: EffectInfo.EffectTaxonomy
+  fullName: MacacaGames.EffectSystem.Model.EffectInfo.EffectTaxonomy
+- uid: MacacaGames.EffectSystem.Model.EffectViewInfo
+  commentId: T:MacacaGames.EffectSystem.Model.EffectViewInfo
+  parent: MacacaGames.EffectSystem.Model
+  name: EffectViewInfo
+  nameWithType: EffectViewInfo
+  fullName: MacacaGames.EffectSystem.Model.EffectViewInfo
+- uid: MacacaGames.EffectSystem.Model.ConditionRequirement
+  commentId: T:MacacaGames.EffectSystem.Model.ConditionRequirement
+  parent: MacacaGames.EffectSystem.Model
+  name: ConditionRequirement
+  nameWithType: ConditionRequirement
+  fullName: MacacaGames.EffectSystem.Model.ConditionRequirement
+- uid: MacacaGames.EffectSystem.Model.ColliderType
+  commentId: T:MacacaGames.EffectSystem.Model.ColliderType
+  parent: MacacaGames.EffectSystem.Model
+  name: ColliderType
+  nameWithType: ColliderType
+  fullName: MacacaGames.EffectSystem.Model.ColliderType
+- uid: MacacaGames.EffectSystem.Model
+  commentId: N:MacacaGames.EffectSystem.Model
+  name: MacacaGames.EffectSystem.Model
+  nameWithType: MacacaGames.EffectSystem.Model
+  fullName: MacacaGames.EffectSystem.Model

@@ -1,0 +1,420 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.IEffectSystemData
+  commentId: T:MacacaGames.EffectSystem.IEffectSystemData
+  id: IEffectSystemData
+  parent: MacacaGames.EffectSystem
+  children:
+  - MacacaGames.EffectSystem.IEffectSystemData.effects
+  - MacacaGames.EffectSystem.IEffectSystemData.effectViewInfos
+  - MacacaGames.EffectSystem.IEffectSystemData.FetchEffects
+  - MacacaGames.EffectSystem.IEffectSystemData.FetchEffectViewInfo
+  - MacacaGames.EffectSystem.IEffectSystemData.GetEffects
+  - MacacaGames.EffectSystem.IEffectSystemData.Init
+  - MacacaGames.EffectSystem.IEffectSystemData.InitEffectTypes
+  langs:
+  - csharp
+  - vb
+  name: IEffectSystemData
+  nameWithType: IEffectSystemData
+  fullName: MacacaGames.EffectSystem.IEffectSystemData
+  type: Interface
+  source:
+    remote:
+      path: Runtime/Interface/IEffectSystemData.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: IEffectSystemData
+    path: ../Runtime/Interface/IEffectSystemData.cs
+    startLine: 8
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public interface IEffectSystemData
+    content.vb: Public Interface IEffectSystemData
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: MacacaGames.EffectSystem.IEffectSystemData.effects
+  commentId: P:MacacaGames.EffectSystem.IEffectSystemData.effects
+  id: effects
+  parent: MacacaGames.EffectSystem.IEffectSystemData
+  langs:
+  - csharp
+  - vb
+  name: effects
+  nameWithType: IEffectSystemData.effects
+  fullName: MacacaGames.EffectSystem.IEffectSystemData.effects
+  type: Property
+  source:
+    remote:
+      path: Runtime/Interface/IEffectSystemData.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: effects
+    path: ../Runtime/Interface/IEffectSystemData.cs
+    startLine: 11
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: List<EffectInfo> effects { get; set; }
+    parameters: []
+    return:
+      type: List{MacacaGames.EffectSystem.Model.EffectInfo}
+    content.vb: Property effects As List(Of EffectInfo)
+  overload: MacacaGames.EffectSystem.IEffectSystemData.effects*
+  modifiers.csharp:
+  - get
+  - set
+- uid: MacacaGames.EffectSystem.IEffectSystemData.effectViewInfos
+  commentId: P:MacacaGames.EffectSystem.IEffectSystemData.effectViewInfos
+  id: effectViewInfos
+  parent: MacacaGames.EffectSystem.IEffectSystemData
+  langs:
+  - csharp
+  - vb
+  name: effectViewInfos
+  nameWithType: IEffectSystemData.effectViewInfos
+  fullName: MacacaGames.EffectSystem.IEffectSystemData.effectViewInfos
+  type: Property
+  source:
+    remote:
+      path: Runtime/Interface/IEffectSystemData.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: effectViewInfos
+    path: ../Runtime/Interface/IEffectSystemData.cs
+    startLine: 12
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: List<EffectViewInfo> effectViewInfos { get; set; }
+    parameters: []
+    return:
+      type: List{MacacaGames.EffectSystem.Model.EffectViewInfo}
+    content.vb: Property effectViewInfos As List(Of EffectViewInfo)
+  overload: MacacaGames.EffectSystem.IEffectSystemData.effectViewInfos*
+  modifiers.csharp:
+  - get
+  - set
+- uid: MacacaGames.EffectSystem.IEffectSystemData.Init
+  commentId: M:MacacaGames.EffectSystem.IEffectSystemData.Init
+  id: Init
+  parent: MacacaGames.EffectSystem.IEffectSystemData
+  langs:
+  - csharp
+  - vb
+  name: Init()
+  nameWithType: IEffectSystemData.Init()
+  fullName: MacacaGames.EffectSystem.IEffectSystemData.Init()
+  type: Method
+  source:
+    remote:
+      path: Runtime/Interface/IEffectSystemData.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Init
+    path: ../Runtime/Interface/IEffectSystemData.cs
+    startLine: 17
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  summary: "\nSame as ApplicationController Init.\n"
+  example: []
+  syntax:
+    content: Task Init()
+    return:
+      type: Task
+    content.vb: Function Init As Task
+  overload: MacacaGames.EffectSystem.IEffectSystemData.Init*
+- uid: MacacaGames.EffectSystem.IEffectSystemData.GetEffects
+  commentId: M:MacacaGames.EffectSystem.IEffectSystemData.GetEffects
+  id: GetEffects
+  parent: MacacaGames.EffectSystem.IEffectSystemData
+  langs:
+  - csharp
+  - vb
+  name: GetEffects()
+  nameWithType: IEffectSystemData.GetEffects()
+  fullName: MacacaGames.EffectSystem.IEffectSystemData.GetEffects()
+  type: Method
+  source:
+    remote:
+      path: Runtime/Interface/IEffectSystemData.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: GetEffects
+    path: ../Runtime/Interface/IEffectSystemData.cs
+    startLine: 23
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  summary: "\nUsually used by EffectInfo.subInfo.\n"
+  example: []
+  syntax:
+    content: List<EffectInfo> GetEffects()
+    return:
+      type: List{MacacaGames.EffectSystem.Model.EffectInfo}
+      description: ''
+    content.vb: Function GetEffects As List(Of EffectInfo)
+  overload: MacacaGames.EffectSystem.IEffectSystemData.GetEffects*
+- uid: MacacaGames.EffectSystem.IEffectSystemData.FetchEffects
+  commentId: M:MacacaGames.EffectSystem.IEffectSystemData.FetchEffects
+  id: FetchEffects
+  parent: MacacaGames.EffectSystem.IEffectSystemData
+  langs:
+  - csharp
+  - vb
+  name: FetchEffects()
+  nameWithType: IEffectSystemData.FetchEffects()
+  fullName: MacacaGames.EffectSystem.IEffectSystemData.FetchEffects()
+  type: Method
+  source:
+    remote:
+      path: Runtime/Interface/IEffectSystemData.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: FetchEffects
+    path: ../Runtime/Interface/IEffectSystemData.cs
+    startLine: 29
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  summary: "\nInit EffectInfo List\n"
+  example: []
+  syntax:
+    content: Task FetchEffects()
+    return:
+      type: Task
+      description: ''
+    content.vb: Function FetchEffects As Task
+  overload: MacacaGames.EffectSystem.IEffectSystemData.FetchEffects*
+- uid: MacacaGames.EffectSystem.IEffectSystemData.FetchEffectViewInfo
+  commentId: M:MacacaGames.EffectSystem.IEffectSystemData.FetchEffectViewInfo
+  id: FetchEffectViewInfo
+  parent: MacacaGames.EffectSystem.IEffectSystemData
+  langs:
+  - csharp
+  - vb
+  name: FetchEffectViewInfo()
+  nameWithType: IEffectSystemData.FetchEffectViewInfo()
+  fullName: MacacaGames.EffectSystem.IEffectSystemData.FetchEffectViewInfo()
+  type: Method
+  source:
+    remote:
+      path: Runtime/Interface/IEffectSystemData.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: FetchEffectViewInfo
+    path: ../Runtime/Interface/IEffectSystemData.cs
+    startLine: 35
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  summary: "\nInit EffectViewInfo List\n"
+  example: []
+  syntax:
+    content: Task FetchEffectViewInfo()
+    return:
+      type: Task
+      description: ''
+    content.vb: Function FetchEffectViewInfo As Task
+  overload: MacacaGames.EffectSystem.IEffectSystemData.FetchEffectViewInfo*
+- uid: MacacaGames.EffectSystem.IEffectSystemData.InitEffectTypes
+  commentId: M:MacacaGames.EffectSystem.IEffectSystemData.InitEffectTypes
+  id: InitEffectTypes
+  parent: MacacaGames.EffectSystem.IEffectSystemData
+  langs:
+  - csharp
+  - vb
+  name: InitEffectTypes()
+  nameWithType: IEffectSystemData.InitEffectTypes()
+  fullName: MacacaGames.EffectSystem.IEffectSystemData.InitEffectTypes()
+  type: Method
+  source:
+    remote:
+      path: Runtime/Interface/IEffectSystemData.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: InitEffectTypes
+    path: ../Runtime/Interface/IEffectSystemData.cs
+    startLine: 37
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: void InitEffectTypes()
+    content.vb: Sub InitEffectTypes
+  overload: MacacaGames.EffectSystem.IEffectSystemData.InitEffectTypes*
+references:
+- uid: MacacaGames.EffectSystem
+  commentId: N:MacacaGames.EffectSystem
+  name: MacacaGames.EffectSystem
+  nameWithType: MacacaGames.EffectSystem
+  fullName: MacacaGames.EffectSystem
+- uid: MacacaGames.EffectSystem.IEffectSystemData.effects*
+  commentId: Overload:MacacaGames.EffectSystem.IEffectSystemData.effects
+  name: effects
+  nameWithType: IEffectSystemData.effects
+  fullName: MacacaGames.EffectSystem.IEffectSystemData.effects
+- uid: List{MacacaGames.EffectSystem.Model.EffectInfo}
+  commentId: '!:List{MacacaGames.EffectSystem.Model.EffectInfo}'
+  definition: List`1
+  name: List<EffectInfo>
+  nameWithType: List<EffectInfo>
+  fullName: List<MacacaGames.EffectSystem.Model.EffectInfo>
+  nameWithType.vb: List(Of EffectInfo)
+  fullName.vb: List(Of MacacaGames.EffectSystem.Model.EffectInfo)
+  name.vb: List(Of EffectInfo)
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: MacacaGames.EffectSystem.Model.EffectInfo
+    name: EffectInfo
+    nameWithType: EffectInfo
+    fullName: MacacaGames.EffectSystem.Model.EffectInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: MacacaGames.EffectSystem.Model.EffectInfo
+    name: EffectInfo
+    nameWithType: EffectInfo
+    fullName: MacacaGames.EffectSystem.Model.EffectInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MacacaGames.EffectSystem.IEffectSystemData.effectViewInfos*
+  commentId: Overload:MacacaGames.EffectSystem.IEffectSystemData.effectViewInfos
+  name: effectViewInfos
+  nameWithType: IEffectSystemData.effectViewInfos
+  fullName: MacacaGames.EffectSystem.IEffectSystemData.effectViewInfos
+- uid: List{MacacaGames.EffectSystem.Model.EffectViewInfo}
+  commentId: '!:List{MacacaGames.EffectSystem.Model.EffectViewInfo}'
+  definition: List`1
+  name: List<EffectViewInfo>
+  nameWithType: List<EffectViewInfo>
+  fullName: List<MacacaGames.EffectSystem.Model.EffectViewInfo>
+  nameWithType.vb: List(Of EffectViewInfo)
+  fullName.vb: List(Of MacacaGames.EffectSystem.Model.EffectViewInfo)
+  name.vb: List(Of EffectViewInfo)
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: MacacaGames.EffectSystem.Model.EffectViewInfo
+    name: EffectViewInfo
+    nameWithType: EffectViewInfo
+    fullName: MacacaGames.EffectSystem.Model.EffectViewInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: MacacaGames.EffectSystem.Model.EffectViewInfo
+    name: EffectViewInfo
+    nameWithType: EffectViewInfo
+    fullName: MacacaGames.EffectSystem.Model.EffectViewInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MacacaGames.EffectSystem.IEffectSystemData.Init*
+  commentId: Overload:MacacaGames.EffectSystem.IEffectSystemData.Init
+  name: Init
+  nameWithType: IEffectSystemData.Init
+  fullName: MacacaGames.EffectSystem.IEffectSystemData.Init
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task
+- uid: MacacaGames.EffectSystem.IEffectSystemData.GetEffects*
+  commentId: Overload:MacacaGames.EffectSystem.IEffectSystemData.GetEffects
+  name: GetEffects
+  nameWithType: IEffectSystemData.GetEffects
+  fullName: MacacaGames.EffectSystem.IEffectSystemData.GetEffects
+- uid: MacacaGames.EffectSystem.IEffectSystemData.FetchEffects*
+  commentId: Overload:MacacaGames.EffectSystem.IEffectSystemData.FetchEffects
+  name: FetchEffects
+  nameWithType: IEffectSystemData.FetchEffects
+  fullName: MacacaGames.EffectSystem.IEffectSystemData.FetchEffects
+- uid: MacacaGames.EffectSystem.IEffectSystemData.FetchEffectViewInfo*
+  commentId: Overload:MacacaGames.EffectSystem.IEffectSystemData.FetchEffectViewInfo
+  name: FetchEffectViewInfo
+  nameWithType: IEffectSystemData.FetchEffectViewInfo
+  fullName: MacacaGames.EffectSystem.IEffectSystemData.FetchEffectViewInfo
+- uid: MacacaGames.EffectSystem.IEffectSystemData.InitEffectTypes*
+  commentId: Overload:MacacaGames.EffectSystem.IEffectSystemData.InitEffectTypes
+  name: InitEffectTypes
+  nameWithType: IEffectSystemData.InitEffectTypes
+  fullName: MacacaGames.EffectSystem.IEffectSystemData.InitEffectTypes

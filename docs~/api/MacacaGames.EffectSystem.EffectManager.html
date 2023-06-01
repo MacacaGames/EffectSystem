@@ -1,0 +1,1709 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class EffectManager
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class EffectManager
+   ">
+    <meta name="generator" content="docfx 2.56.6.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MacacaGames.EffectSystem.EffectManager">
+  
+  
+  <h1 id="MacacaGames_EffectSystem_EffectManager" data-uid="MacacaGames.EffectSystem.EffectManager" class="text-break">Class EffectManager
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">MacacaGames.GameSystem.MonoBehaviourLifeCycle</span></div>
+    <div class="level2"><span class="xref">EffectManager</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">MacacaGames.GameSystem.IApplicationLifeCycle</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">MacacaGames.GameSystem.MonoBehaviourLifeCycle.OnApplicationUpdate()</span>
+    </div>
+    <div>
+      <span class="xref">MacacaGames.GameSystem.MonoBehaviourLifeCycle.OnEnterLobby()</span>
+    </div>
+    <div>
+      <span class="xref">MacacaGames.GameSystem.MonoBehaviourLifeCycle.OnGamePlayUpdate()</span>
+    </div>
+    <div>
+      <span class="xref">MacacaGames.GameSystem.MonoBehaviourLifeCycle.OnUnPauseGamePlayUpdate()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MacacaGames.EffectSystem.html">MacacaGames.EffectSystem</a></h6>
+  <h6><strong>Assembly</strong>: Macaca.EffectSystem.dll</h6>
+  <h5 id="MacacaGames_EffectSystem_EffectManager_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class EffectManager : MonoBehaviourLifeCycle, IApplicationLifeCycle</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_calculator.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.calculator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L64">View Source</a>
+  </span>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_calculator" data-uid="MacacaGames.EffectSystem.EffectManager.calculator">calculator</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static EffectCalculator calculator</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.EffectCalculator.html">EffectCalculator</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_EffectConditionTriggerQuery.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.EffectConditionTriggerQuery%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L46">View Source</a>
+  </span>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_EffectConditionTriggerQuery" data-uid="MacacaGames.EffectSystem.EffectManager.EffectConditionTriggerQuery">EffectConditionTriggerQuery</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;string, Func&lt;Action&lt;EffectManager.EffectTriggerConditionInfo&gt;, IEnumerator&gt;&gt; EffectConditionTriggerQuery</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">Func</span>&lt;<span class="xref">Action</span>&lt;<a class="xref" href="MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo.html">EffectManager.EffectTriggerConditionInfo</a>&gt;, <span class="xref">IEnumerator</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_EffectTypeQuery.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.EffectTypeQuery%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L25">View Source</a>
+  </span>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_EffectTypeQuery" data-uid="MacacaGames.EffectSystem.EffectManager.EffectTypeQuery">EffectTypeQuery</h4>
+  <div class="markdown level1 summary"><p>只放預設</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Dictionary&lt;string, Type&gt; EffectTypeQuery</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">Type</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_effectViewPool.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.effectViewPool%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L251">View Source</a>
+  </span>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_effectViewPool" data-uid="MacacaGames.EffectSystem.EffectManager.effectViewPool">effectViewPool</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;GameObject, Queue&lt;EffectViewBase&gt;&gt; effectViewPool</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Dictionary</span>&lt;<span class="xref">GameObject</span>, <span class="xref">Queue</span>&lt;<a class="xref" href="MacacaGames.EffectSystem.EffectViewBase.html">EffectViewBase</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_GetEffectDescriptionStr.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.GetEffectDescriptionStr%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L42">View Source</a>
+  </span>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_GetEffectDescriptionStr" data-uid="MacacaGames.EffectSystem.EffectManager.GetEffectDescriptionStr">GetEffectDescriptionStr</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;string, string&gt; GetEffectDescriptionStr</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_AddEffect_MacacaGames_EffectSystem_IEffectableObject_MacacaGames_EffectSystem_Model_EffectInfo_System_String___.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.AddEffect(MacacaGames.EffectSystem.IEffectableObject%2CMacacaGames.EffectSystem.Model.EffectInfo%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L890">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectManager_AddEffect_" data-uid="MacacaGames.EffectSystem.EffectManager.AddEffect*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_AddEffect_MacacaGames_EffectSystem_IEffectableObject_MacacaGames_EffectSystem_Model_EffectInfo_System_String___" data-uid="MacacaGames.EffectSystem.EffectManager.AddEffect(MacacaGames.EffectSystem.IEffectableObject,MacacaGames.EffectSystem.Model.EffectInfo,System.String[])">AddEffect(IEffectableObject, EffectInfo, String[])</h4>
+  <div class="markdown level1 summary"><p>附加指定的Effect實體。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddEffect(IEffectableObject owner, EffectInfo effectInfo, params string[] tags)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.IEffectableObject.html">IEffectableObject</a></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.Model.EffectInfo.html">EffectInfo</a></td>
+        <td><span class="parametername">effectInfo</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">tags</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_AddEffects_MacacaGames_EffectSystem_IEffectableObject_IEnumerable_MacacaGames_EffectSystem_Model_EffectInfo__System_String___.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.AddEffects(MacacaGames.EffectSystem.IEffectableObject%2CIEnumerable%7BMacacaGames.EffectSystem.Model.EffectInfo%7D%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L934">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectManager_AddEffects_" data-uid="MacacaGames.EffectSystem.EffectManager.AddEffects*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_AddEffects_MacacaGames_EffectSystem_IEffectableObject_IEnumerable_MacacaGames_EffectSystem_Model_EffectInfo__System_String___" data-uid="MacacaGames.EffectSystem.EffectManager.AddEffects(MacacaGames.EffectSystem.IEffectableObject,IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo},System.String[])">AddEffects(IEffectableObject, IEnumerable&lt;EffectInfo&gt;, String[])</h4>
+  <div class="markdown level1 summary"><p>附加複數指定的Effect實體。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddEffects(IEffectableObject owner, IEnumerable&lt;EffectInfo&gt; effectInfos, params string[] tags)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.IEffectableObject.html">IEffectableObject</a></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="MacacaGames.EffectSystem.Model.EffectInfo.html">EffectInfo</a>&gt;</td>
+        <td><span class="parametername">effectInfos</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">tags</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_AddRequestedEffect_MacacaGames_EffectSystem_IEffectableObject_MacacaGames_EffectSystem_Model_EffectInfo_System_String___.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.AddRequestedEffect(MacacaGames.EffectSystem.IEffectableObject%2CMacacaGames.EffectSystem.Model.EffectInfo%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L834">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectManager_AddRequestedEffect_" data-uid="MacacaGames.EffectSystem.EffectManager.AddRequestedEffect*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_AddRequestedEffect_MacacaGames_EffectSystem_IEffectableObject_MacacaGames_EffectSystem_Model_EffectInfo_System_String___" data-uid="MacacaGames.EffectSystem.EffectManager.AddRequestedEffect(MacacaGames.EffectSystem.IEffectableObject,MacacaGames.EffectSystem.Model.EffectInfo,System.String[])">AddRequestedEffect(IEffectableObject, EffectInfo, String[])</h4>
+  <div class="markdown level1 summary"><p>附加指定的Effect實體，從物件池拿。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddRequestedEffect(IEffectableObject owner, EffectInfo effectInfo, params string[] tags)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.IEffectableObject.html">IEffectableObject</a></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.Model.EffectInfo.html">EffectInfo</a></td>
+        <td><span class="parametername">effectInfo</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">tags</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_AddRequestedEffects_MacacaGames_EffectSystem_IEffectableObject_IEnumerable_MacacaGames_EffectSystem_Model_EffectInfo__System_String___.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.AddRequestedEffects(MacacaGames.EffectSystem.IEffectableObject%2CIEnumerable%7BMacacaGames.EffectSystem.Model.EffectInfo%7D%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L876">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectManager_AddRequestedEffects_" data-uid="MacacaGames.EffectSystem.EffectManager.AddRequestedEffects*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_AddRequestedEffects_MacacaGames_EffectSystem_IEffectableObject_IEnumerable_MacacaGames_EffectSystem_Model_EffectInfo__System_String___" data-uid="MacacaGames.EffectSystem.EffectManager.AddRequestedEffects(MacacaGames.EffectSystem.IEffectableObject,IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo},System.String[])">AddRequestedEffects(IEffectableObject, IEnumerable&lt;EffectInfo&gt;, String[])</h4>
+  <div class="markdown level1 summary"><p>附加複數指定的Effect實體，從物件池拿。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddRequestedEffects(IEffectableObject owner, IEnumerable&lt;EffectInfo&gt; effectInfos, params string[] tags)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.IEffectableObject.html">IEffectableObject</a></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="MacacaGames.EffectSystem.Model.EffectInfo.html">EffectInfo</a>&gt;</td>
+        <td><span class="parametername">effectInfos</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">tags</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_CleanEffectableObject_MacacaGames_EffectSystem_IEffectableObject_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.CleanEffectableObject(MacacaGames.EffectSystem.IEffectableObject)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L193">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectManager_CleanEffectableObject_" data-uid="MacacaGames.EffectSystem.EffectManager.CleanEffectableObject*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_CleanEffectableObject_MacacaGames_EffectSystem_IEffectableObject_" data-uid="MacacaGames.EffectSystem.EffectManager.CleanEffectableObject(MacacaGames.EffectSystem.IEffectableObject)">CleanEffectableObject(IEffectableObject)</h4>
+  <div class="markdown level1 summary"><p>移除指定EffectableObject，結束他擁有的所有Effect、解除所有註冊的Condition。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CleanEffectableObject(IEffectableObject owner)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.IEffectableObject.html">IEffectableObject</a></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_CreateEffect_MacacaGames_EffectSystem_Model_EffectInfo_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.CreateEffect(MacacaGames.EffectSystem.Model.EffectInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L488">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectManager_CreateEffect_" data-uid="MacacaGames.EffectSystem.EffectManager.CreateEffect*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_CreateEffect_MacacaGames_EffectSystem_Model_EffectInfo_" data-uid="MacacaGames.EffectSystem.EffectManager.CreateEffect(MacacaGames.EffectSystem.Model.EffectInfo)">CreateEffect(EffectInfo)</h4>
+  <div class="markdown level1 summary"><p>創造一個Effect實體，且有指定的Info。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static EffectBase CreateEffect(EffectInfo info)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.Model.EffectInfo.html">EffectInfo</a></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.EffectBase.html">EffectBase</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_EffectTriggerCondition_MacacaGames_EffectSystem_IEffectableObject_System_String_MacacaGames_EffectSystem_EffectManager_EffectTriggerConditionInfo_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.EffectTriggerCondition(MacacaGames.EffectSystem.IEffectableObject%2CSystem.String%2CMacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L312">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectManager_EffectTriggerCondition_" data-uid="MacacaGames.EffectSystem.EffectManager.EffectTriggerCondition*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_EffectTriggerCondition_MacacaGames_EffectSystem_IEffectableObject_System_String_MacacaGames_EffectSystem_EffectManager_EffectTriggerConditionInfo_" data-uid="MacacaGames.EffectSystem.EffectManager.EffectTriggerCondition(MacacaGames.EffectSystem.IEffectableObject,System.String,MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)">EffectTriggerCondition(IEffectableObject, String, EffectManager.EffectTriggerConditionInfo)</h4>
+  <div class="markdown level1 summary"><p>觸發指定類別的條件Trigger。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EffectTriggerCondition(IEffectableObject owner, string condition, EffectManager.EffectTriggerConditionInfo info)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.IEffectableObject.html">IEffectableObject</a></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">condition</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo.html">EffectManager.EffectTriggerConditionInfo</a></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_GetColorNumberDescription_System_String_Color_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.GetColorNumberDescription(System.String%2CColor)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L776">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectManager_GetColorNumberDescription_" data-uid="MacacaGames.EffectSystem.EffectManager.GetColorNumberDescription*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_GetColorNumberDescription_System_String_Color_" data-uid="MacacaGames.EffectSystem.EffectManager.GetColorNumberDescription(System.String,Color)">GetColorNumberDescription(String, Color)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetColorNumberDescription(string text, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_GetColorNumberDescription_System_String_System_String_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.GetColorNumberDescription(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L762">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectManager_GetColorNumberDescription_" data-uid="MacacaGames.EffectSystem.EffectManager.GetColorNumberDescription*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_GetColorNumberDescription_System_String_System_String_" data-uid="MacacaGames.EffectSystem.EffectManager.GetColorNumberDescription(System.String,System.String)">GetColorNumberDescription(String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetColorNumberDescription(string text, string colorHex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">colorHex</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_GetCustomEffectsDescription_System_String_IEnumerable_MacacaGames_EffectSystem_Model_EffectInfo__.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.GetCustomEffectsDescription(System.String%2CIEnumerable%7BMacacaGames.EffectSystem.Model.EffectInfo%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L540">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectManager_GetCustomEffectsDescription_" data-uid="MacacaGames.EffectSystem.EffectManager.GetCustomEffectsDescription*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_GetCustomEffectsDescription_System_String_IEnumerable_MacacaGames_EffectSystem_Model_EffectInfo__" data-uid="MacacaGames.EffectSystem.EffectManager.GetCustomEffectsDescription(System.String,IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo})">GetCustomEffectsDescription(String, IEnumerable&lt;EffectInfo&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetCustomEffectsDescription(string str, IEnumerable&lt;EffectInfo&gt; infos)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="MacacaGames.EffectSystem.Model.EffectInfo.html">EffectInfo</a>&gt;</td>
+        <td><span class="parametername">infos</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_GetDefaultEffectDescription_MacacaGames_EffectSystem_Model_EffectInfo_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.GetDefaultEffectDescription(MacacaGames.EffectSystem.Model.EffectInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L524">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectManager_GetDefaultEffectDescription_" data-uid="MacacaGames.EffectSystem.EffectManager.GetDefaultEffectDescription*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_GetDefaultEffectDescription_MacacaGames_EffectSystem_Model_EffectInfo_" data-uid="MacacaGames.EffectSystem.EffectManager.GetDefaultEffectDescription(MacacaGames.EffectSystem.Model.EffectInfo)">GetDefaultEffectDescription(EffectInfo)</h4>
+  <div class="markdown level1 summary"><p>取得指定EffectInfo的說明。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetDefaultEffectDescription(EffectInfo info)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.Model.EffectInfo.html">EffectInfo</a></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_GetDefaultEffectsDescription_IEnumerable_MacacaGames_EffectSystem_Model_EffectInfo__.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.GetDefaultEffectsDescription(IEnumerable%7BMacacaGames.EffectSystem.Model.EffectInfo%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L509">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectManager_GetDefaultEffectsDescription_" data-uid="MacacaGames.EffectSystem.EffectManager.GetDefaultEffectsDescription*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_GetDefaultEffectsDescription_IEnumerable_MacacaGames_EffectSystem_Model_EffectInfo__" data-uid="MacacaGames.EffectSystem.EffectManager.GetDefaultEffectsDescription(IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo})">GetDefaultEffectsDescription(IEnumerable&lt;EffectInfo&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetDefaultEffectsDescription(IEnumerable&lt;EffectInfo&gt; infos)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="MacacaGames.EffectSystem.Model.EffectInfo.html">EffectInfo</a>&gt;</td>
+        <td><span class="parametername">infos</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_GetDefaultEffectsDescriptions_IEnumerable_MacacaGames_EffectSystem_Model_EffectInfo__.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.GetDefaultEffectsDescriptions(IEnumerable%7BMacacaGames.EffectSystem.Model.EffectInfo%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L514">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectManager_GetDefaultEffectsDescriptions_" data-uid="MacacaGames.EffectSystem.EffectManager.GetDefaultEffectsDescriptions*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_GetDefaultEffectsDescriptions_IEnumerable_MacacaGames_EffectSystem_Model_EffectInfo__" data-uid="MacacaGames.EffectSystem.EffectManager.GetDefaultEffectsDescriptions(IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo})">GetDefaultEffectsDescriptions(IEnumerable&lt;EffectInfo&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;string&gt; GetDefaultEffectsDescriptions(IEnumerable&lt;EffectInfo&gt; infos)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="MacacaGames.EffectSystem.Model.EffectInfo.html">EffectInfo</a>&gt;</td>
+        <td><span class="parametername">infos</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_GetEffectListByType_MacacaGames_EffectSystem_IEffectableObject_System_String_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.GetEffectListByType(MacacaGames.EffectSystem.IEffectableObject%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L791">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectManager_GetEffectListByType_" data-uid="MacacaGames.EffectSystem.EffectManager.GetEffectListByType*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_GetEffectListByType_MacacaGames_EffectSystem_IEffectableObject_System_String_" data-uid="MacacaGames.EffectSystem.EffectManager.GetEffectListByType(MacacaGames.EffectSystem.IEffectableObject,System.String)">GetEffectListByType(IEffectableObject, String)</h4>
+  <div class="markdown level1 summary"><p>取得指定Owner的指定EffectType的EffectList。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EffectManager.EffectList GetEffectListByType(IEffectableObject owner, string effectType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.IEffectableObject.html">IEffectableObject</a></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">effectType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.EffectManager.EffectList.html">EffectManager.EffectList</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_GetEffectsByTag_MacacaGames_EffectSystem_IEffectableObject_System_String_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.GetEffectsByTag(MacacaGames.EffectSystem.IEffectableObject%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L1010">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectManager_GetEffectsByTag_" data-uid="MacacaGames.EffectSystem.EffectManager.GetEffectsByTag*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_GetEffectsByTag_MacacaGames_EffectSystem_IEffectableObject_System_String_" data-uid="MacacaGames.EffectSystem.EffectManager.GetEffectsByTag(MacacaGames.EffectSystem.IEffectableObject,System.String)">GetEffectsByTag(IEffectableObject, String)</h4>
+  <div class="markdown level1 summary"><p>搜尋包含特定Tag的Effect。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;EffectBase&gt; GetEffectsByTag(IEffectableObject owner, string tag)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.IEffectableObject.html">IEffectableObject</a></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tag</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">List</span>&lt;<a class="xref" href="MacacaGames.EffectSystem.EffectBase.html">EffectBase</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_GetEffectsByType_MacacaGames_EffectSystem_IEffectableObject_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.GetEffectsByType(MacacaGames.EffectSystem.IEffectableObject%2CSystem.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L1028">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectManager_GetEffectsByType_" data-uid="MacacaGames.EffectSystem.EffectManager.GetEffectsByType*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_GetEffectsByType_MacacaGames_EffectSystem_IEffectableObject_System_String_System_Boolean_" data-uid="MacacaGames.EffectSystem.EffectManager.GetEffectsByType(MacacaGames.EffectSystem.IEffectableObject,System.String,System.Boolean)">GetEffectsByType(IEffectableObject, String, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;EffectBase&gt; GetEffectsByType(IEffectableObject owner, string type, bool onlyGetActive = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.IEffectableObject.html">IEffectableObject</a></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">onlyGetActive</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">List</span>&lt;<a class="xref" href="MacacaGames.EffectSystem.EffectBase.html">EffectBase</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_GetEffectsSum_MacacaGames_EffectSystem_IEffectableObject_System_String___.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.GetEffectsSum(MacacaGames.EffectSystem.IEffectableObject%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L819">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectManager_GetEffectsSum_" data-uid="MacacaGames.EffectSystem.EffectManager.GetEffectsSum*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_GetEffectsSum_MacacaGames_EffectSystem_IEffectableObject_System_String___" data-uid="MacacaGames.EffectSystem.EffectManager.GetEffectsSum(MacacaGames.EffectSystem.IEffectableObject,System.String[])">GetEffectsSum(IEffectableObject, String[])</h4>
+  <div class="markdown level1 summary"><p>取得複數指定EffectType的Value總和的總和。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetEffectsSum(IEffectableObject target, params string[] effectType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.IEffectableObject.html">IEffectableObject</a></td>
+        <td><span class="parametername">target</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">effectType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_GetEffectSum_MacacaGames_EffectSystem_IEffectableObject_System_String_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.GetEffectSum(MacacaGames.EffectSystem.IEffectableObject%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L809">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectManager_GetEffectSum_" data-uid="MacacaGames.EffectSystem.EffectManager.GetEffectSum*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_GetEffectSum_MacacaGames_EffectSystem_IEffectableObject_System_String_" data-uid="MacacaGames.EffectSystem.EffectManager.GetEffectSum(MacacaGames.EffectSystem.IEffectableObject,System.String)">GetEffectSum(IEffectableObject, String)</h4>
+  <div class="markdown level1 summary"><p>取得指定EffectType的Value總和。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetEffectSum(IEffectableObject target, string effectType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.IEffectableObject.html">IEffectableObject</a></td>
+        <td><span class="parametername">target</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">effectType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_Init.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.Init%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L173">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectManager_Init_" data-uid="MacacaGames.EffectSystem.EffectManager.Init*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_Init" data-uid="MacacaGames.EffectSystem.EffectManager.Init">Init()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task Init()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">MacacaGames.GameSystem.MonoBehaviourLifeCycle.Init()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_QueryEffectTypeWithDefault_System_String_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.QueryEffectTypeWithDefault(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L30">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectManager_QueryEffectTypeWithDefault_" data-uid="MacacaGames.EffectSystem.EffectManager.QueryEffectTypeWithDefault*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_QueryEffectTypeWithDefault_System_String_" data-uid="MacacaGames.EffectSystem.EffectManager.QueryEffectTypeWithDefault(System.String)">QueryEffectTypeWithDefault(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Type QueryEffectTypeWithDefault(string effectType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">effectType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_RecoveryEffectBase_MacacaGames_EffectSystem_EffectBase_System_String_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.RecoveryEffectBase(MacacaGames.EffectSystem.EffectBase%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L450">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectManager_RecoveryEffectBase_" data-uid="MacacaGames.EffectSystem.EffectManager.RecoveryEffectBase*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_RecoveryEffectBase_MacacaGames_EffectSystem_EffectBase_System_String_" data-uid="MacacaGames.EffectSystem.EffectManager.RecoveryEffectBase(MacacaGames.EffectSystem.EffectBase,System.String)">RecoveryEffectBase(EffectBase, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RecoveryEffectBase(EffectBase effect, string type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.EffectBase.html">EffectBase</a></td>
+        <td><span class="parametername">effect</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_RecoveryEffectView_MacacaGames_EffectSystem_EffectViewBase_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.RecoveryEffectView(MacacaGames.EffectSystem.EffectViewBase)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L296">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectManager_RecoveryEffectView_" data-uid="MacacaGames.EffectSystem.EffectManager.RecoveryEffectView*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_RecoveryEffectView_MacacaGames_EffectSystem_EffectViewBase_" data-uid="MacacaGames.EffectSystem.EffectManager.RecoveryEffectView(MacacaGames.EffectSystem.EffectViewBase)">RecoveryEffectView(EffectViewBase)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RecoveryEffectView(EffectViewBase effectView)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.EffectViewBase.html">EffectViewBase</a></td>
+        <td><span class="parametername">effectView</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_RegistEffectTriggerCondition_MacacaGames_EffectSystem_EffectBase_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.RegistEffectTriggerCondition(MacacaGames.EffectSystem.EffectBase)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L327">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectManager_RegistEffectTriggerCondition_" data-uid="MacacaGames.EffectSystem.EffectManager.RegistEffectTriggerCondition*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_RegistEffectTriggerCondition_MacacaGames_EffectSystem_EffectBase_" data-uid="MacacaGames.EffectSystem.EffectManager.RegistEffectTriggerCondition(MacacaGames.EffectSystem.EffectBase)">RegistEffectTriggerCondition(EffectBase)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegistEffectTriggerCondition(EffectBase effect)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.EffectBase.html">EffectBase</a></td>
+        <td><span class="parametername">effect</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_RemoveEffect_MacacaGames_EffectSystem_IEffectableObject_MacacaGames_EffectSystem_EffectBase_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.RemoveEffect(MacacaGames.EffectSystem.IEffectableObject%2CMacacaGames.EffectSystem.EffectBase)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L981">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectManager_RemoveEffect_" data-uid="MacacaGames.EffectSystem.EffectManager.RemoveEffect*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_RemoveEffect_MacacaGames_EffectSystem_IEffectableObject_MacacaGames_EffectSystem_EffectBase_" data-uid="MacacaGames.EffectSystem.EffectManager.RemoveEffect(MacacaGames.EffectSystem.IEffectableObject,MacacaGames.EffectSystem.EffectBase)">RemoveEffect(IEffectableObject, EffectBase)</h4>
+  <div class="markdown level1 summary"><p>移除指定Effect實體。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveEffect(IEffectableObject owner, EffectBase effect)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.IEffectableObject.html">IEffectableObject</a></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.EffectBase.html">EffectBase</a></td>
+        <td><span class="parametername">effect</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_RemoveEffectByTag_MacacaGames_EffectSystem_IEffectableObject_System_String_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.RemoveEffectByTag(MacacaGames.EffectSystem.IEffectableObject%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L951">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectManager_RemoveEffectByTag_" data-uid="MacacaGames.EffectSystem.EffectManager.RemoveEffectByTag*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_RemoveEffectByTag_MacacaGames_EffectSystem_IEffectableObject_System_String_" data-uid="MacacaGames.EffectSystem.EffectManager.RemoveEffectByTag(MacacaGames.EffectSystem.IEffectableObject,System.String)">RemoveEffectByTag(IEffectableObject, String)</h4>
+  <div class="markdown level1 summary"><p>移除包含特定Tag的Effect。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveEffectByTag(IEffectableObject owner, string tag)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.IEffectableObject.html">IEffectableObject</a></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tag</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_RemoveEffectsByType_MacacaGames_EffectSystem_IEffectableObject_System_String_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.RemoveEffectsByType(MacacaGames.EffectSystem.IEffectableObject%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L967">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectManager_RemoveEffectsByType_" data-uid="MacacaGames.EffectSystem.EffectManager.RemoveEffectsByType*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_RemoveEffectsByType_MacacaGames_EffectSystem_IEffectableObject_System_String_" data-uid="MacacaGames.EffectSystem.EffectManager.RemoveEffectsByType(MacacaGames.EffectSystem.IEffectableObject,System.String)">RemoveEffectsByType(IEffectableObject, String)</h4>
+  <div class="markdown level1 summary"><p>移除指定EffectType所有的Effect實體。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveEffectsByType(IEffectableObject owner, string effectType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.IEffectableObject.html">IEffectableObject</a></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">effectType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_RequestEffect_MacacaGames_EffectSystem_Model_EffectInfo_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.RequestEffect(MacacaGames.EffectSystem.Model.EffectInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L436">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectManager_RequestEffect_" data-uid="MacacaGames.EffectSystem.EffectManager.RequestEffect*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_RequestEffect_MacacaGames_EffectSystem_Model_EffectInfo_" data-uid="MacacaGames.EffectSystem.EffectManager.RequestEffect(MacacaGames.EffectSystem.Model.EffectInfo)">RequestEffect(EffectInfo)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static EffectBase RequestEffect(EffectInfo info)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.Model.EffectInfo.html">EffectInfo</a></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.EffectBase.html">EffectBase</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_RequestEffectView_MacacaGames_EffectSystem_Model_EffectInfo_MacacaGames_EffectSystem_Model_EffectViewInfo_MacacaGames_EffectSystem_IEffectableObject_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.RequestEffectView(MacacaGames.EffectSystem.Model.EffectInfo%2CMacacaGames.EffectSystem.Model.EffectViewInfo%2CMacacaGames.EffectSystem.IEffectableObject)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L253">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectManager_RequestEffectView_" data-uid="MacacaGames.EffectSystem.EffectManager.RequestEffectView*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_RequestEffectView_MacacaGames_EffectSystem_Model_EffectInfo_MacacaGames_EffectSystem_Model_EffectViewInfo_MacacaGames_EffectSystem_IEffectableObject_" data-uid="MacacaGames.EffectSystem.EffectManager.RequestEffectView(MacacaGames.EffectSystem.Model.EffectInfo,MacacaGames.EffectSystem.Model.EffectViewInfo,MacacaGames.EffectSystem.IEffectableObject)">RequestEffectView(EffectInfo, EffectViewInfo, IEffectableObject)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EffectViewBase RequestEffectView(EffectInfo info, EffectViewInfo viewInfo, IEffectableObject owner)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.Model.EffectInfo.html">EffectInfo</a></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.Model.EffectViewInfo.html">EffectViewInfo</a></td>
+        <td><span class="parametername">viewInfo</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.IEffectableObject.html">IEffectableObject</a></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.EffectViewBase.html">EffectViewBase</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_ResetEffectableObjectQuery.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.ResetEffectableObjectQuery%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L306">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectManager_ResetEffectableObjectQuery_" data-uid="MacacaGames.EffectSystem.EffectManager.ResetEffectableObjectQuery*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_ResetEffectableObjectQuery" data-uid="MacacaGames.EffectSystem.EffectManager.ResetEffectableObjectQuery">ResetEffectableObjectQuery()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetEffectableObjectQuery()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_ResetEffectActiveTimeAndCooldownTime_MacacaGames_EffectSystem_IEffectableObject_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.ResetEffectActiveTimeAndCooldownTime(MacacaGames.EffectSystem.IEffectableObject)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L237">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectManager_ResetEffectActiveTimeAndCooldownTime_" data-uid="MacacaGames.EffectSystem.EffectManager.ResetEffectActiveTimeAndCooldownTime*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_ResetEffectActiveTimeAndCooldownTime_MacacaGames_EffectSystem_IEffectableObject_" data-uid="MacacaGames.EffectSystem.EffectManager.ResetEffectActiveTimeAndCooldownTime(MacacaGames.EffectSystem.IEffectableObject)">ResetEffectActiveTimeAndCooldownTime(IEffectableObject)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetEffectActiveTimeAndCooldownTime(IEffectableObject owner)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.IEffectableObject.html">IEffectableObject</a></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_UnregistEffectTriggerCondition_MacacaGames_EffectSystem_EffectBase_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.UnregistEffectTriggerCondition(MacacaGames.EffectSystem.EffectBase)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L354">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectManager_UnregistEffectTriggerCondition_" data-uid="MacacaGames.EffectSystem.EffectManager.UnregistEffectTriggerCondition*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_UnregistEffectTriggerCondition_MacacaGames_EffectSystem_EffectBase_" data-uid="MacacaGames.EffectSystem.EffectManager.UnregistEffectTriggerCondition(MacacaGames.EffectSystem.EffectBase)">UnregistEffectTriggerCondition(EffectBase)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnregistEffectTriggerCondition(EffectBase effect)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.EffectBase.html">EffectBase</a></td>
+        <td><span class="parametername">effect</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_UpdateEffectMaintainAction_MacacaGames_EffectSystem_IEffectableObject_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.UpdateEffectMaintainAction(MacacaGames.EffectSystem.IEffectableObject)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L206">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectManager_UpdateEffectMaintainAction_" data-uid="MacacaGames.EffectSystem.EffectManager.UpdateEffectMaintainAction*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_UpdateEffectMaintainAction_MacacaGames_EffectSystem_IEffectableObject_" data-uid="MacacaGames.EffectSystem.EffectManager.UpdateEffectMaintainAction(MacacaGames.EffectSystem.IEffectableObject)">UpdateEffectMaintainAction(IEffectableObject)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateEffectMaintainAction(IEffectableObject owner)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.IEffectableObject.html">IEffectableObject</a></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager_UpdateEffectMaintainRound_MacacaGames_EffectSystem_IEffectableObject_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager.UpdateEffectMaintainRound(MacacaGames.EffectSystem.IEffectableObject)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L221">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectManager_UpdateEffectMaintainRound_" data-uid="MacacaGames.EffectSystem.EffectManager.UpdateEffectMaintainRound*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectManager_UpdateEffectMaintainRound_MacacaGames_EffectSystem_IEffectableObject_" data-uid="MacacaGames.EffectSystem.EffectManager.UpdateEffectMaintainRound(MacacaGames.EffectSystem.IEffectableObject)">UpdateEffectMaintainRound(IEffectableObject)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateEffectMaintainRound(IEffectableObject owner)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.IEffectableObject.html">IEffectableObject</a></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">MacacaGames.GameSystem.IApplicationLifeCycle</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectManager.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/EffectManager.cs/#L17" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

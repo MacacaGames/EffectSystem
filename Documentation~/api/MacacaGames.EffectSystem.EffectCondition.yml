@@ -1,0 +1,869 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.EffectCondition
+  commentId: T:MacacaGames.EffectSystem.EffectCondition
+  id: EffectCondition
+  parent: MacacaGames.EffectSystem
+  children:
+  - MacacaGames.EffectSystem.EffectCondition.#ctor(MacacaGames.EffectSystem.EffectBase)
+  - MacacaGames.EffectSystem.EffectCondition.effectInstance
+  - MacacaGames.EffectSystem.EffectCondition.End
+  - MacacaGames.EffectSystem.EffectCondition.ForceDeactive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
+  - MacacaGames.EffectSystem.EffectCondition.GamePlayTime
+  - MacacaGames.EffectSystem.EffectCondition.isActive
+  - MacacaGames.EffectSystem.EffectCondition.IsOneOfRequirementsListFullfilled(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo,List{List{MacacaGames.EffectSystem.Model.ConditionRequirement}},MacacaGames.EffectSystem.Model.EffectInfo)
+  - MacacaGames.EffectSystem.EffectCondition.IsRequirementsFullfilled(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo,List{MacacaGames.EffectSystem.Model.ConditionRequirement})
+  - MacacaGames.EffectSystem.EffectCondition.OnActive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
+  - MacacaGames.EffectSystem.EffectCondition.OnDeactive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
+  - MacacaGames.EffectSystem.EffectCondition.ResetCooldownTime
+  - MacacaGames.EffectSystem.EffectCondition.ResetMaintainTime
+  - MacacaGames.EffectSystem.EffectCondition.Start
+  - MacacaGames.EffectSystem.EffectCondition.UpdateMaintainAction
+  - MacacaGames.EffectSystem.EffectCondition.UpdateMaintainRound
+  langs:
+  - csharp
+  - vb
+  name: EffectCondition
+  nameWithType: EffectCondition
+  fullName: MacacaGames.EffectSystem.EffectCondition
+  type: Class
+  source:
+    remote:
+      path: Runtime/EffectCondition.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: EffectCondition
+    path: ../Runtime/EffectCondition.cs
+    startLine: 12
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: 'public class EffectCondition : object'
+    content.vb: >-
+      Public Class EffectCondition
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MacacaGames.EffectSystem.EffectCondition.effectInstance
+  commentId: F:MacacaGames.EffectSystem.EffectCondition.effectInstance
+  id: effectInstance
+  parent: MacacaGames.EffectSystem.EffectCondition
+  langs:
+  - csharp
+  - vb
+  name: effectInstance
+  nameWithType: EffectCondition.effectInstance
+  fullName: MacacaGames.EffectSystem.EffectCondition.effectInstance
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectCondition.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: effectInstance
+    path: ../Runtime/EffectCondition.cs
+    startLine: 15
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public EffectBase effectInstance
+    return:
+      type: MacacaGames.EffectSystem.EffectBase
+    content.vb: Public effectInstance As EffectBase
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectCondition.isActive
+  commentId: P:MacacaGames.EffectSystem.EffectCondition.isActive
+  id: isActive
+  parent: MacacaGames.EffectSystem.EffectCondition
+  langs:
+  - csharp
+  - vb
+  name: isActive
+  nameWithType: EffectCondition.isActive
+  fullName: MacacaGames.EffectSystem.EffectCondition.isActive
+  type: Property
+  source:
+    remote:
+      path: Runtime/EffectCondition.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: isActive
+    path: ../Runtime/EffectCondition.cs
+    startLine: 27
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public bool isActive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property isActive As Boolean
+  overload: MacacaGames.EffectSystem.EffectCondition.isActive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: MacacaGames.EffectSystem.EffectCondition.#ctor(MacacaGames.EffectSystem.EffectBase)
+  commentId: M:MacacaGames.EffectSystem.EffectCondition.#ctor(MacacaGames.EffectSystem.EffectBase)
+  id: '#ctor(MacacaGames.EffectSystem.EffectBase)'
+  parent: MacacaGames.EffectSystem.EffectCondition
+  langs:
+  - csharp
+  - vb
+  name: EffectCondition(EffectBase)
+  nameWithType: EffectCondition.EffectCondition(EffectBase)
+  fullName: MacacaGames.EffectSystem.EffectCondition.EffectCondition(MacacaGames.EffectSystem.EffectBase)
+  type: Constructor
+  source:
+    remote:
+      path: Runtime/EffectCondition.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: .ctor
+    path: ../Runtime/EffectCondition.cs
+    startLine: 29
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public EffectCondition(EffectBase effectInstance)
+    parameters:
+    - id: effectInstance
+      type: MacacaGames.EffectSystem.EffectBase
+    content.vb: Public Sub New(effectInstance As EffectBase)
+  overload: MacacaGames.EffectSystem.EffectCondition.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectCondition.Start
+  commentId: M:MacacaGames.EffectSystem.EffectCondition.Start
+  id: Start
+  parent: MacacaGames.EffectSystem.EffectCondition
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: EffectCondition.Start()
+  fullName: MacacaGames.EffectSystem.EffectCondition.Start()
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectCondition.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Start
+    path: ../Runtime/EffectCondition.cs
+    startLine: 34
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public void Start()
+    content.vb: Public Sub Start
+  overload: MacacaGames.EffectSystem.EffectCondition.Start*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectCondition.End
+  commentId: M:MacacaGames.EffectSystem.EffectCondition.End
+  id: End
+  parent: MacacaGames.EffectSystem.EffectCondition
+  langs:
+  - csharp
+  - vb
+  name: End()
+  nameWithType: EffectCondition.End()
+  fullName: MacacaGames.EffectSystem.EffectCondition.End()
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectCondition.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: End
+    path: ../Runtime/EffectCondition.cs
+    startLine: 56
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public void End()
+    content.vb: Public Sub
+  overload: MacacaGames.EffectSystem.EffectCondition.End*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectCondition.OnActive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
+  commentId: M:MacacaGames.EffectSystem.EffectCondition.OnActive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
+  id: OnActive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
+  parent: MacacaGames.EffectSystem.EffectCondition
+  langs:
+  - csharp
+  - vb
+  name: OnActive(EffectManager.EffectTriggerConditionInfo)
+  nameWithType: EffectCondition.OnActive(EffectManager.EffectTriggerConditionInfo)
+  fullName: MacacaGames.EffectSystem.EffectCondition.OnActive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectCondition.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnActive
+    path: ../Runtime/EffectCondition.cs
+    startLine: 72
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public void OnActive(EffectManager.EffectTriggerConditionInfo info)
+    parameters:
+    - id: info
+      type: MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo
+    content.vb: Public Sub OnActive(info As EffectManager.EffectTriggerConditionInfo)
+  overload: MacacaGames.EffectSystem.EffectCondition.OnActive*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectCondition.OnDeactive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
+  commentId: M:MacacaGames.EffectSystem.EffectCondition.OnDeactive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
+  id: OnDeactive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
+  parent: MacacaGames.EffectSystem.EffectCondition
+  langs:
+  - csharp
+  - vb
+  name: OnDeactive(EffectManager.EffectTriggerConditionInfo)
+  nameWithType: EffectCondition.OnDeactive(EffectManager.EffectTriggerConditionInfo)
+  fullName: MacacaGames.EffectSystem.EffectCondition.OnDeactive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectCondition.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnDeactive
+    path: ../Runtime/EffectCondition.cs
+    startLine: 150
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public void OnDeactive(EffectManager.EffectTriggerConditionInfo info)
+    parameters:
+    - id: info
+      type: MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo
+    content.vb: Public Sub OnDeactive(info As EffectManager.EffectTriggerConditionInfo)
+  overload: MacacaGames.EffectSystem.EffectCondition.OnDeactive*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectCondition.ForceDeactive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
+  commentId: M:MacacaGames.EffectSystem.EffectCondition.ForceDeactive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
+  id: ForceDeactive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
+  parent: MacacaGames.EffectSystem.EffectCondition
+  langs:
+  - csharp
+  - vb
+  name: ForceDeactive(EffectManager.EffectTriggerConditionInfo)
+  nameWithType: EffectCondition.ForceDeactive(EffectManager.EffectTriggerConditionInfo)
+  fullName: MacacaGames.EffectSystem.EffectCondition.ForceDeactive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectCondition.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: ForceDeactive
+    path: ../Runtime/EffectCondition.cs
+    startLine: 175
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public void ForceDeactive(EffectManager.EffectTriggerConditionInfo info)
+    parameters:
+    - id: info
+      type: MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo
+    content.vb: Public Sub ForceDeactive(info As EffectManager.EffectTriggerConditionInfo)
+  overload: MacacaGames.EffectSystem.EffectCondition.ForceDeactive*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectCondition.IsOneOfRequirementsListFullfilled(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo,List{List{MacacaGames.EffectSystem.Model.ConditionRequirement}},MacacaGames.EffectSystem.Model.EffectInfo)
+  commentId: M:MacacaGames.EffectSystem.EffectCondition.IsOneOfRequirementsListFullfilled(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo,List{List{MacacaGames.EffectSystem.Model.ConditionRequirement}},MacacaGames.EffectSystem.Model.EffectInfo)
+  id: IsOneOfRequirementsListFullfilled(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo,List{List{MacacaGames.EffectSystem.Model.ConditionRequirement}},MacacaGames.EffectSystem.Model.EffectInfo)
+  parent: MacacaGames.EffectSystem.EffectCondition
+  langs:
+  - csharp
+  - vb
+  name: IsOneOfRequirementsListFullfilled(EffectManager.EffectTriggerConditionInfo, List<List<ConditionRequirement>>, EffectInfo)
+  nameWithType: EffectCondition.IsOneOfRequirementsListFullfilled(EffectManager.EffectTriggerConditionInfo, List<List<ConditionRequirement>>, EffectInfo)
+  fullName: MacacaGames.EffectSystem.EffectCondition.IsOneOfRequirementsListFullfilled(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo, List<List<MacacaGames.EffectSystem.Model.ConditionRequirement>>, MacacaGames.EffectSystem.Model.EffectInfo)
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectCondition.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: IsOneOfRequirementsListFullfilled
+    path: ../Runtime/EffectCondition.cs
+    startLine: 189
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public bool IsOneOfRequirementsListFullfilled(EffectManager.EffectTriggerConditionInfo info, List<List<ConditionRequirement>> requirementLists, EffectInfo targetInfo)
+    parameters:
+    - id: info
+      type: MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo
+    - id: requirementLists
+      type: List{List{MacacaGames.EffectSystem.Model.ConditionRequirement}}
+    - id: targetInfo
+      type: MacacaGames.EffectSystem.Model.EffectInfo
+    return:
+      type: System.Boolean
+    content.vb: Public Function IsOneOfRequirementsListFullfilled(info As EffectManager.EffectTriggerConditionInfo, requirementLists As List(Of List(Of ConditionRequirement)), targetInfo As EffectInfo) As Boolean
+  overload: MacacaGames.EffectSystem.EffectCondition.IsOneOfRequirementsListFullfilled*
+  nameWithType.vb: EffectCondition.IsOneOfRequirementsListFullfilled(EffectManager.EffectTriggerConditionInfo, List(Of List(Of ConditionRequirement)), EffectInfo)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: MacacaGames.EffectSystem.EffectCondition.IsOneOfRequirementsListFullfilled(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo, List(Of List(Of MacacaGames.EffectSystem.Model.ConditionRequirement)), MacacaGames.EffectSystem.Model.EffectInfo)
+  name.vb: IsOneOfRequirementsListFullfilled(EffectManager.EffectTriggerConditionInfo, List(Of List(Of ConditionRequirement)), EffectInfo)
+- uid: MacacaGames.EffectSystem.EffectCondition.IsRequirementsFullfilled(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo,List{MacacaGames.EffectSystem.Model.ConditionRequirement})
+  commentId: M:MacacaGames.EffectSystem.EffectCondition.IsRequirementsFullfilled(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo,List{MacacaGames.EffectSystem.Model.ConditionRequirement})
+  id: IsRequirementsFullfilled(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo,List{MacacaGames.EffectSystem.Model.ConditionRequirement})
+  parent: MacacaGames.EffectSystem.EffectCondition
+  langs:
+  - csharp
+  - vb
+  name: IsRequirementsFullfilled(EffectManager.EffectTriggerConditionInfo, List<ConditionRequirement>)
+  nameWithType: EffectCondition.IsRequirementsFullfilled(EffectManager.EffectTriggerConditionInfo, List<ConditionRequirement>)
+  fullName: MacacaGames.EffectSystem.EffectCondition.IsRequirementsFullfilled(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo, List<MacacaGames.EffectSystem.Model.ConditionRequirement>)
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectCondition.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: IsRequirementsFullfilled
+    path: ../Runtime/EffectCondition.cs
+    startLine: 205
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public bool IsRequirementsFullfilled(EffectManager.EffectTriggerConditionInfo info, List<ConditionRequirement> requirements)
+    parameters:
+    - id: info
+      type: MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo
+    - id: requirements
+      type: List{MacacaGames.EffectSystem.Model.ConditionRequirement}
+    return:
+      type: System.Boolean
+    content.vb: Public Function IsRequirementsFullfilled(info As EffectManager.EffectTriggerConditionInfo, requirements As List(Of ConditionRequirement)) As Boolean
+  overload: MacacaGames.EffectSystem.EffectCondition.IsRequirementsFullfilled*
+  nameWithType.vb: EffectCondition.IsRequirementsFullfilled(EffectManager.EffectTriggerConditionInfo, List(Of ConditionRequirement))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: MacacaGames.EffectSystem.EffectCondition.IsRequirementsFullfilled(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo, List(Of MacacaGames.EffectSystem.Model.ConditionRequirement))
+  name.vb: IsRequirementsFullfilled(EffectManager.EffectTriggerConditionInfo, List(Of ConditionRequirement))
+- uid: MacacaGames.EffectSystem.EffectCondition.GamePlayTime
+  commentId: F:MacacaGames.EffectSystem.EffectCondition.GamePlayTime
+  id: GamePlayTime
+  parent: MacacaGames.EffectSystem.EffectCondition
+  langs:
+  - csharp
+  - vb
+  name: GamePlayTime
+  nameWithType: EffectCondition.GamePlayTime
+  fullName: MacacaGames.EffectSystem.EffectCondition.GamePlayTime
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectCondition.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: GamePlayTime
+    path: ../Runtime/EffectCondition.cs
+    startLine: 287
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public static Func<float> GamePlayTime
+    return:
+      type: Func{System.Single}
+    content.vb: Public Shared GamePlayTime As Func(Of Single)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: MacacaGames.EffectSystem.EffectCondition.UpdateMaintainAction
+  commentId: M:MacacaGames.EffectSystem.EffectCondition.UpdateMaintainAction
+  id: UpdateMaintainAction
+  parent: MacacaGames.EffectSystem.EffectCondition
+  langs:
+  - csharp
+  - vb
+  name: UpdateMaintainAction()
+  nameWithType: EffectCondition.UpdateMaintainAction()
+  fullName: MacacaGames.EffectSystem.EffectCondition.UpdateMaintainAction()
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectCondition.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: UpdateMaintainAction
+    path: ../Runtime/EffectCondition.cs
+    startLine: 351
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public void UpdateMaintainAction()
+    content.vb: Public Sub UpdateMaintainAction
+  overload: MacacaGames.EffectSystem.EffectCondition.UpdateMaintainAction*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectCondition.UpdateMaintainRound
+  commentId: M:MacacaGames.EffectSystem.EffectCondition.UpdateMaintainRound
+  id: UpdateMaintainRound
+  parent: MacacaGames.EffectSystem.EffectCondition
+  langs:
+  - csharp
+  - vb
+  name: UpdateMaintainRound()
+  nameWithType: EffectCondition.UpdateMaintainRound()
+  fullName: MacacaGames.EffectSystem.EffectCondition.UpdateMaintainRound()
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectCondition.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: UpdateMaintainRound
+    path: ../Runtime/EffectCondition.cs
+    startLine: 361
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public void UpdateMaintainRound()
+    content.vb: Public Sub UpdateMaintainRound
+  overload: MacacaGames.EffectSystem.EffectCondition.UpdateMaintainRound*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectCondition.ResetMaintainTime
+  commentId: M:MacacaGames.EffectSystem.EffectCondition.ResetMaintainTime
+  id: ResetMaintainTime
+  parent: MacacaGames.EffectSystem.EffectCondition
+  langs:
+  - csharp
+  - vb
+  name: ResetMaintainTime()
+  nameWithType: EffectCondition.ResetMaintainTime()
+  fullName: MacacaGames.EffectSystem.EffectCondition.ResetMaintainTime()
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectCondition.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: ResetMaintainTime
+    path: ../Runtime/EffectCondition.cs
+    startLine: 398
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public void ResetMaintainTime()
+    content.vb: Public Sub ResetMaintainTime
+  overload: MacacaGames.EffectSystem.EffectCondition.ResetMaintainTime*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectCondition.ResetCooldownTime
+  commentId: M:MacacaGames.EffectSystem.EffectCondition.ResetCooldownTime
+  id: ResetCooldownTime
+  parent: MacacaGames.EffectSystem.EffectCondition
+  langs:
+  - csharp
+  - vb
+  name: ResetCooldownTime()
+  nameWithType: EffectCondition.ResetCooldownTime()
+  fullName: MacacaGames.EffectSystem.EffectCondition.ResetCooldownTime()
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectCondition.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: ResetCooldownTime
+    path: ../Runtime/EffectCondition.cs
+    startLine: 411
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public void ResetCooldownTime()
+    content.vb: Public Sub ResetCooldownTime
+  overload: MacacaGames.EffectSystem.EffectCondition.ResetCooldownTime*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: MacacaGames.EffectSystem
+  commentId: N:MacacaGames.EffectSystem
+  name: MacacaGames.EffectSystem
+  nameWithType: MacacaGames.EffectSystem
+  fullName: MacacaGames.EffectSystem
+- uid: MacacaGames.EffectSystem.EffectBase
+  commentId: T:MacacaGames.EffectSystem.EffectBase
+  parent: MacacaGames.EffectSystem
+  name: EffectBase
+  nameWithType: EffectBase
+  fullName: MacacaGames.EffectSystem.EffectBase
+- uid: MacacaGames.EffectSystem.EffectCondition.isActive*
+  commentId: Overload:MacacaGames.EffectSystem.EffectCondition.isActive
+  name: isActive
+  nameWithType: EffectCondition.isActive
+  fullName: MacacaGames.EffectSystem.EffectCondition.isActive
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: MacacaGames.EffectSystem.EffectCondition.#ctor*
+  commentId: Overload:MacacaGames.EffectSystem.EffectCondition.#ctor
+  name: EffectCondition
+  nameWithType: EffectCondition.EffectCondition
+  fullName: MacacaGames.EffectSystem.EffectCondition.EffectCondition
+- uid: MacacaGames.EffectSystem.EffectCondition.Start*
+  commentId: Overload:MacacaGames.EffectSystem.EffectCondition.Start
+  name: Start
+  nameWithType: EffectCondition.Start
+  fullName: MacacaGames.EffectSystem.EffectCondition.Start
+- uid: MacacaGames.EffectSystem.EffectCondition.End*
+  commentId: Overload:MacacaGames.EffectSystem.EffectCondition.End
+  name: End
+  nameWithType: EffectCondition.End
+  fullName: MacacaGames.EffectSystem.EffectCondition.End
+- uid: MacacaGames.EffectSystem.EffectCondition.OnActive*
+  commentId: Overload:MacacaGames.EffectSystem.EffectCondition.OnActive
+  name: OnActive
+  nameWithType: EffectCondition.OnActive
+  fullName: MacacaGames.EffectSystem.EffectCondition.OnActive
+- uid: MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo
+  commentId: T:MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo
+  parent: MacacaGames.EffectSystem
+  name: EffectManager.EffectTriggerConditionInfo
+  nameWithType: EffectManager.EffectTriggerConditionInfo
+  fullName: MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo
+- uid: MacacaGames.EffectSystem.EffectCondition.OnDeactive*
+  commentId: Overload:MacacaGames.EffectSystem.EffectCondition.OnDeactive
+  name: OnDeactive
+  nameWithType: EffectCondition.OnDeactive
+  fullName: MacacaGames.EffectSystem.EffectCondition.OnDeactive
+- uid: MacacaGames.EffectSystem.EffectCondition.ForceDeactive*
+  commentId: Overload:MacacaGames.EffectSystem.EffectCondition.ForceDeactive
+  name: ForceDeactive
+  nameWithType: EffectCondition.ForceDeactive
+  fullName: MacacaGames.EffectSystem.EffectCondition.ForceDeactive
+- uid: MacacaGames.EffectSystem.EffectCondition.IsOneOfRequirementsListFullfilled*
+  commentId: Overload:MacacaGames.EffectSystem.EffectCondition.IsOneOfRequirementsListFullfilled
+  name: IsOneOfRequirementsListFullfilled
+  nameWithType: EffectCondition.IsOneOfRequirementsListFullfilled
+  fullName: MacacaGames.EffectSystem.EffectCondition.IsOneOfRequirementsListFullfilled
+- uid: List{List{MacacaGames.EffectSystem.Model.ConditionRequirement}}
+  commentId: '!:List{List{MacacaGames.EffectSystem.Model.ConditionRequirement}}'
+  definition: List`1
+  name: List<List<ConditionRequirement>>
+  nameWithType: List<List<ConditionRequirement>>
+  fullName: List<List<MacacaGames.EffectSystem.Model.ConditionRequirement>>
+  nameWithType.vb: List(Of List(Of ConditionRequirement))
+  fullName.vb: List(Of List(Of MacacaGames.EffectSystem.Model.ConditionRequirement))
+  name.vb: List(Of List(Of ConditionRequirement))
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: MacacaGames.EffectSystem.Model.ConditionRequirement
+    name: ConditionRequirement
+    nameWithType: ConditionRequirement
+    fullName: MacacaGames.EffectSystem.Model.ConditionRequirement
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: MacacaGames.EffectSystem.Model.ConditionRequirement
+    name: ConditionRequirement
+    nameWithType: ConditionRequirement
+    fullName: MacacaGames.EffectSystem.Model.ConditionRequirement
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MacacaGames.EffectSystem.Model.EffectInfo
+  commentId: T:MacacaGames.EffectSystem.Model.EffectInfo
+  parent: MacacaGames.EffectSystem.Model
+  name: EffectInfo
+  nameWithType: EffectInfo
+  fullName: MacacaGames.EffectSystem.Model.EffectInfo
+- uid: List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MacacaGames.EffectSystem.Model
+  commentId: N:MacacaGames.EffectSystem.Model
+  name: MacacaGames.EffectSystem.Model
+  nameWithType: MacacaGames.EffectSystem.Model
+  fullName: MacacaGames.EffectSystem.Model
+- uid: MacacaGames.EffectSystem.EffectCondition.IsRequirementsFullfilled*
+  commentId: Overload:MacacaGames.EffectSystem.EffectCondition.IsRequirementsFullfilled
+  name: IsRequirementsFullfilled
+  nameWithType: EffectCondition.IsRequirementsFullfilled
+  fullName: MacacaGames.EffectSystem.EffectCondition.IsRequirementsFullfilled
+- uid: List{MacacaGames.EffectSystem.Model.ConditionRequirement}
+  commentId: '!:List{MacacaGames.EffectSystem.Model.ConditionRequirement}'
+  definition: List`1
+  name: List<ConditionRequirement>
+  nameWithType: List<ConditionRequirement>
+  fullName: List<MacacaGames.EffectSystem.Model.ConditionRequirement>
+  nameWithType.vb: List(Of ConditionRequirement)
+  fullName.vb: List(Of MacacaGames.EffectSystem.Model.ConditionRequirement)
+  name.vb: List(Of ConditionRequirement)
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: MacacaGames.EffectSystem.Model.ConditionRequirement
+    name: ConditionRequirement
+    nameWithType: ConditionRequirement
+    fullName: MacacaGames.EffectSystem.Model.ConditionRequirement
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: MacacaGames.EffectSystem.Model.ConditionRequirement
+    name: ConditionRequirement
+    nameWithType: ConditionRequirement
+    fullName: MacacaGames.EffectSystem.Model.ConditionRequirement
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Func{System.Single}
+  commentId: '!:Func{System.Single}'
+  definition: Func`1
+  name: Func<Single>
+  nameWithType: Func<Single>
+  fullName: Func<System.Single>
+  nameWithType.vb: Func(Of Single)
+  fullName.vb: Func(Of System.Single)
+  name.vb: Func(Of Single)
+  spec.csharp:
+  - uid: Func`1
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Func`1
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Func`1
+  commentId: '!:Func`1'
+  isExternal: true
+  name: Func<>
+  nameWithType: Func<>
+  fullName: Func<>
+  nameWithType.vb: Func(Of )
+  fullName.vb: Func(Of )
+  name.vb: Func(Of )
+  spec.csharp:
+  - uid: Func`1
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Func`1
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MacacaGames.EffectSystem.EffectCondition.UpdateMaintainAction*
+  commentId: Overload:MacacaGames.EffectSystem.EffectCondition.UpdateMaintainAction
+  name: UpdateMaintainAction
+  nameWithType: EffectCondition.UpdateMaintainAction
+  fullName: MacacaGames.EffectSystem.EffectCondition.UpdateMaintainAction
+- uid: MacacaGames.EffectSystem.EffectCondition.UpdateMaintainRound*
+  commentId: Overload:MacacaGames.EffectSystem.EffectCondition.UpdateMaintainRound
+  name: UpdateMaintainRound
+  nameWithType: EffectCondition.UpdateMaintainRound
+  fullName: MacacaGames.EffectSystem.EffectCondition.UpdateMaintainRound
+- uid: MacacaGames.EffectSystem.EffectCondition.ResetMaintainTime*
+  commentId: Overload:MacacaGames.EffectSystem.EffectCondition.ResetMaintainTime
+  name: ResetMaintainTime
+  nameWithType: EffectCondition.ResetMaintainTime
+  fullName: MacacaGames.EffectSystem.EffectCondition.ResetMaintainTime
+- uid: MacacaGames.EffectSystem.EffectCondition.ResetCooldownTime*
+  commentId: Overload:MacacaGames.EffectSystem.EffectCondition.ResetCooldownTime
+  name: ResetCooldownTime
+  nameWithType: EffectCondition.ResetCooldownTime
+  fullName: MacacaGames.EffectSystem.EffectCondition.ResetCooldownTime

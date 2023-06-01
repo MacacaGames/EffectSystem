@@ -1,0 +1,147 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.SkillAttackType
+  commentId: T:MacacaGames.EffectSystem.EffectSystemScriptable.SkillAttackType
+  id: EffectSystemScriptable.SkillAttackType
+  parent: MacacaGames.EffectSystem
+  children:
+  - MacacaGames.EffectSystem.EffectSystemScriptable.SkillAttackType.Melee
+  - MacacaGames.EffectSystem.EffectSystemScriptable.SkillAttackType.Range
+  - MacacaGames.EffectSystem.EffectSystemScriptable.SkillAttackType.Support
+  langs:
+  - csharp
+  - vb
+  name: EffectSystemScriptable.SkillAttackType
+  nameWithType: EffectSystemScriptable.SkillAttackType
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.SkillAttackType
+  type: Struct
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: SkillAttackType
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 141
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public struct SkillAttackType
+    content.vb: Public Structure SkillAttackType
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.SkillAttackType.Melee
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.SkillAttackType.Melee
+  id: Melee
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.SkillAttackType
+  langs:
+  - csharp
+  - vb
+  name: Melee
+  nameWithType: EffectSystemScriptable.SkillAttackType.Melee
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.SkillAttackType.Melee
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Melee
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 143
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string Melee = null
+    return:
+      type: System.String
+    content.vb: Public Const Melee As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.SkillAttackType.Range
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.SkillAttackType.Range
+  id: Range
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.SkillAttackType
+  langs:
+  - csharp
+  - vb
+  name: Range
+  nameWithType: EffectSystemScriptable.SkillAttackType.Range
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.SkillAttackType.Range
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Range
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 145
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string Range = null
+    return:
+      type: System.String
+    content.vb: Public Const Range As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.SkillAttackType.Support
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.SkillAttackType.Support
+  id: Support
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.SkillAttackType
+  langs:
+  - csharp
+  - vb
+  name: Support
+  nameWithType: EffectSystemScriptable.SkillAttackType.Support
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.SkillAttackType.Support
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Support
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 147
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string Support = null
+    return:
+      type: System.String
+    content.vb: Public Const Support As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: MacacaGames.EffectSystem
+  commentId: N:MacacaGames.EffectSystem
+  name: MacacaGames.EffectSystem
+  nameWithType: MacacaGames.EffectSystem
+  fullName: MacacaGames.EffectSystem
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

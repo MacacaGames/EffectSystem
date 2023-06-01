@@ -1,0 +1,181 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic
+  commentId: T:MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic
+  id: EffectSystemScriptable.EffectInfoLogic
+  parent: MacacaGames.EffectSystem
+  children:
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.DestroyAfterMaintainTimeEnd
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.None
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.OnlyActiveOnce
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.ReactiveAfterCooldownEnd
+  langs:
+  - csharp
+  - vb
+  name: EffectSystemScriptable.EffectInfoLogic
+  nameWithType: EffectSystemScriptable.EffectInfoLogic
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic
+  type: Struct
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: EffectInfoLogic
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 345
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public struct EffectInfoLogic
+    content.vb: Public Structure EffectInfoLogic
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.None
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.None
+  id: None
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: EffectSystemScriptable.EffectInfoLogic.None
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.None
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: None
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 347
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string None = null
+    return:
+      type: System.String
+    content.vb: Public Const None As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.OnlyActiveOnce
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.OnlyActiveOnce
+  id: OnlyActiveOnce
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic
+  langs:
+  - csharp
+  - vb
+  name: OnlyActiveOnce
+  nameWithType: EffectSystemScriptable.EffectInfoLogic.OnlyActiveOnce
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.OnlyActiveOnce
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnlyActiveOnce
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 349
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string OnlyActiveOnce = null
+    return:
+      type: System.String
+    content.vb: Public Const OnlyActiveOnce As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.ReactiveAfterCooldownEnd
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.ReactiveAfterCooldownEnd
+  id: ReactiveAfterCooldownEnd
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic
+  langs:
+  - csharp
+  - vb
+  name: ReactiveAfterCooldownEnd
+  nameWithType: EffectSystemScriptable.EffectInfoLogic.ReactiveAfterCooldownEnd
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.ReactiveAfterCooldownEnd
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: ReactiveAfterCooldownEnd
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 351
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string ReactiveAfterCooldownEnd = null
+    return:
+      type: System.String
+    content.vb: Public Const ReactiveAfterCooldownEnd As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.DestroyAfterMaintainTimeEnd
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.DestroyAfterMaintainTimeEnd
+  id: DestroyAfterMaintainTimeEnd
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic
+  langs:
+  - csharp
+  - vb
+  name: DestroyAfterMaintainTimeEnd
+  nameWithType: EffectSystemScriptable.EffectInfoLogic.DestroyAfterMaintainTimeEnd
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.DestroyAfterMaintainTimeEnd
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: DestroyAfterMaintainTimeEnd
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 353
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string DestroyAfterMaintainTimeEnd = null
+    return:
+      type: System.String
+    content.vb: Public Const DestroyAfterMaintainTimeEnd As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: MacacaGames.EffectSystem
+  commentId: N:MacacaGames.EffectSystem
+  name: MacacaGames.EffectSystem
+  nameWithType: MacacaGames.EffectSystem
+  fullName: MacacaGames.EffectSystem
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

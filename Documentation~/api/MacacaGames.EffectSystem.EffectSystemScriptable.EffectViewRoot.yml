@@ -1,0 +1,147 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectViewRoot
+  commentId: T:MacacaGames.EffectSystem.EffectSystemScriptable.EffectViewRoot
+  id: EffectSystemScriptable.EffectViewRoot
+  parent: MacacaGames.EffectSystem
+  children:
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectViewRoot.Head
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectViewRoot.Self
+  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectViewRoot.UI
+  langs:
+  - csharp
+  - vb
+  name: EffectSystemScriptable.EffectViewRoot
+  nameWithType: EffectSystemScriptable.EffectViewRoot
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectViewRoot
+  type: Struct
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: EffectViewRoot
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 356
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public struct EffectViewRoot
+    content.vb: Public Structure EffectViewRoot
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectViewRoot.Self
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectViewRoot.Self
+  id: Self
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectViewRoot
+  langs:
+  - csharp
+  - vb
+  name: Self
+  nameWithType: EffectSystemScriptable.EffectViewRoot.Self
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectViewRoot.Self
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Self
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 358
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string Self = null
+    return:
+      type: System.String
+    content.vb: Public Const Self As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectViewRoot.UI
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectViewRoot.UI
+  id: UI
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectViewRoot
+  langs:
+  - csharp
+  - vb
+  name: UI
+  nameWithType: EffectSystemScriptable.EffectViewRoot.UI
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectViewRoot.UI
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: UI
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 360
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string UI = null
+    return:
+      type: System.String
+    content.vb: Public Const UI As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectViewRoot.Head
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectViewRoot.Head
+  id: Head
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectViewRoot
+  langs:
+  - csharp
+  - vb
+  name: Head
+  nameWithType: EffectSystemScriptable.EffectViewRoot.Head
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectViewRoot.Head
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Head
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 362
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string Head = null
+    return:
+      type: System.String
+    content.vb: Public Const Head As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: MacacaGames.EffectSystem
+  commentId: N:MacacaGames.EffectSystem
+  name: MacacaGames.EffectSystem
+  nameWithType: MacacaGames.EffectSystem
+  fullName: MacacaGames.EffectSystem
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

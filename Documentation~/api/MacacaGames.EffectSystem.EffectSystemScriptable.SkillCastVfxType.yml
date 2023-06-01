@@ -1,0 +1,249 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType
+  commentId: T:MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType
+  id: EffectSystemScriptable.SkillCastVfxType
+  parent: MacacaGames.EffectSystem
+  children:
+  - MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType.Buff
+  - MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType.Dark
+  - MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType.Fire
+  - MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType.GeneralMagic
+  - MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType.None
+  - MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType.Water
+  langs:
+  - csharp
+  - vb
+  name: EffectSystemScriptable.SkillCastVfxType
+  nameWithType: EffectSystemScriptable.SkillCastVfxType
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType
+  type: Struct
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: SkillCastVfxType
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 415
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public struct SkillCastVfxType
+    content.vb: Public Structure SkillCastVfxType
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType.None
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType.None
+  id: None
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: EffectSystemScriptable.SkillCastVfxType.None
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType.None
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: None
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 417
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string None = null
+    return:
+      type: System.String
+    content.vb: Public Const None As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType.Water
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType.Water
+  id: Water
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType
+  langs:
+  - csharp
+  - vb
+  name: Water
+  nameWithType: EffectSystemScriptable.SkillCastVfxType.Water
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType.Water
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Water
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 419
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string Water = null
+    return:
+      type: System.String
+    content.vb: Public Const Water As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType.Fire
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType.Fire
+  id: Fire
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType
+  langs:
+  - csharp
+  - vb
+  name: Fire
+  nameWithType: EffectSystemScriptable.SkillCastVfxType.Fire
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType.Fire
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Fire
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 421
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string Fire = null
+    return:
+      type: System.String
+    content.vb: Public Const Fire As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType.Dark
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType.Dark
+  id: Dark
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType
+  langs:
+  - csharp
+  - vb
+  name: Dark
+  nameWithType: EffectSystemScriptable.SkillCastVfxType.Dark
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType.Dark
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Dark
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 423
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string Dark = null
+    return:
+      type: System.String
+    content.vb: Public Const Dark As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType.Buff
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType.Buff
+  id: Buff
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType
+  langs:
+  - csharp
+  - vb
+  name: Buff
+  nameWithType: EffectSystemScriptable.SkillCastVfxType.Buff
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType.Buff
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Buff
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 425
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string Buff = null
+    return:
+      type: System.String
+    content.vb: Public Const Buff As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType.GeneralMagic
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType.GeneralMagic
+  id: GeneralMagic
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType
+  langs:
+  - csharp
+  - vb
+  name: GeneralMagic
+  nameWithType: EffectSystemScriptable.SkillCastVfxType.GeneralMagic
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType.GeneralMagic
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utility/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: GeneralMagic
+    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    startLine: 427
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string GeneralMagic = null
+    return:
+      type: System.String
+    content.vb: Public Const GeneralMagic As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: MacacaGames.EffectSystem
+  commentId: N:MacacaGames.EffectSystem
+  name: MacacaGames.EffectSystem
+  nameWithType: MacacaGames.EffectSystem
+  fullName: MacacaGames.EffectSystem
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

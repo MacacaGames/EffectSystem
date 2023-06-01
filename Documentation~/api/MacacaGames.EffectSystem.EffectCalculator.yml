@@ -1,0 +1,458 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.EffectCalculator
+  commentId: T:MacacaGames.EffectSystem.EffectCalculator
+  id: EffectCalculator
+  parent: MacacaGames.EffectSystem
+  children:
+  - MacacaGames.EffectSystem.EffectCalculator.GetEffectTypeKingdomValues(IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo}[])
+  - MacacaGames.EffectSystem.EffectCalculator.GetEffectTypeKingdomValues_EffectList(IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo}[])
+  - MacacaGames.EffectSystem.EffectCalculator.GetLimit(System.String)
+  langs:
+  - csharp
+  - vb
+  name: EffectCalculator
+  nameWithType: EffectCalculator
+  fullName: MacacaGames.EffectSystem.EffectCalculator
+  type: Class
+  source:
+    remote:
+      path: Runtime/EffectCalculator.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: EffectCalculator
+    path: ../Runtime/EffectCalculator.cs
+    startLine: 8
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: 'public class EffectCalculator : object'
+    content.vb: >-
+      Public Class EffectCalculator
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MacacaGames.EffectSystem.EffectCalculator.GetLimit(System.String)
+  commentId: M:MacacaGames.EffectSystem.EffectCalculator.GetLimit(System.String)
+  id: GetLimit(System.String)
+  parent: MacacaGames.EffectSystem.EffectCalculator
+  langs:
+  - csharp
+  - vb
+  name: GetLimit(String)
+  nameWithType: EffectCalculator.GetLimit(String)
+  fullName: MacacaGames.EffectSystem.EffectCalculator.GetLimit(System.String)
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectCalculator.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: GetLimit
+    path: ../Runtime/EffectCalculator.cs
+    startLine: 11
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  summary: 取得指定EffectType的上下限。
+  example: []
+  syntax:
+    content: public (float sumLimitMin, float sumLimitMax) GetLimit(string effectType)
+    parameters:
+    - id: effectType
+      type: System.String
+    return:
+      type: System.ValueTuple{System.Single,System.Single}
+    content.vb: Public Function GetLimit(effectType As String) As(sumLimitMin As Single, sumLimitMax As Single)
+  overload: MacacaGames.EffectSystem.EffectCalculator.GetLimit*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectCalculator.GetEffectTypeKingdomValues(IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo}[])
+  commentId: M:MacacaGames.EffectSystem.EffectCalculator.GetEffectTypeKingdomValues(IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo}[])
+  id: GetEffectTypeKingdomValues(IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo}[])
+  parent: MacacaGames.EffectSystem.EffectCalculator
+  langs:
+  - csharp
+  - vb
+  name: GetEffectTypeKingdomValues(IEnumerable<EffectInfo>[])
+  nameWithType: EffectCalculator.GetEffectTypeKingdomValues(IEnumerable<EffectInfo>[])
+  fullName: MacacaGames.EffectSystem.EffectCalculator.GetEffectTypeKingdomValues(IEnumerable<MacacaGames.EffectSystem.Model.EffectInfo>[])
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectCalculator.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: GetEffectTypeKingdomValues
+    path: ../Runtime/EffectCalculator.cs
+    startLine: 19
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  summary: 加總合併同Kindom的Effect值。
+  example: []
+  syntax:
+    content: public Dictionary<EffectInfo, float> GetEffectTypeKingdomValues(params IEnumerable<EffectInfo>[] effectInfoGroups)
+    parameters:
+    - id: effectInfoGroups
+      type: IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo}[]
+    return:
+      type: Dictionary{MacacaGames.EffectSystem.Model.EffectInfo,System.Single}
+    content.vb: Public Function GetEffectTypeKingdomValues(ParamArray effectInfoGroups As IEnumerable(Of EffectInfo)()) As Dictionary(Of EffectInfo, Single)
+  overload: MacacaGames.EffectSystem.EffectCalculator.GetEffectTypeKingdomValues*
+  nameWithType.vb: EffectCalculator.GetEffectTypeKingdomValues(IEnumerable(Of EffectInfo)())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: MacacaGames.EffectSystem.EffectCalculator.GetEffectTypeKingdomValues(IEnumerable(Of MacacaGames.EffectSystem.Model.EffectInfo)())
+  name.vb: GetEffectTypeKingdomValues(IEnumerable(Of EffectInfo)())
+- uid: MacacaGames.EffectSystem.EffectCalculator.GetEffectTypeKingdomValues_EffectList(IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo}[])
+  commentId: M:MacacaGames.EffectSystem.EffectCalculator.GetEffectTypeKingdomValues_EffectList(IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo}[])
+  id: GetEffectTypeKingdomValues_EffectList(IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo}[])
+  parent: MacacaGames.EffectSystem.EffectCalculator
+  langs:
+  - csharp
+  - vb
+  name: GetEffectTypeKingdomValues_EffectList(IEnumerable<EffectInfo>[])
+  nameWithType: EffectCalculator.GetEffectTypeKingdomValues_EffectList(IEnumerable<EffectInfo>[])
+  fullName: MacacaGames.EffectSystem.EffectCalculator.GetEffectTypeKingdomValues_EffectList(IEnumerable<MacacaGames.EffectSystem.Model.EffectInfo>[])
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectCalculator.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: GetEffectTypeKingdomValues_EffectList
+    path: ../Runtime/EffectCalculator.cs
+    startLine: 41
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  summary: 加總合併同Kindom的Effect值，用EffectList加總。
+  example: []
+  syntax:
+    content: public Dictionary<EffectInfo, EffectManager.EffectList> GetEffectTypeKingdomValues_EffectList(params IEnumerable<EffectInfo>[] effectInfoGroups)
+    parameters:
+    - id: effectInfoGroups
+      type: IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo}[]
+    return:
+      type: Dictionary{MacacaGames.EffectSystem.Model.EffectInfo,MacacaGames.EffectSystem.EffectManager.EffectList}
+    content.vb: Public Function GetEffectTypeKingdomValues_EffectList(ParamArray effectInfoGroups As IEnumerable(Of EffectInfo)()) As Dictionary(Of EffectInfo, EffectManager.EffectList)
+  overload: MacacaGames.EffectSystem.EffectCalculator.GetEffectTypeKingdomValues_EffectList*
+  nameWithType.vb: EffectCalculator.GetEffectTypeKingdomValues_EffectList(IEnumerable(Of EffectInfo)())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: MacacaGames.EffectSystem.EffectCalculator.GetEffectTypeKingdomValues_EffectList(IEnumerable(Of MacacaGames.EffectSystem.Model.EffectInfo)())
+  name.vb: GetEffectTypeKingdomValues_EffectList(IEnumerable(Of EffectInfo)())
+references:
+- uid: MacacaGames.EffectSystem
+  commentId: N:MacacaGames.EffectSystem
+  name: MacacaGames.EffectSystem
+  nameWithType: MacacaGames.EffectSystem
+  fullName: MacacaGames.EffectSystem
+- uid: MacacaGames.EffectSystem.EffectCalculator.GetLimit*
+  commentId: Overload:MacacaGames.EffectSystem.EffectCalculator.GetLimit
+  name: GetLimit
+  nameWithType: EffectCalculator.GetLimit
+  fullName: MacacaGames.EffectSystem.EffectCalculator.GetLimit
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.ValueTuple{System.Single,System.Single}
+  commentId: T:System.ValueTuple{System.Single,System.Single}
+  parent: System
+  isExternal: true
+  name: ValueTuple<Single, Single>
+  nameWithType: ValueTuple<Single, Single>
+  fullName: System.ValueTuple<System.Single, System.Single>
+  nameWithType.vb: ValueTuple(Of Single, Single)
+  fullName.vb: System.ValueTuple(Of System.Single, System.Single)
+  name.vb: ValueTuple(Of Single, Single)
+  spec.csharp:
+  - uid: System.ValueTuple`2
+    name: ValueTuple
+    nameWithType: ValueTuple
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.ValueTuple`2
+    name: ValueTuple
+    nameWithType: ValueTuple
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MacacaGames.EffectSystem.EffectCalculator.GetEffectTypeKingdomValues*
+  commentId: Overload:MacacaGames.EffectSystem.EffectCalculator.GetEffectTypeKingdomValues
+  name: GetEffectTypeKingdomValues
+  nameWithType: EffectCalculator.GetEffectTypeKingdomValues
+  fullName: MacacaGames.EffectSystem.EffectCalculator.GetEffectTypeKingdomValues
+- uid: IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo}[]
+  isExternal: true
+  name: IEnumerable<EffectInfo>[]
+  nameWithType: IEnumerable<EffectInfo>[]
+  fullName: IEnumerable<MacacaGames.EffectSystem.Model.EffectInfo>[]
+  nameWithType.vb: IEnumerable(Of EffectInfo)()
+  fullName.vb: IEnumerable(Of MacacaGames.EffectSystem.Model.EffectInfo)()
+  name.vb: IEnumerable(Of EffectInfo)()
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: MacacaGames.EffectSystem.Model.EffectInfo
+    name: EffectInfo
+    nameWithType: EffectInfo
+    fullName: MacacaGames.EffectSystem.Model.EffectInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: MacacaGames.EffectSystem.Model.EffectInfo
+    name: EffectInfo
+    nameWithType: EffectInfo
+    fullName: MacacaGames.EffectSystem.Model.EffectInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: Dictionary{MacacaGames.EffectSystem.Model.EffectInfo,System.Single}
+  commentId: '!:Dictionary{MacacaGames.EffectSystem.Model.EffectInfo,System.Single}'
+  definition: Dictionary`2
+  name: Dictionary<EffectInfo, Single>
+  nameWithType: Dictionary<EffectInfo, Single>
+  fullName: Dictionary<MacacaGames.EffectSystem.Model.EffectInfo, System.Single>
+  nameWithType.vb: Dictionary(Of EffectInfo, Single)
+  fullName.vb: Dictionary(Of MacacaGames.EffectSystem.Model.EffectInfo, System.Single)
+  name.vb: Dictionary(Of EffectInfo, Single)
+  spec.csharp:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: MacacaGames.EffectSystem.Model.EffectInfo
+    name: EffectInfo
+    nameWithType: EffectInfo
+    fullName: MacacaGames.EffectSystem.Model.EffectInfo
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: MacacaGames.EffectSystem.Model.EffectInfo
+    name: EffectInfo
+    nameWithType: EffectInfo
+    fullName: MacacaGames.EffectSystem.Model.EffectInfo
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dictionary`2
+  isExternal: true
+  name: Dictionary<, >
+  nameWithType: Dictionary<, >
+  fullName: Dictionary<, >
+  nameWithType.vb: Dictionary(Of , )
+  fullName.vb: Dictionary(Of , )
+  name.vb: Dictionary(Of , )
+  spec.csharp:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MacacaGames.EffectSystem.EffectCalculator.GetEffectTypeKingdomValues_EffectList*
+  commentId: Overload:MacacaGames.EffectSystem.EffectCalculator.GetEffectTypeKingdomValues_EffectList
+  name: GetEffectTypeKingdomValues_EffectList
+  nameWithType: EffectCalculator.GetEffectTypeKingdomValues_EffectList
+  fullName: MacacaGames.EffectSystem.EffectCalculator.GetEffectTypeKingdomValues_EffectList
+- uid: Dictionary{MacacaGames.EffectSystem.Model.EffectInfo,MacacaGames.EffectSystem.EffectManager.EffectList}
+  commentId: '!:Dictionary{MacacaGames.EffectSystem.Model.EffectInfo,MacacaGames.EffectSystem.EffectManager.EffectList}'
+  definition: Dictionary`2
+  name: Dictionary<EffectInfo, EffectManager.EffectList>
+  nameWithType: Dictionary<EffectInfo, EffectManager.EffectList>
+  fullName: Dictionary<MacacaGames.EffectSystem.Model.EffectInfo, MacacaGames.EffectSystem.EffectManager.EffectList>
+  nameWithType.vb: Dictionary(Of EffectInfo, EffectManager.EffectList)
+  fullName.vb: Dictionary(Of MacacaGames.EffectSystem.Model.EffectInfo, MacacaGames.EffectSystem.EffectManager.EffectList)
+  name.vb: Dictionary(Of EffectInfo, EffectManager.EffectList)
+  spec.csharp:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: MacacaGames.EffectSystem.Model.EffectInfo
+    name: EffectInfo
+    nameWithType: EffectInfo
+    fullName: MacacaGames.EffectSystem.Model.EffectInfo
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: MacacaGames.EffectSystem.EffectManager.EffectList
+    name: EffectManager.EffectList
+    nameWithType: EffectManager.EffectList
+    fullName: MacacaGames.EffectSystem.EffectManager.EffectList
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: MacacaGames.EffectSystem.Model.EffectInfo
+    name: EffectInfo
+    nameWithType: EffectInfo
+    fullName: MacacaGames.EffectSystem.Model.EffectInfo
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: MacacaGames.EffectSystem.EffectManager.EffectList
+    name: EffectManager.EffectList
+    nameWithType: EffectManager.EffectList
+    fullName: MacacaGames.EffectSystem.EffectManager.EffectList
+  - name: )
+    nameWithType: )
+    fullName: )

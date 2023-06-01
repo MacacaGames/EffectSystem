@@ -1,0 +1,106 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.AutoDestroySelf_BehaviourState
+  commentId: T:MacacaGames.EffectSystem.AutoDestroySelf_BehaviourState
+  id: AutoDestroySelf_BehaviourState
+  parent: MacacaGames.EffectSystem
+  children:
+  - MacacaGames.EffectSystem.AutoDestroySelf_BehaviourState.OnStateExit(Animator,AnimatorStateInfo,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: AutoDestroySelf_BehaviourState
+  nameWithType: AutoDestroySelf_BehaviourState
+  fullName: MacacaGames.EffectSystem.AutoDestroySelf_BehaviourState
+  type: Class
+  source:
+    remote:
+      path: Runtime/Utility/AutoDestroySelf_BehaviourState.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: AutoDestroySelf_BehaviourState
+    path: ../Runtime/Utility/AutoDestroySelf_BehaviourState.cs
+    startLine: 6
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: 'public class AutoDestroySelf_BehaviourState : StateMachineBehaviour'
+    content.vb: >-
+      Public Class AutoDestroySelf_BehaviourState
+          Inherits StateMachineBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MacacaGames.EffectSystem.AutoDestroySelf_BehaviourState.OnStateExit(Animator,AnimatorStateInfo,System.Int32)
+  commentId: M:MacacaGames.EffectSystem.AutoDestroySelf_BehaviourState.OnStateExit(Animator,AnimatorStateInfo,System.Int32)
+  id: OnStateExit(Animator,AnimatorStateInfo,System.Int32)
+  parent: MacacaGames.EffectSystem.AutoDestroySelf_BehaviourState
+  langs:
+  - csharp
+  - vb
+  name: OnStateExit(Animator, AnimatorStateInfo, Int32)
+  nameWithType: AutoDestroySelf_BehaviourState.OnStateExit(Animator, AnimatorStateInfo, Int32)
+  fullName: MacacaGames.EffectSystem.AutoDestroySelf_BehaviourState.OnStateExit(Animator, AnimatorStateInfo, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Utility/AutoDestroySelf_BehaviourState.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnStateExit
+    path: ../Runtime/Utility/AutoDestroySelf_BehaviourState.cs
+    startLine: 8
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    parameters:
+    - id: animator
+      type: Animator
+    - id: stateInfo
+      type: AnimatorStateInfo
+    - id: layerIndex
+      type: System.Int32
+    content.vb: Public Overrides Sub OnStateExit(animator As Animator, stateInfo As AnimatorStateInfo, layerIndex As Integer)
+  overload: MacacaGames.EffectSystem.AutoDestroySelf_BehaviourState.OnStateExit*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: MacacaGames.EffectSystem
+  commentId: N:MacacaGames.EffectSystem
+  name: MacacaGames.EffectSystem
+  nameWithType: MacacaGames.EffectSystem
+  fullName: MacacaGames.EffectSystem
+- uid: MacacaGames.EffectSystem.AutoDestroySelf_BehaviourState.OnStateExit*
+  commentId: Overload:MacacaGames.EffectSystem.AutoDestroySelf_BehaviourState.OnStateExit
+  name: OnStateExit
+  nameWithType: AutoDestroySelf_BehaviourState.OnStateExit
+  fullName: MacacaGames.EffectSystem.AutoDestroySelf_BehaviourState.OnStateExit
+- uid: Animator
+  commentId: '!:Animator'
+  isExternal: true
+  name: Animator
+  nameWithType: Animator
+  fullName: Animator
+- uid: AnimatorStateInfo
+  commentId: '!:AnimatorStateInfo'
+  isExternal: true
+  name: AnimatorStateInfo
+  nameWithType: AnimatorStateInfo
+  fullName: AnimatorStateInfo
+- uid: System.Int32
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

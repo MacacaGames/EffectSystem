@@ -1,0 +1,501 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.EffectInfoFormatter
+  commentId: T:MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.EffectInfoFormatter
+  id: EffectInfoFormatter
+  parent: MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model
+  children:
+  - MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.EffectInfoFormatter.Deserialize(MessagePack.MessagePackReader@,MessagePack.MessagePackSerializerOptions)
+  - MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.EffectInfoFormatter.Serialize(MessagePack.MessagePackWriter@,MacacaGames.EffectSystem.Model.EffectInfo,MessagePack.MessagePackSerializerOptions)
+  langs:
+  - csharp
+  - vb
+  name: EffectInfoFormatter
+  nameWithType: EffectInfoFormatter
+  fullName: MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.EffectInfoFormatter
+  type: Class
+  source:
+    remote:
+      path: Model/EffectSystem.Generated.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: EffectInfoFormatter
+    path: ../Model/EffectSystem.Generated.cs
+    startLine: 241
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model
+  syntax:
+    content: 'public sealed class EffectInfoFormatter : object, IMessagePackFormatter<EffectInfo>, IMessagePackFormatter'
+    content.vb: >-
+      Public NotInheritable Class EffectInfoFormatter
+          Inherits Object
+          Implements IMessagePackFormatter(Of EffectInfo), IMessagePackFormatter
+  inheritance:
+  - System.Object
+  implements:
+  - MessagePack.Formatters.IMessagePackFormatter{MacacaGames.EffectSystem.Model.EffectInfo}
+  - MessagePack.Formatters.IMessagePackFormatter
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.EffectInfoFormatter.Serialize(MessagePack.MessagePackWriter@,MacacaGames.EffectSystem.Model.EffectInfo,MessagePack.MessagePackSerializerOptions)
+  commentId: M:MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.EffectInfoFormatter.Serialize(MessagePack.MessagePackWriter@,MacacaGames.EffectSystem.Model.EffectInfo,MessagePack.MessagePackSerializerOptions)
+  id: Serialize(MessagePack.MessagePackWriter@,MacacaGames.EffectSystem.Model.EffectInfo,MessagePack.MessagePackSerializerOptions)
+  parent: MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.EffectInfoFormatter
+  langs:
+  - csharp
+  - vb
+  name: Serialize(ref MessagePackWriter, EffectInfo, MessagePackSerializerOptions)
+  nameWithType: EffectInfoFormatter.Serialize(ref MessagePackWriter, EffectInfo, MessagePackSerializerOptions)
+  fullName: MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.EffectInfoFormatter.Serialize(ref MessagePack.MessagePackWriter, MacacaGames.EffectSystem.Model.EffectInfo, MessagePack.MessagePackSerializerOptions)
+  type: Method
+  source:
+    remote:
+      path: Model/EffectSystem.Generated.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Serialize
+    path: ../Model/EffectSystem.Generated.cs
+    startLine: 286
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model
+  syntax:
+    content: public void Serialize(ref MessagePackWriter writer, EffectInfo value, MessagePackSerializerOptions options)
+    parameters:
+    - id: writer
+      type: MessagePack.MessagePackWriter
+    - id: value
+      type: MacacaGames.EffectSystem.Model.EffectInfo
+    - id: options
+      type: MessagePack.MessagePackSerializerOptions
+    content.vb: Public Sub Serialize(ByRef writer As MessagePackWriter, value As EffectInfo, options As MessagePackSerializerOptions)
+  overload: MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.EffectInfoFormatter.Serialize*
+  implements:
+  - MessagePack.Formatters.IMessagePackFormatter{MacacaGames.EffectSystem.Model.EffectInfo}.Serialize(MessagePack.MessagePackWriter@,MacacaGames.EffectSystem.Model.EffectInfo,MessagePack.MessagePackSerializerOptions)
+  nameWithType.vb: EffectInfoFormatter.Serialize(ByRef MessagePackWriter, EffectInfo, MessagePackSerializerOptions)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.EffectInfoFormatter.Serialize(ByRef MessagePack.MessagePackWriter, MacacaGames.EffectSystem.Model.EffectInfo, MessagePack.MessagePackSerializerOptions)
+  name.vb: Serialize(ByRef MessagePackWriter, EffectInfo, MessagePackSerializerOptions)
+- uid: MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.EffectInfoFormatter.Deserialize(MessagePack.MessagePackReader@,MessagePack.MessagePackSerializerOptions)
+  commentId: M:MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.EffectInfoFormatter.Deserialize(MessagePack.MessagePackReader@,MessagePack.MessagePackSerializerOptions)
+  id: Deserialize(MessagePack.MessagePackReader@,MessagePack.MessagePackSerializerOptions)
+  parent: MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.EffectInfoFormatter
+  langs:
+  - csharp
+  - vb
+  name: Deserialize(ref MessagePackReader, MessagePackSerializerOptions)
+  nameWithType: EffectInfoFormatter.Deserialize(ref MessagePackReader, MessagePackSerializerOptions)
+  fullName: MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.EffectInfoFormatter.Deserialize(ref MessagePack.MessagePackReader, MessagePack.MessagePackSerializerOptions)
+  type: Method
+  source:
+    remote:
+      path: Model/EffectSystem.Generated.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Deserialize
+    path: ../Model/EffectSystem.Generated.cs
+    startLine: 334
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model
+  syntax:
+    content: public EffectInfo Deserialize(ref MessagePackReader reader, MessagePackSerializerOptions options)
+    parameters:
+    - id: reader
+      type: MessagePack.MessagePackReader
+    - id: options
+      type: MessagePack.MessagePackSerializerOptions
+    return:
+      type: MacacaGames.EffectSystem.Model.EffectInfo
+    content.vb: Public Function Deserialize(ByRef reader As MessagePackReader, options As MessagePackSerializerOptions) As EffectInfo
+  overload: MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.EffectInfoFormatter.Deserialize*
+  implements:
+  - MessagePack.Formatters.IMessagePackFormatter{MacacaGames.EffectSystem.Model.EffectInfo}.Deserialize(MessagePack.MessagePackReader@,MessagePack.MessagePackSerializerOptions)
+  nameWithType.vb: EffectInfoFormatter.Deserialize(ByRef MessagePackReader, MessagePackSerializerOptions)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.EffectInfoFormatter.Deserialize(ByRef MessagePack.MessagePackReader, MessagePack.MessagePackSerializerOptions)
+  name.vb: Deserialize(ByRef MessagePackReader, MessagePackSerializerOptions)
+references:
+- uid: MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model
+  commentId: N:MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model
+  name: MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model
+  nameWithType: MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model
+  fullName: MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model
+- uid: MessagePack.Formatters.IMessagePackFormatter{MacacaGames.EffectSystem.Model.EffectInfo}
+  commentId: T:MessagePack.Formatters.IMessagePackFormatter{MacacaGames.EffectSystem.Model.EffectInfo}
+  parent: MessagePack.Formatters
+  definition: MessagePack.Formatters.IMessagePackFormatter`1
+  name: IMessagePackFormatter<EffectInfo>
+  nameWithType: IMessagePackFormatter<EffectInfo>
+  fullName: MessagePack.Formatters.IMessagePackFormatter<MacacaGames.EffectSystem.Model.EffectInfo>
+  nameWithType.vb: IMessagePackFormatter(Of EffectInfo)
+  fullName.vb: MessagePack.Formatters.IMessagePackFormatter(Of MacacaGames.EffectSystem.Model.EffectInfo)
+  name.vb: IMessagePackFormatter(Of EffectInfo)
+  spec.csharp:
+  - uid: MessagePack.Formatters.IMessagePackFormatter`1
+    name: IMessagePackFormatter
+    nameWithType: IMessagePackFormatter
+    fullName: MessagePack.Formatters.IMessagePackFormatter
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: MacacaGames.EffectSystem.Model.EffectInfo
+    name: EffectInfo
+    nameWithType: EffectInfo
+    fullName: MacacaGames.EffectSystem.Model.EffectInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: MessagePack.Formatters.IMessagePackFormatter`1
+    name: IMessagePackFormatter
+    nameWithType: IMessagePackFormatter
+    fullName: MessagePack.Formatters.IMessagePackFormatter
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: MacacaGames.EffectSystem.Model.EffectInfo
+    name: EffectInfo
+    nameWithType: EffectInfo
+    fullName: MacacaGames.EffectSystem.Model.EffectInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MessagePack.Formatters.IMessagePackFormatter
+  commentId: T:MessagePack.Formatters.IMessagePackFormatter
+  parent: MessagePack.Formatters
+  name: IMessagePackFormatter
+  nameWithType: IMessagePackFormatter
+  fullName: MessagePack.Formatters.IMessagePackFormatter
+- uid: MessagePack.Formatters.IMessagePackFormatter`1
+  commentId: T:MessagePack.Formatters.IMessagePackFormatter`1
+  name: IMessagePackFormatter<T>
+  nameWithType: IMessagePackFormatter<T>
+  fullName: MessagePack.Formatters.IMessagePackFormatter<T>
+  nameWithType.vb: IMessagePackFormatter(Of T)
+  fullName.vb: MessagePack.Formatters.IMessagePackFormatter(Of T)
+  name.vb: IMessagePackFormatter(Of T)
+  spec.csharp:
+  - uid: MessagePack.Formatters.IMessagePackFormatter`1
+    name: IMessagePackFormatter
+    nameWithType: IMessagePackFormatter
+    fullName: MessagePack.Formatters.IMessagePackFormatter
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: MessagePack.Formatters.IMessagePackFormatter`1
+    name: IMessagePackFormatter
+    nameWithType: IMessagePackFormatter
+    fullName: MessagePack.Formatters.IMessagePackFormatter
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MessagePack.Formatters
+  commentId: N:MessagePack.Formatters
+  name: MessagePack.Formatters
+  nameWithType: MessagePack.Formatters
+  fullName: MessagePack.Formatters
+- uid: MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.EffectInfoFormatter.Serialize*
+  commentId: Overload:MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.EffectInfoFormatter.Serialize
+  name: Serialize
+  nameWithType: EffectInfoFormatter.Serialize
+  fullName: MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.EffectInfoFormatter.Serialize
+- uid: MessagePack.Formatters.IMessagePackFormatter{MacacaGames.EffectSystem.Model.EffectInfo}.Serialize(MessagePack.MessagePackWriter@,MacacaGames.EffectSystem.Model.EffectInfo,MessagePack.MessagePackSerializerOptions)
+  commentId: M:MessagePack.Formatters.IMessagePackFormatter{MacacaGames.EffectSystem.Model.EffectInfo}.Serialize(MessagePack.MessagePackWriter@,MacacaGames.EffectSystem.Model.EffectInfo,MessagePack.MessagePackSerializerOptions)
+  parent: MessagePack.Formatters.IMessagePackFormatter{MacacaGames.EffectSystem.Model.EffectInfo}
+  definition: MessagePack.Formatters.IMessagePackFormatter`1.Serialize(MessagePack.MessagePackWriter@,`0,MessagePack.MessagePackSerializerOptions)
+  name: Serialize(MessagePackWriter, EffectInfo, MessagePackSerializerOptions)
+  nameWithType: IMessagePackFormatter<EffectInfo>.Serialize(MessagePackWriter, EffectInfo, MessagePackSerializerOptions)
+  fullName: MessagePack.Formatters.IMessagePackFormatter<MacacaGames.EffectSystem.Model.EffectInfo>.Serialize(MessagePack.MessagePackWriter, MacacaGames.EffectSystem.Model.EffectInfo, MessagePack.MessagePackSerializerOptions)
+  nameWithType.vb: IMessagePackFormatter(Of EffectInfo).Serialize(MessagePackWriter, EffectInfo, MessagePackSerializerOptions)
+  fullName.vb: MessagePack.Formatters.IMessagePackFormatter(Of MacacaGames.EffectSystem.Model.EffectInfo).Serialize(MessagePack.MessagePackWriter, MacacaGames.EffectSystem.Model.EffectInfo, MessagePack.MessagePackSerializerOptions)
+  spec.csharp:
+  - uid: MessagePack.Formatters.IMessagePackFormatter`1.Serialize(MessagePack.MessagePackWriter@,`0,MessagePack.MessagePackSerializerOptions)
+    name: Serialize
+    nameWithType: IMessagePackFormatter<EffectInfo>.Serialize
+    fullName: MessagePack.Formatters.IMessagePackFormatter<MacacaGames.EffectSystem.Model.EffectInfo>.Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: MessagePack.MessagePackWriter
+    name: MessagePackWriter
+    nameWithType: MessagePackWriter
+    fullName: MessagePack.MessagePackWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: MacacaGames.EffectSystem.Model.EffectInfo
+    name: EffectInfo
+    nameWithType: EffectInfo
+    fullName: MacacaGames.EffectSystem.Model.EffectInfo
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: MessagePack.MessagePackSerializerOptions
+    name: MessagePackSerializerOptions
+    nameWithType: MessagePackSerializerOptions
+    fullName: MessagePack.MessagePackSerializerOptions
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: MessagePack.Formatters.IMessagePackFormatter`1.Serialize(MessagePack.MessagePackWriter@,`0,MessagePack.MessagePackSerializerOptions)
+    name: Serialize
+    nameWithType: IMessagePackFormatter(Of EffectInfo).Serialize
+    fullName: MessagePack.Formatters.IMessagePackFormatter(Of MacacaGames.EffectSystem.Model.EffectInfo).Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: MessagePack.MessagePackWriter
+    name: MessagePackWriter
+    nameWithType: MessagePackWriter
+    fullName: MessagePack.MessagePackWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: MacacaGames.EffectSystem.Model.EffectInfo
+    name: EffectInfo
+    nameWithType: EffectInfo
+    fullName: MacacaGames.EffectSystem.Model.EffectInfo
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: MessagePack.MessagePackSerializerOptions
+    name: MessagePackSerializerOptions
+    nameWithType: MessagePackSerializerOptions
+    fullName: MessagePack.MessagePackSerializerOptions
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MessagePack.MessagePackWriter
+  commentId: T:MessagePack.MessagePackWriter
+  parent: MessagePack
+  name: MessagePackWriter
+  nameWithType: MessagePackWriter
+  fullName: MessagePack.MessagePackWriter
+- uid: MacacaGames.EffectSystem.Model.EffectInfo
+  commentId: T:MacacaGames.EffectSystem.Model.EffectInfo
+  parent: MacacaGames.EffectSystem.Model
+  name: EffectInfo
+  nameWithType: EffectInfo
+  fullName: MacacaGames.EffectSystem.Model.EffectInfo
+- uid: MessagePack.MessagePackSerializerOptions
+  commentId: T:MessagePack.MessagePackSerializerOptions
+  parent: MessagePack
+  name: MessagePackSerializerOptions
+  nameWithType: MessagePackSerializerOptions
+  fullName: MessagePack.MessagePackSerializerOptions
+- uid: MessagePack.Formatters.IMessagePackFormatter`1.Serialize(MessagePack.MessagePackWriter@,`0,MessagePack.MessagePackSerializerOptions)
+  commentId: M:MessagePack.Formatters.IMessagePackFormatter`1.Serialize(MessagePack.MessagePackWriter@,`0,MessagePack.MessagePackSerializerOptions)
+  name: Serialize(MessagePackWriter, T, MessagePackSerializerOptions)
+  nameWithType: IMessagePackFormatter<T>.Serialize(MessagePackWriter, T, MessagePackSerializerOptions)
+  fullName: MessagePack.Formatters.IMessagePackFormatter<T>.Serialize(MessagePack.MessagePackWriter, T, MessagePack.MessagePackSerializerOptions)
+  nameWithType.vb: IMessagePackFormatter(Of T).Serialize(MessagePackWriter, T, MessagePackSerializerOptions)
+  fullName.vb: MessagePack.Formatters.IMessagePackFormatter(Of T).Serialize(MessagePack.MessagePackWriter, T, MessagePack.MessagePackSerializerOptions)
+  spec.csharp:
+  - uid: MessagePack.Formatters.IMessagePackFormatter`1.Serialize(MessagePack.MessagePackWriter@,`0,MessagePack.MessagePackSerializerOptions)
+    name: Serialize
+    nameWithType: IMessagePackFormatter<T>.Serialize
+    fullName: MessagePack.Formatters.IMessagePackFormatter<T>.Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: MessagePack.MessagePackWriter
+    name: MessagePackWriter
+    nameWithType: MessagePackWriter
+    fullName: MessagePack.MessagePackWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: MessagePack.MessagePackSerializerOptions
+    name: MessagePackSerializerOptions
+    nameWithType: MessagePackSerializerOptions
+    fullName: MessagePack.MessagePackSerializerOptions
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: MessagePack.Formatters.IMessagePackFormatter`1.Serialize(MessagePack.MessagePackWriter@,`0,MessagePack.MessagePackSerializerOptions)
+    name: Serialize
+    nameWithType: IMessagePackFormatter(Of T).Serialize
+    fullName: MessagePack.Formatters.IMessagePackFormatter(Of T).Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: MessagePack.MessagePackWriter
+    name: MessagePackWriter
+    nameWithType: MessagePackWriter
+    fullName: MessagePack.MessagePackWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: MessagePack.MessagePackSerializerOptions
+    name: MessagePackSerializerOptions
+    nameWithType: MessagePackSerializerOptions
+    fullName: MessagePack.MessagePackSerializerOptions
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MessagePack
+  commentId: N:MessagePack
+  name: MessagePack
+  nameWithType: MessagePack
+  fullName: MessagePack
+- uid: MacacaGames.EffectSystem.Model
+  commentId: N:MacacaGames.EffectSystem.Model
+  name: MacacaGames.EffectSystem.Model
+  nameWithType: MacacaGames.EffectSystem.Model
+  fullName: MacacaGames.EffectSystem.Model
+- uid: MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.EffectInfoFormatter.Deserialize*
+  commentId: Overload:MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.EffectInfoFormatter.Deserialize
+  name: Deserialize
+  nameWithType: EffectInfoFormatter.Deserialize
+  fullName: MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.EffectInfoFormatter.Deserialize
+- uid: MessagePack.Formatters.IMessagePackFormatter{MacacaGames.EffectSystem.Model.EffectInfo}.Deserialize(MessagePack.MessagePackReader@,MessagePack.MessagePackSerializerOptions)
+  commentId: M:MessagePack.Formatters.IMessagePackFormatter{MacacaGames.EffectSystem.Model.EffectInfo}.Deserialize(MessagePack.MessagePackReader@,MessagePack.MessagePackSerializerOptions)
+  parent: MessagePack.Formatters.IMessagePackFormatter{MacacaGames.EffectSystem.Model.EffectInfo}
+  definition: MessagePack.Formatters.IMessagePackFormatter`1.Deserialize(MessagePack.MessagePackReader@,MessagePack.MessagePackSerializerOptions)
+  name: Deserialize(MessagePackReader, MessagePackSerializerOptions)
+  nameWithType: IMessagePackFormatter<EffectInfo>.Deserialize(MessagePackReader, MessagePackSerializerOptions)
+  fullName: MessagePack.Formatters.IMessagePackFormatter<MacacaGames.EffectSystem.Model.EffectInfo>.Deserialize(MessagePack.MessagePackReader, MessagePack.MessagePackSerializerOptions)
+  nameWithType.vb: IMessagePackFormatter(Of EffectInfo).Deserialize(MessagePackReader, MessagePackSerializerOptions)
+  fullName.vb: MessagePack.Formatters.IMessagePackFormatter(Of MacacaGames.EffectSystem.Model.EffectInfo).Deserialize(MessagePack.MessagePackReader, MessagePack.MessagePackSerializerOptions)
+  spec.csharp:
+  - uid: MessagePack.Formatters.IMessagePackFormatter`1.Deserialize(MessagePack.MessagePackReader@,MessagePack.MessagePackSerializerOptions)
+    name: Deserialize
+    nameWithType: IMessagePackFormatter<EffectInfo>.Deserialize
+    fullName: MessagePack.Formatters.IMessagePackFormatter<MacacaGames.EffectSystem.Model.EffectInfo>.Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: MessagePack.MessagePackReader
+    name: MessagePackReader
+    nameWithType: MessagePackReader
+    fullName: MessagePack.MessagePackReader
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: MessagePack.MessagePackSerializerOptions
+    name: MessagePackSerializerOptions
+    nameWithType: MessagePackSerializerOptions
+    fullName: MessagePack.MessagePackSerializerOptions
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: MessagePack.Formatters.IMessagePackFormatter`1.Deserialize(MessagePack.MessagePackReader@,MessagePack.MessagePackSerializerOptions)
+    name: Deserialize
+    nameWithType: IMessagePackFormatter(Of EffectInfo).Deserialize
+    fullName: MessagePack.Formatters.IMessagePackFormatter(Of MacacaGames.EffectSystem.Model.EffectInfo).Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: MessagePack.MessagePackReader
+    name: MessagePackReader
+    nameWithType: MessagePackReader
+    fullName: MessagePack.MessagePackReader
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: MessagePack.MessagePackSerializerOptions
+    name: MessagePackSerializerOptions
+    nameWithType: MessagePackSerializerOptions
+    fullName: MessagePack.MessagePackSerializerOptions
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MessagePack.MessagePackReader
+  commentId: T:MessagePack.MessagePackReader
+  parent: MessagePack
+  name: MessagePackReader
+  nameWithType: MessagePackReader
+  fullName: MessagePack.MessagePackReader
+- uid: MessagePack.Formatters.IMessagePackFormatter`1.Deserialize(MessagePack.MessagePackReader@,MessagePack.MessagePackSerializerOptions)
+  commentId: M:MessagePack.Formatters.IMessagePackFormatter`1.Deserialize(MessagePack.MessagePackReader@,MessagePack.MessagePackSerializerOptions)
+  name: Deserialize(MessagePackReader, MessagePackSerializerOptions)
+  nameWithType: IMessagePackFormatter<T>.Deserialize(MessagePackReader, MessagePackSerializerOptions)
+  fullName: MessagePack.Formatters.IMessagePackFormatter<T>.Deserialize(MessagePack.MessagePackReader, MessagePack.MessagePackSerializerOptions)
+  nameWithType.vb: IMessagePackFormatter(Of T).Deserialize(MessagePackReader, MessagePackSerializerOptions)
+  fullName.vb: MessagePack.Formatters.IMessagePackFormatter(Of T).Deserialize(MessagePack.MessagePackReader, MessagePack.MessagePackSerializerOptions)
+  spec.csharp:
+  - uid: MessagePack.Formatters.IMessagePackFormatter`1.Deserialize(MessagePack.MessagePackReader@,MessagePack.MessagePackSerializerOptions)
+    name: Deserialize
+    nameWithType: IMessagePackFormatter<T>.Deserialize
+    fullName: MessagePack.Formatters.IMessagePackFormatter<T>.Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: MessagePack.MessagePackReader
+    name: MessagePackReader
+    nameWithType: MessagePackReader
+    fullName: MessagePack.MessagePackReader
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: MessagePack.MessagePackSerializerOptions
+    name: MessagePackSerializerOptions
+    nameWithType: MessagePackSerializerOptions
+    fullName: MessagePack.MessagePackSerializerOptions
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: MessagePack.Formatters.IMessagePackFormatter`1.Deserialize(MessagePack.MessagePackReader@,MessagePack.MessagePackSerializerOptions)
+    name: Deserialize
+    nameWithType: IMessagePackFormatter(Of T).Deserialize
+    fullName: MessagePack.Formatters.IMessagePackFormatter(Of T).Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: MessagePack.MessagePackReader
+    name: MessagePackReader
+    nameWithType: MessagePackReader
+    fullName: MessagePack.MessagePackReader
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: MessagePack.MessagePackSerializerOptions
+    name: MessagePackSerializerOptions
+    nameWithType: MessagePackSerializerOptions
+    fullName: MessagePack.MessagePackSerializerOptions
+  - name: )
+    nameWithType: )
+    fullName: )

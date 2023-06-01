@@ -1,0 +1,113 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.IStarSkillEffect
+  commentId: T:MacacaGames.EffectSystem.IStarSkillEffect
+  id: IStarSkillEffect
+  parent: MacacaGames.EffectSystem
+  children:
+  - MacacaGames.EffectSystem.IStarSkillEffect.GetRarityBonus
+  - MacacaGames.EffectSystem.IStarSkillEffect.StarSkillPRBonus
+  langs:
+  - csharp
+  - vb
+  name: IStarSkillEffect
+  nameWithType: IStarSkillEffect
+  fullName: MacacaGames.EffectSystem.IStarSkillEffect
+  type: Interface
+  source:
+    remote:
+      path: Runtime/Interface/IStarSkillEffect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: IStarSkillEffect
+    path: ../Runtime/Interface/IStarSkillEffect.cs
+    startLine: 4
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public interface IStarSkillEffect
+    content.vb: Public Interface IStarSkillEffect
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: MacacaGames.EffectSystem.IStarSkillEffect.GetRarityBonus
+  commentId: M:MacacaGames.EffectSystem.IStarSkillEffect.GetRarityBonus
+  id: GetRarityBonus
+  parent: MacacaGames.EffectSystem.IStarSkillEffect
+  langs:
+  - csharp
+  - vb
+  name: GetRarityBonus()
+  nameWithType: IStarSkillEffect.GetRarityBonus()
+  fullName: MacacaGames.EffectSystem.IStarSkillEffect.GetRarityBonus()
+  type: Method
+  source:
+    remote:
+      path: Runtime/Interface/IStarSkillEffect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: GetRarityBonus
+    path: ../Runtime/Interface/IStarSkillEffect.cs
+    startLine: 6
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: float GetRarityBonus()
+    return:
+      type: System.Single
+    content.vb: Function GetRarityBonus As Single
+  overload: MacacaGames.EffectSystem.IStarSkillEffect.GetRarityBonus*
+- uid: MacacaGames.EffectSystem.IStarSkillEffect.StarSkillPRBonus
+  commentId: M:MacacaGames.EffectSystem.IStarSkillEffect.StarSkillPRBonus
+  id: StarSkillPRBonus
+  parent: MacacaGames.EffectSystem.IStarSkillEffect
+  langs:
+  - csharp
+  - vb
+  name: StarSkillPRBonus()
+  nameWithType: IStarSkillEffect.StarSkillPRBonus()
+  fullName: MacacaGames.EffectSystem.IStarSkillEffect.StarSkillPRBonus()
+  type: Method
+  source:
+    remote:
+      path: Runtime/Interface/IStarSkillEffect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: StarSkillPRBonus
+    path: ../Runtime/Interface/IStarSkillEffect.cs
+    startLine: 7
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: float StarSkillPRBonus()
+    return:
+      type: System.Single
+    content.vb: Function StarSkillPRBonus As Single
+  overload: MacacaGames.EffectSystem.IStarSkillEffect.StarSkillPRBonus*
+references:
+- uid: MacacaGames.EffectSystem
+  commentId: N:MacacaGames.EffectSystem
+  name: MacacaGames.EffectSystem
+  nameWithType: MacacaGames.EffectSystem
+  fullName: MacacaGames.EffectSystem
+- uid: MacacaGames.EffectSystem.IStarSkillEffect.GetRarityBonus*
+  commentId: Overload:MacacaGames.EffectSystem.IStarSkillEffect.GetRarityBonus
+  name: GetRarityBonus
+  nameWithType: IStarSkillEffect.GetRarityBonus
+  fullName: MacacaGames.EffectSystem.IStarSkillEffect.GetRarityBonus
+- uid: System.Single
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: MacacaGames.EffectSystem.IStarSkillEffect.StarSkillPRBonus*
+  commentId: Overload:MacacaGames.EffectSystem.IStarSkillEffect.StarSkillPRBonus
+  name: StarSkillPRBonus
+  nameWithType: IStarSkillEffect.StarSkillPRBonus
+  fullName: MacacaGames.EffectSystem.IStarSkillEffect.StarSkillPRBonus
