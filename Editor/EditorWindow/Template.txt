@@ -1,0 +1,1 @@
+﻿public class __ClassName__ : Effect_ImproveMediProb_Base { }

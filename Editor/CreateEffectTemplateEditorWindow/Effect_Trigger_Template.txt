@@ -1,0 +1,42 @@
+﻿using UnityEngine;
+
+/// <summary>
+/// ????
+/// </summary>
+
+public class {Effect_Trigger_Template} : EffectTriggerBase
+{
+
+    public override float sumLimitMax => Mathf.Infinity;
+    public override float sumLimitMin => 0F;
+
+    /*
+
+        ?? = ??
+
+    */
+
+    const int UNIT = 1;
+
+    protected override void OnStart()
+    {
+        valueCache = level * UNIT;
+
+        DefaultStartEffectLog(this, $"???+{valueCache}");
+    }
+
+    protected override void OnEnd()
+    {
+        DefaultEndEffectLog(this);
+    }
+    
+    public override void SetValue()
+    {
+        valueCache = level * UNIT;
+    }
+
+    public override float GetOriginValue()
+    {
+        return valueCache.Value;
+    }
+}

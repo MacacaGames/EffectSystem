@@ -1,0 +1,38 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/0_Game/Scripts/Effect/Editor/EffectEditorWindow.uss?fileID=7433441132597879392&amp;guid=86d16d762fddd4d4cafc57226446b428&amp;type=3#EffectEditorWindow" />
+    <ui:VisualElement name="Root" style="flex-direction: row; flex-grow: 1;">
+        <ui:VisualElement name="EffectFunc" style="flex-direction: column; padding-left: 6px; padding-right: 6px; padding-top: 6px; padding-bottom: 6px; border-color: rgba(0, 0, 0, 0.06); width: 300px; min-width: 200px;">
+            <ui:VisualElement style="border-bottom-width: 1px; border-color: rgba(0, 0, 0, 0.06); padding-top: 5px; padding-bottom: 10px;">
+                <ui:Label text="Name" name="ownerName" style="font-size: 12px; padding-left: 5px; padding-right: 0; padding-bottom: 20px;" />
+                <uie:PropertyField name="EffectInfo" style="min-height: 20px;" />
+                <ui:VisualElement style="flex-direction: row; margin-bottom: 3px;">
+                    <ui:TextField picking-mode="Ignore" name="TagField" label="Tags" style="flex-grow: 1;" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row; margin-bottom: 3px;">
+                    <ui:VisualElement name="space" style="flex-grow: 1;" />
+                    <ui:Button text="AddEffect" name="AddEffect" style="width: 100px;" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row; margin-bottom: 3px;">
+                    <ui:VisualElement name="space" style="flex-grow: 1;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement style="padding-top: 15px; padding-bottom: 10px; flex-direction: row;">
+                <uie:ObjectField allow-scene-objects="false" name="EffectGroupField" style="flex-grow: 1;" />
+                <ui:Button text="Add Effects" name="AddEffect_Group" style="width: 100px;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-direction: row;">
+                <ui:Button text="PickHero" display-tooltip-when-elided="false" name="PickHero" style="width: 100px; -unity-text-align: middle-center; white-space: nowrap; height: 19px; flex-direction: column;" />
+                <ui:Button text="PickEnemy" display-tooltip-when-elided="false" name="PickEnemy" style="width: 100px; -unity-text-align: middle-center; white-space: nowrap; height: 19px; flex-direction: column;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="space" style="flex-grow: 1;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Spliter" class="spliter" style="width: 8px;" />
+        <ui:VisualElement name="Content" style="flex-grow: 1;">
+            <ui:VisualElement name="SearchBar" style="flex-direction: row; margin-left: 8px; margin-right: 8px; margin-top: 8px; margin-bottom: 8px;">
+                <ui:VisualElement name="icon-search" style="width: 16px; height: 16px; margin-left: 4px; margin-right: 4px; margin-top: 4px; margin-bottom: 4px;" />
+                <ui:TextField picking-mode="Ignore" name="SearchText" style="flex-grow: 1; margin-left: 0; margin-right: 0; margin-top: 2px; margin-bottom: 2px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Effects" style="flex-grow: 1; padding-top: 20px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
