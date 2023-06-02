@@ -92,7 +92,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: CheckAndCreateResourceFolder
     path: ../Editor/BackEditor/EffectSystemScriptBacker.cs
-    startLine: 86
+    startLine: 91
   assemblies:
   - Macaca.EffectSystem.Editor
   namespace: MacacaGames.EffectSystem.Editor
@@ -124,7 +124,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: ModifyString
     path: ../Editor/BackEditor/EffectSystemScriptBacker.cs
-    startLine: 102
+    startLine: 107
   assemblies:
   - Macaca.EffectSystem.Editor
   namespace: MacacaGames.EffectSystem.Editor

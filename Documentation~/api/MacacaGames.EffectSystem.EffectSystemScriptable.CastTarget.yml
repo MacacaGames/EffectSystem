@@ -4,10 +4,7 @@ items:
   commentId: T:MacacaGames.EffectSystem.EffectSystemScriptable.CastTarget
   id: EffectSystemScriptable.CastTarget
   parent: MacacaGames.EffectSystem
-  children:
-  - MacacaGames.EffectSystem.EffectSystemScriptable.CastTarget.CastToNextAlly
-  - MacacaGames.EffectSystem.EffectSystemScriptable.CastTarget.CastToOtherPlayer
-  - MacacaGames.EffectSystem.EffectSystemScriptable.CastTarget.CastToSelf
+  children: []
   langs:
   - csharp
   - vb
@@ -22,7 +19,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: CastTarget
     path: ../Runtime/Utility/EffectSystemScriptable.cs
-    startLine: 380
+    startLine: 74
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem
@@ -35,113 +32,9 @@ items:
   modifiers.vb:
   - Public
   - Structure
-- uid: MacacaGames.EffectSystem.EffectSystemScriptable.CastTarget.CastToOtherPlayer
-  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.CastTarget.CastToOtherPlayer
-  id: CastToOtherPlayer
-  parent: MacacaGames.EffectSystem.EffectSystemScriptable.CastTarget
-  langs:
-  - csharp
-  - vb
-  name: CastToOtherPlayer
-  nameWithType: EffectSystemScriptable.CastTarget.CastToOtherPlayer
-  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.CastTarget.CastToOtherPlayer
-  type: Field
-  source:
-    remote:
-      path: Runtime/Utility/EffectSystemScriptable.cs
-      branch: main
-      repo: git@github.com:MacacaGames/EffectSystem.git
-    id: CastToOtherPlayer
-    path: ../Runtime/Utility/EffectSystemScriptable.cs
-    startLine: 382
-  assemblies:
-  - Macaca.EffectSystem
-  namespace: MacacaGames.EffectSystem
-  syntax:
-    content: public const string CastToOtherPlayer = null
-    return:
-      type: System.String
-    content.vb: Public Const CastToOtherPlayer As String = Nothing
-  modifiers.csharp:
-  - public
-  - const
-  modifiers.vb:
-  - Public
-  - Const
-- uid: MacacaGames.EffectSystem.EffectSystemScriptable.CastTarget.CastToSelf
-  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.CastTarget.CastToSelf
-  id: CastToSelf
-  parent: MacacaGames.EffectSystem.EffectSystemScriptable.CastTarget
-  langs:
-  - csharp
-  - vb
-  name: CastToSelf
-  nameWithType: EffectSystemScriptable.CastTarget.CastToSelf
-  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.CastTarget.CastToSelf
-  type: Field
-  source:
-    remote:
-      path: Runtime/Utility/EffectSystemScriptable.cs
-      branch: main
-      repo: git@github.com:MacacaGames/EffectSystem.git
-    id: CastToSelf
-    path: ../Runtime/Utility/EffectSystemScriptable.cs
-    startLine: 384
-  assemblies:
-  - Macaca.EffectSystem
-  namespace: MacacaGames.EffectSystem
-  syntax:
-    content: public const string CastToSelf = null
-    return:
-      type: System.String
-    content.vb: Public Const CastToSelf As String = Nothing
-  modifiers.csharp:
-  - public
-  - const
-  modifiers.vb:
-  - Public
-  - Const
-- uid: MacacaGames.EffectSystem.EffectSystemScriptable.CastTarget.CastToNextAlly
-  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.CastTarget.CastToNextAlly
-  id: CastToNextAlly
-  parent: MacacaGames.EffectSystem.EffectSystemScriptable.CastTarget
-  langs:
-  - csharp
-  - vb
-  name: CastToNextAlly
-  nameWithType: EffectSystemScriptable.CastTarget.CastToNextAlly
-  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.CastTarget.CastToNextAlly
-  type: Field
-  source:
-    remote:
-      path: Runtime/Utility/EffectSystemScriptable.cs
-      branch: main
-      repo: git@github.com:MacacaGames/EffectSystem.git
-    id: CastToNextAlly
-    path: ../Runtime/Utility/EffectSystemScriptable.cs
-    startLine: 386
-  assemblies:
-  - Macaca.EffectSystem
-  namespace: MacacaGames.EffectSystem
-  syntax:
-    content: public const string CastToNextAlly = null
-    return:
-      type: System.String
-    content.vb: Public Const CastToNextAlly As String = Nothing
-  modifiers.csharp:
-  - public
-  - const
-  modifiers.vb:
-  - Public
-  - Const
 references:
 - uid: MacacaGames.EffectSystem
   commentId: N:MacacaGames.EffectSystem
   name: MacacaGames.EffectSystem
   nameWithType: MacacaGames.EffectSystem
   fullName: MacacaGames.EffectSystem
-- uid: System.String
-  isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String

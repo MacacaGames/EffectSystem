@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker.html",
-          "hash": "AatfZQbBDbyt5tXOMTDPsg=="
+          "hash": "QF55IMSAOfcmhYQ0Co/AcQ=="
         }
       },
       "is_incremental": false,
@@ -201,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.html",
-          "hash": "dPE9/4i1rnwai/fYkgjpuw=="
+          "hash": "MX2Y8r4DPxim1TAejV/2+Q=="
         }
       },
       "is_incremental": false,
@@ -213,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.EffectSystem.EffectSystemScriptable.CastTarget.html",
-          "hash": "Mcknp3+L1XPiJPteguCMXA=="
+          "hash": "H2TCUQ/DUdN7ovtoU28nOw=="
         }
       },
       "is_incremental": false,
@@ -225,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.EffectSystem.EffectSystemScriptable.ConditionLogic.html",
-          "hash": "cJ9iEmUM3askfa41D9H/qA=="
+          "hash": "N7opAE+yYdxScc4pTGuEcg=="
         }
       },
       "is_incremental": false,
@@ -237,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.EffectSystem.EffectSystemScriptable.DamageType.html",
-          "hash": "XC95SHdbk4+Z5OIYGpSwNg=="
+          "hash": "2nl0laNbFD4D12edQvwfkQ=="
         }
       },
       "is_incremental": false,
@@ -249,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.EffectSystem.EffectSystemScriptable.DeactiveCondition.html",
-          "hash": "lzkRqkZoCn1CLpBmGePTKw=="
+          "hash": "UPh7EklssMQ7JoJIsOmeow=="
         }
       },
       "is_incremental": false,
@@ -261,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.html",
-          "hash": "5OcjfzrP1ZYTMYcOL+jeuQ=="
+          "hash": "p5QtPzaTq6W8Vu9ik0G/PA=="
         }
       },
       "is_incremental": false,
@@ -273,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.html",
-          "hash": "4WB0FcYgAgEQaInl87WhVA=="
+          "hash": "ekJJQ6klBrZeakmkD5PzMA=="
         }
       },
       "is_incremental": false,
@@ -285,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.EffectSystem.EffectSystemScriptable.EffectViewRoot.html",
-          "hash": "AyabRFjFIBGTSBBua0RKiA=="
+          "hash": "Kepd6B1v6J68qLk+gRTESQ=="
         }
       },
       "is_incremental": false,
@@ -297,7 +297,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.EffectSystem.EffectSystemScriptable.InputType.html",
-          "hash": "s9QG8spdyBOhypVOPrOxCA=="
+          "hash": "xvSP8LIdoxNtR+MjfoNPAg=="
         }
       },
       "is_incremental": false,
@@ -309,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.EffectSystem.EffectSystemScriptable.SkillAttackType.html",
-          "hash": "tZdCw5pY8RYPK87HE7LR/g=="
+          "hash": "bD88Ly70ypbghp8ccRYxCg=="
         }
       },
       "is_incremental": false,
@@ -321,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType.html",
-          "hash": "mOD7M7rBTrwR4trxS/aNsA=="
+          "hash": "sDY/cvuRZxEVmR6V2l6MYg=="
         }
       },
       "is_incremental": false,
@@ -333,7 +333,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.EffectSystem.EffectSystemScriptable.SkillTargetVfxType.html",
-          "hash": "UHmIblzBYyLDZ59pG94wcg=="
+          "hash": "Fr01qzM2hahM3HtNPAhbdA=="
         }
       },
       "is_incremental": false,
@@ -345,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.EffectSystem.EffectSystemScriptable.TriggerTransType.html",
-          "hash": "d0NQmXUxbPChU6mTNQSslw=="
+          "hash": "Dl0MoA6uMUd97d+ScVw/hw=="
         }
       },
       "is_incremental": false,
@@ -728,7 +728,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "R3WOEdiVaNloV5Vu9FoNKA=="
+          "hash": "FBS/ADKh5/j2xCJze50ruA=="
         }
       },
       "is_incremental": false,

@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Welecom to Macaca Effect System </title>
+    <title>Overview </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Welecom to Macaca Effect System ">
+    <meta name="title" content="Overview ">
     <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="favicon.ico">
@@ -60,8 +60,95 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="welecom-to-macaca-effect-system">Welecom to Macaca Effect System</h1>
+<h1 id="overview">Overview</h1>
 
+<p>The table is used to collage various buffs, debuffs or skill effects based on EffectInfo as the basic unit, and it's convenient to use between different projects. Engineers only need to implement EffectType and register the timing of activation and deactivation.</p>
+<hr>
+<h1 id="features">Features</h1>
+<ul>
+<li>Add or adjust skills through Excel</li>
+<li>Combine different skills through EffectSubInfo</li>
+</ul>
+<hr>
+<h1 id="installation">Installation</h1>
+<h3 id="option-1-install-via-openupm-recommended">Option 1: Install via OpenUPM (recommended)</h3>
+<pre><code class="lang-sh">openupm add com.macacagames.effectsystem
+</code></pre>
+<h3 id="option-2-unity-package-file">Option 2: Unity Package file</h3>
+<p>Add to the editor's manifest.json:</p>
+<pre><code class="lang-json">{
+    &quot;dependencies&quot;: {
+        &quot;com.macacagames.utility&quot;: &quot;https://github.com/MacacaGames/MacacaUtility.git&quot;,
+        &quot;com.macacagames.effectsystem&quot;: &quot;https://github.com/MacacaGames/EffectSystem.git&quot;
+    }
+}
+</code></pre>
+<h3 id="option-3-git-submodule">Option 3: Git SubModule</h3>
+<pre><code class="lang-bash">git submodule add https://github.com/MacacaGames/EffectSystem.git Assets/MacacaEffectSystem
+</code></pre>
+<p>Note: EffectSystem is dependent on MacacaUtility, so MacacaUtility must also be added to the git submodule.</p>
+<pre><code class="lang-bash">git submodule add https://github.com/MacacaGames/MacacaUtility.git Assets/MacacaUtility
+</code></pre>
+<hr>
+<h1 id="setup">Setup</h1>
+<ul>
+<li><h4 id="excel-data">Excel Data</h4>
+<ul>
+<li><a href="https://docs.google.com/spreadsheets/d/1zYKiOlThAqTMVuUPHcxeQGX7rBRLp5E-49ci-GCZBa8/edit?usp=drive_link">Effect Data Sample</a></li>
+<li>Add or remove the content of each field's Enum according to different needs</li>
+</ul>
+</li>
+<li><h4 id="add-skillresource">Add SkillResource</h4>
+<ul>
+<li>AssetMenu path : <em>&quot;GameResource/SkillResource&quot;</em></li>
+<li>Add skill icon sprite</li>
+<li>Paste the Json data of Enums backe into Bake All Effect Enum, and press Invoke</li>
+</ul>
+</li>
+<li><h4 id="add-effectresource">Add EffectResource</h4>
+<ul>
+<li>AssetMenu path : <em>&quot;GameResource/EffectResource&quot;</em></li>
+<li>Paste EffectView Json</li>
+<li>Add a path to store new special effects, then press the Get All View Prefab button</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="usage">Usage</h1>
+<ul>
+<li><h4 id="if-the-server-needs-to-pass-effectinfo-data">If the Server needs to pass EffectInfo data</h4>
+</li>
+</ul>
+<pre><code class="lang-csharp">        StaticCompositeResolver.Instance.Register(
+            MacacaGames.EffectSystem.Resolvers.EffectSystemResolver.Instance,
+        );
+</code></pre>
+<ul>
+<li><h4 id="implement-effecttype">Implement EffectType</h4>
+<ul>
+<li>Inheritance EffectBase and implement the required effects</li>
+</ul>
+</li>
+<li><h4 id="inheritance-and-implement-ieffectsystemdata">Inheritance and implement IEffectSystemData</h4>
+<ul>
+<li>Initialize Effect table data</li>
+<li>Query EffectInfo</li>
+<li>Add all implemented EffectTypes to the dictionary</li>
+</ul>
+</li>
+<li><h4 id="inheritance-and-implement-ieffectableobject">Inheritance and implement IEffectableObject</h4>
+<ul>
+<li>The entity used to add skills</li>
+</ul>
+</li>
+<li><h4 id="effectmanager">EffectManager</h4>
+<ul>
+<li>Attach Effect to IEffectableObject or remove it</li>
+<li>Query the Effect instance on IEffectableObject</li>
+<li>Get skill description with I2</li>
+</ul>
+</li>
+</ul>
 </article>
           </div>
           

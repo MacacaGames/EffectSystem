@@ -6,7 +6,6 @@ items:
   parent: MacacaGames.EffectSystem
   children:
   - MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.DestroyAfterMaintainTimeEnd
-  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.None
   - MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.OnlyActiveOnce
   - MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.ReactiveAfterCooldownEnd
   langs:
@@ -23,7 +22,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: EffectInfoLogic
     path: ../Runtime/Utility/EffectSystemScriptable.cs
-    startLine: 345
+    startLine: 46
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem
@@ -36,39 +35,6 @@ items:
   modifiers.vb:
   - Public
   - Structure
-- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.None
-  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.None
-  id: None
-  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic
-  langs:
-  - csharp
-  - vb
-  name: None
-  nameWithType: EffectSystemScriptable.EffectInfoLogic.None
-  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.None
-  type: Field
-  source:
-    remote:
-      path: Runtime/Utility/EffectSystemScriptable.cs
-      branch: main
-      repo: git@github.com:MacacaGames/EffectSystem.git
-    id: None
-    path: ../Runtime/Utility/EffectSystemScriptable.cs
-    startLine: 347
-  assemblies:
-  - Macaca.EffectSystem
-  namespace: MacacaGames.EffectSystem
-  syntax:
-    content: public const string None = null
-    return:
-      type: System.String
-    content.vb: Public Const None As String = Nothing
-  modifiers.csharp:
-  - public
-  - const
-  modifiers.vb:
-  - Public
-  - Const
 - uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.OnlyActiveOnce
   commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.OnlyActiveOnce
   id: OnlyActiveOnce
@@ -87,7 +53,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: OnlyActiveOnce
     path: ../Runtime/Utility/EffectSystemScriptable.cs
-    startLine: 349
+    startLine: 48
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem
@@ -120,7 +86,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: ReactiveAfterCooldownEnd
     path: ../Runtime/Utility/EffectSystemScriptable.cs
-    startLine: 351
+    startLine: 50
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem
@@ -153,7 +119,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: DestroyAfterMaintainTimeEnd
     path: ../Runtime/Utility/EffectSystemScriptable.cs
-    startLine: 353
+    startLine: 52
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem

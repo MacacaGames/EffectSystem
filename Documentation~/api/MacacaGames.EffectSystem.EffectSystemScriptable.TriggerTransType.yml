@@ -21,7 +21,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: TriggerTransType
     path: ../Runtime/Utility/EffectSystemScriptable.cs
-    startLine: 338
+    startLine: 39
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem
@@ -52,7 +52,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: SkipNewOne
     path: ../Runtime/Utility/EffectSystemScriptable.cs
-    startLine: 340
+    startLine: 41
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem
@@ -85,7 +85,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: CutOldOne
     path: ../Runtime/Utility/EffectSystemScriptable.cs
-    startLine: 342
+    startLine: 43
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem
