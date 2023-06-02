@@ -1,3 +1,5 @@
+有關詳細信息，請參閱[文檔](https://macacagames.github.io/EffectSystem/)。
+
 # 概述
 在表格上以EffectInfo為基本單位組合拼貼出各種增益、減益或技能效果，並且方便在不同專案間使用。工程師只需實作EffectType並註冊生效與失效的時機點。
 
