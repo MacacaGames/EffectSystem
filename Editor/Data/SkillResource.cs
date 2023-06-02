@@ -61,7 +61,7 @@ public class SkillResource : ScriptableObject
     }
 
     [Button]
-    void BackeAllEffectEnum(string Json)
+    void BakeAllEffectEnum(string Json)
     {
         EffectSystemScriptBacker.BakeAllEffectEnum(Json);
     }
