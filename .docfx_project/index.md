@@ -1,3 +1,5 @@
+See [Document](https://macacagames.github.io/EffectSystem/) for more detail.
+
 # Overview
 The table is used to collage various buffs, debuffs or skill effects based on EffectInfo as the basic unit, and it's convenient to use between different projects. Engineers only need to implement EffectType and register the timing of activation and deactivation.
 
