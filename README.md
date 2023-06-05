@@ -10,13 +10,13 @@ The table is used to collage various buffs, debuffs or skill effects based on Ef
 ---
 
 # Installation
-### Option 1: Install via OpenUPM (recommended)
+## Option 1: Install via OpenUPM (recommended)
 
 ```sh
 openupm add com.macacagames.effectsystem
 ```
 
-### Option 2: Unity Package file
+## Option 2: Unity Package file
 Add to the editor's manifest.json:
 ```json
 {
@@ -27,7 +27,7 @@ Add to the editor's manifest.json:
 }
 ```
 
-### Option 3: Git SubModule
+## Option 3: Git SubModule
 ```bash
 git submodule add https://github.com/MacacaGames/EffectSystem.git Assets/MacacaEffectSystem
 ```
@@ -37,38 +37,38 @@ git submodule add https://github.com/MacacaGames/MacacaUtility.git Assets/Macaca
 ```
 ---
 # Setup
-- #### Excel Data
+## Excel Data
     - [Effect Data Sample](https://docs.google.com/spreadsheets/d/1zYKiOlThAqTMVuUPHcxeQGX7rBRLp5E-49ci-GCZBa8/edit?usp=drive_link)
     - Add or remove the content of each field's Enum according to different needs
-- #### Add SkillResource
+## Add SkillResource
     - AssetMenu path : _"GameResource/SkillResource"_
     - Add skill icon sprite
     - Paste the Json data of Enums backe into Bake All Effect Enum, and press Invoke
-- #### Add EffectResource
+## Add EffectResource
     - AssetMenu path : _"GameResource/EffectResource"_
     - Paste EffectView Json
     - Add a path to store new special effects, then press the Get All View Prefab button
 ---
 # Usage
 
-- #### Implement EffectType
+## Implement EffectType
     - Inheritance EffectBase and implement the required effects
 
-- #### Inheritance and implement IEffectSystemData
+## Inheritance and implement IEffectSystemData
     - Initialize Effect table data
     - Query EffectInfo
     - Add all implemented EffectTypes to the dictionary
 
-- #### Inheritance and implement IEffectableObject
+## Inheritance and implement IEffectableObject
     - The entity used to add skills
 
-- #### EffectManager
+## EffectManager
     - Attach Effect to IEffectableObject or remove it
     - Query the Effect instance on IEffectableObject
     - Get skill description with I2
 
 
-- ## Code Generate
+# Code Generate
 
 The MessagePack.Csharp should do a code generate first to make the EffectInfo available to use on AOT Platform
 
@@ -80,7 +80,7 @@ dotnet tool install MessagePack.Generator
 dotnet tool run mpc -i {PATH_TO_YOUR_EFFECTPACKAGE_MODEL_FOLEDR} -o ./Assets/EffectSystemResources/EffectSystem.Generated.cs -r EffectSystemResolver -n MacacaGames.EffectSystem
 
 ## Example
-## dotnet tool run mpc -i ./MacacaPackages/EffectSystem/Model -o ./MacacaPackages/EffectSystem/Model/EffectSystem.Generated.cs -r EffectSystemResolver -n MacacaGames.EffectSystem
+## dotnet tool run mpc -i ./MacacaPackages/EffectSystem/Model -o ./Assets/EffectSystemResources/EffectSystem.Generated.cs -r EffectSystemResolver -n MacacaGames.EffectSystem
 ```
 
 And add into your StaticCompositeResolver
