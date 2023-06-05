@@ -50,12 +50,7 @@ git submodule add https://github.com/MacacaGames/MacacaUtility.git Assets/Macaca
     - Add a path to store new special effects, then press the Get All View Prefab button
 ---
 # Usage
-- #### If the Server needs to pass EffectInfo data
-```csharp
-        StaticCompositeResolver.Instance.Register(
-            MacacaGames.EffectSystem.Resolvers.EffectSystemResolver.Instance,
-        );
-```
+
 - #### Implement EffectType
     - Inheritance EffectBase and implement the required effects
 
@@ -71,3 +66,26 @@ git submodule add https://github.com/MacacaGames/MacacaUtility.git Assets/Macaca
     - Attach Effect to IEffectableObject or remove it
     - Query the Effect instance on IEffectableObject
     - Get skill description with I2
+
+
+- ## Code Generate
+
+The MessagePack.Csharp should do a code generate first to make the EffectInfo available to use on AOT Platform
+
+First, use the mpc tool to generate the Resolver, here is some example: 
+For more detail, see the MessagePack Document
+```bash
+dotnet new tool-manifest
+dotnet tool install MessagePack.Generator
+dotnet tool run mpc -i {PATH_TO_YOUR_EFFECTPACKAGE_MODEL_FOLEDR} -o ./Assets/EffectSystemResources/EffectSystem.Generated.cs -r EffectSystemResolver -n MacacaGames.EffectSystem
+
+## Example
+## dotnet tool run mpc -i ./MacacaPackages/EffectSystem/Model -o ./MacacaPackages/EffectSystem/Model/EffectSystem.Generated.cs -r EffectSystemResolver -n MacacaGames.EffectSystem
+```
+
+And add into your StaticCompositeResolver
+```csharp
+StaticCompositeResolver.Instance.Register(
+    MacacaGames.EffectSystem.Resolvers.EffectSystemResolver.Instance,
+);
+```
