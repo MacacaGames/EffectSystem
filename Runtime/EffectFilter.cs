@@ -73,7 +73,7 @@ namespace MacacaGames.EffectSystem
 #if !Server
         public List<EffectGroup> skillEffectGroups = new List<EffectGroup>();
 
-        EffectManager effectManager => ApplicationController.Instance.GetMonobehaviourLifeCycle<EffectManager>();
+        EffectSystem effectManager => ApplicationController.Instance.GetMonobehaviourLifeCycle<EffectSystem>();
         public override async Task Init()
         {
 

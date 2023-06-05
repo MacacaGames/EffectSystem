@@ -12,7 +12,7 @@ namespace MacacaGames.EffectSystem
     public abstract class EffectBase
     {
         [Inject]
-        protected EffectManager effectManager;
+        protected EffectSystem effectManager;
         public float input
         {
             get
@@ -23,7 +23,7 @@ namespace MacacaGames.EffectSystem
 
         public EffectInfo info;
         public EffectCondition condition;
-        public EffectManager.EffectList effectList => effectManager.GetEffectListByType(owner, info.type);
+        public EffectSystem.EffectList effectList => effectManager.GetEffectListByType(owner, info.type);
 
         public bool isPooled;
         public bool isActive => condition?.isActive ?? false;
@@ -93,16 +93,16 @@ namespace MacacaGames.EffectSystem
         /// <summary>當Effect被附加時執行</summary>
         protected virtual void OnStart() { }
 
-        public virtual void OnActive(EffectManager.EffectTriggerConditionInfo triggerConditionInfo)
+        public virtual void OnActive(EffectSystem.EffectTriggerConditionInfo triggerConditionInfo)
         {
             ExecuteActive(triggerConditionInfo);
         }
-        public virtual void OnDeactive(EffectManager.EffectTriggerConditionInfo triggerConditionInfo)
+        public virtual void OnDeactive(EffectSystem.EffectTriggerConditionInfo triggerConditionInfo)
         {
             ExecuteDeactive(triggerConditionInfo);
         }
 
-        public void ExecuteActive(EffectManager.EffectTriggerConditionInfo triggerConditionInfo)
+        public void ExecuteActive(EffectSystem.EffectTriggerConditionInfo triggerConditionInfo)
         {
             effectList.SetDirty(true);
 
@@ -113,7 +113,7 @@ namespace MacacaGames.EffectSystem
                 effectView.OnActive();
 
         }
-        public void ExecuteDeactive(EffectManager.EffectTriggerConditionInfo triggerConditionInfo)
+        public void ExecuteDeactive(EffectSystem.EffectTriggerConditionInfo triggerConditionInfo)
         {
             effectList.SetDirty(true);
 
@@ -223,7 +223,7 @@ namespace MacacaGames.EffectSystem
             {
                 if (viewInfo.prefab == null)
                     throw new Exception($"[EFFECT] {effect.GetType().Name}(Owner:{effect.owner})有未填入值的ViewInfo.prefab");
-                EffectViewBase effectView = ApplicationController.Instance.GetMonobehaviourLifeCycle<EffectManager>().RequestEffectView(effect.info, viewInfo, effect.owner);
+                EffectViewBase effectView = ApplicationController.Instance.GetMonobehaviourLifeCycle<EffectSystem>().RequestEffectView(effect.info, viewInfo, effect.owner);
                 effectView.transform.rotation = Quaternion.identity;    //重設旋轉角度
                 effect.effectViewList.Add(effectView);
             }
@@ -232,7 +232,7 @@ namespace MacacaGames.EffectSystem
         {
             foreach (var effectView in effect.effectViewList)
             {
-                ApplicationController.Instance.GetMonobehaviourLifeCycle<EffectManager>().RecoveryEffectView(effectView);
+                ApplicationController.Instance.GetMonobehaviourLifeCycle<EffectSystem>().RecoveryEffectView(effectView);
                 //UnityEngine.Object.Destroy(viewAnimator.gameObject);
             }
             effect.effectViewList.Clear();

@@ -14,7 +14,7 @@ using MacacaGames.EffectSystem.Model;
 namespace MacacaGames.EffectSystem
 {
 
-    public class EffectManager : MonoBehaviourLifeCycle
+    public class EffectSystem : MonoBehaviourLifeCycle
     {
         #region EffectDefine
 

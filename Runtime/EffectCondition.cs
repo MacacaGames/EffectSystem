@@ -43,7 +43,7 @@ namespace MacacaGames.EffectSystem
 
             if (effectInfo.activeCondition == EffectSystemScriptable.ActiveCondition.OnEffectStart)
             {
-                OnActive(new EffectManager.EffectTriggerConditionInfo
+                OnActive(new EffectSystem.EffectTriggerConditionInfo
                 {
                     owner = effectInstance.owner
                 });
@@ -58,7 +58,7 @@ namespace MacacaGames.EffectSystem
         {
             if (isActive == true)
             {
-                OnDeactive(new EffectManager.EffectTriggerConditionInfo
+                OnDeactive(new EffectSystem.EffectTriggerConditionInfo
                 {
                     owner = effectInstance.owner
                 });
@@ -70,7 +70,7 @@ namespace MacacaGames.EffectSystem
 
         // Active / Deactive
 
-        public void OnActive(EffectManager.EffectTriggerConditionInfo info)
+        public void OnActive(EffectSystem.EffectTriggerConditionInfo info)
         {
             if (effectInstance.RemoveSleepyEffect())
                 return;
@@ -97,7 +97,7 @@ namespace MacacaGames.EffectSystem
 
         }
 
-        void ForceActive(EffectManager.EffectTriggerConditionInfo info)
+        void ForceActive(EffectSystem.EffectTriggerConditionInfo info)
         {
             if (effectInstance.RemoveSleepyEffect())
                 return;
@@ -109,7 +109,7 @@ namespace MacacaGames.EffectSystem
                 switch (effectInfo.triggerTransType)
                 {
                     case EffectSystemScriptable.TriggerTransType.CutOldOne:
-                        ForceDeactive(new EffectManager.EffectTriggerConditionInfo
+                        ForceDeactive(new EffectSystem.EffectTriggerConditionInfo
                         {
                             owner = effectInstance.owner
                         });
@@ -126,7 +126,7 @@ namespace MacacaGames.EffectSystem
 
             if (effectInfo.deactiveCondition == EffectSystemScriptable.DeactiveCondition.AfterActive)
             {
-                ForceDeactive(new EffectManager.EffectTriggerConditionInfo
+                ForceDeactive(new EffectSystem.EffectTriggerConditionInfo
                 {
                     owner = effectInstance.owner
                 });
@@ -148,7 +148,7 @@ namespace MacacaGames.EffectSystem
 
         }
 
-        public void OnDeactive(EffectManager.EffectTriggerConditionInfo info)
+        public void OnDeactive(EffectSystem.EffectTriggerConditionInfo info)
         {
             if (effectInstance.RemoveSleepyEffect())
                 return;
@@ -173,7 +173,7 @@ namespace MacacaGames.EffectSystem
 
         }
 
-        public void ForceDeactive(EffectManager.EffectTriggerConditionInfo info)
+        public void ForceDeactive(EffectSystem.EffectTriggerConditionInfo info)
         {
             if (effectInstance.RemoveSleepyEffect())
                 return;
@@ -187,7 +187,7 @@ namespace MacacaGames.EffectSystem
 
         }
 
-        public bool IsOneOfRequirementsListFullfilled(EffectManager.EffectTriggerConditionInfo info, List<List<ConditionRequirement>> requirementLists, EffectInfo targetInfo)
+        public bool IsOneOfRequirementsListFullfilled(EffectSystem.EffectTriggerConditionInfo info, List<List<ConditionRequirement>> requirementLists, EffectInfo targetInfo)
         {
             if (requirementLists == null)
             {
@@ -203,7 +203,7 @@ namespace MacacaGames.EffectSystem
             return false;
         }
 
-        public bool IsRequirementsFullfilled(EffectManager.EffectTriggerConditionInfo info, List<ConditionRequirement> requirements)
+        public bool IsRequirementsFullfilled(EffectSystem.EffectTriggerConditionInfo info, List<ConditionRequirement> requirements)
         {
             foreach (var requirement in requirements)
             {
@@ -255,7 +255,7 @@ namespace MacacaGames.EffectSystem
             effectInstance.OnCooldownEnd();
             if (effectInfo.logic == EffectSystemScriptable.EffectInfoLogic.ReactiveAfterCooldownEnd)
             {
-                OnActive(new EffectManager.EffectTriggerConditionInfo
+                OnActive(new EffectSystem.EffectTriggerConditionInfo
                 {
                     owner = effectInstance.owner
                 });
@@ -380,7 +380,7 @@ namespace MacacaGames.EffectSystem
 
         void MaintainTimeEndTrigger()
         {
-            ForceDeactive(new EffectManager.EffectTriggerConditionInfo
+            ForceDeactive(new EffectSystem.EffectTriggerConditionInfo
             {
                 owner = effectInstance.owner
             });

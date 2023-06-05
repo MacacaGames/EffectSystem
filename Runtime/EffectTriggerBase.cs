@@ -7,13 +7,13 @@ namespace MacacaGames.EffectSystem
     [EffectTypeGroup("Trigger")]
     public abstract class EffectTriggerBase : EffectBase
     {
-        public override void OnActive(EffectManager.EffectTriggerConditionInfo condidionInfo)
+        public override void OnActive(EffectSystem.EffectTriggerConditionInfo condidionInfo)
         {
             ExecuteActive(condidionInfo);
             OnTrigger(condidionInfo);
         }
 
-        protected abstract void OnTrigger(EffectManager.EffectTriggerConditionInfo conditionInfo);
+        protected abstract void OnTrigger(EffectSystem.EffectTriggerConditionInfo conditionInfo);
 
     }
 }

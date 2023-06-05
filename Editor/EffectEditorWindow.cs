@@ -12,7 +12,7 @@ namespace MacacaGames.EffectSystem.Editor
 {
     public class EffectEditorWindow : EditorWindow
     {
-        EffectManager effectManager => ApplicationController.Instance.GetMonobehaviourLifeCycle<EffectManager>();
+        EffectSystem effectManager => ApplicationController.Instance.GetMonobehaviourLifeCycle<EffectSystem>();
         const string path = "Assets/0_Game/Scripts/Effect";
         List<IEffectableObject> enemyCache = new List<IEffectableObject>();
         int enemyIndex = 0;

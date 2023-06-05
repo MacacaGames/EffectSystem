@@ -8,7 +8,7 @@ namespace MacacaGames.EffectSystem
 {
     public class EffectBaseCC : EffectBase
     {
-        public override void OnDeactive(EffectManager.EffectTriggerConditionInfo triggerConditionInfo)
+        public override void OnDeactive(EffectSystem.EffectTriggerConditionInfo triggerConditionInfo)
         {
             var effect = GetCCPreventionEffect();
             effectManager.AddRequestedEffect(owner, effect);

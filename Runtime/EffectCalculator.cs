@@ -11,7 +11,7 @@ namespace MacacaGames.EffectSystem
         /// <summary>取得指定EffectType的上下限。</summary>
         public (float sumLimitMin, float sumLimitMax) GetLimit(string effectType)
         {
-            var effect = EffectManager.CreateEffect(new EffectInfo { type = effectType, inputBase = 1 });
+            var effect = EffectSystem.CreateEffect(new EffectInfo { type = effectType, inputBase = 1 });
             return effect.sumLimit;
         }
 
@@ -32,29 +32,29 @@ namespace MacacaGames.EffectSystem
                 }
 
                 var key = typeGroup.Keys.Single(_ => _.GetTypeKingdom().GetHashCode() == typeKingdomHash);
-                typeGroup[key] += EffectManager.CreateEffect(info).GetValue();
+                typeGroup[key] += EffectSystem.CreateEffect(info).GetValue();
             }
 
             return typeGroup;
         }
 
         /// <summary>加總合併同Kindom的Effect值，用EffectList加總。</summary>
-        public Dictionary<EffectInfo, EffectManager.EffectList> GetEffectTypeKingdomValues_EffectList(params IEnumerable<EffectInfo>[] effectInfoGroups)
+        public Dictionary<EffectInfo, EffectSystem.EffectList> GetEffectTypeKingdomValues_EffectList(params IEnumerable<EffectInfo>[] effectInfoGroups)
         {
             List<EffectInfo> effectInfos = effectInfoGroups.SelectMany(_ => _).ToList();
 
-            Dictionary<EffectInfo, EffectManager.EffectList> typeGroup = new Dictionary<EffectInfo, EffectManager.EffectList>();
+            Dictionary<EffectInfo, EffectSystem.EffectList> typeGroup = new Dictionary<EffectInfo, EffectSystem.EffectList>();
 
             foreach (var info in effectInfos)
             {
                 int typeKingdomHash = info.GetTypeKingdom().GetHashCode();
                 if (typeGroup.Keys.Select(_ => _.GetTypeKingdom().GetHashCode()).Contains(typeKingdomHash) == false)
                 {
-                    typeGroup.Add(info.GetTypeKingdom(), new EffectManager.EffectList(info.type));
+                    typeGroup.Add(info.GetTypeKingdom(), new EffectSystem.EffectList(info.type));
                 }
 
                 var key = typeGroup.Keys.Single(_ => _.GetTypeKingdom().GetHashCode() == typeKingdomHash);
-                typeGroup[key].Add(EffectManager.CreateEffect(info));
+                typeGroup[key].Add(EffectSystem.CreateEffect(info));
             }
 
             return typeGroup;
