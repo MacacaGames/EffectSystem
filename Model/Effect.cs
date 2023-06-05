@@ -35,14 +35,11 @@ namespace MacacaGames.EffectSystem.Model
         public int activeMaintainRounds;
         public int cooldownTime;
         public string logic;
-        public ColliderType colliderType;
-        public List<String> subInfoIds;
+        public string colliderType;
+        public List<string> subInfoIds;
         public List<int> parameters;
-
         public List<string> viewInfoIds;
         public List<string> tags;
-
-
         public bool HasError()
         {
 
@@ -173,56 +170,5 @@ namespace MacacaGames.EffectSystem.Model
         public int conditionValue;
 
     }
-    public enum ColliderType
-    {
-        None = 0,
-        Explosion_Fire = 1,
-        Explosion_Frozen = 2,
-        Explosion_Poison = 3,
-        Explosion_Storm = 4,
-        Zone_Fire = 5,
-        Zone_Frozen = 6,
-        Zone_Poison = 7,
-        Zone_Storm = 8,
-        Projectile_Fire = 9,
-        Projectile_Forzen = 10,
-        Projectile_Poison = 11,
-        Projectile_Storm = 12,
-        Around_Fire = 13,
-        Around_Frozen = 14,
-        Around_Poison = 15,
-        Around_Storm = 16,
-        Projectile_Bat = 17,
-        Side_Pumpkin = 18,
-        Projectile_Assault_Boss = 19,
-        Projectile_MagicBall_Boss = 20,
-        Projectile_Spike_Boss = 21,
-        BigExplosion_Fire = 22,
-        BigExplosion_Frozen = 23,
-        BigExplosion_Poison = 24,
-        BigExplosion_Storm = 25,
-        BounceProjectile_Fire = 26,
-        BounceProjectile_Forzen = 27,
-        BounceProjectile_Poison = 28,
-        BounceProjectile_Storm = 29,
-        BounceProjectile_C03_Damage = 30,
-        BounceProjectile_C03_Heal = 31,
-        Zone_C04_Blade = 32,
-
-        FireHit_Circle_M = 9001,
-        Frozen_Circle_M = 9002,
-        Storm_Circle_M = 9003,
-        WeakAtk_Circle_M = 9004,
-        Frozen_Wave_M = 9005,
-        Poison_Wave_M = 9006,
-        Storm_Wave_M = 9007,
-        Bat_WaveL_S = 9008,
-        Bat_WaveR_S = 9009,
-        Pumpkin_Side_S = 9010,
-        MagicBall_Wave_S_Boss = 9011,
-        MagicBall_Wave_L_Boss = 9012,
-        Spike_Wave_M_Boss = 9013,
-        Assault_Wave_M_Boss = 9014,
-        FrozenZone_Circle_L = 9015,
-    }
+   
 }

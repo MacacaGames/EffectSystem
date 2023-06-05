@@ -10,7 +10,6 @@ namespace MacacaGames.EffectSystem.Editor
 {
     public class EffectSystemScriptBacker
     {
-
         public static void BakeAllEffectEnum(string effectEnumJson)
         {
             Dictionary<string, List<string>> json = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, List<string>>>(ModifyString(effectEnumJson));

@@ -53,7 +53,6 @@ namespace MacacaGames.EffectSystem.Resolvers
                 { typeof(global::System.Collections.Generic.List<global::System.Collections.Generic.List<global::MacacaGames.EffectSystem.Model.ConditionRequirement>>), 1 },
                 { typeof(global::System.Collections.Generic.List<int>), 2 },
                 { typeof(global::System.Collections.Generic.List<string>), 3 },
-                { typeof(global::MacacaGames.EffectSystem.Model.ColliderType), 4 },
                 { typeof(global::MacacaGames.EffectSystem.Model.EffectInfo.EffectTaxonomy), 5 },
                 { typeof(global::MacacaGames.EffectSystem.Model.ConditionRequirement), 6 },
                 { typeof(global::MacacaGames.EffectSystem.Model.EffectInfo), 7 },
@@ -74,7 +73,6 @@ namespace MacacaGames.EffectSystem.Resolvers
                 case 1: return new global::MessagePack.Formatters.ListFormatter<global::System.Collections.Generic.List<global::MacacaGames.EffectSystem.Model.ConditionRequirement>>();
                 case 2: return new global::MessagePack.Formatters.ListFormatter<int>();
                 case 3: return new global::MessagePack.Formatters.ListFormatter<string>();
-                case 4: return new MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.ColliderTypeFormatter();
                 case 5: return new MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.EffectInfo_EffectTaxonomyFormatter();
                 case 6: return new MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.ConditionRequirementFormatter();
                 case 7: return new MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.EffectInfoFormatter();
@@ -109,19 +107,7 @@ namespace MacacaGames.EffectSystem.Resolvers
 namespace MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model
 {
 
-    public sealed class ColliderTypeFormatter : global::MessagePack.Formatters.IMessagePackFormatter<global::MacacaGames.EffectSystem.Model.ColliderType>
-    {
-        public void Serialize(ref global::MessagePack.MessagePackWriter writer, global::MacacaGames.EffectSystem.Model.ColliderType value, global::MessagePack.MessagePackSerializerOptions options)
-        {
-            writer.Write((global::System.Int32)value);
-        }
-
-        public global::MacacaGames.EffectSystem.Model.ColliderType Deserialize(ref global::MessagePack.MessagePackReader reader, global::MessagePack.MessagePackSerializerOptions options)
-        {
-            return (global::MacacaGames.EffectSystem.Model.ColliderType)reader.ReadInt32();
-        }
-    }
-
+    
     public sealed class EffectInfo_EffectTaxonomyFormatter : global::MessagePack.Formatters.IMessagePackFormatter<global::MacacaGames.EffectSystem.Model.EffectInfo.EffectTaxonomy>
     {
         public void Serialize(ref global::MessagePack.MessagePackWriter writer, global::MacacaGames.EffectSystem.Model.EffectInfo.EffectTaxonomy value, global::MessagePack.MessagePackSerializerOptions options)
@@ -320,8 +306,6 @@ namespace MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model
             writer.Write(value.cooldownTime);
             writer.WriteRaw(GetSpan_logic());
             global::MessagePack.FormatterResolverExtensions.GetFormatterWithVerify<string>(formatterResolver).Serialize(ref writer, value.logic, options);
-            writer.WriteRaw(GetSpan_colliderType());
-            global::MessagePack.FormatterResolverExtensions.GetFormatterWithVerify<global::MacacaGames.EffectSystem.Model.ColliderType>(formatterResolver).Serialize(ref writer, value.colliderType, options);
             writer.WriteRaw(GetSpan_subInfoIds());
             global::MessagePack.FormatterResolverExtensions.GetFormatterWithVerify<global::System.Collections.Generic.List<string>>(formatterResolver).Serialize(ref writer, value.subInfoIds, options);
             writer.WriteRaw(GetSpan_parameters());
@@ -454,9 +438,9 @@ namespace MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model
                                 continue;
 
                             case 8243105096924950371UL:
-                                if (global::MessagePack.Internal.AutomataKeyGen.GetKey(ref stringKey) != 1701869908UL) { goto FAIL; }
+                                // if (global::MessagePack.Internal.AutomataKeyGen.GetKey(ref stringKey) != 1701869908UL) { goto FAIL; }
 
-                                ____result.colliderType = global::MessagePack.FormatterResolverExtensions.GetFormatterWithVerify<global::MacacaGames.EffectSystem.Model.ColliderType>(formatterResolver).Deserialize(ref reader, options);
+                                // ____result.colliderType = global::MessagePack.FormatterResolverExtensions.GetFormatterWithVerify<global::MacacaGames.EffectSystem.Model.ColliderType>(formatterResolver).Deserialize(ref reader, options);
                                 continue;
 
                         }

@@ -1,11 +1,9 @@
 using MacacaGames.EffectSystem;
-using MacacaGames.EffectSystem.Editor;
 using Sirenix.OdinInspector;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "GameResource/SkillResource", fileName = "SkillResource")]
@@ -60,9 +58,4 @@ public class SkillResource : ScriptableObject
 
     }
 
-    [Button]
-    void BakeAllEffectEnum(string Json)
-    {
-        EffectSystemScriptBacker.BakeAllEffectEnum(Json);
-    }
 }

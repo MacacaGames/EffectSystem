@@ -1,6 +1,4 @@
-﻿#if(UNITY_EDITOR)
-
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
@@ -10,7 +8,6 @@ using System.Linq;
 using System;
 using MacacaGames.GameSystem;
 using MacacaGames.EffectSystem.Model;
-
 namespace MacacaGames.EffectSystem.Editor
 {
     public class EffectEditorWindow : EditorWindow
@@ -21,7 +18,7 @@ namespace MacacaGames.EffectSystem.Editor
         int enemyIndex = 0;
 
 
-        [MenuItem("Window/Effect Editor Window")]
+        [MenuItem("MacacaGames/EffectSystem/Effect Editor Window")]
         static void ShowWindow()
         {
             CreateInstance<EffectEditorWindow>().Show();
@@ -111,7 +108,14 @@ namespace MacacaGames.EffectSystem.Editor
         {
             //建構
             var root = this.rootVisualElement;
-            var visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>(path + "/Editor/EffectEditorWindow.uxml");
+
+            // Import UXML
+            var visualTree = Resources.Load<VisualTreeAsset>("EffectEditorWindow");
+            VisualElement visulaElementFromUXML = visualTree.CloneTree();
+            var styleSheet = Resources.Load<StyleSheet>("EffectEditorWindow");
+            visulaElementFromUXML.styleSheets.Add(styleSheet);
+            visulaElementFromUXML.style.flexGrow = 1;
+
             cloneTree = visualTree.CloneTree();
             cloneTree.style.flexGrow = 1;
             root.Add(cloneTree);
@@ -119,16 +123,16 @@ namespace MacacaGames.EffectSystem.Editor
             effectsLocation = cloneTree.Q("Effects");
 
             tagField = cloneTree.Q<TextField>("TagField");
-            // cloneTree.Q<Button>("PickCurrent").clickable.clicked += () =>
-            // {
-            //     var t = Selection.activeGameObject.GetComponent<IEffectableObject>();
-            //     if (t == null)
-            //     {
-            //         Debug.LogError("Target is not a IEffectableObject ");
-            //     }
-            //     owner = t;
-            //     FreshEffectList();
-            // };
+            cloneTree.Q<Button>("PickCurrent").clickable.clicked += () =>
+            {
+                var t = Selection.activeGameObject.GetComponent<IEffectableObject>();
+                if (t == null)
+                {
+                    Debug.LogError("Target is not a IEffectableObject ");
+                }
+                owner = t;
+                FreshEffectList();
+            };
 
 
             cloneTree.Q<Button>("AddEffect").AddClass("effect-add-btn").clickable.clicked += () =>
@@ -141,6 +145,11 @@ namespace MacacaGames.EffectSystem.Editor
                 {
                     AddEffect(effectInfo);
                 }
+            };
+            cloneTree.Q<Button>("Bake").clickable.clicked += () =>
+            {
+                var bakeJsonTextField = cloneTree.Q<TextField>("BakeJsonText");
+                EffectSystemScriptBacker.BakeAllEffectEnum(bakeJsonTextField.value);
             };
 
             cloneTree.Q<ObjectField>("EffectGroupField").objectType = typeof(EffectGroup);
@@ -278,6 +287,4 @@ namespace MacacaGames.EffectSystem.Editor
 
 
     }
-
-#endif
 }

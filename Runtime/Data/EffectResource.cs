@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Sirenix.OdinInspector;
-using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "GameResource/EffectResource", fileName = "EffectResource")]
@@ -33,12 +32,12 @@ public class EffectResource : ScriptableObject
     private void GetAllViewPrefab()
     {
         effectViewprefabs.Clear();
-        var prefabGUIDs = AssetDatabase.FindAssets("t:GameObject", prefabPath);
+        var prefabGUIDs = UnityEditor.AssetDatabase.FindAssets("t:GameObject", prefabPath);
         foreach (var mPrefabGUID in prefabGUIDs)
         {
-            var mPrefabPath = AssetDatabase.GUIDToAssetPath(mPrefabGUID);
+            var mPrefabPath = UnityEditor.AssetDatabase.GUIDToAssetPath(mPrefabGUID);
             var fileName = Path.GetFileNameWithoutExtension(mPrefabPath);
-            GameObject tmpPrefab = (GameObject)AssetDatabase.LoadAssetAtPath(mPrefabPath, typeof(GameObject));
+            GameObject tmpPrefab = (GameObject)UnityEditor.AssetDatabase.LoadAssetAtPath(mPrefabPath, typeof(GameObject));
             if (tmpPrefab == null) continue;
 
             effectViewprefabs.Add(tmpPrefab);
