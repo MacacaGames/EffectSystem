@@ -257,10 +257,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.yml",
+      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.EffectInfoLogic.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.html",
+          "relative_path": "api/MacacaGames.EffectSystem.EffectInfoLogic.html",
           "hash": "p5QtPzaTq6W8Vu9ik0G/PA=="
         }
       },
