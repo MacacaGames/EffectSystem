@@ -209,7 +209,7 @@ namespace MacacaGames.EffectSystem
             {
                 var effectable = requirement.isCheckOwner ? info.owner : info.target;
                 var characterInstance = effectable;
-                var sourceValue = Mathf.FloorToInt(characterInstance.GetInputTypeValue(requirement.inputType));
+                var sourceValue = Mathf.FloorToInt(characterInstance.GetRuntimeValue(requirement.inputType));
 
                 bool IsRequirementFullfilled = false;
                 switch (requirement.requirementLogic)

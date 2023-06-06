@@ -4,9 +4,7 @@ using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using System.Reflection;
 using System.Linq;
-#if !Server
-using UnityEngine;
-#endif
+
 namespace MacacaGames.EffectSystem.Model
 {
 
@@ -14,6 +12,8 @@ namespace MacacaGames.EffectSystem.Model
     [MessagePack.MessagePackObject(true)]
     public partial struct EffectInfo
     {
+        public static Func<string, EffectInfo> getEffectInfo;
+
         public string id;
         public enum EffectTaxonomy { Info = 0, Domain = 101, Kingdom = 102, }
         public string GetTitle()
@@ -40,6 +40,7 @@ namespace MacacaGames.EffectSystem.Model
         public List<int> parameters;
         public List<string> viewInfoIds;
         public List<string> tags;
+        public float value;
         public bool HasError()
         {
 
@@ -139,28 +140,8 @@ namespace MacacaGames.EffectSystem.Model
         //         subInfo.DoEachSubInfos(act);
         //     }
         // }
-        
-    }
 
-
-    // [Serializable]
-    public struct EffectViewInfo
-    {
-        [HideInInspector]
-        public string id;
-        [HorizontalGroup("ViewInfo"), HideLabel]
-        public string viewRootType;
-        [HorizontalGroup("ViewInfo"), HideLabel]
-        [HideInInspector]
-        public string prefabAddress;
-        
-        [HorizontalGroup("ViewInfo"), HideLabel, Newtonsoft.Json.JsonIgnore, MessagePack.IgnoreMember]
-        public GameObject prefab;
-        [MessagePack.IgnoreMember]
-        public static Func<string, GameObject> GetPrefab;
-        public string prefabName;
     }
-    // [Serializable] 
     [MessagePack.MessagePackObject(true)]
     public struct ConditionRequirement
     {
@@ -170,5 +151,6 @@ namespace MacacaGames.EffectSystem.Model
         public int conditionValue;
 
     }
-   
+
+
 }

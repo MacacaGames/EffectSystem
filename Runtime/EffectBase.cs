@@ -247,7 +247,7 @@ namespace MacacaGames.EffectSystem
             //Condition存在，且Condition成立則傳值，否則傳回0
             if (condition != null && condition.isActive == false) return 0F;
 
-            return GetOriginValue() * owner.GetInputTypeValue(info.inputType);
+            return GetOriginValue() * owner.GetRuntimeValue(info.inputType);
         }
         public virtual float GetOriginValue()
         {
