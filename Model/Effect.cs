@@ -21,26 +21,46 @@ namespace MacacaGames.EffectSystem.Model
             return this.type.ToString();
         }
         public string type;
-        public string inputType;
         public EffectTaxonomy taxonomy;
-        public float inputBase;
+        public float value;
         public string activeCondition;
-        public List<List<ConditionRequirement>> activeRequirementLists;
+        public List<string> activeRequirement;
+       
         public string deactiveCondition;
-        public List<List<ConditionRequirement>> deactiveRequirementLists;
-        public string triggerTransType;
+        public List<string> deactiveRequirement;
+
+        public TriggerTransType triggerTransType;
         public float activeProbability; // Active、Deacitve機率，0-100
         public float deactiveProbability;
         public int activeMaintainActions;
         public int activeMaintainRounds;
         public int cooldownTime;
-        public string logic;
+        public EffectInfoLogic logic;
         public string colliderType;
         public List<string> subInfoIds;
-        public List<int> parameters;
+        public Dictionary<string, string> parameters;
         public List<string> viewInfoIds;
         public List<string> tags;
-        public float value;
+        public string GetParameterByKey(string key)
+        {
+            string result = null;
+            if (parameters.TryGetValue(key, out result))
+            {
+                Console.WriteLine($"parameter with key cannot be found in effect id: {id}");
+            }
+            return result;
+        }
+        public void SetParameterByKey(string key, string value)
+        {
+            if (parameters.ContainsKey(key))
+            {
+                parameters[key] = value;
+            }
+            else
+            {
+                parameters.Add(key, value);
+            }
+        }
         public bool HasError()
         {
 
@@ -50,7 +70,7 @@ namespace MacacaGames.EffectSystem.Model
             //     activeCondition > rangeMin && activeCondition < rangeMax)
             //     return true;
 
-            if (inputBase == 0)
+            if (value == 0)
                 return true;
 
             return false;
@@ -65,7 +85,7 @@ namespace MacacaGames.EffectSystem.Model
             //     return "相同的Condition條件屬於未定義的行為，在定義前不應使用。";
             // }
 
-            if (inputBase == 0)
+            if (value == 0)
             {
                 return "Effect的Level不該等於0。";
             }
@@ -131,26 +151,63 @@ namespace MacacaGames.EffectSystem.Model
 
             return result;
         }
-
-        // public void DoEachSubInfos(Action<EffectInfo> act)
-        // {
-        //     act.Invoke(this);
-        //     foreach (var subInfo in subInfos)
-        //     {
-        //         subInfo.DoEachSubInfos(act);
-        //     }
-        // }
-
     }
+
     [MessagePack.MessagePackObject(true)]
     public struct ConditionRequirement
     {
-        public string inputType;
-        public string requirementLogic;
+        public string id;
+        public string conditionParameter;
+        public ConditionLogic requirementLogic;
         public bool isCheckOwner;
         public int conditionValue;
 
+        public bool IsRequirementsFullfilled(EffectTriggerConditionInfo info)
+        {
+            var effectable = isCheckOwner ? info.owner : info.target;
+            var sourceValue = (int)System.MathF.Floor(effectable.GetRuntimeValue(conditionParameter));
+            bool IsRequirementFullfilled = true;
+            switch (requirementLogic)
+            {
+                case ConditionLogic.None:
+                    IsRequirementFullfilled = true;
+                    break;
+                case ConditionLogic.Greater:
+                    IsRequirementFullfilled = sourceValue > conditionValue;
+                    break;
+                case ConditionLogic.GreaterEqual:
+                    IsRequirementFullfilled = sourceValue >= conditionValue;
+                    break;
+                case ConditionLogic.Equal:
+                    IsRequirementFullfilled = sourceValue == conditionValue;
+                    break;
+                case ConditionLogic.LessEqual:
+                    IsRequirementFullfilled = sourceValue <= conditionValue;
+                    break;
+                case ConditionLogic.Less:
+                    IsRequirementFullfilled = sourceValue < conditionValue;
+                    break;
+                default:
+                    IsRequirementFullfilled = false;
+                    break;
+            }
+            return IsRequirementFullfilled;
+        }
     }
+
+    /// <summary>觸發EffectTrigger時，用來傳遞資料的結構。</summary>
+    public struct EffectTriggerConditionInfo
+    {
+        public IEffectableObject owner;     //Effect的Owner
+        public IEffectableObject target;    //Effect的Target
+
+        public EffectTriggerConditionInfo(IEffectableObject owner, IEffectableObject target = null, int param = 0)
+        {
+            this.owner = owner;
+            this.target = target;
+        }
+    }
+
 
 
 }

@@ -59,10 +59,10 @@ namespace MacacaGames.EffectSystem.Editor
             effectKind = (EffectKind)EditorGUILayout.EnumPopup(effectKind);
 
             GUILayout.Space(20F);
-            if (GUILayout.Button("Create"))
-            {
-                AddEffectTemplate();
-            }
+            // if (GUILayout.Button("Create"))
+            // {
+            //     AddEffectTemplate();
+            // }
 
         }
 
@@ -86,33 +86,33 @@ namespace MacacaGames.EffectSystem.Editor
         //[Button]
         void AddEffectTemplate()
         {
-            string s = File.ReadAllText(managerPath);
+            // string s = File.ReadAllText(managerPath);
 
-            s = s.Replace(effectTypeLine, $"{effectTypeName} = {GetEffectTypeMax() + 1}," + $"\n\t\t{effectTypeLine}");
-            s = s.Replace(effectTypeQueryLine, $"[EffectType.{effectTypeName}] = typeof({effectName})," + $"\n\t\t{effectTypeQueryLine}");
+            // s = s.Replace(effectTypeLine, $"{effectTypeName} = {GetEffectTypeMax() + 1}," + $"\n\t\t{effectTypeLine}");
+            // s = s.Replace(effectTypeQueryLine, $"[EffectType.{effectTypeName}] = typeof({effectName})," + $"\n\t\t{effectTypeQueryLine}");
 
-            File.WriteAllText($"{managerPath}", s);
+            // File.WriteAllText($"{managerPath}", s);
 
-            if (effectKind == EffectKind.Element)
-            {
-                string t = File.ReadAllText(elementTemplatePath);
-                t = t.Replace("{Effect_Template}", effectName);
-                File.WriteAllText($"{elementPath}/{effectName}.cs", t);
-            }
-            else if (effectKind == EffectKind.Trigger)
-            {
-                string t = File.ReadAllText(triggerTemplatePath);
-                t = t.Replace("{Effect_Trigger_Template}", effectName);
-                File.WriteAllText($"{triggerPath}/{effectName}.cs", t);
-            }
+            // if (effectKind == EffectKind.Element)
+            // {
+            //     string t = File.ReadAllText(elementTemplatePath);
+            //     t = t.Replace("{Effect_Template}", effectName);
+            //     File.WriteAllText($"{elementPath}/{effectName}.cs", t);
+            // }
+            // else if (effectKind == EffectKind.Trigger)
+            // {
+            //     string t = File.ReadAllText(triggerTemplatePath);
+            //     t = t.Replace("{Effect_Trigger_Template}", effectName);
+            //     File.WriteAllText($"{triggerPath}/{effectName}.cs", t);
+            // }
 
-            EditorUtility.DisplayDialog("Effect Template Creator", $"{effectTypeName} is created now.", "OK");
+            // EditorUtility.DisplayDialog("Effect Template Creator", $"{effectTypeName} is created now.", "OK");
 
 
-            int GetEffectTypeMax()
-            {
-                return System.Enum.GetValues(typeof(EffectSystemScriptable.EffectType)).Cast<int>().Max();
-            }
+            // int GetEffectTypeMax()
+            // {
+            //     return System.Enum.GetValues(typeof(EffectSystemScriptable.EffectType)).Cast<int>().Max();
+            // }
         }
 
 

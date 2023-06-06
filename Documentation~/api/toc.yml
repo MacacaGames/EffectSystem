@@ -42,8 +42,8 @@
     name: EffectSystemScriptable.DamageType
   - uid: MacacaGames.EffectSystem.EffectSystemScriptable.DeactiveCondition
     name: EffectSystemScriptable.DeactiveCondition
-  - uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic
-    name: EffectSystemScriptable.EffectInfoLogic
+  - uid: MacacaGames.EffectSystem.EffectInfoLogic
+    name: EffectInfoLogic
   - uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
     name: EffectSystemScriptable.EffectType
   - uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectViewRoot

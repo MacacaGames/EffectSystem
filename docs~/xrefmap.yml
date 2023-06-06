@@ -1981,30 +1981,30 @@ references:
   commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.DeactiveCondition.OnOwnerAfterDoAttack
   fullName: MacacaGames.EffectSystem.EffectSystemScriptable.DeactiveCondition.OnOwnerAfterDoAttack
   nameWithType: EffectSystemScriptable.DeactiveCondition.OnOwnerAfterDoAttack
-- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic
-  name: EffectSystemScriptable.EffectInfoLogic
-  href: api/MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.html
-  commentId: T:MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic
-  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic
-  nameWithType: EffectSystemScriptable.EffectInfoLogic
-- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.DestroyAfterMaintainTimeEnd
+- uid: MacacaGames.EffectSystem.EffectInfoLogic
+  name: EffectInfoLogic
+  href: api/MacacaGames.EffectSystem.EffectInfoLogic.html
+  commentId: T:MacacaGames.EffectSystem.EffectInfoLogic
+  fullName: MacacaGames.EffectSystem.EffectInfoLogic
+  nameWithType: EffectInfoLogic
+- uid: MacacaGames.EffectSystem.EffectInfoLogic.DestroyAfterMaintainTimeEnd
   name: DestroyAfterMaintainTimeEnd
-  href: api/MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.html#MacacaGames_EffectSystem_EffectSystemScriptable_EffectInfoLogic_DestroyAfterMaintainTimeEnd
-  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.DestroyAfterMaintainTimeEnd
-  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.DestroyAfterMaintainTimeEnd
-  nameWithType: EffectSystemScriptable.EffectInfoLogic.DestroyAfterMaintainTimeEnd
-- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.OnlyActiveOnce
+  href: api/MacacaGames.EffectSystem.EffectInfoLogic.html#MacacaGames_EffectSystem_EffectSystemScriptable_EffectInfoLogic_DestroyAfterMaintainTimeEnd
+  commentId: F:MacacaGames.EffectSystem.EffectInfoLogic.DestroyAfterMaintainTimeEnd
+  fullName: MacacaGames.EffectSystem.EffectInfoLogic.DestroyAfterMaintainTimeEnd
+  nameWithType: EffectInfoLogic.DestroyAfterMaintainTimeEnd
+- uid: MacacaGames.EffectSystem.EffectInfoLogic.OnlyActiveOnce
   name: OnlyActiveOnce
-  href: api/MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.html#MacacaGames_EffectSystem_EffectSystemScriptable_EffectInfoLogic_OnlyActiveOnce
-  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.OnlyActiveOnce
-  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.OnlyActiveOnce
-  nameWithType: EffectSystemScriptable.EffectInfoLogic.OnlyActiveOnce
-- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.ReactiveAfterCooldownEnd
+  href: api/MacacaGames.EffectSystem.EffectInfoLogic.html#MacacaGames_EffectSystem_EffectSystemScriptable_EffectInfoLogic_OnlyActiveOnce
+  commentId: F:MacacaGames.EffectSystem.EffectInfoLogic.OnlyActiveOnce
+  fullName: MacacaGames.EffectSystem.EffectInfoLogic.OnlyActiveOnce
+  nameWithType: EffectInfoLogic.OnlyActiveOnce
+- uid: MacacaGames.EffectSystem.EffectInfoLogic.ReactiveAfterCooldownEnd
   name: ReactiveAfterCooldownEnd
-  href: api/MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.html#MacacaGames_EffectSystem_EffectSystemScriptable_EffectInfoLogic_ReactiveAfterCooldownEnd
-  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.ReactiveAfterCooldownEnd
-  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.ReactiveAfterCooldownEnd
-  nameWithType: EffectSystemScriptable.EffectInfoLogic.ReactiveAfterCooldownEnd
+  href: api/MacacaGames.EffectSystem.EffectInfoLogic.html#MacacaGames_EffectSystem_EffectSystemScriptable_EffectInfoLogic_ReactiveAfterCooldownEnd
+  commentId: F:MacacaGames.EffectSystem.EffectInfoLogic.ReactiveAfterCooldownEnd
+  fullName: MacacaGames.EffectSystem.EffectInfoLogic.ReactiveAfterCooldownEnd
+  nameWithType: EffectInfoLogic.ReactiveAfterCooldownEnd
 - uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
   name: EffectSystemScriptable.EffectType
   href: api/MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.html

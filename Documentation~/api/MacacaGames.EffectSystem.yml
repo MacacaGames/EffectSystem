@@ -24,7 +24,7 @@ items:
   - MacacaGames.EffectSystem.EffectSystemScriptable.ConditionLogic
   - MacacaGames.EffectSystem.EffectSystemScriptable.DamageType
   - MacacaGames.EffectSystem.EffectSystemScriptable.DeactiveCondition
-  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic
+  - MacacaGames.EffectSystem.EffectInfoLogic
   - MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
   - MacacaGames.EffectSystem.EffectSystemScriptable.EffectViewRoot
   - MacacaGames.EffectSystem.EffectSystemScriptable.InputType
@@ -161,11 +161,11 @@ references:
   name: EffectSystemScriptable.TriggerTransType
   nameWithType: EffectSystemScriptable.TriggerTransType
   fullName: MacacaGames.EffectSystem.EffectSystemScriptable.TriggerTransType
-- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic
-  commentId: T:MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic
-  name: EffectSystemScriptable.EffectInfoLogic
-  nameWithType: EffectSystemScriptable.EffectInfoLogic
-  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic
+- uid: MacacaGames.EffectSystem.EffectInfoLogic
+  commentId: T:MacacaGames.EffectSystem.EffectInfoLogic
+  name: EffectInfoLogic
+  nameWithType: EffectInfoLogic
+  fullName: MacacaGames.EffectSystem.EffectInfoLogic
 - uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectViewRoot
   commentId: T:MacacaGames.EffectSystem.EffectSystemScriptable.EffectViewRoot
   name: EffectSystemScriptable.EffectViewRoot

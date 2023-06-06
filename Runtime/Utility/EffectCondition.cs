@@ -43,7 +43,7 @@ namespace MacacaGames.EffectSystem
 
             if (effectInfo.activeCondition == EffectSystemScriptable.ActiveCondition.OnEffectStart)
             {
-                OnActive(new EffectSystem.EffectTriggerConditionInfo
+                OnActive(new EffectTriggerConditionInfo
                 {
                     owner = effectInstance.owner
                 });
@@ -58,7 +58,7 @@ namespace MacacaGames.EffectSystem
         {
             if (isActive == true)
             {
-                OnDeactive(new EffectSystem.EffectTriggerConditionInfo
+                OnDeactive(new EffectTriggerConditionInfo
                 {
                     owner = effectInstance.owner
                 });
@@ -70,7 +70,7 @@ namespace MacacaGames.EffectSystem
 
         // Active / Deactive
 
-        public void OnActive(EffectSystem.EffectTriggerConditionInfo info)
+        public void OnActive(EffectTriggerConditionInfo info)
         {
             if (effectInstance.RemoveSleepyEffect())
                 return;
@@ -97,7 +97,7 @@ namespace MacacaGames.EffectSystem
 
         }
 
-        void ForceActive(EffectSystem.EffectTriggerConditionInfo info)
+        void ForceActive(EffectTriggerConditionInfo info)
         {
             if (effectInstance.RemoveSleepyEffect())
                 return;
@@ -108,14 +108,14 @@ namespace MacacaGames.EffectSystem
             {
                 switch (effectInfo.triggerTransType)
                 {
-                    case EffectSystemScriptable.TriggerTransType.CutOldOne:
-                        ForceDeactive(new EffectSystem.EffectTriggerConditionInfo
+                    case TriggerTransType.CutOldOne:
+                        ForceDeactive(new EffectTriggerConditionInfo
                         {
                             owner = effectInstance.owner
                         });
                         break;
 
-                    case EffectSystemScriptable.TriggerTransType.SkipNewOne:
+                    case TriggerTransType.SkipNewOne:
                         return;
                 }
             }
@@ -126,12 +126,12 @@ namespace MacacaGames.EffectSystem
 
             if (effectInfo.deactiveCondition == EffectSystemScriptable.DeactiveCondition.AfterActive)
             {
-                ForceDeactive(new EffectSystem.EffectTriggerConditionInfo
+                ForceDeactive(new EffectTriggerConditionInfo
                 {
                     owner = effectInstance.owner
                 });
 
-                if (effectInfo.logic == EffectSystemScriptable.EffectInfoLogic.OnlyActiveOnce)
+                if (effectInfo.logic == EffectInfoLogic.OnlyActiveOnce)
                 {
                     effectInstance.RemoveEffect();
                 }
@@ -148,7 +148,7 @@ namespace MacacaGames.EffectSystem
 
         }
 
-        public void OnDeactive(EffectSystem.EffectTriggerConditionInfo info)
+        public void OnDeactive(EffectTriggerConditionInfo info)
         {
             if (effectInstance.RemoveSleepyEffect())
                 return;
@@ -173,7 +173,7 @@ namespace MacacaGames.EffectSystem
 
         }
 
-        public void ForceDeactive(EffectSystem.EffectTriggerConditionInfo info)
+        public void ForceDeactive(EffectTriggerConditionInfo info)
         {
             if (effectInstance.RemoveSleepyEffect())
                 return;
@@ -187,15 +187,11 @@ namespace MacacaGames.EffectSystem
 
         }
 
-        public bool IsOneOfRequirementsListFullfilled(EffectSystem.EffectTriggerConditionInfo info, List<List<ConditionRequirement>> requirementLists, EffectInfo targetInfo)
+        public bool IsOneOfRequirementsListFullfilled(EffectTriggerConditionInfo info, List<ConditionRequirement> requirementLists, EffectInfo targetInfo)
         {
-            if (requirementLists == null)
+            foreach (var item in requirementLists)
             {
-                Debug.Log($"{targetInfo.type}, active or deactive is null, what");
-            }
-            foreach (var requirementList in requirementLists)
-            {
-                if (IsRequirementsFullfilled(info, requirementList))
+                if (item.IsRequirementsFullfilled(info))
                 {
                     return true;
                 }
@@ -203,59 +199,15 @@ namespace MacacaGames.EffectSystem
             return false;
         }
 
-        public bool IsRequirementsFullfilled(EffectSystem.EffectTriggerConditionInfo info, List<ConditionRequirement> requirements)
-        {
-            foreach (var requirement in requirements)
-            {
-                var effectable = requirement.isCheckOwner ? info.owner : info.target;
-                var characterInstance = effectable;
-                var sourceValue = Mathf.FloorToInt(characterInstance.GetRuntimeValue(requirement.inputType));
-
-                bool IsRequirementFullfilled = false;
-                switch (requirement.requirementLogic)
-                {
-                    case EffectSystemScriptable.ConditionLogic.None:
-                        IsRequirementFullfilled = true;
-                        break;
-                    case EffectSystemScriptable.ConditionLogic.Greater:
-                        IsRequirementFullfilled = sourceValue > requirement.conditionValue;
-                        break;
-                    case EffectSystemScriptable.ConditionLogic.GreaterEqual:
-                        IsRequirementFullfilled = sourceValue >= requirement.conditionValue;
-                        break;
-                    case EffectSystemScriptable.ConditionLogic.Equal:
-                        IsRequirementFullfilled = sourceValue == requirement.conditionValue;
-                        break;
-                    case EffectSystemScriptable.ConditionLogic.LessEqual:
-                        IsRequirementFullfilled = sourceValue <= requirement.conditionValue;
-                        break;
-                    case EffectSystemScriptable.ConditionLogic.Less:
-                        IsRequirementFullfilled = sourceValue < requirement.conditionValue;
-                        break;
-                    default:
-                        IsRequirementFullfilled = false;
-                        break;
-                }
-
-                if (IsRequirementFullfilled == false)
-                {
-                    return false;
-                }
-            }
-
-            return true;
-        }
-
-
         void OnCooldownTimeEnd()
         {
             if (effectInstance.RemoveSleepyEffect())
                 return;
 
             effectInstance.OnCooldownEnd();
-            if (effectInfo.logic == EffectSystemScriptable.EffectInfoLogic.ReactiveAfterCooldownEnd)
+            if (effectInfo.logic == EffectInfoLogic.ReactiveAfterCooldownEnd)
             {
-                OnActive(new EffectSystem.EffectTriggerConditionInfo
+                OnActive(new EffectTriggerConditionInfo
                 {
                     owner = effectInstance.owner
                 });
@@ -380,12 +332,12 @@ namespace MacacaGames.EffectSystem
 
         void MaintainTimeEndTrigger()
         {
-            ForceDeactive(new EffectSystem.EffectTriggerConditionInfo
+            ForceDeactive(new EffectTriggerConditionInfo
             {
                 owner = effectInstance.owner
             });
 
-            if (effectInfo.logic == EffectSystemScriptable.EffectInfoLogic.DestroyAfterMaintainTimeEnd)
+            if (effectInfo.logic == EffectInfoLogic.DestroyAfterMaintainTimeEnd)
             {
                 effectInstance.RemoveEffect();
             }

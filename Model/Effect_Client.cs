@@ -43,6 +43,36 @@ namespace MacacaGames.EffectSystem.Model
             }
         }
 
+        public static Func<List<string>, List<ConditionRequirement>> GetActiveRequirementLists;
+
+        [MessagePack.IgnoreMember]
+        public List<ConditionRequirement> activeRequirementLists
+        {
+            get
+            {
+                if (GetActiveRequirementLists == null)
+                {
+                    Console.WriteLine("No registe the GetActiveRequirementLists");
+                }
+                return GetActiveRequirementLists?.Invoke(activeRequirement); ;
+            }
+        }
+
+        public static Func<List<string>, List<ConditionRequirement>> GetDeactiveRequirementLists;
+        [MessagePack.IgnoreMember]
+        public List<ConditionRequirement> deactiveRequirementLists
+          {
+            get
+            {
+                if (GetDeactiveRequirementLists == null)
+                {
+                    Console.WriteLine("No registe the GetActiveRequirementLists");
+                }
+                return GetDeactiveRequirementLists?.Invoke(deactiveRequirement); ;
+            }
+        }
+
+
         public List<EffectInfo> GetSubInfo()
         {
             if (getEffectInfo == null)

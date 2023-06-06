@@ -25,7 +25,6 @@ namespace MacacaGames.EffectSystem
         public static Dictionary<string, Type> EffectTypeQuery = new Dictionary<string, Type>
         {
             ["EffectBase"] = typeof(EffectBase),
-            ["EffectBaseCC"] = typeof(EffectBaseCC)
         };
         public static Type QueryEffectTypeWithDefault(string effectType)
         {
@@ -46,19 +45,7 @@ namespace MacacaGames.EffectSystem
         public Dictionary<string, Func<Action<EffectTriggerConditionInfo>, IEnumerator>> EffectConditionTriggerQuery = new Dictionary<string, Func<Action<EffectTriggerConditionInfo>, IEnumerator>>();    //給對應Trigger綁定Delegate的
 
 
-        /// <summary>觸發EffectTrigger時，用來傳遞資料的結構。</summary>
-        public struct EffectTriggerConditionInfo
-        {
-            public IEffectableObject owner;     //Effect的Owner
-            public IEffectableObject target;    //Effect的Target
-
-            public EffectTriggerConditionInfo(IEffectableObject owner, IEffectableObject target = null, int param = 0)
-            {
-                this.owner = owner;
-                this.target = target;
-            }
-        }
-
+     
         #endregion
 
         public static EffectCalculator calculator = new EffectCalculator();
@@ -652,7 +639,7 @@ namespace MacacaGames.EffectSystem
                     }
                     else if (p == "level" || p == "lv")
                     {
-                        return currentInfo.inputBase;
+                        return currentInfo.value;
                     }
                     else if (p == "value" || p == "val")
                     {

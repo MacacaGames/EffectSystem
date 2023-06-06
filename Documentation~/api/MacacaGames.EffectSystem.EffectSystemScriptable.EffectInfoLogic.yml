@@ -1,19 +1,19 @@
 ### YamlMime:ManagedReference
 items:
-- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic
-  commentId: T:MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic
-  id: EffectSystemScriptable.EffectInfoLogic
+- uid: MacacaGames.EffectSystem.EffectInfoLogic
+  commentId: T:MacacaGames.EffectSystem.EffectInfoLogic
+  id: EffectInfoLogic
   parent: MacacaGames.EffectSystem
   children:
-  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.DestroyAfterMaintainTimeEnd
-  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.OnlyActiveOnce
-  - MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.ReactiveAfterCooldownEnd
+  - MacacaGames.EffectSystem.EffectInfoLogic.DestroyAfterMaintainTimeEnd
+  - MacacaGames.EffectSystem.EffectInfoLogic.OnlyActiveOnce
+  - MacacaGames.EffectSystem.EffectInfoLogic.ReactiveAfterCooldownEnd
   langs:
   - csharp
   - vb
-  name: EffectSystemScriptable.EffectInfoLogic
-  nameWithType: EffectSystemScriptable.EffectInfoLogic
-  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic
+  name: EffectInfoLogic
+  nameWithType: EffectInfoLogic
+  fullName: MacacaGames.EffectSystem.EffectInfoLogic
   type: Struct
   source:
     remote:
@@ -35,16 +35,16 @@ items:
   modifiers.vb:
   - Public
   - Structure
-- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.OnlyActiveOnce
-  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.OnlyActiveOnce
+- uid: MacacaGames.EffectSystem.EffectInfoLogic.OnlyActiveOnce
+  commentId: F:MacacaGames.EffectSystem.EffectInfoLogic.OnlyActiveOnce
   id: OnlyActiveOnce
-  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic
+  parent: MacacaGames.EffectSystem.EffectInfoLogic
   langs:
   - csharp
   - vb
   name: OnlyActiveOnce
-  nameWithType: EffectSystemScriptable.EffectInfoLogic.OnlyActiveOnce
-  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.OnlyActiveOnce
+  nameWithType: EffectInfoLogic.OnlyActiveOnce
+  fullName: MacacaGames.EffectSystem.EffectInfoLogic.OnlyActiveOnce
   type: Field
   source:
     remote:
@@ -68,16 +68,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.ReactiveAfterCooldownEnd
-  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.ReactiveAfterCooldownEnd
+- uid: MacacaGames.EffectSystem.EffectInfoLogic.ReactiveAfterCooldownEnd
+  commentId: F:MacacaGames.EffectSystem.EffectInfoLogic.ReactiveAfterCooldownEnd
   id: ReactiveAfterCooldownEnd
-  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic
+  parent: MacacaGames.EffectSystem.EffectInfoLogic
   langs:
   - csharp
   - vb
   name: ReactiveAfterCooldownEnd
-  nameWithType: EffectSystemScriptable.EffectInfoLogic.ReactiveAfterCooldownEnd
-  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.ReactiveAfterCooldownEnd
+  nameWithType: EffectInfoLogic.ReactiveAfterCooldownEnd
+  fullName: MacacaGames.EffectSystem.EffectInfoLogic.ReactiveAfterCooldownEnd
   type: Field
   source:
     remote:
@@ -101,16 +101,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.DestroyAfterMaintainTimeEnd
-  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.DestroyAfterMaintainTimeEnd
+- uid: MacacaGames.EffectSystem.EffectInfoLogic.DestroyAfterMaintainTimeEnd
+  commentId: F:MacacaGames.EffectSystem.EffectInfoLogic.DestroyAfterMaintainTimeEnd
   id: DestroyAfterMaintainTimeEnd
-  parent: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic
+  parent: MacacaGames.EffectSystem.EffectInfoLogic
   langs:
   - csharp
   - vb
   name: DestroyAfterMaintainTimeEnd
-  nameWithType: EffectSystemScriptable.EffectInfoLogic.DestroyAfterMaintainTimeEnd
-  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.DestroyAfterMaintainTimeEnd
+  nameWithType: EffectInfoLogic.DestroyAfterMaintainTimeEnd
+  fullName: MacacaGames.EffectSystem.EffectInfoLogic.DestroyAfterMaintainTimeEnd
   type: Field
   source:
     remote:

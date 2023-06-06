@@ -11,7 +11,7 @@ namespace MacacaGames.EffectSystem
         /// <summary>取得指定EffectType的上下限。</summary>
         public (float sumLimitMin, float sumLimitMax) GetLimit(string effectType)
         {
-            var effect = EffectSystem.CreateEffect(new EffectInfo { type = effectType, inputBase = 1 });
+            var effect = EffectSystem.CreateEffect(new EffectInfo { type = effectType, value = 1 });
             return effect.sumLimit;
         }
 

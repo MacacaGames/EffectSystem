@@ -17,7 +17,7 @@ namespace MacacaGames.EffectSystem
         {
             get
             {
-                return info.inputBase;
+                return info.value;
             }
         }
 
@@ -93,16 +93,16 @@ namespace MacacaGames.EffectSystem
         /// <summary>當Effect被附加時執行</summary>
         protected virtual void OnStart() { }
 
-        public virtual void OnActive(EffectSystem.EffectTriggerConditionInfo triggerConditionInfo)
+        public virtual void OnActive(EffectTriggerConditionInfo triggerConditionInfo)
         {
             ExecuteActive(triggerConditionInfo);
         }
-        public virtual void OnDeactive(EffectSystem.EffectTriggerConditionInfo triggerConditionInfo)
+        public virtual void OnDeactive(EffectTriggerConditionInfo triggerConditionInfo)
         {
             ExecuteDeactive(triggerConditionInfo);
         }
 
-        public void ExecuteActive(EffectSystem.EffectTriggerConditionInfo triggerConditionInfo)
+        public void ExecuteActive(EffectTriggerConditionInfo triggerConditionInfo)
         {
             effectList.SetDirty(true);
 
@@ -113,7 +113,7 @@ namespace MacacaGames.EffectSystem
                 effectView.OnActive();
 
         }
-        public void ExecuteDeactive(EffectSystem.EffectTriggerConditionInfo triggerConditionInfo)
+        public void ExecuteDeactive(EffectTriggerConditionInfo triggerConditionInfo)
         {
             effectList.SetDirty(true);
 
@@ -125,7 +125,7 @@ namespace MacacaGames.EffectSystem
 
 
             //(Flag)Deactive時自動銷毀 >> 不再啟動
-            if (info.logic == EffectSystemScriptable.EffectInfoLogic.OnlyActiveOnce)
+            if (info.logic == EffectInfoLogic.OnlyActiveOnce)
             {
                 SetSleep();
             }
@@ -247,12 +247,12 @@ namespace MacacaGames.EffectSystem
             //Condition存在，且Condition成立則傳值，否則傳回0
             if (condition != null && condition.isActive == false) return 0F;
 
-            return GetOriginValue() * owner.GetRuntimeValue(info.inputType);
+            return GetOriginValue() * owner.GetRuntimeValue(info.GetParameterByKey("inputType"));
         }
         public virtual float GetOriginValue()
         {
 
-            return info.inputBase;
+            return info.value;
         }
 
         protected virtual string GetStartEffectLog()
