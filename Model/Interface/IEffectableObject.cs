@@ -27,9 +27,9 @@ namespace MacacaGames.EffectSystem
         /// e.g. Current_ATK = ATK_Constant * ATK_Ratio
         /// So only using EffectSystem.GetEffectSum() is not enough
         /// </summary>
-        /// <param name="inputType"></param>
+        /// <param name="parameterKey"></param>
         /// <returns></returns>
-        float GetRuntimeValue(string inputType);
+        float GetRuntimeValue(string parameterKey);
 
     }
 }

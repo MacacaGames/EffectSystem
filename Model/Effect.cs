@@ -32,8 +32,7 @@ namespace MacacaGames.EffectSystem.Model
         public TriggerTransType triggerTransType;
         public float activeProbability; // Active、Deacitve機率，0-100
         public float deactiveProbability;
-        public int activeMaintainActions;
-        public int activeMaintainRounds;
+        public float activeMaintainTime; // 就規格
         public int cooldownTime;
         public EffectInfoLogic logic;
         public string colliderType;
@@ -112,7 +111,7 @@ namespace MacacaGames.EffectSystem.Model
                 triggerTransType = triggerTransType,
                 deactiveCondition = deactiveCondition,
                 cooldownTime = cooldownTime,
-                activeMaintainActions = activeMaintainActions,
+                activeMaintainTime = activeMaintainTime,
             };
         }
 

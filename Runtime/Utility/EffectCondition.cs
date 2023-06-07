@@ -1,12 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Rayark.Mast;
-using Coroutine = Rayark.Mast.Coroutine;
-using MacacaGames.GameSystem;
-using System.Linq;
 using MacacaGames.EffectSystem.Model;
 using System;
+using System.Threading.Tasks;
 
 namespace MacacaGames.EffectSystem
 {
@@ -18,12 +15,6 @@ namespace MacacaGames.EffectSystem
         EffectInfo effectInfo => effectInstance.info;
 
         float lastActiveTime = -1F;
-        float lastActiveRound = -1;
-        int currentAction = 0;
-        int maintainActions = 0;
-        int currentRound = 0;
-        int maintainRounds = 0;
-        bool isCountingMaintainTime = false;
 
         public bool isActive { get; private set; }
 
@@ -48,10 +39,10 @@ namespace MacacaGames.EffectSystem
                     owner = effectInstance.owner
                 });
             }
-            // else
-            // {
-            //     OnCooldownTimeEnd();
-            // }
+            else
+            {
+                OnColdDownTimeEnd();
+            }
         }
 
         public void End()
@@ -64,21 +55,14 @@ namespace MacacaGames.EffectSystem
                 });
             }
 
-            // StopActiveMaintainTime();
+            StopActiveMaintainTime();
         }
 
-
         // Active / Deactive
-
         public void OnActive(EffectTriggerConditionInfo info)
         {
             if (effectInstance.RemoveSleepyEffect())
                 return;
-
-            if (IsOneOfRequirementsListFullfilled(info, effectInfo.activeRequirementLists, effectInfo) == false)
-            {
-                return;
-            }
 
             //檢查機率觸發
             if (UnityEngine.Random.Range(0F, 100F) >= effectInfo.activeProbability && effectInfo.activeProbability != 0F)
@@ -87,14 +71,13 @@ namespace MacacaGames.EffectSystem
                 return;
             }
 
-            //檢查Cooldown
-            if (CheckCooldownTime() == false)
+            //檢查ColdDown
+            if (CheckColdDownTime() == false)
             {
                 return;
             }
 
             ForceActive(info);
-
         }
 
         void ForceActive(EffectTriggerConditionInfo info)
@@ -144,8 +127,6 @@ namespace MacacaGames.EffectSystem
 
             //記下冷卻開始時間
             lastActiveTime = GetCurrentTime();
-
-
         }
 
         public void OnDeactive(EffectTriggerConditionInfo info)
@@ -156,11 +137,6 @@ namespace MacacaGames.EffectSystem
             //只有Active時才能Deactive
             if (isActive == true)
             {
-                if (IsOneOfRequirementsListFullfilled(info, effectInfo.deactiveRequirementLists, effectInfo) == false)
-                {
-                    return;
-                }
-
                 //檢查機率觸發
                 if (effectInfo.deactiveProbability != 0F && UnityEngine.Random.Range(0F, 100F) >= effectInfo.deactiveProbability)
                 {
@@ -170,7 +146,6 @@ namespace MacacaGames.EffectSystem
 
                 ForceDeactive(info);
             }
-
         }
 
         public void ForceDeactive(EffectTriggerConditionInfo info)
@@ -180,26 +155,13 @@ namespace MacacaGames.EffectSystem
 
             isActive = false;
 
-            // StopActiveMaintainTime();
-            StartCooldownTime();
+            StopActiveMaintainTime();
+            StartColdDownTime();
 
             effectInstance.OnDeactive(info);
-
         }
 
-        public bool IsOneOfRequirementsListFullfilled(EffectTriggerConditionInfo info, List<ConditionRequirement> requirementLists, EffectInfo targetInfo)
-        {
-            foreach (var item in requirementLists)
-            {
-                if (item.IsRequirementsFullfilled(info))
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        void OnCooldownTimeEnd()
+        void OnColdDownTimeEnd()
         {
             if (effectInstance.RemoveSleepyEffect())
                 return;
@@ -214,10 +176,25 @@ namespace MacacaGames.EffectSystem
             }
         }
 
+        #region Time Management
+        public static Func<float> GamePlayTime;
+
+        public void Update(float delta)
+        {
+            if (currentColddownStartTime > 0)
+            {
+                currentColddownStartTime -= delta;
+            }
+            if (currentMaintainTime > 0)
+            {
+                currentMaintainTime -= delta;
+            }
+        }
+
+        #endregion
         #region Cold Time         
 
-
-        bool CheckCooldownTime()
+        bool CheckColdDownTime()
         {
             if (lastActiveTime < 0)
                 return true;
@@ -230,145 +207,106 @@ namespace MacacaGames.EffectSystem
 
         float GetCurrentTime()
         {
-            if (GamePlayTime == null)
-            {
-                throw new Exception("Please assign GamePlayTime impl");
-            }
             return GamePlayTime.Invoke();
-            // return ApplicationController.Instance.GetGamePlayController().GetGamePlayData<MainGamePlayData>().gamePlayTime;
         }
-        public static Func<float> GamePlayTime;
 
-
-        Coroutine coldTimeCoroutine = null;
-        void StartCooldownTime()
+        float currentColddownStartTime = 0;
+        Coroutine coldTimeCoroutine;
+        void StartColdDownTime()
         {
-            float t = effectInfo.cooldownTime;
-            if (t > 0F)
+            currentColddownStartTime = effectInfo.cooldownTime;
+            if (effectInfo.cooldownTime > 0F)
             {
-                coldTimeCoroutine = new Coroutine(CooldownTime(t));
-                ApplicationController.Instance.GetGamePlayController().AddToUpdateExecuter(coldTimeCoroutine);
+                coldTimeCoroutine = CoroutineManager.Instance.StartCoroutine(ColdDownTimeChecking());
             }
 
-            IEnumerator CooldownTime(float time)
+            IEnumerator ColdDownTimeChecking()
             {
-                yield return Coroutine.Sleep(time);
-                CooldownTimeEndTrigger();
+                while (true)
+                {
+                    if (currentColddownStartTime <= 0 || Mathf.Approximately(currentColddownStartTime, 0))
+                        break;
+                    yield return null;
+                }
+                ColdDownTimeEndTrigger();
             }
 
-            void CooldownTimeEndTrigger()
+            void ColdDownTimeEndTrigger()
             {
-                OnCooldownTimeEnd();
+                coldTimeCoroutine = null;
+                OnColdDownTimeEnd();
             }
         }
 
-        // void StopCooldownTime()
-        // {
-        //     if (coldTimeCoroutine != null)
-        //     {
-        //         ApplicationController.Instance.GetGamePlayController().RemoveFromUpdateExecuter(coldTimeCoroutine);
-        //     }
-        // }
+        void StopColdDownTime()
+        {
+            if (coldTimeCoroutine != null)
+            {
+                CoroutineManager.Instance.StopCoroutine(coldTimeCoroutine);
+            }
+        }
 
         #endregion
 
         #region Maintain Time
 
-        Coroutine maintainCoroutine = null;
+        float currentMaintainTime = 0;
+        Coroutine maintainTimeCoroutine = null;
         void StartActiveMaintainTime()
         {
-            if (isCountingMaintainTime == true)
+            float currentMaintainTime = effectInfo.activeMaintainTime;
+
+            if (currentMaintainTime > 0F)
             {
-                return;
+                CoroutineManager.Instance.StartCoroutine(MaintainTimeChecking());
             }
-            // float t = effectInfo.activeMaintainActions;
 
-            // if (t > 0F)
-            // {
-            //     maintainCoroutine = new Coroutine(MaintainTime(t));
-            //     ApplicationController.Instance.GetGamePlayController().AddToUpdateExecuter(maintainCoroutine);
-            // }
-
-            // IEnumerator MaintainTime(float time)
-            // {
-            //     yield return Coroutine.Sleep(time);
-            //     MaintainTimeEndTrigger();
-            // }
-            isCountingMaintainTime = true;
-            maintainActions = effectInfo.activeMaintainActions;
-            maintainRounds = effectInfo.activeMaintainRounds;
-
-        }
-
-
-        public void UpdateMaintainAction()
-        {
-            if (maintainActions == 0) return;
-
-            currentAction += 1;
-            if (currentAction == maintainActions)
+            IEnumerator MaintainTimeChecking()
             {
+                while (true)
+                {
+                    if (currentMaintainTime <= 0 || Mathf.Approximately(currentMaintainTime, 0))
+                        break;
+                    yield return null;
+                }
                 MaintainTimeEndTrigger();
             }
-        }
-        public void UpdateMaintainRound()
-        {
-            if (maintainRounds == 0) return;
 
-            currentRound += 1;
-            if (currentRound == maintainRounds)
+        }
+
+        void StopActiveMaintainTime()
+        {
+            if (maintainTimeCoroutine != null)
             {
-                MaintainTimeEndTrigger();
+                CoroutineManager.Instance.StopCoroutine(maintainTimeCoroutine);
             }
         }
-
-        // void StopActiveMaintainTime()
-        // {
-        //     if (maintainCoroutine != null)
-        //     {
-        //         ApplicationController.Instance.GetGamePlayController().RemoveFromUpdateExecuter(maintainCoroutine);
-        //     }
-        // }
 
         void MaintainTimeEndTrigger()
         {
+            maintainTimeCoroutine = null;
             ForceDeactive(new EffectTriggerConditionInfo
             {
                 owner = effectInstance.owner
             });
-
-            if (effectInfo.logic == EffectInfoLogic.DestroyAfterMaintainTimeEnd)
-            {
-                effectInstance.RemoveEffect();
-            }
-
-            ResetMaintainTime();
         }
-
 
         #endregion
 
-        public void ResetMaintainTime()
+        public void ResetActiveTime()
         {
-            isCountingMaintainTime = false;
-            currentAction = -1;
-            currentRound = -1;
-
-            // if (maintainCoroutine != null)
-            // {
-            //     StopActiveMaintainTime();
-            //     MaintainTimeEndTrigger();
-            // }
+            if (maintainTimeCoroutine != null)
+            {
+                StopActiveMaintainTime();
+                MaintainTimeEndTrigger();
+            }
         }
 
-        public void ResetCooldownTime()
+        public void ResetColdDownTime()
         {
             lastActiveTime = -1;
-            lastActiveRound = -1;
 
-            // StopCooldownTime();
+            StopColdDownTime();
         }
-
-
     }
 }

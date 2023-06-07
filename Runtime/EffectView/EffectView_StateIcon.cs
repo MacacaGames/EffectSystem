@@ -69,9 +69,9 @@ namespace MacacaGames.EffectSystem
 
             if (countTime == CountTime.MaintainTime)
             {
-                if (info.activeMaintainActions > 0F)
+                if (info.activeMaintainTime > 0F)
                 {
-                    displayTimeCoroutine = new Rayark.Mast.Coroutine(DisplayTimeProgress(info.activeMaintainActions));
+                    displayTimeCoroutine = new Rayark.Mast.Coroutine(DisplayTimeProgress(info.activeMaintainTime));
                     ApplicationController.Instance.GetGamePlayController().AddToUpdateExecuter(displayTimeCoroutine);
                 }
                 else
@@ -90,7 +90,7 @@ namespace MacacaGames.EffectSystem
 
             if (countTime == CountTime.MaintainTime)
             {
-                if (info.activeMaintainActions > 0F)
+                if (info.activeMaintainTime > 0F)
                 {
                     ApplicationController.Instance.GetGamePlayController().RemoveFromUpdateExecuter(displayTimeCoroutine);
                 }

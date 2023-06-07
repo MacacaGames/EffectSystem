@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Sirenix.OdinInspector;
 using System.Reflection;
 using UnityEngine;
 
@@ -61,7 +60,7 @@ namespace MacacaGames.EffectSystem.Model
         public static Func<List<string>, List<ConditionRequirement>> GetDeactiveRequirementLists;
         [MessagePack.IgnoreMember]
         public List<ConditionRequirement> deactiveRequirementLists
-          {
+        {
             get
             {
                 if (GetDeactiveRequirementLists == null)
@@ -100,13 +99,11 @@ namespace MacacaGames.EffectSystem.Model
     {
         [HideInInspector]
         public string id;
-        [HorizontalGroup("ViewInfo"), HideLabel]
         public string viewRootType;
-        [HorizontalGroup("ViewInfo"), HideLabel]
         [HideInInspector]
         public string prefabAddress;
 
-        [HorizontalGroup("ViewInfo"), HideLabel, Newtonsoft.Json.JsonIgnore, MessagePack.IgnoreMember]
+        [Newtonsoft.Json.JsonIgnore, MessagePack.IgnoreMember]
         public GameObject prefab;
         [MessagePack.IgnoreMember]
         public static Func<string, GameObject> GetPrefab;

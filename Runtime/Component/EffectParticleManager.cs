@@ -6,52 +6,15 @@ namespace MacacaGames.EffectSystem
 {
     public class EffectParticleManager : UnitySingleton<EffectParticleManager>
     {
-        public enum ParticleType
-        {
-            None = 0,
-            Poison = 1,
-            BossDie = 2,
-            BossDust = 3,
-            BossDieBG = 4,
-            Explosion = 5,
-            BurnOnce = 6,
-            FirstStrike = 7,
-            WeakStrike = 8,
-            Boost_Crit = 9,
-            Boost_Defend = 10,
-            Boost_Power = 11,
-            Boost_Recover = 12,
-            Boost_Speed = 13,
-            Boost_Invincible = 14,
-            HeroDie = 15,
-            HeroWakeUp = 16,
-            HeroWakeUpBG = 17,
-            Pumpkin_Disappear_Left = 18,
-            Pumpkin_Disappear_Right = 19,
-            HeroHeal = 20,
-            BossMagicBallExplosion = 21,
-            Particle_Slot01 = 22,
-            Particle_Slot02 = 23,
-            Particle_Slot03 = 24,
-            Particle_Slot04 = 25,
-            Particle_Slot05 = 26,
-            Particle_Slot06 = 27,
-            Particle_Slot07 = 28,
-            Particle_Slot08 = 29,
-            Particle_Slot09 = 30,
-            Particle_Slot10 = 31,
-        }
-
         [System.Serializable]
-        public struct ParticleStruct
+        public struct EffectParticleData
         {
             public string type;
             public ParticleSystem particle;
         }
 
-        [Sirenix.OdinInspector.TableList]
         [SerializeField]
-        ParticleStruct[] particleQuery;
+        EffectParticleData[] particleQuery;
 
         Dictionary<string, ParticleSystem> poolDict = new Dictionary<string, ParticleSystem>();
 

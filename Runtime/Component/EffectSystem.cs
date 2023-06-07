@@ -45,7 +45,7 @@ namespace MacacaGames.EffectSystem
         public Dictionary<string, Func<Action<EffectTriggerConditionInfo>, IEnumerator>> EffectConditionTriggerQuery = new Dictionary<string, Func<Action<EffectTriggerConditionInfo>, IEnumerator>>();    //給對應Trigger綁定Delegate的
 
 
-     
+
         #endregion
 
         public static EffectCalculator calculator = new EffectCalculator();
@@ -190,10 +190,9 @@ namespace MacacaGames.EffectSystem
 
         #endregion
 
-        public void UpdateEffectMaintainAction(IEffectableObject owner)
+
+        public void UpdateEffectUpdate(float delta, IEffectableObject owner)
         {
-            // Due to InvalidOperationException: Collection was modified; enumeration operation may not execute. migrate to for loop
-            // foreach (var effectList in GetEffectList(owner).Values)
             var keys = new List<string>(GetEffectList(owner).Keys);
             for (int i = 0; i < keys.Count; i++)
             {
@@ -201,25 +200,40 @@ namespace MacacaGames.EffectSystem
                 var effectList = GetEffectList(owner)[key];
                 foreach (EffectBase effect in effectList)
                 {
-                    effect.UpdateMaintainAction();
+                    effect.UpdateEffectCondition(delta);
                 }
             }
         }
-        public void UpdateEffectMaintainRound(IEffectableObject owner)
-        {
-            // Due to InvalidOperationException: Collection was modified; enumeration operation may not execute. migrate to for loop
-            // foreach (var effectList in GetEffectList(owner).Values)
-            var keys = new List<string>(GetEffectList(owner).Keys);
-            for (int i = 0; i < keys.Count; i++)
-            {
-                var key = keys[i];
-                var effectList = GetEffectList(owner)[key];
-                foreach (EffectBase effect in effectList)
-                {
-                    effect.UpdateMaintainRound();
-                }
-            }
-        }
+        // public void UpdateEffectMaintainAction(IEffectableObject owner)
+        // {
+        //     // Due to InvalidOperationException: Collection was modified; enumeration operation may not execute. migrate to for loop
+        //     // foreach (var effectList in GetEffectList(owner).Values)
+        //     var keys = new List<string>(GetEffectList(owner).Keys);
+        //     for (int i = 0; i < keys.Count; i++)
+        //     {
+        //         var key = keys[i];
+        //         var effectList = GetEffectList(owner)[key];
+        //         foreach (EffectBase effect in effectList)
+        //         {
+        //             effect.UpdateMaintainAction();
+        //         }
+        //     }
+        // }
+        // public void UpdateEffectMaintainRound(IEffectableObject owner)
+        // {
+        //     // Due to InvalidOperationException: Collection was modified; enumeration operation may not execute. migrate to for loop
+        //     // foreach (var effectList in GetEffectList(owner).Values)
+        //     var keys = new List<string>(GetEffectList(owner).Keys);
+        //     for (int i = 0; i < keys.Count; i++)
+        //     {
+        //         var key = keys[i];
+        //         var effectList = GetEffectList(owner)[key];
+        //         foreach (EffectBase effect in effectList)
+        //         {
+        //             effect.UpdateMaintainRound();
+        //         }
+        //     }
+        // }
 
         public void ResetEffectActiveTimeAndCooldownTime(IEffectableObject owner)
         {
@@ -647,9 +661,9 @@ namespace MacacaGames.EffectSystem
                     }
                     else if (p == "maintainTime" || p == "time")
                     {
-                        return currentInfo.activeMaintainActions;
+                        return currentInfo.activeMaintainTime;
                     }
-                    else if (p == "coldDownTime" || p == "cd")
+                    else if (p == "cooldownTime" || p == "cd")
                     {
                         return currentInfo.cooldownTime;
                     }
@@ -660,14 +674,6 @@ namespace MacacaGames.EffectSystem
                     else if (p == "deactiveProbability" || p == "deactiveProb")
                     {
                         return currentInfo.deactiveProbability;
-                    }
-                    else if (p == "activeMaintainActions" || p == "actions")
-                    {
-                        return currentInfo.activeMaintainActions - 1;
-                    }
-                    else if (p == "activeMaintainRounds" || p == "rounds")
-                    {
-                        return currentInfo.activeMaintainRounds;
                     }
                 }
 

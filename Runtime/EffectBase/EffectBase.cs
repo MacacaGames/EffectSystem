@@ -170,24 +170,19 @@ namespace MacacaGames.EffectSystem
             foreach (var effectView in effectViewList)
                 effectView.OnColdDownEnd();
         }
-
-        public void UpdateMaintainAction()
+        public void UpdateEffectCondition(float delta)
         {
-            condition.UpdateMaintainAction();
-        }
-        public void UpdateMaintainRound()
-        {
-            condition.UpdateMaintainRound();
+            condition.Update(delta);
         }
 
         public void ResetActiveTime()
         {
-            condition.ResetMaintainTime();
+            condition.ResetActiveTime();
         }
 
         public void ResetColdDownTime()
         {
-            condition.ResetCooldownTime();
+            condition.ResetColdDownTime();
         }
 
 
