@@ -30,7 +30,11 @@ namespace MacacaGames.EffectSystem.Editor
             }
             set
             {
-                cloneTree.Q<Label>("ownerName").text = value.ToString();
+                if (value == null)
+                {
+                    return;
+                }
+                cloneTree.Q<Label>("ownerName").text = value.GetDisplayName();
                 _currentSelectIEffectableObjectowner = value;
                 FreshEffectList();
             }
@@ -62,6 +66,7 @@ namespace MacacaGames.EffectSystem.Editor
             Init();
 
             FreshEffectList();
+            FreshCurrentIEffectable();
         }
 
         private void OnDisable()
@@ -76,6 +81,7 @@ namespace MacacaGames.EffectSystem.Editor
             if (Application.isPlaying == false)
             {
                 ClearEffectList();
+                ClearFreshCurrentIEffectable();
             }
             else
             {
@@ -87,6 +93,8 @@ namespace MacacaGames.EffectSystem.Editor
                 {
                     currentSelectIEffectableObjectowner = null;
                 }
+
+                FreshCurrentIEffectable();
 
                 FreshEffectList();
             }
@@ -119,16 +127,6 @@ namespace MacacaGames.EffectSystem.Editor
             effectsLocation = cloneTree.Q("Effects");
 
             tagField = cloneTree.Q<TextField>("TagField");
-            cloneTree.Q<Button>("PickCurrent").clickable.clicked += () =>
-            {
-                var t = Selection.activeGameObject.GetComponent<IEffectableObject>();
-                if (t == null)
-                {
-                    Debug.LogError("Target is not a IEffectableObject ");
-                }
-                currentSelectIEffectableObjectowner = t;
-                FreshEffectList();
-            };
 
 
             cloneTree.Q<Button>("AddEffect").AddClass("effect-add-btn").clickable.clicked += () =>
@@ -287,6 +285,23 @@ namespace MacacaGames.EffectSystem.Editor
                 }
                 effectsLocation.Add(effectsRoot);
             }
+
+            SearchEffect(searchText);
+        }
+
+        void ClearEffectList()
+        {
+            if (effectsRoot != null && effectsRoot.parent == effectsLocation)
+                effectsLocation.Remove(effectsRoot);
+        }
+
+        void FreshCurrentIEffectable()
+        {
+            if (effectSystem == null)
+            {
+                return;
+            }
+            ClearFreshCurrentIEffectable();
             effectableObjectsRoot = new VisualElement();
             var effectableObjects = effectSystem.GetEffectableObjects();
             if (effectableObjects != null)
@@ -301,13 +316,12 @@ namespace MacacaGames.EffectSystem.Editor
                 }
                 currentIffectableScrollView.Add(effectableObjectsRoot);
             }
-            SearchEffect(searchText);
         }
 
-        void ClearEffectList()
+        void ClearFreshCurrentIEffectable()
         {
-            if (effectsRoot != null && effectsRoot.parent == effectsLocation)
-                effectsLocation.Remove(effectsRoot);
+            if (effectableObjectsRoot != null && effectableObjectsRoot.parent == currentIffectableScrollView)
+                currentIffectableScrollView.Remove(effectableObjectsRoot);
         }
     }
 }
