@@ -28,7 +28,7 @@
                 <ui:Button text="Add Effects" name="AddEffect_Json" style="width: 100px;" />
             </ui:VisualElement>
             <ui:Label tabindex="-1" text="Current IEffectableObjects" display-tooltip-when-elided="true" />
-            <ui:ScrollView name="CurrentItems" style="height: 127px;" />
+            <ui:ScrollView name="CurrentItems" style="height: 240px;" />
             <ui:VisualElement name="space" style="flex-grow: 1;" />
             <ui:VisualElement style="flex-direction: row; flex-grow: 0; flex-shrink: 1; align-items: flex-start; align-self: stretch;">
                 <ui:Button text="Bake" display-tooltip-when-elided="false" name="Bake" style="-unity-text-align: middle-center; white-space: nowrap; height: 19px; flex-direction: column;" />
