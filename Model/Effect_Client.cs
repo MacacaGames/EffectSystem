@@ -8,9 +8,9 @@ namespace MacacaGames.EffectSystem.Model
 {
     public partial struct EffectInfo
     {
-        [MessagePack.IgnoreMember]
+        [MessagePack.IgnoreMember, Newtonsoft.Json.JsonIgnore]
         List<EffectInfo> _subInfos;
-        [MessagePack.IgnoreMember]
+        [MessagePack.IgnoreMember, Newtonsoft.Json.JsonIgnore]
         public List<EffectInfo> subInfos
         {
             get
@@ -27,9 +27,9 @@ namespace MacacaGames.EffectSystem.Model
             }
         }
 
-        [MessagePack.IgnoreMember]
+        [MessagePack.IgnoreMember, Newtonsoft.Json.JsonIgnore]
         List<EffectViewInfo> _viewInfos;
-        [MessagePack.IgnoreMember]
+        [MessagePack.IgnoreMember, Newtonsoft.Json.JsonIgnore]
         public List<EffectViewInfo> viewInfos
         {
             get
@@ -85,7 +85,7 @@ namespace MacacaGames.EffectSystem.Model
 
         [Newtonsoft.Json.JsonIgnore, MessagePack.IgnoreMember]
         public GameObject prefab;
-        [MessagePack.IgnoreMember]
+        [MessagePack.IgnoreMember, Newtonsoft.Json.JsonIgnore]
         public static Func<string, GameObject> GetPrefab;
         public string prefabName;
     }
