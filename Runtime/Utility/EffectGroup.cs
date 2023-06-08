@@ -20,7 +20,7 @@ namespace MacacaGames.EffectSystem
         [SerializeField]
         public string description;
 
-        public EffectInfo[] effects = new EffectInfo[0];
+        public List<EffectInfo> effects = new List<EffectInfo>();
 
         [HideInInspector]
         public string address;
@@ -30,14 +30,14 @@ namespace MacacaGames.EffectSystem
             return name;
         }
 
-        public void GetJsonNeteffects()
+        public void ExportEffectToJson()
         {
             Debug.Log(Newtonsoft.Json.JsonConvert.SerializeObject(effects));
         }
-      
-        public void FromJsonNet(string test)
+
+        public void FromJson(string test)
         {
-            var result = Newtonsoft.Json.JsonConvert.DeserializeObject<List<EffectInfo>>(test);
+           effects = Newtonsoft.Json.JsonConvert.DeserializeObject<List<EffectInfo>>(test);
         }
     }
 }
