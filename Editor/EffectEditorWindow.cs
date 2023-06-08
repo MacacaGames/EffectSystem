@@ -12,7 +12,6 @@ namespace MacacaGames.EffectSystem.Editor
     public class EffectEditorWindow : EditorWindow
     {
         EffectSystem effectSystem => EffectSystem.Instance;
-        const string path = "Assets/0_Game/Scripts/Effect";
         List<IEffectableObject> enemyCache = new List<IEffectableObject>();
 
         [MenuItem("MacacaGames/EffectSystem/Effect Editor Window")]
@@ -34,7 +33,7 @@ namespace MacacaGames.EffectSystem.Editor
                 {
                     return;
                 }
-                cloneTree.Q<Label>("ownerName").text = value.GetDisplayName();
+                cloneTree.Q<Label>("ownerName").text = $"Current Select: {value.GetDisplayName()}";
                 _currentSelectIEffectableObjectowner = value;
                 FreshEffectList();
             }
@@ -102,7 +101,18 @@ namespace MacacaGames.EffectSystem.Editor
 
         [SerializeField]
         EffectInfo effectInfo = new EffectInfo();
-
+        TextField effectJsonField;
+        string effectJsonText
+        {
+            set
+            {
+                effectJsonField.value = value;
+            }
+            get
+            {
+                return effectJsonField.value;
+            }
+        }
         VisualElement effectsLocation;
         VisualElement effectsRoot;
         VisualElement effectableObjectsRoot;
@@ -152,7 +162,38 @@ namespace MacacaGames.EffectSystem.Editor
                 EffectGroup group = cloneTree.Q<ObjectField>("EffectGroupField").value as EffectGroup;
                 AddEffectGroupData(group);
             };
+            effectJsonField = cloneTree.Q<TextField>("EffectJson");
 
+            cloneTree.Q<Button>("AddEffect_Json").clickable.clicked += () =>
+            {
+                var isArray = effectJsonText[0] == '[';
+                if (isArray)
+                {
+                    try
+                    {
+                        var effectInfo = Newtonsoft.Json.JsonConvert.DeserializeObject<List<EffectInfo>>(effectJsonText);
+                        AddEffects(effectInfo);
+                    }
+                    catch
+                    {
+
+                    }
+                }
+                else
+                {
+                    try
+                    {
+                        var effectInfo = Newtonsoft.Json.JsonConvert.DeserializeObject<EffectInfo>(effectJsonText);
+                        AddEffect(effectInfo);
+                    }
+                    catch
+                    {
+
+                    }
+                }
+
+
+            };
             searchField = cloneTree.Q<TextField>("SearchText");
             searchField.RegisterValueChangedCallback(_ => searchText = _.newValue);
 
@@ -198,6 +239,10 @@ namespace MacacaGames.EffectSystem.Editor
         }
         void AddEffects(IEnumerable<EffectInfo> effectInfos, params string[] tags)
         {
+            if (tags == null || tags.Length == 0)
+            {
+                tags = this.tags;
+            }
             effectSystem.AddRequestedEffects(currentSelectIEffectableObjectowner, effectInfos, tags);
         }
 
@@ -244,12 +289,22 @@ namespace MacacaGames.EffectSystem.Editor
 
             return root;
         }
-
-        VisualElement GenerateCurrentIffectableObjects(IEffectableObject effectableObject)
+        class Wrapper
+        {
+            public IEffectableObject effectableObject;
+        }
+        VisualElement GenerateCurrentIffectableObjects(Wrapper w)
         {
             VisualElement root = new VisualElement();
-            var button = new Button().Action(_ => { currentSelectIEffectableObjectowner = effectableObject; });
-            button.text = effectableObject.GetDisplayName();
+
+            var button = new Button(
+                () =>
+                {
+                    currentSelectIEffectableObjectowner = w.effectableObject;
+                    FreshEffectList();
+                }
+            );
+            button.text = w.effectableObject.GetDisplayName();
             root.Add(button);
             return root;
         }
@@ -306,9 +361,12 @@ namespace MacacaGames.EffectSystem.Editor
             var effectableObjects = effectSystem.GetEffectableObjects();
             if (effectableObjects != null)
             {
-                foreach (var item in effectableObjects)
+                for (int i = 0; i < effectableObjects.Count; i++)
                 {
-                    VisualElement el = GenerateCurrentIffectableObjects(item);
+                    IEffectableObject item = effectableObjects[i];
+                    Wrapper w = new Wrapper();
+                    w.effectableObject = item;
+                    VisualElement el = GenerateCurrentIffectableObjects(w);
                     effectableObjectsRoot.Add(el);
                     // effectElementQuery.Add(item, el);
 
