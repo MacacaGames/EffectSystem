@@ -5,6 +5,7 @@ namespace MacacaGames.EffectSystem
 {
     public interface IEffectableObject
     {
+        string GetDisplayName();
         void DestoryEffectableObject();
 
         Transform GetEffectViewParent(string viewRoot);

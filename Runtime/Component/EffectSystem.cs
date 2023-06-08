@@ -160,6 +160,15 @@ namespace MacacaGames.EffectSystem
         ///<summary>所有Owner的每種Type的EffectList。</summary>
         Dictionary<IEffectableObject, EffectableObjectInfo> effectableObjectQuery = new Dictionary<IEffectableObject, EffectableObjectInfo>();
 
+        public List<IEffectableObject> GetEffectableObjects()
+        {
+            if (effectableObjectQuery == null || effectableObjectQuery.Count == 0)
+            {
+                return null;
+            }
+            return effectableObjectQuery.Select(m => m.Key).ToList();
+        }
+
         #region EffectableObjectInfo
 
         EffectableObjectInfo GetEffectableObjectInfo(IEffectableObject owner)
@@ -200,36 +209,6 @@ namespace MacacaGames.EffectSystem
                 }
             }
         }
-        // public void UpdateEffectMaintainAction(IEffectableObject owner)
-        // {
-        //     // Due to InvalidOperationException: Collection was modified; enumeration operation may not execute. migrate to for loop
-        //     // foreach (var effectList in GetEffectList(owner).Values)
-        //     var keys = new List<string>(GetEffectList(owner).Keys);
-        //     for (int i = 0; i < keys.Count; i++)
-        //     {
-        //         var key = keys[i];
-        //         var effectList = GetEffectList(owner)[key];
-        //         foreach (EffectBase effect in effectList)
-        //         {
-        //             effect.UpdateMaintainAction();
-        //         }
-        //     }
-        // }
-        // public void UpdateEffectMaintainRound(IEffectableObject owner)
-        // {
-        //     // Due to InvalidOperationException: Collection was modified; enumeration operation may not execute. migrate to for loop
-        //     // foreach (var effectList in GetEffectList(owner).Values)
-        //     var keys = new List<string>(GetEffectList(owner).Keys);
-        //     for (int i = 0; i < keys.Count; i++)
-        //     {
-        //         var key = keys[i];
-        //         var effectList = GetEffectList(owner)[key];
-        //         foreach (EffectBase effect in effectList)
-        //         {
-        //             effect.UpdateMaintainRound();
-        //         }
-        //     }
-        // }
 
         public void ResetEffectActiveTimeAndCooldownTime(IEffectableObject owner)
         {

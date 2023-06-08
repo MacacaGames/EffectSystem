@@ -8,8 +8,8 @@ using System.Linq;
 namespace MacacaGames.EffectSystem.Model
 {
 
-    // [Serializable]
     [MessagePack.MessagePackObject(true)]
+    [Serializable]
     public partial struct EffectInfo
     {
         public string id;
@@ -143,7 +143,7 @@ namespace MacacaGames.EffectSystem.Model
         }
     }
 
-    [MessagePack.MessagePackObject(true)]
+    [MessagePack.MessagePackObject(true)][Serializable]
     public struct ConditionRequirement
     {
         public string id;

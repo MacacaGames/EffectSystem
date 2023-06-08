@@ -1,9 +1,10 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
     <Style src="project://database/Packages/com.macacagames.effectsystem/Editor/Resources/EffectEditorWindow.uss?fileID=7433441132597879392&amp;guid=86d16d762fddd4d4cafc57226446b428&amp;type=3#EffectEditorWindow" />
     <ui:VisualElement name="Root" style="flex-direction: row; flex-grow: 1;">
         <ui:VisualElement name="EffectFunc" style="flex-direction: column; padding-left: 6px; padding-right: 6px; padding-top: 6px; padding-bottom: 6px; border-color: rgba(0, 0, 0, 0.06); width: 340px; min-width: 200px;">
             <ui:VisualElement style="border-bottom-width: 1px; border-color: rgba(0, 0, 0, 0.06); padding-top: 5px; padding-bottom: 10px;">
-                <ui:Label text="Name" name="ownerName" style="font-size: 12px; padding-left: 5px; padding-right: 0; padding-bottom: 20px;" />
+                <ui:Label text="Current Select:" name="ownerName" style="font-size: 12px; padding-left: 5px; padding-right: 0; padding-bottom: 20px;" />
+                <ui:Label tabindex="-1" text="Add by Inspector" display-tooltip-when-elided="true" />
                 <uie:PropertyField name="EffectInfo" style="min-height: 20px;" />
                 <ui:VisualElement style="flex-direction: row; margin-bottom: 3px;">
                     <ui:TextField picking-mode="Ignore" name="TagField" label="Tags" style="flex-grow: 1;" />
@@ -16,13 +17,18 @@
                     <ui:VisualElement name="space" style="flex-grow: 1;" />
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement style="padding-top: 15px; padding-bottom: 10px; flex-direction: row;">
+            <ui:Label tabindex="-1" text="Add by EffectGroup" display-tooltip-when-elided="true" />
+            <ui:VisualElement name="VisualElement" style="padding-top: 15px; padding-bottom: 10px; flex-direction: row;">
                 <uie:ObjectField allow-scene-objects="false" name="EffectGroupField" style="flex-grow: 1;" />
                 <ui:Button text="Add Effects" name="AddEffect_Group" style="width: 100px;" />
             </ui:VisualElement>
-            <ui:VisualElement style="flex-direction: column; flex-grow: 0; flex-shrink: 1; align-items: flex-start; align-self: stretch;">
-                <ui:Button text="PickCurrent" display-tooltip-when-elided="false" name="PickCurrent" style="width: 100px; -unity-text-align: middle-center; white-space: nowrap; height: 19px; flex-direction: column;" />
+            <ui:Label tabindex="-1" text="Add by Json" display-tooltip-when-elided="true" />
+            <ui:VisualElement style="flex-direction: row; flex-grow: 0; flex-shrink: 1; align-items: flex-start; align-self: stretch; flex-wrap: nowrap;">
+                <ui:TextField picking-mode="Ignore" name="EffectJson" style="width: 70%;" />
+                <ui:Button text="Add Effects" name="AddEffect_Json" style="width: 100px;" />
             </ui:VisualElement>
+            <ui:Label tabindex="-1" text="Current IEffectableObjects" display-tooltip-when-elided="true" />
+            <ui:ScrollView style="height: 127px;" />
             <ui:VisualElement name="space" style="flex-grow: 1;" />
             <ui:VisualElement style="flex-direction: row; flex-grow: 0; flex-shrink: 1; align-items: flex-start; align-self: stretch;">
                 <ui:Button text="Bake" display-tooltip-when-elided="false" name="Bake" style="-unity-text-align: middle-center; white-space: nowrap; height: 19px; flex-direction: column;" />

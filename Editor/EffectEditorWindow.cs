@@ -97,7 +97,9 @@ namespace MacacaGames.EffectSystem.Editor
 
         VisualElement effectsLocation;
         VisualElement effectsRoot;
+        VisualElement effectableObjectsRoot;
         TemplateContainer cloneTree;
+        ScrollView currentIffectableScrollView;
         void Init()
         {
             //建構
@@ -161,11 +163,14 @@ namespace MacacaGames.EffectSystem.Editor
             SerializedProperty effectInfoSO = new SerializedObject(this).FindProperty("effectInfo");
             cloneTree.Q<PropertyField>("EffectInfo").BindProperty(effectInfoSO);
 
-            // cloneTree.Q("Spliter").AddManipulator(new OnionCollections.DataEditor.VisualElementResizer(
-            //     cloneTree.Q("EffectFunc"),
-            //     cloneTree.Q("Content"),
-            //     cloneTree.Q("Spliter"),
-            //     OnionCollections.DataEditor.VisualElementResizer.Direction.Horizontal));
+            cloneTree.Q("Spliter").AddManipulator(new VisualElementResizer(
+                cloneTree.Q("EffectFunc"),
+                cloneTree.Q("Content"),
+                cloneTree.Q("Spliter"),
+                VisualElementResizer.Direction.Horizontal));
+
+            currentIffectableScrollView = cloneTree.Q<ScrollView>("CurrentItems");
+
 
         }
 
@@ -242,9 +247,22 @@ namespace MacacaGames.EffectSystem.Editor
             return root;
         }
 
+        VisualElement GenerateCurrentIffectableObjects(IEffectableObject effectableObject)
+        {
+            VisualElement root = new VisualElement();
+            var button = new Button().Action(_ => { currentSelectIEffectableObjectowner = effectableObject; });
+            button.text = effectableObject.GetDisplayName();
+            root.Add(button);
+            return root;
+        }
+
         Dictionary<EffectBase, VisualElement> effectElementQuery = new Dictionary<EffectBase, VisualElement>();
         public void FreshEffectList()
         {
+            if (effectSystem == null)
+            {
+                return;
+            }
             if (effectSystem != null)
                 effectSystem.OnEffectChange = FreshEffectList;
 
@@ -269,16 +287,27 @@ namespace MacacaGames.EffectSystem.Editor
                 }
                 effectsLocation.Add(effectsRoot);
             }
+            effectableObjectsRoot = new VisualElement();
+            var effectableObjects = effectSystem.GetEffectableObjects();
+            if (effectableObjects != null)
+            {
+                foreach (var item in effectableObjects)
+                {
+                    VisualElement el = GenerateCurrentIffectableObjects(item);
+                    effectableObjectsRoot.Add(el);
+                    // effectElementQuery.Add(item, el);
+
+                    effectableObjectsRoot.Add(new VisualElement(), new VisualElement());
+                }
+                currentIffectableScrollView.Add(effectableObjectsRoot);
+            }
             SearchEffect(searchText);
         }
 
         void ClearEffectList()
         {
-
             if (effectsRoot != null && effectsRoot.parent == effectsLocation)
                 effectsLocation.Remove(effectsRoot);
         }
-
-
     }
 }
