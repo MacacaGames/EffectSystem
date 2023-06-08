@@ -8,10 +8,6 @@ namespace MacacaGames.EffectSystem.Model
 {
     public partial struct EffectInfo
     {
-        /// <summary>
-        /// 需要依賴外部回傳值，server、client皆須註冊。
-        /// </summary>
-        public static Func<List<string>, List<EffectViewInfo>> getEffectViewInfo;
         [MessagePack.IgnoreMember]
         List<EffectInfo> _subInfos;
         [MessagePack.IgnoreMember]
@@ -19,7 +15,15 @@ namespace MacacaGames.EffectSystem.Model
         {
             get
             {
-                return _subInfos != null ? _subInfos : GetSubInfo();
+                if (_subInfos == null)
+                {
+                    if (EffectDataProvider.GetEffectInfo == null)
+                    {
+                        throw new Exception("Please use EffectDataProvider.SetEffectInfoDelegate to assign the impl");
+                    }
+                    _subInfos = EffectDataProvider.GetEffectInfo?.Invoke(subInfoIds);
+                }
+                return _subInfos;
             }
         }
 
@@ -32,11 +36,11 @@ namespace MacacaGames.EffectSystem.Model
             {
                 if (_viewInfos == null)
                 {
-                    if (getEffectViewInfo == null)
+                    if (EffectDataProvider.GetEffectViewInfo == null)
                     {
-                        throw new Exception("Please assign allEffect impl");
+                        throw new Exception("Please use EffectDataProvider.SeEffectViewInfoDelegate to assign the impl");
                     }
-                    _viewInfos = getEffectViewInfo?.Invoke(viewInfoIds);
+                    _viewInfos = EffectDataProvider.GetEffectViewInfo?.Invoke(viewInfoIds);
                 }
                 return _viewInfos;
             }
@@ -69,30 +73,6 @@ namespace MacacaGames.EffectSystem.Model
                 }
                 return GetDeactiveRequirementLists?.Invoke(deactiveRequirement); ;
             }
-        }
-
-
-        public List<EffectInfo> GetSubInfo()
-        {
-            if (getEffectInfo == null)
-            {
-                throw new Exception("Please assign allEffect impl");
-            }
-
-            List<EffectInfo> result = new List<EffectInfo>();
-            if (subInfoIds != null && subInfoIds.Count > 0)
-            {
-                foreach (string effectid in subInfoIds)
-                {
-                    EffectInfo? effect = getEffectInfo?.Invoke(effectid);
-                    if (effect != null)
-                    {
-                        result.Add((EffectInfo)effect);
-                    }
-                }
-            }
-            _subInfos = result;
-            return _subInfos;
         }
     }
     public struct EffectViewInfo

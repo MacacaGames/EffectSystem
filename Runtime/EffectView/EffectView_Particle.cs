@@ -16,7 +16,6 @@ public class EffectView_Particle : EffectViewBase
     [SerializeField]
     ParticleSystem[] onDeactiveParticle = new ParticleSystem[0];
 
-    [MacacaGames.ViewSystem.ReadOnly]
     [SerializeField]
     ParticleSystem[] onEndParticle = new ParticleSystem[0];
     

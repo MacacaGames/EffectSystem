@@ -2,10 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using Rayark.Mast;
-using Coroutine = Rayark.Mast.Coroutine;
 using DG.Tweening;
-using MacacaGames.GameSystem;
 
 namespace MacacaGames.EffectSystem
 {
@@ -71,8 +68,7 @@ namespace MacacaGames.EffectSystem
             {
                 if (info.activeMaintainTime > 0F)
                 {
-                    displayTimeCoroutine = new Rayark.Mast.Coroutine(DisplayTimeProgress(info.activeMaintainTime));
-                    ApplicationController.Instance.GetGamePlayController().AddToUpdateExecuter(displayTimeCoroutine);
+                    displayTimeCoroutine = StartCoroutine(DisplayTimeProgress(info.activeMaintainTime));
                 }
                 else
                 {
@@ -92,7 +88,10 @@ namespace MacacaGames.EffectSystem
             {
                 if (info.activeMaintainTime > 0F)
                 {
-                    ApplicationController.Instance.GetGamePlayController().RemoveFromUpdateExecuter(displayTimeCoroutine);
+                    if (displayTimeCoroutine != null)
+                    {
+                        StopCoroutine(displayTimeCoroutine);
+                    }
                 }
             }
         }
@@ -112,18 +111,19 @@ namespace MacacaGames.EffectSystem
         }
 
         Coroutine displayTimeCoroutine;
+        float displayTimer = 0;
         IEnumerator DisplayTimeProgress(float time)
         {
-            float t = 0F;
+            float displayTimer = time;
 
-            while (t < time)
+            while (displayTimer > 0)
             {
-                t += Coroutine.Delta;
+                displayTimer -= GlobalTimer.deltaTime;
 
-                timeProgress.fillAmount = 1F - (t / time);
-
+                timeProgress.fillAmount = 1F - (displayTimer / time);
                 yield return null;
             }
+            displayTimeCoroutine = null;
         }
 
         void CompareTriggerFlag(DisplayTrigger flag)

@@ -7,17 +7,20 @@ using System;
 using System.Linq;
 using Sirenix.OdinInspector;
 using System.Text.RegularExpressions;
-using MacacaGames.GameSystem;
 using System.Threading.Tasks;
 using MacacaGames.EffectSystem.Model;
 
 namespace MacacaGames.EffectSystem
 {
-
-    public class EffectSystem : MonoBehaviourLifeCycle
+    public class EffectSystem : MonoBehaviour
     {
-        #region EffectDefine
+        public static EffectSystem Instance;
+        void Awake()
+        {
+            Instance = this;
+        }
 
+        #region EffectDefine
         /// <summary>
         /// 只放預設
         /// </summary>
@@ -44,13 +47,9 @@ namespace MacacaGames.EffectSystem
 
         public Dictionary<string, Func<Action<EffectTriggerConditionInfo>, IEnumerator>> EffectConditionTriggerQuery = new Dictionary<string, Func<Action<EffectTriggerConditionInfo>, IEnumerator>>();    //給對應Trigger綁定Delegate的
 
-
-
         #endregion
 
         public static EffectCalculator calculator = new EffectCalculator();
-
-
 
         public class EffectList : ICollection<EffectBase>
         {
@@ -157,9 +156,6 @@ namespace MacacaGames.EffectSystem
             public Dictionary<string, Action<EffectTriggerConditionInfo>> deactiveCondition = new Dictionary<string, Action<EffectTriggerConditionInfo>>();
         }
 
-        public override async Task Init()
-        {
-        }
 
         ///<summary>所有Owner的每種Type的EffectList。</summary>
         Dictionary<IEffectableObject, EffectableObjectInfo> effectableObjectQuery = new Dictionary<IEffectableObject, EffectableObjectInfo>();

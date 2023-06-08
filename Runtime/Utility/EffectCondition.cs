@@ -14,7 +14,6 @@ namespace MacacaGames.EffectSystem
 
         EffectInfo effectInfo => effectInstance.info;
 
-        float lastActiveTime = -1F;
 
         public bool isActive { get; private set; }
 
@@ -85,7 +84,6 @@ namespace MacacaGames.EffectSystem
             if (effectInstance.RemoveSleepyEffect())
                 return;
 
-
             //Trans處理
             if (isActive == true)
             {
@@ -125,8 +123,7 @@ namespace MacacaGames.EffectSystem
                 StartActiveMaintainTime();
             }
 
-            //記下冷卻開始時間
-            lastActiveTime = GetCurrentTime();
+   
         }
 
         public void OnDeactive(EffectTriggerConditionInfo info)
@@ -177,8 +174,6 @@ namespace MacacaGames.EffectSystem
         }
 
         #region Time Management
-        public static Func<float> GamePlayTime;
-
         public void Update(float delta)
         {
             if (currentColddownStartTime > 0)
@@ -190,24 +185,15 @@ namespace MacacaGames.EffectSystem
                 currentMaintainTime -= delta;
             }
         }
-
         #endregion
         #region Cold Time         
 
         bool CheckColdDownTime()
         {
-            if (lastActiveTime < 0)
-                return true;
-
             if (effectInfo.cooldownTime < 0)
                 return false;
 
-            return GetCurrentTime() - lastActiveTime >= effectInfo.cooldownTime;
-        }
-
-        float GetCurrentTime()
-        {
-            return GamePlayTime.Invoke();
+            return currentColddownStartTime > 0;
         }
 
         float currentColddownStartTime = 0;
@@ -245,7 +231,6 @@ namespace MacacaGames.EffectSystem
                 CoroutineManager.Instance.StopCoroutine(coldTimeCoroutine);
             }
         }
-
         #endregion
 
         #region Maintain Time
@@ -271,7 +256,6 @@ namespace MacacaGames.EffectSystem
                 }
                 MaintainTimeEndTrigger();
             }
-
         }
 
         void StopActiveMaintainTime()
@@ -304,8 +288,6 @@ namespace MacacaGames.EffectSystem
 
         public void ResetColdDownTime()
         {
-            lastActiveTime = -1;
-
             StopColdDownTime();
         }
     }

@@ -20,7 +20,7 @@ namespace MacacaGames.EffectSystem.Model
         ReactiveAfterCooldownEnd = 2,
         DestroyAfterMaintainTimeEnd = 3,
     }
-    
+
     public enum ConditionLogic
     {
         None = 0,
@@ -29,6 +29,10 @@ namespace MacacaGames.EffectSystem.Model
         Equal = 3,
         LessEqual = 4,
         Less = 5
+    }
+    public enum EffectTaxonomy
+    {
+        Info = 0, Domain = 101, Kingdom = 102,
     }
 
 }

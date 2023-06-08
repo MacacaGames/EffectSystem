@@ -15,7 +15,6 @@ namespace MacacaGames.EffectSystem
         [System.Serializable]
         struct AudioInfo
         {
-            //[EventRef]
             public string audioName;
         }
 

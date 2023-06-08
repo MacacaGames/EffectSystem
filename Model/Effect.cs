@@ -12,23 +12,14 @@ namespace MacacaGames.EffectSystem.Model
     [MessagePack.MessagePackObject(true)]
     public partial struct EffectInfo
     {
-        public static Func<string, EffectInfo> getEffectInfo;
-
         public string id;
-        public enum EffectTaxonomy { Info = 0, Domain = 101, Kingdom = 102, }
-        public string GetTitle()
-        {
-            return this.type.ToString();
-        }
         public string type;
         public EffectTaxonomy taxonomy;
         public float value;
         public string activeCondition;
         public List<string> activeRequirement;
-       
         public string deactiveCondition;
         public List<string> deactiveRequirement;
-
         public TriggerTransType triggerTransType;
         public float activeProbability; // Active、Deacitve機率，0-100
         public float deactiveProbability;
@@ -86,7 +77,7 @@ namespace MacacaGames.EffectSystem.Model
 
             if (value == 0)
             {
-                return "Effect的Level不該等於0。";
+                return "Effect value should not be 0 or less";
             }
 
             return "(無錯誤訊息)";
@@ -206,7 +197,4 @@ namespace MacacaGames.EffectSystem.Model
             this.target = target;
         }
     }
-
-
-
 }

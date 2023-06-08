@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using DG.Tweening;
 
@@ -13,37 +12,26 @@ namespace MacacaGames.EffectSystem
         [SerializeField]
         float scaleSec = 0.5F;
 
-        [HorizontalGroup("onStart")]
         [SerializeField]
         GameObject[] onStartParticle = new GameObject[0];
 
-        [HorizontalGroup("onStart", LabelWidth = 150)]
         [SerializeField]
         float onStartScale = 1;
-        [HorizontalGroup("onActive")]
         [SerializeField]
         GameObject[] onActiveParticle = new GameObject[0];
-        [HorizontalGroup("onActive", LabelWidth = 150)]
         [SerializeField]
         float onAciveScale = 1;
-        [HorizontalGroup("onDeactive")]
         [SerializeField]
         GameObject[] onDeactiveParticle = new GameObject[0];
-        [HorizontalGroup("onDeactive", LabelWidth = 150)]
         [SerializeField]
         float onDeactiveScale = 1;
 
-        [MacacaGames.ViewSystem.ReadOnly]
-        [HorizontalGroup("onEnd")]
         [SerializeField]
         GameObject[] onEndParticle = new GameObject[0];
-        [HorizontalGroup("onEnd", LabelWidth = 150)]
         [SerializeField]
         float onEndScale = 1;
-        [HorizontalGroup("onColdDownEnd")]
         [SerializeField]
         GameObject[] onColdDownEndParticle = new GameObject[0];
-        [HorizontalGroup("onColdDownEnd", LabelWidth = 150)]
         [SerializeField]
         float onColdDownEndScale = 1;
 

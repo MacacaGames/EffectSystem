@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-using MacacaGames.GameSystem;
 using MacacaGames.EffectSystem.Model;
 
 namespace MacacaGames.EffectSystem

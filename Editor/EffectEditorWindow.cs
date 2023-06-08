@@ -6,17 +6,14 @@ using UnityEditor.UIElements;
 using UnityEngine.UIElements;
 using System.Linq;
 using System;
-using MacacaGames.GameSystem;
 using MacacaGames.EffectSystem.Model;
 namespace MacacaGames.EffectSystem.Editor
 {
     public class EffectEditorWindow : EditorWindow
     {
-        EffectSystem effectManager => ApplicationController.Instance.GetMonobehaviourLifeCycle<EffectSystem>();
+        EffectSystem effectSystem => EffectSystem.Instance;
         const string path = "Assets/0_Game/Scripts/Effect";
         List<IEffectableObject> enemyCache = new List<IEffectableObject>();
-        int enemyIndex = 0;
-
 
         [MenuItem("MacacaGames/EffectSystem/Effect Editor Window")]
         static void ShowWindow()
@@ -24,20 +21,17 @@ namespace MacacaGames.EffectSystem.Editor
             CreateInstance<EffectEditorWindow>().Show();
         }
 
-        IEffectableObject _owner;
-        IEffectableObject owner
+        IEffectableObject _currentSelectIEffectableObjectowner;
+        IEffectableObject currentSelectIEffectableObjectowner
         {
             get
             {
-                // if (_owner == null)
-                //     _owner = ApplicationController.Instance.GetGamePlayController().GetGamePlayData<MainGamePlayData>().hero;
-
-                return _owner;
+                return _currentSelectIEffectableObjectowner;
             }
             set
             {
-                // cloneTree.Q<Label>("ownerName").text = value.ToString();
-                _owner = value;
+                cloneTree.Q<Label>("ownerName").text = value.ToString();
+                _currentSelectIEffectableObjectowner = value;
                 FreshEffectList();
             }
         }
@@ -73,8 +67,8 @@ namespace MacacaGames.EffectSystem.Editor
         private void OnDisable()
         {
 
-            if (effectManager != null)
-                effectManager.OnEffectChange = null;
+            if (effectSystem != null)
+                effectSystem.OnEffectChange = null;
         }
 
         private void OnFocus()
@@ -87,11 +81,11 @@ namespace MacacaGames.EffectSystem.Editor
             {
                 if (Selection.activeGameObject != null && Selection.activeGameObject.TryGetComponent<IEffectableObject>(out var t) == true)
                 {
-                    owner = t;
+                    currentSelectIEffectableObjectowner = t;
                 }
                 else
                 {
-                    owner = null;
+                    currentSelectIEffectableObjectowner = null;
                 }
 
                 FreshEffectList();
@@ -130,7 +124,7 @@ namespace MacacaGames.EffectSystem.Editor
                 {
                     Debug.LogError("Target is not a IEffectableObject ");
                 }
-                owner = t;
+                currentSelectIEffectableObjectowner = t;
                 FreshEffectList();
             };
 
@@ -196,12 +190,12 @@ namespace MacacaGames.EffectSystem.Editor
 
         void AddEffect(EffectInfo effectInfo)
         {
-            effectManager.AddRequestedEffect(owner, effectInfo, tags);
+            effectSystem.AddRequestedEffect(currentSelectIEffectableObjectowner, effectInfo, tags);
             tagField.value = "";
         }
         void AddEffects(IEnumerable<EffectInfo> effectInfos, params string[] tags)
         {
-            effectManager.AddRequestedEffects(owner, effectInfos, tags);
+            effectSystem.AddRequestedEffects(currentSelectIEffectableObjectowner, effectInfos, tags);
         }
 
         public void AddEffectGroupData(EffectGroup effectGroup)
@@ -237,7 +231,7 @@ namespace MacacaGames.EffectSystem.Editor
 
 
             root.Add(
-                new Button(() => { effectManager.RemoveEffect(effect.owner, effect); })
+                new Button(() => { effectSystem.RemoveEffect(effect.owner, effect); })
                 .AddClass("effect-remove-btn")
                 .Add(() =>
                 {
@@ -251,18 +245,18 @@ namespace MacacaGames.EffectSystem.Editor
         Dictionary<EffectBase, VisualElement> effectElementQuery = new Dictionary<EffectBase, VisualElement>();
         public void FreshEffectList()
         {
-            if (effectManager != null)
-                effectManager.OnEffectChange = FreshEffectList;
+            if (effectSystem != null)
+                effectSystem.OnEffectChange = FreshEffectList;
 
             ClearEffectList();
 
             effectsRoot = new VisualElement();
             effectElementQuery = new Dictionary<EffectBase, VisualElement>();
 
-            var list = effectManager.GetEffectQuery(owner);
+            var list = effectSystem.GetEffectQuery(currentSelectIEffectableObjectowner);
             if (list != null)
             {
-                foreach (var effectList in effectManager.GetEffectQuery(owner).Values)
+                foreach (var effectList in effectSystem.GetEffectQuery(currentSelectIEffectableObjectowner).Values)
                 {
                     foreach (var effect in effectList)
                     {

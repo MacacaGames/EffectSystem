@@ -4,15 +4,13 @@ using UnityEngine;
 using System.Collections.Generic;
 using System;
 using System.Linq;
-using MacacaGames.GameSystem;
 using MacacaGames.EffectSystem.Model;
 
 namespace MacacaGames.EffectSystem
 {
     public abstract class EffectBase
     {
-        [Inject]
-        protected EffectSystem effectManager;
+        protected EffectSystem effectSystem => EffectSystem.Instance;
         public float input
         {
             get
@@ -23,7 +21,7 @@ namespace MacacaGames.EffectSystem
 
         public EffectInfo info;
         public EffectCondition condition;
-        public EffectSystem.EffectList effectList => effectManager.GetEffectListByType(owner, info.type);
+        public EffectSystem.EffectList effectList => effectSystem.GetEffectListByType(owner, info.type);
 
         public bool isPooled;
         public bool isActive => condition?.isActive ?? false;
@@ -71,7 +69,6 @@ namespace MacacaGames.EffectSystem
 
         public void Start()
         {
-            ApplicationController.Instance.ResolveInjection(this);
 #if (USE_LOG)
         Debug.Log(GetStartEffectLog());
 #endif
@@ -80,7 +77,7 @@ namespace MacacaGames.EffectSystem
 
             condition = new EffectCondition(this);
 
-            effectManager.RegistEffectTriggerCondition(this);
+            effectSystem.RegistEffectTriggerCondition(this);
             AddEffectView(this);
 
             foreach (var effectView in effectViewList)
@@ -143,7 +140,7 @@ namespace MacacaGames.EffectSystem
             }
             else
             {
-                effectManager.UnregistEffectTriggerCondition(this);
+                effectSystem.UnregistEffectTriggerCondition(this);
 
                 condition.End();
                 condition = null;
@@ -206,7 +203,7 @@ namespace MacacaGames.EffectSystem
         }
         public void RemoveEffect()
         {
-            effectManager.RemoveEffect(owner, this);
+            effectSystem.RemoveEffect(owner, this);
         }
 
         static void AddEffectView(EffectBase effect)
@@ -218,7 +215,7 @@ namespace MacacaGames.EffectSystem
             {
                 if (viewInfo.prefab == null)
                     throw new Exception($"[EFFECT] {effect.GetType().Name}(Owner:{effect.owner})有未填入值的ViewInfo.prefab");
-                EffectViewBase effectView = ApplicationController.Instance.GetMonobehaviourLifeCycle<EffectSystem>().RequestEffectView(effect.info, viewInfo, effect.owner);
+                EffectViewBase effectView = EffectSystem.Instance.RequestEffectView(effect.info, viewInfo, effect.owner);
                 effectView.transform.rotation = Quaternion.identity;    //重設旋轉角度
                 effect.effectViewList.Add(effectView);
             }
@@ -227,7 +224,7 @@ namespace MacacaGames.EffectSystem
         {
             foreach (var effectView in effect.effectViewList)
             {
-                ApplicationController.Instance.GetMonobehaviourLifeCycle<EffectSystem>().RecoveryEffectView(effectView);
+                EffectSystem.Instance.RecoveryEffectView(effectView);
                 //UnityEngine.Object.Destroy(viewAnimator.gameObject);
             }
             effect.effectViewList.Clear();
