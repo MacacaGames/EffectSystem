@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.Linq;
-using Sirenix.OdinInspector;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using MacacaGames.EffectSystem.Model;
@@ -18,6 +17,10 @@ namespace MacacaGames.EffectSystem
         void Awake()
         {
             Instance = this;
+            if (effectViewPoolFolder == null)
+            {
+                effectViewPoolFolder = transform;
+            }
         }
 
         #region EffectDefine
@@ -41,7 +44,6 @@ namespace MacacaGames.EffectSystem
 
         #endregion
 
-        public static Func<string, string> GetEffectDescriptionStr;
 
         #region ConditionDefine
 
@@ -222,7 +224,6 @@ namespace MacacaGames.EffectSystem
             }
         }
 
-        [SerializeField]
         Transform effectViewPoolFolder;
         public Dictionary<GameObject, Queue<EffectViewBase>> effectViewPool = new Dictionary<GameObject, Queue<EffectViewBase>>();
 
@@ -499,11 +500,11 @@ namespace MacacaGames.EffectSystem
         /// <returns></returns>
         public static string GetDefaultEffectDescription(EffectInfo info)
         {
-            if (GetEffectDescriptionStr == null)
+            if (EffectDataProvider.GetEffectDescriptionString == null)
             {
                 throw new Exception("Please assign GetEffectDescriptionStr impl");
             }
-            string str = GetEffectDescriptionStr?.Invoke(QueryEffectTypeWithDefault(info.type).Name);
+            string str = EffectDataProvider.GetEffectDescriptionString?.Invoke(QueryEffectTypeWithDefault(info.type).Name);
             string result = GetCustomEffectDescription(str, info);
 
             result = ReplaceEffectAffix(result);
@@ -700,11 +701,11 @@ namespace MacacaGames.EffectSystem
                     string param = des.Substring(headIndex, footIndex + affixFoot.Length - headIndex);
                     string paramInner = param.Substring(1, param.Length - 2);
 
-                    if (GetEffectDescriptionStr == null)
+                    if (EffectDataProvider.GetEffectDescriptionString == null)
                     {
                         throw new Exception("Please assign GetEffectDescriptionStr impl");
                     }
-                    string affixString = GetEffectDescriptionStr?.Invoke(paramInner);
+                    string affixString = EffectDataProvider.GetEffectDescriptionString?.Invoke(paramInner);
 
                     des = des.Replace(param, affixString);
                 }

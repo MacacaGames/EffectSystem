@@ -25,5 +25,11 @@ namespace MacacaGames.EffectSystem.Model
             EffectDataProvider.GetEffectViewInfo = GetEffectViewInfo;
         }
 
+        public static Func<string, string> GetEffectDescriptionString { get; private set; }
+
+        public static void SetEffectDescriptionStringDelegate(Func<string, string> GetEffectDescriptionString)
+        {
+            EffectDataProvider.GetEffectDescriptionString = GetEffectDescriptionString;
+        }
     }
 }
