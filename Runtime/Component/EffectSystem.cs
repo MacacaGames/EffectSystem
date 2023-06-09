@@ -28,18 +28,14 @@ namespace MacacaGames.EffectSystem
         /// 只放預設
         /// </summary>
         /// <value></value>
-        public static Dictionary<string, Type> EffectTypeQuery = new Dictionary<string, Type>
-        {
-            ["EffectBase"] = typeof(EffectBase),
-        };
+
         public static Type QueryEffectTypeWithDefault(string effectType)
         {
-            if (!EffectTypeQuery.ContainsKey(effectType))
+            if (!EffectDataProvider.EffectTypeQuery.ContainsKey(effectType))
             {
                 effectType = "EffectBase";
             }
-
-            return EffectTypeQuery[effectType];
+            return EffectDataProvider.EffectTypeQuery[effectType];
         }
 
         #endregion
