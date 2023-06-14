@@ -8,11 +8,9 @@ items:
   - MacacaGames.EffectSystem.EffectGroup.address
   - MacacaGames.EffectSystem.EffectGroup.description
   - MacacaGames.EffectSystem.EffectGroup.effects
+  - MacacaGames.EffectSystem.EffectGroup.ExportEffectToJson
   - MacacaGames.EffectSystem.EffectGroup.FromJson(System.String)
-  - MacacaGames.EffectSystem.EffectGroup.FromJsonNet(System.String)
   - MacacaGames.EffectSystem.EffectGroup.GetID
-  - MacacaGames.EffectSystem.EffectGroup.GetJsonNeteffects
-  - MacacaGames.EffectSystem.EffectGroup.GetLitJsoneffects
   - MacacaGames.EffectSystem.EffectGroup.id
   - MacacaGames.EffectSystem.EffectGroup.title
   langs:
@@ -29,7 +27,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: EffectGroup
     path: ../Runtime/Utility/EffectGroup.cs
-    startLine: 9
+    startLine: 8
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem
@@ -64,7 +62,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: id
     path: ../Runtime/Utility/EffectGroup.cs
-    startLine: 15
+    startLine: 14
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem
@@ -95,7 +93,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: title
     path: ../Runtime/Utility/EffectGroup.cs
-    startLine: 18
+    startLine: 17
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem
@@ -126,7 +124,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: description
     path: ../Runtime/Utility/EffectGroup.cs
-    startLine: 22
+    startLine: 20
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem
@@ -157,15 +155,15 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: effects
     path: ../Runtime/Utility/EffectGroup.cs
-    startLine: 24
+    startLine: 22
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem
   syntax:
-    content: public EffectInfo[] effects
+    content: public List<EffectInfo> effects
     return:
-      type: MacacaGames.EffectSystem.Model.EffectInfo[]
-    content.vb: Public effects As EffectInfo()
+      type: List{MacacaGames.EffectSystem.Model.EffectInfo}
+    content.vb: Public effects As List(Of EffectInfo)
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -188,7 +186,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: address
     path: ../Runtime/Utility/EffectGroup.cs
-    startLine: 27
+    startLine: 25
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem
@@ -219,7 +217,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: GetID
     path: ../Runtime/Utility/EffectGroup.cs
-    startLine: 29
+    startLine: 27
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem
@@ -233,62 +231,32 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: MacacaGames.EffectSystem.EffectGroup.GetLitJsoneffects
-  commentId: M:MacacaGames.EffectSystem.EffectGroup.GetLitJsoneffects
-  id: GetLitJsoneffects
+- uid: MacacaGames.EffectSystem.EffectGroup.ExportEffectToJson
+  commentId: M:MacacaGames.EffectSystem.EffectGroup.ExportEffectToJson
+  id: ExportEffectToJson
   parent: MacacaGames.EffectSystem.EffectGroup
   langs:
   - csharp
   - vb
-  name: GetLitJsoneffects()
-  nameWithType: EffectGroup.GetLitJsoneffects()
-  fullName: MacacaGames.EffectSystem.EffectGroup.GetLitJsoneffects()
+  name: ExportEffectToJson()
+  nameWithType: EffectGroup.ExportEffectToJson()
+  fullName: MacacaGames.EffectSystem.EffectGroup.ExportEffectToJson()
   type: Method
   source:
     remote:
       path: Runtime/Utility/EffectGroup.cs
       branch: main
       repo: git@github.com:MacacaGames/EffectSystem.git
-    id: GetLitJsoneffects
+    id: ExportEffectToJson
     path: ../Runtime/Utility/EffectGroup.cs
-    startLine: 41
+    startLine: 32
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem
   syntax:
-    content: public void GetLitJsoneffects()
-    content.vb: Public Sub GetLitJsoneffects
-  overload: MacacaGames.EffectSystem.EffectGroup.GetLitJsoneffects*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: MacacaGames.EffectSystem.EffectGroup.GetJsonNeteffects
-  commentId: M:MacacaGames.EffectSystem.EffectGroup.GetJsonNeteffects
-  id: GetJsonNeteffects
-  parent: MacacaGames.EffectSystem.EffectGroup
-  langs:
-  - csharp
-  - vb
-  name: GetJsonNeteffects()
-  nameWithType: EffectGroup.GetJsonNeteffects()
-  fullName: MacacaGames.EffectSystem.EffectGroup.GetJsonNeteffects()
-  type: Method
-  source:
-    remote:
-      path: Runtime/Utility/EffectGroup.cs
-      branch: main
-      repo: git@github.com:MacacaGames/EffectSystem.git
-    id: GetJsonNeteffects
-    path: ../Runtime/Utility/EffectGroup.cs
-    startLine: 48
-  assemblies:
-  - Macaca.EffectSystem
-  namespace: MacacaGames.EffectSystem
-  syntax:
-    content: public void GetJsonNeteffects()
-    content.vb: Public Sub GetJsonNeteffects
-  overload: MacacaGames.EffectSystem.EffectGroup.GetJsonNeteffects*
+    content: public void ExportEffectToJson()
+    content.vb: Public Sub ExportEffectToJson
+  overload: MacacaGames.EffectSystem.EffectGroup.ExportEffectToJson*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -311,7 +279,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: FromJson
     path: ../Runtime/Utility/EffectGroup.cs
-    startLine: 54
+    startLine: 37
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem
@@ -322,39 +290,6 @@ items:
       type: System.String
     content.vb: Public Sub FromJson(test As String)
   overload: MacacaGames.EffectSystem.EffectGroup.FromJson*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: MacacaGames.EffectSystem.EffectGroup.FromJsonNet(System.String)
-  commentId: M:MacacaGames.EffectSystem.EffectGroup.FromJsonNet(System.String)
-  id: FromJsonNet(System.String)
-  parent: MacacaGames.EffectSystem.EffectGroup
-  langs:
-  - csharp
-  - vb
-  name: FromJsonNet(String)
-  nameWithType: EffectGroup.FromJsonNet(String)
-  fullName: MacacaGames.EffectSystem.EffectGroup.FromJsonNet(System.String)
-  type: Method
-  source:
-    remote:
-      path: Runtime/Utility/EffectGroup.cs
-      branch: main
-      repo: git@github.com:MacacaGames/EffectSystem.git
-    id: FromJsonNet
-    path: ../Runtime/Utility/EffectGroup.cs
-    startLine: 61
-  assemblies:
-  - Macaca.EffectSystem
-  namespace: MacacaGames.EffectSystem
-  syntax:
-    content: public void FromJsonNet(string test)
-    parameters:
-    - id: test
-      type: System.String
-    content.vb: Public Sub FromJsonNet(test As String)
-  overload: MacacaGames.EffectSystem.EffectGroup.FromJsonNet*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -370,52 +305,97 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: MacacaGames.EffectSystem.Model.EffectInfo[]
-  isExternal: true
-  name: EffectInfo[]
-  nameWithType: EffectInfo[]
-  fullName: MacacaGames.EffectSystem.Model.EffectInfo[]
-  nameWithType.vb: EffectInfo()
-  fullName.vb: MacacaGames.EffectSystem.Model.EffectInfo()
-  name.vb: EffectInfo()
+- uid: List{MacacaGames.EffectSystem.Model.EffectInfo}
+  commentId: '!:List{MacacaGames.EffectSystem.Model.EffectInfo}'
+  definition: List`1
+  name: List<EffectInfo>
+  nameWithType: List<EffectInfo>
+  fullName: List<MacacaGames.EffectSystem.Model.EffectInfo>
+  nameWithType.vb: List(Of EffectInfo)
+  fullName.vb: List(Of MacacaGames.EffectSystem.Model.EffectInfo)
+  name.vb: List(Of EffectInfo)
   spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
   - uid: MacacaGames.EffectSystem.Model.EffectInfo
     name: EffectInfo
     nameWithType: EffectInfo
     fullName: MacacaGames.EffectSystem.Model.EffectInfo
-  - name: '[]'
-    nameWithType: '[]'
-    fullName: '[]'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
   - uid: MacacaGames.EffectSystem.Model.EffectInfo
     name: EffectInfo
     nameWithType: EffectInfo
     fullName: MacacaGames.EffectSystem.Model.EffectInfo
-  - name: ()
-    nameWithType: ()
-    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: MacacaGames.EffectSystem.EffectGroup.GetID*
   commentId: Overload:MacacaGames.EffectSystem.EffectGroup.GetID
   name: GetID
   nameWithType: EffectGroup.GetID
   fullName: MacacaGames.EffectSystem.EffectGroup.GetID
-- uid: MacacaGames.EffectSystem.EffectGroup.GetLitJsoneffects*
-  commentId: Overload:MacacaGames.EffectSystem.EffectGroup.GetLitJsoneffects
-  name: GetLitJsoneffects
-  nameWithType: EffectGroup.GetLitJsoneffects
-  fullName: MacacaGames.EffectSystem.EffectGroup.GetLitJsoneffects
-- uid: MacacaGames.EffectSystem.EffectGroup.GetJsonNeteffects*
-  commentId: Overload:MacacaGames.EffectSystem.EffectGroup.GetJsonNeteffects
-  name: GetJsonNeteffects
-  nameWithType: EffectGroup.GetJsonNeteffects
-  fullName: MacacaGames.EffectSystem.EffectGroup.GetJsonNeteffects
+- uid: MacacaGames.EffectSystem.EffectGroup.ExportEffectToJson*
+  commentId: Overload:MacacaGames.EffectSystem.EffectGroup.ExportEffectToJson
+  name: ExportEffectToJson
+  nameWithType: EffectGroup.ExportEffectToJson
+  fullName: MacacaGames.EffectSystem.EffectGroup.ExportEffectToJson
 - uid: MacacaGames.EffectSystem.EffectGroup.FromJson*
   commentId: Overload:MacacaGames.EffectSystem.EffectGroup.FromJson
   name: FromJson
   nameWithType: EffectGroup.FromJson
   fullName: MacacaGames.EffectSystem.EffectGroup.FromJson
-- uid: MacacaGames.EffectSystem.EffectGroup.FromJsonNet*
-  commentId: Overload:MacacaGames.EffectSystem.EffectGroup.FromJsonNet
-  name: FromJsonNet
-  nameWithType: EffectGroup.FromJsonNet
-  fullName: MacacaGames.EffectSystem.EffectGroup.FromJsonNet

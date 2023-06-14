@@ -1,0 +1,158 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+  commentId: T:MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+  id: EffectTriggerConditionInfo
+  parent: MacacaGames.EffectSystem.Model
+  children:
+  - MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo.#ctor(MacacaGames.EffectSystem.IEffectableObject,MacacaGames.EffectSystem.IEffectableObject)
+  - MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo.owner
+  - MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo.target
+  langs:
+  - csharp
+  - vb
+  name: EffectTriggerConditionInfo
+  nameWithType: EffectTriggerConditionInfo
+  fullName: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+  type: Struct
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: EffectTriggerConditionInfo
+    path: ../Model/Effect.cs
+    startLine: 191
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  summary: "\nThe data context for doing a trigger active\n"
+  example: []
+  syntax:
+    content: public struct EffectTriggerConditionInfo
+    content.vb: Public Structure EffectTriggerConditionInfo
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo.owner
+  commentId: F:MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo.owner
+  id: owner
+  parent: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+  langs:
+  - csharp
+  - vb
+  name: owner
+  nameWithType: EffectTriggerConditionInfo.owner
+  fullName: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo.owner
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: owner
+    path: ../Model/Effect.cs
+    startLine: 193
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: public IEffectableObject owner
+    return:
+      type: MacacaGames.EffectSystem.IEffectableObject
+    content.vb: Public owner As IEffectableObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo.target
+  commentId: F:MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo.target
+  id: target
+  parent: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+  langs:
+  - csharp
+  - vb
+  name: target
+  nameWithType: EffectTriggerConditionInfo.target
+  fullName: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo.target
+  type: Field
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: target
+    path: ../Model/Effect.cs
+    startLine: 194
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: public IEffectableObject target
+    return:
+      type: MacacaGames.EffectSystem.IEffectableObject
+    content.vb: Public target As IEffectableObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo.#ctor(MacacaGames.EffectSystem.IEffectableObject,MacacaGames.EffectSystem.IEffectableObject)
+  commentId: M:MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo.#ctor(MacacaGames.EffectSystem.IEffectableObject,MacacaGames.EffectSystem.IEffectableObject)
+  id: '#ctor(MacacaGames.EffectSystem.IEffectableObject,MacacaGames.EffectSystem.IEffectableObject)'
+  parent: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+  langs:
+  - csharp
+  - vb
+  name: EffectTriggerConditionInfo(IEffectableObject, IEffectableObject)
+  nameWithType: EffectTriggerConditionInfo.EffectTriggerConditionInfo(IEffectableObject, IEffectableObject)
+  fullName: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo.EffectTriggerConditionInfo(MacacaGames.EffectSystem.IEffectableObject, MacacaGames.EffectSystem.IEffectableObject)
+  type: Constructor
+  source:
+    remote:
+      path: Model/Effect.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: .ctor
+    path: ../Model/Effect.cs
+    startLine: 196
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: public EffectTriggerConditionInfo(IEffectableObject owner, IEffectableObject target = null)
+    parameters:
+    - id: owner
+      type: MacacaGames.EffectSystem.IEffectableObject
+    - id: target
+      type: MacacaGames.EffectSystem.IEffectableObject
+    content.vb: Public Sub New(owner As IEffectableObject, target As IEffectableObject = Nothing)
+  overload: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: MacacaGames.EffectSystem.Model
+  commentId: N:MacacaGames.EffectSystem.Model
+  name: MacacaGames.EffectSystem.Model
+  nameWithType: MacacaGames.EffectSystem.Model
+  fullName: MacacaGames.EffectSystem.Model
+- uid: MacacaGames.EffectSystem.IEffectableObject
+  commentId: T:MacacaGames.EffectSystem.IEffectableObject
+  parent: MacacaGames.EffectSystem
+  name: IEffectableObject
+  nameWithType: IEffectableObject
+  fullName: MacacaGames.EffectSystem.IEffectableObject
+- uid: MacacaGames.EffectSystem
+  commentId: N:MacacaGames.EffectSystem
+  name: MacacaGames.EffectSystem
+  nameWithType: MacacaGames.EffectSystem
+  fullName: MacacaGames.EffectSystem
+- uid: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo.#ctor*
+  commentId: Overload:MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo.#ctor
+  name: EffectTriggerConditionInfo
+  nameWithType: EffectTriggerConditionInfo.EffectTriggerConditionInfo
+  fullName: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo.EffectTriggerConditionInfo

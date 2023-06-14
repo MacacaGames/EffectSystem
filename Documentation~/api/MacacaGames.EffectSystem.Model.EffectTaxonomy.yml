@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.Model.EffectTaxonomy
+  commentId: T:MacacaGames.EffectSystem.Model.EffectTaxonomy
+  id: EffectTaxonomy
+  parent: MacacaGames.EffectSystem.Model
+  children:
+  - MacacaGames.EffectSystem.Model.EffectTaxonomy.Domain
+  - MacacaGames.EffectSystem.Model.EffectTaxonomy.Info
+  - MacacaGames.EffectSystem.Model.EffectTaxonomy.Kingdom
+  langs:
+  - csharp
+  - vb
+  name: EffectTaxonomy
+  nameWithType: EffectTaxonomy
+  fullName: MacacaGames.EffectSystem.Model.EffectTaxonomy
+  type: Enum
+  source:
+    remote:
+      path: Model/Enums.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: EffectTaxonomy
+    path: ../Model/Enums.cs
+    startLine: 32
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: 'public enum EffectTaxonomy : int'
+    content.vb: Public Enum EffectTaxonomy As Integer
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: MacacaGames.EffectSystem.Model.EffectTaxonomy.Info
+  commentId: F:MacacaGames.EffectSystem.Model.EffectTaxonomy.Info
+  id: Info
+  parent: MacacaGames.EffectSystem.Model.EffectTaxonomy
+  langs:
+  - csharp
+  - vb
+  name: Info
+  nameWithType: EffectTaxonomy.Info
+  fullName: MacacaGames.EffectSystem.Model.EffectTaxonomy.Info
+  type: Field
+  source:
+    remote:
+      path: Model/Enums.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Info
+    path: ../Model/Enums.cs
+    startLine: 34
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Info = null
+    return:
+      type: MacacaGames.EffectSystem.Model.EffectTaxonomy
+    content.vb: Info = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.EffectTaxonomy.Domain
+  commentId: F:MacacaGames.EffectSystem.Model.EffectTaxonomy.Domain
+  id: Domain
+  parent: MacacaGames.EffectSystem.Model.EffectTaxonomy
+  langs:
+  - csharp
+  - vb
+  name: Domain
+  nameWithType: EffectTaxonomy.Domain
+  fullName: MacacaGames.EffectSystem.Model.EffectTaxonomy.Domain
+  type: Field
+  source:
+    remote:
+      path: Model/Enums.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Domain
+    path: ../Model/Enums.cs
+    startLine: 34
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Domain = null
+    return:
+      type: MacacaGames.EffectSystem.Model.EffectTaxonomy
+    content.vb: Domain = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.EffectTaxonomy.Kingdom
+  commentId: F:MacacaGames.EffectSystem.Model.EffectTaxonomy.Kingdom
+  id: Kingdom
+  parent: MacacaGames.EffectSystem.Model.EffectTaxonomy
+  langs:
+  - csharp
+  - vb
+  name: Kingdom
+  nameWithType: EffectTaxonomy.Kingdom
+  fullName: MacacaGames.EffectSystem.Model.EffectTaxonomy.Kingdom
+  type: Field
+  source:
+    remote:
+      path: Model/Enums.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Kingdom
+    path: ../Model/Enums.cs
+    startLine: 34
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Kingdom = null
+    return:
+      type: MacacaGames.EffectSystem.Model.EffectTaxonomy
+    content.vb: Kingdom = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: MacacaGames.EffectSystem.Model
+  commentId: N:MacacaGames.EffectSystem.Model
+  name: MacacaGames.EffectSystem.Model
+  nameWithType: MacacaGames.EffectSystem.Model
+  fullName: MacacaGames.EffectSystem.Model
+- uid: MacacaGames.EffectSystem.Model.EffectTaxonomy
+  commentId: T:MacacaGames.EffectSystem.Model.EffectTaxonomy
+  parent: MacacaGames.EffectSystem.Model
+  name: EffectTaxonomy
+  nameWithType: EffectTaxonomy
+  fullName: MacacaGames.EffectSystem.Model.EffectTaxonomy

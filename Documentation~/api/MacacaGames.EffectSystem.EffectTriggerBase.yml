@@ -5,8 +5,8 @@ items:
   id: EffectTriggerBase
   parent: MacacaGames.EffectSystem
   children:
-  - MacacaGames.EffectSystem.EffectTriggerBase.OnActive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
-  - MacacaGames.EffectSystem.EffectTriggerBase.OnTrigger(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
+  - MacacaGames.EffectSystem.EffectTriggerBase.OnActive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  - MacacaGames.EffectSystem.EffectTriggerBase.OnTrigger(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
   langs:
   - csharp
   - vb
@@ -16,57 +16,56 @@ items:
   type: Class
   source:
     remote:
-      path: Runtime/EffectTriggerBase.cs
+      path: Runtime/EffectBase/EffectTriggerBase.cs
       branch: main
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: EffectTriggerBase
-    path: ../Runtime/EffectTriggerBase.cs
+    path: ../Runtime/EffectBase/EffectTriggerBase.cs
     startLine: 6
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem
   syntax:
-    content: 'public abstract class EffectTriggerBase : EffectBase'
+    content: 'public abstract class EffectTriggerBase : EffectInstanceBase'
     content.vb: >-
       Public MustInherit Class EffectTriggerBase
-          Inherits EffectBase
+          Inherits EffectInstanceBase
   inheritance:
   - System.Object
-  - MacacaGames.EffectSystem.EffectBase
+  - MacacaGames.EffectSystem.EffectInstanceBase
   inheritedMembers:
-  - MacacaGames.EffectSystem.EffectBase.effectManager
-  - MacacaGames.EffectSystem.EffectBase.input
-  - MacacaGames.EffectSystem.EffectBase.info
-  - MacacaGames.EffectSystem.EffectBase.condition
-  - MacacaGames.EffectSystem.EffectBase.effectList
-  - MacacaGames.EffectSystem.EffectBase.isPooled
-  - MacacaGames.EffectSystem.EffectBase.isActive
-  - MacacaGames.EffectSystem.EffectBase.isUsing
-  - MacacaGames.EffectSystem.EffectBase.owner
-  - MacacaGames.EffectSystem.EffectBase.maxEffectValue
-  - MacacaGames.EffectSystem.EffectBase.sumLimit
-  - MacacaGames.EffectSystem.EffectBase.tags
-  - MacacaGames.EffectSystem.EffectBase.GetEditorInfo
-  - MacacaGames.EffectSystem.EffectBase.Reset(MacacaGames.EffectSystem.Model.EffectInfo)
-  - MacacaGames.EffectSystem.EffectBase.Start
-  - MacacaGames.EffectSystem.EffectBase.OnStart
-  - MacacaGames.EffectSystem.EffectBase.OnDeactive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
-  - MacacaGames.EffectSystem.EffectBase.ExecuteActive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
-  - MacacaGames.EffectSystem.EffectBase.ExecuteDeactive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
-  - MacacaGames.EffectSystem.EffectBase.End
-  - MacacaGames.EffectSystem.EffectBase.OnEnd
-  - MacacaGames.EffectSystem.EffectBase.OnCooldownEnd
-  - MacacaGames.EffectSystem.EffectBase.UpdateMaintainAction
-  - MacacaGames.EffectSystem.EffectBase.UpdateMaintainRound
-  - MacacaGames.EffectSystem.EffectBase.ResetActiveTime
-  - MacacaGames.EffectSystem.EffectBase.ResetColdDownTime
-  - MacacaGames.EffectSystem.EffectBase.RemoveSleepyEffect
-  - MacacaGames.EffectSystem.EffectBase.RemoveEffect
-  - MacacaGames.EffectSystem.EffectBase.GetValueInt
-  - MacacaGames.EffectSystem.EffectBase.GetValue
-  - MacacaGames.EffectSystem.EffectBase.GetOriginValue
-  - MacacaGames.EffectSystem.EffectBase.GetStartEffectLog
-  - MacacaGames.EffectSystem.EffectBase.GetEndEffectLog
+  - MacacaGames.EffectSystem.EffectInstanceBase.effectSystem
+  - MacacaGames.EffectSystem.EffectInstanceBase.input
+  - MacacaGames.EffectSystem.EffectInstanceBase.info
+  - MacacaGames.EffectSystem.EffectInstanceBase.condition
+  - MacacaGames.EffectSystem.EffectInstanceBase.effectList
+  - MacacaGames.EffectSystem.EffectInstanceBase.isPooled
+  - MacacaGames.EffectSystem.EffectInstanceBase.isActive
+  - MacacaGames.EffectSystem.EffectInstanceBase.isUsing
+  - MacacaGames.EffectSystem.EffectInstanceBase.owner
+  - MacacaGames.EffectSystem.EffectInstanceBase.maxEffectValue
+  - MacacaGames.EffectSystem.EffectInstanceBase.sumLimit
+  - MacacaGames.EffectSystem.EffectInstanceBase.tags
+  - MacacaGames.EffectSystem.EffectInstanceBase.GetEditorInfo
+  - MacacaGames.EffectSystem.EffectInstanceBase.Reset(MacacaGames.EffectSystem.Model.EffectInfo)
+  - MacacaGames.EffectSystem.EffectInstanceBase.Start
+  - MacacaGames.EffectSystem.EffectInstanceBase.OnStart
+  - MacacaGames.EffectSystem.EffectInstanceBase.OnDeactive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  - MacacaGames.EffectSystem.EffectInstanceBase.ExecuteActive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  - MacacaGames.EffectSystem.EffectInstanceBase.ExecuteDeactive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  - MacacaGames.EffectSystem.EffectInstanceBase.End
+  - MacacaGames.EffectSystem.EffectInstanceBase.OnEnd
+  - MacacaGames.EffectSystem.EffectInstanceBase.OnColdownEnd
+  - MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition(System.Single)
+  - MacacaGames.EffectSystem.EffectInstanceBase.ResetActiveTime
+  - MacacaGames.EffectSystem.EffectInstanceBase.ResetColdDownTime
+  - MacacaGames.EffectSystem.EffectInstanceBase.RemoveSleepyEffect
+  - MacacaGames.EffectSystem.EffectInstanceBase.RemoveEffect
+  - MacacaGames.EffectSystem.EffectInstanceBase.GetValueInt
+  - MacacaGames.EffectSystem.EffectInstanceBase.GetValue
+  - MacacaGames.EffectSystem.EffectInstanceBase.GetOriginValue
+  - MacacaGames.EffectSystem.EffectInstanceBase.GetStartEffectLog
+  - MacacaGames.EffectSystem.EffectInstanceBase.GetEndEffectLog
   modifiers.csharp:
   - public
   - abstract
@@ -75,35 +74,35 @@ items:
   - Public
   - MustInherit
   - Class
-- uid: MacacaGames.EffectSystem.EffectTriggerBase.OnActive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
-  commentId: M:MacacaGames.EffectSystem.EffectTriggerBase.OnActive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
-  id: OnActive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
+- uid: MacacaGames.EffectSystem.EffectTriggerBase.OnActive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  commentId: M:MacacaGames.EffectSystem.EffectTriggerBase.OnActive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  id: OnActive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
   parent: MacacaGames.EffectSystem.EffectTriggerBase
   langs:
   - csharp
   - vb
-  name: OnActive(EffectManager.EffectTriggerConditionInfo)
-  nameWithType: EffectTriggerBase.OnActive(EffectManager.EffectTriggerConditionInfo)
-  fullName: MacacaGames.EffectSystem.EffectTriggerBase.OnActive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
+  name: OnActive(EffectTriggerConditionInfo)
+  nameWithType: EffectTriggerBase.OnActive(EffectTriggerConditionInfo)
+  fullName: MacacaGames.EffectSystem.EffectTriggerBase.OnActive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
   type: Method
   source:
     remote:
-      path: Runtime/EffectTriggerBase.cs
+      path: Runtime/EffectBase/EffectTriggerBase.cs
       branch: main
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: OnActive
-    path: ../Runtime/EffectTriggerBase.cs
+    path: ../Runtime/EffectBase/EffectTriggerBase.cs
     startLine: 9
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem
   syntax:
-    content: public override void OnActive(EffectManager.EffectTriggerConditionInfo condidionInfo)
+    content: public override void OnActive(EffectTriggerConditionInfo condidionInfo)
     parameters:
     - id: condidionInfo
-      type: MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo
-    content.vb: Public Overrides Sub OnActive(condidionInfo As EffectManager.EffectTriggerConditionInfo)
-  overridden: MacacaGames.EffectSystem.EffectBase.OnActive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
+      type: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+    content.vb: Public Overrides Sub OnActive(condidionInfo As EffectTriggerConditionInfo)
+  overridden: MacacaGames.EffectSystem.EffectInstanceBase.OnActive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
   overload: MacacaGames.EffectSystem.EffectTriggerBase.OnActive*
   modifiers.csharp:
   - public
@@ -111,34 +110,34 @@ items:
   modifiers.vb:
   - Public
   - Overrides
-- uid: MacacaGames.EffectSystem.EffectTriggerBase.OnTrigger(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
-  commentId: M:MacacaGames.EffectSystem.EffectTriggerBase.OnTrigger(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
-  id: OnTrigger(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
+- uid: MacacaGames.EffectSystem.EffectTriggerBase.OnTrigger(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  commentId: M:MacacaGames.EffectSystem.EffectTriggerBase.OnTrigger(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  id: OnTrigger(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
   parent: MacacaGames.EffectSystem.EffectTriggerBase
   langs:
   - csharp
   - vb
-  name: OnTrigger(EffectManager.EffectTriggerConditionInfo)
-  nameWithType: EffectTriggerBase.OnTrigger(EffectManager.EffectTriggerConditionInfo)
-  fullName: MacacaGames.EffectSystem.EffectTriggerBase.OnTrigger(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
+  name: OnTrigger(EffectTriggerConditionInfo)
+  nameWithType: EffectTriggerBase.OnTrigger(EffectTriggerConditionInfo)
+  fullName: MacacaGames.EffectSystem.EffectTriggerBase.OnTrigger(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
   type: Method
   source:
     remote:
-      path: Runtime/EffectTriggerBase.cs
+      path: Runtime/EffectBase/EffectTriggerBase.cs
       branch: main
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: OnTrigger
-    path: ../Runtime/EffectTriggerBase.cs
+    path: ../Runtime/EffectBase/EffectTriggerBase.cs
     startLine: 15
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem
   syntax:
-    content: protected abstract void OnTrigger(EffectManager.EffectTriggerConditionInfo conditionInfo)
+    content: protected abstract void OnTrigger(EffectTriggerConditionInfo conditionInfo)
     parameters:
     - id: conditionInfo
-      type: MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo
-    content.vb: Protected MustOverride Sub OnTrigger(conditionInfo As EffectManager.EffectTriggerConditionInfo)
+      type: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+    content.vb: Protected MustOverride Sub OnTrigger(conditionInfo As EffectTriggerConditionInfo)
   overload: MacacaGames.EffectSystem.EffectTriggerBase.OnTrigger*
   modifiers.csharp:
   - protected
@@ -152,95 +151,95 @@ references:
   name: MacacaGames.EffectSystem
   nameWithType: MacacaGames.EffectSystem
   fullName: MacacaGames.EffectSystem
-- uid: MacacaGames.EffectSystem.EffectBase
-  commentId: T:MacacaGames.EffectSystem.EffectBase
+- uid: MacacaGames.EffectSystem.EffectInstanceBase
+  commentId: T:MacacaGames.EffectSystem.EffectInstanceBase
   parent: MacacaGames.EffectSystem
-  name: EffectBase
-  nameWithType: EffectBase
-  fullName: MacacaGames.EffectSystem.EffectBase
-- uid: MacacaGames.EffectSystem.EffectBase.effectManager
-  commentId: F:MacacaGames.EffectSystem.EffectBase.effectManager
-  parent: MacacaGames.EffectSystem.EffectBase
-  name: effectManager
-  nameWithType: EffectBase.effectManager
-  fullName: MacacaGames.EffectSystem.EffectBase.effectManager
-- uid: MacacaGames.EffectSystem.EffectBase.input
-  commentId: P:MacacaGames.EffectSystem.EffectBase.input
-  parent: MacacaGames.EffectSystem.EffectBase
+  name: EffectInstanceBase
+  nameWithType: EffectInstanceBase
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.effectSystem
+  commentId: P:MacacaGames.EffectSystem.EffectInstanceBase.effectSystem
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  name: effectSystem
+  nameWithType: EffectInstanceBase.effectSystem
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.effectSystem
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.input
+  commentId: P:MacacaGames.EffectSystem.EffectInstanceBase.input
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
   name: input
-  nameWithType: EffectBase.input
-  fullName: MacacaGames.EffectSystem.EffectBase.input
-- uid: MacacaGames.EffectSystem.EffectBase.info
-  commentId: F:MacacaGames.EffectSystem.EffectBase.info
-  parent: MacacaGames.EffectSystem.EffectBase
+  nameWithType: EffectInstanceBase.input
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.input
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.info
+  commentId: F:MacacaGames.EffectSystem.EffectInstanceBase.info
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
   name: info
-  nameWithType: EffectBase.info
-  fullName: MacacaGames.EffectSystem.EffectBase.info
-- uid: MacacaGames.EffectSystem.EffectBase.condition
-  commentId: F:MacacaGames.EffectSystem.EffectBase.condition
-  parent: MacacaGames.EffectSystem.EffectBase
+  nameWithType: EffectInstanceBase.info
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.info
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.condition
+  commentId: F:MacacaGames.EffectSystem.EffectInstanceBase.condition
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
   name: condition
-  nameWithType: EffectBase.condition
-  fullName: MacacaGames.EffectSystem.EffectBase.condition
-- uid: MacacaGames.EffectSystem.EffectBase.effectList
-  commentId: P:MacacaGames.EffectSystem.EffectBase.effectList
-  parent: MacacaGames.EffectSystem.EffectBase
+  nameWithType: EffectInstanceBase.condition
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.condition
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.effectList
+  commentId: P:MacacaGames.EffectSystem.EffectInstanceBase.effectList
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
   name: effectList
-  nameWithType: EffectBase.effectList
-  fullName: MacacaGames.EffectSystem.EffectBase.effectList
-- uid: MacacaGames.EffectSystem.EffectBase.isPooled
-  commentId: F:MacacaGames.EffectSystem.EffectBase.isPooled
-  parent: MacacaGames.EffectSystem.EffectBase
+  nameWithType: EffectInstanceBase.effectList
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.effectList
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.isPooled
+  commentId: F:MacacaGames.EffectSystem.EffectInstanceBase.isPooled
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
   name: isPooled
-  nameWithType: EffectBase.isPooled
-  fullName: MacacaGames.EffectSystem.EffectBase.isPooled
-- uid: MacacaGames.EffectSystem.EffectBase.isActive
-  commentId: P:MacacaGames.EffectSystem.EffectBase.isActive
-  parent: MacacaGames.EffectSystem.EffectBase
+  nameWithType: EffectInstanceBase.isPooled
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.isPooled
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.isActive
+  commentId: P:MacacaGames.EffectSystem.EffectInstanceBase.isActive
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
   name: isActive
-  nameWithType: EffectBase.isActive
-  fullName: MacacaGames.EffectSystem.EffectBase.isActive
-- uid: MacacaGames.EffectSystem.EffectBase.isUsing
-  commentId: P:MacacaGames.EffectSystem.EffectBase.isUsing
-  parent: MacacaGames.EffectSystem.EffectBase
+  nameWithType: EffectInstanceBase.isActive
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.isActive
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.isUsing
+  commentId: P:MacacaGames.EffectSystem.EffectInstanceBase.isUsing
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
   name: isUsing
-  nameWithType: EffectBase.isUsing
-  fullName: MacacaGames.EffectSystem.EffectBase.isUsing
-- uid: MacacaGames.EffectSystem.EffectBase.owner
-  commentId: F:MacacaGames.EffectSystem.EffectBase.owner
-  parent: MacacaGames.EffectSystem.EffectBase
+  nameWithType: EffectInstanceBase.isUsing
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.isUsing
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.owner
+  commentId: F:MacacaGames.EffectSystem.EffectInstanceBase.owner
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
   name: owner
-  nameWithType: EffectBase.owner
-  fullName: MacacaGames.EffectSystem.EffectBase.owner
-- uid: MacacaGames.EffectSystem.EffectBase.maxEffectValue
-  commentId: P:MacacaGames.EffectSystem.EffectBase.maxEffectValue
-  parent: MacacaGames.EffectSystem.EffectBase
+  nameWithType: EffectInstanceBase.owner
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.owner
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.maxEffectValue
+  commentId: P:MacacaGames.EffectSystem.EffectInstanceBase.maxEffectValue
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
   name: maxEffectValue
-  nameWithType: EffectBase.maxEffectValue
-  fullName: MacacaGames.EffectSystem.EffectBase.maxEffectValue
-- uid: MacacaGames.EffectSystem.EffectBase.sumLimit
-  commentId: P:MacacaGames.EffectSystem.EffectBase.sumLimit
-  parent: MacacaGames.EffectSystem.EffectBase
+  nameWithType: EffectInstanceBase.maxEffectValue
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.maxEffectValue
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.sumLimit
+  commentId: P:MacacaGames.EffectSystem.EffectInstanceBase.sumLimit
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
   name: sumLimit
-  nameWithType: EffectBase.sumLimit
-  fullName: MacacaGames.EffectSystem.EffectBase.sumLimit
-- uid: MacacaGames.EffectSystem.EffectBase.tags
-  commentId: F:MacacaGames.EffectSystem.EffectBase.tags
-  parent: MacacaGames.EffectSystem.EffectBase
+  nameWithType: EffectInstanceBase.sumLimit
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.sumLimit
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.tags
+  commentId: F:MacacaGames.EffectSystem.EffectInstanceBase.tags
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
   name: tags
-  nameWithType: EffectBase.tags
-  fullName: MacacaGames.EffectSystem.EffectBase.tags
-- uid: MacacaGames.EffectSystem.EffectBase.GetEditorInfo
-  commentId: M:MacacaGames.EffectSystem.EffectBase.GetEditorInfo
-  parent: MacacaGames.EffectSystem.EffectBase
+  nameWithType: EffectInstanceBase.tags
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.tags
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.GetEditorInfo
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.GetEditorInfo
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
   name: GetEditorInfo()
-  nameWithType: EffectBase.GetEditorInfo()
-  fullName: MacacaGames.EffectSystem.EffectBase.GetEditorInfo()
+  nameWithType: EffectInstanceBase.GetEditorInfo()
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.GetEditorInfo()
   spec.csharp:
-  - uid: MacacaGames.EffectSystem.EffectBase.GetEditorInfo
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.GetEditorInfo
     name: GetEditorInfo
-    nameWithType: EffectBase.GetEditorInfo
-    fullName: MacacaGames.EffectSystem.EffectBase.GetEditorInfo
+    nameWithType: EffectInstanceBase.GetEditorInfo
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.GetEditorInfo
   - name: (
     nameWithType: (
     fullName: (
@@ -248,27 +247,27 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: MacacaGames.EffectSystem.EffectBase.GetEditorInfo
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.GetEditorInfo
     name: GetEditorInfo
-    nameWithType: EffectBase.GetEditorInfo
-    fullName: MacacaGames.EffectSystem.EffectBase.GetEditorInfo
+    nameWithType: EffectInstanceBase.GetEditorInfo
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.GetEditorInfo
   - name: (
     nameWithType: (
     fullName: (
   - name: )
     nameWithType: )
     fullName: )
-- uid: MacacaGames.EffectSystem.EffectBase.Reset(MacacaGames.EffectSystem.Model.EffectInfo)
-  commentId: M:MacacaGames.EffectSystem.EffectBase.Reset(MacacaGames.EffectSystem.Model.EffectInfo)
-  parent: MacacaGames.EffectSystem.EffectBase
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.Reset(MacacaGames.EffectSystem.Model.EffectInfo)
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.Reset(MacacaGames.EffectSystem.Model.EffectInfo)
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
   name: Reset(EffectInfo)
-  nameWithType: EffectBase.Reset(EffectInfo)
-  fullName: MacacaGames.EffectSystem.EffectBase.Reset(MacacaGames.EffectSystem.Model.EffectInfo)
+  nameWithType: EffectInstanceBase.Reset(EffectInfo)
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.Reset(MacacaGames.EffectSystem.Model.EffectInfo)
   spec.csharp:
-  - uid: MacacaGames.EffectSystem.EffectBase.Reset(MacacaGames.EffectSystem.Model.EffectInfo)
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.Reset(MacacaGames.EffectSystem.Model.EffectInfo)
     name: Reset
-    nameWithType: EffectBase.Reset
-    fullName: MacacaGames.EffectSystem.EffectBase.Reset
+    nameWithType: EffectInstanceBase.Reset
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.Reset
   - name: (
     nameWithType: (
     fullName: (
@@ -280,10 +279,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: MacacaGames.EffectSystem.EffectBase.Reset(MacacaGames.EffectSystem.Model.EffectInfo)
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.Reset(MacacaGames.EffectSystem.Model.EffectInfo)
     name: Reset
-    nameWithType: EffectBase.Reset
-    fullName: MacacaGames.EffectSystem.EffectBase.Reset
+    nameWithType: EffectInstanceBase.Reset
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.Reset
   - name: (
     nameWithType: (
     fullName: (
@@ -294,17 +293,17 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: MacacaGames.EffectSystem.EffectBase.Start
-  commentId: M:MacacaGames.EffectSystem.EffectBase.Start
-  parent: MacacaGames.EffectSystem.EffectBase
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.Start
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.Start
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
   name: Start()
-  nameWithType: EffectBase.Start()
-  fullName: MacacaGames.EffectSystem.EffectBase.Start()
+  nameWithType: EffectInstanceBase.Start()
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.Start()
   spec.csharp:
-  - uid: MacacaGames.EffectSystem.EffectBase.Start
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.Start
     name: Start
-    nameWithType: EffectBase.Start
-    fullName: MacacaGames.EffectSystem.EffectBase.Start
+    nameWithType: EffectInstanceBase.Start
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.Start
   - name: (
     nameWithType: (
     fullName: (
@@ -312,27 +311,27 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: MacacaGames.EffectSystem.EffectBase.Start
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.Start
     name: Start
-    nameWithType: EffectBase.Start
-    fullName: MacacaGames.EffectSystem.EffectBase.Start
+    nameWithType: EffectInstanceBase.Start
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.Start
   - name: (
     nameWithType: (
     fullName: (
   - name: )
     nameWithType: )
     fullName: )
-- uid: MacacaGames.EffectSystem.EffectBase.OnStart
-  commentId: M:MacacaGames.EffectSystem.EffectBase.OnStart
-  parent: MacacaGames.EffectSystem.EffectBase
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.OnStart
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.OnStart
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
   name: OnStart()
-  nameWithType: EffectBase.OnStart()
-  fullName: MacacaGames.EffectSystem.EffectBase.OnStart()
+  nameWithType: EffectInstanceBase.OnStart()
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.OnStart()
   spec.csharp:
-  - uid: MacacaGames.EffectSystem.EffectBase.OnStart
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.OnStart
     name: OnStart
-    nameWithType: EffectBase.OnStart
-    fullName: MacacaGames.EffectSystem.EffectBase.OnStart
+    nameWithType: EffectInstanceBase.OnStart
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.OnStart
   - name: (
     nameWithType: (
     fullName: (
@@ -340,135 +339,135 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: MacacaGames.EffectSystem.EffectBase.OnStart
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.OnStart
     name: OnStart
-    nameWithType: EffectBase.OnStart
-    fullName: MacacaGames.EffectSystem.EffectBase.OnStart
+    nameWithType: EffectInstanceBase.OnStart
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.OnStart
   - name: (
     nameWithType: (
     fullName: (
   - name: )
     nameWithType: )
     fullName: )
-- uid: MacacaGames.EffectSystem.EffectBase.OnDeactive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
-  commentId: M:MacacaGames.EffectSystem.EffectBase.OnDeactive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
-  parent: MacacaGames.EffectSystem.EffectBase
-  name: OnDeactive(EffectManager.EffectTriggerConditionInfo)
-  nameWithType: EffectBase.OnDeactive(EffectManager.EffectTriggerConditionInfo)
-  fullName: MacacaGames.EffectSystem.EffectBase.OnDeactive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.OnDeactive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.OnDeactive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  name: OnDeactive(EffectTriggerConditionInfo)
+  nameWithType: EffectInstanceBase.OnDeactive(EffectTriggerConditionInfo)
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.OnDeactive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
   spec.csharp:
-  - uid: MacacaGames.EffectSystem.EffectBase.OnDeactive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.OnDeactive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
     name: OnDeactive
-    nameWithType: EffectBase.OnDeactive
-    fullName: MacacaGames.EffectSystem.EffectBase.OnDeactive
+    nameWithType: EffectInstanceBase.OnDeactive
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.OnDeactive
   - name: (
     nameWithType: (
     fullName: (
-  - uid: MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo
-    name: EffectManager.EffectTriggerConditionInfo
-    nameWithType: EffectManager.EffectTriggerConditionInfo
-    fullName: MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo
+  - uid: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+    name: EffectTriggerConditionInfo
+    nameWithType: EffectTriggerConditionInfo
+    fullName: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: MacacaGames.EffectSystem.EffectBase.OnDeactive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.OnDeactive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
     name: OnDeactive
-    nameWithType: EffectBase.OnDeactive
-    fullName: MacacaGames.EffectSystem.EffectBase.OnDeactive
+    nameWithType: EffectInstanceBase.OnDeactive
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.OnDeactive
   - name: (
     nameWithType: (
     fullName: (
-  - uid: MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo
-    name: EffectManager.EffectTriggerConditionInfo
-    nameWithType: EffectManager.EffectTriggerConditionInfo
-    fullName: MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo
+  - uid: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+    name: EffectTriggerConditionInfo
+    nameWithType: EffectTriggerConditionInfo
+    fullName: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
   - name: )
     nameWithType: )
     fullName: )
-- uid: MacacaGames.EffectSystem.EffectBase.ExecuteActive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
-  commentId: M:MacacaGames.EffectSystem.EffectBase.ExecuteActive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
-  parent: MacacaGames.EffectSystem.EffectBase
-  name: ExecuteActive(EffectManager.EffectTriggerConditionInfo)
-  nameWithType: EffectBase.ExecuteActive(EffectManager.EffectTriggerConditionInfo)
-  fullName: MacacaGames.EffectSystem.EffectBase.ExecuteActive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.ExecuteActive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.ExecuteActive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  name: ExecuteActive(EffectTriggerConditionInfo)
+  nameWithType: EffectInstanceBase.ExecuteActive(EffectTriggerConditionInfo)
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.ExecuteActive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
   spec.csharp:
-  - uid: MacacaGames.EffectSystem.EffectBase.ExecuteActive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.ExecuteActive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
     name: ExecuteActive
-    nameWithType: EffectBase.ExecuteActive
-    fullName: MacacaGames.EffectSystem.EffectBase.ExecuteActive
+    nameWithType: EffectInstanceBase.ExecuteActive
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.ExecuteActive
   - name: (
     nameWithType: (
     fullName: (
-  - uid: MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo
-    name: EffectManager.EffectTriggerConditionInfo
-    nameWithType: EffectManager.EffectTriggerConditionInfo
-    fullName: MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo
+  - uid: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+    name: EffectTriggerConditionInfo
+    nameWithType: EffectTriggerConditionInfo
+    fullName: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: MacacaGames.EffectSystem.EffectBase.ExecuteActive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.ExecuteActive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
     name: ExecuteActive
-    nameWithType: EffectBase.ExecuteActive
-    fullName: MacacaGames.EffectSystem.EffectBase.ExecuteActive
+    nameWithType: EffectInstanceBase.ExecuteActive
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.ExecuteActive
   - name: (
     nameWithType: (
     fullName: (
-  - uid: MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo
-    name: EffectManager.EffectTriggerConditionInfo
-    nameWithType: EffectManager.EffectTriggerConditionInfo
-    fullName: MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo
+  - uid: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+    name: EffectTriggerConditionInfo
+    nameWithType: EffectTriggerConditionInfo
+    fullName: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
   - name: )
     nameWithType: )
     fullName: )
-- uid: MacacaGames.EffectSystem.EffectBase.ExecuteDeactive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
-  commentId: M:MacacaGames.EffectSystem.EffectBase.ExecuteDeactive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
-  parent: MacacaGames.EffectSystem.EffectBase
-  name: ExecuteDeactive(EffectManager.EffectTriggerConditionInfo)
-  nameWithType: EffectBase.ExecuteDeactive(EffectManager.EffectTriggerConditionInfo)
-  fullName: MacacaGames.EffectSystem.EffectBase.ExecuteDeactive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.ExecuteDeactive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.ExecuteDeactive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  name: ExecuteDeactive(EffectTriggerConditionInfo)
+  nameWithType: EffectInstanceBase.ExecuteDeactive(EffectTriggerConditionInfo)
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.ExecuteDeactive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
   spec.csharp:
-  - uid: MacacaGames.EffectSystem.EffectBase.ExecuteDeactive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.ExecuteDeactive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
     name: ExecuteDeactive
-    nameWithType: EffectBase.ExecuteDeactive
-    fullName: MacacaGames.EffectSystem.EffectBase.ExecuteDeactive
+    nameWithType: EffectInstanceBase.ExecuteDeactive
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.ExecuteDeactive
   - name: (
     nameWithType: (
     fullName: (
-  - uid: MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo
-    name: EffectManager.EffectTriggerConditionInfo
-    nameWithType: EffectManager.EffectTriggerConditionInfo
-    fullName: MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo
+  - uid: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+    name: EffectTriggerConditionInfo
+    nameWithType: EffectTriggerConditionInfo
+    fullName: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: MacacaGames.EffectSystem.EffectBase.ExecuteDeactive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.ExecuteDeactive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
     name: ExecuteDeactive
-    nameWithType: EffectBase.ExecuteDeactive
-    fullName: MacacaGames.EffectSystem.EffectBase.ExecuteDeactive
+    nameWithType: EffectInstanceBase.ExecuteDeactive
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.ExecuteDeactive
   - name: (
     nameWithType: (
     fullName: (
-  - uid: MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo
-    name: EffectManager.EffectTriggerConditionInfo
-    nameWithType: EffectManager.EffectTriggerConditionInfo
-    fullName: MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo
+  - uid: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+    name: EffectTriggerConditionInfo
+    nameWithType: EffectTriggerConditionInfo
+    fullName: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
   - name: )
     nameWithType: )
     fullName: )
-- uid: MacacaGames.EffectSystem.EffectBase.End
-  commentId: M:MacacaGames.EffectSystem.EffectBase.End
-  parent: MacacaGames.EffectSystem.EffectBase
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.End
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.End
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
   name: End()
-  nameWithType: EffectBase.End()
-  fullName: MacacaGames.EffectSystem.EffectBase.End()
+  nameWithType: EffectInstanceBase.End()
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.End()
   spec.csharp:
-  - uid: MacacaGames.EffectSystem.EffectBase.End
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.End
     name: End
-    nameWithType: EffectBase.End
-    fullName: MacacaGames.EffectSystem.EffectBase.End
+    nameWithType: EffectInstanceBase.End
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.End
   - name: (
     nameWithType: (
     fullName: (
@@ -476,27 +475,27 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: MacacaGames.EffectSystem.EffectBase.End
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.End
     name: End
-    nameWithType: EffectBase.End
-    fullName: MacacaGames.EffectSystem.EffectBase.End
+    nameWithType: EffectInstanceBase.End
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.End
   - name: (
     nameWithType: (
     fullName: (
   - name: )
     nameWithType: )
     fullName: )
-- uid: MacacaGames.EffectSystem.EffectBase.OnEnd
-  commentId: M:MacacaGames.EffectSystem.EffectBase.OnEnd
-  parent: MacacaGames.EffectSystem.EffectBase
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.OnEnd
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.OnEnd
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
   name: OnEnd()
-  nameWithType: EffectBase.OnEnd()
-  fullName: MacacaGames.EffectSystem.EffectBase.OnEnd()
+  nameWithType: EffectInstanceBase.OnEnd()
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.OnEnd()
   spec.csharp:
-  - uid: MacacaGames.EffectSystem.EffectBase.OnEnd
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.OnEnd
     name: OnEnd
-    nameWithType: EffectBase.OnEnd
-    fullName: MacacaGames.EffectSystem.EffectBase.OnEnd
+    nameWithType: EffectInstanceBase.OnEnd
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.OnEnd
   - name: (
     nameWithType: (
     fullName: (
@@ -504,27 +503,27 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: MacacaGames.EffectSystem.EffectBase.OnEnd
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.OnEnd
     name: OnEnd
-    nameWithType: EffectBase.OnEnd
-    fullName: MacacaGames.EffectSystem.EffectBase.OnEnd
+    nameWithType: EffectInstanceBase.OnEnd
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.OnEnd
   - name: (
     nameWithType: (
     fullName: (
   - name: )
     nameWithType: )
     fullName: )
-- uid: MacacaGames.EffectSystem.EffectBase.OnCooldownEnd
-  commentId: M:MacacaGames.EffectSystem.EffectBase.OnCooldownEnd
-  parent: MacacaGames.EffectSystem.EffectBase
-  name: OnCooldownEnd()
-  nameWithType: EffectBase.OnCooldownEnd()
-  fullName: MacacaGames.EffectSystem.EffectBase.OnCooldownEnd()
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.OnColdownEnd
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.OnColdownEnd
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  name: OnColdownEnd()
+  nameWithType: EffectInstanceBase.OnColdownEnd()
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.OnColdownEnd()
   spec.csharp:
-  - uid: MacacaGames.EffectSystem.EffectBase.OnCooldownEnd
-    name: OnCooldownEnd
-    nameWithType: EffectBase.OnCooldownEnd
-    fullName: MacacaGames.EffectSystem.EffectBase.OnCooldownEnd
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.OnColdownEnd
+    name: OnColdownEnd
+    nameWithType: EffectInstanceBase.OnColdownEnd
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.OnColdownEnd
   - name: (
     nameWithType: (
     fullName: (
@@ -532,83 +531,66 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: MacacaGames.EffectSystem.EffectBase.OnCooldownEnd
-    name: OnCooldownEnd
-    nameWithType: EffectBase.OnCooldownEnd
-    fullName: MacacaGames.EffectSystem.EffectBase.OnCooldownEnd
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.OnColdownEnd
+    name: OnColdownEnd
+    nameWithType: EffectInstanceBase.OnColdownEnd
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.OnColdownEnd
   - name: (
     nameWithType: (
     fullName: (
   - name: )
     nameWithType: )
     fullName: )
-- uid: MacacaGames.EffectSystem.EffectBase.UpdateMaintainAction
-  commentId: M:MacacaGames.EffectSystem.EffectBase.UpdateMaintainAction
-  parent: MacacaGames.EffectSystem.EffectBase
-  name: UpdateMaintainAction()
-  nameWithType: EffectBase.UpdateMaintainAction()
-  fullName: MacacaGames.EffectSystem.EffectBase.UpdateMaintainAction()
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition(System.Single)
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition(System.Single)
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  isExternal: true
+  name: UpdateEffectCondition(Single)
+  nameWithType: EffectInstanceBase.UpdateEffectCondition(Single)
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition(System.Single)
   spec.csharp:
-  - uid: MacacaGames.EffectSystem.EffectBase.UpdateMaintainAction
-    name: UpdateMaintainAction
-    nameWithType: EffectBase.UpdateMaintainAction
-    fullName: MacacaGames.EffectSystem.EffectBase.UpdateMaintainAction
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition(System.Single)
+    name: UpdateEffectCondition
+    nameWithType: EffectInstanceBase.UpdateEffectCondition
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition
   - name: (
     nameWithType: (
     fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: MacacaGames.EffectSystem.EffectBase.UpdateMaintainAction
-    name: UpdateMaintainAction
-    nameWithType: EffectBase.UpdateMaintainAction
-    fullName: MacacaGames.EffectSystem.EffectBase.UpdateMaintainAction
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition(System.Single)
+    name: UpdateEffectCondition
+    nameWithType: EffectInstanceBase.UpdateEffectCondition
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition
   - name: (
     nameWithType: (
     fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: MacacaGames.EffectSystem.EffectBase.UpdateMaintainRound
-  commentId: M:MacacaGames.EffectSystem.EffectBase.UpdateMaintainRound
-  parent: MacacaGames.EffectSystem.EffectBase
-  name: UpdateMaintainRound()
-  nameWithType: EffectBase.UpdateMaintainRound()
-  fullName: MacacaGames.EffectSystem.EffectBase.UpdateMaintainRound()
-  spec.csharp:
-  - uid: MacacaGames.EffectSystem.EffectBase.UpdateMaintainRound
-    name: UpdateMaintainRound
-    nameWithType: EffectBase.UpdateMaintainRound
-    fullName: MacacaGames.EffectSystem.EffectBase.UpdateMaintainRound
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: MacacaGames.EffectSystem.EffectBase.UpdateMaintainRound
-    name: UpdateMaintainRound
-    nameWithType: EffectBase.UpdateMaintainRound
-    fullName: MacacaGames.EffectSystem.EffectBase.UpdateMaintainRound
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: MacacaGames.EffectSystem.EffectBase.ResetActiveTime
-  commentId: M:MacacaGames.EffectSystem.EffectBase.ResetActiveTime
-  parent: MacacaGames.EffectSystem.EffectBase
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.ResetActiveTime
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.ResetActiveTime
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
   name: ResetActiveTime()
-  nameWithType: EffectBase.ResetActiveTime()
-  fullName: MacacaGames.EffectSystem.EffectBase.ResetActiveTime()
+  nameWithType: EffectInstanceBase.ResetActiveTime()
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.ResetActiveTime()
   spec.csharp:
-  - uid: MacacaGames.EffectSystem.EffectBase.ResetActiveTime
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.ResetActiveTime
     name: ResetActiveTime
-    nameWithType: EffectBase.ResetActiveTime
-    fullName: MacacaGames.EffectSystem.EffectBase.ResetActiveTime
+    nameWithType: EffectInstanceBase.ResetActiveTime
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.ResetActiveTime
   - name: (
     nameWithType: (
     fullName: (
@@ -616,27 +598,27 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: MacacaGames.EffectSystem.EffectBase.ResetActiveTime
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.ResetActiveTime
     name: ResetActiveTime
-    nameWithType: EffectBase.ResetActiveTime
-    fullName: MacacaGames.EffectSystem.EffectBase.ResetActiveTime
+    nameWithType: EffectInstanceBase.ResetActiveTime
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.ResetActiveTime
   - name: (
     nameWithType: (
     fullName: (
   - name: )
     nameWithType: )
     fullName: )
-- uid: MacacaGames.EffectSystem.EffectBase.ResetColdDownTime
-  commentId: M:MacacaGames.EffectSystem.EffectBase.ResetColdDownTime
-  parent: MacacaGames.EffectSystem.EffectBase
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.ResetColdDownTime
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.ResetColdDownTime
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
   name: ResetColdDownTime()
-  nameWithType: EffectBase.ResetColdDownTime()
-  fullName: MacacaGames.EffectSystem.EffectBase.ResetColdDownTime()
+  nameWithType: EffectInstanceBase.ResetColdDownTime()
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.ResetColdDownTime()
   spec.csharp:
-  - uid: MacacaGames.EffectSystem.EffectBase.ResetColdDownTime
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.ResetColdDownTime
     name: ResetColdDownTime
-    nameWithType: EffectBase.ResetColdDownTime
-    fullName: MacacaGames.EffectSystem.EffectBase.ResetColdDownTime
+    nameWithType: EffectInstanceBase.ResetColdDownTime
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.ResetColdDownTime
   - name: (
     nameWithType: (
     fullName: (
@@ -644,27 +626,27 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: MacacaGames.EffectSystem.EffectBase.ResetColdDownTime
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.ResetColdDownTime
     name: ResetColdDownTime
-    nameWithType: EffectBase.ResetColdDownTime
-    fullName: MacacaGames.EffectSystem.EffectBase.ResetColdDownTime
+    nameWithType: EffectInstanceBase.ResetColdDownTime
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.ResetColdDownTime
   - name: (
     nameWithType: (
     fullName: (
   - name: )
     nameWithType: )
     fullName: )
-- uid: MacacaGames.EffectSystem.EffectBase.RemoveSleepyEffect
-  commentId: M:MacacaGames.EffectSystem.EffectBase.RemoveSleepyEffect
-  parent: MacacaGames.EffectSystem.EffectBase
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.RemoveSleepyEffect
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.RemoveSleepyEffect
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
   name: RemoveSleepyEffect()
-  nameWithType: EffectBase.RemoveSleepyEffect()
-  fullName: MacacaGames.EffectSystem.EffectBase.RemoveSleepyEffect()
+  nameWithType: EffectInstanceBase.RemoveSleepyEffect()
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.RemoveSleepyEffect()
   spec.csharp:
-  - uid: MacacaGames.EffectSystem.EffectBase.RemoveSleepyEffect
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.RemoveSleepyEffect
     name: RemoveSleepyEffect
-    nameWithType: EffectBase.RemoveSleepyEffect
-    fullName: MacacaGames.EffectSystem.EffectBase.RemoveSleepyEffect
+    nameWithType: EffectInstanceBase.RemoveSleepyEffect
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.RemoveSleepyEffect
   - name: (
     nameWithType: (
     fullName: (
@@ -672,27 +654,27 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: MacacaGames.EffectSystem.EffectBase.RemoveSleepyEffect
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.RemoveSleepyEffect
     name: RemoveSleepyEffect
-    nameWithType: EffectBase.RemoveSleepyEffect
-    fullName: MacacaGames.EffectSystem.EffectBase.RemoveSleepyEffect
+    nameWithType: EffectInstanceBase.RemoveSleepyEffect
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.RemoveSleepyEffect
   - name: (
     nameWithType: (
     fullName: (
   - name: )
     nameWithType: )
     fullName: )
-- uid: MacacaGames.EffectSystem.EffectBase.RemoveEffect
-  commentId: M:MacacaGames.EffectSystem.EffectBase.RemoveEffect
-  parent: MacacaGames.EffectSystem.EffectBase
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.RemoveEffect
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.RemoveEffect
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
   name: RemoveEffect()
-  nameWithType: EffectBase.RemoveEffect()
-  fullName: MacacaGames.EffectSystem.EffectBase.RemoveEffect()
+  nameWithType: EffectInstanceBase.RemoveEffect()
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.RemoveEffect()
   spec.csharp:
-  - uid: MacacaGames.EffectSystem.EffectBase.RemoveEffect
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.RemoveEffect
     name: RemoveEffect
-    nameWithType: EffectBase.RemoveEffect
-    fullName: MacacaGames.EffectSystem.EffectBase.RemoveEffect
+    nameWithType: EffectInstanceBase.RemoveEffect
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.RemoveEffect
   - name: (
     nameWithType: (
     fullName: (
@@ -700,27 +682,27 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: MacacaGames.EffectSystem.EffectBase.RemoveEffect
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.RemoveEffect
     name: RemoveEffect
-    nameWithType: EffectBase.RemoveEffect
-    fullName: MacacaGames.EffectSystem.EffectBase.RemoveEffect
+    nameWithType: EffectInstanceBase.RemoveEffect
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.RemoveEffect
   - name: (
     nameWithType: (
     fullName: (
   - name: )
     nameWithType: )
     fullName: )
-- uid: MacacaGames.EffectSystem.EffectBase.GetValueInt
-  commentId: M:MacacaGames.EffectSystem.EffectBase.GetValueInt
-  parent: MacacaGames.EffectSystem.EffectBase
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.GetValueInt
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.GetValueInt
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
   name: GetValueInt()
-  nameWithType: EffectBase.GetValueInt()
-  fullName: MacacaGames.EffectSystem.EffectBase.GetValueInt()
+  nameWithType: EffectInstanceBase.GetValueInt()
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.GetValueInt()
   spec.csharp:
-  - uid: MacacaGames.EffectSystem.EffectBase.GetValueInt
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.GetValueInt
     name: GetValueInt
-    nameWithType: EffectBase.GetValueInt
-    fullName: MacacaGames.EffectSystem.EffectBase.GetValueInt
+    nameWithType: EffectInstanceBase.GetValueInt
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.GetValueInt
   - name: (
     nameWithType: (
     fullName: (
@@ -728,27 +710,27 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: MacacaGames.EffectSystem.EffectBase.GetValueInt
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.GetValueInt
     name: GetValueInt
-    nameWithType: EffectBase.GetValueInt
-    fullName: MacacaGames.EffectSystem.EffectBase.GetValueInt
+    nameWithType: EffectInstanceBase.GetValueInt
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.GetValueInt
   - name: (
     nameWithType: (
     fullName: (
   - name: )
     nameWithType: )
     fullName: )
-- uid: MacacaGames.EffectSystem.EffectBase.GetValue
-  commentId: M:MacacaGames.EffectSystem.EffectBase.GetValue
-  parent: MacacaGames.EffectSystem.EffectBase
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.GetValue
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.GetValue
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
   name: GetValue()
-  nameWithType: EffectBase.GetValue()
-  fullName: MacacaGames.EffectSystem.EffectBase.GetValue()
+  nameWithType: EffectInstanceBase.GetValue()
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.GetValue()
   spec.csharp:
-  - uid: MacacaGames.EffectSystem.EffectBase.GetValue
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.GetValue
     name: GetValue
-    nameWithType: EffectBase.GetValue
-    fullName: MacacaGames.EffectSystem.EffectBase.GetValue
+    nameWithType: EffectInstanceBase.GetValue
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.GetValue
   - name: (
     nameWithType: (
     fullName: (
@@ -756,27 +738,27 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: MacacaGames.EffectSystem.EffectBase.GetValue
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.GetValue
     name: GetValue
-    nameWithType: EffectBase.GetValue
-    fullName: MacacaGames.EffectSystem.EffectBase.GetValue
+    nameWithType: EffectInstanceBase.GetValue
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.GetValue
   - name: (
     nameWithType: (
     fullName: (
   - name: )
     nameWithType: )
     fullName: )
-- uid: MacacaGames.EffectSystem.EffectBase.GetOriginValue
-  commentId: M:MacacaGames.EffectSystem.EffectBase.GetOriginValue
-  parent: MacacaGames.EffectSystem.EffectBase
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.GetOriginValue
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.GetOriginValue
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
   name: GetOriginValue()
-  nameWithType: EffectBase.GetOriginValue()
-  fullName: MacacaGames.EffectSystem.EffectBase.GetOriginValue()
+  nameWithType: EffectInstanceBase.GetOriginValue()
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.GetOriginValue()
   spec.csharp:
-  - uid: MacacaGames.EffectSystem.EffectBase.GetOriginValue
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.GetOriginValue
     name: GetOriginValue
-    nameWithType: EffectBase.GetOriginValue
-    fullName: MacacaGames.EffectSystem.EffectBase.GetOriginValue
+    nameWithType: EffectInstanceBase.GetOriginValue
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.GetOriginValue
   - name: (
     nameWithType: (
     fullName: (
@@ -784,27 +766,27 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: MacacaGames.EffectSystem.EffectBase.GetOriginValue
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.GetOriginValue
     name: GetOriginValue
-    nameWithType: EffectBase.GetOriginValue
-    fullName: MacacaGames.EffectSystem.EffectBase.GetOriginValue
+    nameWithType: EffectInstanceBase.GetOriginValue
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.GetOriginValue
   - name: (
     nameWithType: (
     fullName: (
   - name: )
     nameWithType: )
     fullName: )
-- uid: MacacaGames.EffectSystem.EffectBase.GetStartEffectLog
-  commentId: M:MacacaGames.EffectSystem.EffectBase.GetStartEffectLog
-  parent: MacacaGames.EffectSystem.EffectBase
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.GetStartEffectLog
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.GetStartEffectLog
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
   name: GetStartEffectLog()
-  nameWithType: EffectBase.GetStartEffectLog()
-  fullName: MacacaGames.EffectSystem.EffectBase.GetStartEffectLog()
+  nameWithType: EffectInstanceBase.GetStartEffectLog()
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.GetStartEffectLog()
   spec.csharp:
-  - uid: MacacaGames.EffectSystem.EffectBase.GetStartEffectLog
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.GetStartEffectLog
     name: GetStartEffectLog
-    nameWithType: EffectBase.GetStartEffectLog
-    fullName: MacacaGames.EffectSystem.EffectBase.GetStartEffectLog
+    nameWithType: EffectInstanceBase.GetStartEffectLog
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.GetStartEffectLog
   - name: (
     nameWithType: (
     fullName: (
@@ -812,27 +794,27 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: MacacaGames.EffectSystem.EffectBase.GetStartEffectLog
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.GetStartEffectLog
     name: GetStartEffectLog
-    nameWithType: EffectBase.GetStartEffectLog
-    fullName: MacacaGames.EffectSystem.EffectBase.GetStartEffectLog
+    nameWithType: EffectInstanceBase.GetStartEffectLog
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.GetStartEffectLog
   - name: (
     nameWithType: (
     fullName: (
   - name: )
     nameWithType: )
     fullName: )
-- uid: MacacaGames.EffectSystem.EffectBase.GetEndEffectLog
-  commentId: M:MacacaGames.EffectSystem.EffectBase.GetEndEffectLog
-  parent: MacacaGames.EffectSystem.EffectBase
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.GetEndEffectLog
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.GetEndEffectLog
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
   name: GetEndEffectLog()
-  nameWithType: EffectBase.GetEndEffectLog()
-  fullName: MacacaGames.EffectSystem.EffectBase.GetEndEffectLog()
+  nameWithType: EffectInstanceBase.GetEndEffectLog()
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.GetEndEffectLog()
   spec.csharp:
-  - uid: MacacaGames.EffectSystem.EffectBase.GetEndEffectLog
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.GetEndEffectLog
     name: GetEndEffectLog
-    nameWithType: EffectBase.GetEndEffectLog
-    fullName: MacacaGames.EffectSystem.EffectBase.GetEndEffectLog
+    nameWithType: EffectInstanceBase.GetEndEffectLog
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.GetEndEffectLog
   - name: (
     nameWithType: (
     fullName: (
@@ -840,49 +822,49 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: MacacaGames.EffectSystem.EffectBase.GetEndEffectLog
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.GetEndEffectLog
     name: GetEndEffectLog
-    nameWithType: EffectBase.GetEndEffectLog
-    fullName: MacacaGames.EffectSystem.EffectBase.GetEndEffectLog
+    nameWithType: EffectInstanceBase.GetEndEffectLog
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.GetEndEffectLog
   - name: (
     nameWithType: (
     fullName: (
   - name: )
     nameWithType: )
     fullName: )
-- uid: MacacaGames.EffectSystem.EffectBase.OnActive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
-  commentId: M:MacacaGames.EffectSystem.EffectBase.OnActive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
-  parent: MacacaGames.EffectSystem.EffectBase
-  name: OnActive(EffectManager.EffectTriggerConditionInfo)
-  nameWithType: EffectBase.OnActive(EffectManager.EffectTriggerConditionInfo)
-  fullName: MacacaGames.EffectSystem.EffectBase.OnActive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.OnActive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.OnActive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  name: OnActive(EffectTriggerConditionInfo)
+  nameWithType: EffectInstanceBase.OnActive(EffectTriggerConditionInfo)
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.OnActive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
   spec.csharp:
-  - uid: MacacaGames.EffectSystem.EffectBase.OnActive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.OnActive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
     name: OnActive
-    nameWithType: EffectBase.OnActive
-    fullName: MacacaGames.EffectSystem.EffectBase.OnActive
+    nameWithType: EffectInstanceBase.OnActive
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.OnActive
   - name: (
     nameWithType: (
     fullName: (
-  - uid: MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo
-    name: EffectManager.EffectTriggerConditionInfo
-    nameWithType: EffectManager.EffectTriggerConditionInfo
-    fullName: MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo
+  - uid: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+    name: EffectTriggerConditionInfo
+    nameWithType: EffectTriggerConditionInfo
+    fullName: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: MacacaGames.EffectSystem.EffectBase.OnActive(MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo)
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.OnActive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
     name: OnActive
-    nameWithType: EffectBase.OnActive
-    fullName: MacacaGames.EffectSystem.EffectBase.OnActive
+    nameWithType: EffectInstanceBase.OnActive
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.OnActive
   - name: (
     nameWithType: (
     fullName: (
-  - uid: MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo
-    name: EffectManager.EffectTriggerConditionInfo
-    nameWithType: EffectManager.EffectTriggerConditionInfo
-    fullName: MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo
+  - uid: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+    name: EffectTriggerConditionInfo
+    nameWithType: EffectTriggerConditionInfo
+    fullName: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
   - name: )
     nameWithType: )
     fullName: )
@@ -891,12 +873,17 @@ references:
   name: OnActive
   nameWithType: EffectTriggerBase.OnActive
   fullName: MacacaGames.EffectSystem.EffectTriggerBase.OnActive
-- uid: MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo
-  commentId: T:MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo
-  parent: MacacaGames.EffectSystem
-  name: EffectManager.EffectTriggerConditionInfo
-  nameWithType: EffectManager.EffectTriggerConditionInfo
-  fullName: MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo
+- uid: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+  commentId: T:MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+  parent: MacacaGames.EffectSystem.Model
+  name: EffectTriggerConditionInfo
+  nameWithType: EffectTriggerConditionInfo
+  fullName: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+- uid: MacacaGames.EffectSystem.Model
+  commentId: N:MacacaGames.EffectSystem.Model
+  name: MacacaGames.EffectSystem.Model
+  nameWithType: MacacaGames.EffectSystem.Model
+  fullName: MacacaGames.EffectSystem.Model
 - uid: MacacaGames.EffectSystem.EffectTriggerBase.OnTrigger*
   commentId: Overload:MacacaGames.EffectSystem.EffectTriggerBase.OnTrigger
   name: OnTrigger

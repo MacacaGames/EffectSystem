@@ -487,37 +487,106 @@ public class Effect_TriggerEffect_Sample : EffectTriggerBase
 ```
 
 # Effect Editor Window
+The system provide a very helpful tool to inspect the runtime Effect Instance.
 
+Menu Path : MacacaGames > Effect System > Effect Editor Window
+
+The editor provide those feature:
+- Display all IEffectableObject in the Memery
+- Inspect the runtime Effect Instance on an IEffectableObject
+- Add/Remove one or more Effect in the Runtime
+- Bake all string parameter into a const variable
+- Preview the Effect Description of a EffectInfo (WIP)
+
+<img src="./Img~/effecteditor.png" />
 
 
 # Effect Description
+To make the use understand your Effect is very important, the system provide a feature to generate Effect Description by an EffectInfo.
 
+## Description Template 
+You need provide a Description Template first to generate a runtime Description.
+
+See the example:
+```csharp
+var myTemplate = "Deal extra {Effect_Atk_Ratio.value} damage to enemies with full HP.";
+var myEffect = new EffectInfo{
+    id: "TriggerEffect_Sample",
+    type: "Atk_Ratio",
+    value: 12
+};
+
+var result = EffectSystem.Instance.GetCustomEffectsDescription(myTemplate, new[]{myEffect});
+// result is "Deal extra 12 damage to enemies with full HP."
+```
+
+### The rule of the temmlate
+
+The temmlate use the key word to detect which part in the template should be replaced, here is the rule of a key word.
+- Start with `{` char
+- End with `}` char
+- Use `Effect_` or `#` char to define the EffectType, for instance #Atk_Ratio means use the Atk_Ratio EffectType
+- Use `.` to access the member in the EffectInfo, the `.` can continue with the key follow the table
+- Use `subinfo` or  `>` to access the EffectInfo in subinfo
+
+| Key                 | Description                                            |
+| ------------------- | ------------------------------------------------------ |
+| value               | use the `value` member in the EffectInfo               |
+| val                 | same as value but simplified                           |
+| maintainTime        | use the `maintainTime` member in the EffectInfo        |
+| time                | same as `maintainTime` but simplified                  |
+| cooldownTime        | use the `cooldownTime` member in the EffectInfo        |
+| cd                  | same as `cooldownTime` but simplified                  |
+| activeProbability   | use the `activeProbability` member in the EffectInfo   |
+| activeProb          | same as `activeProbability` but simplified             |
+| deactiveProbability | use the `deactiveProbability` member in the EffectInfo |
+| deactiveProb        | same as `deactiveProbability` but simplified           |
+
+## Default Description
+It is recommand to make Default Description for all EffectType
+
+```csharp
+// First regist the template resource
+EffectDataProvider.SetEffectDescriptionStringDelegate(
+    (m) =>
+    {   
+        // m is the EffectType
+        switch(m){
+            case "Atk_Ratio":
+                return "Deal extra {Effect_Atk_Ratio.value} damage to enemies with full HP.";
+            case "Defend":
+                return "Reduce {Effect_Defend.value} damage taken.";
+        }
+    }
+);
+
+var effect_sample_01 = new EffectInfo{
+    id: "effect_sample_01",
+    type: "Atk_Ratio",
+    value: 123
+};
+var effect_sample_02 = new EffectInfo{
+    id: "effect_sample_02",
+    type: "Defend",
+    value: 999
+};
+// After regist the template resource, you can directlly call EffectSystem.Instance.GetDefaultEffectDescription to get the default Description
+var result = EffectSystem.Instance.GetDefaultEffectDescription(effect_sample_01);
+// result is "Deal extra 123 damage to enemies with full HP."
+
+// Or provide multiple EffectInfo, the system will auto combine all Description line by line
+var result = EffectSystem.Instance.GetDefaultEffectDescription(new []{effect_sample_01, effect_sample_02});
+/* result will be 
+
+Deal extra 123 damage to enemies with full HP.
+Reduce 999 damage taken.
+```
+
+> It is always recommended to use `EffectSystem.Instance.GetCustomEffectsDescription()` to generate a `human-kindly` Description 
+> But the `EffectSystem.Instance.GetDefaultEffectDescription()` provide a simple way to automatically generate at least a `human-readable` Description
 
 # Effect View
-
-
-# Usage
-
-## Pr
-
-## Implement EffectType
-- Inheritance EffectBase and implement the required effects
-
-## Inheritance and implement IEffectSystemData
-- Initialize Effect table data
-- Query EffectInfo
-- Add all implemented EffectTypes to the dictionary
-
-## Inheritance and implement IEffectableObject
-- The entity used to add skills
-
-## EffectSystem Component
-- Attach Effect to IEffectableObject or remove it
-- Query the Effect instance on IEffectableObject
-- Get skill description with I2
-
-
-
+To Be Continue
 
 # Code Generate
 
@@ -550,14 +619,3 @@ StaticCompositeResolver.Instance.Register(
     MacacaGames.EffectSystem.Resolvers.EffectSystemResolver.Instance,
 );
 ```
-
-
-# 1
-
-
-
-## 1
-
-
-## EffectDescription
-

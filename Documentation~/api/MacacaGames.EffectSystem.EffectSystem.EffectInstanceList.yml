@@ -1,0 +1,736 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList
+  commentId: T:MacacaGames.EffectSystem.EffectSystem.EffectInstanceList
+  id: EffectSystem.EffectInstanceList
+  parent: MacacaGames.EffectSystem
+  children:
+  - MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.#ctor(System.String)
+  - MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Add(MacacaGames.EffectSystem.EffectInstanceBase)
+  - MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Clear
+  - MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Contains(MacacaGames.EffectSystem.EffectInstanceBase)
+  - MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.CopyTo(MacacaGames.EffectSystem.EffectInstanceBase[],System.Int32)
+  - MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Count
+  - MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.GetEnumerator
+  - MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.GetSum
+  - MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.IsReadOnly
+  - MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.isSumOutOfLimit
+  - MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Remove(MacacaGames.EffectSystem.EffectInstanceBase)
+  - MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.SetDirty(System.Boolean)
+  - MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.sumLimitMax
+  - MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.sumLimitMin
+  langs:
+  - csharp
+  - vb
+  name: EffectSystem.EffectInstanceList
+  nameWithType: EffectSystem.EffectInstanceList
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList
+  type: Class
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: EffectInstanceList
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 51
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: 'public class EffectInstanceList : ICollection<EffectInstanceBase>'
+    content.vb: >-
+      Public Class EffectInstanceList
+          Inherits ICollection(Of EffectInstanceBase)
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Count
+  commentId: P:MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Count
+  id: Count
+  parent: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList
+  langs:
+  - csharp
+  - vb
+  name: Count
+  nameWithType: EffectSystem.EffectInstanceList.Count
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Count
+  type: Property
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Count
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 55
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public int Count { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Count As Integer
+  overload: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Count*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.sumLimitMax
+  commentId: P:MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.sumLimitMax
+  id: sumLimitMax
+  parent: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList
+  langs:
+  - csharp
+  - vb
+  name: sumLimitMax
+  nameWithType: EffectSystem.EffectInstanceList.sumLimitMax
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.sumLimitMax
+  type: Property
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: sumLimitMax
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 59
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public float sumLimitMax { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property sumLimitMax As Single
+  overload: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.sumLimitMax*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.sumLimitMin
+  commentId: P:MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.sumLimitMin
+  id: sumLimitMin
+  parent: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList
+  langs:
+  - csharp
+  - vb
+  name: sumLimitMin
+  nameWithType: EffectSystem.EffectInstanceList.sumLimitMin
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.sumLimitMin
+  type: Property
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: sumLimitMin
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 60
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public float sumLimitMin { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property sumLimitMin As Single
+  overload: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.sumLimitMin*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Add(MacacaGames.EffectSystem.EffectInstanceBase)
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Add(MacacaGames.EffectSystem.EffectInstanceBase)
+  id: Add(MacacaGames.EffectSystem.EffectInstanceBase)
+  parent: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList
+  langs:
+  - csharp
+  - vb
+  name: Add(EffectInstanceBase)
+  nameWithType: EffectSystem.EffectInstanceList.Add(EffectInstanceBase)
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Add(MacacaGames.EffectSystem.EffectInstanceBase)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Add
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 62
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public void Add(EffectInstanceBase effect)
+    parameters:
+    - id: effect
+      type: MacacaGames.EffectSystem.EffectInstanceBase
+    content.vb: Public Sub Add(effect As EffectInstanceBase)
+  overload: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Add*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Remove(MacacaGames.EffectSystem.EffectInstanceBase)
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Remove(MacacaGames.EffectSystem.EffectInstanceBase)
+  id: Remove(MacacaGames.EffectSystem.EffectInstanceBase)
+  parent: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList
+  langs:
+  - csharp
+  - vb
+  name: Remove(EffectInstanceBase)
+  nameWithType: EffectSystem.EffectInstanceList.Remove(EffectInstanceBase)
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Remove(MacacaGames.EffectSystem.EffectInstanceBase)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Remove
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 67
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public bool Remove(EffectInstanceBase effect)
+    parameters:
+    - id: effect
+      type: MacacaGames.EffectSystem.EffectInstanceBase
+    return:
+      type: System.Boolean
+    content.vb: Public Function Remove(effect As EffectInstanceBase) As Boolean
+  overload: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Remove*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.#ctor(System.String)
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList
+  langs:
+  - csharp
+  - vb
+  name: EffectInstanceList(String)
+  nameWithType: EffectSystem.EffectInstanceList.EffectInstanceList(String)
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.EffectInstanceList(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: .ctor
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 74
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public EffectInstanceList(string effectType)
+    parameters:
+    - id: effectType
+      type: System.String
+    content.vb: Public Sub New(effectType As String)
+  overload: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.SetDirty(System.Boolean)
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.SetDirty(System.Boolean)
+  id: SetDirty(System.Boolean)
+  parent: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList
+  langs:
+  - csharp
+  - vb
+  name: SetDirty(Boolean)
+  nameWithType: EffectSystem.EffectInstanceList.SetDirty(Boolean)
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.SetDirty(System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: SetDirty
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 85
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public void SetDirty(bool b)
+    parameters:
+    - id: b
+      type: System.Boolean
+    content.vb: Public Sub SetDirty(b As Boolean)
+  overload: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.SetDirty*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.GetSum
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.GetSum
+  id: GetSum
+  parent: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList
+  langs:
+  - csharp
+  - vb
+  name: GetSum()
+  nameWithType: EffectSystem.EffectInstanceList.GetSum()
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.GetSum()
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: GetSum
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 87
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public float GetSum()
+    return:
+      type: System.Single
+    content.vb: Public Function GetSum As Single
+  overload: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.GetSum*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.isSumOutOfLimit
+  commentId: P:MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.isSumOutOfLimit
+  id: isSumOutOfLimit
+  parent: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList
+  langs:
+  - csharp
+  - vb
+  name: isSumOutOfLimit
+  nameWithType: EffectSystem.EffectInstanceList.isSumOutOfLimit
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.isSumOutOfLimit
+  type: Property
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: isSumOutOfLimit
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 111
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  summary: 判斷加總值是否超出上下限，若大於等於上限或小於下限視為超出。
+  example: []
+  syntax:
+    content: public bool isSumOutOfLimit { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property isSumOutOfLimit As Boolean
+  overload: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.isSumOutOfLimit*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.IsReadOnly
+  commentId: P:MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.IsReadOnly
+  id: IsReadOnly
+  parent: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList
+  langs:
+  - csharp
+  - vb
+  name: IsReadOnly
+  nameWithType: EffectSystem.EffectInstanceList.IsReadOnly
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.IsReadOnly
+  type: Property
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: IsReadOnly
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 120
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public bool IsReadOnly { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsReadOnly As Boolean
+  overload: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.IsReadOnly*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.GetEnumerator
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.GetEnumerator
+  id: GetEnumerator
+  parent: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList
+  langs:
+  - csharp
+  - vb
+  name: GetEnumerator()
+  nameWithType: EffectSystem.EffectInstanceList.GetEnumerator()
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.GetEnumerator()
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: GetEnumerator
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 122
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public IEnumerator<EffectInstanceBase> GetEnumerator()
+    return:
+      type: IEnumerator{MacacaGames.EffectSystem.EffectInstanceBase}
+    content.vb: Public Function GetEnumerator As IEnumerator(Of EffectInstanceBase)
+  overload: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.GetEnumerator*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Clear
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Clear
+  id: Clear
+  parent: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList
+  langs:
+  - csharp
+  - vb
+  name: Clear()
+  nameWithType: EffectSystem.EffectInstanceList.Clear()
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Clear()
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Clear
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 133
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public void Clear()
+    content.vb: Public Sub Clear
+  overload: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Clear*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Contains(MacacaGames.EffectSystem.EffectInstanceBase)
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Contains(MacacaGames.EffectSystem.EffectInstanceBase)
+  id: Contains(MacacaGames.EffectSystem.EffectInstanceBase)
+  parent: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList
+  langs:
+  - csharp
+  - vb
+  name: Contains(EffectInstanceBase)
+  nameWithType: EffectSystem.EffectInstanceList.Contains(EffectInstanceBase)
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Contains(MacacaGames.EffectSystem.EffectInstanceBase)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Contains
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 138
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public bool Contains(EffectInstanceBase item)
+    parameters:
+    - id: item
+      type: MacacaGames.EffectSystem.EffectInstanceBase
+    return:
+      type: System.Boolean
+    content.vb: Public Function Contains(item As EffectInstanceBase) As Boolean
+  overload: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Contains*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.CopyTo(MacacaGames.EffectSystem.EffectInstanceBase[],System.Int32)
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.CopyTo(MacacaGames.EffectSystem.EffectInstanceBase[],System.Int32)
+  id: CopyTo(MacacaGames.EffectSystem.EffectInstanceBase[],System.Int32)
+  parent: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList
+  langs:
+  - csharp
+  - vb
+  name: CopyTo(EffectInstanceBase[], Int32)
+  nameWithType: EffectSystem.EffectInstanceList.CopyTo(EffectInstanceBase[], Int32)
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.CopyTo(MacacaGames.EffectSystem.EffectInstanceBase[], System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: CopyTo
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 143
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public void CopyTo(EffectInstanceBase[] array, int arrayIndex)
+    parameters:
+    - id: array
+      type: MacacaGames.EffectSystem.EffectInstanceBase[]
+    - id: arrayIndex
+      type: System.Int32
+    content.vb: Public Sub CopyTo(array As EffectInstanceBase(), arrayIndex As Integer)
+  overload: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.CopyTo*
+  nameWithType.vb: EffectSystem.EffectInstanceList.CopyTo(EffectInstanceBase(), Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.CopyTo(MacacaGames.EffectSystem.EffectInstanceBase(), System.Int32)
+  name.vb: CopyTo(EffectInstanceBase(), Int32)
+references:
+- uid: MacacaGames.EffectSystem
+  commentId: N:MacacaGames.EffectSystem
+  name: MacacaGames.EffectSystem
+  nameWithType: MacacaGames.EffectSystem
+  fullName: MacacaGames.EffectSystem
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Count*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Count
+  name: Count
+  nameWithType: EffectSystem.EffectInstanceList.Count
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Count
+- uid: System.Int32
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.sumLimitMax*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.sumLimitMax
+  name: sumLimitMax
+  nameWithType: EffectSystem.EffectInstanceList.sumLimitMax
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.sumLimitMax
+- uid: System.Single
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.sumLimitMin*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.sumLimitMin
+  name: sumLimitMin
+  nameWithType: EffectSystem.EffectInstanceList.sumLimitMin
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.sumLimitMin
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Add*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Add
+  name: Add
+  nameWithType: EffectSystem.EffectInstanceList.Add
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Add
+- uid: MacacaGames.EffectSystem.EffectInstanceBase
+  commentId: T:MacacaGames.EffectSystem.EffectInstanceBase
+  parent: MacacaGames.EffectSystem
+  name: EffectInstanceBase
+  nameWithType: EffectInstanceBase
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Remove*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Remove
+  name: Remove
+  nameWithType: EffectSystem.EffectInstanceList.Remove
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Remove
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.#ctor*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.#ctor
+  name: EffectInstanceList
+  nameWithType: EffectSystem.EffectInstanceList.EffectInstanceList
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.EffectInstanceList
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.SetDirty*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.SetDirty
+  name: SetDirty
+  nameWithType: EffectSystem.EffectInstanceList.SetDirty
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.SetDirty
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.GetSum*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.GetSum
+  name: GetSum
+  nameWithType: EffectSystem.EffectInstanceList.GetSum
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.GetSum
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.isSumOutOfLimit*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.isSumOutOfLimit
+  name: isSumOutOfLimit
+  nameWithType: EffectSystem.EffectInstanceList.isSumOutOfLimit
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.isSumOutOfLimit
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.IsReadOnly*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.IsReadOnly
+  name: IsReadOnly
+  nameWithType: EffectSystem.EffectInstanceList.IsReadOnly
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.IsReadOnly
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.GetEnumerator*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.GetEnumerator
+  name: GetEnumerator
+  nameWithType: EffectSystem.EffectInstanceList.GetEnumerator
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.GetEnumerator
+- uid: IEnumerator{MacacaGames.EffectSystem.EffectInstanceBase}
+  commentId: '!:IEnumerator{MacacaGames.EffectSystem.EffectInstanceBase}'
+  definition: IEnumerator`1
+  name: IEnumerator<EffectInstanceBase>
+  nameWithType: IEnumerator<EffectInstanceBase>
+  fullName: IEnumerator<MacacaGames.EffectSystem.EffectInstanceBase>
+  nameWithType.vb: IEnumerator(Of EffectInstanceBase)
+  fullName.vb: IEnumerator(Of MacacaGames.EffectSystem.EffectInstanceBase)
+  name.vb: IEnumerator(Of EffectInstanceBase)
+  spec.csharp:
+  - uid: IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: IEnumerator
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase
+    name: EffectInstanceBase
+    nameWithType: EffectInstanceBase
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: IEnumerator
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase
+    name: EffectInstanceBase
+    nameWithType: EffectInstanceBase
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IEnumerator`1
+  commentId: '!:IEnumerator`1'
+  isExternal: true
+  name: IEnumerator<>
+  nameWithType: IEnumerator<>
+  fullName: IEnumerator<>
+  nameWithType.vb: IEnumerator(Of )
+  fullName.vb: IEnumerator(Of )
+  name.vb: IEnumerator(Of )
+  spec.csharp:
+  - uid: IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: IEnumerator
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: IEnumerator
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Clear*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Clear
+  name: Clear
+  nameWithType: EffectSystem.EffectInstanceList.Clear
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Clear
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Contains*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Contains
+  name: Contains
+  nameWithType: EffectSystem.EffectInstanceList.Contains
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.Contains
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.CopyTo*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.CopyTo
+  name: CopyTo
+  nameWithType: EffectSystem.EffectInstanceList.CopyTo
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.CopyTo
+- uid: MacacaGames.EffectSystem.EffectInstanceBase[]
+  isExternal: true
+  name: EffectInstanceBase[]
+  nameWithType: EffectInstanceBase[]
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase[]
+  nameWithType.vb: EffectInstanceBase()
+  fullName.vb: MacacaGames.EffectSystem.EffectInstanceBase()
+  name.vb: EffectInstanceBase()
+  spec.csharp:
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase
+    name: EffectInstanceBase
+    nameWithType: EffectInstanceBase
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase
+    name: EffectInstanceBase
+    nameWithType: EffectInstanceBase
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase
+  - name: ()
+    nameWithType: ()
+    fullName: ()

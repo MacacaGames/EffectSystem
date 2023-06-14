@@ -1,0 +1,1531 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.EffectInstanceBase
+  commentId: T:MacacaGames.EffectSystem.EffectInstanceBase
+  id: EffectInstanceBase
+  parent: MacacaGames.EffectSystem
+  children:
+  - MacacaGames.EffectSystem.EffectInstanceBase.condition
+  - MacacaGames.EffectSystem.EffectInstanceBase.effectList
+  - MacacaGames.EffectSystem.EffectInstanceBase.effectSystem
+  - MacacaGames.EffectSystem.EffectInstanceBase.End
+  - MacacaGames.EffectSystem.EffectInstanceBase.ExecuteActive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  - MacacaGames.EffectSystem.EffectInstanceBase.ExecuteDeactive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  - MacacaGames.EffectSystem.EffectInstanceBase.GetEditorInfo
+  - MacacaGames.EffectSystem.EffectInstanceBase.GetEndEffectLog
+  - MacacaGames.EffectSystem.EffectInstanceBase.GetOriginValue
+  - MacacaGames.EffectSystem.EffectInstanceBase.GetStartEffectLog
+  - MacacaGames.EffectSystem.EffectInstanceBase.GetValue
+  - MacacaGames.EffectSystem.EffectInstanceBase.GetValueInt
+  - MacacaGames.EffectSystem.EffectInstanceBase.info
+  - MacacaGames.EffectSystem.EffectInstanceBase.input
+  - MacacaGames.EffectSystem.EffectInstanceBase.isActive
+  - MacacaGames.EffectSystem.EffectInstanceBase.isPooled
+  - MacacaGames.EffectSystem.EffectInstanceBase.isUsing
+  - MacacaGames.EffectSystem.EffectInstanceBase.maxEffectValue
+  - MacacaGames.EffectSystem.EffectInstanceBase.OnActive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  - MacacaGames.EffectSystem.EffectInstanceBase.OnColdownEnd
+  - MacacaGames.EffectSystem.EffectInstanceBase.OnDeactive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  - MacacaGames.EffectSystem.EffectInstanceBase.OnEnd
+  - MacacaGames.EffectSystem.EffectInstanceBase.OnStart
+  - MacacaGames.EffectSystem.EffectInstanceBase.owner
+  - MacacaGames.EffectSystem.EffectInstanceBase.RemoveEffect
+  - MacacaGames.EffectSystem.EffectInstanceBase.RemoveSleepyEffect
+  - MacacaGames.EffectSystem.EffectInstanceBase.Reset(MacacaGames.EffectSystem.Model.EffectInfo)
+  - MacacaGames.EffectSystem.EffectInstanceBase.ResetActiveTime
+  - MacacaGames.EffectSystem.EffectInstanceBase.ResetColdDownTime
+  - MacacaGames.EffectSystem.EffectInstanceBase.Start
+  - MacacaGames.EffectSystem.EffectInstanceBase.sumLimit
+  - MacacaGames.EffectSystem.EffectInstanceBase.tags
+  - MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition(System.Single)
+  langs:
+  - csharp
+  - vb
+  name: EffectInstanceBase
+  nameWithType: EffectInstanceBase
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase
+  type: Class
+  source:
+    remote:
+      path: Runtime/EffectBase/EffectInstanceBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: EffectInstanceBase
+    path: ../Runtime/EffectBase/EffectInstanceBase.cs
+    startLine: 10
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: 'public abstract class EffectInstanceBase : object'
+    content.vb: >-
+      Public MustInherit Class EffectInstanceBase
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - MacacaGames.EffectSystem.EffectTriggerBase
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.effectSystem
+  commentId: P:MacacaGames.EffectSystem.EffectInstanceBase.effectSystem
+  id: effectSystem
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  langs:
+  - csharp
+  - vb
+  name: effectSystem
+  nameWithType: EffectInstanceBase.effectSystem
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.effectSystem
+  type: Property
+  source:
+    remote:
+      path: Runtime/EffectBase/EffectInstanceBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: effectSystem
+    path: ../Runtime/EffectBase/EffectInstanceBase.cs
+    startLine: 12
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: protected EffectSystem effectSystem { get; }
+    parameters: []
+    return:
+      type: MacacaGames.EffectSystem.EffectSystem
+    content.vb: Protected ReadOnly Property effectSystem As EffectSystem
+  overload: MacacaGames.EffectSystem.EffectInstanceBase.effectSystem*
+  modifiers.csharp:
+  - protected
+  - get
+  modifiers.vb:
+  - Protected
+  - ReadOnly
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.input
+  commentId: P:MacacaGames.EffectSystem.EffectInstanceBase.input
+  id: input
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  langs:
+  - csharp
+  - vb
+  name: input
+  nameWithType: EffectInstanceBase.input
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.input
+  type: Property
+  source:
+    remote:
+      path: Runtime/EffectBase/EffectInstanceBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: input
+    path: ../Runtime/EffectBase/EffectInstanceBase.cs
+    startLine: 13
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public float input { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property input As Single
+  overload: MacacaGames.EffectSystem.EffectInstanceBase.input*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.info
+  commentId: F:MacacaGames.EffectSystem.EffectInstanceBase.info
+  id: info
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  langs:
+  - csharp
+  - vb
+  name: info
+  nameWithType: EffectInstanceBase.info
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.info
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectBase/EffectInstanceBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: info
+    path: ../Runtime/EffectBase/EffectInstanceBase.cs
+    startLine: 21
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public EffectInfo info
+    return:
+      type: MacacaGames.EffectSystem.Model.EffectInfo
+    content.vb: Public info As EffectInfo
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.condition
+  commentId: F:MacacaGames.EffectSystem.EffectInstanceBase.condition
+  id: condition
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  langs:
+  - csharp
+  - vb
+  name: condition
+  nameWithType: EffectInstanceBase.condition
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.condition
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectBase/EffectInstanceBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: condition
+    path: ../Runtime/EffectBase/EffectInstanceBase.cs
+    startLine: 22
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public EffectCondition condition
+    return:
+      type: MacacaGames.EffectSystem.EffectCondition
+    content.vb: Public condition As EffectCondition
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.effectList
+  commentId: P:MacacaGames.EffectSystem.EffectInstanceBase.effectList
+  id: effectList
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  langs:
+  - csharp
+  - vb
+  name: effectList
+  nameWithType: EffectInstanceBase.effectList
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.effectList
+  type: Property
+  source:
+    remote:
+      path: Runtime/EffectBase/EffectInstanceBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: effectList
+    path: ../Runtime/EffectBase/EffectInstanceBase.cs
+    startLine: 23
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public EffectSystem.EffectInstanceList effectList { get; }
+    parameters: []
+    return:
+      type: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList
+    content.vb: Public ReadOnly Property effectList As EffectSystem.EffectInstanceList
+  overload: MacacaGames.EffectSystem.EffectInstanceBase.effectList*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.isPooled
+  commentId: F:MacacaGames.EffectSystem.EffectInstanceBase.isPooled
+  id: isPooled
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  langs:
+  - csharp
+  - vb
+  name: isPooled
+  nameWithType: EffectInstanceBase.isPooled
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.isPooled
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectBase/EffectInstanceBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: isPooled
+    path: ../Runtime/EffectBase/EffectInstanceBase.cs
+    startLine: 25
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public bool isPooled
+    return:
+      type: System.Boolean
+    content.vb: Public isPooled As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.isActive
+  commentId: P:MacacaGames.EffectSystem.EffectInstanceBase.isActive
+  id: isActive
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  langs:
+  - csharp
+  - vb
+  name: isActive
+  nameWithType: EffectInstanceBase.isActive
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.isActive
+  type: Property
+  source:
+    remote:
+      path: Runtime/EffectBase/EffectInstanceBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: isActive
+    path: ../Runtime/EffectBase/EffectInstanceBase.cs
+    startLine: 26
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public bool isActive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property isActive As Boolean
+  overload: MacacaGames.EffectSystem.EffectInstanceBase.isActive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.isUsing
+  commentId: P:MacacaGames.EffectSystem.EffectInstanceBase.isUsing
+  id: isUsing
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  langs:
+  - csharp
+  - vb
+  name: isUsing
+  nameWithType: EffectInstanceBase.isUsing
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.isUsing
+  type: Property
+  source:
+    remote:
+      path: Runtime/EffectBase/EffectInstanceBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: isUsing
+    path: ../Runtime/EffectBase/EffectInstanceBase.cs
+    startLine: 27
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public bool isUsing { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property isUsing As Boolean
+  overload: MacacaGames.EffectSystem.EffectInstanceBase.isUsing*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.owner
+  commentId: F:MacacaGames.EffectSystem.EffectInstanceBase.owner
+  id: owner
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  langs:
+  - csharp
+  - vb
+  name: owner
+  nameWithType: EffectInstanceBase.owner
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.owner
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectBase/EffectInstanceBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: owner
+    path: ../Runtime/EffectBase/EffectInstanceBase.cs
+    startLine: 29
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public IEffectableObject owner
+    return:
+      type: MacacaGames.EffectSystem.IEffectableObject
+    content.vb: Public owner As IEffectableObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.maxEffectValue
+  commentId: P:MacacaGames.EffectSystem.EffectInstanceBase.maxEffectValue
+  id: maxEffectValue
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  langs:
+  - csharp
+  - vb
+  name: maxEffectValue
+  nameWithType: EffectInstanceBase.maxEffectValue
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.maxEffectValue
+  type: Property
+  source:
+    remote:
+      path: Runtime/EffectBase/EffectInstanceBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: maxEffectValue
+    path: ../Runtime/EffectBase/EffectInstanceBase.cs
+    startLine: 32
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  summary: 若Owner此類Effect效果值大於此設定值，將不會附加效果
+  example: []
+  syntax:
+    content: public virtual float maxEffectValue { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Overridable ReadOnly Property maxEffectValue As Single
+  overload: MacacaGames.EffectSystem.EffectInstanceBase.maxEffectValue*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.sumLimit
+  commentId: P:MacacaGames.EffectSystem.EffectInstanceBase.sumLimit
+  id: sumLimit
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  langs:
+  - csharp
+  - vb
+  name: sumLimit
+  nameWithType: EffectInstanceBase.sumLimit
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.sumLimit
+  type: Property
+  source:
+    remote:
+      path: Runtime/EffectBase/EffectInstanceBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: sumLimit
+    path: ../Runtime/EffectBase/EffectInstanceBase.cs
+    startLine: 37
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  summary: 此EffectType所取得的數值上下限。
+  example: []
+  syntax:
+    content: public virtual (float min, float max) sumLimit { get; }
+    parameters: []
+    return:
+      type: System.ValueTuple{System.Single,System.Single}
+    content.vb: Public Overridable ReadOnly Property sumLimit As(min As Single, max As Single)
+  overload: MacacaGames.EffectSystem.EffectInstanceBase.sumLimit*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.tags
+  commentId: F:MacacaGames.EffectSystem.EffectInstanceBase.tags
+  id: tags
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  langs:
+  - csharp
+  - vb
+  name: tags
+  nameWithType: EffectInstanceBase.tags
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.tags
+  type: Field
+  source:
+    remote:
+      path: Runtime/EffectBase/EffectInstanceBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: tags
+    path: ../Runtime/EffectBase/EffectInstanceBase.cs
+    startLine: 40
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  summary: 標記此Effect的Tag。
+  example: []
+  syntax:
+    content: public List<string> tags
+    return:
+      type: List{System.String}
+    content.vb: Public tags As List(Of String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.GetEditorInfo
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.GetEditorInfo
+  id: GetEditorInfo
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  langs:
+  - csharp
+  - vb
+  name: GetEditorInfo()
+  nameWithType: EffectInstanceBase.GetEditorInfo()
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.GetEditorInfo()
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectBase/EffectInstanceBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: GetEditorInfo
+    path: ../Runtime/EffectBase/EffectInstanceBase.cs
+    startLine: 42
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public virtual string GetEditorInfo()
+    return:
+      type: System.String
+    content.vb: Public Overridable Function GetEditorInfo As String
+  overload: MacacaGames.EffectSystem.EffectInstanceBase.GetEditorInfo*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.Reset(MacacaGames.EffectSystem.Model.EffectInfo)
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.Reset(MacacaGames.EffectSystem.Model.EffectInfo)
+  id: Reset(MacacaGames.EffectSystem.Model.EffectInfo)
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  langs:
+  - csharp
+  - vb
+  name: Reset(EffectInfo)
+  nameWithType: EffectInstanceBase.Reset(EffectInfo)
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.Reset(MacacaGames.EffectSystem.Model.EffectInfo)
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectBase/EffectInstanceBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Reset
+    path: ../Runtime/EffectBase/EffectInstanceBase.cs
+    startLine: 47
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public void Reset(EffectInfo effectInfo)
+    parameters:
+    - id: effectInfo
+      type: MacacaGames.EffectSystem.Model.EffectInfo
+    content.vb: Public Sub Reset(effectInfo As EffectInfo)
+  overload: MacacaGames.EffectSystem.EffectInstanceBase.Reset*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.Start
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.Start
+  id: Start
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: EffectInstanceBase.Start()
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.Start()
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectBase/EffectInstanceBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Start
+    path: ../Runtime/EffectBase/EffectInstanceBase.cs
+    startLine: 69
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public void Start()
+    content.vb: Public Sub Start
+  overload: MacacaGames.EffectSystem.EffectInstanceBase.Start*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.OnStart
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.OnStart
+  id: OnStart
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  langs:
+  - csharp
+  - vb
+  name: OnStart()
+  nameWithType: EffectInstanceBase.OnStart()
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.OnStart()
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectBase/EffectInstanceBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnStart
+    path: ../Runtime/EffectBase/EffectInstanceBase.cs
+    startLine: 93
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  summary: "\nExcude when an Effect is attach\n"
+  example: []
+  syntax:
+    content: protected virtual void OnStart()
+    content.vb: Protected Overridable Sub OnStart
+  overload: MacacaGames.EffectSystem.EffectInstanceBase.OnStart*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.OnActive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.OnActive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  id: OnActive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  langs:
+  - csharp
+  - vb
+  name: OnActive(EffectTriggerConditionInfo)
+  nameWithType: EffectInstanceBase.OnActive(EffectTriggerConditionInfo)
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.OnActive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectBase/EffectInstanceBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnActive
+    path: ../Runtime/EffectBase/EffectInstanceBase.cs
+    startLine: 99
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  summary: "\nExcude when an Effect is Active by ActiveCondition\n"
+  example: []
+  syntax:
+    content: public virtual void OnActive(EffectTriggerConditionInfo triggerConditionInfo)
+    parameters:
+    - id: triggerConditionInfo
+      type: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+      description: ''
+    content.vb: Public Overridable Sub OnActive(triggerConditionInfo As EffectTriggerConditionInfo)
+  overload: MacacaGames.EffectSystem.EffectInstanceBase.OnActive*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.OnDeactive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.OnDeactive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  id: OnDeactive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  langs:
+  - csharp
+  - vb
+  name: OnDeactive(EffectTriggerConditionInfo)
+  nameWithType: EffectInstanceBase.OnDeactive(EffectTriggerConditionInfo)
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.OnDeactive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectBase/EffectInstanceBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnDeactive
+    path: ../Runtime/EffectBase/EffectInstanceBase.cs
+    startLine: 108
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  summary: "\nExcude when an Effect is Deactive DctiveCondition\n"
+  example: []
+  syntax:
+    content: public virtual void OnDeactive(EffectTriggerConditionInfo triggerConditionInfo)
+    parameters:
+    - id: triggerConditionInfo
+      type: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+      description: ''
+    content.vb: Public Overridable Sub OnDeactive(triggerConditionInfo As EffectTriggerConditionInfo)
+  overload: MacacaGames.EffectSystem.EffectInstanceBase.OnDeactive*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.ExecuteActive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.ExecuteActive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  id: ExecuteActive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  langs:
+  - csharp
+  - vb
+  name: ExecuteActive(EffectTriggerConditionInfo)
+  nameWithType: EffectInstanceBase.ExecuteActive(EffectTriggerConditionInfo)
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.ExecuteActive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectBase/EffectInstanceBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: ExecuteActive
+    path: ../Runtime/EffectBase/EffectInstanceBase.cs
+    startLine: 113
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public void ExecuteActive(EffectTriggerConditionInfo triggerConditionInfo)
+    parameters:
+    - id: triggerConditionInfo
+      type: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+    content.vb: Public Sub ExecuteActive(triggerConditionInfo As EffectTriggerConditionInfo)
+  overload: MacacaGames.EffectSystem.EffectInstanceBase.ExecuteActive*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.ExecuteDeactive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.ExecuteDeactive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  id: ExecuteDeactive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  langs:
+  - csharp
+  - vb
+  name: ExecuteDeactive(EffectTriggerConditionInfo)
+  nameWithType: EffectInstanceBase.ExecuteDeactive(EffectTriggerConditionInfo)
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.ExecuteDeactive(MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectBase/EffectInstanceBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: ExecuteDeactive
+    path: ../Runtime/EffectBase/EffectInstanceBase.cs
+    startLine: 124
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public void ExecuteDeactive(EffectTriggerConditionInfo triggerConditionInfo)
+    parameters:
+    - id: triggerConditionInfo
+      type: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+    content.vb: Public Sub ExecuteDeactive(triggerConditionInfo As EffectTriggerConditionInfo)
+  overload: MacacaGames.EffectSystem.EffectInstanceBase.ExecuteDeactive*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.End
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.End
+  id: End
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  langs:
+  - csharp
+  - vb
+  name: End()
+  nameWithType: EffectInstanceBase.End()
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.End()
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectBase/EffectInstanceBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: End
+    path: ../Runtime/EffectBase/EffectInstanceBase.cs
+    startLine: 142
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public void End()
+    content.vb: Public Sub
+  overload: MacacaGames.EffectSystem.EffectInstanceBase.End*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.OnEnd
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.OnEnd
+  id: OnEnd
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  langs:
+  - csharp
+  - vb
+  name: OnEnd()
+  nameWithType: EffectInstanceBase.OnEnd()
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.OnEnd()
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectBase/EffectInstanceBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnEnd
+    path: ../Runtime/EffectBase/EffectInstanceBase.cs
+    startLine: 174
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  summary: 當Effect被消除時執行
+  example: []
+  syntax:
+    content: protected virtual void OnEnd()
+    content.vb: Protected Overridable Sub OnEnd
+  overload: MacacaGames.EffectSystem.EffectInstanceBase.OnEnd*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.OnColdownEnd
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.OnColdownEnd
+  id: OnColdownEnd
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  langs:
+  - csharp
+  - vb
+  name: OnColdownEnd()
+  nameWithType: EffectInstanceBase.OnColdownEnd()
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.OnColdownEnd()
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectBase/EffectInstanceBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnColdownEnd
+    path: ../Runtime/EffectBase/EffectInstanceBase.cs
+    startLine: 179
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  summary: "\nExcude when the colddown is finish\n"
+  example: []
+  syntax:
+    content: public virtual void OnColdownEnd()
+    content.vb: Public Overridable Sub OnColdownEnd
+  overload: MacacaGames.EffectSystem.EffectInstanceBase.OnColdownEnd*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition(System.Single)
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition(System.Single)
+  id: UpdateEffectCondition(System.Single)
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  langs:
+  - csharp
+  - vb
+  name: UpdateEffectCondition(Single)
+  nameWithType: EffectInstanceBase.UpdateEffectCondition(Single)
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition(System.Single)
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectBase/EffectInstanceBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: UpdateEffectCondition
+    path: ../Runtime/EffectBase/EffectInstanceBase.cs
+    startLine: 184
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public void UpdateEffectCondition(float delta)
+    parameters:
+    - id: delta
+      type: System.Single
+    content.vb: Public Sub UpdateEffectCondition(delta As Single)
+  overload: MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.ResetActiveTime
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.ResetActiveTime
+  id: ResetActiveTime
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  langs:
+  - csharp
+  - vb
+  name: ResetActiveTime()
+  nameWithType: EffectInstanceBase.ResetActiveTime()
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.ResetActiveTime()
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectBase/EffectInstanceBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: ResetActiveTime
+    path: ../Runtime/EffectBase/EffectInstanceBase.cs
+    startLine: 189
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public void ResetActiveTime()
+    content.vb: Public Sub ResetActiveTime
+  overload: MacacaGames.EffectSystem.EffectInstanceBase.ResetActiveTime*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.ResetColdDownTime
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.ResetColdDownTime
+  id: ResetColdDownTime
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  langs:
+  - csharp
+  - vb
+  name: ResetColdDownTime()
+  nameWithType: EffectInstanceBase.ResetColdDownTime()
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.ResetColdDownTime()
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectBase/EffectInstanceBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: ResetColdDownTime
+    path: ../Runtime/EffectBase/EffectInstanceBase.cs
+    startLine: 194
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public void ResetColdDownTime()
+    content.vb: Public Sub ResetColdDownTime
+  overload: MacacaGames.EffectSystem.EffectInstanceBase.ResetColdDownTime*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.RemoveSleepyEffect
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.RemoveSleepyEffect
+  id: RemoveSleepyEffect
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  langs:
+  - csharp
+  - vb
+  name: RemoveSleepyEffect()
+  nameWithType: EffectInstanceBase.RemoveSleepyEffect()
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.RemoveSleepyEffect()
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectBase/EffectInstanceBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: RemoveSleepyEffect
+    path: ../Runtime/EffectBase/EffectInstanceBase.cs
+    startLine: 208
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public bool RemoveSleepyEffect()
+    return:
+      type: System.Boolean
+    content.vb: Public Function RemoveSleepyEffect As Boolean
+  overload: MacacaGames.EffectSystem.EffectInstanceBase.RemoveSleepyEffect*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.RemoveEffect
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.RemoveEffect
+  id: RemoveEffect
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  langs:
+  - csharp
+  - vb
+  name: RemoveEffect()
+  nameWithType: EffectInstanceBase.RemoveEffect()
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.RemoveEffect()
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectBase/EffectInstanceBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: RemoveEffect
+    path: ../Runtime/EffectBase/EffectInstanceBase.cs
+    startLine: 219
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public void RemoveEffect()
+    content.vb: Public Sub RemoveEffect
+  overload: MacacaGames.EffectSystem.EffectInstanceBase.RemoveEffect*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.GetValueInt
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.GetValueInt
+  id: GetValueInt
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  langs:
+  - csharp
+  - vb
+  name: GetValueInt()
+  nameWithType: EffectInstanceBase.GetValueInt()
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.GetValueInt()
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectBase/EffectInstanceBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: GetValueInt
+    path: ../Runtime/EffectBase/EffectInstanceBase.cs
+    startLine: 248
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public int GetValueInt()
+    return:
+      type: System.Int32
+    content.vb: Public Function GetValueInt As Integer
+  overload: MacacaGames.EffectSystem.EffectInstanceBase.GetValueInt*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.GetValue
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.GetValue
+  id: GetValue
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  langs:
+  - csharp
+  - vb
+  name: GetValue()
+  nameWithType: EffectInstanceBase.GetValue()
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.GetValue()
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectBase/EffectInstanceBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: GetValue
+    path: ../Runtime/EffectBase/EffectInstanceBase.cs
+    startLine: 252
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public float GetValue()
+    return:
+      type: System.Single
+    content.vb: Public Function GetValue As Single
+  overload: MacacaGames.EffectSystem.EffectInstanceBase.GetValue*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.GetOriginValue
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.GetOriginValue
+  id: GetOriginValue
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  langs:
+  - csharp
+  - vb
+  name: GetOriginValue()
+  nameWithType: EffectInstanceBase.GetOriginValue()
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.GetOriginValue()
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectBase/EffectInstanceBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: GetOriginValue
+    path: ../Runtime/EffectBase/EffectInstanceBase.cs
+    startLine: 259
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public virtual float GetOriginValue()
+    return:
+      type: System.Single
+    content.vb: Public Overridable Function GetOriginValue As Single
+  overload: MacacaGames.EffectSystem.EffectInstanceBase.GetOriginValue*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.GetStartEffectLog
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.GetStartEffectLog
+  id: GetStartEffectLog
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  langs:
+  - csharp
+  - vb
+  name: GetStartEffectLog()
+  nameWithType: EffectInstanceBase.GetStartEffectLog()
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.GetStartEffectLog()
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectBase/EffectInstanceBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: GetStartEffectLog
+    path: ../Runtime/EffectBase/EffectInstanceBase.cs
+    startLine: 265
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: protected virtual string GetStartEffectLog()
+    return:
+      type: System.String
+    content.vb: Protected Overridable Function GetStartEffectLog As String
+  overload: MacacaGames.EffectSystem.EffectInstanceBase.GetStartEffectLog*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.GetEndEffectLog
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.GetEndEffectLog
+  id: GetEndEffectLog
+  parent: MacacaGames.EffectSystem.EffectInstanceBase
+  langs:
+  - csharp
+  - vb
+  name: GetEndEffectLog()
+  nameWithType: EffectInstanceBase.GetEndEffectLog()
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.GetEndEffectLog()
+  type: Method
+  source:
+    remote:
+      path: Runtime/EffectBase/EffectInstanceBase.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: GetEndEffectLog
+    path: ../Runtime/EffectBase/EffectInstanceBase.cs
+    startLine: 269
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: protected virtual string GetEndEffectLog()
+    return:
+      type: System.String
+    content.vb: Protected Overridable Function GetEndEffectLog As String
+  overload: MacacaGames.EffectSystem.EffectInstanceBase.GetEndEffectLog*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+references:
+- uid: MacacaGames.EffectSystem
+  commentId: N:MacacaGames.EffectSystem
+  name: MacacaGames.EffectSystem
+  nameWithType: MacacaGames.EffectSystem
+  fullName: MacacaGames.EffectSystem
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.effectSystem*
+  commentId: Overload:MacacaGames.EffectSystem.EffectInstanceBase.effectSystem
+  name: effectSystem
+  nameWithType: EffectInstanceBase.effectSystem
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.effectSystem
+- uid: MacacaGames.EffectSystem.EffectSystem
+  commentId: T:MacacaGames.EffectSystem.EffectSystem
+  parent: MacacaGames.EffectSystem
+  name: EffectSystem
+  nameWithType: EffectSystem
+  fullName: MacacaGames.EffectSystem.EffectSystem
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.input*
+  commentId: Overload:MacacaGames.EffectSystem.EffectInstanceBase.input
+  name: input
+  nameWithType: EffectInstanceBase.input
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.input
+- uid: System.Single
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: MacacaGames.EffectSystem.Model.EffectInfo
+  commentId: T:MacacaGames.EffectSystem.Model.EffectInfo
+  parent: MacacaGames.EffectSystem.Model
+  name: EffectInfo
+  nameWithType: EffectInfo
+  fullName: MacacaGames.EffectSystem.Model.EffectInfo
+- uid: MacacaGames.EffectSystem.Model
+  commentId: N:MacacaGames.EffectSystem.Model
+  name: MacacaGames.EffectSystem.Model
+  nameWithType: MacacaGames.EffectSystem.Model
+  fullName: MacacaGames.EffectSystem.Model
+- uid: MacacaGames.EffectSystem.EffectCondition
+  commentId: T:MacacaGames.EffectSystem.EffectCondition
+  parent: MacacaGames.EffectSystem
+  name: EffectCondition
+  nameWithType: EffectCondition
+  fullName: MacacaGames.EffectSystem.EffectCondition
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.effectList*
+  commentId: Overload:MacacaGames.EffectSystem.EffectInstanceBase.effectList
+  name: effectList
+  nameWithType: EffectInstanceBase.effectList
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.effectList
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList
+  commentId: T:MacacaGames.EffectSystem.EffectSystem.EffectInstanceList
+  parent: MacacaGames.EffectSystem
+  name: EffectSystem.EffectInstanceList
+  nameWithType: EffectSystem.EffectInstanceList
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.isActive*
+  commentId: Overload:MacacaGames.EffectSystem.EffectInstanceBase.isActive
+  name: isActive
+  nameWithType: EffectInstanceBase.isActive
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.isActive
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.isUsing*
+  commentId: Overload:MacacaGames.EffectSystem.EffectInstanceBase.isUsing
+  name: isUsing
+  nameWithType: EffectInstanceBase.isUsing
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.isUsing
+- uid: MacacaGames.EffectSystem.IEffectableObject
+  commentId: T:MacacaGames.EffectSystem.IEffectableObject
+  parent: MacacaGames.EffectSystem
+  name: IEffectableObject
+  nameWithType: IEffectableObject
+  fullName: MacacaGames.EffectSystem.IEffectableObject
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.maxEffectValue*
+  commentId: Overload:MacacaGames.EffectSystem.EffectInstanceBase.maxEffectValue
+  name: maxEffectValue
+  nameWithType: EffectInstanceBase.maxEffectValue
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.maxEffectValue
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.sumLimit*
+  commentId: Overload:MacacaGames.EffectSystem.EffectInstanceBase.sumLimit
+  name: sumLimit
+  nameWithType: EffectInstanceBase.sumLimit
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.sumLimit
+- uid: System.ValueTuple{System.Single,System.Single}
+  commentId: T:System.ValueTuple{System.Single,System.Single}
+  parent: System
+  isExternal: true
+  name: ValueTuple<Single, Single>
+  nameWithType: ValueTuple<Single, Single>
+  fullName: System.ValueTuple<System.Single, System.Single>
+  nameWithType.vb: ValueTuple(Of Single, Single)
+  fullName.vb: System.ValueTuple(Of System.Single, System.Single)
+  name.vb: ValueTuple(Of Single, Single)
+  spec.csharp:
+  - uid: System.ValueTuple`2
+    name: ValueTuple
+    nameWithType: ValueTuple
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.ValueTuple`2
+    name: ValueTuple
+    nameWithType: ValueTuple
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: List{System.String}
+  commentId: '!:List{System.String}'
+  definition: List`1
+  name: List<String>
+  nameWithType: List<String>
+  fullName: List<System.String>
+  nameWithType.vb: List(Of String)
+  fullName.vb: List(Of System.String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.GetEditorInfo*
+  commentId: Overload:MacacaGames.EffectSystem.EffectInstanceBase.GetEditorInfo
+  name: GetEditorInfo
+  nameWithType: EffectInstanceBase.GetEditorInfo
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.GetEditorInfo
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.Reset*
+  commentId: Overload:MacacaGames.EffectSystem.EffectInstanceBase.Reset
+  name: Reset
+  nameWithType: EffectInstanceBase.Reset
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.Reset
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.Start*
+  commentId: Overload:MacacaGames.EffectSystem.EffectInstanceBase.Start
+  name: Start
+  nameWithType: EffectInstanceBase.Start
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.Start
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.OnStart*
+  commentId: Overload:MacacaGames.EffectSystem.EffectInstanceBase.OnStart
+  name: OnStart
+  nameWithType: EffectInstanceBase.OnStart
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.OnStart
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.OnActive*
+  commentId: Overload:MacacaGames.EffectSystem.EffectInstanceBase.OnActive
+  name: OnActive
+  nameWithType: EffectInstanceBase.OnActive
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.OnActive
+- uid: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+  commentId: T:MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+  parent: MacacaGames.EffectSystem.Model
+  name: EffectTriggerConditionInfo
+  nameWithType: EffectTriggerConditionInfo
+  fullName: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.OnDeactive*
+  commentId: Overload:MacacaGames.EffectSystem.EffectInstanceBase.OnDeactive
+  name: OnDeactive
+  nameWithType: EffectInstanceBase.OnDeactive
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.OnDeactive
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.ExecuteActive*
+  commentId: Overload:MacacaGames.EffectSystem.EffectInstanceBase.ExecuteActive
+  name: ExecuteActive
+  nameWithType: EffectInstanceBase.ExecuteActive
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.ExecuteActive
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.ExecuteDeactive*
+  commentId: Overload:MacacaGames.EffectSystem.EffectInstanceBase.ExecuteDeactive
+  name: ExecuteDeactive
+  nameWithType: EffectInstanceBase.ExecuteDeactive
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.ExecuteDeactive
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.End*
+  commentId: Overload:MacacaGames.EffectSystem.EffectInstanceBase.End
+  name: End
+  nameWithType: EffectInstanceBase.End
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.End
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.OnEnd*
+  commentId: Overload:MacacaGames.EffectSystem.EffectInstanceBase.OnEnd
+  name: OnEnd
+  nameWithType: EffectInstanceBase.OnEnd
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.OnEnd
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.OnColdownEnd*
+  commentId: Overload:MacacaGames.EffectSystem.EffectInstanceBase.OnColdownEnd
+  name: OnColdownEnd
+  nameWithType: EffectInstanceBase.OnColdownEnd
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.OnColdownEnd
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition*
+  commentId: Overload:MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition
+  name: UpdateEffectCondition
+  nameWithType: EffectInstanceBase.UpdateEffectCondition
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.ResetActiveTime*
+  commentId: Overload:MacacaGames.EffectSystem.EffectInstanceBase.ResetActiveTime
+  name: ResetActiveTime
+  nameWithType: EffectInstanceBase.ResetActiveTime
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.ResetActiveTime
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.ResetColdDownTime*
+  commentId: Overload:MacacaGames.EffectSystem.EffectInstanceBase.ResetColdDownTime
+  name: ResetColdDownTime
+  nameWithType: EffectInstanceBase.ResetColdDownTime
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.ResetColdDownTime
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.RemoveSleepyEffect*
+  commentId: Overload:MacacaGames.EffectSystem.EffectInstanceBase.RemoveSleepyEffect
+  name: RemoveSleepyEffect
+  nameWithType: EffectInstanceBase.RemoveSleepyEffect
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.RemoveSleepyEffect
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.RemoveEffect*
+  commentId: Overload:MacacaGames.EffectSystem.EffectInstanceBase.RemoveEffect
+  name: RemoveEffect
+  nameWithType: EffectInstanceBase.RemoveEffect
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.RemoveEffect
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.GetValueInt*
+  commentId: Overload:MacacaGames.EffectSystem.EffectInstanceBase.GetValueInt
+  name: GetValueInt
+  nameWithType: EffectInstanceBase.GetValueInt
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.GetValueInt
+- uid: System.Int32
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.GetValue*
+  commentId: Overload:MacacaGames.EffectSystem.EffectInstanceBase.GetValue
+  name: GetValue
+  nameWithType: EffectInstanceBase.GetValue
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.GetValue
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.GetOriginValue*
+  commentId: Overload:MacacaGames.EffectSystem.EffectInstanceBase.GetOriginValue
+  name: GetOriginValue
+  nameWithType: EffectInstanceBase.GetOriginValue
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.GetOriginValue
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.GetStartEffectLog*
+  commentId: Overload:MacacaGames.EffectSystem.EffectInstanceBase.GetStartEffectLog
+  name: GetStartEffectLog
+  nameWithType: EffectInstanceBase.GetStartEffectLog
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.GetStartEffectLog
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.GetEndEffectLog*
+  commentId: Overload:MacacaGames.EffectSystem.EffectInstanceBase.GetEndEffectLog
+  name: GetEndEffectLog
+  nameWithType: EffectInstanceBase.GetEndEffectLog
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.GetEndEffectLog

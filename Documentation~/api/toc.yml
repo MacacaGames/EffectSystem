@@ -4,60 +4,30 @@
   items:
   - uid: MacacaGames.EffectSystem.AutoDestroySelf_BehaviourState
     name: AutoDestroySelf_BehaviourState
-  - uid: MacacaGames.EffectSystem.EffectBase
-    name: EffectBase
-  - uid: MacacaGames.EffectSystem.EffectBaseCC
-    name: EffectBaseCC
   - uid: MacacaGames.EffectSystem.EffectCalculator
     name: EffectCalculator
   - uid: MacacaGames.EffectSystem.EffectCondition
     name: EffectCondition
-  - uid: MacacaGames.EffectSystem.EffectFilter
-    name: EffectFilter
   - uid: MacacaGames.EffectSystem.EffectGroup
     name: EffectGroup
-  - uid: MacacaGames.EffectSystem.EffectManager
-    name: EffectManager
-  - uid: MacacaGames.EffectSystem.EffectManager.EffectableObjectInfo
-    name: EffectManager.EffectableObjectInfo
-  - uid: MacacaGames.EffectSystem.EffectManager.EffectList
-    name: EffectManager.EffectList
-  - uid: MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo
-    name: EffectManager.EffectTriggerConditionInfo
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase
+    name: EffectInstanceBase
   - uid: MacacaGames.EffectSystem.EffectParticleManager
     name: EffectParticleManager
-  - uid: MacacaGames.EffectSystem.EffectParticleManager.ParticleStruct
-    name: EffectParticleManager.ParticleStruct
-  - uid: MacacaGames.EffectSystem.EffectParticleManager.ParticleType
-    name: EffectParticleManager.ParticleType
+  - uid: MacacaGames.EffectSystem.EffectParticleManager.EffectParticleData
+    name: EffectParticleManager.EffectParticleData
+  - uid: MacacaGames.EffectSystem.EffectSystem
+    name: EffectSystem
+  - uid: MacacaGames.EffectSystem.EffectSystem.EffectableObjectInfo
+    name: EffectSystem.EffectableObjectInfo
+  - uid: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList
+    name: EffectSystem.EffectInstanceList
   - uid: MacacaGames.EffectSystem.EffectSystemScriptable
     name: EffectSystemScriptable
   - uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
     name: EffectSystemScriptable.ActiveCondition
-  - uid: MacacaGames.EffectSystem.EffectSystemScriptable.CastTarget
-    name: EffectSystemScriptable.CastTarget
-  - uid: MacacaGames.EffectSystem.EffectSystemScriptable.ConditionLogic
-    name: EffectSystemScriptable.ConditionLogic
-  - uid: MacacaGames.EffectSystem.EffectSystemScriptable.DamageType
-    name: EffectSystemScriptable.DamageType
   - uid: MacacaGames.EffectSystem.EffectSystemScriptable.DeactiveCondition
     name: EffectSystemScriptable.DeactiveCondition
-  - uid: MacacaGames.EffectSystem.EffectInfoLogic
-    name: EffectInfoLogic
-  - uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectType
-    name: EffectSystemScriptable.EffectType
-  - uid: MacacaGames.EffectSystem.EffectSystemScriptable.EffectViewRoot
-    name: EffectSystemScriptable.EffectViewRoot
-  - uid: MacacaGames.EffectSystem.EffectSystemScriptable.InputType
-    name: EffectSystemScriptable.InputType
-  - uid: MacacaGames.EffectSystem.EffectSystemScriptable.SkillAttackType
-    name: EffectSystemScriptable.SkillAttackType
-  - uid: MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType
-    name: EffectSystemScriptable.SkillCastVfxType
-  - uid: MacacaGames.EffectSystem.EffectSystemScriptable.SkillTargetVfxType
-    name: EffectSystemScriptable.SkillTargetVfxType
-  - uid: MacacaGames.EffectSystem.EffectSystemScriptable.TriggerTransType
-    name: EffectSystemScriptable.TriggerTransType
   - uid: MacacaGames.EffectSystem.EffectTriggerBase
     name: EffectTriggerBase
   - uid: MacacaGames.EffectSystem.EffectTypeGroupAttribute
@@ -78,8 +48,6 @@
     name: EffectViewBase
   - uid: MacacaGames.EffectSystem.IEffectableObject
     name: IEffectableObject
-  - uid: MacacaGames.EffectSystem.IEffectSystemData
-    name: IEffectSystemData
   - uid: MacacaGames.EffectSystem.IStarSkillEffect
     name: IStarSkillEffect
   - uid: MacacaGames.EffectSystem.TextTemplateCreater
@@ -87,34 +55,32 @@
 - uid: MacacaGames.EffectSystem.Editor
   name: MacacaGames.EffectSystem.Editor
   items:
+  - uid: MacacaGames.EffectSystem.Editor.EffectEditorWindow
+    name: EffectEditorWindow
+  - uid: MacacaGames.EffectSystem.Editor.EffectGroupEditor
+    name: EffectGroupEditor
   - uid: MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker
     name: EffectSystemScriptBacker
-- uid: MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model
-  name: MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model
-  items:
-  - uid: MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.ColliderTypeFormatter
-    name: ColliderTypeFormatter
-  - uid: MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.ConditionRequirementFormatter
-    name: ConditionRequirementFormatter
-  - uid: MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.EffectInfo_EffectTaxonomyFormatter
-    name: EffectInfo_EffectTaxonomyFormatter
-  - uid: MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.EffectInfoFormatter
-    name: EffectInfoFormatter
+  - uid: MacacaGames.EffectSystem.Editor.EffectTemplateCreatorEditorWindow
+    name: EffectTemplateCreatorEditorWindow
 - uid: MacacaGames.EffectSystem.Model
   name: MacacaGames.EffectSystem.Model
   items:
-  - uid: MacacaGames.EffectSystem.Model.ColliderType
-    name: ColliderType
+  - uid: MacacaGames.EffectSystem.Model.ConditionLogic
+    name: ConditionLogic
   - uid: MacacaGames.EffectSystem.Model.ConditionRequirement
     name: ConditionRequirement
+  - uid: MacacaGames.EffectSystem.Model.EffectDataProvider
+    name: EffectDataProvider
   - uid: MacacaGames.EffectSystem.Model.EffectInfo
     name: EffectInfo
-  - uid: MacacaGames.EffectSystem.Model.EffectInfo.EffectTaxonomy
-    name: EffectInfo.EffectTaxonomy
+  - uid: MacacaGames.EffectSystem.Model.EffectLifeCycleLogic
+    name: EffectLifeCycleLogic
+  - uid: MacacaGames.EffectSystem.Model.EffectTaxonomy
+    name: EffectTaxonomy
+  - uid: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+    name: EffectTriggerConditionInfo
   - uid: MacacaGames.EffectSystem.Model.EffectViewInfo
     name: EffectViewInfo
-- uid: MacacaGames.EffectSystem.Resolvers
-  name: MacacaGames.EffectSystem.Resolvers
-  items:
-  - uid: MacacaGames.EffectSystem.Resolvers.EffectSystemResolver
-    name: EffectSystemResolver
+  - uid: MacacaGames.EffectSystem.Model.TriggerTransType
+    name: TriggerTransType

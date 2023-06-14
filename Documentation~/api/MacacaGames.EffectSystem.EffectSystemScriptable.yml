@@ -14,14 +14,14 @@ items:
   type: Struct
   source:
     remote:
-      path: Runtime/Utility/EffectSystemScriptable.cs
+      path: Model/EffectSystemScriptable.cs
       branch: main
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: EffectSystemScriptable
-    path: ../Runtime/Utility/EffectSystemScriptable.cs
+    path: ../Model/EffectSystemScriptable.cs
     startLine: 4
   assemblies:
-  - Macaca.EffectSystem
+  - Macaca.EffectSystem.Model
   namespace: MacacaGames.EffectSystem
   syntax:
     content: public struct EffectSystemScriptable

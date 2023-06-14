@@ -5,6 +5,7 @@ items:
   id: EffectSystemScriptable.ActiveCondition
   parent: MacacaGames.EffectSystem
   children:
+  - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.None
   - MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnEffectStart
   langs:
   - csharp
@@ -15,14 +16,14 @@ items:
   type: Struct
   source:
     remote:
-      path: Runtime/Utility/EffectSystemScriptable.cs
+      path: Model/EffectSystemScriptable.cs
       branch: main
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: ActiveCondition
-    path: ../Runtime/Utility/EffectSystemScriptable.cs
-    startLine: 29
+    path: ../Model/EffectSystemScriptable.cs
+    startLine: 11
   assemblies:
-  - Macaca.EffectSystem
+  - Macaca.EffectSystem.Model
   namespace: MacacaGames.EffectSystem
   syntax:
     content: public struct ActiveCondition
@@ -33,6 +34,39 @@ items:
   modifiers.vb:
   - Public
   - Structure
+- uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.None
+  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.None
+  id: None
+  parent: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: EffectSystemScriptable.ActiveCondition.None
+  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.None
+  type: Field
+  source:
+    remote:
+      path: Model/EffectSystemScriptable.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: None
+    path: ../Model/EffectSystemScriptable.cs
+    startLine: 13
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public const string None = null
+    return:
+      type: System.String
+    content.vb: Public Const None As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnEffectStart
   commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.OnEffectStart
   id: OnEffectStart
@@ -46,14 +80,14 @@ items:
   type: Field
   source:
     remote:
-      path: Runtime/Utility/EffectSystemScriptable.cs
+      path: Model/EffectSystemScriptable.cs
       branch: main
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: OnEffectStart
-    path: ../Runtime/Utility/EffectSystemScriptable.cs
-    startLine: 31
+    path: ../Model/EffectSystemScriptable.cs
+    startLine: 14
   assemblies:
-  - Macaca.EffectSystem
+  - Macaca.EffectSystem.Model
   namespace: MacacaGames.EffectSystem
   syntax:
     content: public const string OnEffectStart = null

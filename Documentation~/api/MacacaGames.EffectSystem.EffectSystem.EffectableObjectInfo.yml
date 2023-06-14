@@ -1,0 +1,326 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectableObjectInfo
+  commentId: T:MacacaGames.EffectSystem.EffectSystem.EffectableObjectInfo
+  id: EffectSystem.EffectableObjectInfo
+  parent: MacacaGames.EffectSystem
+  children:
+  - MacacaGames.EffectSystem.EffectSystem.EffectableObjectInfo.activeCondition
+  - MacacaGames.EffectSystem.EffectSystem.EffectableObjectInfo.deactiveCondition
+  - MacacaGames.EffectSystem.EffectSystem.EffectableObjectInfo.effectLists
+  langs:
+  - csharp
+  - vb
+  name: EffectSystem.EffectableObjectInfo
+  nameWithType: EffectSystem.EffectableObjectInfo
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectableObjectInfo
+  type: Class
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: EffectableObjectInfo
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 149
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: 'public class EffectableObjectInfo : object'
+    content.vb: >-
+      Public Class EffectableObjectInfo
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectableObjectInfo.effectLists
+  commentId: F:MacacaGames.EffectSystem.EffectSystem.EffectableObjectInfo.effectLists
+  id: effectLists
+  parent: MacacaGames.EffectSystem.EffectSystem.EffectableObjectInfo
+  langs:
+  - csharp
+  - vb
+  name: effectLists
+  nameWithType: EffectSystem.EffectableObjectInfo.effectLists
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectableObjectInfo.effectLists
+  type: Field
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: effectLists
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 151
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public Dictionary<string, EffectSystem.EffectInstanceList> effectLists
+    return:
+      type: Dictionary{System.String,MacacaGames.EffectSystem.EffectSystem.EffectInstanceList}
+    content.vb: Public effectLists As Dictionary(Of String, EffectSystem.EffectInstanceList)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectableObjectInfo.activeCondition
+  commentId: F:MacacaGames.EffectSystem.EffectSystem.EffectableObjectInfo.activeCondition
+  id: activeCondition
+  parent: MacacaGames.EffectSystem.EffectSystem.EffectableObjectInfo
+  langs:
+  - csharp
+  - vb
+  name: activeCondition
+  nameWithType: EffectSystem.EffectableObjectInfo.activeCondition
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectableObjectInfo.activeCondition
+  type: Field
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: activeCondition
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 152
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public Dictionary<string, Action<EffectTriggerConditionInfo>> activeCondition
+    return:
+      type: Dictionary{System.String,Action{MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo}}
+    content.vb: Public activeCondition As Dictionary(Of String, Action(Of EffectTriggerConditionInfo))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectableObjectInfo.deactiveCondition
+  commentId: F:MacacaGames.EffectSystem.EffectSystem.EffectableObjectInfo.deactiveCondition
+  id: deactiveCondition
+  parent: MacacaGames.EffectSystem.EffectSystem.EffectableObjectInfo
+  langs:
+  - csharp
+  - vb
+  name: deactiveCondition
+  nameWithType: EffectSystem.EffectableObjectInfo.deactiveCondition
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectableObjectInfo.deactiveCondition
+  type: Field
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: deactiveCondition
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 153
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public Dictionary<string, Action<EffectTriggerConditionInfo>> deactiveCondition
+    return:
+      type: Dictionary{System.String,Action{MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo}}
+    content.vb: Public deactiveCondition As Dictionary(Of String, Action(Of EffectTriggerConditionInfo))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: MacacaGames.EffectSystem
+  commentId: N:MacacaGames.EffectSystem
+  name: MacacaGames.EffectSystem
+  nameWithType: MacacaGames.EffectSystem
+  fullName: MacacaGames.EffectSystem
+- uid: Dictionary{System.String,MacacaGames.EffectSystem.EffectSystem.EffectInstanceList}
+  commentId: '!:Dictionary{System.String,MacacaGames.EffectSystem.EffectSystem.EffectInstanceList}'
+  definition: Dictionary`2
+  name: Dictionary<String, EffectSystem.EffectInstanceList>
+  nameWithType: Dictionary<String, EffectSystem.EffectInstanceList>
+  fullName: Dictionary<System.String, MacacaGames.EffectSystem.EffectSystem.EffectInstanceList>
+  nameWithType.vb: Dictionary(Of String, EffectSystem.EffectInstanceList)
+  fullName.vb: Dictionary(Of System.String, MacacaGames.EffectSystem.EffectSystem.EffectInstanceList)
+  name.vb: Dictionary(Of String, EffectSystem.EffectInstanceList)
+  spec.csharp:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList
+    name: EffectSystem.EffectInstanceList
+    nameWithType: EffectSystem.EffectInstanceList
+    fullName: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList
+    name: EffectSystem.EffectInstanceList
+    nameWithType: EffectSystem.EffectInstanceList
+    fullName: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dictionary`2
+  isExternal: true
+  name: Dictionary<, >
+  nameWithType: Dictionary<, >
+  fullName: Dictionary<, >
+  nameWithType.vb: Dictionary(Of , )
+  fullName.vb: Dictionary(Of , )
+  name.vb: Dictionary(Of , )
+  spec.csharp:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dictionary{System.String,Action{MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo}}
+  commentId: '!:Dictionary{System.String,Action{MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo}}'
+  definition: Dictionary`2
+  name: Dictionary<String, Action<EffectTriggerConditionInfo>>
+  nameWithType: Dictionary<String, Action<EffectTriggerConditionInfo>>
+  fullName: Dictionary<System.String, Action<MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo>>
+  nameWithType.vb: Dictionary(Of String, Action(Of EffectTriggerConditionInfo))
+  fullName.vb: Dictionary(Of System.String, Action(Of MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo))
+  name.vb: Dictionary(Of String, Action(Of EffectTriggerConditionInfo))
+  spec.csharp:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+    name: EffectTriggerConditionInfo
+    nameWithType: EffectTriggerConditionInfo
+    fullName: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+    name: EffectTriggerConditionInfo
+    nameWithType: EffectTriggerConditionInfo
+    fullName: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )

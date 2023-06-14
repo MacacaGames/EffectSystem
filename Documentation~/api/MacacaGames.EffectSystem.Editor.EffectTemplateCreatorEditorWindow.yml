@@ -1,0 +1,118 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.Editor.EffectTemplateCreatorEditorWindow
+  commentId: T:MacacaGames.EffectSystem.Editor.EffectTemplateCreatorEditorWindow
+  id: EffectTemplateCreatorEditorWindow
+  parent: MacacaGames.EffectSystem.Editor
+  children:
+  - MacacaGames.EffectSystem.Editor.EffectTemplateCreatorEditorWindow.OnEnable
+  - MacacaGames.EffectSystem.Editor.EffectTemplateCreatorEditorWindow.ShowWindow
+  langs:
+  - csharp
+  - vb
+  name: EffectTemplateCreatorEditorWindow
+  nameWithType: EffectTemplateCreatorEditorWindow
+  fullName: MacacaGames.EffectSystem.Editor.EffectTemplateCreatorEditorWindow
+  type: Class
+  source:
+    remote:
+      path: Editor/CreateEffectTemplateEditorWindow/EffectTemplateCreatorEditorWindow.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: EffectTemplateCreatorEditorWindow
+    path: ../Editor/CreateEffectTemplateEditorWindow/EffectTemplateCreatorEditorWindow.cs
+    startLine: 11
+  assemblies:
+  - Macaca.EffectSystem.Editor
+  namespace: MacacaGames.EffectSystem.Editor
+  syntax:
+    content: 'public class EffectTemplateCreatorEditorWindow : EditorWindow'
+    content.vb: >-
+      Public Class EffectTemplateCreatorEditorWindow
+          Inherits EditorWindow
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MacacaGames.EffectSystem.Editor.EffectTemplateCreatorEditorWindow.ShowWindow
+  commentId: M:MacacaGames.EffectSystem.Editor.EffectTemplateCreatorEditorWindow.ShowWindow
+  id: ShowWindow
+  parent: MacacaGames.EffectSystem.Editor.EffectTemplateCreatorEditorWindow
+  langs:
+  - csharp
+  - vb
+  name: ShowWindow()
+  nameWithType: EffectTemplateCreatorEditorWindow.ShowWindow()
+  fullName: MacacaGames.EffectSystem.Editor.EffectTemplateCreatorEditorWindow.ShowWindow()
+  type: Method
+  source:
+    remote:
+      path: Editor/CreateEffectTemplateEditorWindow/EffectTemplateCreatorEditorWindow.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: ShowWindow
+    path: ../Editor/CreateEffectTemplateEditorWindow/EffectTemplateCreatorEditorWindow.cs
+    startLine: 31
+  assemblies:
+  - Macaca.EffectSystem.Editor
+  namespace: MacacaGames.EffectSystem.Editor
+  syntax:
+    content: public static void ShowWindow()
+    content.vb: Public Shared Sub ShowWindow
+  overload: MacacaGames.EffectSystem.Editor.EffectTemplateCreatorEditorWindow.ShowWindow*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: MacacaGames.EffectSystem.Editor.EffectTemplateCreatorEditorWindow.OnEnable
+  commentId: M:MacacaGames.EffectSystem.Editor.EffectTemplateCreatorEditorWindow.OnEnable
+  id: OnEnable
+  parent: MacacaGames.EffectSystem.Editor.EffectTemplateCreatorEditorWindow
+  langs:
+  - csharp
+  - vb
+  name: OnEnable()
+  nameWithType: EffectTemplateCreatorEditorWindow.OnEnable()
+  fullName: MacacaGames.EffectSystem.Editor.EffectTemplateCreatorEditorWindow.OnEnable()
+  type: Method
+  source:
+    remote:
+      path: Editor/CreateEffectTemplateEditorWindow/EffectTemplateCreatorEditorWindow.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnEnable
+    path: ../Editor/CreateEffectTemplateEditorWindow/EffectTemplateCreatorEditorWindow.cs
+    startLine: 40
+  assemblies:
+  - Macaca.EffectSystem.Editor
+  namespace: MacacaGames.EffectSystem.Editor
+  syntax:
+    content: protected void OnEnable()
+    content.vb: Protected Sub OnEnable
+  overload: MacacaGames.EffectSystem.Editor.EffectTemplateCreatorEditorWindow.OnEnable*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+references:
+- uid: MacacaGames.EffectSystem.Editor
+  commentId: N:MacacaGames.EffectSystem.Editor
+  name: MacacaGames.EffectSystem.Editor
+  nameWithType: MacacaGames.EffectSystem.Editor
+  fullName: MacacaGames.EffectSystem.Editor
+- uid: MacacaGames.EffectSystem.Editor.EffectTemplateCreatorEditorWindow.ShowWindow*
+  commentId: Overload:MacacaGames.EffectSystem.Editor.EffectTemplateCreatorEditorWindow.ShowWindow
+  name: ShowWindow
+  nameWithType: EffectTemplateCreatorEditorWindow.ShowWindow
+  fullName: MacacaGames.EffectSystem.Editor.EffectTemplateCreatorEditorWindow.ShowWindow
+- uid: MacacaGames.EffectSystem.Editor.EffectTemplateCreatorEditorWindow.OnEnable*
+  commentId: Overload:MacacaGames.EffectSystem.Editor.EffectTemplateCreatorEditorWindow.OnEnable
+  name: OnEnable
+  nameWithType: EffectTemplateCreatorEditorWindow.OnEnable
+  fullName: MacacaGames.EffectSystem.Editor.EffectTemplateCreatorEditorWindow.OnEnable

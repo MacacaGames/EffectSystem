@@ -20,12 +20,12 @@ items:
   type: Struct
   source:
     remote:
-      path: Model/Effect.cs
+      path: Model/Effect_Client.cs
       branch: main
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: EffectViewInfo
-    path: ../Model/Effect.cs
-    startLine: 149
+    path: ../Model/Effect_Client.cs
+    startLine: 77
   assemblies:
   - Macaca.EffectSystem.Model
   namespace: MacacaGames.EffectSystem.Model
@@ -51,12 +51,12 @@ items:
   type: Field
   source:
     remote:
-      path: Model/Effect.cs
+      path: Model/Effect_Client.cs
       branch: main
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: id
-    path: ../Model/Effect.cs
-    startLine: 152
+    path: ../Model/Effect_Client.cs
+    startLine: 80
   assemblies:
   - Macaca.EffectSystem.Model
   namespace: MacacaGames.EffectSystem.Model
@@ -82,12 +82,12 @@ items:
   type: Field
   source:
     remote:
-      path: Model/Effect.cs
+      path: Model/Effect_Client.cs
       branch: main
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: viewRootType
-    path: ../Model/Effect.cs
-    startLine: 154
+    path: ../Model/Effect_Client.cs
+    startLine: 81
   assemblies:
   - Macaca.EffectSystem.Model
   namespace: MacacaGames.EffectSystem.Model
@@ -113,12 +113,12 @@ items:
   type: Field
   source:
     remote:
-      path: Model/Effect.cs
+      path: Model/Effect_Client.cs
       branch: main
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: prefabAddress
-    path: ../Model/Effect.cs
-    startLine: 157
+    path: ../Model/Effect_Client.cs
+    startLine: 83
   assemblies:
   - Macaca.EffectSystem.Model
   namespace: MacacaGames.EffectSystem.Model
@@ -144,12 +144,12 @@ items:
   type: Field
   source:
     remote:
-      path: Model/Effect.cs
+      path: Model/Effect_Client.cs
       branch: main
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: prefab
-    path: ../Model/Effect.cs
-    startLine: 160
+    path: ../Model/Effect_Client.cs
+    startLine: 86
   assemblies:
   - Macaca.EffectSystem.Model
   namespace: MacacaGames.EffectSystem.Model
@@ -175,12 +175,12 @@ items:
   type: Field
   source:
     remote:
-      path: Model/Effect.cs
+      path: Model/Effect_Client.cs
       branch: main
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: GetPrefab
-    path: ../Model/Effect.cs
-    startLine: 162
+    path: ../Model/Effect_Client.cs
+    startLine: 88
   assemblies:
   - Macaca.EffectSystem.Model
   namespace: MacacaGames.EffectSystem.Model
@@ -208,12 +208,12 @@ items:
   type: Field
   source:
     remote:
-      path: Model/Effect.cs
+      path: Model/Effect_Client.cs
       branch: main
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: prefabName
-    path: ../Model/Effect.cs
-    startLine: 163
+    path: ../Model/Effect_Client.cs
+    startLine: 89
   assemblies:
   - Macaca.EffectSystem.Model
   namespace: MacacaGames.EffectSystem.Model

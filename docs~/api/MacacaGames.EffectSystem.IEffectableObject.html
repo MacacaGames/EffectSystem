@@ -76,7 +76,7 @@
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="MacacaGames.EffectSystem.html">MacacaGames.EffectSystem</a></h6>
-  <h6><strong>Assembly</strong>: Macaca.EffectSystem.dll</h6>
+  <h6><strong>Assembly</strong>: Macaca.EffectSystem.Model.dll</h6>
   <h5 id="MacacaGames_EffectSystem_IEffectableObject_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public interface IEffectableObject</code></pre>
@@ -88,11 +88,12 @@
     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_IEffectableObject_ApprovedAddEffect_MacacaGames_EffectSystem_Model_EffectInfo_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.IEffectableObject.ApprovedAddEffect(MacacaGames.EffectSystem.Model.EffectInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Interface/IEffectableObject.cs/#L12">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Model/Interface/IEffectableObject.cs/#L22">View Source</a>
   </span>
   <a id="MacacaGames_EffectSystem_IEffectableObject_ApprovedAddEffect_" data-uid="MacacaGames.EffectSystem.IEffectableObject.ApprovedAddEffect*"></a>
   <h4 id="MacacaGames_EffectSystem_IEffectableObject_ApprovedAddEffect_MacacaGames_EffectSystem_Model_EffectInfo_" data-uid="MacacaGames.EffectSystem.IEffectableObject.ApprovedAddEffect(MacacaGames.EffectSystem.Model.EffectInfo)">ApprovedAddEffect(EffectInfo)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Detect if a Effect can be request or not</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -126,7 +127,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>If false, then system automatically reject a add effect request</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -135,7 +137,7 @@
     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_IEffectableObject_DestoryEffectableObject.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.IEffectableObject.DestoryEffectableObject%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Interface/IEffectableObject.cs/#L8">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Model/Interface/IEffectableObject.cs/#L49">View Source</a>
   </span>
   <a id="MacacaGames_EffectSystem_IEffectableObject_DestoryEffectableObject_" data-uid="MacacaGames.EffectSystem.IEffectableObject.DestoryEffectableObject*"></a>
   <h4 id="MacacaGames_EffectSystem_IEffectableObject_DestoryEffectableObject" data-uid="MacacaGames.EffectSystem.IEffectableObject.DestoryEffectableObject">DestoryEffectableObject()</h4>
@@ -147,10 +149,42 @@
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_IEffectableObject_GetDisplayName.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.IEffectableObject.GetDisplayName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Model/Interface/IEffectableObject.cs/#L13">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_IEffectableObject_GetDisplayName_" data-uid="MacacaGames.EffectSystem.IEffectableObject.GetDisplayName*"></a>
+  <h4 id="MacacaGames_EffectSystem_IEffectableObject_GetDisplayName" data-uid="MacacaGames.EffectSystem.IEffectableObject.GetDisplayName">GetDisplayName()</h4>
+  <div class="markdown level1 summary"><p>Get the display name of an IEffectableObject
+Not really required, but very helpful when debugging</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetDisplayName()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_IEffectableObject_GetEffectViewParent_System_String_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.IEffectableObject.GetEffectViewParent(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Interface/IEffectableObject.cs/#L10">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Model/Interface/IEffectableObject.cs/#L15">View Source</a>
   </span>
   <a id="MacacaGames_EffectSystem_IEffectableObject_GetEffectViewParent_" data-uid="MacacaGames.EffectSystem.IEffectableObject.GetEffectViewParent*"></a>
   <h4 id="MacacaGames_EffectSystem_IEffectableObject_GetEffectViewParent_System_String_" data-uid="MacacaGames.EffectSystem.IEffectableObject.GetEffectViewParent(System.String)">GetEffectViewParent(String)</h4>
@@ -194,18 +228,21 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_IEffectableObject_GetInputTypeValue_System_String_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.IEffectableObject.GetInputTypeValue(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_IEffectableObject_GetRuntimeValue_System_String_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.IEffectableObject.GetRuntimeValue(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Interface/IEffectableObject.cs/#L19">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Model/Interface/IEffectableObject.cs/#L47">View Source</a>
   </span>
-  <a id="MacacaGames_EffectSystem_IEffectableObject_GetInputTypeValue_" data-uid="MacacaGames.EffectSystem.IEffectableObject.GetInputTypeValue*"></a>
-  <h4 id="MacacaGames_EffectSystem_IEffectableObject_GetInputTypeValue_System_String_" data-uid="MacacaGames.EffectSystem.IEffectableObject.GetInputTypeValue(System.String)">GetInputTypeValue(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="MacacaGames_EffectSystem_IEffectableObject_GetRuntimeValue_" data-uid="MacacaGames.EffectSystem.IEffectableObject.GetRuntimeValue*"></a>
+  <h4 id="MacacaGames_EffectSystem_IEffectableObject_GetRuntimeValue_System_String_" data-uid="MacacaGames.EffectSystem.IEffectableObject.GetRuntimeValue(System.String)">GetRuntimeValue(String)</h4>
+  <div class="markdown level1 summary"><p>Due to the real runtime value is maintain by the IffectableObject, so you should use this to get the acctual value
+e.g. Current_ATK = ATK_Constant * ATK_Ratio
+So only using EffectSystem.GetEffectSum() is not enough</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">float GetInputTypeValue(string inputType)</code></pre>
+    <pre><code class="lang-csharp hljs">float GetRuntimeValue(string parameterKey)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -219,7 +256,7 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">inputType</span></td>
+        <td><span class="parametername">parameterKey</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -244,7 +281,7 @@
     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_IEffectableObject_IsAlive.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.IEffectableObject.IsAlive%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Interface/IEffectableObject.cs/#L18">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Model/Interface/IEffectableObject.cs/#L38">View Source</a>
   </span>
   <a id="MacacaGames_EffectSystem_IEffectableObject_IsAlive_" data-uid="MacacaGames.EffectSystem.IEffectableObject.IsAlive*"></a>
   <h4 id="MacacaGames_EffectSystem_IEffectableObject_IsAlive" data-uid="MacacaGames.EffectSystem.IEffectableObject.IsAlive">IsAlive()</h4>
@@ -274,11 +311,12 @@
     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_IEffectableObject_OnEffectActive_MacacaGames_EffectSystem_Model_EffectInfo_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.IEffectableObject.OnEffectActive(MacacaGames.EffectSystem.Model.EffectInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Interface/IEffectableObject.cs/#L14">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Model/Interface/IEffectableObject.cs/#L28">View Source</a>
   </span>
   <a id="MacacaGames_EffectSystem_IEffectableObject_OnEffectActive_" data-uid="MacacaGames.EffectSystem.IEffectableObject.OnEffectActive*"></a>
   <h4 id="MacacaGames_EffectSystem_IEffectableObject_OnEffectActive_MacacaGames_EffectSystem_Model_EffectInfo_" data-uid="MacacaGames.EffectSystem.IEffectableObject.OnEffectActive(MacacaGames.EffectSystem.Model.EffectInfo)">OnEffectActive(EffectInfo)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Fire once when an Effect Instance is Active</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -306,11 +344,12 @@
     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_IEffectableObject_OnEffectDeactive_MacacaGames_EffectSystem_Model_EffectInfo_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.IEffectableObject.OnEffectDeactive(MacacaGames.EffectSystem.Model.EffectInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Interface/IEffectableObject.cs/#L16">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Model/Interface/IEffectableObject.cs/#L34">View Source</a>
   </span>
   <a id="MacacaGames_EffectSystem_IEffectableObject_OnEffectDeactive_" data-uid="MacacaGames.EffectSystem.IEffectableObject.OnEffectDeactive*"></a>
   <h4 id="MacacaGames_EffectSystem_IEffectableObject_OnEffectDeactive_MacacaGames_EffectSystem_Model_EffectInfo_" data-uid="MacacaGames.EffectSystem.IEffectableObject.OnEffectDeactive(MacacaGames.EffectSystem.Model.EffectInfo)">OnEffectDeactive(EffectInfo)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Fire once when an Effect Instance is DeActive</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -344,7 +383,7 @@
                     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_IEffectableObject.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.IEffectableObject%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Interface/IEffectableObject.cs/#L6" class="contribution-link">View Source</a>
+                    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Model/Interface/IEffectableObject.cs/#L6" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

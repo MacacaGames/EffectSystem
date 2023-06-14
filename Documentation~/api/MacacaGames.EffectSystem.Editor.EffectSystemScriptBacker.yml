@@ -57,7 +57,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: BakeAllEffectEnum
     path: ../Editor/BackEditor/EffectSystemScriptBacker.cs
-    startLine: 13
+    startLine: 12
   assemblies:
   - Macaca.EffectSystem.Editor
   namespace: MacacaGames.EffectSystem.Editor
@@ -92,7 +92,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: CheckAndCreateResourceFolder
     path: ../Editor/BackEditor/EffectSystemScriptBacker.cs
-    startLine: 91
+    startLine: 90
   assemblies:
   - Macaca.EffectSystem.Editor
   namespace: MacacaGames.EffectSystem.Editor
@@ -124,7 +124,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: ModifyString
     path: ../Editor/BackEditor/EffectSystemScriptBacker.cs
-    startLine: 107
+    startLine: 106
   assemblies:
   - Macaca.EffectSystem.Editor
   namespace: MacacaGames.EffectSystem.Editor

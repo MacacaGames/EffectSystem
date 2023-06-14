@@ -140,7 +140,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: Init
     path: ../Runtime/EffectView/EffectViewBase.cs
-    startLine: 35
+    startLine: 34
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem
@@ -177,7 +177,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: OnStart
     path: ../Runtime/EffectView/EffectViewBase.cs
-    startLine: 41
+    startLine: 40
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem
@@ -209,7 +209,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: OnActive
     path: ../Runtime/EffectView/EffectViewBase.cs
-    startLine: 50
+    startLine: 49
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem
@@ -241,7 +241,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: OnDeactive
     path: ../Runtime/EffectView/EffectViewBase.cs
-    startLine: 59
+    startLine: 58
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem
@@ -273,7 +273,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: OnEnd
     path: ../Runtime/EffectView/EffectViewBase.cs
-    startLine: 68
+    startLine: 67
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem
@@ -305,7 +305,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: OnColdDownEnd
     path: ../Runtime/EffectView/EffectViewBase.cs
-    startLine: 77
+    startLine: 76
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem
@@ -337,7 +337,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: OnEffectApply
     path: ../Runtime/EffectView/EffectViewBase.cs
-    startLine: 86
+    startLine: 85
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem

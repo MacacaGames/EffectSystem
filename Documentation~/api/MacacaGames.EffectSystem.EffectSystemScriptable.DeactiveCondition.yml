@@ -7,7 +7,6 @@ items:
   children:
   - MacacaGames.EffectSystem.EffectSystemScriptable.DeactiveCondition.AfterActive
   - MacacaGames.EffectSystem.EffectSystemScriptable.DeactiveCondition.None
-  - MacacaGames.EffectSystem.EffectSystemScriptable.DeactiveCondition.OnOwnerAfterDoAttack
   langs:
   - csharp
   - vb
@@ -17,14 +16,14 @@ items:
   type: Struct
   source:
     remote:
-      path: Runtime/Utility/EffectSystemScriptable.cs
+      path: Model/EffectSystemScriptable.cs
       branch: main
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: DeactiveCondition
-    path: ../Runtime/Utility/EffectSystemScriptable.cs
-    startLine: 33
+    path: ../Model/EffectSystemScriptable.cs
+    startLine: 6
   assemblies:
-  - Macaca.EffectSystem
+  - Macaca.EffectSystem.Model
   namespace: MacacaGames.EffectSystem
   syntax:
     content: public struct DeactiveCondition
@@ -48,53 +47,20 @@ items:
   type: Field
   source:
     remote:
-      path: Runtime/Utility/EffectSystemScriptable.cs
+      path: Model/EffectSystemScriptable.cs
       branch: main
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: None
-    path: ../Runtime/Utility/EffectSystemScriptable.cs
-    startLine: 35
+    path: ../Model/EffectSystemScriptable.cs
+    startLine: 8
   assemblies:
-  - Macaca.EffectSystem
+  - Macaca.EffectSystem.Model
   namespace: MacacaGames.EffectSystem
   syntax:
     content: public const string None = null
     return:
       type: System.String
     content.vb: Public Const None As String = Nothing
-  modifiers.csharp:
-  - public
-  - const
-  modifiers.vb:
-  - Public
-  - Const
-- uid: MacacaGames.EffectSystem.EffectSystemScriptable.DeactiveCondition.OnOwnerAfterDoAttack
-  commentId: F:MacacaGames.EffectSystem.EffectSystemScriptable.DeactiveCondition.OnOwnerAfterDoAttack
-  id: OnOwnerAfterDoAttack
-  parent: MacacaGames.EffectSystem.EffectSystemScriptable.DeactiveCondition
-  langs:
-  - csharp
-  - vb
-  name: OnOwnerAfterDoAttack
-  nameWithType: EffectSystemScriptable.DeactiveCondition.OnOwnerAfterDoAttack
-  fullName: MacacaGames.EffectSystem.EffectSystemScriptable.DeactiveCondition.OnOwnerAfterDoAttack
-  type: Field
-  source:
-    remote:
-      path: Runtime/Utility/EffectSystemScriptable.cs
-      branch: main
-      repo: git@github.com:MacacaGames/EffectSystem.git
-    id: OnOwnerAfterDoAttack
-    path: ../Runtime/Utility/EffectSystemScriptable.cs
-    startLine: 36
-  assemblies:
-  - Macaca.EffectSystem
-  namespace: MacacaGames.EffectSystem
-  syntax:
-    content: public const string OnOwnerAfterDoAttack = null
-    return:
-      type: System.String
-    content.vb: Public Const OnOwnerAfterDoAttack As String = Nothing
   modifiers.csharp:
   - public
   - const
@@ -114,14 +80,14 @@ items:
   type: Field
   source:
     remote:
-      path: Runtime/Utility/EffectSystemScriptable.cs
+      path: Model/EffectSystemScriptable.cs
       branch: main
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: AfterActive
-    path: ../Runtime/Utility/EffectSystemScriptable.cs
-    startLine: 37
+    path: ../Model/EffectSystemScriptable.cs
+    startLine: 9
   assemblies:
-  - Macaca.EffectSystem
+  - Macaca.EffectSystem.Model
   namespace: MacacaGames.EffectSystem
   syntax:
     content: public const string AfterActive = null

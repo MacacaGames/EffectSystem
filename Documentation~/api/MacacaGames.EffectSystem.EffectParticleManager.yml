@@ -17,11 +17,11 @@ items:
   type: Class
   source:
     remote:
-      path: Runtime/EffectParticleManager.cs
+      path: Runtime/Component/EffectParticleManager.cs
       branch: main
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: EffectParticleManager
-    path: ../Runtime/EffectParticleManager.cs
+    path: ../Runtime/Component/EffectParticleManager.cs
     startLine: 6
   assemblies:
   - Macaca.EffectSystem
@@ -56,12 +56,12 @@ items:
   type: Method
   source:
     remote:
-      path: Runtime/EffectParticleManager.cs
+      path: Runtime/Component/EffectParticleManager.cs
       branch: main
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: Init
-    path: ../Runtime/EffectParticleManager.cs
-    startLine: 60
+    path: ../Runtime/Component/EffectParticleManager.cs
+    startLine: 23
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem
@@ -86,12 +86,12 @@ items:
   type: Method
   source:
     remote:
-      path: Runtime/EffectParticleManager.cs
+      path: Runtime/Component/EffectParticleManager.cs
       branch: main
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: PlayOneShot
-    path: ../Runtime/EffectParticleManager.cs
-    startLine: 71
+    path: ../Runtime/Component/EffectParticleManager.cs
+    startLine: 34
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem
@@ -121,12 +121,12 @@ items:
   type: Method
   source:
     remote:
-      path: Runtime/EffectParticleManager.cs
+      path: Runtime/Component/EffectParticleManager.cs
       branch: main
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: PlayOneShot
-    path: ../Runtime/EffectParticleManager.cs
-    startLine: 76
+    path: ../Runtime/Component/EffectParticleManager.cs
+    startLine: 39
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem

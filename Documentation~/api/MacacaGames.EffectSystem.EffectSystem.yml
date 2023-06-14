@@ -1,0 +1,2233 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.EffectSystem
+  commentId: T:MacacaGames.EffectSystem.EffectSystem
+  id: EffectSystem
+  parent: MacacaGames.EffectSystem
+  children:
+  - MacacaGames.EffectSystem.EffectSystem.AddEffect(MacacaGames.EffectSystem.IEffectableObject,MacacaGames.EffectSystem.Model.EffectInfo,System.String[])
+  - MacacaGames.EffectSystem.EffectSystem.AddEffects(MacacaGames.EffectSystem.IEffectableObject,IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo},System.String[])
+  - MacacaGames.EffectSystem.EffectSystem.AddRequestedEffect(MacacaGames.EffectSystem.IEffectableObject,MacacaGames.EffectSystem.Model.EffectInfo,System.String[])
+  - MacacaGames.EffectSystem.EffectSystem.AddRequestedEffects(MacacaGames.EffectSystem.IEffectableObject,IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo},System.String[])
+  - MacacaGames.EffectSystem.EffectSystem.calculator
+  - MacacaGames.EffectSystem.EffectSystem.CleanEffectableObject(MacacaGames.EffectSystem.IEffectableObject)
+  - MacacaGames.EffectSystem.EffectSystem.CreateEffect(MacacaGames.EffectSystem.Model.EffectInfo)
+  - MacacaGames.EffectSystem.EffectSystem.EffectConditionTriggerQuery
+  - MacacaGames.EffectSystem.EffectSystem.EffectTriggerCondition(System.String,MacacaGames.EffectSystem.IEffectableObject,MacacaGames.EffectSystem.IEffectableObject)
+  - MacacaGames.EffectSystem.EffectSystem.EffectTriggerCondition(System.String,MacacaGames.EffectSystem.IEffectableObject,MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  - MacacaGames.EffectSystem.EffectSystem.effectViewPool
+  - MacacaGames.EffectSystem.EffectSystem.GetColorNumberDescription(System.String,Color)
+  - MacacaGames.EffectSystem.EffectSystem.GetColorNumberDescription(System.String,System.String)
+  - MacacaGames.EffectSystem.EffectSystem.GetCustomEffectsDescription(System.String,IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo})
+  - MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectDescription(MacacaGames.EffectSystem.Model.EffectInfo)
+  - MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectsDescription(IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo})
+  - MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectsDescriptions(IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo})
+  - MacacaGames.EffectSystem.EffectSystem.GetEffectableObjects
+  - MacacaGames.EffectSystem.EffectSystem.GetEffectListByType(MacacaGames.EffectSystem.IEffectableObject,System.String)
+  - MacacaGames.EffectSystem.EffectSystem.GetEffectsByTag(MacacaGames.EffectSystem.IEffectableObject,System.String)
+  - MacacaGames.EffectSystem.EffectSystem.GetEffectsByType(MacacaGames.EffectSystem.IEffectableObject,System.String,System.Boolean)
+  - MacacaGames.EffectSystem.EffectSystem.GetEffectsSum(MacacaGames.EffectSystem.IEffectableObject,System.String[])
+  - MacacaGames.EffectSystem.EffectSystem.GetEffectSum(MacacaGames.EffectSystem.IEffectableObject,System.String)
+  - MacacaGames.EffectSystem.EffectSystem.Instance
+  - MacacaGames.EffectSystem.EffectSystem.QueryEffectTypeWithDefault(System.String)
+  - MacacaGames.EffectSystem.EffectSystem.RecoveryEffectBase(MacacaGames.EffectSystem.EffectInstanceBase,System.String)
+  - MacacaGames.EffectSystem.EffectSystem.RecoveryEffectView(MacacaGames.EffectSystem.EffectViewBase)
+  - MacacaGames.EffectSystem.EffectSystem.RegistEffectTriggerCondition(MacacaGames.EffectSystem.EffectInstanceBase)
+  - MacacaGames.EffectSystem.EffectSystem.RemoveEffect(MacacaGames.EffectSystem.IEffectableObject,MacacaGames.EffectSystem.EffectInstanceBase)
+  - MacacaGames.EffectSystem.EffectSystem.RemoveEffectByTag(MacacaGames.EffectSystem.IEffectableObject,System.String)
+  - MacacaGames.EffectSystem.EffectSystem.RemoveEffectsByType(MacacaGames.EffectSystem.IEffectableObject,System.String)
+  - MacacaGames.EffectSystem.EffectSystem.RequestEffect(MacacaGames.EffectSystem.Model.EffectInfo)
+  - MacacaGames.EffectSystem.EffectSystem.RequestEffectView(MacacaGames.EffectSystem.Model.EffectInfo,MacacaGames.EffectSystem.Model.EffectViewInfo,MacacaGames.EffectSystem.IEffectableObject)
+  - MacacaGames.EffectSystem.EffectSystem.ResetEffectableObjectQuery
+  - MacacaGames.EffectSystem.EffectSystem.ResetEffectActiveTimeAndCooldownTime(MacacaGames.EffectSystem.IEffectableObject)
+  - MacacaGames.EffectSystem.EffectSystem.UnregistEffectTriggerCondition(MacacaGames.EffectSystem.EffectInstanceBase)
+  - MacacaGames.EffectSystem.EffectSystem.UpdateEffectUpdate(System.Single,MacacaGames.EffectSystem.IEffectableObject)
+  langs:
+  - csharp
+  - vb
+  name: EffectSystem
+  nameWithType: EffectSystem
+  fullName: MacacaGames.EffectSystem.EffectSystem
+  type: Class
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: EffectSystem
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 13
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: 'public class EffectSystem : MonoBehaviour'
+    content.vb: >-
+      Public Class EffectSystem
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MacacaGames.EffectSystem.EffectSystem.Instance
+  commentId: F:MacacaGames.EffectSystem.EffectSystem.Instance
+  id: Instance
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: EffectSystem.Instance
+  fullName: MacacaGames.EffectSystem.EffectSystem.Instance
+  type: Field
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Instance
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 15
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public static EffectSystem Instance
+    return:
+      type: MacacaGames.EffectSystem.EffectSystem
+    content.vb: Public Shared Instance As EffectSystem
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: MacacaGames.EffectSystem.EffectSystem.QueryEffectTypeWithDefault(System.String)
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.QueryEffectTypeWithDefault(System.String)
+  id: QueryEffectTypeWithDefault(System.String)
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: QueryEffectTypeWithDefault(String)
+  nameWithType: EffectSystem.QueryEffectTypeWithDefault(String)
+  fullName: MacacaGames.EffectSystem.EffectSystem.QueryEffectTypeWithDefault(System.String)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: QueryEffectTypeWithDefault
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 31
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  summary: "\n只放預設\n"
+  example: []
+  syntax:
+    content: public static Type QueryEffectTypeWithDefault(string effectType)
+    parameters:
+    - id: effectType
+      type: System.String
+    return:
+      type: Type
+      description: ''
+    content.vb: Public Shared Function QueryEffectTypeWithDefault(effectType As String) As Type
+  overload: MacacaGames.EffectSystem.EffectSystem.QueryEffectTypeWithDefault*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectConditionTriggerQuery
+  commentId: F:MacacaGames.EffectSystem.EffectSystem.EffectConditionTriggerQuery
+  id: EffectConditionTriggerQuery
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: EffectConditionTriggerQuery
+  nameWithType: EffectSystem.EffectConditionTriggerQuery
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectConditionTriggerQuery
+  type: Field
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: EffectConditionTriggerQuery
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 45
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public Dictionary<string, Func<Action<EffectTriggerConditionInfo>, IEnumerator>> EffectConditionTriggerQuery
+    return:
+      type: Dictionary{System.String,Func{Action{MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo},IEnumerator}}
+    content.vb: Public EffectConditionTriggerQuery As Dictionary(Of String, Func(Of Action(Of EffectTriggerConditionInfo), IEnumerator))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectSystem.calculator
+  commentId: F:MacacaGames.EffectSystem.EffectSystem.calculator
+  id: calculator
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: calculator
+  nameWithType: EffectSystem.calculator
+  fullName: MacacaGames.EffectSystem.EffectSystem.calculator
+  type: Field
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: calculator
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 49
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public static EffectCalculator calculator
+    return:
+      type: MacacaGames.EffectSystem.EffectCalculator
+    content.vb: Public Shared calculator As EffectCalculator
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: MacacaGames.EffectSystem.EffectSystem.GetEffectableObjects
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.GetEffectableObjects
+  id: GetEffectableObjects
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: GetEffectableObjects()
+  nameWithType: EffectSystem.GetEffectableObjects()
+  fullName: MacacaGames.EffectSystem.EffectSystem.GetEffectableObjects()
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: GetEffectableObjects
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 160
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public List<IEffectableObject> GetEffectableObjects()
+    return:
+      type: List{MacacaGames.EffectSystem.IEffectableObject}
+    content.vb: Public Function GetEffectableObjects As List(Of IEffectableObject)
+  overload: MacacaGames.EffectSystem.EffectSystem.GetEffectableObjects*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectSystem.CleanEffectableObject(MacacaGames.EffectSystem.IEffectableObject)
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.CleanEffectableObject(MacacaGames.EffectSystem.IEffectableObject)
+  id: CleanEffectableObject(MacacaGames.EffectSystem.IEffectableObject)
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: CleanEffectableObject(IEffectableObject)
+  nameWithType: EffectSystem.CleanEffectableObject(IEffectableObject)
+  fullName: MacacaGames.EffectSystem.EffectSystem.CleanEffectableObject(MacacaGames.EffectSystem.IEffectableObject)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: CleanEffectableObject
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 182
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  summary: 移除指定EffectableObject，結束他擁有的所有Effect、解除所有註冊的Condition。
+  example: []
+  syntax:
+    content: public void CleanEffectableObject(IEffectableObject owner)
+    parameters:
+    - id: owner
+      type: MacacaGames.EffectSystem.IEffectableObject
+    content.vb: Public Sub CleanEffectableObject(owner As IEffectableObject)
+  overload: MacacaGames.EffectSystem.EffectSystem.CleanEffectableObject*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectSystem.UpdateEffectUpdate(System.Single,MacacaGames.EffectSystem.IEffectableObject)
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.UpdateEffectUpdate(System.Single,MacacaGames.EffectSystem.IEffectableObject)
+  id: UpdateEffectUpdate(System.Single,MacacaGames.EffectSystem.IEffectableObject)
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: UpdateEffectUpdate(Single, IEffectableObject)
+  nameWithType: EffectSystem.UpdateEffectUpdate(Single, IEffectableObject)
+  fullName: MacacaGames.EffectSystem.EffectSystem.UpdateEffectUpdate(System.Single, MacacaGames.EffectSystem.IEffectableObject)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: UpdateEffectUpdate
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 196
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public void UpdateEffectUpdate(float delta, IEffectableObject owner)
+    parameters:
+    - id: delta
+      type: System.Single
+    - id: owner
+      type: MacacaGames.EffectSystem.IEffectableObject
+    content.vb: Public Sub UpdateEffectUpdate(delta As Single, owner As IEffectableObject)
+  overload: MacacaGames.EffectSystem.EffectSystem.UpdateEffectUpdate*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectSystem.ResetEffectActiveTimeAndCooldownTime(MacacaGames.EffectSystem.IEffectableObject)
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.ResetEffectActiveTimeAndCooldownTime(MacacaGames.EffectSystem.IEffectableObject)
+  id: ResetEffectActiveTimeAndCooldownTime(MacacaGames.EffectSystem.IEffectableObject)
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: ResetEffectActiveTimeAndCooldownTime(IEffectableObject)
+  nameWithType: EffectSystem.ResetEffectActiveTimeAndCooldownTime(IEffectableObject)
+  fullName: MacacaGames.EffectSystem.EffectSystem.ResetEffectActiveTimeAndCooldownTime(MacacaGames.EffectSystem.IEffectableObject)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: ResetEffectActiveTimeAndCooldownTime
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 210
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public void ResetEffectActiveTimeAndCooldownTime(IEffectableObject owner)
+    parameters:
+    - id: owner
+      type: MacacaGames.EffectSystem.IEffectableObject
+    content.vb: Public Sub ResetEffectActiveTimeAndCooldownTime(owner As IEffectableObject)
+  overload: MacacaGames.EffectSystem.EffectSystem.ResetEffectActiveTimeAndCooldownTime*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectSystem.effectViewPool
+  commentId: F:MacacaGames.EffectSystem.EffectSystem.effectViewPool
+  id: effectViewPool
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: effectViewPool
+  nameWithType: EffectSystem.effectViewPool
+  fullName: MacacaGames.EffectSystem.EffectSystem.effectViewPool
+  type: Field
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: effectViewPool
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 223
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public Dictionary<GameObject, Queue<EffectViewBase>> effectViewPool
+    return:
+      type: Dictionary{GameObject,Queue{MacacaGames.EffectSystem.EffectViewBase}}
+    content.vb: Public effectViewPool As Dictionary(Of GameObject, Queue(Of EffectViewBase))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectSystem.RequestEffectView(MacacaGames.EffectSystem.Model.EffectInfo,MacacaGames.EffectSystem.Model.EffectViewInfo,MacacaGames.EffectSystem.IEffectableObject)
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.RequestEffectView(MacacaGames.EffectSystem.Model.EffectInfo,MacacaGames.EffectSystem.Model.EffectViewInfo,MacacaGames.EffectSystem.IEffectableObject)
+  id: RequestEffectView(MacacaGames.EffectSystem.Model.EffectInfo,MacacaGames.EffectSystem.Model.EffectViewInfo,MacacaGames.EffectSystem.IEffectableObject)
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: RequestEffectView(EffectInfo, EffectViewInfo, IEffectableObject)
+  nameWithType: EffectSystem.RequestEffectView(EffectInfo, EffectViewInfo, IEffectableObject)
+  fullName: MacacaGames.EffectSystem.EffectSystem.RequestEffectView(MacacaGames.EffectSystem.Model.EffectInfo, MacacaGames.EffectSystem.Model.EffectViewInfo, MacacaGames.EffectSystem.IEffectableObject)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: RequestEffectView
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 225
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public EffectViewBase RequestEffectView(EffectInfo info, EffectViewInfo viewInfo, IEffectableObject owner)
+    parameters:
+    - id: info
+      type: MacacaGames.EffectSystem.Model.EffectInfo
+    - id: viewInfo
+      type: MacacaGames.EffectSystem.Model.EffectViewInfo
+    - id: owner
+      type: MacacaGames.EffectSystem.IEffectableObject
+    return:
+      type: MacacaGames.EffectSystem.EffectViewBase
+    content.vb: Public Function RequestEffectView(info As EffectInfo, viewInfo As EffectViewInfo, owner As IEffectableObject) As EffectViewBase
+  overload: MacacaGames.EffectSystem.EffectSystem.RequestEffectView*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectSystem.RecoveryEffectView(MacacaGames.EffectSystem.EffectViewBase)
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.RecoveryEffectView(MacacaGames.EffectSystem.EffectViewBase)
+  id: RecoveryEffectView(MacacaGames.EffectSystem.EffectViewBase)
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: RecoveryEffectView(EffectViewBase)
+  nameWithType: EffectSystem.RecoveryEffectView(EffectViewBase)
+  fullName: MacacaGames.EffectSystem.EffectSystem.RecoveryEffectView(MacacaGames.EffectSystem.EffectViewBase)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: RecoveryEffectView
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 268
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public void RecoveryEffectView(EffectViewBase effectView)
+    parameters:
+    - id: effectView
+      type: MacacaGames.EffectSystem.EffectViewBase
+    content.vb: Public Sub RecoveryEffectView(effectView As EffectViewBase)
+  overload: MacacaGames.EffectSystem.EffectSystem.RecoveryEffectView*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectSystem.ResetEffectableObjectQuery
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.ResetEffectableObjectQuery
+  id: ResetEffectableObjectQuery
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: ResetEffectableObjectQuery()
+  nameWithType: EffectSystem.ResetEffectableObjectQuery()
+  fullName: MacacaGames.EffectSystem.EffectSystem.ResetEffectableObjectQuery()
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: ResetEffectableObjectQuery
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 278
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public void ResetEffectableObjectQuery()
+    content.vb: Public Sub ResetEffectableObjectQuery
+  overload: MacacaGames.EffectSystem.EffectSystem.ResetEffectableObjectQuery*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectTriggerCondition(System.String,MacacaGames.EffectSystem.IEffectableObject,MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.EffectTriggerCondition(System.String,MacacaGames.EffectSystem.IEffectableObject,MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  id: EffectTriggerCondition(System.String,MacacaGames.EffectSystem.IEffectableObject,MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: EffectTriggerCondition(String, IEffectableObject, EffectTriggerConditionInfo)
+  nameWithType: EffectSystem.EffectTriggerCondition(String, IEffectableObject, EffectTriggerConditionInfo)
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectTriggerCondition(System.String, MacacaGames.EffectSystem.IEffectableObject, MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: EffectTriggerCondition
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 289
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  summary: "\nTrigger a condition\n"
+  example: []
+  syntax:
+    content: public void EffectTriggerCondition(string condition, IEffectableObject owner, EffectTriggerConditionInfo info)
+    parameters:
+    - id: condition
+      type: System.String
+      description: The condition
+    - id: owner
+      type: MacacaGames.EffectSystem.IEffectableObject
+      description: The target object to apply the trigger
+    - id: info
+      type: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+      description: The info of a Trigger
+    content.vb: Public Sub EffectTriggerCondition(condition As String, owner As IEffectableObject, info As EffectTriggerConditionInfo)
+  overload: MacacaGames.EffectSystem.EffectSystem.EffectTriggerCondition*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectTriggerCondition(System.String,MacacaGames.EffectSystem.IEffectableObject,MacacaGames.EffectSystem.IEffectableObject)
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.EffectTriggerCondition(System.String,MacacaGames.EffectSystem.IEffectableObject,MacacaGames.EffectSystem.IEffectableObject)
+  id: EffectTriggerCondition(System.String,MacacaGames.EffectSystem.IEffectableObject,MacacaGames.EffectSystem.IEffectableObject)
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: EffectTriggerCondition(String, IEffectableObject, IEffectableObject)
+  nameWithType: EffectSystem.EffectTriggerCondition(String, IEffectableObject, IEffectableObject)
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectTriggerCondition(System.String, MacacaGames.EffectSystem.IEffectableObject, MacacaGames.EffectSystem.IEffectableObject)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: EffectTriggerCondition
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 310
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  summary: "\nTrigger a condition\n"
+  example: []
+  syntax:
+    content: public void EffectTriggerCondition(string condition, IEffectableObject owner, IEffectableObject target = null)
+    parameters:
+    - id: condition
+      type: System.String
+      description: The condition
+    - id: owner
+      type: MacacaGames.EffectSystem.IEffectableObject
+      description: The target object to apply the trigger
+    - id: target
+      type: MacacaGames.EffectSystem.IEffectableObject
+      description: The target to apply a effect, for instance a effect trigger by A object by the effect should apply to B object as target
+    content.vb: Public Sub EffectTriggerCondition(condition As String, owner As IEffectableObject, target As IEffectableObject = Nothing)
+  overload: MacacaGames.EffectSystem.EffectSystem.EffectTriggerCondition*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectSystem.RegistEffectTriggerCondition(MacacaGames.EffectSystem.EffectInstanceBase)
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.RegistEffectTriggerCondition(MacacaGames.EffectSystem.EffectInstanceBase)
+  id: RegistEffectTriggerCondition(MacacaGames.EffectSystem.EffectInstanceBase)
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: RegistEffectTriggerCondition(EffectInstanceBase)
+  nameWithType: EffectSystem.RegistEffectTriggerCondition(EffectInstanceBase)
+  fullName: MacacaGames.EffectSystem.EffectSystem.RegistEffectTriggerCondition(MacacaGames.EffectSystem.EffectInstanceBase)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: RegistEffectTriggerCondition
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 315
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public void RegistEffectTriggerCondition(EffectInstanceBase effect)
+    parameters:
+    - id: effect
+      type: MacacaGames.EffectSystem.EffectInstanceBase
+    content.vb: Public Sub RegistEffectTriggerCondition(effect As EffectInstanceBase)
+  overload: MacacaGames.EffectSystem.EffectSystem.RegistEffectTriggerCondition*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectSystem.UnregistEffectTriggerCondition(MacacaGames.EffectSystem.EffectInstanceBase)
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.UnregistEffectTriggerCondition(MacacaGames.EffectSystem.EffectInstanceBase)
+  id: UnregistEffectTriggerCondition(MacacaGames.EffectSystem.EffectInstanceBase)
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: UnregistEffectTriggerCondition(EffectInstanceBase)
+  nameWithType: EffectSystem.UnregistEffectTriggerCondition(EffectInstanceBase)
+  fullName: MacacaGames.EffectSystem.EffectSystem.UnregistEffectTriggerCondition(MacacaGames.EffectSystem.EffectInstanceBase)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: UnregistEffectTriggerCondition
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 342
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public void UnregistEffectTriggerCondition(EffectInstanceBase effect)
+    parameters:
+    - id: effect
+      type: MacacaGames.EffectSystem.EffectInstanceBase
+    content.vb: Public Sub UnregistEffectTriggerCondition(effect As EffectInstanceBase)
+  overload: MacacaGames.EffectSystem.EffectSystem.UnregistEffectTriggerCondition*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectSystem.RequestEffect(MacacaGames.EffectSystem.Model.EffectInfo)
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.RequestEffect(MacacaGames.EffectSystem.Model.EffectInfo)
+  id: RequestEffect(MacacaGames.EffectSystem.Model.EffectInfo)
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: RequestEffect(EffectInfo)
+  nameWithType: EffectSystem.RequestEffect(EffectInfo)
+  fullName: MacacaGames.EffectSystem.EffectSystem.RequestEffect(MacacaGames.EffectSystem.Model.EffectInfo)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: RequestEffect
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 424
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public static EffectInstanceBase RequestEffect(EffectInfo info)
+    parameters:
+    - id: info
+      type: MacacaGames.EffectSystem.Model.EffectInfo
+    return:
+      type: MacacaGames.EffectSystem.EffectInstanceBase
+    content.vb: Public Shared Function RequestEffect(info As EffectInfo) As EffectInstanceBase
+  overload: MacacaGames.EffectSystem.EffectSystem.RequestEffect*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: MacacaGames.EffectSystem.EffectSystem.RecoveryEffectBase(MacacaGames.EffectSystem.EffectInstanceBase,System.String)
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.RecoveryEffectBase(MacacaGames.EffectSystem.EffectInstanceBase,System.String)
+  id: RecoveryEffectBase(MacacaGames.EffectSystem.EffectInstanceBase,System.String)
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: RecoveryEffectBase(EffectInstanceBase, String)
+  nameWithType: EffectSystem.RecoveryEffectBase(EffectInstanceBase, String)
+  fullName: MacacaGames.EffectSystem.EffectSystem.RecoveryEffectBase(MacacaGames.EffectSystem.EffectInstanceBase, System.String)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: RecoveryEffectBase
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 438
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public static void RecoveryEffectBase(EffectInstanceBase effect, string type)
+    parameters:
+    - id: effect
+      type: MacacaGames.EffectSystem.EffectInstanceBase
+    - id: type
+      type: System.String
+    content.vb: Public Shared Sub RecoveryEffectBase(effect As EffectInstanceBase, type As String)
+  overload: MacacaGames.EffectSystem.EffectSystem.RecoveryEffectBase*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: MacacaGames.EffectSystem.EffectSystem.CreateEffect(MacacaGames.EffectSystem.Model.EffectInfo)
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.CreateEffect(MacacaGames.EffectSystem.Model.EffectInfo)
+  id: CreateEffect(MacacaGames.EffectSystem.Model.EffectInfo)
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: CreateEffect(EffectInfo)
+  nameWithType: EffectSystem.CreateEffect(EffectInfo)
+  fullName: MacacaGames.EffectSystem.EffectSystem.CreateEffect(MacacaGames.EffectSystem.Model.EffectInfo)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: CreateEffect
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 476
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  summary: 創造一個Effect實體，且有指定的Info。
+  example: []
+  syntax:
+    content: public static EffectInstanceBase CreateEffect(EffectInfo info)
+    parameters:
+    - id: info
+      type: MacacaGames.EffectSystem.Model.EffectInfo
+    return:
+      type: MacacaGames.EffectSystem.EffectInstanceBase
+    content.vb: Public Shared Function CreateEffect(info As EffectInfo) As EffectInstanceBase
+  overload: MacacaGames.EffectSystem.EffectSystem.CreateEffect*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectsDescription(IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo})
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectsDescription(IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo})
+  id: GetDefaultEffectsDescription(IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo})
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: GetDefaultEffectsDescription(IEnumerable<EffectInfo>)
+  nameWithType: EffectSystem.GetDefaultEffectsDescription(IEnumerable<EffectInfo>)
+  fullName: MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectsDescription(IEnumerable<MacacaGames.EffectSystem.Model.EffectInfo>)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: GetDefaultEffectsDescription
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 497
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public static string GetDefaultEffectsDescription(IEnumerable<EffectInfo> infos)
+    parameters:
+    - id: infos
+      type: IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo}
+    return:
+      type: System.String
+    content.vb: Public Shared Function GetDefaultEffectsDescription(infos As IEnumerable(Of EffectInfo)) As String
+  overload: MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectsDescription*
+  nameWithType.vb: EffectSystem.GetDefaultEffectsDescription(IEnumerable(Of EffectInfo))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectsDescription(IEnumerable(Of MacacaGames.EffectSystem.Model.EffectInfo))
+  name.vb: GetDefaultEffectsDescription(IEnumerable(Of EffectInfo))
+- uid: MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectsDescriptions(IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo})
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectsDescriptions(IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo})
+  id: GetDefaultEffectsDescriptions(IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo})
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: GetDefaultEffectsDescriptions(IEnumerable<EffectInfo>)
+  nameWithType: EffectSystem.GetDefaultEffectsDescriptions(IEnumerable<EffectInfo>)
+  fullName: MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectsDescriptions(IEnumerable<MacacaGames.EffectSystem.Model.EffectInfo>)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: GetDefaultEffectsDescriptions
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 502
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public static IEnumerable<string> GetDefaultEffectsDescriptions(IEnumerable<EffectInfo> infos)
+    parameters:
+    - id: infos
+      type: IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo}
+    return:
+      type: IEnumerable{System.String}
+    content.vb: Public Shared Function GetDefaultEffectsDescriptions(infos As IEnumerable(Of EffectInfo)) As IEnumerable(Of String)
+  overload: MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectsDescriptions*
+  nameWithType.vb: EffectSystem.GetDefaultEffectsDescriptions(IEnumerable(Of EffectInfo))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectsDescriptions(IEnumerable(Of MacacaGames.EffectSystem.Model.EffectInfo))
+  name.vb: GetDefaultEffectsDescriptions(IEnumerable(Of EffectInfo))
+- uid: MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectDescription(MacacaGames.EffectSystem.Model.EffectInfo)
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectDescription(MacacaGames.EffectSystem.Model.EffectInfo)
+  id: GetDefaultEffectDescription(MacacaGames.EffectSystem.Model.EffectInfo)
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: GetDefaultEffectDescription(EffectInfo)
+  nameWithType: EffectSystem.GetDefaultEffectDescription(EffectInfo)
+  fullName: MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectDescription(MacacaGames.EffectSystem.Model.EffectInfo)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: GetDefaultEffectDescription
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 512
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  summary: "\n取得指定EffectInfo的說明。\n"
+  example: []
+  syntax:
+    content: public static string GetDefaultEffectDescription(EffectInfo info)
+    parameters:
+    - id: info
+      type: MacacaGames.EffectSystem.Model.EffectInfo
+      description: ''
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function GetDefaultEffectDescription(info As EffectInfo) As String
+  overload: MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectDescription*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: MacacaGames.EffectSystem.EffectSystem.GetCustomEffectsDescription(System.String,IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo})
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.GetCustomEffectsDescription(System.String,IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo})
+  id: GetCustomEffectsDescription(System.String,IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo})
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: GetCustomEffectsDescription(String, IEnumerable<EffectInfo>)
+  nameWithType: EffectSystem.GetCustomEffectsDescription(String, IEnumerable<EffectInfo>)
+  fullName: MacacaGames.EffectSystem.EffectSystem.GetCustomEffectsDescription(System.String, IEnumerable<MacacaGames.EffectSystem.Model.EffectInfo>)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: GetCustomEffectsDescription
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 528
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public static string GetCustomEffectsDescription(string str, IEnumerable<EffectInfo> infos)
+    parameters:
+    - id: str
+      type: System.String
+    - id: infos
+      type: IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo}
+    return:
+      type: System.String
+    content.vb: Public Shared Function GetCustomEffectsDescription(str As String, infos As IEnumerable(Of EffectInfo)) As String
+  overload: MacacaGames.EffectSystem.EffectSystem.GetCustomEffectsDescription*
+  nameWithType.vb: EffectSystem.GetCustomEffectsDescription(String, IEnumerable(Of EffectInfo))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: MacacaGames.EffectSystem.EffectSystem.GetCustomEffectsDescription(System.String, IEnumerable(Of MacacaGames.EffectSystem.Model.EffectInfo))
+  name.vb: GetCustomEffectsDescription(String, IEnumerable(Of EffectInfo))
+- uid: MacacaGames.EffectSystem.EffectSystem.GetColorNumberDescription(System.String,System.String)
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.GetColorNumberDescription(System.String,System.String)
+  id: GetColorNumberDescription(System.String,System.String)
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: GetColorNumberDescription(String, String)
+  nameWithType: EffectSystem.GetColorNumberDescription(String, String)
+  fullName: MacacaGames.EffectSystem.EffectSystem.GetColorNumberDescription(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: GetColorNumberDescription
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 742
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public static string GetColorNumberDescription(string text, string colorHex)
+    parameters:
+    - id: text
+      type: System.String
+    - id: colorHex
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function GetColorNumberDescription(text As String, colorHex As String) As String
+  overload: MacacaGames.EffectSystem.EffectSystem.GetColorNumberDescription*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: MacacaGames.EffectSystem.EffectSystem.GetColorNumberDescription(System.String,Color)
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.GetColorNumberDescription(System.String,Color)
+  id: GetColorNumberDescription(System.String,Color)
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: GetColorNumberDescription(String, Color)
+  nameWithType: EffectSystem.GetColorNumberDescription(String, Color)
+  fullName: MacacaGames.EffectSystem.EffectSystem.GetColorNumberDescription(System.String, Color)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: GetColorNumberDescription
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 756
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public static string GetColorNumberDescription(string text, Color color)
+    parameters:
+    - id: text
+      type: System.String
+    - id: color
+      type: Color
+    return:
+      type: System.String
+    content.vb: Public Shared Function GetColorNumberDescription(text As String, color As Color) As String
+  overload: MacacaGames.EffectSystem.EffectSystem.GetColorNumberDescription*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: MacacaGames.EffectSystem.EffectSystem.GetEffectListByType(MacacaGames.EffectSystem.IEffectableObject,System.String)
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.GetEffectListByType(MacacaGames.EffectSystem.IEffectableObject,System.String)
+  id: GetEffectListByType(MacacaGames.EffectSystem.IEffectableObject,System.String)
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: GetEffectListByType(IEffectableObject, String)
+  nameWithType: EffectSystem.GetEffectListByType(IEffectableObject, String)
+  fullName: MacacaGames.EffectSystem.EffectSystem.GetEffectListByType(MacacaGames.EffectSystem.IEffectableObject, System.String)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: GetEffectListByType
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 771
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  summary: 取得指定Owner的指定EffectType的EffectList。
+  example: []
+  syntax:
+    content: public EffectSystem.EffectInstanceList GetEffectListByType(IEffectableObject owner, string effectType)
+    parameters:
+    - id: owner
+      type: MacacaGames.EffectSystem.IEffectableObject
+    - id: effectType
+      type: System.String
+    return:
+      type: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList
+    content.vb: Public Function GetEffectListByType(owner As IEffectableObject, effectType As String) As EffectSystem.EffectInstanceList
+  overload: MacacaGames.EffectSystem.EffectSystem.GetEffectListByType*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectSystem.GetEffectSum(MacacaGames.EffectSystem.IEffectableObject,System.String)
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.GetEffectSum(MacacaGames.EffectSystem.IEffectableObject,System.String)
+  id: GetEffectSum(MacacaGames.EffectSystem.IEffectableObject,System.String)
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: GetEffectSum(IEffectableObject, String)
+  nameWithType: EffectSystem.GetEffectSum(IEffectableObject, String)
+  fullName: MacacaGames.EffectSystem.EffectSystem.GetEffectSum(MacacaGames.EffectSystem.IEffectableObject, System.String)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: GetEffectSum
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 794
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  summary: "\nGet the sum value of the EffectType on an IEffectableObject\n"
+  example: []
+  syntax:
+    content: public float GetEffectSum(IEffectableObject target, string effectType)
+    parameters:
+    - id: target
+      type: MacacaGames.EffectSystem.IEffectableObject
+      description: The target IEffectableObject
+    - id: effectType
+      type: System.String
+      description: The EffectType
+    return:
+      type: System.Single
+      description: ''
+    content.vb: Public Function GetEffectSum(target As IEffectableObject, effectType As String) As Single
+  overload: MacacaGames.EffectSystem.EffectSystem.GetEffectSum*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectSystem.GetEffectsSum(MacacaGames.EffectSystem.IEffectableObject,System.String[])
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.GetEffectsSum(MacacaGames.EffectSystem.IEffectableObject,System.String[])
+  id: GetEffectsSum(MacacaGames.EffectSystem.IEffectableObject,System.String[])
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: GetEffectsSum(IEffectableObject, String[])
+  nameWithType: EffectSystem.GetEffectsSum(IEffectableObject, String[])
+  fullName: MacacaGames.EffectSystem.EffectSystem.GetEffectsSum(MacacaGames.EffectSystem.IEffectableObject, System.String[])
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: GetEffectsSum
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 804
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  summary: 取得複數指定EffectType的Value總和的總和。
+  example: []
+  syntax:
+    content: public float GetEffectsSum(IEffectableObject target, params string[] effectType)
+    parameters:
+    - id: target
+      type: MacacaGames.EffectSystem.IEffectableObject
+    - id: effectType
+      type: System.String[]
+    return:
+      type: System.Single
+    content.vb: Public Function GetEffectsSum(target As IEffectableObject, ParamArray effectType As String()) As Single
+  overload: MacacaGames.EffectSystem.EffectSystem.GetEffectsSum*
+  nameWithType.vb: EffectSystem.GetEffectsSum(IEffectableObject, String())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: MacacaGames.EffectSystem.EffectSystem.GetEffectsSum(MacacaGames.EffectSystem.IEffectableObject, System.String())
+  name.vb: GetEffectsSum(IEffectableObject, String())
+- uid: MacacaGames.EffectSystem.EffectSystem.AddRequestedEffects(MacacaGames.EffectSystem.IEffectableObject,IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo},System.String[])
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.AddRequestedEffects(MacacaGames.EffectSystem.IEffectableObject,IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo},System.String[])
+  id: AddRequestedEffects(MacacaGames.EffectSystem.IEffectableObject,IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo},System.String[])
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: AddRequestedEffects(IEffectableObject, IEnumerable<EffectInfo>, String[])
+  nameWithType: EffectSystem.AddRequestedEffects(IEffectableObject, IEnumerable<EffectInfo>, String[])
+  fullName: MacacaGames.EffectSystem.EffectSystem.AddRequestedEffects(MacacaGames.EffectSystem.IEffectableObject, IEnumerable<MacacaGames.EffectSystem.Model.EffectInfo>, System.String[])
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: AddRequestedEffects
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 825
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  summary: "\nAdd one or more Effect(s) to an IEffectableObject\nwill do the ApprovedAddEffect checking before the effect is added\n"
+  example: []
+  syntax:
+    content: public void AddRequestedEffects(IEffectableObject owner, IEnumerable<EffectInfo> effectInfos, params string[] tags)
+    parameters:
+    - id: owner
+      type: MacacaGames.EffectSystem.IEffectableObject
+      description: The target obejct would like to add the Effect
+    - id: effectInfos
+      type: IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo}
+      description: The EffectInfos you would like to add the the owner
+    - id: tags
+      type: System.String[]
+      description: 'Add the tags on the EffectInstance which is add on this requrest, it is very helpful to manage the Effect Instance, '
+    content.vb: Public Sub AddRequestedEffects(owner As IEffectableObject, effectInfos As IEnumerable(Of EffectInfo), ParamArray tags As String())
+  overload: MacacaGames.EffectSystem.EffectSystem.AddRequestedEffects*
+  nameWithType.vb: EffectSystem.AddRequestedEffects(IEffectableObject, IEnumerable(Of EffectInfo), String())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: MacacaGames.EffectSystem.EffectSystem.AddRequestedEffects(MacacaGames.EffectSystem.IEffectableObject, IEnumerable(Of MacacaGames.EffectSystem.Model.EffectInfo), System.String())
+  name.vb: AddRequestedEffects(IEffectableObject, IEnumerable(Of EffectInfo), String())
+- uid: MacacaGames.EffectSystem.EffectSystem.AddRequestedEffect(MacacaGames.EffectSystem.IEffectableObject,MacacaGames.EffectSystem.Model.EffectInfo,System.String[])
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.AddRequestedEffect(MacacaGames.EffectSystem.IEffectableObject,MacacaGames.EffectSystem.Model.EffectInfo,System.String[])
+  id: AddRequestedEffect(MacacaGames.EffectSystem.IEffectableObject,MacacaGames.EffectSystem.Model.EffectInfo,System.String[])
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: AddRequestedEffect(IEffectableObject, EffectInfo, String[])
+  nameWithType: EffectSystem.AddRequestedEffect(IEffectableObject, EffectInfo, String[])
+  fullName: MacacaGames.EffectSystem.EffectSystem.AddRequestedEffect(MacacaGames.EffectSystem.IEffectableObject, MacacaGames.EffectSystem.Model.EffectInfo, System.String[])
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: AddRequestedEffect
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 839
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  summary: 附加指定的Effect實體，從物件池拿。
+  example: []
+  syntax:
+    content: public void AddRequestedEffect(IEffectableObject owner, EffectInfo effectInfo, params string[] tags)
+    parameters:
+    - id: owner
+      type: MacacaGames.EffectSystem.IEffectableObject
+    - id: effectInfo
+      type: MacacaGames.EffectSystem.Model.EffectInfo
+    - id: tags
+      type: System.String[]
+    content.vb: Public Sub AddRequestedEffect(owner As IEffectableObject, effectInfo As EffectInfo, ParamArray tags As String())
+  overload: MacacaGames.EffectSystem.EffectSystem.AddRequestedEffect*
+  nameWithType.vb: EffectSystem.AddRequestedEffect(IEffectableObject, EffectInfo, String())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: MacacaGames.EffectSystem.EffectSystem.AddRequestedEffect(MacacaGames.EffectSystem.IEffectableObject, MacacaGames.EffectSystem.Model.EffectInfo, System.String())
+  name.vb: AddRequestedEffect(IEffectableObject, EffectInfo, String())
+- uid: MacacaGames.EffectSystem.EffectSystem.AddEffects(MacacaGames.EffectSystem.IEffectableObject,IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo},System.String[])
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.AddEffects(MacacaGames.EffectSystem.IEffectableObject,IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo},System.String[])
+  id: AddEffects(MacacaGames.EffectSystem.IEffectableObject,IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo},System.String[])
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: AddEffects(IEffectableObject, IEnumerable<EffectInfo>, String[])
+  nameWithType: EffectSystem.AddEffects(IEffectableObject, IEnumerable<EffectInfo>, String[])
+  fullName: MacacaGames.EffectSystem.EffectSystem.AddEffects(MacacaGames.EffectSystem.IEffectableObject, IEnumerable<MacacaGames.EffectSystem.Model.EffectInfo>, System.String[])
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: AddEffects
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 881
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  summary: "\nAdd one or more Effect(s) to an IEffectableObject\nwill do the ApprovedAddEffect checking before the effect is added\nDifference between AddRequestedEffect is this method always create new Instance\n"
+  example: []
+  syntax:
+    content: public void AddEffects(IEffectableObject owner, IEnumerable<EffectInfo> effectInfos, params string[] tags)
+    parameters:
+    - id: owner
+      type: MacacaGames.EffectSystem.IEffectableObject
+      description: The target obejct would like to add the Effect
+    - id: effectInfos
+      type: IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo}
+      description: The EffectInfos you would like to add the the owner
+    - id: tags
+      type: System.String[]
+      description: 'Add the tags on the EffectInstance which is add on this requrest, it is very helpful to manage the Effect Instance, '
+    content.vb: Public Sub AddEffects(owner As IEffectableObject, effectInfos As IEnumerable(Of EffectInfo), ParamArray tags As String())
+  overload: MacacaGames.EffectSystem.EffectSystem.AddEffects*
+  nameWithType.vb: EffectSystem.AddEffects(IEffectableObject, IEnumerable(Of EffectInfo), String())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: MacacaGames.EffectSystem.EffectSystem.AddEffects(MacacaGames.EffectSystem.IEffectableObject, IEnumerable(Of MacacaGames.EffectSystem.Model.EffectInfo), System.String())
+  name.vb: AddEffects(IEffectableObject, IEnumerable(Of EffectInfo), String())
+- uid: MacacaGames.EffectSystem.EffectSystem.AddEffect(MacacaGames.EffectSystem.IEffectableObject,MacacaGames.EffectSystem.Model.EffectInfo,System.String[])
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.AddEffect(MacacaGames.EffectSystem.IEffectableObject,MacacaGames.EffectSystem.Model.EffectInfo,System.String[])
+  id: AddEffect(MacacaGames.EffectSystem.IEffectableObject,MacacaGames.EffectSystem.Model.EffectInfo,System.String[])
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: AddEffect(IEffectableObject, EffectInfo, String[])
+  nameWithType: EffectSystem.AddEffect(IEffectableObject, EffectInfo, String[])
+  fullName: MacacaGames.EffectSystem.EffectSystem.AddEffect(MacacaGames.EffectSystem.IEffectableObject, MacacaGames.EffectSystem.Model.EffectInfo, System.String[])
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: AddEffect
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 896
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  summary: "\nAdd one or more Effect(s) to an IEffectableObject\nwill do the ApprovedAddEffect checking before the effect is added\nDifference between AddRequestedEffect is this method always create new Instance\n"
+  example: []
+  syntax:
+    content: public void AddEffect(IEffectableObject owner, EffectInfo effectInfo, params string[] tags)
+    parameters:
+    - id: owner
+      type: MacacaGames.EffectSystem.IEffectableObject
+      description: The target obejct would like to add the Effect
+    - id: effectInfo
+      type: MacacaGames.EffectSystem.Model.EffectInfo
+    - id: tags
+      type: System.String[]
+      description: 'Add the tags on the EffectInstance which is add on this requrest, it is very helpful to manage the Effect Instance, '
+    content.vb: Public Sub AddEffect(owner As IEffectableObject, effectInfo As EffectInfo, ParamArray tags As String())
+  overload: MacacaGames.EffectSystem.EffectSystem.AddEffect*
+  nameWithType.vb: EffectSystem.AddEffect(IEffectableObject, EffectInfo, String())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: MacacaGames.EffectSystem.EffectSystem.AddEffect(MacacaGames.EffectSystem.IEffectableObject, MacacaGames.EffectSystem.Model.EffectInfo, System.String())
+  name.vb: AddEffect(IEffectableObject, EffectInfo, String())
+- uid: MacacaGames.EffectSystem.EffectSystem.RemoveEffectByTag(MacacaGames.EffectSystem.IEffectableObject,System.String)
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.RemoveEffectByTag(MacacaGames.EffectSystem.IEffectableObject,System.String)
+  id: RemoveEffectByTag(MacacaGames.EffectSystem.IEffectableObject,System.String)
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: RemoveEffectByTag(IEffectableObject, String)
+  nameWithType: EffectSystem.RemoveEffectByTag(IEffectableObject, String)
+  fullName: MacacaGames.EffectSystem.EffectSystem.RemoveEffectByTag(MacacaGames.EffectSystem.IEffectableObject, System.String)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: RemoveEffectByTag
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 951
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  summary: 移除包含特定Tag的Effect。
+  example: []
+  syntax:
+    content: public void RemoveEffectByTag(IEffectableObject owner, string tag)
+    parameters:
+    - id: owner
+      type: MacacaGames.EffectSystem.IEffectableObject
+    - id: tag
+      type: System.String
+    content.vb: Public Sub RemoveEffectByTag(owner As IEffectableObject, tag As String)
+  overload: MacacaGames.EffectSystem.EffectSystem.RemoveEffectByTag*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectSystem.RemoveEffectsByType(MacacaGames.EffectSystem.IEffectableObject,System.String)
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.RemoveEffectsByType(MacacaGames.EffectSystem.IEffectableObject,System.String)
+  id: RemoveEffectsByType(MacacaGames.EffectSystem.IEffectableObject,System.String)
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: RemoveEffectsByType(IEffectableObject, String)
+  nameWithType: EffectSystem.RemoveEffectsByType(IEffectableObject, String)
+  fullName: MacacaGames.EffectSystem.EffectSystem.RemoveEffectsByType(MacacaGames.EffectSystem.IEffectableObject, System.String)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: RemoveEffectsByType
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 967
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  summary: 移除指定EffectType所有的Effect實體。
+  example: []
+  syntax:
+    content: public void RemoveEffectsByType(IEffectableObject owner, string effectType)
+    parameters:
+    - id: owner
+      type: MacacaGames.EffectSystem.IEffectableObject
+    - id: effectType
+      type: System.String
+    content.vb: Public Sub RemoveEffectsByType(owner As IEffectableObject, effectType As String)
+  overload: MacacaGames.EffectSystem.EffectSystem.RemoveEffectsByType*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectSystem.RemoveEffect(MacacaGames.EffectSystem.IEffectableObject,MacacaGames.EffectSystem.EffectInstanceBase)
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.RemoveEffect(MacacaGames.EffectSystem.IEffectableObject,MacacaGames.EffectSystem.EffectInstanceBase)
+  id: RemoveEffect(MacacaGames.EffectSystem.IEffectableObject,MacacaGames.EffectSystem.EffectInstanceBase)
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: RemoveEffect(IEffectableObject, EffectInstanceBase)
+  nameWithType: EffectSystem.RemoveEffect(IEffectableObject, EffectInstanceBase)
+  fullName: MacacaGames.EffectSystem.EffectSystem.RemoveEffect(MacacaGames.EffectSystem.IEffectableObject, MacacaGames.EffectSystem.EffectInstanceBase)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: RemoveEffect
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 981
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  summary: 移除指定Effect實體。
+  example: []
+  syntax:
+    content: public void RemoveEffect(IEffectableObject owner, EffectInstanceBase effect)
+    parameters:
+    - id: owner
+      type: MacacaGames.EffectSystem.IEffectableObject
+    - id: effect
+      type: MacacaGames.EffectSystem.EffectInstanceBase
+    content.vb: Public Sub RemoveEffect(owner As IEffectableObject, effect As EffectInstanceBase)
+  overload: MacacaGames.EffectSystem.EffectSystem.RemoveEffect*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectSystem.GetEffectsByTag(MacacaGames.EffectSystem.IEffectableObject,System.String)
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.GetEffectsByTag(MacacaGames.EffectSystem.IEffectableObject,System.String)
+  id: GetEffectsByTag(MacacaGames.EffectSystem.IEffectableObject,System.String)
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: GetEffectsByTag(IEffectableObject, String)
+  nameWithType: EffectSystem.GetEffectsByTag(IEffectableObject, String)
+  fullName: MacacaGames.EffectSystem.EffectSystem.GetEffectsByTag(MacacaGames.EffectSystem.IEffectableObject, System.String)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: GetEffectsByTag
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 1010
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  summary: 搜尋包含特定Tag的Effect。
+  example: []
+  syntax:
+    content: public List<EffectInstanceBase> GetEffectsByTag(IEffectableObject owner, string tag)
+    parameters:
+    - id: owner
+      type: MacacaGames.EffectSystem.IEffectableObject
+    - id: tag
+      type: System.String
+    return:
+      type: List{MacacaGames.EffectSystem.EffectInstanceBase}
+    content.vb: Public Function GetEffectsByTag(owner As IEffectableObject, tag As String) As List(Of EffectInstanceBase)
+  overload: MacacaGames.EffectSystem.EffectSystem.GetEffectsByTag*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectSystem.GetEffectsByType(MacacaGames.EffectSystem.IEffectableObject,System.String,System.Boolean)
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.GetEffectsByType(MacacaGames.EffectSystem.IEffectableObject,System.String,System.Boolean)
+  id: GetEffectsByType(MacacaGames.EffectSystem.IEffectableObject,System.String,System.Boolean)
+  parent: MacacaGames.EffectSystem.EffectSystem
+  langs:
+  - csharp
+  - vb
+  name: GetEffectsByType(IEffectableObject, String, Boolean)
+  nameWithType: EffectSystem.GetEffectsByType(IEffectableObject, String, Boolean)
+  fullName: MacacaGames.EffectSystem.EffectSystem.GetEffectsByType(MacacaGames.EffectSystem.IEffectableObject, System.String, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Component/EffectSystem.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: GetEffectsByType
+    path: ../Runtime/Component/EffectSystem.cs
+    startLine: 1028
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public List<EffectInstanceBase> GetEffectsByType(IEffectableObject owner, string type, bool onlyGetActive = false)
+    parameters:
+    - id: owner
+      type: MacacaGames.EffectSystem.IEffectableObject
+    - id: type
+      type: System.String
+    - id: onlyGetActive
+      type: System.Boolean
+    return:
+      type: List{MacacaGames.EffectSystem.EffectInstanceBase}
+    content.vb: Public Function GetEffectsByType(owner As IEffectableObject, type As String, onlyGetActive As Boolean = False) As List(Of EffectInstanceBase)
+  overload: MacacaGames.EffectSystem.EffectSystem.GetEffectsByType*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: MacacaGames.EffectSystem
+  commentId: N:MacacaGames.EffectSystem
+  name: MacacaGames.EffectSystem
+  nameWithType: MacacaGames.EffectSystem
+  fullName: MacacaGames.EffectSystem
+- uid: MacacaGames.EffectSystem.EffectSystem
+  commentId: T:MacacaGames.EffectSystem.EffectSystem
+  parent: MacacaGames.EffectSystem
+  name: EffectSystem
+  nameWithType: EffectSystem
+  fullName: MacacaGames.EffectSystem.EffectSystem
+- uid: MacacaGames.EffectSystem.EffectSystem.QueryEffectTypeWithDefault*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.QueryEffectTypeWithDefault
+  name: QueryEffectTypeWithDefault
+  nameWithType: EffectSystem.QueryEffectTypeWithDefault
+  fullName: MacacaGames.EffectSystem.EffectSystem.QueryEffectTypeWithDefault
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Type
+  commentId: '!:Type'
+  isExternal: true
+  name: Type
+  nameWithType: Type
+  fullName: Type
+- uid: Dictionary{System.String,Func{Action{MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo},IEnumerator}}
+  commentId: '!:Dictionary{System.String,Func{Action{MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo},IEnumerator}}'
+  definition: Dictionary`2
+  name: Dictionary<String, Func<Action<EffectTriggerConditionInfo>, IEnumerator>>
+  nameWithType: Dictionary<String, Func<Action<EffectTriggerConditionInfo>, IEnumerator>>
+  fullName: Dictionary<System.String, Func<Action<MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo>, IEnumerator>>
+  nameWithType.vb: Dictionary(Of String, Func(Of Action(Of EffectTriggerConditionInfo), IEnumerator))
+  fullName.vb: Dictionary(Of System.String, Func(Of Action(Of MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo), IEnumerator))
+  name.vb: Dictionary(Of String, Func(Of Action(Of EffectTriggerConditionInfo), IEnumerator))
+  spec.csharp:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Func`2
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+    name: EffectTriggerConditionInfo
+    nameWithType: EffectTriggerConditionInfo
+    fullName: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: IEnumerator
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: IEnumerator
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Func`2
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+    name: EffectTriggerConditionInfo
+    nameWithType: EffectTriggerConditionInfo
+    fullName: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: IEnumerator
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: IEnumerator
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dictionary`2
+  isExternal: true
+  name: Dictionary<, >
+  nameWithType: Dictionary<, >
+  fullName: Dictionary<, >
+  nameWithType.vb: Dictionary(Of , )
+  fullName.vb: Dictionary(Of , )
+  name.vb: Dictionary(Of , )
+  spec.csharp:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MacacaGames.EffectSystem.EffectCalculator
+  commentId: T:MacacaGames.EffectSystem.EffectCalculator
+  parent: MacacaGames.EffectSystem
+  name: EffectCalculator
+  nameWithType: EffectCalculator
+  fullName: MacacaGames.EffectSystem.EffectCalculator
+- uid: MacacaGames.EffectSystem.EffectSystem.GetEffectableObjects*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.GetEffectableObjects
+  name: GetEffectableObjects
+  nameWithType: EffectSystem.GetEffectableObjects
+  fullName: MacacaGames.EffectSystem.EffectSystem.GetEffectableObjects
+- uid: List{MacacaGames.EffectSystem.IEffectableObject}
+  commentId: '!:List{MacacaGames.EffectSystem.IEffectableObject}'
+  definition: List`1
+  name: List<IEffectableObject>
+  nameWithType: List<IEffectableObject>
+  fullName: List<MacacaGames.EffectSystem.IEffectableObject>
+  nameWithType.vb: List(Of IEffectableObject)
+  fullName.vb: List(Of MacacaGames.EffectSystem.IEffectableObject)
+  name.vb: List(Of IEffectableObject)
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: MacacaGames.EffectSystem.IEffectableObject
+    name: IEffectableObject
+    nameWithType: IEffectableObject
+    fullName: MacacaGames.EffectSystem.IEffectableObject
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: MacacaGames.EffectSystem.IEffectableObject
+    name: IEffectableObject
+    nameWithType: IEffectableObject
+    fullName: MacacaGames.EffectSystem.IEffectableObject
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MacacaGames.EffectSystem.EffectSystem.CleanEffectableObject*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.CleanEffectableObject
+  name: CleanEffectableObject
+  nameWithType: EffectSystem.CleanEffectableObject
+  fullName: MacacaGames.EffectSystem.EffectSystem.CleanEffectableObject
+- uid: MacacaGames.EffectSystem.IEffectableObject
+  commentId: T:MacacaGames.EffectSystem.IEffectableObject
+  parent: MacacaGames.EffectSystem
+  name: IEffectableObject
+  nameWithType: IEffectableObject
+  fullName: MacacaGames.EffectSystem.IEffectableObject
+- uid: MacacaGames.EffectSystem.EffectSystem.UpdateEffectUpdate*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.UpdateEffectUpdate
+  name: UpdateEffectUpdate
+  nameWithType: EffectSystem.UpdateEffectUpdate
+  fullName: MacacaGames.EffectSystem.EffectSystem.UpdateEffectUpdate
+- uid: System.Single
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: MacacaGames.EffectSystem.EffectSystem.ResetEffectActiveTimeAndCooldownTime*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.ResetEffectActiveTimeAndCooldownTime
+  name: ResetEffectActiveTimeAndCooldownTime
+  nameWithType: EffectSystem.ResetEffectActiveTimeAndCooldownTime
+  fullName: MacacaGames.EffectSystem.EffectSystem.ResetEffectActiveTimeAndCooldownTime
+- uid: Dictionary{GameObject,Queue{MacacaGames.EffectSystem.EffectViewBase}}
+  commentId: '!:Dictionary{GameObject,Queue{MacacaGames.EffectSystem.EffectViewBase}}'
+  definition: Dictionary`2
+  name: Dictionary<GameObject, Queue<EffectViewBase>>
+  nameWithType: Dictionary<GameObject, Queue<EffectViewBase>>
+  fullName: Dictionary<GameObject, Queue<MacacaGames.EffectSystem.EffectViewBase>>
+  nameWithType.vb: Dictionary(Of GameObject, Queue(Of EffectViewBase))
+  fullName.vb: Dictionary(Of GameObject, Queue(Of MacacaGames.EffectSystem.EffectViewBase))
+  name.vb: Dictionary(Of GameObject, Queue(Of EffectViewBase))
+  spec.csharp:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: GameObject
+    name: GameObject
+    nameWithType: GameObject
+    fullName: GameObject
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Queue`1
+    name: Queue
+    nameWithType: Queue
+    fullName: Queue
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: MacacaGames.EffectSystem.EffectViewBase
+    name: EffectViewBase
+    nameWithType: EffectViewBase
+    fullName: MacacaGames.EffectSystem.EffectViewBase
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: GameObject
+    name: GameObject
+    nameWithType: GameObject
+    fullName: GameObject
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Queue`1
+    name: Queue
+    nameWithType: Queue
+    fullName: Queue
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: MacacaGames.EffectSystem.EffectViewBase
+    name: EffectViewBase
+    nameWithType: EffectViewBase
+    fullName: MacacaGames.EffectSystem.EffectViewBase
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MacacaGames.EffectSystem.EffectSystem.RequestEffectView*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.RequestEffectView
+  name: RequestEffectView
+  nameWithType: EffectSystem.RequestEffectView
+  fullName: MacacaGames.EffectSystem.EffectSystem.RequestEffectView
+- uid: MacacaGames.EffectSystem.Model.EffectInfo
+  commentId: T:MacacaGames.EffectSystem.Model.EffectInfo
+  parent: MacacaGames.EffectSystem.Model
+  name: EffectInfo
+  nameWithType: EffectInfo
+  fullName: MacacaGames.EffectSystem.Model.EffectInfo
+- uid: MacacaGames.EffectSystem.Model.EffectViewInfo
+  commentId: T:MacacaGames.EffectSystem.Model.EffectViewInfo
+  parent: MacacaGames.EffectSystem.Model
+  name: EffectViewInfo
+  nameWithType: EffectViewInfo
+  fullName: MacacaGames.EffectSystem.Model.EffectViewInfo
+- uid: MacacaGames.EffectSystem.EffectViewBase
+  commentId: T:MacacaGames.EffectSystem.EffectViewBase
+  parent: MacacaGames.EffectSystem
+  name: EffectViewBase
+  nameWithType: EffectViewBase
+  fullName: MacacaGames.EffectSystem.EffectViewBase
+- uid: MacacaGames.EffectSystem.Model
+  commentId: N:MacacaGames.EffectSystem.Model
+  name: MacacaGames.EffectSystem.Model
+  nameWithType: MacacaGames.EffectSystem.Model
+  fullName: MacacaGames.EffectSystem.Model
+- uid: MacacaGames.EffectSystem.EffectSystem.RecoveryEffectView*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.RecoveryEffectView
+  name: RecoveryEffectView
+  nameWithType: EffectSystem.RecoveryEffectView
+  fullName: MacacaGames.EffectSystem.EffectSystem.RecoveryEffectView
+- uid: MacacaGames.EffectSystem.EffectSystem.ResetEffectableObjectQuery*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.ResetEffectableObjectQuery
+  name: ResetEffectableObjectQuery
+  nameWithType: EffectSystem.ResetEffectableObjectQuery
+  fullName: MacacaGames.EffectSystem.EffectSystem.ResetEffectableObjectQuery
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectTriggerCondition*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.EffectTriggerCondition
+  name: EffectTriggerCondition
+  nameWithType: EffectSystem.EffectTriggerCondition
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectTriggerCondition
+- uid: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+  commentId: T:MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+  parent: MacacaGames.EffectSystem.Model
+  name: EffectTriggerConditionInfo
+  nameWithType: EffectTriggerConditionInfo
+  fullName: MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo
+- uid: MacacaGames.EffectSystem.EffectSystem.RegistEffectTriggerCondition*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.RegistEffectTriggerCondition
+  name: RegistEffectTriggerCondition
+  nameWithType: EffectSystem.RegistEffectTriggerCondition
+  fullName: MacacaGames.EffectSystem.EffectSystem.RegistEffectTriggerCondition
+- uid: MacacaGames.EffectSystem.EffectInstanceBase
+  commentId: T:MacacaGames.EffectSystem.EffectInstanceBase
+  parent: MacacaGames.EffectSystem
+  name: EffectInstanceBase
+  nameWithType: EffectInstanceBase
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase
+- uid: MacacaGames.EffectSystem.EffectSystem.UnregistEffectTriggerCondition*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.UnregistEffectTriggerCondition
+  name: UnregistEffectTriggerCondition
+  nameWithType: EffectSystem.UnregistEffectTriggerCondition
+  fullName: MacacaGames.EffectSystem.EffectSystem.UnregistEffectTriggerCondition
+- uid: MacacaGames.EffectSystem.EffectSystem.RequestEffect*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.RequestEffect
+  name: RequestEffect
+  nameWithType: EffectSystem.RequestEffect
+  fullName: MacacaGames.EffectSystem.EffectSystem.RequestEffect
+- uid: MacacaGames.EffectSystem.EffectSystem.RecoveryEffectBase*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.RecoveryEffectBase
+  name: RecoveryEffectBase
+  nameWithType: EffectSystem.RecoveryEffectBase
+  fullName: MacacaGames.EffectSystem.EffectSystem.RecoveryEffectBase
+- uid: MacacaGames.EffectSystem.EffectSystem.CreateEffect*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.CreateEffect
+  name: CreateEffect
+  nameWithType: EffectSystem.CreateEffect
+  fullName: MacacaGames.EffectSystem.EffectSystem.CreateEffect
+- uid: MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectsDescription*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectsDescription
+  name: GetDefaultEffectsDescription
+  nameWithType: EffectSystem.GetDefaultEffectsDescription
+  fullName: MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectsDescription
+- uid: IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo}
+  commentId: '!:IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo}'
+  definition: IEnumerable`1
+  name: IEnumerable<EffectInfo>
+  nameWithType: IEnumerable<EffectInfo>
+  fullName: IEnumerable<MacacaGames.EffectSystem.Model.EffectInfo>
+  nameWithType.vb: IEnumerable(Of EffectInfo)
+  fullName.vb: IEnumerable(Of MacacaGames.EffectSystem.Model.EffectInfo)
+  name.vb: IEnumerable(Of EffectInfo)
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: MacacaGames.EffectSystem.Model.EffectInfo
+    name: EffectInfo
+    nameWithType: EffectInfo
+    fullName: MacacaGames.EffectSystem.Model.EffectInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: MacacaGames.EffectSystem.Model.EffectInfo
+    name: EffectInfo
+    nameWithType: EffectInfo
+    fullName: MacacaGames.EffectSystem.Model.EffectInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IEnumerable`1
+  isExternal: true
+  name: IEnumerable<>
+  nameWithType: IEnumerable<>
+  fullName: IEnumerable<>
+  nameWithType.vb: IEnumerable(Of )
+  fullName.vb: IEnumerable(Of )
+  name.vb: IEnumerable(Of )
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectsDescriptions*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectsDescriptions
+  name: GetDefaultEffectsDescriptions
+  nameWithType: EffectSystem.GetDefaultEffectsDescriptions
+  fullName: MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectsDescriptions
+- uid: IEnumerable{System.String}
+  commentId: '!:IEnumerable{System.String}'
+  definition: IEnumerable`1
+  name: IEnumerable<String>
+  nameWithType: IEnumerable<String>
+  fullName: IEnumerable<System.String>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: IEnumerable(Of System.String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectDescription*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectDescription
+  name: GetDefaultEffectDescription
+  nameWithType: EffectSystem.GetDefaultEffectDescription
+  fullName: MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectDescription
+- uid: MacacaGames.EffectSystem.EffectSystem.GetCustomEffectsDescription*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.GetCustomEffectsDescription
+  name: GetCustomEffectsDescription
+  nameWithType: EffectSystem.GetCustomEffectsDescription
+  fullName: MacacaGames.EffectSystem.EffectSystem.GetCustomEffectsDescription
+- uid: MacacaGames.EffectSystem.EffectSystem.GetColorNumberDescription*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.GetColorNumberDescription
+  name: GetColorNumberDescription
+  nameWithType: EffectSystem.GetColorNumberDescription
+  fullName: MacacaGames.EffectSystem.EffectSystem.GetColorNumberDescription
+- uid: Color
+  commentId: '!:Color'
+  isExternal: true
+  name: Color
+  nameWithType: Color
+  fullName: Color
+- uid: MacacaGames.EffectSystem.EffectSystem.GetEffectListByType*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.GetEffectListByType
+  name: GetEffectListByType
+  nameWithType: EffectSystem.GetEffectListByType
+  fullName: MacacaGames.EffectSystem.EffectSystem.GetEffectListByType
+- uid: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList
+  commentId: T:MacacaGames.EffectSystem.EffectSystem.EffectInstanceList
+  parent: MacacaGames.EffectSystem
+  name: EffectSystem.EffectInstanceList
+  nameWithType: EffectSystem.EffectInstanceList
+  fullName: MacacaGames.EffectSystem.EffectSystem.EffectInstanceList
+- uid: MacacaGames.EffectSystem.EffectSystem.GetEffectSum*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.GetEffectSum
+  name: GetEffectSum
+  nameWithType: EffectSystem.GetEffectSum
+  fullName: MacacaGames.EffectSystem.EffectSystem.GetEffectSum
+- uid: MacacaGames.EffectSystem.EffectSystem.GetEffectsSum*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.GetEffectsSum
+  name: GetEffectsSum
+  nameWithType: EffectSystem.GetEffectsSum
+  fullName: MacacaGames.EffectSystem.EffectSystem.GetEffectsSum
+- uid: System.String[]
+  isExternal: true
+  name: String[]
+  nameWithType: String[]
+  fullName: System.String[]
+  nameWithType.vb: String()
+  fullName.vb: System.String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: MacacaGames.EffectSystem.EffectSystem.AddRequestedEffects*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.AddRequestedEffects
+  name: AddRequestedEffects
+  nameWithType: EffectSystem.AddRequestedEffects
+  fullName: MacacaGames.EffectSystem.EffectSystem.AddRequestedEffects
+- uid: MacacaGames.EffectSystem.EffectSystem.AddRequestedEffect*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.AddRequestedEffect
+  name: AddRequestedEffect
+  nameWithType: EffectSystem.AddRequestedEffect
+  fullName: MacacaGames.EffectSystem.EffectSystem.AddRequestedEffect
+- uid: MacacaGames.EffectSystem.EffectSystem.AddEffects*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.AddEffects
+  name: AddEffects
+  nameWithType: EffectSystem.AddEffects
+  fullName: MacacaGames.EffectSystem.EffectSystem.AddEffects
+- uid: MacacaGames.EffectSystem.EffectSystem.AddEffect*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.AddEffect
+  name: AddEffect
+  nameWithType: EffectSystem.AddEffect
+  fullName: MacacaGames.EffectSystem.EffectSystem.AddEffect
+- uid: MacacaGames.EffectSystem.EffectSystem.RemoveEffectByTag*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.RemoveEffectByTag
+  name: RemoveEffectByTag
+  nameWithType: EffectSystem.RemoveEffectByTag
+  fullName: MacacaGames.EffectSystem.EffectSystem.RemoveEffectByTag
+- uid: MacacaGames.EffectSystem.EffectSystem.RemoveEffectsByType*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.RemoveEffectsByType
+  name: RemoveEffectsByType
+  nameWithType: EffectSystem.RemoveEffectsByType
+  fullName: MacacaGames.EffectSystem.EffectSystem.RemoveEffectsByType
+- uid: MacacaGames.EffectSystem.EffectSystem.RemoveEffect*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.RemoveEffect
+  name: RemoveEffect
+  nameWithType: EffectSystem.RemoveEffect
+  fullName: MacacaGames.EffectSystem.EffectSystem.RemoveEffect
+- uid: MacacaGames.EffectSystem.EffectSystem.GetEffectsByTag*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.GetEffectsByTag
+  name: GetEffectsByTag
+  nameWithType: EffectSystem.GetEffectsByTag
+  fullName: MacacaGames.EffectSystem.EffectSystem.GetEffectsByTag
+- uid: List{MacacaGames.EffectSystem.EffectInstanceBase}
+  commentId: '!:List{MacacaGames.EffectSystem.EffectInstanceBase}'
+  definition: List`1
+  name: List<EffectInstanceBase>
+  nameWithType: List<EffectInstanceBase>
+  fullName: List<MacacaGames.EffectSystem.EffectInstanceBase>
+  nameWithType.vb: List(Of EffectInstanceBase)
+  fullName.vb: List(Of MacacaGames.EffectSystem.EffectInstanceBase)
+  name.vb: List(Of EffectInstanceBase)
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase
+    name: EffectInstanceBase
+    nameWithType: EffectInstanceBase
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase
+    name: EffectInstanceBase
+    nameWithType: EffectInstanceBase
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MacacaGames.EffectSystem.EffectSystem.GetEffectsByType*
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.GetEffectsByType
+  name: GetEffectsByType
+  nameWithType: EffectSystem.GetEffectsByType
+  fullName: MacacaGames.EffectSystem.EffectSystem.GetEffectsByType
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

@@ -16,14 +16,14 @@ items:
   type: Interface
   source:
     remote:
-      path: Runtime/Interface/IStarSkillEffect.cs
+      path: Model/Interface/IStarSkillEffect.cs
       branch: main
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: IStarSkillEffect
-    path: ../Runtime/Interface/IStarSkillEffect.cs
+    path: ../Model/Interface/IStarSkillEffect.cs
     startLine: 4
   assemblies:
-  - Macaca.EffectSystem
+  - Macaca.EffectSystem.Model
   namespace: MacacaGames.EffectSystem
   syntax:
     content: public interface IStarSkillEffect
@@ -47,14 +47,14 @@ items:
   type: Method
   source:
     remote:
-      path: Runtime/Interface/IStarSkillEffect.cs
+      path: Model/Interface/IStarSkillEffect.cs
       branch: main
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: GetRarityBonus
-    path: ../Runtime/Interface/IStarSkillEffect.cs
+    path: ../Model/Interface/IStarSkillEffect.cs
     startLine: 6
   assemblies:
-  - Macaca.EffectSystem
+  - Macaca.EffectSystem.Model
   namespace: MacacaGames.EffectSystem
   syntax:
     content: float GetRarityBonus()
@@ -75,14 +75,14 @@ items:
   type: Method
   source:
     remote:
-      path: Runtime/Interface/IStarSkillEffect.cs
+      path: Model/Interface/IStarSkillEffect.cs
       branch: main
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: StarSkillPRBonus
-    path: ../Runtime/Interface/IStarSkillEffect.cs
+    path: ../Model/Interface/IStarSkillEffect.cs
     startLine: 7
   assemblies:
-  - Macaca.EffectSystem
+  - Macaca.EffectSystem.Model
   namespace: MacacaGames.EffectSystem
   syntax:
     content: float StarSkillPRBonus()

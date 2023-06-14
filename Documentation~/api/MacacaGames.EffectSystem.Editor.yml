@@ -4,7 +4,10 @@ items:
   commentId: N:MacacaGames.EffectSystem.Editor
   id: MacacaGames.EffectSystem.Editor
   children:
+  - MacacaGames.EffectSystem.Editor.EffectEditorWindow
+  - MacacaGames.EffectSystem.Editor.EffectGroupEditor
   - MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker
+  - MacacaGames.EffectSystem.Editor.EffectTemplateCreatorEditorWindow
   langs:
   - csharp
   - vb
@@ -15,8 +18,23 @@ items:
   assemblies:
   - Macaca.EffectSystem.Editor
 references:
+- uid: MacacaGames.EffectSystem.Editor.EffectGroupEditor
+  commentId: T:MacacaGames.EffectSystem.Editor.EffectGroupEditor
+  name: EffectGroupEditor
+  nameWithType: EffectGroupEditor
+  fullName: MacacaGames.EffectSystem.Editor.EffectGroupEditor
 - uid: MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker
   commentId: T:MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker
   name: EffectSystemScriptBacker
   nameWithType: EffectSystemScriptBacker
   fullName: MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker
+- uid: MacacaGames.EffectSystem.Editor.EffectEditorWindow
+  commentId: T:MacacaGames.EffectSystem.Editor.EffectEditorWindow
+  name: EffectEditorWindow
+  nameWithType: EffectEditorWindow
+  fullName: MacacaGames.EffectSystem.Editor.EffectEditorWindow
+- uid: MacacaGames.EffectSystem.Editor.EffectTemplateCreatorEditorWindow
+  commentId: T:MacacaGames.EffectSystem.Editor.EffectTemplateCreatorEditorWindow
+  name: EffectTemplateCreatorEditorWindow
+  nameWithType: EffectTemplateCreatorEditorWindow
+  fullName: MacacaGames.EffectSystem.Editor.EffectTemplateCreatorEditorWindow

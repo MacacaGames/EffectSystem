@@ -24,7 +24,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: EffectView_Scale
     path: ../Runtime/EffectView/EffectView_Scale.cs
-    startLine: 8
+    startLine: 7
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem
@@ -65,7 +65,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: OnStart
     path: ../Runtime/EffectView/EffectView_Scale.cs
-    startLine: 65
+    startLine: 53
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem
@@ -98,7 +98,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: OnActive
     path: ../Runtime/EffectView/EffectView_Scale.cs
-    startLine: 76
+    startLine: 64
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem
@@ -131,7 +131,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: OnDeactive
     path: ../Runtime/EffectView/EffectView_Scale.cs
-    startLine: 87
+    startLine: 75
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem
@@ -164,7 +164,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: OnEnd
     path: ../Runtime/EffectView/EffectView_Scale.cs
-    startLine: 98
+    startLine: 86
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem
@@ -197,7 +197,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: OnColdDownEnd
     path: ../Runtime/EffectView/EffectView_Scale.cs
-    startLine: 109
+    startLine: 97
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem

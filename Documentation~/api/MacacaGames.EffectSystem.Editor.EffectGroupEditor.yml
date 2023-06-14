@@ -1,0 +1,82 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.Editor.EffectGroupEditor
+  commentId: T:MacacaGames.EffectSystem.Editor.EffectGroupEditor
+  id: EffectGroupEditor
+  parent: MacacaGames.EffectSystem.Editor
+  children:
+  - MacacaGames.EffectSystem.Editor.EffectGroupEditor.OnInspectorGUI
+  langs:
+  - csharp
+  - vb
+  name: EffectGroupEditor
+  nameWithType: EffectGroupEditor
+  fullName: MacacaGames.EffectSystem.Editor.EffectGroupEditor
+  type: Class
+  source:
+    remote:
+      path: Editor/ComponentEditor/EffectGroupEditor.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: EffectGroupEditor
+    path: ../Editor/ComponentEditor/EffectGroupEditor.cs
+    startLine: 6
+  assemblies:
+  - Macaca.EffectSystem.Editor
+  namespace: MacacaGames.EffectSystem.Editor
+  syntax:
+    content: 'public class EffectGroupEditor : Editor'
+    content.vb: >-
+      Public Class EffectGroupEditor
+          Inherits Editor
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MacacaGames.EffectSystem.Editor.EffectGroupEditor.OnInspectorGUI
+  commentId: M:MacacaGames.EffectSystem.Editor.EffectGroupEditor.OnInspectorGUI
+  id: OnInspectorGUI
+  parent: MacacaGames.EffectSystem.Editor.EffectGroupEditor
+  langs:
+  - csharp
+  - vb
+  name: OnInspectorGUI()
+  nameWithType: EffectGroupEditor.OnInspectorGUI()
+  fullName: MacacaGames.EffectSystem.Editor.EffectGroupEditor.OnInspectorGUI()
+  type: Method
+  source:
+    remote:
+      path: Editor/ComponentEditor/EffectGroupEditor.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnInspectorGUI
+    path: ../Editor/ComponentEditor/EffectGroupEditor.cs
+    startLine: 17
+  assemblies:
+  - Macaca.EffectSystem.Editor
+  namespace: MacacaGames.EffectSystem.Editor
+  syntax:
+    content: public override void OnInspectorGUI()
+    content.vb: Public Overrides Sub OnInspectorGUI
+  overload: MacacaGames.EffectSystem.Editor.EffectGroupEditor.OnInspectorGUI*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: MacacaGames.EffectSystem.Editor
+  commentId: N:MacacaGames.EffectSystem.Editor
+  name: MacacaGames.EffectSystem.Editor
+  nameWithType: MacacaGames.EffectSystem.Editor
+  fullName: MacacaGames.EffectSystem.Editor
+- uid: MacacaGames.EffectSystem.Editor.EffectGroupEditor.OnInspectorGUI*
+  commentId: Overload:MacacaGames.EffectSystem.Editor.EffectGroupEditor.OnInspectorGUI
+  name: OnInspectorGUI
+  nameWithType: EffectGroupEditor.OnInspectorGUI
+  fullName: MacacaGames.EffectSystem.Editor.EffectGroupEditor.OnInspectorGUI

@@ -1,0 +1,130 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.Editor.EffectEditorWindow
+  commentId: T:MacacaGames.EffectSystem.Editor.EffectEditorWindow
+  id: EffectEditorWindow
+  parent: MacacaGames.EffectSystem.Editor
+  children:
+  - MacacaGames.EffectSystem.Editor.EffectEditorWindow.AddEffectGroupData(MacacaGames.EffectSystem.EffectGroup)
+  - MacacaGames.EffectSystem.Editor.EffectEditorWindow.FreshEffectList
+  langs:
+  - csharp
+  - vb
+  name: EffectEditorWindow
+  nameWithType: EffectEditorWindow
+  fullName: MacacaGames.EffectSystem.Editor.EffectEditorWindow
+  type: Class
+  source:
+    remote:
+      path: Editor/EditorWindow/EffectEditorWindow.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: EffectEditorWindow
+    path: ../Editor/EditorWindow/EffectEditorWindow.cs
+    startLine: 11
+  assemblies:
+  - Macaca.EffectSystem.Editor
+  namespace: MacacaGames.EffectSystem.Editor
+  syntax:
+    content: 'public class EffectEditorWindow : EditorWindow'
+    content.vb: >-
+      Public Class EffectEditorWindow
+          Inherits EditorWindow
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MacacaGames.EffectSystem.Editor.EffectEditorWindow.AddEffectGroupData(MacacaGames.EffectSystem.EffectGroup)
+  commentId: M:MacacaGames.EffectSystem.Editor.EffectEditorWindow.AddEffectGroupData(MacacaGames.EffectSystem.EffectGroup)
+  id: AddEffectGroupData(MacacaGames.EffectSystem.EffectGroup)
+  parent: MacacaGames.EffectSystem.Editor.EffectEditorWindow
+  langs:
+  - csharp
+  - vb
+  name: AddEffectGroupData(EffectGroup)
+  nameWithType: EffectEditorWindow.AddEffectGroupData(EffectGroup)
+  fullName: MacacaGames.EffectSystem.Editor.EffectEditorWindow.AddEffectGroupData(MacacaGames.EffectSystem.EffectGroup)
+  type: Method
+  source:
+    remote:
+      path: Editor/EditorWindow/EffectEditorWindow.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: AddEffectGroupData
+    path: ../Editor/EditorWindow/EffectEditorWindow.cs
+    startLine: 248
+  assemblies:
+  - Macaca.EffectSystem.Editor
+  namespace: MacacaGames.EffectSystem.Editor
+  syntax:
+    content: public void AddEffectGroupData(EffectGroup effectGroup)
+    parameters:
+    - id: effectGroup
+      type: MacacaGames.EffectSystem.EffectGroup
+    content.vb: Public Sub AddEffectGroupData(effectGroup As EffectGroup)
+  overload: MacacaGames.EffectSystem.Editor.EffectEditorWindow.AddEffectGroupData*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.Editor.EffectEditorWindow.FreshEffectList
+  commentId: M:MacacaGames.EffectSystem.Editor.EffectEditorWindow.FreshEffectList
+  id: FreshEffectList
+  parent: MacacaGames.EffectSystem.Editor.EffectEditorWindow
+  langs:
+  - csharp
+  - vb
+  name: FreshEffectList()
+  nameWithType: EffectEditorWindow.FreshEffectList()
+  fullName: MacacaGames.EffectSystem.Editor.EffectEditorWindow.FreshEffectList()
+  type: Method
+  source:
+    remote:
+      path: Editor/EditorWindow/EffectEditorWindow.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: FreshEffectList
+    path: ../Editor/EditorWindow/EffectEditorWindow.cs
+    startLine: 312
+  assemblies:
+  - Macaca.EffectSystem.Editor
+  namespace: MacacaGames.EffectSystem.Editor
+  syntax:
+    content: public void FreshEffectList()
+    content.vb: Public Sub FreshEffectList
+  overload: MacacaGames.EffectSystem.Editor.EffectEditorWindow.FreshEffectList*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: MacacaGames.EffectSystem.Editor
+  commentId: N:MacacaGames.EffectSystem.Editor
+  name: MacacaGames.EffectSystem.Editor
+  nameWithType: MacacaGames.EffectSystem.Editor
+  fullName: MacacaGames.EffectSystem.Editor
+- uid: MacacaGames.EffectSystem.Editor.EffectEditorWindow.AddEffectGroupData*
+  commentId: Overload:MacacaGames.EffectSystem.Editor.EffectEditorWindow.AddEffectGroupData
+  name: AddEffectGroupData
+  nameWithType: EffectEditorWindow.AddEffectGroupData
+  fullName: MacacaGames.EffectSystem.Editor.EffectEditorWindow.AddEffectGroupData
+- uid: MacacaGames.EffectSystem.EffectGroup
+  commentId: T:MacacaGames.EffectSystem.EffectGroup
+  parent: MacacaGames.EffectSystem
+  name: EffectGroup
+  nameWithType: EffectGroup
+  fullName: MacacaGames.EffectSystem.EffectGroup
+- uid: MacacaGames.EffectSystem
+  commentId: N:MacacaGames.EffectSystem
+  name: MacacaGames.EffectSystem
+  nameWithType: MacacaGames.EffectSystem
+  fullName: MacacaGames.EffectSystem
+- uid: MacacaGames.EffectSystem.Editor.EffectEditorWindow.FreshEffectList*
+  commentId: Overload:MacacaGames.EffectSystem.Editor.EffectEditorWindow.FreshEffectList
+  name: FreshEffectList
+  nameWithType: EffectEditorWindow.FreshEffectList
+  fullName: MacacaGames.EffectSystem.Editor.EffectEditorWindow.FreshEffectList

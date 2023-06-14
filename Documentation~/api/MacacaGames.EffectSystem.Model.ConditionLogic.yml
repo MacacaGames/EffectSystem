@@ -1,0 +1,250 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.Model.ConditionLogic
+  commentId: T:MacacaGames.EffectSystem.Model.ConditionLogic
+  id: ConditionLogic
+  parent: MacacaGames.EffectSystem.Model
+  children:
+  - MacacaGames.EffectSystem.Model.ConditionLogic.Equal
+  - MacacaGames.EffectSystem.Model.ConditionLogic.Greater
+  - MacacaGames.EffectSystem.Model.ConditionLogic.GreaterEqual
+  - MacacaGames.EffectSystem.Model.ConditionLogic.Less
+  - MacacaGames.EffectSystem.Model.ConditionLogic.LessEqual
+  - MacacaGames.EffectSystem.Model.ConditionLogic.None
+  langs:
+  - csharp
+  - vb
+  name: ConditionLogic
+  nameWithType: ConditionLogic
+  fullName: MacacaGames.EffectSystem.Model.ConditionLogic
+  type: Enum
+  source:
+    remote:
+      path: Model/Enums.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: ConditionLogic
+    path: ../Model/Enums.cs
+    startLine: 22
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: 'public enum ConditionLogic : int'
+    content.vb: Public Enum ConditionLogic As Integer
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: MacacaGames.EffectSystem.Model.ConditionLogic.None
+  commentId: F:MacacaGames.EffectSystem.Model.ConditionLogic.None
+  id: None
+  parent: MacacaGames.EffectSystem.Model.ConditionLogic
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: ConditionLogic.None
+  fullName: MacacaGames.EffectSystem.Model.ConditionLogic.None
+  type: Field
+  source:
+    remote:
+      path: Model/Enums.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: None
+    path: ../Model/Enums.cs
+    startLine: 24
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: None = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ConditionLogic
+    content.vb: None = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ConditionLogic.Greater
+  commentId: F:MacacaGames.EffectSystem.Model.ConditionLogic.Greater
+  id: Greater
+  parent: MacacaGames.EffectSystem.Model.ConditionLogic
+  langs:
+  - csharp
+  - vb
+  name: Greater
+  nameWithType: ConditionLogic.Greater
+  fullName: MacacaGames.EffectSystem.Model.ConditionLogic.Greater
+  type: Field
+  source:
+    remote:
+      path: Model/Enums.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Greater
+    path: ../Model/Enums.cs
+    startLine: 25
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Greater = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ConditionLogic
+    content.vb: Greater = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ConditionLogic.GreaterEqual
+  commentId: F:MacacaGames.EffectSystem.Model.ConditionLogic.GreaterEqual
+  id: GreaterEqual
+  parent: MacacaGames.EffectSystem.Model.ConditionLogic
+  langs:
+  - csharp
+  - vb
+  name: GreaterEqual
+  nameWithType: ConditionLogic.GreaterEqual
+  fullName: MacacaGames.EffectSystem.Model.ConditionLogic.GreaterEqual
+  type: Field
+  source:
+    remote:
+      path: Model/Enums.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: GreaterEqual
+    path: ../Model/Enums.cs
+    startLine: 26
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: GreaterEqual = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ConditionLogic
+    content.vb: GreaterEqual = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ConditionLogic.Equal
+  commentId: F:MacacaGames.EffectSystem.Model.ConditionLogic.Equal
+  id: Equal
+  parent: MacacaGames.EffectSystem.Model.ConditionLogic
+  langs:
+  - csharp
+  - vb
+  name: Equal
+  nameWithType: ConditionLogic.Equal
+  fullName: MacacaGames.EffectSystem.Model.ConditionLogic.Equal
+  type: Field
+  source:
+    remote:
+      path: Model/Enums.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Equal
+    path: ../Model/Enums.cs
+    startLine: 27
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Equal = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ConditionLogic
+    content.vb: Equal = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ConditionLogic.LessEqual
+  commentId: F:MacacaGames.EffectSystem.Model.ConditionLogic.LessEqual
+  id: LessEqual
+  parent: MacacaGames.EffectSystem.Model.ConditionLogic
+  langs:
+  - csharp
+  - vb
+  name: LessEqual
+  nameWithType: ConditionLogic.LessEqual
+  fullName: MacacaGames.EffectSystem.Model.ConditionLogic.LessEqual
+  type: Field
+  source:
+    remote:
+      path: Model/Enums.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: LessEqual
+    path: ../Model/Enums.cs
+    startLine: 28
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: LessEqual = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ConditionLogic
+    content.vb: LessEqual = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.ConditionLogic.Less
+  commentId: F:MacacaGames.EffectSystem.Model.ConditionLogic.Less
+  id: Less
+  parent: MacacaGames.EffectSystem.Model.ConditionLogic
+  langs:
+  - csharp
+  - vb
+  name: Less
+  nameWithType: ConditionLogic.Less
+  fullName: MacacaGames.EffectSystem.Model.ConditionLogic.Less
+  type: Field
+  source:
+    remote:
+      path: Model/Enums.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: Less
+    path: ../Model/Enums.cs
+    startLine: 29
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: Less = null
+    return:
+      type: MacacaGames.EffectSystem.Model.ConditionLogic
+    content.vb: Less = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: MacacaGames.EffectSystem.Model
+  commentId: N:MacacaGames.EffectSystem.Model
+  name: MacacaGames.EffectSystem.Model
+  nameWithType: MacacaGames.EffectSystem.Model
+  fullName: MacacaGames.EffectSystem.Model
+- uid: MacacaGames.EffectSystem.Model.ConditionLogic
+  commentId: T:MacacaGames.EffectSystem.Model.ConditionLogic
+  parent: MacacaGames.EffectSystem.Model
+  name: ConditionLogic
+  nameWithType: ConditionLogic
+  fullName: MacacaGames.EffectSystem.Model.ConditionLogic

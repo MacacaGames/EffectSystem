@@ -1,0 +1,115 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.EffectParticleManager.EffectParticleData
+  commentId: T:MacacaGames.EffectSystem.EffectParticleManager.EffectParticleData
+  id: EffectParticleManager.EffectParticleData
+  parent: MacacaGames.EffectSystem
+  children:
+  - MacacaGames.EffectSystem.EffectParticleManager.EffectParticleData.particle
+  - MacacaGames.EffectSystem.EffectParticleManager.EffectParticleData.type
+  langs:
+  - csharp
+  - vb
+  name: EffectParticleManager.EffectParticleData
+  nameWithType: EffectParticleManager.EffectParticleData
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.EffectParticleData
+  type: Struct
+  source:
+    remote:
+      path: Runtime/Component/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: EffectParticleData
+    path: ../Runtime/Component/EffectParticleManager.cs
+    startLine: 8
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public struct EffectParticleData
+    content.vb: Public Structure EffectParticleData
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: MacacaGames.EffectSystem.EffectParticleManager.EffectParticleData.type
+  commentId: F:MacacaGames.EffectSystem.EffectParticleManager.EffectParticleData.type
+  id: type
+  parent: MacacaGames.EffectSystem.EffectParticleManager.EffectParticleData
+  langs:
+  - csharp
+  - vb
+  name: type
+  nameWithType: EffectParticleManager.EffectParticleData.type
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.EffectParticleData.type
+  type: Field
+  source:
+    remote:
+      path: Runtime/Component/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: type
+    path: ../Runtime/Component/EffectParticleManager.cs
+    startLine: 11
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public string type
+    return:
+      type: System.String
+    content.vb: Public type As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.EffectSystem.EffectParticleManager.EffectParticleData.particle
+  commentId: F:MacacaGames.EffectSystem.EffectParticleManager.EffectParticleData.particle
+  id: particle
+  parent: MacacaGames.EffectSystem.EffectParticleManager.EffectParticleData
+  langs:
+  - csharp
+  - vb
+  name: particle
+  nameWithType: EffectParticleManager.EffectParticleData.particle
+  fullName: MacacaGames.EffectSystem.EffectParticleManager.EffectParticleData.particle
+  type: Field
+  source:
+    remote:
+      path: Runtime/Component/EffectParticleManager.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: particle
+    path: ../Runtime/Component/EffectParticleManager.cs
+    startLine: 12
+  assemblies:
+  - Macaca.EffectSystem
+  namespace: MacacaGames.EffectSystem
+  syntax:
+    content: public ParticleSystem particle
+    return:
+      type: ParticleSystem
+    content.vb: Public particle As ParticleSystem
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: MacacaGames.EffectSystem
+  commentId: N:MacacaGames.EffectSystem
+  name: MacacaGames.EffectSystem
+  nameWithType: MacacaGames.EffectSystem
+  fullName: MacacaGames.EffectSystem
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: ParticleSystem
+  commentId: '!:ParticleSystem'
+  isExternal: true
+  name: ParticleSystem
+  nameWithType: ParticleSystem
+  fullName: ParticleSystem

@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.Model.EffectLifeCycleLogic
+  commentId: T:MacacaGames.EffectSystem.Model.EffectLifeCycleLogic
+  id: EffectLifeCycleLogic
+  parent: MacacaGames.EffectSystem.Model
+  children:
+  - MacacaGames.EffectSystem.Model.EffectLifeCycleLogic.None
+  - MacacaGames.EffectSystem.Model.EffectLifeCycleLogic.OnlyActiveOnce
+  - MacacaGames.EffectSystem.Model.EffectLifeCycleLogic.ReactiveAfterCooldownEnd
+  langs:
+  - csharp
+  - vb
+  name: EffectLifeCycleLogic
+  nameWithType: EffectLifeCycleLogic
+  fullName: MacacaGames.EffectSystem.Model.EffectLifeCycleLogic
+  type: Enum
+  source:
+    remote:
+      path: Model/Enums.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: EffectLifeCycleLogic
+    path: ../Model/Enums.cs
+    startLine: 15
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: 'public enum EffectLifeCycleLogic : int'
+    content.vb: Public Enum EffectLifeCycleLogic As Integer
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: MacacaGames.EffectSystem.Model.EffectLifeCycleLogic.None
+  commentId: F:MacacaGames.EffectSystem.Model.EffectLifeCycleLogic.None
+  id: None
+  parent: MacacaGames.EffectSystem.Model.EffectLifeCycleLogic
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: EffectLifeCycleLogic.None
+  fullName: MacacaGames.EffectSystem.Model.EffectLifeCycleLogic.None
+  type: Field
+  source:
+    remote:
+      path: Model/Enums.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: None
+    path: ../Model/Enums.cs
+    startLine: 17
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: None = null
+    return:
+      type: MacacaGames.EffectSystem.Model.EffectLifeCycleLogic
+    content.vb: None = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.EffectLifeCycleLogic.OnlyActiveOnce
+  commentId: F:MacacaGames.EffectSystem.Model.EffectLifeCycleLogic.OnlyActiveOnce
+  id: OnlyActiveOnce
+  parent: MacacaGames.EffectSystem.Model.EffectLifeCycleLogic
+  langs:
+  - csharp
+  - vb
+  name: OnlyActiveOnce
+  nameWithType: EffectLifeCycleLogic.OnlyActiveOnce
+  fullName: MacacaGames.EffectSystem.Model.EffectLifeCycleLogic.OnlyActiveOnce
+  type: Field
+  source:
+    remote:
+      path: Model/Enums.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: OnlyActiveOnce
+    path: ../Model/Enums.cs
+    startLine: 18
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: OnlyActiveOnce = null
+    return:
+      type: MacacaGames.EffectSystem.Model.EffectLifeCycleLogic
+    content.vb: OnlyActiveOnce = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.EffectLifeCycleLogic.ReactiveAfterCooldownEnd
+  commentId: F:MacacaGames.EffectSystem.Model.EffectLifeCycleLogic.ReactiveAfterCooldownEnd
+  id: ReactiveAfterCooldownEnd
+  parent: MacacaGames.EffectSystem.Model.EffectLifeCycleLogic
+  langs:
+  - csharp
+  - vb
+  name: ReactiveAfterCooldownEnd
+  nameWithType: EffectLifeCycleLogic.ReactiveAfterCooldownEnd
+  fullName: MacacaGames.EffectSystem.Model.EffectLifeCycleLogic.ReactiveAfterCooldownEnd
+  type: Field
+  source:
+    remote:
+      path: Model/Enums.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: ReactiveAfterCooldownEnd
+    path: ../Model/Enums.cs
+    startLine: 19
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: ReactiveAfterCooldownEnd = null
+    return:
+      type: MacacaGames.EffectSystem.Model.EffectLifeCycleLogic
+    content.vb: ReactiveAfterCooldownEnd = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: MacacaGames.EffectSystem.Model
+  commentId: N:MacacaGames.EffectSystem.Model
+  name: MacacaGames.EffectSystem.Model
+  nameWithType: MacacaGames.EffectSystem.Model
+  fullName: MacacaGames.EffectSystem.Model
+- uid: MacacaGames.EffectSystem.Model.EffectLifeCycleLogic
+  commentId: T:MacacaGames.EffectSystem.Model.EffectLifeCycleLogic
+  parent: MacacaGames.EffectSystem.Model
+  name: EffectLifeCycleLogic
+  nameWithType: EffectLifeCycleLogic
+  fullName: MacacaGames.EffectSystem.Model.EffectLifeCycleLogic

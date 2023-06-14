@@ -1,0 +1,114 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.Model.TriggerTransType
+  commentId: T:MacacaGames.EffectSystem.Model.TriggerTransType
+  id: TriggerTransType
+  parent: MacacaGames.EffectSystem.Model
+  children:
+  - MacacaGames.EffectSystem.Model.TriggerTransType.CutOldOne
+  - MacacaGames.EffectSystem.Model.TriggerTransType.SkipNewOne
+  langs:
+  - csharp
+  - vb
+  name: TriggerTransType
+  nameWithType: TriggerTransType
+  fullName: MacacaGames.EffectSystem.Model.TriggerTransType
+  type: Enum
+  source:
+    remote:
+      path: Model/Enums.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: TriggerTransType
+    path: ../Model/Enums.cs
+    startLine: 9
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: 'public enum TriggerTransType : int'
+    content.vb: Public Enum TriggerTransType As Integer
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: MacacaGames.EffectSystem.Model.TriggerTransType.SkipNewOne
+  commentId: F:MacacaGames.EffectSystem.Model.TriggerTransType.SkipNewOne
+  id: SkipNewOne
+  parent: MacacaGames.EffectSystem.Model.TriggerTransType
+  langs:
+  - csharp
+  - vb
+  name: SkipNewOne
+  nameWithType: TriggerTransType.SkipNewOne
+  fullName: MacacaGames.EffectSystem.Model.TriggerTransType.SkipNewOne
+  type: Field
+  source:
+    remote:
+      path: Model/Enums.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: SkipNewOne
+    path: ../Model/Enums.cs
+    startLine: 11
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: SkipNewOne = null
+    return:
+      type: MacacaGames.EffectSystem.Model.TriggerTransType
+    content.vb: SkipNewOne = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MacacaGames.EffectSystem.Model.TriggerTransType.CutOldOne
+  commentId: F:MacacaGames.EffectSystem.Model.TriggerTransType.CutOldOne
+  id: CutOldOne
+  parent: MacacaGames.EffectSystem.Model.TriggerTransType
+  langs:
+  - csharp
+  - vb
+  name: CutOldOne
+  nameWithType: TriggerTransType.CutOldOne
+  fullName: MacacaGames.EffectSystem.Model.TriggerTransType.CutOldOne
+  type: Field
+  source:
+    remote:
+      path: Model/Enums.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: CutOldOne
+    path: ../Model/Enums.cs
+    startLine: 12
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: CutOldOne = null
+    return:
+      type: MacacaGames.EffectSystem.Model.TriggerTransType
+    content.vb: CutOldOne = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: MacacaGames.EffectSystem.Model
+  commentId: N:MacacaGames.EffectSystem.Model
+  name: MacacaGames.EffectSystem.Model
+  nameWithType: MacacaGames.EffectSystem.Model
+  fullName: MacacaGames.EffectSystem.Model
+- uid: MacacaGames.EffectSystem.Model.TriggerTransType
+  commentId: T:MacacaGames.EffectSystem.Model.TriggerTransType
+  parent: MacacaGames.EffectSystem.Model
+  name: TriggerTransType
+  nameWithType: TriggerTransType
+  fullName: MacacaGames.EffectSystem.Model.TriggerTransType

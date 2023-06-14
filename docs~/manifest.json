@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "/Users/rd03/git/infinity/ProjectInfinity.Unity/MacacaPackages/EffectSystem/.docfx_project",
+  "source_base_path": "/Users/miki/Documents/projectinfinity/ProjectInfinity.Unity/MacacaPackages/EffectSystem/.docfx_project",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -12,7 +12,31 @@
           "hash": "eGN/gQ+R79p/br61nQfV0g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.Editor.EffectEditorWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MacacaGames.EffectSystem.Editor.EffectEditorWindow.html",
+          "hash": "WgS/paxqoxMFCReXtPss1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.Editor.EffectGroupEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MacacaGames.EffectSystem.Editor.EffectGroupEditor.html",
+          "hash": "oH02PZWwX8NV9teXH8tlLw=="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -21,10 +45,22 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.EffectSystem.Editor.EffectSystemScriptBacker.html",
-          "hash": "QF55IMSAOfcmhYQ0Co/AcQ=="
+          "hash": "YCdbQULnPcieW6npo72Ecg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.Editor.EffectTemplateCreatorEditorWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MacacaGames.EffectSystem.Editor.EffectTemplateCreatorEditorWindow.html",
+          "hash": "6NI990iclaC43MMl0OiM4A=="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -33,34 +69,10 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.EffectSystem.Editor.html",
-          "hash": "8TgXr7Q2GVNb4Eh7Ii9WhQ=="
+          "hash": "MPEePN5fz03fpZfbAa9VqA=="
         }
       },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.EffectBase.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MacacaGames.EffectSystem.EffectBase.html",
-          "hash": "u4txL1g4VdVWHXS1cxt+RQ=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.EffectBaseCC.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MacacaGames.EffectSystem.EffectBaseCC.html",
-          "hash": "2mQR8FeGE1wS7TaFQh50HQ=="
-        }
-      },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -69,10 +81,10 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.EffectSystem.EffectCalculator.html",
-          "hash": "0Zx4XkvnNDUUOHq3obkxnQ=="
+          "hash": "G9iXp84xQXrlSpgJBebF5g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -81,22 +93,10 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.EffectSystem.EffectCondition.html",
-          "hash": "l4H6y7zLM8Uc4m//pVVfSA=="
+          "hash": "+QMzWuxe5Lp1vr7XsWSPyA=="
         }
       },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.EffectFilter.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MacacaGames.EffectSystem.EffectFilter.html",
-          "hash": "q6Tm864IgGudua8BrNctWw=="
-        }
-      },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -105,82 +105,34 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.EffectSystem.EffectGroup.html",
-          "hash": "1y/wUgabbJFmGGuBcVnf0g=="
+          "hash": "VyMHEjCYCW38rCM6VBzNXQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.EffectManager.EffectList.yml",
+      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.EffectInstanceBase.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MacacaGames.EffectSystem.EffectManager.EffectList.html",
-          "hash": "IMYSYUJMcOVo54lhQlbU0Q=="
+          "relative_path": "api/MacacaGames.EffectSystem.EffectInstanceBase.html",
+          "hash": "uNPIvD6dkQEyOKJi3OybRA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo.yml",
+      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.EffectParticleManager.EffectParticleData.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MacacaGames.EffectSystem.EffectManager.EffectTriggerConditionInfo.html",
-          "hash": "pw/oJcAXUJ8c24wejhUvzA=="
+          "relative_path": "api/MacacaGames.EffectSystem.EffectParticleManager.EffectParticleData.html",
+          "hash": "bjujT4gaBNQCahpeHRQwcA=="
         }
       },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.EffectManager.EffectableObjectInfo.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MacacaGames.EffectSystem.EffectManager.EffectableObjectInfo.html",
-          "hash": "YzzOZdPAJilgO/lQN8k3qA=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.EffectManager.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MacacaGames.EffectSystem.EffectManager.html",
-          "hash": "hdYODJUpiRrxN+FsQFgX6A=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.EffectParticleManager.ParticleStruct.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MacacaGames.EffectSystem.EffectParticleManager.ParticleStruct.html",
-          "hash": "6qSQ+49gCMMln9KLzaGjrw=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.EffectParticleManager.ParticleType.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MacacaGames.EffectSystem.EffectParticleManager.ParticleType.html",
-          "hash": "M37SSNtsf3aAF3eOUv+AOQ=="
-        }
-      },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -189,10 +141,46 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.EffectSystem.EffectParticleManager.html",
-          "hash": "BfnuUxa0AbL7WE341Biq6g=="
+          "hash": "6yVtS9O/U5iSgZBxt8nptg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MacacaGames.EffectSystem.EffectSystem.EffectInstanceList.html",
+          "hash": "wll2lrfoAfrX4OMWeMZS4Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.EffectSystem.EffectableObjectInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MacacaGames.EffectSystem.EffectSystem.EffectableObjectInfo.html",
+          "hash": "07xRYGuWnAAl2V/zSmGO2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.EffectSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MacacaGames.EffectSystem.EffectSystem.html",
+          "hash": "vI+dPqZ/PaXnD04BKQCdyw=="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -201,46 +189,10 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.EffectSystem.EffectSystemScriptable.ActiveCondition.html",
-          "hash": "MX2Y8r4DPxim1TAejV/2+Q=="
+          "hash": "KzhcE5pgFVFrv2qo0tkrAw=="
         }
       },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.EffectSystemScriptable.CastTarget.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MacacaGames.EffectSystem.EffectSystemScriptable.CastTarget.html",
-          "hash": "H2TCUQ/DUdN7ovtoU28nOw=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.EffectSystemScriptable.ConditionLogic.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MacacaGames.EffectSystem.EffectSystemScriptable.ConditionLogic.html",
-          "hash": "N7opAE+yYdxScc4pTGuEcg=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.EffectSystemScriptable.DamageType.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MacacaGames.EffectSystem.EffectSystemScriptable.DamageType.html",
-          "hash": "2nl0laNbFD4D12edQvwfkQ=="
-        }
-      },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -249,106 +201,22 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.EffectSystem.EffectSystemScriptable.DeactiveCondition.html",
-          "hash": "UPh7EklssMQ7JoJIsOmeow=="
+          "hash": "PrW2c8zjZO794C8p0J12XA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.EffectInfoLogic.yml",
+      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MacacaGames.EffectSystem.EffectInfoLogic.html",
-          "hash": "p5QtPzaTq6W8Vu9ik0G/PA=="
+          "relative_path": "api/MacacaGames.EffectSystem.EffectSystemScriptable.EffectInfoLogic.html",
+          "hash": "F/RvGfIfJeIXfvFtajRLnA=="
         }
       },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MacacaGames.EffectSystem.EffectSystemScriptable.EffectType.html",
-          "hash": "ekJJQ6klBrZeakmkD5PzMA=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.EffectSystemScriptable.EffectViewRoot.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MacacaGames.EffectSystem.EffectSystemScriptable.EffectViewRoot.html",
-          "hash": "Kepd6B1v6J68qLk+gRTESQ=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.EffectSystemScriptable.InputType.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MacacaGames.EffectSystem.EffectSystemScriptable.InputType.html",
-          "hash": "xvSP8LIdoxNtR+MjfoNPAg=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.EffectSystemScriptable.SkillAttackType.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MacacaGames.EffectSystem.EffectSystemScriptable.SkillAttackType.html",
-          "hash": "bD88Ly70ypbghp8ccRYxCg=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MacacaGames.EffectSystem.EffectSystemScriptable.SkillCastVfxType.html",
-          "hash": "sDY/cvuRZxEVmR6V2l6MYg=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.EffectSystemScriptable.SkillTargetVfxType.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MacacaGames.EffectSystem.EffectSystemScriptable.SkillTargetVfxType.html",
-          "hash": "Fr01qzM2hahM3HtNPAhbdA=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.EffectSystemScriptable.TriggerTransType.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MacacaGames.EffectSystem.EffectSystemScriptable.TriggerTransType.html",
-          "hash": "Dl0MoA6uMUd97d+ScVw/hw=="
-        }
-      },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -357,10 +225,10 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.EffectSystem.EffectSystemScriptable.html",
-          "hash": "V/CgMjix/D/SsEkYXAekBQ=="
+          "hash": "/NQjMjw+1shodmFgED6AuQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -369,10 +237,10 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.EffectSystem.EffectTriggerBase.html",
-          "hash": "c07K3B/MEucdraRZ4Nv9VQ=="
+          "hash": "LsGHyiJTiB8XkoBzw6apVw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -381,10 +249,10 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.EffectSystem.EffectTypeGroupAttribute.html",
-          "hash": "5yeYsg05jormzuy/YLWk4Q=="
+          "hash": "N+Y6lFoiKgzHwcv0vYmJrg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -393,10 +261,10 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.EffectSystem.EffectViewBase.html",
-          "hash": "vbPPEiEMUZe6IkLlErXyTw=="
+          "hash": "fN+xXN6tOX9FLc2kYQq1UA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -408,7 +276,7 @@
           "hash": "eDDCCPtZF+0xzx6jP5/oLA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -420,7 +288,7 @@
           "hash": "vG3/T1VRkzakXOS4cjz9tQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -429,10 +297,10 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.EffectSystem.EffectView_Particle.html",
-          "hash": "4Re+rgfUMSejP7AOzUl/Og=="
+          "hash": "7ZwIZ9F3MNjclI5XHCaf0A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -444,7 +312,7 @@
           "hash": "eDzOlQxGIg2ooArhHN859w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -453,10 +321,10 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.EffectSystem.EffectView_Scale.html",
-          "hash": "faku38REZJpsC1yvR7+YWA=="
+          "hash": "St6kRCJvwTHQ4DJWJC/Piw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -465,82 +333,10 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.EffectSystem.EffectView_StateIcon.html",
-          "hash": "bY8igAkUEF622Pmc4t3tQg=="
+          "hash": "iMFjW3pL61AFI3WZ0457hg=="
         }
       },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.ColliderTypeFormatter.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.ColliderTypeFormatter.html",
-          "hash": "iM48yQ7wfyddlr8RGiH2nw=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.ConditionRequirementFormatter.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.ConditionRequirementFormatter.html",
-          "hash": "GkRNRfAJ3eimVJn8ItLpcA=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.EffectInfoFormatter.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.EffectInfoFormatter.html",
-          "hash": "urw7As4m6ejoDl5dahCZPg=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.EffectInfo_EffectTaxonomyFormatter.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.EffectInfo_EffectTaxonomyFormatter.html",
-          "hash": "YXW0ludyoxPrxBUcDorZ7Q=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MacacaGames.EffectSystem.Formatters.MacacaGames.EffectSystem.Model.html",
-          "hash": "FrbbgZdKGJLJZkAdY1d3GQ=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.IEffectSystemData.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MacacaGames.EffectSystem.IEffectSystemData.html",
-          "hash": "HSpurv2ahAXxVTAQxAnfmQ=="
-        }
-      },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -549,10 +345,10 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.EffectSystem.IEffectableObject.html",
-          "hash": "ry/pv21oyGgefKO/JHk+oA=="
+          "hash": "leMP9jn8ZWItalMgIIowbw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -561,22 +357,22 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.EffectSystem.IStarSkillEffect.html",
-          "hash": "GkN/35rZPFc2nugmISpxZw=="
+          "hash": "m2mzCWK2RZVtSTYRWiFwqA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.Model.ColliderType.yml",
+      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.Model.ConditionLogic.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MacacaGames.EffectSystem.Model.ColliderType.html",
-          "hash": "UJ9VciQf3tzX8QtRF5lG7A=="
+          "relative_path": "api/MacacaGames.EffectSystem.Model.ConditionLogic.html",
+          "hash": "rSCqkURKA3mBZv/3YFF2pA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -585,22 +381,22 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.EffectSystem.Model.ConditionRequirement.html",
-          "hash": "Jv1giw4RJAyau2l9oa5GWA=="
+          "hash": "+C+2w5vCdiSM+1bMYZ5v9w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.Model.EffectInfo.EffectTaxonomy.yml",
+      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.Model.EffectDataProvider.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MacacaGames.EffectSystem.Model.EffectInfo.EffectTaxonomy.html",
-          "hash": "NRy3PmkwVoswws+/+Kx8Tg=="
+          "relative_path": "api/MacacaGames.EffectSystem.Model.EffectDataProvider.html",
+          "hash": "EAss9vlWGiTATh7mV4TgQw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -609,10 +405,46 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.EffectSystem.Model.EffectInfo.html",
-          "hash": "U9A25hIP/A9DyCu8seK9mQ=="
+          "hash": "U817KZb0M1mYnkXWWOi1nA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.Model.EffectLifeCycleLogic.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MacacaGames.EffectSystem.Model.EffectLifeCycleLogic.html",
+          "hash": "JziniknhIjR+fvIHtRGCbA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.Model.EffectTaxonomy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MacacaGames.EffectSystem.Model.EffectTaxonomy.html",
+          "hash": "kXD1ahREzqDg6DXDADT7Ew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo.html",
+          "hash": "wBN/QydiPt2EJL64LVFLyg=="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -621,10 +453,22 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.EffectSystem.Model.EffectViewInfo.html",
-          "hash": "mmVopTEzykHZCnj1IIE7Bg=="
+          "hash": "+ZFBretEU2z93BJF+aXkUw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.Model.TriggerTransType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MacacaGames.EffectSystem.Model.TriggerTransType.html",
+          "hash": "TM8ufPhKQlmAoiPQs/OAfA=="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -633,34 +477,10 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.EffectSystem.Model.html",
-          "hash": "X4rvujA1lFfakPBqNXvYcg=="
+          "hash": "d6UCIWmmJqwmmHv5zHK2Tw=="
         }
       },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.Resolvers.EffectSystemResolver.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MacacaGames.EffectSystem.Resolvers.EffectSystemResolver.html",
-          "hash": "dB5cvzMyJ56fPYPGq+Bd/g=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "../Documentation~/api/MacacaGames.EffectSystem.Resolvers.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MacacaGames.EffectSystem.Resolvers.html",
-          "hash": "AJeIB47zoZZomNk9tUOPGQ=="
-        }
-      },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -672,7 +492,7 @@
           "hash": "4+N8mV+H0/ve+zFaEn7cSA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -681,10 +501,10 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.EffectSystem.html",
-          "hash": "oTtN0kjF7d03+abc46mw6g=="
+          "hash": "U7C7muN9NCmwzQBO6U8UbQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -693,7 +513,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "3E3bf9+ZpquCVKAuQ6KBWA=="
+          "hash": "DMyS5FxuLI6cejnuH14X6w=="
         }
       },
       "is_incremental": false,
@@ -708,7 +528,7 @@
           "hash": "V5knL+AfaaZxl1n/rEYJ6Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -723,12 +543,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "saSrJT60HrkbuvdNa6mqmQ=="
+          "hash": "9Wn69+GRBwoxdUmaTJ9M+A=="
         }
       },
       "is_incremental": false,
@@ -761,23 +584,25 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": true,
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 2,
-          "skipped_file_count": 1
+          "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 57,
-          "skipped_file_count": 57
+          "total_file_count": 42,
+          "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
@@ -797,8 +622,8 @@
     },
     {
       "status": {
-        "can_incremental": true,
-        "details": "Can support incremental post processing.",
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
         "incrementalPhase": "postProcessing",
         "total_file_count": 0,
         "skipped_file_count": 0

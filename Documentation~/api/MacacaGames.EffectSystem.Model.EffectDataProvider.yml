@@ -1,0 +1,806 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.EffectSystem.Model.EffectDataProvider
+  commentId: T:MacacaGames.EffectSystem.Model.EffectDataProvider
+  id: EffectDataProvider
+  parent: MacacaGames.EffectSystem.Model
+  children:
+  - MacacaGames.EffectSystem.Model.EffectDataProvider.EffectTypeQuery
+  - MacacaGames.EffectSystem.Model.EffectDataProvider.GetEffectDescriptionString
+  - MacacaGames.EffectSystem.Model.EffectDataProvider.GetEffectInfo
+  - MacacaGames.EffectSystem.Model.EffectDataProvider.GetEffectViewInfo
+  - MacacaGames.EffectSystem.Model.EffectDataProvider.RegisteEffectTypeQuery(Dictionary{System.String,Type})
+  - MacacaGames.EffectSystem.Model.EffectDataProvider.SeEffectViewInfoDelegate(Func{List{System.String},List{MacacaGames.EffectSystem.Model.EffectViewInfo}})
+  - MacacaGames.EffectSystem.Model.EffectDataProvider.SetEffectDescriptionStringDelegate(Func{System.String,System.String})
+  - MacacaGames.EffectSystem.Model.EffectDataProvider.SetEffectInfoDelegate(Func{List{System.String},List{MacacaGames.EffectSystem.Model.EffectInfo}})
+  langs:
+  - csharp
+  - vb
+  name: EffectDataProvider
+  nameWithType: EffectDataProvider
+  fullName: MacacaGames.EffectSystem.Model.EffectDataProvider
+  type: Class
+  source:
+    remote:
+      path: Model/EffectDataProvider.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: EffectDataProvider
+    path: ../Model/EffectDataProvider.cs
+    startLine: 9
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: 'public static class EffectDataProvider : object'
+    content.vb: >-
+      Public Module EffectDataProvider
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: MacacaGames.EffectSystem.Model.EffectDataProvider.GetEffectInfo
+  commentId: P:MacacaGames.EffectSystem.Model.EffectDataProvider.GetEffectInfo
+  id: GetEffectInfo
+  parent: MacacaGames.EffectSystem.Model.EffectDataProvider
+  langs:
+  - csharp
+  - vb
+  name: GetEffectInfo
+  nameWithType: EffectDataProvider.GetEffectInfo
+  fullName: MacacaGames.EffectSystem.Model.EffectDataProvider.GetEffectInfo
+  type: Property
+  source:
+    remote:
+      path: Model/EffectDataProvider.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: GetEffectInfo
+    path: ../Model/EffectDataProvider.cs
+    startLine: 11
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: public static Func<List<string>, List<EffectInfo>> GetEffectInfo { get; }
+    parameters: []
+    return:
+      type: Func{List{System.String},List{MacacaGames.EffectSystem.Model.EffectInfo}}
+    content.vb: Public Shared ReadOnly Property GetEffectInfo As Func(Of List(Of String), List(Of EffectInfo))
+  overload: MacacaGames.EffectSystem.Model.EffectDataProvider.GetEffectInfo*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: MacacaGames.EffectSystem.Model.EffectDataProvider.SetEffectInfoDelegate(Func{List{System.String},List{MacacaGames.EffectSystem.Model.EffectInfo}})
+  commentId: M:MacacaGames.EffectSystem.Model.EffectDataProvider.SetEffectInfoDelegate(Func{List{System.String},List{MacacaGames.EffectSystem.Model.EffectInfo}})
+  id: SetEffectInfoDelegate(Func{List{System.String},List{MacacaGames.EffectSystem.Model.EffectInfo}})
+  parent: MacacaGames.EffectSystem.Model.EffectDataProvider
+  langs:
+  - csharp
+  - vb
+  name: SetEffectInfoDelegate(Func<List<String>, List<EffectInfo>>)
+  nameWithType: EffectDataProvider.SetEffectInfoDelegate(Func<List<String>, List<EffectInfo>>)
+  fullName: MacacaGames.EffectSystem.Model.EffectDataProvider.SetEffectInfoDelegate(Func<List<System.String>, List<MacacaGames.EffectSystem.Model.EffectInfo>>)
+  type: Method
+  source:
+    remote:
+      path: Model/EffectDataProvider.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: SetEffectInfoDelegate
+    path: ../Model/EffectDataProvider.cs
+    startLine: 13
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: public static void SetEffectInfoDelegate(Func<List<string>, List<EffectInfo>> GetEffectInfo)
+    parameters:
+    - id: GetEffectInfo
+      type: Func{List{System.String},List{MacacaGames.EffectSystem.Model.EffectInfo}}
+    content.vb: Public Shared Sub SetEffectInfoDelegate(GetEffectInfo As Func(Of List(Of String), List(Of EffectInfo)))
+  overload: MacacaGames.EffectSystem.Model.EffectDataProvider.SetEffectInfoDelegate*
+  nameWithType.vb: EffectDataProvider.SetEffectInfoDelegate(Func(Of List(Of String), List(Of EffectInfo)))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: MacacaGames.EffectSystem.Model.EffectDataProvider.SetEffectInfoDelegate(Func(Of List(Of System.String), List(Of MacacaGames.EffectSystem.Model.EffectInfo)))
+  name.vb: SetEffectInfoDelegate(Func(Of List(Of String), List(Of EffectInfo)))
+- uid: MacacaGames.EffectSystem.Model.EffectDataProvider.GetEffectViewInfo
+  commentId: P:MacacaGames.EffectSystem.Model.EffectDataProvider.GetEffectViewInfo
+  id: GetEffectViewInfo
+  parent: MacacaGames.EffectSystem.Model.EffectDataProvider
+  langs:
+  - csharp
+  - vb
+  name: GetEffectViewInfo
+  nameWithType: EffectDataProvider.GetEffectViewInfo
+  fullName: MacacaGames.EffectSystem.Model.EffectDataProvider.GetEffectViewInfo
+  type: Property
+  source:
+    remote:
+      path: Model/EffectDataProvider.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: GetEffectViewInfo
+    path: ../Model/EffectDataProvider.cs
+    startLine: 21
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  summary: "\n需要依賴外部回傳值，server、client皆須註冊。\n"
+  example: []
+  syntax:
+    content: public static Func<List<string>, List<EffectViewInfo>> GetEffectViewInfo { get; }
+    parameters: []
+    return:
+      type: Func{List{System.String},List{MacacaGames.EffectSystem.Model.EffectViewInfo}}
+    content.vb: Public Shared ReadOnly Property GetEffectViewInfo As Func(Of List(Of String), List(Of EffectViewInfo))
+  overload: MacacaGames.EffectSystem.Model.EffectDataProvider.GetEffectViewInfo*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: MacacaGames.EffectSystem.Model.EffectDataProvider.SeEffectViewInfoDelegate(Func{List{System.String},List{MacacaGames.EffectSystem.Model.EffectViewInfo}})
+  commentId: M:MacacaGames.EffectSystem.Model.EffectDataProvider.SeEffectViewInfoDelegate(Func{List{System.String},List{MacacaGames.EffectSystem.Model.EffectViewInfo}})
+  id: SeEffectViewInfoDelegate(Func{List{System.String},List{MacacaGames.EffectSystem.Model.EffectViewInfo}})
+  parent: MacacaGames.EffectSystem.Model.EffectDataProvider
+  langs:
+  - csharp
+  - vb
+  name: SeEffectViewInfoDelegate(Func<List<String>, List<EffectViewInfo>>)
+  nameWithType: EffectDataProvider.SeEffectViewInfoDelegate(Func<List<String>, List<EffectViewInfo>>)
+  fullName: MacacaGames.EffectSystem.Model.EffectDataProvider.SeEffectViewInfoDelegate(Func<List<System.String>, List<MacacaGames.EffectSystem.Model.EffectViewInfo>>)
+  type: Method
+  source:
+    remote:
+      path: Model/EffectDataProvider.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: SeEffectViewInfoDelegate
+    path: ../Model/EffectDataProvider.cs
+    startLine: 22
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: public static void SeEffectViewInfoDelegate(Func<List<string>, List<EffectViewInfo>> GetEffectViewInfo)
+    parameters:
+    - id: GetEffectViewInfo
+      type: Func{List{System.String},List{MacacaGames.EffectSystem.Model.EffectViewInfo}}
+    content.vb: Public Shared Sub SeEffectViewInfoDelegate(GetEffectViewInfo As Func(Of List(Of String), List(Of EffectViewInfo)))
+  overload: MacacaGames.EffectSystem.Model.EffectDataProvider.SeEffectViewInfoDelegate*
+  nameWithType.vb: EffectDataProvider.SeEffectViewInfoDelegate(Func(Of List(Of String), List(Of EffectViewInfo)))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: MacacaGames.EffectSystem.Model.EffectDataProvider.SeEffectViewInfoDelegate(Func(Of List(Of System.String), List(Of MacacaGames.EffectSystem.Model.EffectViewInfo)))
+  name.vb: SeEffectViewInfoDelegate(Func(Of List(Of String), List(Of EffectViewInfo)))
+- uid: MacacaGames.EffectSystem.Model.EffectDataProvider.GetEffectDescriptionString
+  commentId: P:MacacaGames.EffectSystem.Model.EffectDataProvider.GetEffectDescriptionString
+  id: GetEffectDescriptionString
+  parent: MacacaGames.EffectSystem.Model.EffectDataProvider
+  langs:
+  - csharp
+  - vb
+  name: GetEffectDescriptionString
+  nameWithType: EffectDataProvider.GetEffectDescriptionString
+  fullName: MacacaGames.EffectSystem.Model.EffectDataProvider.GetEffectDescriptionString
+  type: Property
+  source:
+    remote:
+      path: Model/EffectDataProvider.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: GetEffectDescriptionString
+    path: ../Model/EffectDataProvider.cs
+    startLine: 27
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: public static Func<string, string> GetEffectDescriptionString { get; }
+    parameters: []
+    return:
+      type: Func{System.String,System.String}
+    content.vb: Public Shared ReadOnly Property GetEffectDescriptionString As Func(Of String, String)
+  overload: MacacaGames.EffectSystem.Model.EffectDataProvider.GetEffectDescriptionString*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: MacacaGames.EffectSystem.Model.EffectDataProvider.SetEffectDescriptionStringDelegate(Func{System.String,System.String})
+  commentId: M:MacacaGames.EffectSystem.Model.EffectDataProvider.SetEffectDescriptionStringDelegate(Func{System.String,System.String})
+  id: SetEffectDescriptionStringDelegate(Func{System.String,System.String})
+  parent: MacacaGames.EffectSystem.Model.EffectDataProvider
+  langs:
+  - csharp
+  - vb
+  name: SetEffectDescriptionStringDelegate(Func<String, String>)
+  nameWithType: EffectDataProvider.SetEffectDescriptionStringDelegate(Func<String, String>)
+  fullName: MacacaGames.EffectSystem.Model.EffectDataProvider.SetEffectDescriptionStringDelegate(Func<System.String, System.String>)
+  type: Method
+  source:
+    remote:
+      path: Model/EffectDataProvider.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: SetEffectDescriptionStringDelegate
+    path: ../Model/EffectDataProvider.cs
+    startLine: 29
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: public static void SetEffectDescriptionStringDelegate(Func<string, string> GetEffectDescriptionString)
+    parameters:
+    - id: GetEffectDescriptionString
+      type: Func{System.String,System.String}
+    content.vb: Public Shared Sub SetEffectDescriptionStringDelegate(GetEffectDescriptionString As Func(Of String, String))
+  overload: MacacaGames.EffectSystem.Model.EffectDataProvider.SetEffectDescriptionStringDelegate*
+  nameWithType.vb: EffectDataProvider.SetEffectDescriptionStringDelegate(Func(Of String, String))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: MacacaGames.EffectSystem.Model.EffectDataProvider.SetEffectDescriptionStringDelegate(Func(Of System.String, System.String))
+  name.vb: SetEffectDescriptionStringDelegate(Func(Of String, String))
+- uid: MacacaGames.EffectSystem.Model.EffectDataProvider.EffectTypeQuery
+  commentId: F:MacacaGames.EffectSystem.Model.EffectDataProvider.EffectTypeQuery
+  id: EffectTypeQuery
+  parent: MacacaGames.EffectSystem.Model.EffectDataProvider
+  langs:
+  - csharp
+  - vb
+  name: EffectTypeQuery
+  nameWithType: EffectDataProvider.EffectTypeQuery
+  fullName: MacacaGames.EffectSystem.Model.EffectDataProvider.EffectTypeQuery
+  type: Field
+  source:
+    remote:
+      path: Model/EffectDataProvider.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: EffectTypeQuery
+    path: ../Model/EffectDataProvider.cs
+    startLine: 34
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: public static Dictionary<string, Type> EffectTypeQuery
+    return:
+      type: Dictionary{System.String,Type}
+    content.vb: Public Shared EffectTypeQuery As Dictionary(Of String, Type)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: MacacaGames.EffectSystem.Model.EffectDataProvider.RegisteEffectTypeQuery(Dictionary{System.String,Type})
+  commentId: M:MacacaGames.EffectSystem.Model.EffectDataProvider.RegisteEffectTypeQuery(Dictionary{System.String,Type})
+  id: RegisteEffectTypeQuery(Dictionary{System.String,Type})
+  parent: MacacaGames.EffectSystem.Model.EffectDataProvider
+  langs:
+  - csharp
+  - vb
+  name: RegisteEffectTypeQuery(Dictionary<String, Type>)
+  nameWithType: EffectDataProvider.RegisteEffectTypeQuery(Dictionary<String, Type>)
+  fullName: MacacaGames.EffectSystem.Model.EffectDataProvider.RegisteEffectTypeQuery(Dictionary<System.String, Type>)
+  type: Method
+  source:
+    remote:
+      path: Model/EffectDataProvider.cs
+      branch: main
+      repo: git@github.com:MacacaGames/EffectSystem.git
+    id: RegisteEffectTypeQuery
+    path: ../Model/EffectDataProvider.cs
+    startLine: 35
+  assemblies:
+  - Macaca.EffectSystem.Model
+  namespace: MacacaGames.EffectSystem.Model
+  syntax:
+    content: public static void RegisteEffectTypeQuery(Dictionary<string, Type> EffectTypeQuery)
+    parameters:
+    - id: EffectTypeQuery
+      type: Dictionary{System.String,Type}
+    content.vb: Public Shared Sub RegisteEffectTypeQuery(EffectTypeQuery As Dictionary(Of String, Type))
+  overload: MacacaGames.EffectSystem.Model.EffectDataProvider.RegisteEffectTypeQuery*
+  nameWithType.vb: EffectDataProvider.RegisteEffectTypeQuery(Dictionary(Of String, Type))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: MacacaGames.EffectSystem.Model.EffectDataProvider.RegisteEffectTypeQuery(Dictionary(Of System.String, Type))
+  name.vb: RegisteEffectTypeQuery(Dictionary(Of String, Type))
+references:
+- uid: MacacaGames.EffectSystem.Model
+  commentId: N:MacacaGames.EffectSystem.Model
+  name: MacacaGames.EffectSystem.Model
+  nameWithType: MacacaGames.EffectSystem.Model
+  fullName: MacacaGames.EffectSystem.Model
+- uid: MacacaGames.EffectSystem.Model.EffectDataProvider.GetEffectInfo*
+  commentId: Overload:MacacaGames.EffectSystem.Model.EffectDataProvider.GetEffectInfo
+  name: GetEffectInfo
+  nameWithType: EffectDataProvider.GetEffectInfo
+  fullName: MacacaGames.EffectSystem.Model.EffectDataProvider.GetEffectInfo
+- uid: Func{List{System.String},List{MacacaGames.EffectSystem.Model.EffectInfo}}
+  commentId: '!:Func{List{System.String},List{MacacaGames.EffectSystem.Model.EffectInfo}}'
+  definition: Func`2
+  name: Func<List<String>, List<EffectInfo>>
+  nameWithType: Func<List<String>, List<EffectInfo>>
+  fullName: Func<List<System.String>, List<MacacaGames.EffectSystem.Model.EffectInfo>>
+  nameWithType.vb: Func(Of List(Of String), List(Of EffectInfo))
+  fullName.vb: Func(Of List(Of System.String), List(Of MacacaGames.EffectSystem.Model.EffectInfo))
+  name.vb: Func(Of List(Of String), List(Of EffectInfo))
+  spec.csharp:
+  - uid: Func`2
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: MacacaGames.EffectSystem.Model.EffectInfo
+    name: EffectInfo
+    nameWithType: EffectInfo
+    fullName: MacacaGames.EffectSystem.Model.EffectInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Func`2
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: MacacaGames.EffectSystem.Model.EffectInfo
+    name: EffectInfo
+    nameWithType: EffectInfo
+    fullName: MacacaGames.EffectSystem.Model.EffectInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Func`2
+  isExternal: true
+  name: Func<, >
+  nameWithType: Func<, >
+  fullName: Func<, >
+  nameWithType.vb: Func(Of , )
+  fullName.vb: Func(Of , )
+  name.vb: Func(Of , )
+  spec.csharp:
+  - uid: Func`2
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Func`2
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MacacaGames.EffectSystem.Model.EffectDataProvider.SetEffectInfoDelegate*
+  commentId: Overload:MacacaGames.EffectSystem.Model.EffectDataProvider.SetEffectInfoDelegate
+  name: SetEffectInfoDelegate
+  nameWithType: EffectDataProvider.SetEffectInfoDelegate
+  fullName: MacacaGames.EffectSystem.Model.EffectDataProvider.SetEffectInfoDelegate
+- uid: MacacaGames.EffectSystem.Model.EffectDataProvider.GetEffectViewInfo*
+  commentId: Overload:MacacaGames.EffectSystem.Model.EffectDataProvider.GetEffectViewInfo
+  name: GetEffectViewInfo
+  nameWithType: EffectDataProvider.GetEffectViewInfo
+  fullName: MacacaGames.EffectSystem.Model.EffectDataProvider.GetEffectViewInfo
+- uid: Func{List{System.String},List{MacacaGames.EffectSystem.Model.EffectViewInfo}}
+  commentId: '!:Func{List{System.String},List{MacacaGames.EffectSystem.Model.EffectViewInfo}}'
+  definition: Func`2
+  name: Func<List<String>, List<EffectViewInfo>>
+  nameWithType: Func<List<String>, List<EffectViewInfo>>
+  fullName: Func<List<System.String>, List<MacacaGames.EffectSystem.Model.EffectViewInfo>>
+  nameWithType.vb: Func(Of List(Of String), List(Of EffectViewInfo))
+  fullName.vb: Func(Of List(Of System.String), List(Of MacacaGames.EffectSystem.Model.EffectViewInfo))
+  name.vb: Func(Of List(Of String), List(Of EffectViewInfo))
+  spec.csharp:
+  - uid: Func`2
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: MacacaGames.EffectSystem.Model.EffectViewInfo
+    name: EffectViewInfo
+    nameWithType: EffectViewInfo
+    fullName: MacacaGames.EffectSystem.Model.EffectViewInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Func`2
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: MacacaGames.EffectSystem.Model.EffectViewInfo
+    name: EffectViewInfo
+    nameWithType: EffectViewInfo
+    fullName: MacacaGames.EffectSystem.Model.EffectViewInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MacacaGames.EffectSystem.Model.EffectDataProvider.SeEffectViewInfoDelegate*
+  commentId: Overload:MacacaGames.EffectSystem.Model.EffectDataProvider.SeEffectViewInfoDelegate
+  name: SeEffectViewInfoDelegate
+  nameWithType: EffectDataProvider.SeEffectViewInfoDelegate
+  fullName: MacacaGames.EffectSystem.Model.EffectDataProvider.SeEffectViewInfoDelegate
+- uid: MacacaGames.EffectSystem.Model.EffectDataProvider.GetEffectDescriptionString*
+  commentId: Overload:MacacaGames.EffectSystem.Model.EffectDataProvider.GetEffectDescriptionString
+  name: GetEffectDescriptionString
+  nameWithType: EffectDataProvider.GetEffectDescriptionString
+  fullName: MacacaGames.EffectSystem.Model.EffectDataProvider.GetEffectDescriptionString
+- uid: Func{System.String,System.String}
+  commentId: '!:Func{System.String,System.String}'
+  definition: Func`2
+  name: Func<String, String>
+  nameWithType: Func<String, String>
+  fullName: Func<System.String, System.String>
+  nameWithType.vb: Func(Of String, String)
+  fullName.vb: Func(Of System.String, System.String)
+  name.vb: Func(Of String, String)
+  spec.csharp:
+  - uid: Func`2
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Func`2
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MacacaGames.EffectSystem.Model.EffectDataProvider.SetEffectDescriptionStringDelegate*
+  commentId: Overload:MacacaGames.EffectSystem.Model.EffectDataProvider.SetEffectDescriptionStringDelegate
+  name: SetEffectDescriptionStringDelegate
+  nameWithType: EffectDataProvider.SetEffectDescriptionStringDelegate
+  fullName: MacacaGames.EffectSystem.Model.EffectDataProvider.SetEffectDescriptionStringDelegate
+- uid: Dictionary{System.String,Type}
+  commentId: '!:Dictionary{System.String,Type}'
+  definition: Dictionary`2
+  name: Dictionary<String, Type>
+  nameWithType: Dictionary<String, Type>
+  fullName: Dictionary<System.String, Type>
+  nameWithType.vb: Dictionary(Of String, Type)
+  fullName.vb: Dictionary(Of System.String, Type)
+  name.vb: Dictionary(Of String, Type)
+  spec.csharp:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Type
+    name: Type
+    nameWithType: Type
+    fullName: Type
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Type
+    name: Type
+    nameWithType: Type
+    fullName: Type
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dictionary`2
+  isExternal: true
+  name: Dictionary<, >
+  nameWithType: Dictionary<, >
+  fullName: Dictionary<, >
+  nameWithType.vb: Dictionary(Of , )
+  fullName.vb: Dictionary(Of , )
+  name.vb: Dictionary(Of , )
+  spec.csharp:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MacacaGames.EffectSystem.Model.EffectDataProvider.RegisteEffectTypeQuery*
+  commentId: Overload:MacacaGames.EffectSystem.Model.EffectDataProvider.RegisteEffectTypeQuery
+  name: RegisteEffectTypeQuery
+  nameWithType: EffectDataProvider.RegisteEffectTypeQuery
+  fullName: MacacaGames.EffectSystem.Model.EffectDataProvider.RegisteEffectTypeQuery
