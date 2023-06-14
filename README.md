@@ -59,6 +59,9 @@ Deactive(Deactive) --CD Checking--> Active(Active)
 Deactive(Deactive) --EffectSystem.CleanEffectableObject--> End(End)
 ```
 
+## EffectDataProvider
+
+
 ## EffectType
 EffectType is the basic unit to define a feature during the runtime, for instance AddAtk, AddAtkByRatio, Blocking etc.
 
@@ -434,6 +437,7 @@ var result = GetEffectSum( target, "ATK_Constant"); // third add call
 
 #### Condition  
 Condition is summary of the following parameter: 
+
 | Field                    | Data Type | Description                                                      |
 | ------------------------ | --------- | ---------------------------------------------------------------- |
 | activeCondition          | string    | The active trigger timing of condition                           |
@@ -456,7 +460,7 @@ AddRequestedEffects(target, effectAddAtkSmall); // first add call
 
 class MyCharacter: IEffectableObject {
     void DoAttack(){
-        // All the effectInstance on 'this' object which activeCondition == "ConditionOnAttack" will try to active
+        // All the Effect Instance on 'this' object which activeCondition == "ConditionOnAttack" will try to active
         // as the result the effect with id "TriggerEffect_Sample" will be active
         EffectSystem.Instace.EffectTriggerCondition("ConditionOnAttack", this);
     }
@@ -469,7 +473,7 @@ class MyCharacter: IEffectableObject {
     void DoAttack(IEffectableObject enemy){
         // All the effectInstance on 'this' object which activeCondition == "ConditionOnAttack" will try to active
         // as the result the effect with id "TriggerEffect_Sample" will be active
-        EffectSystem.Instace.EffectTriggerCondition("ConditionOnAttack", this,enemy);
+        EffectSystem.Instace.EffectTriggerCondition("ConditionOnAttack", this, enemy);
     }
 }
 
@@ -529,18 +533,19 @@ The temmlate use the key word to detect which part in the template should be rep
 - Use `.` to access the member in the EffectInfo, the `.` can continue with the key follow the table
 - Use `subinfo` or  `>` to access the EffectInfo in subinfo
 
-| Key                 | Description                                            |
-| ------------------- | ------------------------------------------------------ |
-| value               | use the `value` member in the EffectInfo               |
-| val                 | same as value but simplified                           |
-| maintainTime        | use the `maintainTime` member in the EffectInfo        |
-| time                | same as `maintainTime` but simplified                  |
-| cooldownTime        | use the `cooldownTime` member in the EffectInfo        |
-| cd                  | same as `cooldownTime` but simplified                  |
-| activeProbability   | use the `activeProbability` member in the EffectInfo   |
-| activeProb          | same as `activeProbability` but simplified             |
-| deactiveProbability | use the `deactiveProbability` member in the EffectInfo |
-| deactiveProb        | same as `deactiveProbability` but simplified           |
+| Key                 | Description                                                                                |
+| ------------------- | ------------------------------------------------------------------------------------------ |
+| value               | use the `value` member in the EffectInfo                                                   |
+| val                 | same as value but simplified                                                               |
+| maintainTime        | use the `maintainTime` member in the EffectInfo                                            |
+| time                | same as `maintainTime` but simplified                                                      |
+| cooldownTime        | use the `cooldownTime` member in the EffectInfo                                            |
+| cd                  | same as `cooldownTime` but simplified                                                      |
+| activeProbability   | use the `activeProbability` member in the EffectInfo                                       |
+| activeProb          | same as `activeProbability` but simplified                                                 |
+| deactiveProbability | use the `deactiveProbability` member in the EffectInfo                                     |
+| deactiveProb        | same as `deactiveProbability` but simplified                                               |
+| :%                  | The value will be display as percentage, the value will *100 first and then display as oo% |
 
 ## Default Description
 It is recommand to make Default Description for all EffectType
@@ -576,13 +581,61 @@ var result = EffectSystem.Instance.GetDefaultEffectDescription(effect_sample_01)
 
 // Or provide multiple EffectInfo, the system will auto combine all Description line by line
 var result = EffectSystem.Instance.GetDefaultEffectDescription(new []{effect_sample_01, effect_sample_02});
-/* result will be 
+/* 
+result will be 
 
 Deal extra 123 damage to enemies with full HP.
 Reduce 999 damage taken.
+*/
+```
+
+A more complicated example
+```csharp
+var effect_sample_01 = new EffectInfo{
+    id: "effect_sample_01",
+    type: "Trigger_Attach",
+    value: 0,
+    subInfoIds:new []{"effect_sample_subinfo_01"}
+};
+
+var effect_sample_02 = new EffectInfo{
+    id: "effect_sample_02",
+    type: "Atk_Ratio",
+    maintainTime: 4.5,
+    value: 999
+};
+
+// This case the `effect_sample_01` has subInfos, so we need to registe the EffectDataProvider, the subInfo is query during runtime
+var effect_sample_subinfo_01 = new EffectInfo{
+    id: "effect_sample_subinfo_01",
+    type: "Trigger_HitSelf_Constant",
+    value: 555
+};
+
+var effects = new []{effect_sample_01, effect_sample_02, effect_sample_subinfo_01};
+EffectDataProvider.SetEffectInfoDelegate(
+    (List<string> effectIds) =>
+    {
+        return effects.Where(m => effectIds.Contains(m.id)).ToList();
+    }
+);
+
+var myTemplate = @"Deal extra {Effect_Trigger_Attach>Effect_Trigger_HitSelf_Constant.value} damage to enemies with 50% or less HP.
+Increase {Effect_Atk_Ratio.value} Attack for {Effect_Atk_Ratio.time} seconds after killing an enemy.";
+
+// Or provide multiple EffectInfo, the system will auto combine all Description line by line
+// The subInfo is resolve in runtime, so only send the root EffectInfos
+var result = EffectSystem.Instance.GetCustomEffectsDescription(myTemplate, new []{effect_sample_01, effect_sample_02});
+/* 
+result will be 
+
+Deal extra 555 damage to enemies with 50% or less HP.
+Increase 999 Attack for 4.5 seconds after killing an enemy.
+*/
 ```
 
 > It is always recommended to use `EffectSystem.Instance.GetCustomEffectsDescription()` to generate a `human-kindly` Description 
+> 
 > But the `EffectSystem.Instance.GetDefaultEffectDescription()` provide a simple way to automatically generate at least a `human-readable` Description
 
 # Effect View
