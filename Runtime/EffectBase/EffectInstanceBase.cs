@@ -8,7 +8,7 @@ using MacacaGames.EffectSystem.Model;
 
 namespace MacacaGames.EffectSystem
 {
-    public abstract class EffectBase
+    public abstract class EffectInstanceBase
     {
         protected EffectSystem effectSystem => EffectSystem.Instance;
         public float input
@@ -21,7 +21,7 @@ namespace MacacaGames.EffectSystem
 
         public EffectInfo info;
         public EffectCondition condition;
-        public EffectSystem.EffectList effectList => effectSystem.GetEffectListByType(owner, info.type);
+        public EffectSystem.EffectInstanceList effectList => effectSystem.GetEffectListByType(owner, info.type);
 
         public bool isPooled;
         public bool isActive => condition?.isActive ?? false;
@@ -87,13 +87,25 @@ namespace MacacaGames.EffectSystem
             OnStart();
 
         }
-        /// <summary>當Effect被附加時執行</summary>
+
+        /// <summary>
+        /// Excude when an Effect is attach
+        /// </summary>
         protected virtual void OnStart() { }
 
+        /// <summary>
+        /// Excude when an Effect is Active by ActiveCondition
+        /// </summary>
+        /// <param name="triggerConditionInfo"></param>
         public virtual void OnActive(EffectTriggerConditionInfo triggerConditionInfo)
         {
             ExecuteActive(triggerConditionInfo);
         }
+
+        /// <summary>
+        /// Excude when an Effect is Deactive DctiveCondition
+        /// </summary>
+        /// <param name="triggerConditionInfo"></param>
         public virtual void OnDeactive(EffectTriggerConditionInfo triggerConditionInfo)
         {
             ExecuteDeactive(triggerConditionInfo);
@@ -122,7 +134,7 @@ namespace MacacaGames.EffectSystem
 
 
             //(Flag)Deactive時自動銷毀 >> 不再啟動
-            if (info.logic == EffectInfoLogic.OnlyActiveOnce)
+            if (info.logic == EffectLifeCycleLogic.OnlyActiveOnce)
             {
                 SetSleep();
             }
@@ -162,7 +174,10 @@ namespace MacacaGames.EffectSystem
         /// <summary>當Effect被消除時執行</summary>
         protected virtual void OnEnd() { }
 
-        public virtual void OnCooldownEnd()
+        /// <summary>
+        /// Excude when the colddown is finish
+        /// </summary>
+        public virtual void OnColdownEnd()
         {
             foreach (var effectView in effectViewList)
                 effectView.OnColdDownEnd();
@@ -201,12 +216,13 @@ namespace MacacaGames.EffectSystem
             }
             return false;
         }
+
         public void RemoveEffect()
         {
             effectSystem.RemoveEffect(owner, this);
         }
 
-        static void AddEffectView(EffectBase effect)
+        static void AddEffectView(EffectInstanceBase effect)
         {
             if (effect.info.viewInfos == null || effect.info.viewInfos.Count == 0)
                 return;
@@ -220,7 +236,7 @@ namespace MacacaGames.EffectSystem
                 effect.effectViewList.Add(effectView);
             }
         }
-        static void RemoveEffectView(EffectBase effect)
+        static void RemoveEffectView(EffectInstanceBase effect)
         {
             foreach (var effectView in effect.effectViewList)
             {

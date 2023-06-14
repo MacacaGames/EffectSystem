@@ -10,14 +10,14 @@ namespace MacacaGames.EffectSystem
     public class EffectCondition
     {
 
-        public EffectBase effectInstance;
+        public EffectInstanceBase effectInstance;
 
         EffectInfo effectInfo => effectInstance.info;
 
 
         public bool isActive { get; private set; }
 
-        public EffectCondition(EffectBase effectInstance)
+        public EffectCondition(EffectInstanceBase effectInstance)
         {
             this.effectInstance = effectInstance;
             isActive = false;
@@ -112,7 +112,7 @@ namespace MacacaGames.EffectSystem
                     owner = effectInstance.owner
                 });
 
-                if (effectInfo.logic == EffectInfoLogic.OnlyActiveOnce)
+                if (effectInfo.logic == EffectLifeCycleLogic.OnlyActiveOnce)
                 {
                     effectInstance.RemoveEffect();
                 }
@@ -163,8 +163,8 @@ namespace MacacaGames.EffectSystem
             if (effectInstance.RemoveSleepyEffect())
                 return;
 
-            effectInstance.OnCooldownEnd();
-            if (effectInfo.logic == EffectInfoLogic.ReactiveAfterCooldownEnd)
+            effectInstance.OnColdownEnd();
+            if (effectInfo.logic == EffectLifeCycleLogic.ReactiveAfterCooldownEnd)
             {
                 OnActive(new EffectTriggerConditionInfo
                 {
@@ -239,7 +239,7 @@ namespace MacacaGames.EffectSystem
         Coroutine maintainTimeCoroutine = null;
         void StartActiveMaintainTime()
         {
-            float currentMaintainTime = effectInfo.activeMaintainTime;
+            float currentMaintainTime = effectInfo.maintainTime;
 
             if (currentMaintainTime > 0F)
             {

@@ -5,7 +5,7 @@ using MacacaGames.EffectSystem.Model;
 namespace MacacaGames.EffectSystem
 {
     [EffectTypeGroup("Trigger")]
-    public abstract class EffectTriggerBase : EffectBase
+    public abstract class EffectTriggerBase : EffectInstanceBase
     {
         public override void OnActive(EffectTriggerConditionInfo condidionInfo)
         {

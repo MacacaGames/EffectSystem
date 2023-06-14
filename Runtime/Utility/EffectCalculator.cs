@@ -39,18 +39,18 @@ namespace MacacaGames.EffectSystem
         }
 
         /// <summary>加總合併同Kindom的Effect值，用EffectList加總。</summary>
-        public Dictionary<EffectInfo, EffectSystem.EffectList> GetEffectTypeKingdomValues_EffectList(params IEnumerable<EffectInfo>[] effectInfoGroups)
+        public Dictionary<EffectInfo, EffectSystem.EffectInstanceList> GetEffectTypeKingdomValues_EffectList(params IEnumerable<EffectInfo>[] effectInfoGroups)
         {
             List<EffectInfo> effectInfos = effectInfoGroups.SelectMany(_ => _).ToList();
 
-            Dictionary<EffectInfo, EffectSystem.EffectList> typeGroup = new Dictionary<EffectInfo, EffectSystem.EffectList>();
+            Dictionary<EffectInfo, EffectSystem.EffectInstanceList> typeGroup = new Dictionary<EffectInfo, EffectSystem.EffectInstanceList>();
 
             foreach (var info in effectInfos)
             {
                 int typeKingdomHash = info.GetTypeKingdom().GetHashCode();
                 if (typeGroup.Keys.Select(_ => _.GetTypeKingdom().GetHashCode()).Contains(typeKingdomHash) == false)
                 {
-                    typeGroup.Add(info.GetTypeKingdom(), new EffectSystem.EffectList(info.type));
+                    typeGroup.Add(info.GetTypeKingdom(), new EffectSystem.EffectInstanceList(info.type));
                 }
 
                 var key = typeGroup.Keys.Single(_ => _.GetTypeKingdom().GetHashCode() == typeKingdomHash);

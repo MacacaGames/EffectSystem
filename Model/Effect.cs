@@ -23,9 +23,9 @@ namespace MacacaGames.EffectSystem.Model
         public TriggerTransType triggerTransType;
         public float activeProbability; // Active、Deacitve機率，0-100
         public float deactiveProbability;
-        public float activeMaintainTime; // 就規格
+        public float maintainTime;
         public int cooldownTime;
-        public EffectInfoLogic logic;
+        public EffectLifeCycleLogic logic;
         public string colliderType;
         public List<string> subInfoIds;
         public Dictionary<string, string> parameters;
@@ -102,7 +102,7 @@ namespace MacacaGames.EffectSystem.Model
                 triggerTransType = triggerTransType,
                 deactiveCondition = deactiveCondition,
                 cooldownTime = cooldownTime,
-                activeMaintainTime = activeMaintainTime,
+                maintainTime = maintainTime,
             };
         }
 
@@ -143,7 +143,8 @@ namespace MacacaGames.EffectSystem.Model
         }
     }
 
-    [MessagePack.MessagePackObject(true)][Serializable]
+    [MessagePack.MessagePackObject(true)]
+    [Serializable]
     public struct ConditionRequirement
     {
         public string id;
@@ -185,13 +186,15 @@ namespace MacacaGames.EffectSystem.Model
         }
     }
 
-    /// <summary>觸發EffectTrigger時，用來傳遞資料的結構。</summary>
+    /// <summary>
+    /// The data context for doing a trigger active
+    /// </summary>
     public struct EffectTriggerConditionInfo
     {
         public IEffectableObject owner;     //Effect的Owner
         public IEffectableObject target;    //Effect的Target
 
-        public EffectTriggerConditionInfo(IEffectableObject owner, IEffectableObject target = null, int param = 0)
+        public EffectTriggerConditionInfo(IEffectableObject owner, IEffectableObject target = null)
         {
             this.owner = owner;
             this.target = target;

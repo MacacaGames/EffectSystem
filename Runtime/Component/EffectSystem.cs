@@ -49,9 +49,9 @@ namespace MacacaGames.EffectSystem
 
         public static EffectCalculator calculator = new EffectCalculator();
 
-        public class EffectList : ICollection<EffectBase>
+        public class EffectInstanceList : ICollection<EffectInstanceBase>
         {
-            private List<EffectBase> effects = new List<EffectBase>();
+            private List<EffectInstanceBase> effects = new List<EffectInstanceBase>();
 
             public int Count => effects.Count;
 
@@ -60,19 +60,19 @@ namespace MacacaGames.EffectSystem
             public float sumLimitMax { get; private set; }
             public float sumLimitMin { get; private set; }
 
-            public void Add(EffectBase effect)
+            public void Add(EffectInstanceBase effect)
             {
                 effects.Add(effect);
                 SetDirty(true);
             }
-            public bool Remove(EffectBase effect)
+            public bool Remove(EffectInstanceBase effect)
             {
                 bool result = effects.Remove(effect);
                 SetDirty(true);
                 return result;
             }
 
-            public EffectList(string effectType)
+            public EffectInstanceList(string effectType)
             {
                 var effect = calculator.GetLimit(effectType);
 
@@ -120,7 +120,7 @@ namespace MacacaGames.EffectSystem
 
             public bool IsReadOnly => false;
 
-            public IEnumerator<EffectBase> GetEnumerator()
+            public IEnumerator<EffectInstanceBase> GetEnumerator()
             {
                 for (int i = 0; i < effects.Count; i++)
                     yield return effects[i];
@@ -136,12 +136,12 @@ namespace MacacaGames.EffectSystem
                 effects.Clear();
             }
 
-            public bool Contains(EffectBase item)
+            public bool Contains(EffectInstanceBase item)
             {
                 return effects.Contains(item);
             }
 
-            public void CopyTo(EffectBase[] array, int arrayIndex)
+            public void CopyTo(EffectInstanceBase[] array, int arrayIndex)
             {
                 effects.CopyTo(array, arrayIndex);
             }
@@ -149,7 +149,7 @@ namespace MacacaGames.EffectSystem
 
         public class EffectableObjectInfo
         {
-            public Dictionary<string, EffectList> effectLists = new Dictionary<string, EffectList>();
+            public Dictionary<string, EffectInstanceList> effectLists = new Dictionary<string, EffectInstanceList>();
             public Dictionary<string, Action<EffectTriggerConditionInfo>> activeCondition = new Dictionary<string, Action<EffectTriggerConditionInfo>>();
             public Dictionary<string, Action<EffectTriggerConditionInfo>> deactiveCondition = new Dictionary<string, Action<EffectTriggerConditionInfo>>();
         }
@@ -201,7 +201,7 @@ namespace MacacaGames.EffectSystem
             {
                 var key = keys[i];
                 var effectList = GetEffectList(owner)[key];
-                foreach (EffectBase effect in effectList)
+                foreach (EffectInstanceBase effect in effectList)
                 {
                     effect.UpdateEffectCondition(delta);
                 }
@@ -212,7 +212,7 @@ namespace MacacaGames.EffectSystem
         {
             foreach (var effectList in GetEffectList(owner).Values)
             {
-                foreach (EffectBase effect in effectList)
+                foreach (EffectInstanceBase effect in effectList)
                 {
                     effect.ResetActiveTime();
                     effect.ResetColdDownTime();
@@ -281,8 +281,13 @@ namespace MacacaGames.EffectSystem
             effectableObjectQuery = new Dictionary<IEffectableObject, EffectableObjectInfo>();
         }
 
-        ///<summary>觸發指定類別的條件Trigger。</summary>
-        public void EffectTriggerCondition(IEffectableObject owner, string condition, EffectTriggerConditionInfo info)
+        /// <summary>
+        /// Trigger a condition
+        /// </summary>
+        /// <param name="owner">The target object to apply the trigger</param>
+        /// <param name="condition">The condition</param>
+        /// <param name="info">The info of a Trigger</param>
+        public void EffectTriggerCondition(string condition, IEffectableObject owner, EffectTriggerConditionInfo info)
         {
             if (effectableObjectQuery.TryGetValue(owner, out EffectableObjectInfo ownerInfo))
             {
@@ -297,7 +302,18 @@ namespace MacacaGames.EffectSystem
             }
         }
 
-        public void RegistEffectTriggerCondition(EffectBase effect)
+        /// <summary>
+        /// Trigger a condition
+        /// </summary>
+        /// <param name="owner">The target object to apply the trigger</param>
+        /// <param name="condition">The condition</param>
+        /// <param name="target">The target to apply a effect, for instance a effect trigger by A object by the effect should apply to B object as target</param>
+        public void EffectTriggerCondition(string condition, IEffectableObject owner, IEffectableObject target = null)
+        {
+            EffectTriggerCondition(condition, owner, new EffectTriggerConditionInfo(owner, target));
+        }
+
+        public void RegistEffectTriggerCondition(EffectInstanceBase effect)
         {
             //ActiveCondition
             string activeCondition = effect.info.activeCondition;
@@ -324,7 +340,7 @@ namespace MacacaGames.EffectSystem
             deactiveConditionList[deactiveCondition] += effect.condition.OnDeactive;
         }
 
-        public void UnregistEffectTriggerCondition(EffectBase effect)
+        public void UnregistEffectTriggerCondition(EffectInstanceBase effect)
         {
             EffectableObjectInfo effectableObjectInfo = effectableObjectQuery[effect.owner];
 
@@ -363,17 +379,17 @@ namespace MacacaGames.EffectSystem
         #region EffectPool
 
         //EffectPool <EffectSystemScriptable.EffectType, EffectBase>
-        static Dictionary<string, Queue<EffectBase>> effectPoolQuery = new Dictionary<string, Queue<EffectBase>>();
+        static Dictionary<string, Queue<EffectInstanceBase>> effectPoolQuery = new Dictionary<string, Queue<EffectInstanceBase>>();
 
-        static EffectBase RequestEffect(string type)
+        static EffectInstanceBase RequestEffect(string type)
         {
 #if (USE_POOL)
-            Queue<EffectBase> q = null;
-            if (effectPoolQuery.TryGetValue(type, out Queue<EffectBase> qResult))
+            Queue<EffectInstanceBase> q = null;
+            if (effectPoolQuery.TryGetValue(type, out Queue<EffectInstanceBase> qResult))
             {
                 if (qResult == null)
                 {
-                    q = new Queue<EffectBase>();
+                    q = new Queue<EffectInstanceBase>();
                     effectPoolQuery[type] = q;
                 }
                 else
@@ -383,15 +399,15 @@ namespace MacacaGames.EffectSystem
             }
             else
             {
-                q = new Queue<EffectBase>();
+                q = new Queue<EffectInstanceBase>();
                 effectPoolQuery.Add(type, q);
             }
 
-            EffectBase effect = null;
+            EffectInstanceBase effect = null;
             if (q.Count == 0)
             {
                 //pool沒有東西的話就生出來，並標記為pooled
-                effect = Activator.CreateInstance(QueryEffectTypeWithDefault(type)) as EffectBase;
+                effect = Activator.CreateInstance(QueryEffectTypeWithDefault(type)) as EffectInstanceBase;
                 effect.isPooled = true;
             }
             else
@@ -406,10 +422,10 @@ namespace MacacaGames.EffectSystem
 #endif
         }
 
-        public static EffectBase RequestEffect(EffectInfo info)
+        public static EffectInstanceBase RequestEffect(EffectInfo info)
         {
 #if (USE_POOL)
-            EffectBase effect = RequestEffect(info.type);
+            EffectInstanceBase effect = RequestEffect(info.type);
             effect.Reset(info);
 
             //effect = SetLevel(effect, info.level);
@@ -420,7 +436,7 @@ namespace MacacaGames.EffectSystem
 #endif
         }
 
-        public static void RecoveryEffectBase(EffectBase effect, string type)
+        public static void RecoveryEffectBase(EffectInstanceBase effect, string type)
         {
 #if (USE_POOL)
 
@@ -441,11 +457,11 @@ namespace MacacaGames.EffectSystem
         #region 創造Effect實體
 
         ///<summary>創造一個Effect實體。</summary>
-        static EffectBase CreateEffect(string type)
+        static EffectInstanceBase CreateEffect(string type)
         {
-            EffectBase effect;
+            EffectInstanceBase effect;
 
-            effect = Activator.CreateInstance(QueryEffectTypeWithDefault(type)) as EffectBase;
+            effect = Activator.CreateInstance(QueryEffectTypeWithDefault(type)) as EffectInstanceBase;
 
             effect.info = new EffectInfo
             {
@@ -458,9 +474,9 @@ namespace MacacaGames.EffectSystem
         }
 
         ///<summary>創造一個Effect實體，且有指定的Info。</summary>
-        public static EffectBase CreateEffect(EffectInfo info)
+        public static EffectInstanceBase CreateEffect(EffectInfo info)
         {
-            EffectBase effect = CreateEffect(info.type);
+            EffectInstanceBase effect = CreateEffect(info.type);
             effect.info = info;
 
             // effect = SetLevel(effect, info.inputBase);
@@ -633,7 +649,7 @@ namespace MacacaGames.EffectSystem
                     }
                     else if (p == "maintainTime" || p == "time")
                     {
-                        return currentInfo.activeMaintainTime;
+                        return currentInfo.maintainTime;
                     }
                     else if (p == "cooldownTime" || p == "cd")
                     {
@@ -747,20 +763,20 @@ namespace MacacaGames.EffectSystem
         #region EffectList相關
 
         ///<summary>取得指定Owner的EffectList。</summary>
-        Dictionary<string, EffectList> GetEffectList(IEffectableObject owner)
+        Dictionary<string, EffectInstanceList> GetEffectList(IEffectableObject owner)
         {
             return GetEffectableObjectInfo(owner).effectLists;
         }
 
         ///<summary>取得指定Owner的指定EffectType的EffectList。</summary>
-        public EffectList GetEffectListByType(IEffectableObject owner, string effectType)
+        public EffectInstanceList GetEffectListByType(IEffectableObject owner, string effectType)
         {
             var effectQuery = GetEffectList(owner);
 
             //若Dictionary中沒有東西則新增EffectList
             if (!effectQuery.ContainsKey(effectType))
             {
-                EffectList effectList = new EffectList(effectType);
+                EffectInstanceList effectList = new EffectInstanceList(effectType);
                 effectQuery.Add(effectType, effectList);
             }
             return effectQuery[effectType];
@@ -770,7 +786,12 @@ namespace MacacaGames.EffectSystem
 
         #region 取得Effect的Value總和
 
-        ///<summary>取得指定EffectType的Value總和。</summary>
+        /// <summary>
+        /// Get the sum value of the EffectType on an IEffectableObject
+        /// </summary>
+        /// <param name="target">The target IEffectableObject</param>
+        /// <param name="effectType">The EffectType</param>
+        /// <returns></returns>
         public float GetEffectSum(IEffectableObject target, string effectType)
         {
             var effectQuery = GetEffectList(target);
@@ -795,6 +816,26 @@ namespace MacacaGames.EffectSystem
 
         #region 附加Effect
 
+        /// <summary>
+        /// Add one or more Effect(s) to an IEffectableObject
+        /// will do the ApprovedAddEffect checking before the effect is added
+        /// </summary>
+        /// <param name="owner">The target obejct would like to add the Effect</param>
+        /// <param name="effectInfos">The EffectInfos you would like to add the the owner</param>
+        /// <param name="tags">Add the tags on the EffectInstance which is add on this requrest, it is very helpful to manage the Effect Instance, </param>
+        public void AddRequestedEffects(IEffectableObject owner, IEnumerable<EffectInfo> effectInfos, params string[] tags)
+        {
+            if (effectInfos == null)
+            {
+                Debug.LogError("[Effect] AddRequestedEffects, Effects為null");
+                return;
+            }
+            foreach (var effectStruct in effectInfos)
+            {
+                AddRequestedEffect(owner, effectStruct, tags);
+            }
+        }
+
         ///<summary>附加指定的Effect實體，從物件池拿。</summary>
         public void AddRequestedEffect(IEffectableObject owner, EffectInfo effectInfo, params string[] tags)
         {
@@ -804,14 +845,12 @@ namespace MacacaGames.EffectSystem
             if (owner.ApprovedAddEffect(effectInfo) == false)
                 return;
 
-            EffectBase effect = RequestEffect(effectInfo);
-            EffectList effectList = GetEffectListByType(owner, effectInfo.type);
+            EffectInstanceBase effect = RequestEffect(effectInfo);
+            EffectInstanceList effectList = GetEffectListByType(owner, effectInfo.type);
 
             if (effectList.GetSum() < effect.maxEffectValue)
             {
                 effect.owner = owner;
-                // SetLevel(effect, effectInfo.inputBase);
-
                 if (tags != null)
                 {
                     foreach (var tag in tags)
@@ -826,32 +865,36 @@ namespace MacacaGames.EffectSystem
             else
             {
                 RecoveryEffectBase(effect, effectInfo.type);
-                //Debug.Log($"{owner}:{effectInfo.type} 當前值已達上限({effectList.GetSum()}/{effect.maxEffectValue})");
             }
-
 #if (UNITY_EDITOR)
-
             OnEffectChange?.Invoke();   //Callback
-
 #endif
-
         }
 
-        ///<summary>附加複數指定的Effect實體，從物件池拿。</summary>
-        public void AddRequestedEffects(IEffectableObject owner, IEnumerable<EffectInfo> effectInfos, params string[] tags)
+        /// <summary>
+        /// Add one or more Effect(s) to an IEffectableObject
+        /// will do the ApprovedAddEffect checking before the effect is added
+        /// Difference between AddRequestedEffect is this method always create new Instance
+        /// </summary>
+        /// <param name="owner">The target obejct would like to add the Effect</param>
+        /// <param name="effectInfos">The EffectInfos you would like to add the the owner</param>
+        /// <param name="tags">Add the tags on the EffectInstance which is add on this requrest, it is very helpful to manage the Effect Instance, </param>
+        [Obsolete("Use the AddRequestedEffect instead, AddRequestedEffect will manage the Effect Instance by object pool, it is better for performance")]
+        public void AddEffects(IEffectableObject owner, IEnumerable<EffectInfo> effectInfos, params string[] tags)
         {
-            if (effectInfos == null)
-            {
-                Debug.LogError("[Effect] AddRequestedEffects, Effects為null");
-                return;
-            }
             foreach (var effectStruct in effectInfos)
-            {
-                AddRequestedEffect(owner, effectStruct, tags);
-            }
+                AddEffect(owner, effectStruct, tags);
         }
 
-        ///<summary>附加指定的Effect實體。</summary>
+        /// <summary>
+        /// Add one or more Effect(s) to an IEffectableObject
+        /// will do the ApprovedAddEffect checking before the effect is added
+        /// Difference between AddRequestedEffect is this method always create new Instance
+        /// </summary>
+        /// <param name="owner">The target obejct would like to add the Effect</param>
+        /// <param name="effectInfos">The EffectInfos you would like to add the the owner</param>
+        /// <param name="tags">Add the tags on the EffectInstance which is add on this requrest, it is very helpful to manage the Effect Instance, </param>
+        [Obsolete("Use the AddRequestedEffect instead, AddRequestedEffect will manage the Effect Instance by object pool, it is better for performance")]
         public void AddEffect(IEffectableObject owner, EffectInfo effectInfo, params string[] tags)
         {
             if (owner.IsAlive() == false)
@@ -863,8 +906,8 @@ namespace MacacaGames.EffectSystem
             if (owner.ApprovedAddEffect(effectInfo) == false)
                 return;
 
-            EffectBase effect = CreateEffect(effectInfo);
-            EffectList effectList = GetEffectListByType(owner, effectInfo.type);
+            EffectInstanceBase effect = CreateEffect(effectInfo);
+            EffectInstanceList effectList = GetEffectListByType(owner, effectInfo.type);
 
             if (effectList.GetSum() < effect.maxEffectValue)
             {
@@ -892,17 +935,10 @@ namespace MacacaGames.EffectSystem
             OnEffectChange?.Invoke();   //Callback
 
 #endif
-
         }
 
-        ///<summary>附加複數指定的Effect實體。</summary>
-        public void AddEffects(IEffectableObject owner, IEnumerable<EffectInfo> effectInfos, params string[] tags)
-        {
-            foreach (var effectStruct in effectInfos)
-                AddEffect(owner, effectStruct, tags);
-        }
 
-        void AddTag(EffectBase effect, string tag)
+        void AddTag(EffectInstanceBase effect, string tag)
         {
             if (string.IsNullOrEmpty(tag) == false)
                 effect.tags.Add(tag);
@@ -932,7 +968,7 @@ namespace MacacaGames.EffectSystem
         public void RemoveEffectsByType(IEffectableObject owner, string effectType)
         {
             var effectQuery = GetEffectList(owner);
-            if (effectQuery.TryGetValue(effectType, out EffectList effectList))
+            if (effectQuery.TryGetValue(effectType, out EffectInstanceList effectList))
             {
                 foreach (var item in effectList.ToArray())
                 {
@@ -943,11 +979,11 @@ namespace MacacaGames.EffectSystem
         }
 
         ///<summary>移除指定Effect實體。</summary>
-        public void RemoveEffect(IEffectableObject owner, EffectBase effect)
+        public void RemoveEffect(IEffectableObject owner, EffectInstanceBase effect)
         {
             var effectQuery = GetEffectList(owner);
 
-            if (effectQuery.TryGetValue(effect.info.type, out EffectList effectList))
+            if (effectQuery.TryGetValue(effect.info.type, out EffectInstanceList effectList))
             {
                 effect.End();
                 effectList.Remove(effect);
@@ -972,9 +1008,9 @@ namespace MacacaGames.EffectSystem
 
         #region 查詢Effect
         ///<summary>搜尋包含特定Tag的Effect。</summary>
-        public List<EffectBase> GetEffectsByTag(IEffectableObject owner, string tag)
+        public List<EffectInstanceBase> GetEffectsByTag(IEffectableObject owner, string tag)
         {
-            List<EffectBase> effects = new List<EffectBase>();
+            List<EffectInstanceBase> effects = new List<EffectInstanceBase>();
             var effectQuery = GetEffectList(owner);
             foreach (var effectList in effectQuery.Values)
             {
@@ -990,9 +1026,9 @@ namespace MacacaGames.EffectSystem
             return effects;
         }
 
-        public List<EffectBase> GetEffectsByType(IEffectableObject owner, string type, bool onlyGetActive = false)
+        public List<EffectInstanceBase> GetEffectsByType(IEffectableObject owner, string type, bool onlyGetActive = false)
         {
-            List<EffectBase> effects = new List<EffectBase>();
+            List<EffectInstanceBase> effects = new List<EffectInstanceBase>();
             var effectQuery = GetEffectList(owner);
             foreach (var effectList in effectQuery.Values)
             {
@@ -1014,7 +1050,7 @@ namespace MacacaGames.EffectSystem
 #if (UNITY_EDITOR)
 
         //Editor階段可以在外部取得EffectQuery
-        public Dictionary<string, EffectList> GetEffectQuery(IEffectableObject owner)
+        public Dictionary<string, EffectInstanceList> GetEffectQuery(IEffectableObject owner)
         {
             if (owner == null)
                 return null;

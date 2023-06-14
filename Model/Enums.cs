@@ -13,12 +13,11 @@ namespace MacacaGames.EffectSystem.Model
         CutOldOne = 1,
     }
 
-    public enum EffectInfoLogic
+    public enum EffectLifeCycleLogic
     {
         None = 0,
         OnlyActiveOnce = 1,
         ReactiveAfterCooldownEnd = 2,
-        DestroyAfterMaintainTimeEnd = 3,
     }
 
     public enum ConditionLogic
@@ -30,6 +29,7 @@ namespace MacacaGames.EffectSystem.Model
         LessEqual = 4,
         Less = 5
     }
+
     public enum EffectTaxonomy
     {
         Info = 0, Domain = 101, Kingdom = 102,

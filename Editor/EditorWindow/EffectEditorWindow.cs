@@ -252,7 +252,7 @@ namespace MacacaGames.EffectSystem.Editor
             AddEffects(effectGroup.effects, groupName);
         }
 
-        VisualElement GetEffectElement(EffectBase effect)
+        VisualElement GetEffectElement(EffectInstanceBase effect)
         {
             VisualElement root = new VisualElement().AddClass("effect-element");
             root.style.flexDirection = new StyleEnum<FlexDirection>(FlexDirection.Row);
@@ -309,7 +309,7 @@ namespace MacacaGames.EffectSystem.Editor
             return root;
         }
 
-        Dictionary<EffectBase, VisualElement> effectElementQuery = new Dictionary<EffectBase, VisualElement>();
+        Dictionary<EffectInstanceBase, VisualElement> effectElementQuery = new Dictionary<EffectInstanceBase, VisualElement>();
         public void FreshEffectList()
         {
             if (effectSystem == null)
@@ -322,7 +322,7 @@ namespace MacacaGames.EffectSystem.Editor
             ClearEffectList();
 
             effectsRoot = new VisualElement();
-            effectElementQuery = new Dictionary<EffectBase, VisualElement>();
+            effectElementQuery = new Dictionary<EffectInstanceBase, VisualElement>();
 
             var list = effectSystem.GetEffectQuery(currentSelectIEffectableObjectowner);
             if (list != null)

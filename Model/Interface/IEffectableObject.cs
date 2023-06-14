@@ -5,8 +5,12 @@ namespace MacacaGames.EffectSystem
 {
     public interface IEffectableObject
     {
+        /// <summary>
+        /// Get the display name of an IEffectableObject
+        /// Not really required, but very helpful when debugging
+        /// </summary>
+        /// <returns></returns>
         string GetDisplayName();
-        void DestoryEffectableObject();
 
         Transform GetEffectViewParent(string viewRoot);
 
@@ -17,9 +21,19 @@ namespace MacacaGames.EffectSystem
         /// <returns>If false, then system automatically reject a add effect request</returns>
         bool ApprovedAddEffect(EffectInfo info);
 
+        /// <summary>
+        /// Fire once when an Effect Instance is Active
+        /// </summary>
+        /// <param name="info"></param>
         void OnEffectActive(EffectInfo info);
 
+        /// <summary>
+        /// Fire once when an Effect Instance is DeActive
+        /// </summary>
+        /// <param name="info"></param>
         void OnEffectDeactive(EffectInfo info);
+
+        // void OnEffectConditionActive(string condition, EffectTriggerConditionInfo info);
 
         bool IsAlive();
 
@@ -32,5 +46,6 @@ namespace MacacaGames.EffectSystem
         /// <returns></returns>
         float GetRuntimeValue(string parameterKey);
 
+        void DestoryEffectableObject();
     }
 }

@@ -66,9 +66,9 @@ namespace MacacaGames.EffectSystem
 
             if (countTime == CountTime.MaintainTime)
             {
-                if (info.activeMaintainTime > 0F)
+                if (info.maintainTime > 0F)
                 {
-                    displayTimeCoroutine = StartCoroutine(DisplayTimeProgress(info.activeMaintainTime));
+                    displayTimeCoroutine = StartCoroutine(DisplayTimeProgress(info.maintainTime));
                 }
                 else
                 {
@@ -86,7 +86,7 @@ namespace MacacaGames.EffectSystem
 
             if (countTime == CountTime.MaintainTime)
             {
-                if (info.activeMaintainTime > 0F)
+                if (info.maintainTime > 0F)
                 {
                     if (displayTimeCoroutine != null)
                     {
