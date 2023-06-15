@@ -151,7 +151,7 @@
     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectSystem_effectViewPool.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectSystem.effectViewPool%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L224">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L223">View Source</a>
   </span>
   <h4 id="MacacaGames_EffectSystem_EffectSystem_effectViewPool" data-uid="MacacaGames.EffectSystem.EffectSystem.effectViewPool">effectViewPool</h4>
   <div class="markdown level1 summary"></div>
@@ -211,7 +211,7 @@
     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectSystem_AddEffect_MacacaGames_EffectSystem_IEffectableObject_MacacaGames_EffectSystem_Model_EffectInfo_System_String___.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectSystem.AddEffect(MacacaGames.EffectSystem.IEffectableObject%2CMacacaGames.EffectSystem.Model.EffectInfo%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L897">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L923">View Source</a>
   </span>
   <a id="MacacaGames_EffectSystem_EffectSystem_AddEffect_" data-uid="MacacaGames.EffectSystem.EffectSystem.AddEffect*"></a>
   <h4 id="MacacaGames_EffectSystem_EffectSystem_AddEffect_MacacaGames_EffectSystem_IEffectableObject_MacacaGames_EffectSystem_Model_EffectInfo_System_String___" data-uid="MacacaGames.EffectSystem.EffectSystem.AddEffect(MacacaGames.EffectSystem.IEffectableObject,MacacaGames.EffectSystem.Model.EffectInfo,System.String[])">AddEffect(IEffectableObject, EffectInfo, String[])</h4>
@@ -222,7 +222,7 @@ Difference between AddRequestedEffect is this method always create new Instance<
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void AddEffect(IEffectableObject owner, EffectInfo effectInfo, params string[] tags)</code></pre>
+    <pre><code class="lang-csharp hljs">public EffectInstanceBase AddEffect(IEffectableObject owner, EffectInfo effectInfo, params string[] tags)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -253,12 +253,27 @@ Difference between AddRequestedEffect is this method always create new Instance<
       </tr>
     </tbody>
   </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.EffectInstanceBase.html">EffectInstanceBase</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectSystem_AddEffects_MacacaGames_EffectSystem_IEffectableObject_IEnumerable_MacacaGames_EffectSystem_Model_EffectInfo__System_String___.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectSystem.AddEffects(MacacaGames.EffectSystem.IEffectableObject%2CIEnumerable%7BMacacaGames.EffectSystem.Model.EffectInfo%7D%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L882">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L904">View Source</a>
   </span>
   <a id="MacacaGames_EffectSystem_EffectSystem_AddEffects_" data-uid="MacacaGames.EffectSystem.EffectSystem.AddEffects*"></a>
   <h4 id="MacacaGames_EffectSystem_EffectSystem_AddEffects_MacacaGames_EffectSystem_IEffectableObject_IEnumerable_MacacaGames_EffectSystem_Model_EffectInfo__System_String___" data-uid="MacacaGames.EffectSystem.EffectSystem.AddEffects(MacacaGames.EffectSystem.IEffectableObject,IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo},System.String[])">AddEffects(IEffectableObject, IEnumerable&lt;EffectInfo&gt;, String[])</h4>
@@ -269,7 +284,7 @@ Difference between AddRequestedEffect is this method always create new Instance<
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void AddEffects(IEffectableObject owner, IEnumerable&lt;EffectInfo&gt; effectInfos, params string[] tags)</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;EffectInstanceBase&gt; AddEffects(IEffectableObject owner, IEnumerable&lt;EffectInfo&gt; effectInfos, params string[] tags)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -301,12 +316,27 @@ Difference between AddRequestedEffect is this method always create new Instance<
       </tr>
     </tbody>
   </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">List</span>&lt;<a class="xref" href="MacacaGames.EffectSystem.EffectInstanceBase.html">EffectInstanceBase</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectSystem_AddRequestedEffect_MacacaGames_EffectSystem_IEffectableObject_MacacaGames_EffectSystem_Model_EffectInfo_System_String___.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectSystem.AddRequestedEffect(MacacaGames.EffectSystem.IEffectableObject%2CMacacaGames.EffectSystem.Model.EffectInfo%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L840">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L860">View Source</a>
   </span>
   <a id="MacacaGames_EffectSystem_EffectSystem_AddRequestedEffect_" data-uid="MacacaGames.EffectSystem.EffectSystem.AddRequestedEffect*"></a>
   <h4 id="MacacaGames_EffectSystem_EffectSystem_AddRequestedEffect_MacacaGames_EffectSystem_IEffectableObject_MacacaGames_EffectSystem_Model_EffectInfo_System_String___" data-uid="MacacaGames.EffectSystem.EffectSystem.AddRequestedEffect(MacacaGames.EffectSystem.IEffectableObject,MacacaGames.EffectSystem.Model.EffectInfo,System.String[])">AddRequestedEffect(IEffectableObject, EffectInfo, String[])</h4>
@@ -315,7 +345,7 @@ Difference between AddRequestedEffect is this method always create new Instance<
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void AddRequestedEffect(IEffectableObject owner, EffectInfo effectInfo, params string[] tags)</code></pre>
+    <pre><code class="lang-csharp hljs">public EffectInstanceBase AddRequestedEffect(IEffectableObject owner, EffectInfo effectInfo, params string[] tags)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -344,12 +374,27 @@ Difference between AddRequestedEffect is this method always create new Instance<
       </tr>
     </tbody>
   </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.EffectInstanceBase.html">EffectInstanceBase</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectSystem_AddRequestedEffects_MacacaGames_EffectSystem_IEffectableObject_IEnumerable_MacacaGames_EffectSystem_Model_EffectInfo__System_String___.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectSystem.AddRequestedEffects(MacacaGames.EffectSystem.IEffectableObject%2CIEnumerable%7BMacacaGames.EffectSystem.Model.EffectInfo%7D%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L826">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L844">View Source</a>
   </span>
   <a id="MacacaGames_EffectSystem_EffectSystem_AddRequestedEffects_" data-uid="MacacaGames.EffectSystem.EffectSystem.AddRequestedEffects*"></a>
   <h4 id="MacacaGames_EffectSystem_EffectSystem_AddRequestedEffects_MacacaGames_EffectSystem_IEffectableObject_IEnumerable_MacacaGames_EffectSystem_Model_EffectInfo__System_String___" data-uid="MacacaGames.EffectSystem.EffectSystem.AddRequestedEffects(MacacaGames.EffectSystem.IEffectableObject,IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo},System.String[])">AddRequestedEffects(IEffectableObject, IEnumerable&lt;EffectInfo&gt;, String[])</h4>
@@ -359,7 +404,7 @@ will do the ApprovedAddEffect checking before the effect is added</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void AddRequestedEffects(IEffectableObject owner, IEnumerable&lt;EffectInfo&gt; effectInfos, params string[] tags)</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;EffectInstanceBase&gt; AddRequestedEffects(IEffectableObject owner, IEnumerable&lt;EffectInfo&gt; effectInfos, params string[] tags)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -388,6 +433,83 @@ will do the ApprovedAddEffect checking before the effect is added</p>
         <td><span class="parametername">tags</span></td>
         <td><p>Add the tags on the EffectInstance which is add on this requrest, it is very helpful to manage the Effect Instance,</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">List</span>&lt;<a class="xref" href="MacacaGames.EffectSystem.EffectInstanceBase.html">EffectInstanceBase</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectSystem_AddRequestedEffects_MacacaGames_EffectSystem_IEffectableObject_MacacaGames_EffectSystem_EffectGroup_System_String___.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectSystem.AddRequestedEffects(MacacaGames.EffectSystem.IEffectableObject%2CMacacaGames.EffectSystem.EffectGroup%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L832">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectSystem_AddRequestedEffects_" data-uid="MacacaGames.EffectSystem.EffectSystem.AddRequestedEffects*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectSystem_AddRequestedEffects_MacacaGames_EffectSystem_IEffectableObject_MacacaGames_EffectSystem_EffectGroup_System_String___" data-uid="MacacaGames.EffectSystem.EffectSystem.AddRequestedEffects(MacacaGames.EffectSystem.IEffectableObject,MacacaGames.EffectSystem.EffectGroup,System.String[])">AddRequestedEffects(IEffectableObject, EffectGroup, String[])</h4>
+  <div class="markdown level1 summary"><p>Add one or more Effect(s) to an IEffectableObject
+will do the ApprovedAddEffect checking before the effect is added</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;EffectInstanceBase&gt; AddRequestedEffects(IEffectableObject owner, EffectGroup effectGroup, params string[] tags)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.IEffectableObject.html">IEffectableObject</a></td>
+        <td><span class="parametername">owner</span></td>
+        <td><p>The target obejct would like to add the Effect</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.EffectGroup.html">EffectGroup</a></td>
+        <td><span class="parametername">effectGroup</span></td>
+        <td><p>The EffectGroup you would like to add the the owner</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">tags</span></td>
+        <td><p>Add the tags on the EffectInstance which is add on this requrest, it is very helpful to manage the Effect Instance,</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">List</span>&lt;<a class="xref" href="MacacaGames.EffectSystem.EffectInstanceBase.html">EffectInstanceBase</a>&gt;</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -429,7 +551,7 @@ will do the ApprovedAddEffect checking before the effect is added</p>
     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectSystem_CreateEffect_MacacaGames_EffectSystem_Model_EffectInfo_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectSystem.CreateEffect(MacacaGames.EffectSystem.Model.EffectInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L477">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L476">View Source</a>
   </span>
   <a id="MacacaGames_EffectSystem_EffectSystem_CreateEffect_" data-uid="MacacaGames.EffectSystem.EffectSystem.CreateEffect*"></a>
   <h4 id="MacacaGames_EffectSystem_EffectSystem_CreateEffect_MacacaGames_EffectSystem_Model_EffectInfo_" data-uid="MacacaGames.EffectSystem.EffectSystem.CreateEffect(MacacaGames.EffectSystem.Model.EffectInfo)">CreateEffect(EffectInfo)</h4>
@@ -477,7 +599,7 @@ will do the ApprovedAddEffect checking before the effect is added</p>
     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectSystem_EffectTriggerCondition_System_String_MacacaGames_EffectSystem_IEffectableObject_MacacaGames_EffectSystem_IEffectableObject_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectSystem.EffectTriggerCondition(System.String%2CMacacaGames.EffectSystem.IEffectableObject%2CMacacaGames.EffectSystem.IEffectableObject)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L311">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L310">View Source</a>
   </span>
   <a id="MacacaGames_EffectSystem_EffectSystem_EffectTriggerCondition_" data-uid="MacacaGames.EffectSystem.EffectSystem.EffectTriggerCondition*"></a>
   <h4 id="MacacaGames_EffectSystem_EffectSystem_EffectTriggerCondition_System_String_MacacaGames_EffectSystem_IEffectableObject_MacacaGames_EffectSystem_IEffectableObject_" data-uid="MacacaGames.EffectSystem.EffectSystem.EffectTriggerCondition(System.String,MacacaGames.EffectSystem.IEffectableObject,MacacaGames.EffectSystem.IEffectableObject)">EffectTriggerCondition(String, IEffectableObject, IEffectableObject)</h4>
@@ -523,7 +645,7 @@ will do the ApprovedAddEffect checking before the effect is added</p>
     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectSystem_EffectTriggerCondition_System_String_MacacaGames_EffectSystem_IEffectableObject_MacacaGames_EffectSystem_Model_EffectTriggerConditionInfo_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectSystem.EffectTriggerCondition(System.String%2CMacacaGames.EffectSystem.IEffectableObject%2CMacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L290">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L289">View Source</a>
   </span>
   <a id="MacacaGames_EffectSystem_EffectSystem_EffectTriggerCondition_" data-uid="MacacaGames.EffectSystem.EffectSystem.EffectTriggerCondition*"></a>
   <h4 id="MacacaGames_EffectSystem_EffectSystem_EffectTriggerCondition_System_String_MacacaGames_EffectSystem_IEffectableObject_MacacaGames_EffectSystem_Model_EffectTriggerConditionInfo_" data-uid="MacacaGames.EffectSystem.EffectSystem.EffectTriggerCondition(System.String,MacacaGames.EffectSystem.IEffectableObject,MacacaGames.EffectSystem.Model.EffectTriggerConditionInfo)">EffectTriggerCondition(String, IEffectableObject, EffectTriggerConditionInfo)</h4>
@@ -569,7 +691,7 @@ will do the ApprovedAddEffect checking before the effect is added</p>
     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectSystem_GetColorNumberDescription_System_String_Color_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectSystem.GetColorNumberDescription(System.String%2CColor)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L757">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L764">View Source</a>
   </span>
   <a id="MacacaGames_EffectSystem_EffectSystem_GetColorNumberDescription_" data-uid="MacacaGames.EffectSystem.EffectSystem.GetColorNumberDescription*"></a>
   <h4 id="MacacaGames_EffectSystem_EffectSystem_GetColorNumberDescription_System_String_Color_" data-uid="MacacaGames.EffectSystem.EffectSystem.GetColorNumberDescription(System.String,Color)">GetColorNumberDescription(String, Color)</h4>
@@ -621,7 +743,7 @@ will do the ApprovedAddEffect checking before the effect is added</p>
     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectSystem_GetColorNumberDescription_System_String_System_String_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectSystem.GetColorNumberDescription(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L743">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L750">View Source</a>
   </span>
   <a id="MacacaGames_EffectSystem_EffectSystem_GetColorNumberDescription_" data-uid="MacacaGames.EffectSystem.EffectSystem.GetColorNumberDescription*"></a>
   <h4 id="MacacaGames_EffectSystem_EffectSystem_GetColorNumberDescription_System_String_System_String_" data-uid="MacacaGames.EffectSystem.EffectSystem.GetColorNumberDescription(System.String,System.String)">GetColorNumberDescription(String, String)</h4>
@@ -673,7 +795,7 @@ will do the ApprovedAddEffect checking before the effect is added</p>
     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectSystem_GetCustomEffectsDescription_System_String_IEnumerable_MacacaGames_EffectSystem_Model_EffectInfo__.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectSystem.GetCustomEffectsDescription(System.String%2CIEnumerable%7BMacacaGames.EffectSystem.Model.EffectInfo%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L529">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L537">View Source</a>
   </span>
   <a id="MacacaGames_EffectSystem_EffectSystem_GetCustomEffectsDescription_" data-uid="MacacaGames.EffectSystem.EffectSystem.GetCustomEffectsDescription*"></a>
   <h4 id="MacacaGames_EffectSystem_EffectSystem_GetCustomEffectsDescription_System_String_IEnumerable_MacacaGames_EffectSystem_Model_EffectInfo__" data-uid="MacacaGames.EffectSystem.EffectSystem.GetCustomEffectsDescription(System.String,IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo})">GetCustomEffectsDescription(String, IEnumerable&lt;EffectInfo&gt;)</h4>
@@ -722,10 +844,62 @@ will do the ApprovedAddEffect checking before the effect is added</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectSystem_GetCustomEffectsDescription_System_String_MacacaGames_EffectSystem_EffectGroup_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectSystem.GetCustomEffectsDescription(System.String%2CMacacaGames.EffectSystem.EffectGroup)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L532">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectSystem_GetCustomEffectsDescription_" data-uid="MacacaGames.EffectSystem.EffectSystem.GetCustomEffectsDescription*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectSystem_GetCustomEffectsDescription_System_String_MacacaGames_EffectSystem_EffectGroup_" data-uid="MacacaGames.EffectSystem.EffectSystem.GetCustomEffectsDescription(System.String,MacacaGames.EffectSystem.EffectGroup)">GetCustomEffectsDescription(String, EffectGroup)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetCustomEffectsDescription(string str, EffectGroup effectGroups)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.EffectGroup.html">EffectGroup</a></td>
+        <td><span class="parametername">effectGroups</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectSystem_GetDefaultEffectDescription_MacacaGames_EffectSystem_Model_EffectInfo_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectDescription(MacacaGames.EffectSystem.Model.EffectInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L513">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L516">View Source</a>
   </span>
   <a id="MacacaGames_EffectSystem_EffectSystem_GetDefaultEffectDescription_" data-uid="MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectDescription*"></a>
   <h4 id="MacacaGames_EffectSystem_EffectSystem_GetDefaultEffectDescription_MacacaGames_EffectSystem_Model_EffectInfo_" data-uid="MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectDescription(MacacaGames.EffectSystem.Model.EffectInfo)">GetDefaultEffectDescription(EffectInfo)</h4>
@@ -773,7 +947,7 @@ will do the ApprovedAddEffect checking before the effect is added</p>
     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectSystem_GetDefaultEffectsDescription_IEnumerable_MacacaGames_EffectSystem_Model_EffectInfo__.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectsDescription(IEnumerable%7BMacacaGames.EffectSystem.Model.EffectInfo%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L498">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L501">View Source</a>
   </span>
   <a id="MacacaGames_EffectSystem_EffectSystem_GetDefaultEffectsDescription_" data-uid="MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectsDescription*"></a>
   <h4 id="MacacaGames_EffectSystem_EffectSystem_GetDefaultEffectsDescription_IEnumerable_MacacaGames_EffectSystem_Model_EffectInfo__" data-uid="MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectsDescription(IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo})">GetDefaultEffectsDescription(IEnumerable&lt;EffectInfo&gt;)</h4>
@@ -817,10 +991,57 @@ will do the ApprovedAddEffect checking before the effect is added</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectSystem_GetDefaultEffectsDescription_MacacaGames_EffectSystem_EffectGroup_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectsDescription(MacacaGames.EffectSystem.EffectGroup)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L496">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectSystem_GetDefaultEffectsDescription_" data-uid="MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectsDescription*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectSystem_GetDefaultEffectsDescription_MacacaGames_EffectSystem_EffectGroup_" data-uid="MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectsDescription(MacacaGames.EffectSystem.EffectGroup)">GetDefaultEffectsDescription(EffectGroup)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetDefaultEffectsDescription(EffectGroup effectGroup)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.EffectGroup.html">EffectGroup</a></td>
+        <td><span class="parametername">effectGroup</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectSystem_GetDefaultEffectsDescriptions_IEnumerable_MacacaGames_EffectSystem_Model_EffectInfo__.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectsDescriptions(IEnumerable%7BMacacaGames.EffectSystem.Model.EffectInfo%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L503">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L506">View Source</a>
   </span>
   <a id="MacacaGames_EffectSystem_EffectSystem_GetDefaultEffectsDescriptions_" data-uid="MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectsDescriptions*"></a>
   <h4 id="MacacaGames_EffectSystem_EffectSystem_GetDefaultEffectsDescriptions_IEnumerable_MacacaGames_EffectSystem_Model_EffectInfo__" data-uid="MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectsDescriptions(IEnumerable{MacacaGames.EffectSystem.Model.EffectInfo})">GetDefaultEffectsDescriptions(IEnumerable&lt;EffectInfo&gt;)</h4>
@@ -897,7 +1118,7 @@ will do the ApprovedAddEffect checking before the effect is added</p>
     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectSystem_GetEffectListByType_MacacaGames_EffectSystem_IEffectableObject_System_String_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectSystem.GetEffectListByType(MacacaGames.EffectSystem.IEffectableObject%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L772">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L779">View Source</a>
   </span>
   <a id="MacacaGames_EffectSystem_EffectSystem_GetEffectListByType_" data-uid="MacacaGames.EffectSystem.EffectSystem.GetEffectListByType*"></a>
   <h4 id="MacacaGames_EffectSystem_EffectSystem_GetEffectListByType_MacacaGames_EffectSystem_IEffectableObject_System_String_" data-uid="MacacaGames.EffectSystem.EffectSystem.GetEffectListByType(MacacaGames.EffectSystem.IEffectableObject,System.String)">GetEffectListByType(IEffectableObject, String)</h4>
@@ -950,11 +1171,11 @@ will do the ApprovedAddEffect checking before the effect is added</p>
     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectSystem_GetEffectsByTag_MacacaGames_EffectSystem_IEffectableObject_System_String_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectSystem.GetEffectsByTag(MacacaGames.EffectSystem.IEffectableObject%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L1011">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L1052">View Source</a>
   </span>
   <a id="MacacaGames_EffectSystem_EffectSystem_GetEffectsByTag_" data-uid="MacacaGames.EffectSystem.EffectSystem.GetEffectsByTag*"></a>
   <h4 id="MacacaGames_EffectSystem_EffectSystem_GetEffectsByTag_MacacaGames_EffectSystem_IEffectableObject_System_String_" data-uid="MacacaGames.EffectSystem.EffectSystem.GetEffectsByTag(MacacaGames.EffectSystem.IEffectableObject,System.String)">GetEffectsByTag(IEffectableObject, String)</h4>
-  <div class="markdown level1 summary"><p>搜尋包含特定Tag的Effect。</p>
+  <div class="markdown level1 summary"><p>Get Effect Instance by tag</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -974,7 +1195,8 @@ will do the ApprovedAddEffect checking before the effect is added</p>
       <tr>
         <td><a class="xref" href="MacacaGames.EffectSystem.IEffectableObject.html">IEffectableObject</a></td>
         <td><span class="parametername">owner</span></td>
-        <td></td>
+        <td><p>The target IEffectableObject</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
@@ -1003,11 +1225,12 @@ will do the ApprovedAddEffect checking before the effect is added</p>
     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectSystem_GetEffectsByType_MacacaGames_EffectSystem_IEffectableObject_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectSystem.GetEffectsByType(MacacaGames.EffectSystem.IEffectableObject%2CSystem.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L1029">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L1075">View Source</a>
   </span>
   <a id="MacacaGames_EffectSystem_EffectSystem_GetEffectsByType_" data-uid="MacacaGames.EffectSystem.EffectSystem.GetEffectsByType*"></a>
   <h4 id="MacacaGames_EffectSystem_EffectSystem_GetEffectsByType_MacacaGames_EffectSystem_IEffectableObject_System_String_System_Boolean_" data-uid="MacacaGames.EffectSystem.EffectSystem.GetEffectsByType(MacacaGames.EffectSystem.IEffectableObject,System.String,System.Boolean)">GetEffectsByType(IEffectableObject, String, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Get Effect Instance by type</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1026,7 +1249,8 @@ will do the ApprovedAddEffect checking before the effect is added</p>
       <tr>
         <td><a class="xref" href="MacacaGames.EffectSystem.IEffectableObject.html">IEffectableObject</a></td>
         <td><span class="parametername">owner</span></td>
-        <td></td>
+        <td><p>The target IEffectableObject</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
@@ -1060,7 +1284,7 @@ will do the ApprovedAddEffect checking before the effect is added</p>
     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectSystem_GetEffectsSum_MacacaGames_EffectSystem_IEffectableObject_System_String___.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectSystem.GetEffectsSum(MacacaGames.EffectSystem.IEffectableObject%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L805">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L812">View Source</a>
   </span>
   <a id="MacacaGames_EffectSystem_EffectSystem_GetEffectsSum_" data-uid="MacacaGames.EffectSystem.EffectSystem.GetEffectsSum*"></a>
   <h4 id="MacacaGames_EffectSystem_EffectSystem_GetEffectsSum_MacacaGames_EffectSystem_IEffectableObject_System_String___" data-uid="MacacaGames.EffectSystem.EffectSystem.GetEffectsSum(MacacaGames.EffectSystem.IEffectableObject,System.String[])">GetEffectsSum(IEffectableObject, String[])</h4>
@@ -1113,7 +1337,7 @@ will do the ApprovedAddEffect checking before the effect is added</p>
     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectSystem_GetEffectSum_MacacaGames_EffectSystem_IEffectableObject_System_String_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectSystem.GetEffectSum(MacacaGames.EffectSystem.IEffectableObject%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L795">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L802">View Source</a>
   </span>
   <a id="MacacaGames_EffectSystem_EffectSystem_GetEffectSum_" data-uid="MacacaGames.EffectSystem.EffectSystem.GetEffectSum*"></a>
   <h4 id="MacacaGames_EffectSystem_EffectSystem_GetEffectSum_MacacaGames_EffectSystem_IEffectableObject_System_String_" data-uid="MacacaGames.EffectSystem.EffectSystem.GetEffectSum(MacacaGames.EffectSystem.IEffectableObject,System.String)">GetEffectSum(IEffectableObject, String)</h4>
@@ -1216,7 +1440,7 @@ will do the ApprovedAddEffect checking before the effect is added</p>
     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectSystem_RecoveryEffectBase_MacacaGames_EffectSystem_EffectInstanceBase_System_String_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectSystem.RecoveryEffectBase(MacacaGames.EffectSystem.EffectInstanceBase%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L439">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L438">View Source</a>
   </span>
   <a id="MacacaGames_EffectSystem_EffectSystem_RecoveryEffectBase_" data-uid="MacacaGames.EffectSystem.EffectSystem.RecoveryEffectBase*"></a>
   <h4 id="MacacaGames_EffectSystem_EffectSystem_RecoveryEffectBase_MacacaGames_EffectSystem_EffectInstanceBase_System_String_" data-uid="MacacaGames.EffectSystem.EffectSystem.RecoveryEffectBase(MacacaGames.EffectSystem.EffectInstanceBase,System.String)">RecoveryEffectBase(EffectInstanceBase, String)</h4>
@@ -1253,7 +1477,7 @@ will do the ApprovedAddEffect checking before the effect is added</p>
     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectSystem_RecoveryEffectView_MacacaGames_EffectSystem_EffectViewBase_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectSystem.RecoveryEffectView(MacacaGames.EffectSystem.EffectViewBase)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L269">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L268">View Source</a>
   </span>
   <a id="MacacaGames_EffectSystem_EffectSystem_RecoveryEffectView_" data-uid="MacacaGames.EffectSystem.EffectSystem.RecoveryEffectView*"></a>
   <h4 id="MacacaGames_EffectSystem_EffectSystem_RecoveryEffectView_MacacaGames_EffectSystem_EffectViewBase_" data-uid="MacacaGames.EffectSystem.EffectSystem.RecoveryEffectView(MacacaGames.EffectSystem.EffectViewBase)">RecoveryEffectView(EffectViewBase)</h4>
@@ -1285,7 +1509,7 @@ will do the ApprovedAddEffect checking before the effect is added</p>
     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectSystem_RegistEffectTriggerCondition_MacacaGames_EffectSystem_EffectInstanceBase_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectSystem.RegistEffectTriggerCondition(MacacaGames.EffectSystem.EffectInstanceBase)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L316">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L315">View Source</a>
   </span>
   <a id="MacacaGames_EffectSystem_EffectSystem_RegistEffectTriggerCondition_" data-uid="MacacaGames.EffectSystem.EffectSystem.RegistEffectTriggerCondition*"></a>
   <h4 id="MacacaGames_EffectSystem_EffectSystem_RegistEffectTriggerCondition_MacacaGames_EffectSystem_EffectInstanceBase_" data-uid="MacacaGames.EffectSystem.EffectSystem.RegistEffectTriggerCondition(MacacaGames.EffectSystem.EffectInstanceBase)">RegistEffectTriggerCondition(EffectInstanceBase)</h4>
@@ -1317,11 +1541,11 @@ will do the ApprovedAddEffect checking before the effect is added</p>
     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectSystem_RemoveEffect_MacacaGames_EffectSystem_IEffectableObject_MacacaGames_EffectSystem_EffectInstanceBase_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectSystem.RemoveEffect(MacacaGames.EffectSystem.IEffectableObject%2CMacacaGames.EffectSystem.EffectInstanceBase)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L982">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L1018">View Source</a>
   </span>
   <a id="MacacaGames_EffectSystem_EffectSystem_RemoveEffect_" data-uid="MacacaGames.EffectSystem.EffectSystem.RemoveEffect*"></a>
   <h4 id="MacacaGames_EffectSystem_EffectSystem_RemoveEffect_MacacaGames_EffectSystem_IEffectableObject_MacacaGames_EffectSystem_EffectInstanceBase_" data-uid="MacacaGames.EffectSystem.EffectSystem.RemoveEffect(MacacaGames.EffectSystem.IEffectableObject,MacacaGames.EffectSystem.EffectInstanceBase)">RemoveEffect(IEffectableObject, EffectInstanceBase)</h4>
-  <div class="markdown level1 summary"><p>移除指定Effect實體。</p>
+  <div class="markdown level1 summary"><p>Remove  EffectInstances on IEffectableObject</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1341,12 +1565,14 @@ will do the ApprovedAddEffect checking before the effect is added</p>
       <tr>
         <td><a class="xref" href="MacacaGames.EffectSystem.IEffectableObject.html">IEffectableObject</a></td>
         <td><span class="parametername">owner</span></td>
-        <td></td>
+        <td><p>The target IEffectableObject</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="MacacaGames.EffectSystem.EffectInstanceBase.html">EffectInstanceBase</a></td>
         <td><span class="parametername">effect</span></td>
-        <td></td>
+        <td><p>The Effect Instance would like to remove</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1355,11 +1581,11 @@ will do the ApprovedAddEffect checking before the effect is added</p>
     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectSystem_RemoveEffectByTag_MacacaGames_EffectSystem_IEffectableObject_System_String_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectSystem.RemoveEffectByTag(MacacaGames.EffectSystem.IEffectableObject%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L952">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L980">View Source</a>
   </span>
   <a id="MacacaGames_EffectSystem_EffectSystem_RemoveEffectByTag_" data-uid="MacacaGames.EffectSystem.EffectSystem.RemoveEffectByTag*"></a>
   <h4 id="MacacaGames_EffectSystem_EffectSystem_RemoveEffectByTag_MacacaGames_EffectSystem_IEffectableObject_System_String_" data-uid="MacacaGames.EffectSystem.EffectSystem.RemoveEffectByTag(MacacaGames.EffectSystem.IEffectableObject,System.String)">RemoveEffectByTag(IEffectableObject, String)</h4>
-  <div class="markdown level1 summary"><p>移除包含特定Tag的Effect。</p>
+  <div class="markdown level1 summary"><p>Remove all EffectInstances on IEffectableObject by tags</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1379,12 +1605,14 @@ will do the ApprovedAddEffect checking before the effect is added</p>
       <tr>
         <td><a class="xref" href="MacacaGames.EffectSystem.IEffectableObject.html">IEffectableObject</a></td>
         <td><span class="parametername">owner</span></td>
-        <td></td>
+        <td><p>The target IEffectableObject</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">tag</span></td>
-        <td></td>
+        <td><p>The tag would like to remove</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1393,11 +1621,11 @@ will do the ApprovedAddEffect checking before the effect is added</p>
     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectSystem_RemoveEffectsByType_MacacaGames_EffectSystem_IEffectableObject_System_String_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectSystem.RemoveEffectsByType(MacacaGames.EffectSystem.IEffectableObject%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L968">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L1000">View Source</a>
   </span>
   <a id="MacacaGames_EffectSystem_EffectSystem_RemoveEffectsByType_" data-uid="MacacaGames.EffectSystem.EffectSystem.RemoveEffectsByType*"></a>
   <h4 id="MacacaGames_EffectSystem_EffectSystem_RemoveEffectsByType_MacacaGames_EffectSystem_IEffectableObject_System_String_" data-uid="MacacaGames.EffectSystem.EffectSystem.RemoveEffectsByType(MacacaGames.EffectSystem.IEffectableObject,System.String)">RemoveEffectsByType(IEffectableObject, String)</h4>
-  <div class="markdown level1 summary"><p>移除指定EffectType所有的Effect實體。</p>
+  <div class="markdown level1 summary"><p>Remove all EffectInstances on IEffectableObject by EffectType</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1417,12 +1645,14 @@ will do the ApprovedAddEffect checking before the effect is added</p>
       <tr>
         <td><a class="xref" href="MacacaGames.EffectSystem.IEffectableObject.html">IEffectableObject</a></td>
         <td><span class="parametername">owner</span></td>
-        <td></td>
+        <td><p>The target IEffectableObject</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">effectType</span></td>
-        <td></td>
+        <td><p>The EffectType would like to remove</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1431,7 +1661,7 @@ will do the ApprovedAddEffect checking before the effect is added</p>
     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectSystem_RequestEffect_MacacaGames_EffectSystem_Model_EffectInfo_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectSystem.RequestEffect(MacacaGames.EffectSystem.Model.EffectInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L425">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L424">View Source</a>
   </span>
   <a id="MacacaGames_EffectSystem_EffectSystem_RequestEffect_" data-uid="MacacaGames.EffectSystem.EffectSystem.RequestEffect*"></a>
   <h4 id="MacacaGames_EffectSystem_EffectSystem_RequestEffect_MacacaGames_EffectSystem_Model_EffectInfo_" data-uid="MacacaGames.EffectSystem.EffectSystem.RequestEffect(MacacaGames.EffectSystem.Model.EffectInfo)">RequestEffect(EffectInfo)</h4>
@@ -1478,7 +1708,7 @@ will do the ApprovedAddEffect checking before the effect is added</p>
     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectSystem_RequestEffectView_MacacaGames_EffectSystem_Model_EffectInfo_MacacaGames_EffectSystem_Model_EffectViewInfo_MacacaGames_EffectSystem_IEffectableObject_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectSystem.RequestEffectView(MacacaGames.EffectSystem.Model.EffectInfo%2CMacacaGames.EffectSystem.Model.EffectViewInfo%2CMacacaGames.EffectSystem.IEffectableObject)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L226">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L225">View Source</a>
   </span>
   <a id="MacacaGames_EffectSystem_EffectSystem_RequestEffectView_" data-uid="MacacaGames.EffectSystem.EffectSystem.RequestEffectView*"></a>
   <h4 id="MacacaGames_EffectSystem_EffectSystem_RequestEffectView_MacacaGames_EffectSystem_Model_EffectInfo_MacacaGames_EffectSystem_Model_EffectViewInfo_MacacaGames_EffectSystem_IEffectableObject_" data-uid="MacacaGames.EffectSystem.EffectSystem.RequestEffectView(MacacaGames.EffectSystem.Model.EffectInfo,MacacaGames.EffectSystem.Model.EffectViewInfo,MacacaGames.EffectSystem.IEffectableObject)">RequestEffectView(EffectInfo, EffectViewInfo, IEffectableObject)</h4>
@@ -1535,7 +1765,7 @@ will do the ApprovedAddEffect checking before the effect is added</p>
     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectSystem_ResetEffectableObjectQuery.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectSystem.ResetEffectableObjectQuery%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L279">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L278">View Source</a>
   </span>
   <a id="MacacaGames_EffectSystem_EffectSystem_ResetEffectableObjectQuery_" data-uid="MacacaGames.EffectSystem.EffectSystem.ResetEffectableObjectQuery*"></a>
   <h4 id="MacacaGames_EffectSystem_EffectSystem_ResetEffectableObjectQuery" data-uid="MacacaGames.EffectSystem.EffectSystem.ResetEffectableObjectQuery">ResetEffectableObjectQuery()</h4>
@@ -1550,7 +1780,7 @@ will do the ApprovedAddEffect checking before the effect is added</p>
     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectSystem_ResetEffectActiveTimeAndCooldownTime_MacacaGames_EffectSystem_IEffectableObject_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectSystem.ResetEffectActiveTimeAndCooldownTime(MacacaGames.EffectSystem.IEffectableObject)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L211">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L210">View Source</a>
   </span>
   <a id="MacacaGames_EffectSystem_EffectSystem_ResetEffectActiveTimeAndCooldownTime_" data-uid="MacacaGames.EffectSystem.EffectSystem.ResetEffectActiveTimeAndCooldownTime*"></a>
   <h4 id="MacacaGames_EffectSystem_EffectSystem_ResetEffectActiveTimeAndCooldownTime_MacacaGames_EffectSystem_IEffectableObject_" data-uid="MacacaGames.EffectSystem.EffectSystem.ResetEffectActiveTimeAndCooldownTime(MacacaGames.EffectSystem.IEffectableObject)">ResetEffectActiveTimeAndCooldownTime(IEffectableObject)</h4>
@@ -1579,10 +1809,47 @@ will do the ApprovedAddEffect checking before the effect is added</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectSystem_TickEffectTimer_System_Single_MacacaGames_EffectSystem_IEffectableObject_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectSystem.TickEffectTimer(System.Single%2CMacacaGames.EffectSystem.IEffectableObject)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L196">View Source</a>
+  </span>
+  <a id="MacacaGames_EffectSystem_EffectSystem_TickEffectTimer_" data-uid="MacacaGames.EffectSystem.EffectSystem.TickEffectTimer*"></a>
+  <h4 id="MacacaGames_EffectSystem_EffectSystem_TickEffectTimer_System_Single_MacacaGames_EffectSystem_IEffectableObject_" data-uid="MacacaGames.EffectSystem.EffectSystem.TickEffectTimer(System.Single,MacacaGames.EffectSystem.IEffectableObject)">TickEffectTimer(Single, IEffectableObject)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void TickEffectTimer(float delta, IEffectableObject owner)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">delta</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MacacaGames.EffectSystem.IEffectableObject.html">IEffectableObject</a></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectSystem_UnregistEffectTriggerCondition_MacacaGames_EffectSystem_EffectInstanceBase_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectSystem.UnregistEffectTriggerCondition(MacacaGames.EffectSystem.EffectInstanceBase)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L343">View Source</a>
+    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L342">View Source</a>
   </span>
   <a id="MacacaGames_EffectSystem_EffectSystem_UnregistEffectTriggerCondition_" data-uid="MacacaGames.EffectSystem.EffectSystem.UnregistEffectTriggerCondition*"></a>
   <h4 id="MacacaGames_EffectSystem_EffectSystem_UnregistEffectTriggerCondition_MacacaGames_EffectSystem_EffectInstanceBase_" data-uid="MacacaGames.EffectSystem.EffectSystem.UnregistEffectTriggerCondition(MacacaGames.EffectSystem.EffectInstanceBase)">UnregistEffectTriggerCondition(EffectInstanceBase)</h4>
@@ -1605,43 +1872,6 @@ will do the ApprovedAddEffect checking before the effect is added</p>
       <tr>
         <td><a class="xref" href="MacacaGames.EffectSystem.EffectInstanceBase.html">EffectInstanceBase</a></td>
         <td><span class="parametername">effect</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MacacaGames/EffectSystem/new/main/apiSpec/new?filename=MacacaGames_EffectSystem_EffectSystem_UpdateEffectUpdate_System_Single_MacacaGames_EffectSystem_IEffectableObject_.md&amp;value=---%0Auid%3A%20MacacaGames.EffectSystem.EffectSystem.UpdateEffectUpdate(System.Single%2CMacacaGames.EffectSystem.IEffectableObject)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/EffectSystem/blob/main/Runtime/Component/EffectSystem.cs/#L197">View Source</a>
-  </span>
-  <a id="MacacaGames_EffectSystem_EffectSystem_UpdateEffectUpdate_" data-uid="MacacaGames.EffectSystem.EffectSystem.UpdateEffectUpdate*"></a>
-  <h4 id="MacacaGames_EffectSystem_EffectSystem_UpdateEffectUpdate_System_Single_MacacaGames_EffectSystem_IEffectableObject_" data-uid="MacacaGames.EffectSystem.EffectSystem.UpdateEffectUpdate(System.Single,MacacaGames.EffectSystem.IEffectableObject)">UpdateEffectUpdate(Single, IEffectableObject)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void UpdateEffectUpdate(float delta, IEffectableObject owner)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">delta</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MacacaGames.EffectSystem.IEffectableObject.html">IEffectableObject</a></td>
-        <td><span class="parametername">owner</span></td>
         <td></td>
       </tr>
     </tbody>

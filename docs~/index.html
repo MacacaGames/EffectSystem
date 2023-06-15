@@ -101,7 +101,7 @@
 <hr>
 <h1 id="conecpt">Conecpt</h1>
 <h2 id="life">Life</h2>
-<pre><code class="lang-mermaid">graph TB
+<pre><code class="lang-mermaid">graph LR
 EffectSystem.AddEffect[EffectSystem.AddEffect]----&gt;Start[Start] 
 Start[Start] --ActiveCondition--&gt; Active(Active)
 Active(Active)  --MaintainTime Checking--&gt; Deactive(Deactive)
@@ -109,6 +109,36 @@ Active(Active)  --Deactive Condition--&gt; Deactive(Deactive)
 Deactive(Deactive) --Active Condition--&gt; Active(Active) 
 Deactive(Deactive) --CD Checking--&gt; Active(Active) 
 Deactive(Deactive) --EffectSystem.CleanEffectableObject--&gt; End(End)
+</code></pre>
+<h2 id="time-manage">Time Manage</h2>
+<p>Due to different game have different time unit,
+For example: the ACT or RPG game may use the seconds as the time unit, the round-based game may use <code>Round</code> as the time unit etc.</p>
+<p>You need to implement the time calculation logic in your project.</p>
+<p>Currently each Effect Instance ownes the time manage itself, call the API the Tick the time on the Effect Instance.</p>
+<p>See the example:</p>
+<pre><code class="lang-csharp">
+var effectAddAtkSmall = new EffectInfo{
+    id: &quot;AddAtkSmall&quot;,
+    type: &quot;ATK_Constant&quot;,
+    value: 100,
+    /// ignore other parameters on this example
+};
+
+IEffectableObject target;
+var effectInstance = AddRequestedEffects(target, effectAddAtkSmall);
+
+// For seconds based game, uaually can tick the timer in Update, the delta should Time.deltaTime
+void Update(){
+    effectInstance.TickEffectTimer(Time.deltaTime);
+}
+
+// For Round based game, Tick the timer in the callback of a Round, the dalta may be 1(round)
+IEnumerator Round(){
+    while(true){
+        effectInstance.TickEffectTimer(1);
+        yield return new WaitForNextRound();
+    }
+}
 </code></pre>
 <h2 id="effecttype">EffectType</h2>
 <p>EffectType is the basic unit to define a feature during the runtime, for instance AddAtk, AddAtkByRatio, Blocking etc.</p>
@@ -552,15 +582,48 @@ var result = GetEffectSum( target, &quot;ATK_Constant&quot;); // third add call
 // result is 100, the time is over 10 secs so the  third add call success and take affect
 </code></pre>
 <h4 id="condition">Condition</h4>
-<p>Condition is summary of the following parameter:
-| Field                    | Data Type | Description                                                      |
-| ------------------------ | --------- | ---------------------------------------------------------------- |
-| activeCondition          | string    | The active trigger timing of condition                           |
-| activeRequirementLists   | string[]  | The qualifications of an active trigger condition (user-defined) |
-| activeProbability        | float     | The probability (0-100) of the effect being activated            |
-| deactiveCondition        | string    | The deactive trigger timing of condition                         |
-| deactiveRequirementLists | string[]  | The qualifications of a deactive trigger condition               |
-| deactiveProbability      | float     | The probability (0-100) of the effect being deactivated          |</p>
+<p>Condition is summary of the following parameter:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>activeCondition</td>
+<td>string</td>
+<td>The active trigger timing of condition</td>
+</tr>
+<tr>
+<td>activeRequirementLists</td>
+<td>string[]</td>
+<td>The qualifications of an active trigger condition (user-defined)</td>
+</tr>
+<tr>
+<td>activeProbability</td>
+<td>float</td>
+<td>The probability (0-100) of the effect being activated</td>
+</tr>
+<tr>
+<td>deactiveCondition</td>
+<td>string</td>
+<td>The deactive trigger timing of condition</td>
+</tr>
+<tr>
+<td>deactiveRequirementLists</td>
+<td>string[]</td>
+<td>The qualifications of a deactive trigger condition</td>
+</tr>
+<tr>
+<td>deactiveProbability</td>
+<td>float</td>
+<td>The probability (0-100) of the effect being deactivated</td>
+</tr>
+</tbody>
+</table>
 <p>See the Example:</p>
 <pre><code class="lang-csharp">var effectAddAtkSmall = new EffectInfo{
     id: &quot;TriggerEffect_Sample&quot;,
@@ -573,7 +636,7 @@ AddRequestedEffects(target, effectAddAtkSmall); // first add call
 
 class MyCharacter: IEffectableObject {
     void DoAttack(){
-        // All the effectInstance on 'this' object which activeCondition == &quot;ConditionOnAttack&quot; will try to active
+        // All the Effect Instance on 'this' object which activeCondition == &quot;ConditionOnAttack&quot; will try to active
         // as the result the effect with id &quot;TriggerEffect_Sample&quot; will be active
         EffectSystem.Instace.EffectTriggerCondition(&quot;ConditionOnAttack&quot;, this);
     }
@@ -584,7 +647,7 @@ class MyCharacter: IEffectableObject {
     void DoAttack(IEffectableObject enemy){
         // All the effectInstance on 'this' object which activeCondition == &quot;ConditionOnAttack&quot; will try to active
         // as the result the effect with id &quot;TriggerEffect_Sample&quot; will be active
-        EffectSystem.Instace.EffectTriggerCondition(&quot;ConditionOnAttack&quot;, this,enemy);
+        EffectSystem.Instace.EffectTriggerCondition(&quot;ConditionOnAttack&quot;, this, enemy);
     }
 }
 
@@ -627,8 +690,8 @@ var myEffect = new EffectInfo{
 var result = EffectSystem.Instance.GetCustomEffectsDescription(myTemplate, new[]{myEffect});
 // result is &quot;Deal extra 12 damage to enemies with full HP.&quot;
 </code></pre>
-<h3 id="the-rule-of-the-temmlate">The rule of the temmlate</h3>
-<p>The temmlate use the key word to detect which part in the template should be replaced, here is the rule of a key word.</p>
+<h3 id="the-rule-of-the-template">The rule of the Template</h3>
+<p>The Template use the key word to detect which part in the template should be replaced, here is the rule of a key word.</p>
 <ul>
 <li>Start with <code>{</code> char</li>
 <li>End with <code>}</code> char</li>
@@ -684,6 +747,10 @@ var result = EffectSystem.Instance.GetCustomEffectsDescription(myTemplate, new[]
 <td>deactiveProb</td>
 <td>same as <code>deactiveProbability</code> but simplified</td>
 </tr>
+<tr>
+<td>:%</td>
+<td>The value will be display as percentage, the value will *100 first and then display as oo%</td>
+</tr>
 </tbody>
 </table>
 <h2 id="default-description">Default Description</h2>
@@ -718,23 +785,121 @@ var result = EffectSystem.Instance.GetDefaultEffectDescription(effect_sample_01)
 
 // Or provide multiple EffectInfo, the system will auto combine all Description line by line
 var result = EffectSystem.Instance.GetDefaultEffectDescription(new []{effect_sample_01, effect_sample_02});
-/* result will be 
+/* 
+result will be 
 
 Deal extra 123 damage to enemies with full HP.
 Reduce 999 damage taken.
+*/
+</code></pre>
+<p>A more complicated example</p>
+<pre><code class="lang-csharp">var effect_sample_01 = new EffectInfo{
+    id: &quot;effect_sample_01&quot;,
+    type: &quot;Trigger_Attach&quot;,
+    value: 0,
+    subInfoIds:new []{&quot;effect_sample_subinfo_01&quot;}
+};
+
+var effect_sample_02 = new EffectInfo{
+    id: &quot;effect_sample_02&quot;,
+    type: &quot;Atk_Ratio&quot;,
+    maintainTime: 4.5,
+    value: 999
+};
+
+// This case the `effect_sample_01` has subInfos, so we need to registe the EffectDataProvider, the subInfo is query during runtime
+var effect_sample_subinfo_01 = new EffectInfo{
+    id: &quot;effect_sample_subinfo_01&quot;,
+    type: &quot;Trigger_HitSelf_Constant&quot;,
+    value: 555
+};
+
+var effects = new []{effect_sample_01, effect_sample_02, effect_sample_subinfo_01};
+EffectDataProvider.SetEffectInfoDelegate(
+    (List&lt;string&gt; effectIds) =&gt;
+    {
+        return effects.Where(m =&gt; effectIds.Contains(m.id)).ToList();
+    }
+);
+
+var myTemplate = @&quot;Deal extra {Effect_Trigger_Attach&gt;Effect_Trigger_HitSelf_Constant.value} damage to enemies with 50% or less HP.
+Increase {Effect_Atk_Ratio.value} Attack for {Effect_Atk_Ratio.time} seconds after killing an enemy.&quot;;
+
+// Or provide multiple EffectInfo, the system will auto combine all Description line by line
+// The subInfo is resolve in runtime, so only send the root EffectInfos
+var result = EffectSystem.Instance.GetCustomEffectsDescription(myTemplate, new []{effect_sample_01, effect_sample_02});
+/* 
+result will be 
+
+Deal extra 555 damage to enemies with 50% or less HP.
+Increase 999 Attack for 4.5 seconds after killing an enemy.
+*/
 </code></pre>
 <blockquote>
-<p>It is always recommended to use <code>EffectSystem.Instance.GetCustomEffectsDescription()</code> to generate a <code>human-kindly</code> Description
-But the <code>EffectSystem.Instance.GetDefaultEffectDescription()</code> provide a simple way to automatically generate at least a <code>human-readable</code> Description</p>
+<p>It is always recommended to use <code>EffectSystem.Instance.GetCustomEffectsDescription()</code> to generate a <code>human-kindly</code> Description</p>
+<p>But the <code>EffectSystem.Instance.GetDefaultEffectDescription()</code> provide a simple way to automatically generate at least a <code>human-readable</code> Description</p>
 </blockquote>
+<h1 id="prepare-your-data">Prepare Your Data</h1>
+<p>After understanding the concept of the EffectSystem, it's time to prepare your runtime data, on perious samples, we directly create new EffectInfo with the constructor, but there are some other method to setting up your effect datas.</p>
+<h2 id="unity-serialization">Unity Serialization</h2>
+<p>The basic way is to create a <code>List&lt;EffectInfo&gt;</code> in somewhere(MonoBehaviour/ScriptableObject) in your project, then use the Unity Inspector to edit them.</p>
+<h3 id="effectgroup">EffectGroup</h3>
+<p>EffectGroup is a pre-define Unity ScriptableObject to help you store the EffectInfo in your Unity.
+It provide some very useful feature:</p>
+<ul>
+<li>Export the current EffectInfo(s) to Json format</li>
+<li>Import EffectInfo(s) from Json</li>
+<li>Directly using EffectGroup in most of EffectSystem APIs
+<img src="./Img~/effectgroup.png"></li>
+</ul>
+<h2 id="google-sheet-template">Google Sheet Template</h2>
+<p>For more convience of batch data editing, we design a Google Sheet to help this stuff.</p>
+<p>Here's the Table Example: <a href="https://docs.google.com/spreadsheets/d/1N_Bzdc1XSgyqXYlBlHYp0-XWBlFA-AAw_AUBdIEWj5U/edit?usp=sharing">Effect Data Sample Table</a></p>
+<p>Please make a copy of this sample and do any modification yourself!</p>
+<h3 id="pre-baked-string-for-strong-type-usage">Pre Baked String for strong Type usage</h3>
+<p>On the <code>ScriptOptions</code> tab in the Sheet, you can copy directly the <code>A1</code> field to the <code>Effect Editor Window</code> to pre-baked all string parameter in your sheet, since the system use string as the ID to refer other resource, for more safety usage, it's recommend to use pre-baked string define for all your parameters.</p>
+<h2 id="effectdataprovider">EffectDataProvider</h2>
+<p>EffectDataProvider provide the runtime data resource for the runtime data providing, for instance, if you have using the <code>subInfo</code> feature, the system require delegate to get the EffectType by Id in runtime.
+Since different project manage its owne EffectInfos, you need to regist the method to make all feature works.</p>
+<pre><code class="lang-csharp">public static class EffectDataProvider
+{
+    public static Func&lt;List&lt;string&gt;, List&lt;EffectInfo&gt;&gt; GetEffectInfo { get; private set; }
+    public static void SetEffectInfoDelegate(Func&lt;List&lt;string&gt;, List&lt;EffectInfo&gt;&gt; GetEffectInfo)
+    {
+        EffectDataProvider.GetEffectInfo = GetEffectInfo;
+    }
+
+    public static Func&lt;List&lt;string&gt;, List&lt;EffectViewInfo&gt;&gt; GetEffectViewInfo { get; private set; }
+    public static void SeEffectViewInfoDelegate(Func&lt;List&lt;string&gt;, List&lt;EffectViewInfo&gt;&gt; GetEffectViewInfo)
+    {
+        EffectDataProvider.GetEffectViewInfo = GetEffectViewInfo;
+    }
+
+    public static Func&lt;string, string&gt; GetEffectDescriptionString { get; private set; }
+
+    public static void SetEffectDescriptionStringDelegate(Func&lt;string, string&gt; GetEffectDescriptionString)
+    {
+        EffectDataProvider.GetEffectDescriptionString = GetEffectDescriptionString;
+    }
+
+    public static Dictionary&lt;string, Type&gt; EffectTypeQuery = new Dictionary&lt;string, Type&gt;();
+    public static void RegisteEffectTypeQuery(Dictionary&lt;string, Type&gt; EffectTypeQuery)
+    {
+        EffectDataProvider.EffectTypeQuery = EffectTypeQuery;
+    }
+}
+
+
+public class AssetManager{
+    void Awake(){
+        EffectDataProvider.SetEffectInfoDelegate(MyEffectQueryMethod);
+    }
+}
+
+</code></pre>
 <h1 id="effect-view">Effect View</h1>
 <p>To Be Continue</p>
-<h1 id="code-generate">Code Generate</h1>
-<h2 id="pre-baked-string-for-strong-type-usage">Pre Baked String for strong Type usage</h2>
-<p>The system use string as the ID to refer other resource, for more safety usage, it's recommend to use pre-baked string define for all your options.</p>
-<p>Here's the Table Example
-<a href="https://docs.google.com/spreadsheets/d/1zYKiOlThAqTMVuUPHcxeQGX7rBRLp5E-49ci-GCZBa8/edit?usp=drive_link">Effect Data Sample</a>
-Add or remove the content of each field's Enum according to different needs and Use the <strong>EffectSystemEditorWindow</strong> to generate the Strings.</p>
+<h1 id="serialization">Serialization</h1>
 <h2 id="messagepack">MessagePack</h2>
 <p>The MessagePack.Csharp should do a code generate first to make the EffectInfo available to use on AOT Platform</p>
 <p>First, use the mpc tool to generate the Resolver, here is some example:
