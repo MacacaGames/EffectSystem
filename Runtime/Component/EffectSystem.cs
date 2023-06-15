@@ -23,13 +23,35 @@ namespace MacacaGames.EffectSystem
             }
         }
 
-        #region EffectDefine
-        /// <summary>
-        /// 只放預設
-        /// </summary>
-        /// <value></value>
+        #region TimeManagement
 
-        public static Type QueryEffectTypeWithDefault(string effectType)
+        public void TickEffectTimer(float delta)
+        {
+            foreach (var item in effectableObjectQuery)
+            {
+                TickEffectTimer(delta, item.Key);
+            }
+        }
+
+        public void TickEffectTimer(float delta, IEffectableObject owner)
+        {
+            var keys = new List<string>(GetEffectList(owner).Keys);
+            for (int i = 0; i < keys.Count; i++)
+            {
+                var key = keys[i];
+                var effectList = GetEffectList(owner)[key];
+                foreach (EffectInstanceBase effect in effectList)
+                {
+                    effect.TickEffectTimer(delta);
+                }
+            }
+        }
+
+        #endregion
+
+        #region EffectDefine
+
+        static Type QueryEffectTypeWithDefault(string effectType)
         {
             if (!EffectDataProvider.EffectTypeQuery.ContainsKey(effectType))
             {
@@ -193,19 +215,6 @@ namespace MacacaGames.EffectSystem
 
         #endregion
 
-        public void TickEffectTimer(float delta, IEffectableObject owner)
-        {
-            var keys = new List<string>(GetEffectList(owner).Keys);
-            for (int i = 0; i < keys.Count; i++)
-            {
-                var key = keys[i];
-                var effectList = GetEffectList(owner)[key];
-                foreach (EffectInstanceBase effect in effectList)
-                {
-                    effect.TickEffectTimer(delta);
-                }
-            }
-        }
 
         public void ResetEffectActiveTimeAndCooldownTime(IEffectableObject owner)
         {
@@ -517,7 +526,7 @@ namespace MacacaGames.EffectSystem
         {
             if (EffectDataProvider.GetEffectDescriptionString == null)
             {
-                throw new Exception("Please assign GetEffectDescriptionStr impl");
+                throw new Exception("Please use EffectDataProvider.SetEffectDescriptionStringDelegate to assign impl");
             }
             string str = EffectDataProvider.GetEffectDescriptionString?.Invoke(QueryEffectTypeWithDefault(info.type).Name);
             string result = GetCustomEffectDescription(str, info);

@@ -68,26 +68,15 @@ Currently each Effect Instance ownes the time manage itself, call the API the Ti
 
 See the example:
 ```csharp
-
-var effectAddAtkSmall = new EffectInfo{
-    id: "AddAtkSmall",
-    type: "ATK_Constant",
-    value: 100,
-    /// ignore other parameters on this example
-};
-
-IEffectableObject target;
-var effectInstance = AddRequestedEffects(target, effectAddAtkSmall);
-
 // For seconds based game, uaually can tick the timer in Update, the delta should Time.deltaTime
 void Update(){
-    effectInstance.TickEffectTimer(Time.deltaTime);
+    EffectSystem.Instance.TickEffectTimer(Time.deltaTime);
 }
 
 // For Round based game, Tick the timer in the callback of a Round, the dalta may be 1(round)
 IEnumerator Round(){
     while(true){
-        effectInstance.TickEffectTimer(1);
+         EffectSystem.Instance.TickEffectTimer(1);
         yield return new WaitForNextRound();
     }
 }
