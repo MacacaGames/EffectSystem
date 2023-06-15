@@ -340,19 +340,19 @@ references:
   isSpec: "True"
   fullName: MacacaGames.EffectSystem.EffectCondition.Start
   nameWithType: EffectCondition.Start
-- uid: MacacaGames.EffectSystem.EffectCondition.Update(System.Single)
-  name: Update(Single)
-  href: api/MacacaGames.EffectSystem.EffectCondition.html#MacacaGames_EffectSystem_EffectCondition_Update_System_Single_
-  commentId: M:MacacaGames.EffectSystem.EffectCondition.Update(System.Single)
-  fullName: MacacaGames.EffectSystem.EffectCondition.Update(System.Single)
-  nameWithType: EffectCondition.Update(Single)
-- uid: MacacaGames.EffectSystem.EffectCondition.Update*
-  name: Update
-  href: api/MacacaGames.EffectSystem.EffectCondition.html#MacacaGames_EffectSystem_EffectCondition_Update_
-  commentId: Overload:MacacaGames.EffectSystem.EffectCondition.Update
+- uid: MacacaGames.EffectSystem.EffectCondition.Tick(System.Single)
+  name: Tick(Single)
+  href: api/MacacaGames.EffectSystem.EffectCondition.html#MacacaGames_EffectSystem_EffectCondition_Tick_System_Single_
+  commentId: M:MacacaGames.EffectSystem.EffectCondition.Tick(System.Single)
+  fullName: MacacaGames.EffectSystem.EffectCondition.Tick(System.Single)
+  nameWithType: EffectCondition.Tick(Single)
+- uid: MacacaGames.EffectSystem.EffectCondition.Tick*
+  name: Tick
+  href: api/MacacaGames.EffectSystem.EffectCondition.html#MacacaGames_EffectSystem_EffectCondition_Tick_
+  commentId: Overload:MacacaGames.EffectSystem.EffectCondition.Tick
   isSpec: "True"
-  fullName: MacacaGames.EffectSystem.EffectCondition.Update
-  nameWithType: EffectCondition.Update
+  fullName: MacacaGames.EffectSystem.EffectCondition.Tick
+  nameWithType: EffectCondition.Tick
 - uid: MacacaGames.EffectSystem.EffectGroup
   name: EffectGroup
   href: api/MacacaGames.EffectSystem.EffectGroup.html
@@ -839,19 +839,19 @@ references:
   commentId: F:MacacaGames.EffectSystem.EffectInstanceBase.tags
   fullName: MacacaGames.EffectSystem.EffectInstanceBase.tags
   nameWithType: EffectInstanceBase.tags
-- uid: MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition(System.Single)
-  name: UpdateEffectCondition(Single)
-  href: api/MacacaGames.EffectSystem.EffectInstanceBase.html#MacacaGames_EffectSystem_EffectInstanceBase_UpdateEffectCondition_System_Single_
-  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition(System.Single)
-  fullName: MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition(System.Single)
-  nameWithType: EffectInstanceBase.UpdateEffectCondition(Single)
-- uid: MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition*
-  name: UpdateEffectCondition
-  href: api/MacacaGames.EffectSystem.EffectInstanceBase.html#MacacaGames_EffectSystem_EffectInstanceBase_UpdateEffectCondition_
-  commentId: Overload:MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.TickEffectTimer(System.Single)
+  name: TickEffectTimer(Single)
+  href: api/MacacaGames.EffectSystem.EffectInstanceBase.html#MacacaGames_EffectSystem_EffectInstanceBase_TickEffectTimer_System_Single_
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.TickEffectTimer(System.Single)
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.TickEffectTimer(System.Single)
+  nameWithType: EffectInstanceBase.TickEffectTimer(Single)
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.TickEffectTimer*
+  name: TickEffectTimer
+  href: api/MacacaGames.EffectSystem.EffectInstanceBase.html#MacacaGames_EffectSystem_EffectInstanceBase_TickEffectTimer_
+  commentId: Overload:MacacaGames.EffectSystem.EffectInstanceBase.TickEffectTimer
   isSpec: "True"
-  fullName: MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition
-  nameWithType: EffectInstanceBase.UpdateEffectCondition
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.TickEffectTimer
+  nameWithType: EffectInstanceBase.TickEffectTimer
 - uid: MacacaGames.EffectSystem.EffectParticleManager
   name: EffectParticleManager
   href: api/MacacaGames.EffectSystem.EffectParticleManager.html
@@ -971,6 +971,15 @@ references:
   fullName.vb: MacacaGames.EffectSystem.EffectSystem.AddRequestedEffects(MacacaGames.EffectSystem.IEffectableObject, IEnumerable(Of MacacaGames.EffectSystem.Model.EffectInfo), System.String())
   nameWithType: EffectSystem.AddRequestedEffects(IEffectableObject, IEnumerable<EffectInfo>, String[])
   nameWithType.vb: EffectSystem.AddRequestedEffects(IEffectableObject, IEnumerable(Of EffectInfo), String())
+- uid: MacacaGames.EffectSystem.EffectSystem.AddRequestedEffects(MacacaGames.EffectSystem.IEffectableObject,MacacaGames.EffectSystem.EffectGroup,System.String[])
+  name: AddRequestedEffects(IEffectableObject, EffectGroup, String[])
+  href: api/MacacaGames.EffectSystem.EffectSystem.html#MacacaGames_EffectSystem_EffectSystem_AddRequestedEffects_MacacaGames_EffectSystem_IEffectableObject_MacacaGames_EffectSystem_EffectGroup_System_String___
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.AddRequestedEffects(MacacaGames.EffectSystem.IEffectableObject,MacacaGames.EffectSystem.EffectGroup,System.String[])
+  name.vb: AddRequestedEffects(IEffectableObject, EffectGroup, String())
+  fullName: MacacaGames.EffectSystem.EffectSystem.AddRequestedEffects(MacacaGames.EffectSystem.IEffectableObject, MacacaGames.EffectSystem.EffectGroup, System.String[])
+  fullName.vb: MacacaGames.EffectSystem.EffectSystem.AddRequestedEffects(MacacaGames.EffectSystem.IEffectableObject, MacacaGames.EffectSystem.EffectGroup, System.String())
+  nameWithType: EffectSystem.AddRequestedEffects(IEffectableObject, EffectGroup, String[])
+  nameWithType.vb: EffectSystem.AddRequestedEffects(IEffectableObject, EffectGroup, String())
 - uid: MacacaGames.EffectSystem.EffectSystem.AddRequestedEffects*
   name: AddRequestedEffects
   href: api/MacacaGames.EffectSystem.EffectSystem.html#MacacaGames_EffectSystem_EffectSystem_AddRequestedEffects_
@@ -1284,6 +1293,12 @@ references:
   fullName.vb: MacacaGames.EffectSystem.EffectSystem.GetCustomEffectsDescription(System.String, IEnumerable(Of MacacaGames.EffectSystem.Model.EffectInfo))
   nameWithType: EffectSystem.GetCustomEffectsDescription(String, IEnumerable<EffectInfo>)
   nameWithType.vb: EffectSystem.GetCustomEffectsDescription(String, IEnumerable(Of EffectInfo))
+- uid: MacacaGames.EffectSystem.EffectSystem.GetCustomEffectsDescription(System.String,MacacaGames.EffectSystem.EffectGroup)
+  name: GetCustomEffectsDescription(String, EffectGroup)
+  href: api/MacacaGames.EffectSystem.EffectSystem.html#MacacaGames_EffectSystem_EffectSystem_GetCustomEffectsDescription_System_String_MacacaGames_EffectSystem_EffectGroup_
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.GetCustomEffectsDescription(System.String,MacacaGames.EffectSystem.EffectGroup)
+  fullName: MacacaGames.EffectSystem.EffectSystem.GetCustomEffectsDescription(System.String, MacacaGames.EffectSystem.EffectGroup)
+  nameWithType: EffectSystem.GetCustomEffectsDescription(String, EffectGroup)
 - uid: MacacaGames.EffectSystem.EffectSystem.GetCustomEffectsDescription*
   name: GetCustomEffectsDescription
   href: api/MacacaGames.EffectSystem.EffectSystem.html#MacacaGames_EffectSystem_EffectSystem_GetCustomEffectsDescription_
@@ -1313,6 +1328,12 @@ references:
   fullName.vb: MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectsDescription(IEnumerable(Of MacacaGames.EffectSystem.Model.EffectInfo))
   nameWithType: EffectSystem.GetDefaultEffectsDescription(IEnumerable<EffectInfo>)
   nameWithType.vb: EffectSystem.GetDefaultEffectsDescription(IEnumerable(Of EffectInfo))
+- uid: MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectsDescription(MacacaGames.EffectSystem.EffectGroup)
+  name: GetDefaultEffectsDescription(EffectGroup)
+  href: api/MacacaGames.EffectSystem.EffectSystem.html#MacacaGames_EffectSystem_EffectSystem_GetDefaultEffectsDescription_MacacaGames_EffectSystem_EffectGroup_
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectsDescription(MacacaGames.EffectSystem.EffectGroup)
+  fullName: MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectsDescription(MacacaGames.EffectSystem.EffectGroup)
+  nameWithType: EffectSystem.GetDefaultEffectsDescription(EffectGroup)
 - uid: MacacaGames.EffectSystem.EffectSystem.GetDefaultEffectsDescription*
   name: GetDefaultEffectsDescription
   href: api/MacacaGames.EffectSystem.EffectSystem.html#MacacaGames_EffectSystem_EffectSystem_GetDefaultEffectsDescription_
@@ -1566,6 +1587,19 @@ references:
   isSpec: "True"
   fullName: MacacaGames.EffectSystem.EffectSystem.ResetEffectActiveTimeAndCooldownTime
   nameWithType: EffectSystem.ResetEffectActiveTimeAndCooldownTime
+- uid: MacacaGames.EffectSystem.EffectSystem.TickEffectTimer(System.Single,MacacaGames.EffectSystem.IEffectableObject)
+  name: TickEffectTimer(Single, IEffectableObject)
+  href: api/MacacaGames.EffectSystem.EffectSystem.html#MacacaGames_EffectSystem_EffectSystem_TickEffectTimer_System_Single_MacacaGames_EffectSystem_IEffectableObject_
+  commentId: M:MacacaGames.EffectSystem.EffectSystem.TickEffectTimer(System.Single,MacacaGames.EffectSystem.IEffectableObject)
+  fullName: MacacaGames.EffectSystem.EffectSystem.TickEffectTimer(System.Single, MacacaGames.EffectSystem.IEffectableObject)
+  nameWithType: EffectSystem.TickEffectTimer(Single, IEffectableObject)
+- uid: MacacaGames.EffectSystem.EffectSystem.TickEffectTimer*
+  name: TickEffectTimer
+  href: api/MacacaGames.EffectSystem.EffectSystem.html#MacacaGames_EffectSystem_EffectSystem_TickEffectTimer_
+  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.TickEffectTimer
+  isSpec: "True"
+  fullName: MacacaGames.EffectSystem.EffectSystem.TickEffectTimer
+  nameWithType: EffectSystem.TickEffectTimer
 - uid: MacacaGames.EffectSystem.EffectSystem.UnregistEffectTriggerCondition(MacacaGames.EffectSystem.EffectInstanceBase)
   name: UnregistEffectTriggerCondition(EffectInstanceBase)
   href: api/MacacaGames.EffectSystem.EffectSystem.html#MacacaGames_EffectSystem_EffectSystem_UnregistEffectTriggerCondition_MacacaGames_EffectSystem_EffectInstanceBase_
@@ -1579,19 +1613,6 @@ references:
   isSpec: "True"
   fullName: MacacaGames.EffectSystem.EffectSystem.UnregistEffectTriggerCondition
   nameWithType: EffectSystem.UnregistEffectTriggerCondition
-- uid: MacacaGames.EffectSystem.EffectSystem.UpdateEffectUpdate(System.Single,MacacaGames.EffectSystem.IEffectableObject)
-  name: UpdateEffectUpdate(Single, IEffectableObject)
-  href: api/MacacaGames.EffectSystem.EffectSystem.html#MacacaGames_EffectSystem_EffectSystem_UpdateEffectUpdate_System_Single_MacacaGames_EffectSystem_IEffectableObject_
-  commentId: M:MacacaGames.EffectSystem.EffectSystem.UpdateEffectUpdate(System.Single,MacacaGames.EffectSystem.IEffectableObject)
-  fullName: MacacaGames.EffectSystem.EffectSystem.UpdateEffectUpdate(System.Single, MacacaGames.EffectSystem.IEffectableObject)
-  nameWithType: EffectSystem.UpdateEffectUpdate(Single, IEffectableObject)
-- uid: MacacaGames.EffectSystem.EffectSystem.UpdateEffectUpdate*
-  name: UpdateEffectUpdate
-  href: api/MacacaGames.EffectSystem.EffectSystem.html#MacacaGames_EffectSystem_EffectSystem_UpdateEffectUpdate_
-  commentId: Overload:MacacaGames.EffectSystem.EffectSystem.UpdateEffectUpdate
-  isSpec: "True"
-  fullName: MacacaGames.EffectSystem.EffectSystem.UpdateEffectUpdate
-  nameWithType: EffectSystem.UpdateEffectUpdate
 - uid: MacacaGames.EffectSystem.EffectSystemScriptable
   name: EffectSystemScriptable
   href: api/MacacaGames.EffectSystem.EffectSystemScriptable.html
