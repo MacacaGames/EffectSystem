@@ -100,7 +100,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: SetEffectInfoDelegate
     path: ../Model/EffectDataProvider.cs
-    startLine: 13
+    startLine: 12
   assemblies:
   - Macaca.EffectSystem.Model
   namespace: MacacaGames.EffectSystem.Model
@@ -138,12 +138,10 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: GetEffectViewInfo
     path: ../Model/EffectDataProvider.cs
-    startLine: 21
+    startLine: 17
   assemblies:
   - Macaca.EffectSystem.Model
   namespace: MacacaGames.EffectSystem.Model
-  summary: "\n需要依賴外部回傳值，server、client皆須註冊。\n"
-  example: []
   syntax:
     content: public static Func<List<string>, List<EffectViewInfo>> GetEffectViewInfo { get; }
     parameters: []
@@ -177,7 +175,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: SeEffectViewInfoDelegate
     path: ../Model/EffectDataProvider.cs
-    startLine: 22
+    startLine: 18
   assemblies:
   - Macaca.EffectSystem.Model
   namespace: MacacaGames.EffectSystem.Model
@@ -215,7 +213,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: GetEffectDescriptionString
     path: ../Model/EffectDataProvider.cs
-    startLine: 27
+    startLine: 23
   assemblies:
   - Macaca.EffectSystem.Model
   namespace: MacacaGames.EffectSystem.Model
@@ -252,7 +250,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: SetEffectDescriptionStringDelegate
     path: ../Model/EffectDataProvider.cs
-    startLine: 29
+    startLine: 25
   assemblies:
   - Macaca.EffectSystem.Model
   namespace: MacacaGames.EffectSystem.Model
@@ -290,7 +288,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: EffectTypeQuery
     path: ../Model/EffectDataProvider.cs
-    startLine: 34
+    startLine: 30
   assemblies:
   - Macaca.EffectSystem.Model
   namespace: MacacaGames.EffectSystem.Model
@@ -323,7 +321,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: RegisteEffectTypeQuery
     path: ../Model/EffectDataProvider.cs
-    startLine: 35
+    startLine: 31
   assemblies:
   - Macaca.EffectSystem.Model
   namespace: MacacaGames.EffectSystem.Model

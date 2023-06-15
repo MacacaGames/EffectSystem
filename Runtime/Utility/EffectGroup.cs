@@ -14,10 +14,10 @@ namespace MacacaGames.EffectSystem
     {
         public string id;
 
-        [SerializeField]
+        [SerializeField, Header("This field only for editor note")]
         public string title;
 
-        [SerializeField]
+        [SerializeField, Header("This field only for editor note")]
         public string description;
 
         public List<EffectInfo> effects = new List<EffectInfo>();
@@ -37,7 +37,7 @@ namespace MacacaGames.EffectSystem
 
         public void FromJson(string test)
         {
-           effects = Newtonsoft.Json.JsonConvert.DeserializeObject<List<EffectInfo>>(test);
+            effects = Newtonsoft.Json.JsonConvert.DeserializeObject<List<EffectInfo>>(test);
         }
     }
 }

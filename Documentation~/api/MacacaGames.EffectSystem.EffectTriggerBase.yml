@@ -56,7 +56,7 @@ items:
   - MacacaGames.EffectSystem.EffectInstanceBase.End
   - MacacaGames.EffectSystem.EffectInstanceBase.OnEnd
   - MacacaGames.EffectSystem.EffectInstanceBase.OnColdownEnd
-  - MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition(System.Single)
+  - MacacaGames.EffectSystem.EffectInstanceBase.TickEffectTimer(System.Single)
   - MacacaGames.EffectSystem.EffectInstanceBase.ResetActiveTime
   - MacacaGames.EffectSystem.EffectInstanceBase.ResetColdDownTime
   - MacacaGames.EffectSystem.EffectInstanceBase.RemoveSleepyEffect
@@ -541,18 +541,18 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition(System.Single)
-  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition(System.Single)
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.TickEffectTimer(System.Single)
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.TickEffectTimer(System.Single)
   parent: MacacaGames.EffectSystem.EffectInstanceBase
   isExternal: true
-  name: UpdateEffectCondition(Single)
-  nameWithType: EffectInstanceBase.UpdateEffectCondition(Single)
-  fullName: MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition(System.Single)
+  name: TickEffectTimer(Single)
+  nameWithType: EffectInstanceBase.TickEffectTimer(Single)
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.TickEffectTimer(System.Single)
   spec.csharp:
-  - uid: MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition(System.Single)
-    name: UpdateEffectCondition
-    nameWithType: EffectInstanceBase.UpdateEffectCondition
-    fullName: MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.TickEffectTimer(System.Single)
+    name: TickEffectTimer
+    nameWithType: EffectInstanceBase.TickEffectTimer
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.TickEffectTimer
   - name: (
     nameWithType: (
     fullName: (
@@ -565,10 +565,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition(System.Single)
-    name: UpdateEffectCondition
-    nameWithType: EffectInstanceBase.UpdateEffectCondition
-    fullName: MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition
+  - uid: MacacaGames.EffectSystem.EffectInstanceBase.TickEffectTimer(System.Single)
+    name: TickEffectTimer
+    nameWithType: EffectInstanceBase.TickEffectTimer
+    fullName: MacacaGames.EffectSystem.EffectInstanceBase.TickEffectTimer
   - name: (
     nameWithType: (
     fullName: (

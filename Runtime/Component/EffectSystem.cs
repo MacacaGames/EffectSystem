@@ -193,8 +193,7 @@ namespace MacacaGames.EffectSystem
 
         #endregion
 
-
-        public void UpdateEffectUpdate(float delta, IEffectableObject owner)
+        public void TickEffectTimer(float delta, IEffectableObject owner)
         {
             var keys = new List<string>(GetEffectList(owner).Keys);
             for (int i = 0; i < keys.Count; i++)
@@ -203,7 +202,7 @@ namespace MacacaGames.EffectSystem
                 var effectList = GetEffectList(owner)[key];
                 foreach (EffectInstanceBase effect in effectList)
                 {
-                    effect.UpdateEffectCondition(delta);
+                    effect.TickEffectTimer(delta);
                 }
             }
         }
@@ -494,6 +493,10 @@ namespace MacacaGames.EffectSystem
         #endregion
 
         #region Effect效果說明與數值顯示
+        public static string GetDefaultEffectsDescription(EffectGroup effectGroup)
+        {
+            return string.Join("\n", GetDefaultEffectsDescriptions(effectGroup.effects));
+        }
 
         public static string GetDefaultEffectsDescription(IEnumerable<EffectInfo> infos)
         {
@@ -524,6 +527,11 @@ namespace MacacaGames.EffectSystem
             ValidEffectDescription(result);
 
             return result;
+        }
+
+        public static string GetCustomEffectsDescription(string str, EffectGroup effectGroups)
+        {
+            return GetCustomEffectsDescription(str, effectGroups.effects);
         }
 
         public static string GetCustomEffectsDescription(string str, IEnumerable<EffectInfo> infos)
@@ -688,7 +696,6 @@ namespace MacacaGames.EffectSystem
 
                 return effectValue.ToString();    //一般數值
             }
-
         }
 
         internal static string GetEffectInfoTypeIdString(EffectInfo info)
@@ -815,6 +822,17 @@ namespace MacacaGames.EffectSystem
         #endregion
 
         #region 附加Effect
+        /// <summary>
+        /// Add one or more Effect(s) to an IEffectableObject
+        /// will do the ApprovedAddEffect checking before the effect is added
+        /// </summary>
+        /// <param name="owner">The target obejct would like to add the Effect</param>
+        /// <param name="effectGroup">The EffectGroup you would like to add the the owner</param>
+        /// <param name="tags">Add the tags on the EffectInstance which is add on this requrest, it is very helpful to manage the Effect Instance, </param>
+        public List<EffectInstanceBase> AddRequestedEffects(IEffectableObject owner, EffectGroup effectGroup, params string[] tags)
+        {
+            return AddRequestedEffects(owner, effectGroup.effects, tags);
+        }
 
         /// <summary>
         /// Add one or more Effect(s) to an IEffectableObject
@@ -823,27 +841,29 @@ namespace MacacaGames.EffectSystem
         /// <param name="owner">The target obejct would like to add the Effect</param>
         /// <param name="effectInfos">The EffectInfos you would like to add the the owner</param>
         /// <param name="tags">Add the tags on the EffectInstance which is add on this requrest, it is very helpful to manage the Effect Instance, </param>
-        public void AddRequestedEffects(IEffectableObject owner, IEnumerable<EffectInfo> effectInfos, params string[] tags)
+        public List<EffectInstanceBase> AddRequestedEffects(IEffectableObject owner, IEnumerable<EffectInfo> effectInfos, params string[] tags)
         {
             if (effectInfos == null)
             {
                 Debug.LogError("[Effect] AddRequestedEffects, Effects為null");
-                return;
+                return null;
             }
+            List<EffectInstanceBase> result = new List<EffectInstanceBase>();
             foreach (var effectStruct in effectInfos)
             {
-                AddRequestedEffect(owner, effectStruct, tags);
+                result.Add(AddRequestedEffect(owner, effectStruct, tags));
             }
+            return result;
         }
 
         ///<summary>附加指定的Effect實體，從物件池拿。</summary>
-        public void AddRequestedEffect(IEffectableObject owner, EffectInfo effectInfo, params string[] tags)
+        public EffectInstanceBase AddRequestedEffect(IEffectableObject owner, EffectInfo effectInfo, params string[] tags)
         {
             if (owner.IsAlive() == false)
-                return;
+                return null;
 
             if (owner.ApprovedAddEffect(effectInfo) == false)
-                return;
+                return null;
 
             EffectInstanceBase effect = RequestEffect(effectInfo);
             EffectInstanceList effectList = GetEffectListByType(owner, effectInfo.type);
@@ -866,6 +886,8 @@ namespace MacacaGames.EffectSystem
             {
                 RecoveryEffectBase(effect, effectInfo.type);
             }
+
+            return effect;
 #if (UNITY_EDITOR)
             OnEffectChange?.Invoke();   //Callback
 #endif
@@ -880,10 +902,14 @@ namespace MacacaGames.EffectSystem
         /// <param name="effectInfos">The EffectInfos you would like to add the the owner</param>
         /// <param name="tags">Add the tags on the EffectInstance which is add on this requrest, it is very helpful to manage the Effect Instance, </param>
         [Obsolete("Use the AddRequestedEffect instead, AddRequestedEffect will manage the Effect Instance by object pool, it is better for performance")]
-        public void AddEffects(IEffectableObject owner, IEnumerable<EffectInfo> effectInfos, params string[] tags)
+        public List<EffectInstanceBase> AddEffects(IEffectableObject owner, IEnumerable<EffectInfo> effectInfos, params string[] tags)
         {
+            List<EffectInstanceBase> result = new List<EffectInstanceBase>();
             foreach (var effectStruct in effectInfos)
-                AddEffect(owner, effectStruct, tags);
+            {
+                result.Add(AddEffect(owner, effectStruct, tags));
+            }
+            return result;
         }
 
         /// <summary>
@@ -895,16 +921,16 @@ namespace MacacaGames.EffectSystem
         /// <param name="effectInfos">The EffectInfos you would like to add the the owner</param>
         /// <param name="tags">Add the tags on the EffectInstance which is add on this requrest, it is very helpful to manage the Effect Instance, </param>
         [Obsolete("Use the AddRequestedEffect instead, AddRequestedEffect will manage the Effect Instance by object pool, it is better for performance")]
-        public void AddEffect(IEffectableObject owner, EffectInfo effectInfo, params string[] tags)
+        public EffectInstanceBase AddEffect(IEffectableObject owner, EffectInfo effectInfo, params string[] tags)
         {
             if (owner.IsAlive() == false)
             {
                 Debug.LogError("[Effect] Effect被附加在一個死體上");
-                return;
+                return null;
             }
 
             if (owner.ApprovedAddEffect(effectInfo) == false)
-                return;
+                return null;
 
             EffectInstanceBase effect = CreateEffect(effectInfo);
             EffectInstanceList effectList = GetEffectListByType(owner, effectInfo.type);
@@ -930,10 +956,9 @@ namespace MacacaGames.EffectSystem
                 //Debug.Log($"{owner}:{effectInfo.type} 當前值已達上限({effectList.GetSum()}/{effect.maxEffectValue})");
             }
 
+            return effect;
 #if (UNITY_EDITOR)
-
             OnEffectChange?.Invoke();   //Callback
-
 #endif
         }
 
@@ -943,12 +968,15 @@ namespace MacacaGames.EffectSystem
             if (string.IsNullOrEmpty(tag) == false)
                 effect.tags.Add(tag);
         }
-
         #endregion
 
         #region 移除Effect
 
-        ///<summary>移除包含特定Tag的Effect。</summary>
+        /// <summary>
+        /// Remove all EffectInstances on IEffectableObject by tags
+        /// </summary>
+        /// <param name="owner">The target IEffectableObject</param>
+        /// <param name="tag">The tag would like to remove</param>
         public void RemoveEffectByTag(IEffectableObject owner, string tag)
         {
             var effectQuery = GetEffectList(owner);
@@ -964,7 +992,11 @@ namespace MacacaGames.EffectSystem
             }
         }
 
-        ///<summary>移除指定EffectType所有的Effect實體。</summary>
+        /// <summary>
+        /// Remove all EffectInstances on IEffectableObject by EffectType
+        /// </summary>
+        /// <param name="owner">The target IEffectableObject</param>
+        /// <param name="effectType">The EffectType would like to remove</param>
         public void RemoveEffectsByType(IEffectableObject owner, string effectType)
         {
             var effectQuery = GetEffectList(owner);
@@ -978,7 +1010,11 @@ namespace MacacaGames.EffectSystem
             }
         }
 
-        ///<summary>移除指定Effect實體。</summary>
+        /// <summary>
+        /// Remove  EffectInstances on IEffectableObject 
+        /// </summary>
+        /// <param name="owner">The target IEffectableObject</param>
+        /// <param name="effect">The Effect Instance would like to remove</param>
         public void RemoveEffect(IEffectableObject owner, EffectInstanceBase effect)
         {
             var effectQuery = GetEffectList(owner);
@@ -1007,7 +1043,12 @@ namespace MacacaGames.EffectSystem
         #endregion
 
         #region 查詢Effect
-        ///<summary>搜尋包含特定Tag的Effect。</summary>
+        /// <summary>
+        /// Get Effect Instance by tag
+        /// </summary>
+        /// <param name="owner">The target IEffectableObject</param>
+        /// <param name="tag"></param>
+        /// <returns></returns>
         public List<EffectInstanceBase> GetEffectsByTag(IEffectableObject owner, string tag)
         {
             List<EffectInstanceBase> effects = new List<EffectInstanceBase>();
@@ -1025,7 +1066,12 @@ namespace MacacaGames.EffectSystem
 
             return effects;
         }
-
+        /// <summary>
+        /// Get Effect Instance by type
+        /// </summary>
+        /// <param name="owner">The target IEffectableObject</param>
+        /// <param name="tag"></param>
+        /// <returns></returns>
         public List<EffectInstanceBase> GetEffectsByType(IEffectableObject owner, string type, bool onlyGetActive = false)
         {
             List<EffectInstanceBase> effects = new List<EffectInstanceBase>();

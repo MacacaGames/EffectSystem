@@ -182,9 +182,9 @@ namespace MacacaGames.EffectSystem
             foreach (var effectView in effectViewList)
                 effectView.OnColdDownEnd();
         }
-        public void UpdateEffectCondition(float delta)
+        public void TickEffectTimer(float delta)
         {
-            condition.Update(delta);
+            condition.Tick(delta);
         }
 
         public void ResetActiveTime()

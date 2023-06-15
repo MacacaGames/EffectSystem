@@ -15,7 +15,7 @@ items:
   - MacacaGames.EffectSystem.EffectCondition.ResetActiveTime
   - MacacaGames.EffectSystem.EffectCondition.ResetColdDownTime
   - MacacaGames.EffectSystem.EffectCondition.Start
-  - MacacaGames.EffectSystem.EffectCondition.Update(System.Single)
+  - MacacaGames.EffectSystem.EffectCondition.Tick(System.Single)
   langs:
   - csharp
   - vb
@@ -305,35 +305,35 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: MacacaGames.EffectSystem.EffectCondition.Update(System.Single)
-  commentId: M:MacacaGames.EffectSystem.EffectCondition.Update(System.Single)
-  id: Update(System.Single)
+- uid: MacacaGames.EffectSystem.EffectCondition.Tick(System.Single)
+  commentId: M:MacacaGames.EffectSystem.EffectCondition.Tick(System.Single)
+  id: Tick(System.Single)
   parent: MacacaGames.EffectSystem.EffectCondition
   langs:
   - csharp
   - vb
-  name: Update(Single)
-  nameWithType: EffectCondition.Update(Single)
-  fullName: MacacaGames.EffectSystem.EffectCondition.Update(System.Single)
+  name: Tick(Single)
+  nameWithType: EffectCondition.Tick(Single)
+  fullName: MacacaGames.EffectSystem.EffectCondition.Tick(System.Single)
   type: Method
   source:
     remote:
       path: Runtime/Utility/EffectCondition.cs
       branch: main
       repo: git@github.com:MacacaGames/EffectSystem.git
-    id: Update
+    id: Tick
     path: ../Runtime/Utility/EffectCondition.cs
     startLine: 176
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem
   syntax:
-    content: public void Update(float delta)
+    content: public void Tick(float delta)
     parameters:
     - id: delta
       type: System.Single
-    content.vb: Public Sub Update(delta As Single)
-  overload: MacacaGames.EffectSystem.EffectCondition.Update*
+    content.vb: Public Sub Tick(delta As Single)
+  overload: MacacaGames.EffectSystem.EffectCondition.Tick*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -461,11 +461,11 @@ references:
   name: ForceDeactive
   nameWithType: EffectCondition.ForceDeactive
   fullName: MacacaGames.EffectSystem.EffectCondition.ForceDeactive
-- uid: MacacaGames.EffectSystem.EffectCondition.Update*
-  commentId: Overload:MacacaGames.EffectSystem.EffectCondition.Update
-  name: Update
-  nameWithType: EffectCondition.Update
-  fullName: MacacaGames.EffectSystem.EffectCondition.Update
+- uid: MacacaGames.EffectSystem.EffectCondition.Tick*
+  commentId: Overload:MacacaGames.EffectSystem.EffectCondition.Tick
+  name: Tick
+  nameWithType: EffectCondition.Tick
+  fullName: MacacaGames.EffectSystem.EffectCondition.Tick
 - uid: System.Single
   isExternal: true
   name: Single

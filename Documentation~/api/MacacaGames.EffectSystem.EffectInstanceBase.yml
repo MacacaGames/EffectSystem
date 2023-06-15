@@ -37,7 +37,7 @@ items:
   - MacacaGames.EffectSystem.EffectInstanceBase.Start
   - MacacaGames.EffectSystem.EffectInstanceBase.sumLimit
   - MacacaGames.EffectSystem.EffectInstanceBase.tags
-  - MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition(System.Single)
+  - MacacaGames.EffectSystem.EffectInstanceBase.TickEffectTimer(System.Single)
   langs:
   - csharp
   - vb
@@ -854,35 +854,35 @@ items:
   modifiers.vb:
   - Public
   - Overridable
-- uid: MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition(System.Single)
-  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition(System.Single)
-  id: UpdateEffectCondition(System.Single)
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.TickEffectTimer(System.Single)
+  commentId: M:MacacaGames.EffectSystem.EffectInstanceBase.TickEffectTimer(System.Single)
+  id: TickEffectTimer(System.Single)
   parent: MacacaGames.EffectSystem.EffectInstanceBase
   langs:
   - csharp
   - vb
-  name: UpdateEffectCondition(Single)
-  nameWithType: EffectInstanceBase.UpdateEffectCondition(Single)
-  fullName: MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition(System.Single)
+  name: TickEffectTimer(Single)
+  nameWithType: EffectInstanceBase.TickEffectTimer(Single)
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.TickEffectTimer(System.Single)
   type: Method
   source:
     remote:
       path: Runtime/EffectBase/EffectInstanceBase.cs
       branch: main
       repo: git@github.com:MacacaGames/EffectSystem.git
-    id: UpdateEffectCondition
+    id: TickEffectTimer
     path: ../Runtime/EffectBase/EffectInstanceBase.cs
     startLine: 184
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem
   syntax:
-    content: public void UpdateEffectCondition(float delta)
+    content: public void TickEffectTimer(float delta)
     parameters:
     - id: delta
       type: System.Single
-    content.vb: Public Sub UpdateEffectCondition(delta As Single)
-  overload: MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition*
+    content.vb: Public Sub TickEffectTimer(delta As Single)
+  overload: MacacaGames.EffectSystem.EffectInstanceBase.TickEffectTimer*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -1474,11 +1474,11 @@ references:
   name: OnColdownEnd
   nameWithType: EffectInstanceBase.OnColdownEnd
   fullName: MacacaGames.EffectSystem.EffectInstanceBase.OnColdownEnd
-- uid: MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition*
-  commentId: Overload:MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition
-  name: UpdateEffectCondition
-  nameWithType: EffectInstanceBase.UpdateEffectCondition
-  fullName: MacacaGames.EffectSystem.EffectInstanceBase.UpdateEffectCondition
+- uid: MacacaGames.EffectSystem.EffectInstanceBase.TickEffectTimer*
+  commentId: Overload:MacacaGames.EffectSystem.EffectInstanceBase.TickEffectTimer
+  name: TickEffectTimer
+  nameWithType: EffectInstanceBase.TickEffectTimer
+  fullName: MacacaGames.EffectSystem.EffectInstanceBase.TickEffectTimer
 - uid: MacacaGames.EffectSystem.EffectInstanceBase.ResetActiveTime*
   commentId: Overload:MacacaGames.EffectSystem.EffectInstanceBase.ResetActiveTime
   name: ResetActiveTime

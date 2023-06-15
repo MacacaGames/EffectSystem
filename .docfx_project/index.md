@@ -44,12 +44,11 @@ Note: EffectSystem is dependent on MacacaUtility, so MacacaUtility must also be 
 git submodule add https://github.com/MacacaGames/MacacaUtility.git Assets/MacacaUtility
 ```
 ---
-
 # Conecpt
 
 ## Life 
 ```mermaid
-graph TB
+graph LR
 EffectSystem.AddEffect[EffectSystem.AddEffect]---->Start[Start] 
 Start[Start] --ActiveCondition--> Active(Active)
 Active(Active)  --MaintainTime Checking--> Deactive(Deactive)
@@ -57,6 +56,41 @@ Active(Active)  --Deactive Condition--> Deactive(Deactive)
 Deactive(Deactive) --Active Condition--> Active(Active) 
 Deactive(Deactive) --CD Checking--> Active(Active) 
 Deactive(Deactive) --EffectSystem.CleanEffectableObject--> End(End)
+```
+
+## Time Manage
+Due to different game have different time unit, 
+For example: the ACT or RPG game may use the seconds as the time unit, the round-based game may use `Round` as the time unit etc.
+
+You need to implement the time calculation logic in your project.
+
+Currently each Effect Instance ownes the time manage itself, call the API the Tick the time on the Effect Instance.
+
+See the example:
+```csharp
+
+var effectAddAtkSmall = new EffectInfo{
+    id: "AddAtkSmall",
+    type: "ATK_Constant",
+    value: 100,
+    /// ignore other parameters on this example
+};
+
+IEffectableObject target;
+var effectInstance = AddRequestedEffects(target, effectAddAtkSmall);
+
+// For seconds based game, uaually can tick the timer in Update, the delta should Time.deltaTime
+void Update(){
+    effectInstance.TickEffectTimer(Time.deltaTime);
+}
+
+// For Round based game, Tick the timer in the callback of a Round, the dalta may be 1(round)
+IEnumerator Round(){
+    while(true){
+        effectInstance.TickEffectTimer(1);
+        yield return new WaitForNextRound();
+    }
+}
 ```
 
 ## EffectType
@@ -434,6 +468,7 @@ var result = GetEffectSum( target, "ATK_Constant"); // third add call
 
 #### Condition  
 Condition is summary of the following parameter: 
+
 | Field                    | Data Type | Description                                                      |
 | ------------------------ | --------- | ---------------------------------------------------------------- |
 | activeCondition          | string    | The active trigger timing of condition                           |
@@ -456,7 +491,7 @@ AddRequestedEffects(target, effectAddAtkSmall); // first add call
 
 class MyCharacter: IEffectableObject {
     void DoAttack(){
-        // All the effectInstance on 'this' object which activeCondition == "ConditionOnAttack" will try to active
+        // All the Effect Instance on 'this' object which activeCondition == "ConditionOnAttack" will try to active
         // as the result the effect with id "TriggerEffect_Sample" will be active
         EffectSystem.Instace.EffectTriggerCondition("ConditionOnAttack", this);
     }
@@ -469,7 +504,7 @@ class MyCharacter: IEffectableObject {
     void DoAttack(IEffectableObject enemy){
         // All the effectInstance on 'this' object which activeCondition == "ConditionOnAttack" will try to active
         // as the result the effect with id "TriggerEffect_Sample" will be active
-        EffectSystem.Instace.EffectTriggerCondition("ConditionOnAttack", this,enemy);
+        EffectSystem.Instace.EffectTriggerCondition("ConditionOnAttack", this, enemy);
     }
 }
 
@@ -520,27 +555,28 @@ var result = EffectSystem.Instance.GetCustomEffectsDescription(myTemplate, new[]
 // result is "Deal extra 12 damage to enemies with full HP."
 ```
 
-### The rule of the temmlate
+### The rule of the Template
 
-The temmlate use the key word to detect which part in the template should be replaced, here is the rule of a key word.
+The Template use the key word to detect which part in the template should be replaced, here is the rule of a key word.
 - Start with `{` char
 - End with `}` char
 - Use `Effect_` or `#` char to define the EffectType, for instance #Atk_Ratio means use the Atk_Ratio EffectType
 - Use `.` to access the member in the EffectInfo, the `.` can continue with the key follow the table
 - Use `subinfo` or  `>` to access the EffectInfo in subinfo
 
-| Key                 | Description                                            |
-| ------------------- | ------------------------------------------------------ |
-| value               | use the `value` member in the EffectInfo               |
-| val                 | same as value but simplified                           |
-| maintainTime        | use the `maintainTime` member in the EffectInfo        |
-| time                | same as `maintainTime` but simplified                  |
-| cooldownTime        | use the `cooldownTime` member in the EffectInfo        |
-| cd                  | same as `cooldownTime` but simplified                  |
-| activeProbability   | use the `activeProbability` member in the EffectInfo   |
-| activeProb          | same as `activeProbability` but simplified             |
-| deactiveProbability | use the `deactiveProbability` member in the EffectInfo |
-| deactiveProb        | same as `deactiveProbability` but simplified           |
+| Key                 | Description                                                                                |
+| ------------------- | ------------------------------------------------------------------------------------------ |
+| value               | use the `value` member in the EffectInfo                                                   |
+| val                 | same as value but simplified                                                               |
+| maintainTime        | use the `maintainTime` member in the EffectInfo                                            |
+| time                | same as `maintainTime` but simplified                                                      |
+| cooldownTime        | use the `cooldownTime` member in the EffectInfo                                            |
+| cd                  | same as `cooldownTime` but simplified                                                      |
+| activeProbability   | use the `activeProbability` member in the EffectInfo                                       |
+| activeProb          | same as `activeProbability` but simplified                                                 |
+| deactiveProbability | use the `deactiveProbability` member in the EffectInfo                                     |
+| deactiveProb        | same as `deactiveProbability` but simplified                                               |
+| :%                  | The value will be display as percentage, the value will *100 first and then display as oo% |
 
 ## Default Description
 It is recommand to make Default Description for all EffectType
@@ -576,29 +612,139 @@ var result = EffectSystem.Instance.GetDefaultEffectDescription(effect_sample_01)
 
 // Or provide multiple EffectInfo, the system will auto combine all Description line by line
 var result = EffectSystem.Instance.GetDefaultEffectDescription(new []{effect_sample_01, effect_sample_02});
-/* result will be 
+/* 
+result will be 
 
 Deal extra 123 damage to enemies with full HP.
 Reduce 999 damage taken.
+*/
+```
+
+A more complicated example
+```csharp
+var effect_sample_01 = new EffectInfo{
+    id: "effect_sample_01",
+    type: "Trigger_Attach",
+    value: 0,
+    subInfoIds:new []{"effect_sample_subinfo_01"}
+};
+
+var effect_sample_02 = new EffectInfo{
+    id: "effect_sample_02",
+    type: "Atk_Ratio",
+    maintainTime: 4.5,
+    value: 999
+};
+
+// This case the `effect_sample_01` has subInfos, so we need to registe the EffectDataProvider, the subInfo is query during runtime
+var effect_sample_subinfo_01 = new EffectInfo{
+    id: "effect_sample_subinfo_01",
+    type: "Trigger_HitSelf_Constant",
+    value: 555
+};
+
+var effects = new []{effect_sample_01, effect_sample_02, effect_sample_subinfo_01};
+EffectDataProvider.SetEffectInfoDelegate(
+    (List<string> effectIds) =>
+    {
+        return effects.Where(m => effectIds.Contains(m.id)).ToList();
+    }
+);
+
+var myTemplate = @"Deal extra {Effect_Trigger_Attach>Effect_Trigger_HitSelf_Constant.value} damage to enemies with 50% or less HP.
+Increase {Effect_Atk_Ratio.value} Attack for {Effect_Atk_Ratio.time} seconds after killing an enemy.";
+
+// Or provide multiple EffectInfo, the system will auto combine all Description line by line
+// The subInfo is resolve in runtime, so only send the root EffectInfos
+var result = EffectSystem.Instance.GetCustomEffectsDescription(myTemplate, new []{effect_sample_01, effect_sample_02});
+/* 
+result will be 
+
+Deal extra 555 damage to enemies with 50% or less HP.
+Increase 999 Attack for 4.5 seconds after killing an enemy.
+*/
 ```
 
 > It is always recommended to use `EffectSystem.Instance.GetCustomEffectsDescription()` to generate a `human-kindly` Description 
+> 
 > But the `EffectSystem.Instance.GetDefaultEffectDescription()` provide a simple way to automatically generate at least a `human-readable` Description
+
+
+
+# Prepare Your Data
+After understanding the concept of the EffectSystem, it's time to prepare your runtime data, on perious samples, we directly create new EffectInfo with the constructor, but there are some other method to setting up your effect datas.
+
+## Unity Serialization
+The basic way is to create a `List<EffectInfo>` in somewhere(MonoBehaviour/ScriptableObject) in your project, then use the Unity Inspector to edit them. 
+
+### EffectGroup
+EffectGroup is a pre-define Unity ScriptableObject to help you store the EffectInfo in your Unity.
+It provide some very useful feature:
+- Export the current EffectInfo(s) to Json format
+- Import EffectInfo(s) from Json
+- Directly using EffectGroup in most of EffectSystem APIs
+<img src="./Img~/effectgroup.png" />
+
+## Google Sheet Template
+
+For more convience of batch data editing, we design a Google Sheet to help this stuff.
+
+Here's the Table Example: [Effect Data Sample Table](https://docs.google.com/spreadsheets/d/1N_Bzdc1XSgyqXYlBlHYp0-XWBlFA-AAw_AUBdIEWj5U/edit?usp=sharing)
+
+Please make a copy of this sample and do any modification yourself!
+
+### Pre Baked String for strong Type usage
+
+On the `ScriptOptions` tab in the Sheet, you can copy directly the `A1` field to the `Effect Editor Window` to pre-baked all string parameter in your sheet, since the system use string as the ID to refer other resource, for more safety usage, it's recommend to use pre-baked string define for all your parameters. 
+
+
+## EffectDataProvider
+
+EffectDataProvider provide the runtime data resource for the runtime data providing, for instance, if you have using the `subInfo` feature, the system require delegate to get the EffectType by Id in runtime.
+Since different project manage its owne EffectInfos, you need to regist the method to make all feature works.
+
+```csharp
+public static class EffectDataProvider
+{
+    public static Func<List<string>, List<EffectInfo>> GetEffectInfo { get; private set; }
+    public static void SetEffectInfoDelegate(Func<List<string>, List<EffectInfo>> GetEffectInfo)
+    {
+        EffectDataProvider.GetEffectInfo = GetEffectInfo;
+    }
+
+    public static Func<List<string>, List<EffectViewInfo>> GetEffectViewInfo { get; private set; }
+    public static void SeEffectViewInfoDelegate(Func<List<string>, List<EffectViewInfo>> GetEffectViewInfo)
+    {
+        EffectDataProvider.GetEffectViewInfo = GetEffectViewInfo;
+    }
+
+    public static Func<string, string> GetEffectDescriptionString { get; private set; }
+
+    public static void SetEffectDescriptionStringDelegate(Func<string, string> GetEffectDescriptionString)
+    {
+        EffectDataProvider.GetEffectDescriptionString = GetEffectDescriptionString;
+    }
+
+    public static Dictionary<string, Type> EffectTypeQuery = new Dictionary<string, Type>();
+    public static void RegisteEffectTypeQuery(Dictionary<string, Type> EffectTypeQuery)
+    {
+        EffectDataProvider.EffectTypeQuery = EffectTypeQuery;
+    }
+}
+
+
+public class AssetManager{
+    void Awake(){
+        EffectDataProvider.SetEffectInfoDelegate(MyEffectQueryMethod);
+    }
+}
+
+```
 
 # Effect View
 To Be Continue
 
-# Code Generate
-
-## Pre Baked String for strong Type usage
-
-The system use string as the ID to refer other resource, for more safety usage, it's recommend to use pre-baked string define for all your options. 
-
-Here's the Table Example
-[Effect Data Sample](https://docs.google.com/spreadsheets/d/1zYKiOlThAqTMVuUPHcxeQGX7rBRLp5E-49ci-GCZBa8/edit?usp=drive_link)
-Add or remove the content of each field's Enum according to different needs and Use the **EffectSystemEditorWindow** to generate the Strings.
-
-
+# Serialization
 ## MessagePack
 The MessagePack.Csharp should do a code generate first to make the EffectInfo available to use on AOT Platform
 

@@ -21,7 +21,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: EffectTypeGroupAttribute
     path: ../Runtime/Component/EffectSystem.cs
-    startLine: 1075
+    startLine: 1121
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem
@@ -56,7 +56,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: .ctor
     path: ../Runtime/Component/EffectSystem.cs
-    startLine: 1078
+    startLine: 1124
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem
@@ -89,7 +89,7 @@ items:
       repo: git@github.com:MacacaGames/EffectSystem.git
     id: group
     path: ../Runtime/Component/EffectSystem.cs
-    startLine: 1082
+    startLine: 1128
   assemblies:
   - Macaca.EffectSystem
   namespace: MacacaGames.EffectSystem

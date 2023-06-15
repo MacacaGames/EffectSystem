@@ -174,7 +174,7 @@ namespace MacacaGames.EffectSystem
         }
 
         #region Time Management
-        public void Update(float delta)
+        public void Tick(float delta)
         {
             if (currentColddownStartTime > 0)
             {
