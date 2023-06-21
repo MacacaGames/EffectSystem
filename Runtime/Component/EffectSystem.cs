@@ -14,6 +14,8 @@ namespace MacacaGames.EffectSystem
     public class EffectSystem : MonoBehaviour
     {
         public static EffectSystem Instance;
+
+        public Dictionary<string, TimerTicker> timerTickers = new Dictionary<string, TimerTicker>();
         void Awake()
         {
             Instance = this;
@@ -21,31 +23,58 @@ namespace MacacaGames.EffectSystem
             {
                 effectViewPoolFolder = transform;
             }
+            AddTimerTicker(EffectSystemScriptable.TimerTickerId.Default);
         }
-
         #region TimeManagement
 
-        public void TickEffectTimer(float delta)
+
+        /// <summary>
+        /// Add a timer Ticker to the system
+        /// </summary>
+        /// <param name="Id">The ticker's Id</param>  
+        public void AddTimerTicker(string Id)
         {
-            foreach (var item in effectableObjectQuery)
+            timerTickers.TryAdd(Id, new TimerTicker(Id));
+        }
+
+        /// <summary>
+        /// Tick a TimerTicker by Id
+        /// </summary>
+        /// <param name="Id">The id of the TimerTicker</param>
+        /// <param name="delta">The time delta value, should be positive</param>
+        public void TickEffectTimer(string Id, float delta)
+        {
+            if (timerTickers.TryGetValue(Id, out TimerTicker timerTicker))
             {
-                TickEffectTimer(delta, item.Key);
+                timerTicker.Tick(delta);
             }
         }
 
-        public void TickEffectTimer(float delta, IEffectableObject owner)
+        internal void AddToTimerTicker(string Id, IEffectTimer effectTimer)
         {
-            var keys = new List<string>(GetEffectList(owner).Keys);
-            for (int i = 0; i < keys.Count; i++)
+            if (timerTickers.TryGetValue(Id, out TimerTicker timerTicker))
             {
-                var key = keys[i];
-                var effectList = GetEffectList(owner)[key];
-                foreach (EffectInstanceBase effect in effectList)
-                {
-                    effect.TickEffectTimer(delta);
-                }
+                timerTicker.AddTimer(effectTimer);
+            }
+            else
+            {
+                Debug.LogError($"No available timer with id: {Id}, is found, do nothing, you may need to check it out!");
             }
         }
+
+        internal void RemoveFromTimerTicker(string Id, IEffectTimer effectTimer)
+        {
+            if (timerTickers.TryGetValue(Id, out TimerTicker timerTicker))
+            {
+                timerTicker.RemoveTimer(effectTimer);
+            }
+            else
+            {
+                Debug.LogError($"No available timer with id: {Id}, is found, do nothing, you may need to check it out!");
+            }
+        }
+
+       
 
         #endregion
 
@@ -216,17 +245,7 @@ namespace MacacaGames.EffectSystem
         #endregion
 
 
-        public void ResetEffectActiveTimeAndCooldownTime(IEffectableObject owner)
-        {
-            foreach (var effectList in GetEffectList(owner).Values)
-            {
-                foreach (EffectInstanceBase effect in effectList)
-                {
-                    effect.ResetActiveTime();
-                    effect.ResetColdDownTime();
-                }
-            }
-        }
+       
 
         Transform effectViewPoolFolder;
         public Dictionary<GameObject, Queue<EffectViewBase>> effectViewPool = new Dictionary<GameObject, Queue<EffectViewBase>>();
@@ -1119,6 +1138,8 @@ namespace MacacaGames.EffectSystem
                 return null;
             }
         }
+
+
 
         //Effect變動時的Callback
         public Action OnEffectChange;

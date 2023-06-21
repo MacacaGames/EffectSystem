@@ -9,11 +9,12 @@ namespace MacacaGames.EffectSystem
 {
     public class EffectCondition
     {
-
         public EffectInstanceBase effectInstance;
 
         EffectInfo effectInfo => effectInstance.info;
 
+        internal IEffectTimer maintainTimeTimer;
+        internal IEffectTimer cooldownTimeTimer;
 
         public bool isActive { get; private set; }
 
@@ -21,7 +22,15 @@ namespace MacacaGames.EffectSystem
         {
             this.effectInstance = effectInstance;
             isActive = false;
+
+            cooldownTimeTimer = new DefaultTimerBase(
+                null, OnColdDownTimeEnd, null, null
+            );
+            maintainTimeTimer = new DefaultTimerBase(
+               null, OnMaintainTimeEnd, null, null
+           );
         }
+
         public void Start()
         {
             //在EditMode時不走Condition，直接Active
@@ -40,7 +49,7 @@ namespace MacacaGames.EffectSystem
             }
             else
             {
-                OnColdDownTimeEnd();
+                cooldownTimeTimer.OnTimerComplete();
             }
         }
 
@@ -54,7 +63,7 @@ namespace MacacaGames.EffectSystem
                 });
             }
 
-            StopActiveMaintainTime();
+            maintainTimeTimer.Stop();
         }
 
         // Active / Deactive
@@ -71,7 +80,7 @@ namespace MacacaGames.EffectSystem
             }
 
             //檢查ColdDown
-            if (CheckColdDownTime() == false)
+            if (cooldownTimeTimer.IsCounting == false)
             {
                 return;
             }
@@ -120,10 +129,8 @@ namespace MacacaGames.EffectSystem
             else
             {
                 //不會自毀的話才算時間
-                StartActiveMaintainTime();
+                maintainTimeTimer.Start(effectInfo.maintainTime);
             }
-
-   
         }
 
         public void OnDeactive(EffectTriggerConditionInfo info)
@@ -152,8 +159,8 @@ namespace MacacaGames.EffectSystem
 
             isActive = false;
 
-            StopActiveMaintainTime();
-            StartColdDownTime();
+            maintainTimeTimer.Stop();
+            cooldownTimeTimer.Start(effectInfo.cooldownTime);
 
             effectInstance.OnDeactive(info);
         }
@@ -173,122 +180,12 @@ namespace MacacaGames.EffectSystem
             }
         }
 
-        #region Time Management
-        public void Tick(float delta)
+        void OnMaintainTimeEnd()
         {
-            if (currentColddownStartTime > 0)
-            {
-                currentColddownStartTime -= delta;
-            }
-            if (currentMaintainTime > 0)
-            {
-                currentMaintainTime -= delta;
-            }
-        }
-        #endregion
-        #region Cold Time         
-
-        bool CheckColdDownTime()
-        {
-            if (effectInfo.cooldownTime < 0)
-                return false;
-
-            return currentColddownStartTime > 0;
-        }
-
-        float currentColddownStartTime = 0;
-        Coroutine coldTimeCoroutine;
-        void StartColdDownTime()
-        {
-            currentColddownStartTime = effectInfo.cooldownTime;
-            if (effectInfo.cooldownTime > 0F)
-            {
-                coldTimeCoroutine = CoroutineManager.Instance.StartCoroutine(ColdDownTimeChecking());
-            }
-
-            IEnumerator ColdDownTimeChecking()
-            {
-                while (true)
-                {
-                    if (currentColddownStartTime <= 0 || Mathf.Approximately(currentColddownStartTime, 0))
-                        break;
-                    yield return null;
-                }
-                ColdDownTimeEndTrigger();
-            }
-
-            void ColdDownTimeEndTrigger()
-            {
-                coldTimeCoroutine = null;
-                OnColdDownTimeEnd();
-            }
-        }
-
-        void StopColdDownTime()
-        {
-            if (coldTimeCoroutine != null)
-            {
-                CoroutineManager.Instance.StopCoroutine(coldTimeCoroutine);
-            }
-        }
-        #endregion
-
-        #region Maintain Time
-
-        float currentMaintainTime = 0;
-        Coroutine maintainTimeCoroutine = null;
-        void StartActiveMaintainTime()
-        {
-            float currentMaintainTime = effectInfo.maintainTime;
-
-            if (currentMaintainTime > 0F)
-            {
-                CoroutineManager.Instance.StartCoroutine(MaintainTimeChecking());
-            }
-
-            IEnumerator MaintainTimeChecking()
-            {
-                while (true)
-                {
-                    if (currentMaintainTime <= 0 || Mathf.Approximately(currentMaintainTime, 0))
-                        break;
-                    yield return null;
-                }
-                MaintainTimeEndTrigger();
-            }
-        }
-
-        void StopActiveMaintainTime()
-        {
-            if (maintainTimeCoroutine != null)
-            {
-                CoroutineManager.Instance.StopCoroutine(maintainTimeCoroutine);
-            }
-        }
-
-        void MaintainTimeEndTrigger()
-        {
-            maintainTimeCoroutine = null;
             ForceDeactive(new EffectTriggerConditionInfo
             {
                 owner = effectInstance.owner
             });
-        }
-
-        #endregion
-
-        public void ResetActiveTime()
-        {
-            if (maintainTimeCoroutine != null)
-            {
-                StopActiveMaintainTime();
-                MaintainTimeEndTrigger();
-            }
-        }
-
-        public void ResetColdDownTime()
-        {
-            StopColdDownTime();
         }
     }
 }
