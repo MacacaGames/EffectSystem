@@ -37,19 +37,27 @@ namespace MacacaGames.EffectSystem
 
         public void Tick(float delta)
         {
-            foreach (var item in timers)
-            {
-                item.Tick(delta);
-            }
             while (waitForAddTimer.Count > 0)
             {
+                UnityEngine.Debug.Log($"TimerTicker add {waitForAddTimer.Count}");
+
                 var item = waitForAddTimer.Dequeue();
                 timers.Add(item);
             }
             while (waitForRemoveTimer.Count > 0)
             {
+                UnityEngine.Debug.Log($"TimerTicker remove {waitForRemoveTimer.Count}");
+
                 var item = waitForRemoveTimer.Dequeue();
                 timers.Remove(item);
+            }
+
+            UnityEngine.Debug.Log($"TimerTicker Tick(float {delta})");
+            foreach (var item in timers)
+            {
+                UnityEngine.Debug.Log($"real TimerTicker Tick(float {delta})");
+
+                item.Tick(delta);
             }
         }
     }
@@ -62,6 +70,8 @@ namespace MacacaGames.EffectSystem
         bool IsStop { get; }
         bool IsCounting { get; }
         bool IsFinish { get; }
+
+        float CurrentTime { get; }
 
         /// <summary>
         /// Start a timer with target time

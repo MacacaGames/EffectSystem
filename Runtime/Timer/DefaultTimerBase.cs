@@ -28,6 +28,15 @@ namespace MacacaGames.EffectSystem
 
         public bool IsCounting => currentTime > 0;
 
+        public float CurrentTime
+        {
+            get
+            {
+
+                return currentTime;
+            }
+        }
+
         bool isPause = false;
         bool isStop = false;
         float currentTime = -1;
@@ -39,8 +48,10 @@ namespace MacacaGames.EffectSystem
 
         public void Tick(float delta)
         {
+            Debug.Log($"Tick(float {delta})");
             if (isStop == false && isPause == false && currentTime > 0)
             {
+                Debug.Log($"real Tick(float {delta})");
                 currentTime -= delta;
             }
         }
@@ -55,6 +66,7 @@ namespace MacacaGames.EffectSystem
 
         public void Start(float targetTime)
         {
+            Debug.Log($"Start counting: {targetTime}");
             currentTime = targetTime;
             checkingCoroutine = CoroutineManager.Instance.StartCoroutine(TimerChecking());
             OnTimerStart();

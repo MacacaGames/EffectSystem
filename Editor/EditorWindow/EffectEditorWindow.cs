@@ -275,8 +275,10 @@ namespace MacacaGames.EffectSystem.Editor
             }
 
             if (effect.info.cooldownTime > 0F)
-                root.Add(new Label($"CD:{effect.info.cooldownTime}s").AddClass("effect-coldTime").AddClass("effect-round"));
+                root.Add(new Label($"CD:{effect.condition.cooldownTimeTimer.CurrentTime}/{effect.info.cooldownTime}s").AddClass("effect-coldTime").AddClass("effect-round"));
 
+            if (effect.info.maintainTime > 0F)
+                root.Add(new Label($"Time:{effect.condition.maintainTimeTimer.CurrentTime}/{effect.info.maintainTime}s").AddClass("effect-maintainTime").AddClass("effect-round"));
 
             root.Add(
                 new Button(() => { effectSystem.RemoveEffect(effect.owner, effect); })

@@ -13,8 +13,8 @@ namespace MacacaGames.EffectSystem
 
         EffectInfo effectInfo => effectInstance.info;
 
-        internal IEffectTimer maintainTimeTimer;
-        internal IEffectTimer cooldownTimeTimer;
+        public IEffectTimer maintainTimeTimer { get; private set; }
+        public IEffectTimer cooldownTimeTimer { get; private set; }
 
         public bool isActive { get; private set; }
 
@@ -80,7 +80,7 @@ namespace MacacaGames.EffectSystem
             }
 
             //檢查ColdDown
-            if (cooldownTimeTimer.IsCounting == false)
+            if (cooldownTimeTimer.IsCounting == true)
             {
                 return;
             }

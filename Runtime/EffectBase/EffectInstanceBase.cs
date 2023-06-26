@@ -85,11 +85,12 @@ namespace MacacaGames.EffectSystem
             foreach (var effectView in effectViewList)
                 effectView.OnStart();
 
-            condition.Start();
-            OnStart();
-
+            // Sould be Add before Start(), since in some case the effect may deactive immiditily after start, then the condition will be null
             effectSystem.AddToTimerTicker(EffectSystemScriptable.TimerTickerId.Default, condition.maintainTimeTimer);
             effectSystem.AddToTimerTicker(EffectSystemScriptable.TimerTickerId.Default, condition.cooldownTimeTimer);
+            condition.Start();
+
+            OnStart();
         }
 
         /// <summary>

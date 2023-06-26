@@ -58,6 +58,9 @@
 .effect-coldTime {
     background-color: rgba(128, 128, 128, 0.13);
 }
+.effect-maintainTime {
+    background-color: rgba(128, 128, 128, 0.13);
+}
 
 .effect-remove-btn {
     width: 24px;
