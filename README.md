@@ -713,20 +713,8 @@ public static class EffectDataProvider
     {
         EffectDataProvider.GetEffectDescriptionString = GetEffectDescriptionString;
     }
-
-    public static Dictionary<string, Type> EffectTypeQuery = new Dictionary<string, Type>();
-    public static void RegisteEffectTypeQuery(Dictionary<string, Type> EffectTypeQuery)
-    {
-        EffectDataProvider.EffectTypeQuery = EffectTypeQuery;
-    }
 }
 
-
-public class AssetManager{
-    void Awake(){
-        EffectDataProvider.SetEffectInfoDelegate(MyEffectQueryMethod);
-    }
-}
 
 ```
 

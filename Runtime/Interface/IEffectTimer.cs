@@ -39,23 +39,23 @@ namespace MacacaGames.EffectSystem
         {
             while (waitForAddTimer.Count > 0)
             {
-                UnityEngine.Debug.Log($"TimerTicker add {waitForAddTimer.Count}");
+                // UnityEngine.Debug.Log($"TimerTicker add {waitForAddTimer.Count}");
 
                 var item = waitForAddTimer.Dequeue();
                 timers.Add(item);
             }
             while (waitForRemoveTimer.Count > 0)
             {
-                UnityEngine.Debug.Log($"TimerTicker remove {waitForRemoveTimer.Count}");
+                // UnityEngine.Debug.Log($"TimerTicker remove {waitForRemoveTimer.Count}");
 
                 var item = waitForRemoveTimer.Dequeue();
                 timers.Remove(item);
             }
 
-            UnityEngine.Debug.Log($"TimerTicker Tick(float {delta})");
+            // UnityEngine.Debug.Log($"TimerTicker Tick(float {delta})");
             foreach (var item in timers)
             {
-                UnityEngine.Debug.Log($"real TimerTicker Tick(float {delta})");
+                // UnityEngine.Debug.Log($"real TimerTicker Tick(float {delta})");
 
                 item.Tick(delta);
             }

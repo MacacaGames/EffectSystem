@@ -74,19 +74,36 @@ namespace MacacaGames.EffectSystem
             }
         }
 
-       
+
 
         #endregion
 
         #region EffectDefine
+        static Type effectInstanceBaseType = typeof(EffectInstanceBase);
+        static Dictionary<string, Type> EffectTypeInstanceCache = new Dictionary<string, Type>();
 
         static Type QueryEffectTypeWithDefault(string effectType)
         {
-            if (!EffectDataProvider.EffectTypeQuery.ContainsKey(effectType))
+            string typeFullName = $"Effect_{effectType}";
+            Type result = effectInstanceBaseType;
+            if (EffectTypeInstanceCache.TryGetValue(effectType, out result))
             {
-                effectType = "EffectBase";
+                return result;
             }
-            return EffectDataProvider.EffectTypeQuery[effectType];
+            
+            var type = Utility.GetType(typeFullName);
+            if (type != null)
+            {
+                if (!type.IsSubclassOf(effectInstanceBaseType))
+                {
+                    Debug.LogError($"The EffectTypeInstance implements of EffectType: {effectType}, is not inherit from MacacaGames.EffectSystem.EffectInstanceBase please checked, system will automatically fallback to MacacaGames.EffectSystem.EffectInstanceBase");
+                    return result;
+                }
+                EffectTypeInstanceCache.TryAdd(effectType, type);
+                result = type;
+                return result;
+            }
+            return result;
         }
 
         #endregion
@@ -245,7 +262,7 @@ namespace MacacaGames.EffectSystem
         #endregion
 
 
-       
+
 
         Transform effectViewPoolFolder;
         public Dictionary<GameObject, Queue<EffectViewBase>> effectViewPool = new Dictionary<GameObject, Queue<EffectViewBase>>();
@@ -1004,7 +1021,7 @@ namespace MacacaGames.EffectSystem
         /// Remove all EffectInstances on IEffectableObject by tags
         /// </summary>
         /// <param name="owner">The target IEffectableObject</param>
-        /// <param name="tag">The tag would like to remove</param>
+        /// <param name="tag">The tag on EffectInstance would like to remove</param>
         public void RemoveEffectByTag(IEffectableObject owner, string tag)
         {
             var effectQuery = GetEffectList(owner);
