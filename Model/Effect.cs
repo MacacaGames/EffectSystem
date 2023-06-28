@@ -192,12 +192,72 @@ namespace MacacaGames.EffectSystem.Model
     public struct EffectTriggerConditionInfo
     {
         public IEffectableObject owner;     //Effect的Owner
-        public IEffectableObject target;    //Effect的Target
+        public IEffectableObject target     //Effect的第一個Target
+        {
+            get
+            {
+                if (targets == null || targets.Count == 0)
+                {
+                    return null;
+                }
+                return targets[0];
+            }
+        }
+        public List<IEffectableObject> targets;   //Effect的Targets
 
-        public EffectTriggerConditionInfo(IEffectableObject owner, IEffectableObject target = null)
+        // function to cast owner to type T
+        public T GetOwner<T>() where T : class
+        {
+            if(owner == null)
+            {
+                throw new Exception("EffectTriggerConditionInfo GetOwner but no owner");
+            } 
+
+            var result = owner as T;
+            if(result == null)
+            {
+                throw new Exception("EffectTriggerConditionInfo GetOwner but cast failed");
+            }
+
+            return result;
+        }
+        // function to cast targets to type T
+        public List<T> GetTargets<T>() where T : class
+        {
+            if (targets == null || targets.Count == 0)
+            {
+                throw new Exception("EffectTriggerConditionInfo GetTargets but no targets");
+            }
+
+
+            var list = new List<T>();
+            try
+            {
+                list = targets.Select(x => x as T).ToList();
+            }
+            catch
+            {
+                throw new Exception("EffectTriggerConditionInfo GetTargets but cast failed");
+            }
+
+            return list;
+        }
+        public EffectTriggerConditionInfo(IEffectableObject owner, IEffectableObject target = null, IEffectableObject effectableObject = null)
         {
             this.owner = owner;
-            this.target = target;
+            if (target == null)
+            {
+                this.targets = new List<IEffectableObject>();
+            }
+            else
+            {
+                this.targets = new List<IEffectableObject>() { target };
+            }
+        }
+        public EffectTriggerConditionInfo(IEffectableObject owner, List<IEffectableObject> targets = null)
+        {
+            this.owner = owner;
+            this.targets = targets;
         }
     }
 }
