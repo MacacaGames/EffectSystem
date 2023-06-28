@@ -1,4 +1,4 @@
-﻿//#define USE_LOG
+﻿#define USE_LOG
 
 using UnityEngine;
 using System.Collections.Generic;
@@ -50,7 +50,12 @@ namespace MacacaGames.EffectSystem
             isUsing = false;
             isSleep = false;
 
-            condition = null;
+            if (condition != null)
+            {
+                effectSystem.RemoveFromTimerTicker(EffectSystemScriptable.TimerTickerId.Default, condition.maintainTimeTimer);
+                effectSystem.RemoveFromTimerTicker(EffectSystemScriptable.TimerTickerId.Default, condition.cooldownTimeTimer);
+                condition = null;
+            }
             owner = null;
 
             info = effectInfo;
@@ -62,15 +67,12 @@ namespace MacacaGames.EffectSystem
             {
                 condition = new EffectCondition(this);
             }
-
-            ResetActiveTime();
-            ResetColdDownTime();
         }
 
         public void Start()
         {
 #if (USE_LOG)
-        Debug.Log(GetStartEffectLog());
+            Debug.Log(GetStartEffectLog());
 #endif
 
             isUsing = true;
@@ -83,9 +85,12 @@ namespace MacacaGames.EffectSystem
             foreach (var effectView in effectViewList)
                 effectView.OnStart();
 
+            // Sould be Add before Start(), since in some case the effect may deactive immiditily after start, then the condition will be null
+            effectSystem.AddToTimerTicker(EffectSystemScriptable.TimerTickerId.Default, condition.maintainTimeTimer);
+            effectSystem.AddToTimerTicker(EffectSystemScriptable.TimerTickerId.Default, condition.cooldownTimeTimer);
             condition.Start();
-            OnStart();
 
+            OnStart();
         }
 
         /// <summary>
@@ -142,6 +147,9 @@ namespace MacacaGames.EffectSystem
 
         public void End()
         {
+            effectSystem.RemoveFromTimerTicker(EffectSystemScriptable.TimerTickerId.Default, condition.maintainTimeTimer);
+            effectSystem.RemoveFromTimerTicker(EffectSystemScriptable.TimerTickerId.Default, condition.cooldownTimeTimer);
+
             if (isUsing == false)
             {
 
@@ -167,7 +175,7 @@ namespace MacacaGames.EffectSystem
 
 
 #if (USE_LOG)
-        Debug.Log(GetEndEffectLog());
+            Debug.Log(GetEndEffectLog());
 #endif
 
         }
@@ -181,20 +189,6 @@ namespace MacacaGames.EffectSystem
         {
             foreach (var effectView in effectViewList)
                 effectView.OnColdDownEnd();
-        }
-        public void TickEffectTimer(float delta)
-        {
-            condition.Tick(delta);
-        }
-
-        public void ResetActiveTime()
-        {
-            condition.ResetActiveTime();
-        }
-
-        public void ResetColdDownTime()
-        {
-            condition.ResetColdDownTime();
         }
 
 
@@ -255,7 +249,7 @@ namespace MacacaGames.EffectSystem
             //Condition存在，且Condition成立則傳值，否則傳回0
             if (condition != null && condition.isActive == false) return 0F;
 
-            return GetOriginValue() * owner.GetRuntimeValue(info.GetParameterByKey("inputType"));
+            return GetOriginValue();
         }
         public virtual float GetOriginValue()
         {

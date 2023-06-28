@@ -191,9 +191,8 @@ namespace MacacaGames.EffectSystem.Editor
 
                     }
                 }
-
-
             };
+            
             searchField = cloneTree.Q<TextField>("SearchText");
             searchField.RegisterValueChangedCallback(_ => searchText = _.newValue);
 
@@ -275,8 +274,10 @@ namespace MacacaGames.EffectSystem.Editor
             }
 
             if (effect.info.cooldownTime > 0F)
-                root.Add(new Label($"CD:{effect.info.cooldownTime}s").AddClass("effect-coldTime").AddClass("effect-round"));
+                root.Add(new Label($"CD: {effect.condition.cooldownTimeTimer.CurrentTime.ToString("F2")}/{effect.info.cooldownTime.ToString("F2")}").AddClass("effect-coldTime").AddClass("effect-round"));
 
+            if (effect.info.maintainTime > 0F)
+                root.Add(new Label($"Time: {effect.condition.maintainTimeTimer.CurrentTime.ToString("F2")}/{effect.info.maintainTime.ToString("F2")}").AddClass("effect-maintainTime").AddClass("effect-round"));
 
             root.Add(
                 new Button(() => { effectSystem.RemoveEffect(effect.owner, effect); })
