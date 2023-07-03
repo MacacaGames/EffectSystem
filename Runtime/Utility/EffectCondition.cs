@@ -40,7 +40,7 @@ namespace MacacaGames.EffectSystem
                 return;
             }
 
-            if (effectInfo.activeCondition == EffectSystemScriptable.ActiveCondition.OnEffectStart)
+            if (effectInfo.activeCondition == EffectSystemScriptableBuiltIn.ActiveCondition.OnEffectStart)
             {
                 OnActive(new EffectTriggerConditionInfo
                 {
@@ -114,7 +114,7 @@ namespace MacacaGames.EffectSystem
 
             effectInstance.OnActive(info);
 
-            if (effectInfo.deactiveCondition == EffectSystemScriptable.DeactiveCondition.AfterActive)
+            if (effectInfo.deactiveCondition == EffectSystemScriptableBuiltIn.DeactiveCondition.AfterActive)
             {
                 ForceDeactive(new EffectTriggerConditionInfo
                 {

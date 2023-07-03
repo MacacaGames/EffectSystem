@@ -52,8 +52,8 @@ namespace MacacaGames.EffectSystem
 
             if (condition != null)
             {
-                effectSystem.RemoveFromTimerTicker(EffectSystemScriptable.TimerTickerId.Default, condition.maintainTimeTimer);
-                effectSystem.RemoveFromTimerTicker(EffectSystemScriptable.TimerTickerId.Default, condition.cooldownTimeTimer);
+                effectSystem.RemoveFromTimerTicker(EffectSystemScriptableBuiltIn.TimerTickerId.Default, condition.maintainTimeTimer);
+                effectSystem.RemoveFromTimerTicker(EffectSystemScriptableBuiltIn.TimerTickerId.Default, condition.cooldownTimeTimer);
                 condition = null;
             }
             owner = null;
@@ -86,8 +86,8 @@ namespace MacacaGames.EffectSystem
                 effectView.OnStart();
 
             // Sould be Add before Start(), since in some case the effect may deactive immiditily after start, then the condition will be null
-            effectSystem.AddToTimerTicker(EffectSystemScriptable.TimerTickerId.Default, condition.maintainTimeTimer);
-            effectSystem.AddToTimerTicker(EffectSystemScriptable.TimerTickerId.Default, condition.cooldownTimeTimer);
+            effectSystem.AddToTimerTicker(EffectSystemScriptableBuiltIn.TimerTickerId.Default, condition.maintainTimeTimer);
+            effectSystem.AddToTimerTicker(EffectSystemScriptableBuiltIn.TimerTickerId.Default, condition.cooldownTimeTimer);
             condition.Start();
 
             OnStart();
@@ -147,8 +147,8 @@ namespace MacacaGames.EffectSystem
 
         public void End()
         {
-            effectSystem.RemoveFromTimerTicker(EffectSystemScriptable.TimerTickerId.Default, condition.maintainTimeTimer);
-            effectSystem.RemoveFromTimerTicker(EffectSystemScriptable.TimerTickerId.Default, condition.cooldownTimeTimer);
+            effectSystem.RemoveFromTimerTicker(EffectSystemScriptableBuiltIn.TimerTickerId.Default, condition.maintainTimeTimer);
+            effectSystem.RemoveFromTimerTicker(EffectSystemScriptableBuiltIn.TimerTickerId.Default, condition.cooldownTimeTimer);
 
             if (isUsing == false)
             {

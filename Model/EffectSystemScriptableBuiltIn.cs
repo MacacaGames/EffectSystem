@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace MacacaGames.EffectSystem
 {
-    public partial struct EffectSystemScriptable
+    public partial struct EffectSystemScriptableBuiltIn
     {
         public partial struct DeactiveCondition
         {

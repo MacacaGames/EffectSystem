@@ -23,7 +23,7 @@ namespace MacacaGames.EffectSystem
             {
                 effectViewPoolFolder = transform;
             }
-            AddTimerTicker(EffectSystemScriptable.TimerTickerId.Default);
+            AddTimerTicker(EffectSystemScriptableBuiltIn.TimerTickerId.Default);
         }
         #region TimeManagement
 

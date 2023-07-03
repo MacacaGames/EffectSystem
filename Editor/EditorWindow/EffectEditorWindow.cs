@@ -267,8 +267,8 @@ namespace MacacaGames.EffectSystem.Editor
                 return effect.tags.Select(tagName => new Label(tagName).AddClass("effect-round").AddClass("effect-tag"));
             }));
 
-            if (effect.info.activeCondition != EffectSystemScriptable.ActiveCondition.OnEffectStart ||
-                effect.info.deactiveCondition != EffectSystemScriptable.DeactiveCondition.None)
+            if (effect.info.activeCondition != EffectSystemScriptableBuiltIn.ActiveCondition.OnEffectStart ||
+                effect.info.deactiveCondition != EffectSystemScriptableBuiltIn.DeactiveCondition.None)
             {
                 root.Add(new Label($"{effect.info.activeCondition}/{effect.info.deactiveCondition}").AddClass("effect-condition").AddClass("effect-round"));
             }

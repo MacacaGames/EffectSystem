@@ -43,7 +43,7 @@ namespace MacacaGames.EffectSystem
 
         public string GetId()
         {
-            return EffectSystemScriptable.TimerTickerId.Default;
+            return EffectSystemScriptableBuiltIn.TimerTickerId.Default;
         }
 
         public void Tick(float delta)
