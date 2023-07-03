@@ -8,7 +8,7 @@ using MacacaGames.EffectSystem.Model;
 
 namespace MacacaGames.EffectSystem
 {
-    public abstract class EffectInstanceBase
+    public class EffectInstanceBase
     {
         protected EffectSystem effectSystem => EffectSystem.Instance;
         public float input
