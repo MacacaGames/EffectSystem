@@ -103,6 +103,7 @@ namespace MacacaGames.EffectSystem
                 result = type;
                 return result;
             }
+            result = effectInstanceBaseType;
             return result;
         }
 
