@@ -1054,6 +1054,31 @@ namespace MacacaGames.EffectSystem
                 effectQuery.Remove(effectType);
             }
         }
+        /// <summary>
+        /// Remove specific count of EffectInstances on IEffectableObject by EffectType and Tag
+        /// </summary>
+        /// <param name="owner">The target IEffectableObject</param>
+        /// <param name="effectType">The EffectType would like to remove</param>
+        public void RemoveEffectsByTypeAndTag(IEffectableObject owner, string effectType, string tag, int count, bool isRemoveOldFirst = true)
+        {
+            int currentRemoveCount = 0;
+;            var effectQuery = GetEffectList(owner);
+            if (effectQuery.TryGetValue(effectType, out EffectInstanceList effectList))
+            {
+                var sortEffectList = isRemoveOldFirst? effectList.ToArray() : effectList.ToArray().Reverse();
+                foreach (var effect in sortEffectList)
+                {
+                    if(effect.tags.Contains(tag) == false) continue;
+
+                    RemoveEffect(owner, effect);
+                    currentRemoveCount++;
+                    if(currentRemoveCount >= count)
+                    {
+                        break;
+                    }
+                }
+            }
+        }
 
         /// <summary>
         /// Remove  EffectInstances on IEffectableObject 
