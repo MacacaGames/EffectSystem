@@ -1117,7 +1117,7 @@ namespace MacacaGames.EffectSystem
         /// <param name="owner">The target IEffectableObject</param>
         /// <param name="tag"></param>
         /// <returns></returns>
-        public List<EffectInstanceBase> GetEffectsByType(IEffectableObject owner, string type, bool onlyGetActive = false)
+        public List<EffectInstanceBase> GetEffectsByType(IEffectableObject owner, string type, bool onlyGetActive = true)
         {
             List<EffectInstanceBase> effects = new List<EffectInstanceBase>();
             var effectQuery = GetEffectList(owner);
@@ -1127,6 +1127,7 @@ namespace MacacaGames.EffectSystem
                 {
                     if (effect.info.type == type)
                     {
+                        if(onlyGetActive && effect.isActive == false) continue;
                         effects.Add(effect);
                     }
                 }
