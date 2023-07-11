@@ -50,7 +50,7 @@ namespace MacacaGames.EffectSystem
             }
         }
 
-        internal void AddToTimerTicker(string Id, IEffectTimer effectTimer)
+        public void AddToTimerTicker(string Id, IEffectTimer effectTimer)
         {
             if (timerTickers.TryGetValue(Id, out TimerTicker timerTicker))
             {
@@ -62,7 +62,7 @@ namespace MacacaGames.EffectSystem
             }
         }
 
-        internal void RemoveFromTimerTicker(string Id, IEffectTimer effectTimer)
+        public void RemoveFromTimerTicker(string Id, IEffectTimer effectTimer)
         {
             if (timerTickers.TryGetValue(Id, out TimerTicker timerTicker))
             {
