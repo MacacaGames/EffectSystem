@@ -88,22 +88,29 @@ namespace MacacaGames.EffectSystem
             Type result = effectInstanceBaseType;
             if (EffectTypeInstanceCache.TryGetValue(effectType, out result))
             {
+                Debug.LogWarning(result.ToString());
+
                 return result;
             }
-            
+
             var type = Utility.GetType(typeFullName);
             if (type != null)
             {
                 if (!type.IsSubclassOf(effectInstanceBaseType))
                 {
                     Debug.LogError($"The EffectTypeInstance implements of EffectType: {effectType}, is not inherit from MacacaGames.EffectSystem.EffectInstanceBase please checked, system will automatically fallback to MacacaGames.EffectSystem.EffectInstanceBase");
+                    Debug.LogWarning(result.ToString());
+
                     return result;
                 }
                 EffectTypeInstanceCache.TryAdd(effectType, type);
                 result = type;
+                Debug.LogWarning(result.ToString());
                 return result;
             }
             result = effectInstanceBaseType;
+            Debug.LogWarning($"{effectType} implements not found, fallback to {result.ToString()}");
+
             return result;
         }
 
