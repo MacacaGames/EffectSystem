@@ -276,7 +276,7 @@ namespace MacacaGames.EffectSystem
         #region Inject
         protected static object[] modelsCache = null;
 
-        internal static void InjectModels(object targetObject)
+        internal void InjectModels(object targetObject)
         {
             Type contract = targetObject.GetType();
 
@@ -302,7 +302,7 @@ namespace MacacaGames.EffectSystem
             }
         }
 
-        internal static object GetModelInstance(MemberInfo memberInfo, bool isMultiple = false)
+        internal object GetModelInstance(MemberInfo memberInfo, bool isMultiple = false)
         {
             Type typeToSearch = memberInfo.GetMemberType();
             return SearchInModels(typeToSearch);
