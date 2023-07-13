@@ -882,9 +882,9 @@ namespace MacacaGames.EffectSystem
         /// <param name="owner">The target obejct would like to add the Effect</param>
         /// <param name="effectGroup">The EffectGroup you would like to add the the owner</param>
         /// <param name="tags">Add the tags on the EffectInstance which is add on this requrest, it is very helpful to manage the Effect Instance, </param>
-        public List<EffectInstanceBase> AddRequestedEffects(IEffectableObject owner, EffectGroup effectGroup, params string[] tags)
+        public List<EffectInstanceBase> AddRequestedEffects(IEffectableObject owner, EffectGroup effectGroup, object source = null, params string[] tags)
         {
-            return AddRequestedEffects(owner, effectGroup.effects, tags);
+            return AddRequestedEffects(owner, effectGroup.effects, source, tags);
         }
 
         /// <summary>
@@ -894,7 +894,7 @@ namespace MacacaGames.EffectSystem
         /// <param name="owner">The target obejct would like to add the Effect</param>
         /// <param name="effectInfos">The EffectInfos you would like to add the the owner</param>
         /// <param name="tags">Add the tags on the EffectInstance which is add on this requrest, it is very helpful to manage the Effect Instance, </param>
-        public List<EffectInstanceBase> AddRequestedEffects(IEffectableObject owner, IEnumerable<EffectInfo> effectInfos, params string[] tags)
+        public List<EffectInstanceBase> AddRequestedEffects(IEffectableObject owner, IEnumerable<EffectInfo> effectInfos, object source = null, params string[] tags)
         {
             if (effectInfos == null)
             {
@@ -904,13 +904,13 @@ namespace MacacaGames.EffectSystem
             List<EffectInstanceBase> result = new List<EffectInstanceBase>();
             foreach (var effectStruct in effectInfos)
             {
-                result.Add(AddRequestedEffect(owner, effectStruct, tags));
+                result.Add(AddRequestedEffect(owner, effectStruct, source, tags));
             }
             return result;
         }
 
         ///<summary>附加指定的Effect實體，從物件池拿。</summary>
-        public EffectInstanceBase AddRequestedEffect(IEffectableObject owner, EffectInfo effectInfo, params string[] tags)
+        public EffectInstanceBase AddRequestedEffect(IEffectableObject owner, EffectInfo effectInfo, object source = null, params string[] tags)
         {
             if (owner.IsAlive() == false)
                 return null;
@@ -924,6 +924,7 @@ namespace MacacaGames.EffectSystem
             if (effectList.GetSum() < effect.maxEffectValue)
             {
                 effect.owner = owner;
+                effect.source = source;
                 if (tags != null)
                 {
                     foreach (var tag in tags)

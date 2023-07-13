@@ -30,6 +30,7 @@ namespace MacacaGames.EffectSystem
         public bool isUsing { get; private set; } = false;
 
         public IEffectableObject owner;
+        public object source;
 
         /// <summary>若Owner此類Effect效果值大於此設定值，將不會附加效果</summary>
         public virtual float maxEffectValue => float.PositiveInfinity;
