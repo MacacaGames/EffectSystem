@@ -274,7 +274,7 @@ namespace MacacaGames.EffectSystem
         }
 
         #region Inject
-       protected static object[] modelsCache = null;
+        protected static object[] modelsCache = null;
 
         internal static void InjectModels(object targetObject)
         {
@@ -308,9 +308,20 @@ namespace MacacaGames.EffectSystem
             return SearchInModels(typeToSearch);
         }
 
-        static object SearchInModels(Type typeToSearch)
+        object SearchInModels(Type typeToSearch)
         {
             var models = modelsCache;
+
+            // If type is string, also search from parameter
+            if (typeToSearch == typeof(string))
+            {
+                var parameter = info.GetParameterByKey(typeToSearch.Name);
+                if (!string.IsNullOrEmpty(parameter))
+                {
+                    return parameter;
+                }
+            }
+
             if (models == null || models.Length == 0)
             {
                 return null;
@@ -322,7 +333,7 @@ namespace MacacaGames.EffectSystem
             }
             catch (InvalidOperationException)
             {
-                throw new InvalidOperationException("When using ViewSystem model biding, each Type only available for one instance, if you would like to bind multiple instance of a Type use Collections(List, Array) or ViewInjectDictionary<T> instead.");
+                throw new InvalidOperationException("When using EffectSystem model biding, each Type only available for one instance, if you would like to bind multiple instance of a Type use Collections(List, Array) instead.");
             }
         }
         #endregion
