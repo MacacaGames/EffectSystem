@@ -1,6 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using MacacaGames.EffectSystem.Model;
+using System.Reflection;
+using System.Linq;
 
 namespace MacacaGames.EffectSystem
 {
@@ -9,11 +12,12 @@ namespace MacacaGames.EffectSystem
     {
         public override void OnActive(EffectTriggerConditionInfo condidionInfo)
         {
-            ExecuteActive(condidionInfo);
+            base.OnActive(condidionInfo);
             OnTrigger(condidionInfo);
         }
 
         protected abstract void OnTrigger(EffectTriggerConditionInfo conditionInfo);
 
+        
     }
 }

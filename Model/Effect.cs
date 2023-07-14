@@ -204,6 +204,7 @@ namespace MacacaGames.EffectSystem.Model
             }
         }
         public List<IEffectableObject> targets;   //Effect的Targets
+        public object[] models;
 
         // function to cast owner to type T
         public T GetOwner<T>() where T : class
@@ -242,9 +243,10 @@ namespace MacacaGames.EffectSystem.Model
 
             return list;
         }
-        public EffectTriggerConditionInfo(IEffectableObject owner, IEffectableObject target = null, IEffectableObject effectableObject = null)
+        public EffectTriggerConditionInfo(IEffectableObject owner, IEffectableObject target = null, params object[] models)
         {
             this.owner = owner;
+            this.models = models;
             if (target == null)
             {
                 this.targets = new List<IEffectableObject>();
@@ -254,10 +256,19 @@ namespace MacacaGames.EffectSystem.Model
                 this.targets = new List<IEffectableObject>() { target };
             }
         }
-        public EffectTriggerConditionInfo(IEffectableObject owner, List<IEffectableObject> targets = null)
+        public EffectTriggerConditionInfo(IEffectableObject owner, List<IEffectableObject> targets = null, params object[] models)
         {
             this.owner = owner;
-            this.targets = targets;
+            this.models = models;
+
+            if (targets == null)
+            {
+                this.targets = new List<IEffectableObject>();
+            }
+            else
+            {
+                this.targets = targets;
+            }
         }
     }
 }

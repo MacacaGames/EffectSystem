@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System;
 using System.Linq;
 using MacacaGames.EffectSystem.Model;
+using System.Reflection;
+using System.Linq;
 
 namespace MacacaGames.EffectSystem
 {
@@ -105,6 +107,8 @@ namespace MacacaGames.EffectSystem
         /// <param name="triggerConditionInfo"></param>
         public virtual void OnActive(EffectTriggerConditionInfo triggerConditionInfo)
         {
+            modelsCache = triggerConditionInfo.models;
+            InjectModels(this);
             ExecuteActive(triggerConditionInfo);
         }
 
@@ -114,6 +118,8 @@ namespace MacacaGames.EffectSystem
         /// <param name="triggerConditionInfo"></param>
         public virtual void OnDeactive(EffectTriggerConditionInfo triggerConditionInfo)
         {
+            modelsCache = triggerConditionInfo.models;
+            InjectModels(this);
             ExecuteDeactive(triggerConditionInfo);
         }
 
@@ -266,6 +272,71 @@ namespace MacacaGames.EffectSystem
         {
             return $"[EFFECT] {owner} <color=#CF2121>－</color><color=#CF2121>{GetType().Name}</color> [{input}]";
         }
+
+        #region Inject
+        protected static object[] modelsCache = null;
+
+        internal void InjectModels(object targetObject)
+        {
+            Type contract = targetObject.GetType();
+
+            IEnumerable<MemberInfo> members =
+            contract.FindMembers(
+                MemberTypes.Property | MemberTypes.Field,
+                BindingFlags.FlattenHierarchy | BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static,
+                (m, i) => m.GetCustomAttribute(typeof(EffectInstanceBaseInjectAttribute), true) != null,
+                null);
+
+            var groupedMember = members.GroupBy(m => m.GetMemberType());
+            foreach (var gp in groupedMember)
+            {
+                var isMultiple = gp.Count() > 1;
+                foreach (var info in gp)
+                {
+                    var target = GetModelInstance(info, isMultiple);
+                    if (target != null)
+                    {
+                        info.SetValue(targetObject, target);
+                    }
+                }
+            }
+        }
+
+        internal object GetModelInstance(MemberInfo memberInfo, bool isMultiple = false)
+        {
+            Type typeToSearch = memberInfo.GetMemberType();
+            return SearchInModels(typeToSearch);
+        }
+
+        object SearchInModels(Type typeToSearch)
+        {
+            var models = modelsCache;
+
+            // If type is string, also search from parameter
+            if (typeToSearch == typeof(string))
+            {
+                var parameter = info.GetParameterByKey(typeToSearch.Name);
+                if (!string.IsNullOrEmpty(parameter))
+                {
+                    return parameter;
+                }
+            }
+
+            if (models == null || models.Length == 0)
+            {
+                return null;
+            }
+
+            try
+            {
+                return models.SingleOrDefault(model => model.GetType() == typeToSearch);
+            }
+            catch (InvalidOperationException)
+            {
+                throw new InvalidOperationException("When using EffectSystem model biding, each Type only available for one instance, if you would like to bind multiple instance of a Type use Collections(List, Array) instead.");
+            }
+        }
+        #endregion
 
     }
 }
