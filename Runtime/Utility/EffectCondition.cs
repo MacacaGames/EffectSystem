@@ -72,6 +72,15 @@ namespace MacacaGames.EffectSystem
             if (effectInstance.RemoveSleepyEffect())
                 return;
 
+            foreach (var requirement in effectInfo.activeRequirementLists)
+            {
+                if (requirement.IsRequirementsFullfilled(info) == false)
+                {
+                    Debug.Log($"[Effect Debug] {info} 的 ActiveRequirementList {requirement} 條件不符合，無法啟動");
+                    return;
+                }
+            }
+
             //檢查機率觸發
             if (UnityEngine.Random.Range(0F, 100F) >= effectInfo.activeProbability && effectInfo.activeProbability != 0F)
             {
@@ -137,6 +146,15 @@ namespace MacacaGames.EffectSystem
         {
             if (effectInstance.RemoveSleepyEffect())
                 return;
+
+            foreach (var requirement in effectInfo.deactiveRequirementLists)
+            {
+                if (requirement.IsRequirementsFullfilled(info) == false)
+                {
+                    Debug.Log($"[Effect Debug] {info} 的 ActiveRequirementList {requirement} 條件不符合，無法deactive");
+                    return;
+                }
+            }
 
             //只有Active時才能Deactive
             if (isActive == true)
