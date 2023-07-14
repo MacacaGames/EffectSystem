@@ -72,12 +72,16 @@ namespace MacacaGames.EffectSystem
             if (effectInstance.RemoveSleepyEffect())
                 return;
 
-            foreach (var requirement in effectInfo.activeRequirementLists)
+
+            if (effectInfo.activeRequirementLists != null)
             {
-                if (requirement.IsRequirementsFullfilled(info) == false)
+                foreach (var requirement in effectInfo.activeRequirementLists)
                 {
-                    Debug.Log($"[Effect Debug] {info} 的 ActiveRequirementList {requirement} 條件不符合，無法啟動");
-                    return;
+                    if (requirement.IsRequirementsFullfilled(info) == false)
+                    {
+                        Debug.Log($"[Effect Debug] {info} 的 ActiveRequirementList {requirement} 條件不符合，無法啟動");
+                        return;
+                    }
                 }
             }
 
@@ -147,14 +151,18 @@ namespace MacacaGames.EffectSystem
             if (effectInstance.RemoveSleepyEffect())
                 return;
 
-            foreach (var requirement in effectInfo.deactiveRequirementLists)
+            if (effectInfo.deactiveRequirementLists != null)
             {
-                if (requirement.IsRequirementsFullfilled(info) == false)
+                foreach (var requirement in effectInfo.deactiveRequirementLists)
                 {
-                    Debug.Log($"[Effect Debug] {info} 的 ActiveRequirementList {requirement} 條件不符合，無法deactive");
-                    return;
+                    if (requirement.IsRequirementsFullfilled(info) == false)
+                    {
+                        Debug.Log($"[Effect Debug] {info} 的 ActiveRequirementList {requirement} 條件不符合，無法deactive");
+                        return;
+                    }
                 }
             }
+
 
             //只有Active時才能Deactive
             if (isActive == true)
