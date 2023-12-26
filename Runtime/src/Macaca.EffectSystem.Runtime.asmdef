@@ -1,0 +1,19 @@
+{
+    "name": "Macaca.EffectSystem.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:fe90139ab5d9b4600838fea410f66540",
+        "GUID:474def811854047f9b89854e89359183",
+        "GUID:bbde805d927e795439d7a746d1749cab",
+        "GUID:5a46ad82eac024e4fbb6a0516a5def17"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

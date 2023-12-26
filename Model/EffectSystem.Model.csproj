@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <DefineConstants>Server</DefineConstants>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\..\ProjectInfinity.UnityWrapper\ProjectInfinity.UnityWrapper.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="IdentityServer4.AspNetIdentity" Version="4.1.2" />
+        <PackageReference Include="MessagePack.AspNetCoreMvcFormatter" Version="2.4.35" />
+        <PackageReference Include="MessagePack.UnityShims" Version="2.5.108" />
+        <PackageReference Include="MessagePack" Version="2.5.108" />
+    </ItemGroup>
+
+
+</Project>

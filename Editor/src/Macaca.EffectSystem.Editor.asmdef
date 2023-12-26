@@ -1,0 +1,21 @@
+{
+    "name": "Macaca.EffectSystem.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:474def811854047f9b89854e89359183",
+        "GUID:f48970b80f07d44c398859a4e5c5caa6",
+        "GUID:fe90139ab5d9b4600838fea410f66540",
+        "GUID:6a8ed498e685f4ea293b284a12ef7bcf"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

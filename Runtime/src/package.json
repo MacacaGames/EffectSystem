@@ -1,0 +1,18 @@
+{
+    "name": "com.macacagames.effectsystem.runtime",
+    "displayName": "Macaca Effect System Runtime",
+    "author": {
+        "name": "Macaca Games",
+        "email": "contact@macaca.games",
+        "url": "https://macaca.games"
+    },
+    "version": "0.0.1",
+    "unity": "2021.3",
+    "description": "",
+    "keywords": ["Effect", "Skill"],
+    "license": "MIT",
+    "dependencies": {
+        "com.macacagames.utility": "1.0.23",
+        "com.neuecc.messagepack": "2.5.1-alpha"
+    }
+}

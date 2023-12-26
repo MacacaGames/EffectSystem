@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <DefineConstants>Server</DefineConstants>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Reference Include="Sirenix.OdinInspector.Attributes">
+            <HintPath>./Dlls/Sirenix.OdinInspector.Attributes.dll</HintPath>
+        </Reference>
+        <Reference Include="Macaca.Utility">
+            <HintPath>./Dlls/Macaca.Utility.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+    
+    
+
+    <ItemGroup>
+        <ProjectReference Include="../Model/EffectSystem.Model.csproj" />
+<!--        <ProjectReference Include="..\..\..\Macaca.EffectSystem.Runtime.Player.csproj" />-->
+    </ItemGroup>
+    
+</Project>
