@@ -8,11 +8,7 @@ using UnityEngine;
 public class EffectInstanceList : ICollection<EffectInstanceBase>
 {
     private EffectSystem effectSystem;
-
-    public EffectInstanceList(EffectSystem effectSystem)
-    {
-        this.effectSystem = effectSystem;
-    }
+    
         private List<EffectInstanceBase> effects = new List<EffectInstanceBase>();
 
         public int Count => effects.Count;
@@ -35,8 +31,9 @@ public class EffectInstanceList : ICollection<EffectInstanceBase>
             return result;
         }
 
-        public EffectInstanceList(string effectType)
+        public EffectInstanceList(string effectType, EffectSystem effectSystem)
         {
+            this.effectSystem = effectSystem;
             var effect = effectSystem.calculator.GetLimit(effectType);
 
             sumLimitMin = effect.sumLimitMin;

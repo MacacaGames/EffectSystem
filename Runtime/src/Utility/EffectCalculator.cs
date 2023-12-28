@@ -55,7 +55,7 @@ namespace MacacaGames.EffectSystem
                 int typeKingdomHash = info.GetTypeKingdom().GetHashCode();
                 if (typeGroup.Keys.Select(_ => _.GetTypeKingdom().GetHashCode()).Contains(typeKingdomHash) == false)
                 {
-                    typeGroup.Add(info.GetTypeKingdom(), new EffectInstanceList(info.type));
+                    typeGroup.Add(info.GetTypeKingdom(), new EffectInstanceList(info.type,effectSystem));
                 }
 
                 var key = typeGroup.Keys.Single(_ => _.GetTypeKingdom().GetHashCode() == typeKingdomHash);

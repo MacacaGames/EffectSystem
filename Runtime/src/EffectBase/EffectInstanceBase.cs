@@ -12,17 +12,17 @@ namespace MacacaGames.EffectSystem
     public class EffectInstanceBase
     {
         protected EffectSystem effectSystem;
+
         public EffectInstanceBase(EffectSystem effectSystem)
         {
             this.effectSystem = effectSystem;
         }
+
         List<EffectViewBase> effectViewList = new List<EffectViewBase>();
+
         public float input
         {
-            get
-            {
-                return info.value;
-            }
+            get { return info.value; }
         }
 
         public EffectInfo info;
@@ -58,10 +58,13 @@ namespace MacacaGames.EffectSystem
 
             if (condition != null)
             {
-                effectSystem.RemoveFromTimerTicker(EffectSystemScriptableBuiltIn.TimerTickerId.Default, condition.maintainTimeTimer);
-                effectSystem.RemoveFromTimerTicker(EffectSystemScriptableBuiltIn.TimerTickerId.Default, condition.cooldownTimeTimer);
+                effectSystem.RemoveFromTimerTicker(EffectSystemScriptableBuiltIn.TimerTickerId.Default,
+                    condition.maintainTimeTimer);
+                effectSystem.RemoveFromTimerTicker(EffectSystemScriptableBuiltIn.TimerTickerId.Default,
+                    condition.cooldownTimeTimer);
                 condition = null;
             }
+
             owner = null;
 
             info = effectInfo;
@@ -77,7 +80,7 @@ namespace MacacaGames.EffectSystem
 
         public virtual void ClearViewList()
         {
-            effectViewList.Clear(); 
+            effectViewList.Clear();
         }
 
         public void Start()
@@ -92,18 +95,20 @@ namespace MacacaGames.EffectSystem
 
             effectSystem.RegistEffectTriggerCondition(this);
             AddEffectView(this);
-            
+
             EffectViewOnStart();
 
             // Sould be Add before Start(), since in some case the effect may deactive immiditily after start, then the condition will be null
-            effectSystem.AddToTimerTicker(EffectSystemScriptableBuiltIn.TimerTickerId.Default, condition.maintainTimeTimer);
-            effectSystem.AddToTimerTicker(EffectSystemScriptableBuiltIn.TimerTickerId.Default, condition.cooldownTimeTimer);
+            effectSystem.AddToTimerTicker(EffectSystemScriptableBuiltIn.TimerTickerId.Default,
+                condition.maintainTimeTimer);
+            effectSystem.AddToTimerTicker(EffectSystemScriptableBuiltIn.TimerTickerId.Default,
+                condition.cooldownTimeTimer);
             condition.Start();
 
             OnStart();
         }
 
-        public  virtual void EffectViewOnStart()
+        public virtual void EffectViewOnStart()
         {
             foreach (var effectView in effectViewList)
                 effectView.OnStart();
@@ -112,7 +117,9 @@ namespace MacacaGames.EffectSystem
         /// <summary>
         /// Excude when an Effect is attach
         /// </summary>
-        protected virtual void OnStart() { }
+        protected virtual void OnStart()
+        {
+        }
 
         /// <summary>
         /// Excude when an Effect is Active by ActiveCondition
@@ -144,13 +151,14 @@ namespace MacacaGames.EffectSystem
             owner.OnEffectActive(info);
 
             EffectViewOnActive();
-
         }
+
         public virtual void EffectViewOnActive()
         {
             foreach (var effectView in effectViewList)
                 effectView.OnActive();
         }
+
         public void ExecuteDeactive(EffectTriggerConditionInfo triggerConditionInfo)
         {
             effectList.SetDirty(true);
@@ -167,6 +175,7 @@ namespace MacacaGames.EffectSystem
                 SetSleep();
             }
         }
+
         public virtual void EffectViewOnDeactive()
         {
             foreach (var effectView in effectViewList)
@@ -175,12 +184,13 @@ namespace MacacaGames.EffectSystem
 
         public void End()
         {
-            effectSystem.RemoveFromTimerTicker(EffectSystemScriptableBuiltIn.TimerTickerId.Default, condition.maintainTimeTimer);
-            effectSystem.RemoveFromTimerTicker(EffectSystemScriptableBuiltIn.TimerTickerId.Default, condition.cooldownTimeTimer);
+            effectSystem.RemoveFromTimerTicker(EffectSystemScriptableBuiltIn.TimerTickerId.Default,
+                condition.maintainTimeTimer);
+            effectSystem.RemoveFromTimerTicker(EffectSystemScriptableBuiltIn.TimerTickerId.Default,
+                condition.cooldownTimeTimer);
 
             if (isUsing == false)
             {
-
 #if (UNITY_EDITOR)
                 Debug.LogError($"[Effect Debug] 有一個還沒Start卻呼叫End的Effect\n Owner: {owner},\n Info: {info}");
                 //Debug.Break();
@@ -204,15 +214,18 @@ namespace MacacaGames.EffectSystem
 #if (USE_LOG)
             Debug.Log(GetEndEffectLog());
 #endif
-
         }
+
         public virtual void EffectViewOnEnd()
         {
             foreach (var effectView in effectViewList)
                 effectView.OnEnd();
         }
+
         /// <summary>當Effect被消除時執行</summary>
-        protected virtual void OnEnd() { }
+        protected virtual void OnEnd()
+        {
+        }
 
         /// <summary>
         /// Excude when the colddown is finish
@@ -221,6 +234,7 @@ namespace MacacaGames.EffectSystem
         {
             EffectViewOnColdDownEnd();
         }
+
         public virtual void EffectViewOnColdDownEnd()
         {
             foreach (var effectView in effectViewList)
@@ -230,6 +244,7 @@ namespace MacacaGames.EffectSystem
 
         //Sleep就不會再被觸發、提前移除EffectView，等待特定Trigger觸發RemoveSleepyEffect來被移除
         bool isSleep { get; set; }
+
         void SetSleep()
         {
             isSleep = true;
@@ -244,6 +259,7 @@ namespace MacacaGames.EffectSystem
                 RemoveEffect();
                 return true;
             }
+
             return false;
         }
 
@@ -254,7 +270,7 @@ namespace MacacaGames.EffectSystem
 
         public virtual void AddEffectView(EffectInstanceBase effect)
         {
-            #if !Server
+#if !Server
             if (effect.info.viewInfos == null || effect.info.viewInfos.Count == 0)
                 return;
 
@@ -262,12 +278,14 @@ namespace MacacaGames.EffectSystem
             {
                 if (viewInfo.prefab == null)
                     throw new Exception($"[EFFECT] {effect.GetType().Name}(Owner:{effect.owner})有未填入值的ViewInfo.prefab");
-                EffectViewBase effectView = EffectSystem.Instance.RequestEffectView(effect.info, viewInfo, effect.owner);
-                effectView.transform.rotation = Quaternion.identity;    //重設旋轉角度
+                EffectViewBase effectView =
+                    EffectSystem.Instance.RequestEffectView(effect.info, viewInfo, effect.owner);
+                effectView.transform.rotation = Quaternion.identity; //重設旋轉角度
                 effectViewList.Add(effectView);
             }
 #endif
         }
+
         public virtual void RemoveEffectView(EffectInstanceBase effect)
         {
 #if !Server
@@ -276,6 +294,7 @@ namespace MacacaGames.EffectSystem
                 effectSystem.RecoveryEffectView(effectView);
                 //UnityEngine.Object.Destroy(viewAnimator.gameObject);
             }
+
             effect.effectViewList.Clear();
 #endif
         }
@@ -284,6 +303,7 @@ namespace MacacaGames.EffectSystem
         {
             return Mathf.FloorToInt(GetValue());
         }
+
         public float GetValue()
         {
             //Condition存在，且Condition成立則傳值，否則傳回0
@@ -291,9 +311,9 @@ namespace MacacaGames.EffectSystem
 
             return GetOriginValue();
         }
+
         public virtual float GetOriginValue()
         {
-
             return info.value;
         }
 
@@ -301,12 +321,14 @@ namespace MacacaGames.EffectSystem
         {
             return $"[EFFECT] {owner} <color=#2043CF>＋</color><color=#2043CF>{GetType().Name}</color> [{input}]";
         }
+
         protected virtual string GetEndEffectLog()
         {
             return $"[EFFECT] {owner} <color=#CF2121>－</color><color=#CF2121>{GetType().Name}</color> [{input}]";
         }
 
         #region Inject
+
         protected static object[] modelsCache = null;
 
         internal void InjectModels(object targetObject)
@@ -314,11 +336,12 @@ namespace MacacaGames.EffectSystem
             Type contract = targetObject.GetType();
 
             IEnumerable<MemberInfo> members =
-            contract.FindMembers(
-                MemberTypes.Property | MemberTypes.Field,
-                BindingFlags.FlattenHierarchy | BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static,
-                (m, i) => m.GetCustomAttribute(typeof(EffectInstanceBaseInjectAttribute), true) != null,
-                null);
+                contract.FindMembers(
+                    MemberTypes.Property | MemberTypes.Field,
+                    BindingFlags.FlattenHierarchy | BindingFlags.NonPublic | BindingFlags.Public |
+                    BindingFlags.Instance | BindingFlags.Static,
+                    (m, i) => m.GetCustomAttribute(typeof(EffectInstanceBaseInjectAttribute), true) != null,
+                    null);
 
             var groupedMember = members.GroupBy(m => m.GetMemberType());
             foreach (var gp in groupedMember)
@@ -366,10 +389,11 @@ namespace MacacaGames.EffectSystem
             }
             catch (InvalidOperationException)
             {
-                throw new InvalidOperationException("When using EffectSystem model biding, each Type only available for one instance, if you would like to bind multiple instance of a Type use Collections(List, Array) instead.");
+                throw new InvalidOperationException(
+                    "When using EffectSystem model biding, each Type only available for one instance, if you would like to bind multiple instance of a Type use Collections(List, Array) instead.");
             }
         }
-        #endregion
 
+        #endregion
     }
 }

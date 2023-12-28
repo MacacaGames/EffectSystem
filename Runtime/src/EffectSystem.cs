@@ -21,7 +21,7 @@ namespace MacacaGames.EffectSystem
 
 
         public Dictionary<string, TimerTicker> timerTickers = new Dictionary<string, TimerTicker>();
-        void Awake()
+        public void Awake()
         {
             Instance = this;
             calculator = new EffectCalculator(this);
@@ -348,7 +348,7 @@ namespace MacacaGames.EffectSystem
         //EffectPool <EffectSystemScriptable.EffectType, EffectBase>
         static Dictionary<string, Queue<EffectInstanceBase>> effectPoolQuery = new Dictionary<string, Queue<EffectInstanceBase>>();
 
-        static EffectInstanceBase RequestEffect(string type)
+        EffectInstanceBase RequestEffect(string type)
         {
 #if (USE_POOL)
             Queue<EffectInstanceBase> q = null;
@@ -374,7 +374,7 @@ namespace MacacaGames.EffectSystem
             if (q.Count == 0)
             {
                 //pool沒有東西的話就生出來，並標記為pooled
-                effect = Activator.CreateInstance(QueryEffectTypeWithDefault(type)) as EffectInstanceBase;
+                effect = Activator.CreateInstance(QueryEffectTypeWithDefault(type),args: EffectSystem.Instance) as EffectInstanceBase;
                 effect.isPooled = true;
             }
             else
@@ -389,7 +389,7 @@ namespace MacacaGames.EffectSystem
 #endif
         }
 
-        public static EffectInstanceBase RequestEffect(EffectInfo info)
+        public  EffectInstanceBase RequestEffect(EffectInfo info)
         {
 #if (USE_POOL)
             EffectInstanceBase effect = RequestEffect(info.type);
@@ -424,11 +424,11 @@ namespace MacacaGames.EffectSystem
         #region 創造Effect實體
 
         ///<summary>創造一個Effect實體。</summary>
-        static EffectInstanceBase CreateEffect(string type)
+        EffectInstanceBase CreateEffect(string type)
         {
             EffectInstanceBase effect;
 
-            effect = Activator.CreateInstance(QueryEffectTypeWithDefault(type)) as EffectInstanceBase;
+            effect = Activator.CreateInstance(QueryEffectTypeWithDefault(type),args: this) as EffectInstanceBase;
 
             effect.info = new EffectInfo
             {
@@ -750,7 +750,7 @@ namespace MacacaGames.EffectSystem
             //若Dictionary中沒有東西則新增EffectList
             if (!effectQuery.ContainsKey(effectType))
             {
-                EffectInstanceList effectList = new EffectInstanceList(effectType);
+                EffectInstanceList effectList = new EffectInstanceList(effectType,this);
                 effectQuery.Add(effectType, effectList);
             }
             return effectQuery[effectType];
