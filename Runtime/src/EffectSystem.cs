@@ -45,6 +45,14 @@ namespace MacacaGames.EffectSystem
         {
             timerTickers.TryAdd(Id, new TimerTicker(Id));
         }
+        /// <summary>
+        /// remove the timer Ticker
+        /// </summary>
+        /// <param name="Id">The ticker's Id</param>  
+        public void RemoveTimerTicker(string Id)
+        {
+            timerTickers.Remove(Id);
+        }
 
         /// <summary>
         /// Tick a TimerTicker by Id
