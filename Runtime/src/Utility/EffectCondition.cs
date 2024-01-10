@@ -25,10 +25,10 @@ namespace MacacaGames.EffectSystem
             isActive = false;
 
             cooldownTimeTimer = new DefaultTimerBase(
-                null, OnColdDownTimeEnd, null, null
+                null, OnColdDownTimeEnd, null, null,null
             );
             maintainTimeTimer = new DefaultTimerBase(
-               null, OnMaintainTimeEnd, null, null
+               null, OnMaintainTimeEnd, null, null,null
            );
         }
 

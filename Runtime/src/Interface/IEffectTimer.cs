@@ -95,6 +95,10 @@ namespace MacacaGames.EffectSystem
         /// Fire once when the timer is stop by outer reason
         /// </summary>
         void OnTimerStop();
+        /// <summary>
+        /// Fire once after timer ticked
+        /// </summary>
+        void OnTimerTick();
 
         /// <summary>
         /// Switch the Timer pause status

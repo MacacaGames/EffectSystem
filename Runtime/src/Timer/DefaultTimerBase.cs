@@ -15,13 +15,15 @@ namespace MacacaGames.EffectSystem
             Action _OnTimerStart,
             Action _OnTimerComplete,
             Action _OnTimerPause,
-            Action _OnTimerStop
+            Action _OnTimerStop,
+            Action _OnTimerTick
         )
         {
             this._OnTimerStart = _OnTimerStart;
             this._OnTimerComplete = _OnTimerComplete;
             this._OnTimerPause = _OnTimerPause;
             this._OnTimerStop = _OnTimerStop;
+            this._OnTimerTick = _OnTimerTick;
         }
 
         public bool IsFinish => currentTime <= 0;
@@ -55,6 +57,7 @@ namespace MacacaGames.EffectSystem
             {
                 // Debug.Log($"real Tick(float {delta})");
                 currentTime -= delta;
+                OnTimerTick();
             }
         }
 
@@ -109,6 +112,8 @@ namespace MacacaGames.EffectSystem
                 return;
             }
             isStop = true;
+            currentTime = -1;
+            OnTimerStop();
         }
 
         public bool Toggle()
@@ -125,6 +130,7 @@ namespace MacacaGames.EffectSystem
         Action _OnTimerComplete;
         Action _OnTimerPause;
         Action _OnTimerStop;
+        Action _OnTimerTick;
         public virtual void OnTimerStart()
         {
             _OnTimerStart?.Invoke();
@@ -140,6 +146,10 @@ namespace MacacaGames.EffectSystem
         public virtual void OnTimerStop()
         {
             _OnTimerStop?.Invoke();
+        }
+        public virtual void OnTimerTick()
+        {
+            _OnTimerTick?.Invoke();
         }
     }
 }
