@@ -13,11 +13,17 @@ namespace MacacaGames.EffectSystem
         {
             this.effectSystem = EffectSystem;
         }
-        /// <summary>取得指定EffectType的上下限。</summary>
-        public (float sumLimitMin, float sumLimitMax) GetLimit(string effectType)
+        /// <summary>取得指定EffectType的總值上下限。</summary>
+        public (float sumLimitMin, float sumLimitMax) GetSumLimit(string effectType)
         {
             var effect = effectSystem.CreateEffect(new EffectInfo { type = effectType, value = 1 });
             return effect.sumLimit;
+        }
+        /// <summary>取得指定EffectType的層數上下限。</summary>
+        public int GetCountLimit(string effectType)
+        {
+            var effect = effectSystem.CreateEffect(new EffectInfo { type = effectType, value = 1 });
+            return effect.countLimit;
         }
 
 

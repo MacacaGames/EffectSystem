@@ -1,7 +1,7 @@
 
-
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using MacacaGames.EffectSystem;
 using UnityEngine;
 
@@ -12,6 +12,8 @@ public class EffectInstanceList : ICollection<EffectInstanceBase>
         private List<EffectInstanceBase> effects = new List<EffectInstanceBase>();
 
         public int Count => effects.Count;
+        public int CountWithoutSleep => effects.Count(m => m.isSleep == false);
+        public int countLimit { get; private set; }
 
         bool isDirty = false;
 
@@ -34,10 +36,13 @@ public class EffectInstanceList : ICollection<EffectInstanceBase>
         public EffectInstanceList(string effectType, EffectSystem effectSystem)
         {
             this.effectSystem = effectSystem;
-            var effect = effectSystem.calculator.GetLimit(effectType);
-
-            sumLimitMin = effect.sumLimitMin;
-            sumLimitMax = effect.sumLimitMax;
+            
+            var sumLimit = effectSystem.calculator.GetSumLimit(effectType);
+            sumLimitMin = sumLimit.sumLimitMin;
+            sumLimitMax = sumLimit.sumLimitMax;
+            
+            var count = effectSystem.calculator.GetCountLimit(effectType);
+            this.countLimit = count;
 
             sumValueCache = 0F;
         }

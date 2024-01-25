@@ -42,6 +42,9 @@ namespace MacacaGames.EffectSystem
 
         /// <summary>此EffectType所取得的數值上下限。</summary>
         public virtual (float min, float max) sumLimit => (min: 0F, max: float.PositiveInfinity);
+        /// <summary>此EffectType所取得的層數上下限，若超過則會擠掉最舊的effect。</summary>
+        public virtual int countLimit => int.MaxValue;
+        
 
         /// <summary>標記此Effect的Tag。</summary>
         public List<string> tags = new List<string> { };
@@ -133,7 +136,7 @@ namespace MacacaGames.EffectSystem
         }
 
         /// <summary>
-        /// Excude when an Effect is Deactive DctiveCondition
+        /// Excude when an Effect is Deactive by DeactiveCondition
         /// </summary>
         /// <param name="triggerConditionInfo"></param>
         public virtual void OnDeactive(EffectTriggerConditionInfo triggerConditionInfo)
@@ -243,7 +246,7 @@ namespace MacacaGames.EffectSystem
 
 
         //Sleep就不會再被觸發、提前移除EffectView，等待特定Trigger觸發RemoveSleepyEffect來被移除
-        bool isSleep { get; set; }
+        public bool isSleep { get; private set; }
 
         void SetSleep()
         {

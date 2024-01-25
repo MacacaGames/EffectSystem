@@ -843,25 +843,29 @@ namespace MacacaGames.EffectSystem
             EffectInstanceBase effect = RequestEffect(effectInfo);
             EffectInstanceList effectList = GetEffectListByType(owner, effectInfo.type);
 
-            if (effectList.GetSum() < effect.maxEffectValue)
-            {
-                effect.owner = owner;
-                effect.source = source;
-                if (tags != null)
-                {
-                    foreach (var tag in tags)
-                    {
-                        AddTag(effect, tag);
-                    }
-                }
-
-                effectList.Add(effect);
-                effect.Start();
-            }
-            else
+            if (effectList.GetSum() >= effect.maxEffectValue)
             {
                 RecoveryEffectBase(effect, effectInfo.type);
+                return effect;
             }
+            
+            if(effectList.CountWithoutSleep >= effect.countLimit)
+            {
+                RemoveOldestEffect(owner, effectInfo.type);
+            }
+
+            effect.owner = owner;
+            effect.source = source;
+            if (tags != null)
+            {
+                foreach (var tag in tags)
+                {
+                    AddTag(effect, tag);
+                }
+            }
+
+            effectList.Add(effect);
+            effect.Start();
 
             return effect;
 #if (UNITY_EDITOR)
@@ -993,7 +997,7 @@ namespace MacacaGames.EffectSystem
         public void RemoveEffectsByTypeAndTag(IEffectableObject owner, string effectType, string tag, int count, bool isRemoveOldFirst = true)
         {
             int currentRemoveCount = 0;
-;            var effectQuery = GetEffectList(owner);
+            var effectQuery = GetEffectList(owner);
             if (effectQuery.TryGetValue(effectType, out EffectInstanceList effectList))
             {
                 var sortEffectList = isRemoveOldFirst? effectList.ToArray() : effectList.ToArray().Reverse();
@@ -1004,6 +1008,30 @@ namespace MacacaGames.EffectSystem
                     RemoveEffect(owner, effect);
                     currentRemoveCount++;
                     if(currentRemoveCount >= count)
+                    {
+                        break;
+                    }
+                }
+            }
+        }
+        /// <summary>
+        /// Remove oldest effect on IEffectableObject by EffectType 
+        /// </summary>
+        /// <param name="owner">target IEffectableObject</param>
+        /// <param name="effectType">EffectType to remove</param>
+        /// <param name="removeCount">count to remove</param>
+        public void RemoveOldestEffect(IEffectableObject owner, string effectType , int removeCount = 1)
+        {
+            int currentRemoveCount = 0;
+            var effectQuery = GetEffectList(owner);
+            if (effectQuery.TryGetValue(effectType, out EffectInstanceList effectList))
+            {
+                var sortEffectList =  effectList.Where(x=>x.isSleep == false).ToArray() ;
+                foreach (var effect in sortEffectList)
+                {
+                    RemoveEffect(owner, effect);
+                    currentRemoveCount++;
+                    if(currentRemoveCount >= removeCount)
                     {
                         break;
                     }
