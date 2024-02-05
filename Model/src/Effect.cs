@@ -219,7 +219,7 @@ namespace MacacaGames.EffectSystem.Model
 
         public bool IsRequirementsFullfilled(EffectTriggerConditionInfo info)
         {
-            var effectable = isCheckOwner ? info.owner : info.target;
+            var effectable = isCheckOwner ? info.owner : info.anchor;
             var sourceValue = (int)System.MathF.Floor(effectable.GetRuntimeValue(conditionParameter));
             bool IsRequirementFullfilled = true;
             switch (requirementLogic)
@@ -256,18 +256,8 @@ namespace MacacaGames.EffectSystem.Model
     public struct EffectTriggerConditionInfo
     {
         public IEffectableObject owner;     //Effect的Owner
-        public IEffectableObject target     //Effect的第一個Target
-        {
-            get
-            {
-                if (targets == null || targets.Count == 0)
-                {
-                    return null;
-                }
-                return targets[0];
-            }
-        }
-        public List<IEffectableObject> targets;   //Effect的Targets
+        public IEffectableObject anchor;   //被瞄準的對象
+        public List<IEffectableObject> targets;   //所有受影響對象
         public object[] models;
 
         // function to cast owner to type T
@@ -307,22 +297,17 @@ namespace MacacaGames.EffectSystem.Model
 
             return list;
         }
-        public EffectTriggerConditionInfo(IEffectableObject owner, IEffectableObject target = null, params object[] models)
+        public EffectTriggerConditionInfo(IEffectableObject owner, params object[] models)
         {
             this.owner = owner;
+            this.anchor = owner;
             this.models = models;
-            if (target == null)
-            {
-                this.targets = new List<IEffectableObject>();
-            }
-            else
-            {
-                this.targets = new List<IEffectableObject>() { target };
-            }
+            this.targets = new List<IEffectableObject>();
         }
-        public EffectTriggerConditionInfo(IEffectableObject owner, List<IEffectableObject> targets = null, params object[] models)
+        public EffectTriggerConditionInfo(IEffectableObject owner,IEffectableObject anchor, List<IEffectableObject> targets, params object[] models)
         {
             this.owner = owner;
+            this.anchor = anchor;
             this.models = models;
 
             if (targets == null)
