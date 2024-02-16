@@ -78,7 +78,7 @@ namespace MacacaGames.EffectSystem.Model
         }
         public string GetParameterByKey(string key)
         {
-            string result = null;
+            string result = "";
             if (parameters.TryGetValue(key, out result))
             {
                 Console.WriteLine($"parameter with key cannot be found in effect id: {id}");
