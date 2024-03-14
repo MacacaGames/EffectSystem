@@ -44,6 +44,7 @@ namespace MacacaGames.EffectSystem
         bool isPause = false;
         bool isStop = false;
         float currentTime = -1;
+        bool isIgnoreTimerChecking = false;
 
         public string GetId()
         {
@@ -71,9 +72,10 @@ namespace MacacaGames.EffectSystem
 
         public void Start(float targetTime)
         {
-            Debug.Log($"Start counting: {targetTime}");
+            // Debug.Log($"Start counting: {targetTime}");
             currentTime = targetTime;
             // checkingCoroutine = CoroutineManager.Instance.StartCoroutine(TimerChecking());
+            isIgnoreTimerChecking = targetTime <= 0;
             checkingTask = TimerChecking();
             OnTimerStart();
         }
@@ -84,6 +86,8 @@ namespace MacacaGames.EffectSystem
         const float checkInterval = 0.033f; // 30fps
         async Task TimerChecking()
         {
+            if(isIgnoreTimerChecking) return;
+            
             cancellationTokenSource = new CancellationTokenSource();
             while (cancellationTokenSource.IsCancellationRequested == false)
             {
@@ -107,10 +111,16 @@ namespace MacacaGames.EffectSystem
 
         public void Stop()
         {
-            if (currentTime <= 0)
+            if (currentTime <= 0 && isIgnoreTimerChecking == false)
             {
                 return;
             }
+
+            if (isStop)
+            {
+                return;
+            }
+            
             isStop = true;
             currentTime = -1;
             OnTimerStop();
