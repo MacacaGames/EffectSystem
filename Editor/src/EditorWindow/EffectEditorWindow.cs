@@ -150,10 +150,18 @@ namespace MacacaGames.EffectSystem.Editor
                     AddEffect(effectInfo);
                 }
             };
+            
+            cloneTree.Q<Button>("EffectSavePathSelectBtn").clickable.clicked += () =>
+            {
+                var savePath = cloneTree.Q<TextField>("EffectScriptableSavePath");
+                savePath.value = EditorUtility.OpenFolderPanel("Select Save Path", "", "");
+            };
+            
             cloneTree.Q<Button>("Bake").clickable.clicked += () =>
             {
                 var bakeJsonTextField = cloneTree.Q<TextField>("BakeJsonText");
-                EffectSystemScriptBacker.BakeAllEffectEnum(bakeJsonTextField.value);
+                var savePath = cloneTree.Q<TextField>("EffectScriptableSavePath");
+                EffectSystemScriptBacker.BakeAllEffectEnum(bakeJsonTextField.value,savePath.value);
             };
 
             cloneTree.Q<ObjectField>("EffectGroupField").objectType = typeof(EffectGroup);

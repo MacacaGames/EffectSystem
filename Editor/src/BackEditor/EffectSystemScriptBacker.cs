@@ -10,7 +10,8 @@ namespace MacacaGames.EffectSystem.Editor
 {
     public class EffectSystemScriptBacker
     {
-        public static void BakeAllEffectEnum(string effectEnumJson)
+        const string ScriptFileName = "EffectSystemScriptable.cs";
+        public static void BakeAllEffectEnum(string effectEnumJson , string savePath)
         {
             Dictionary<string, List<string>> json = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, List<string>>>(ModifyString(effectEnumJson));
             var sb = new StringBuilder();
@@ -34,17 +35,13 @@ namespace MacacaGames.EffectSystem.Editor
             sb.AppendLine("}");
 
 
-            string ScriptFile = GetPathToGeneratedScriptLocalization();
-
-            
-
-
-            var filePath = Application.dataPath + ScriptFile.Substring("Assets".Length);
+            CheckAndCreateFolder(savePath);
+            var filePath = savePath + "/" + ScriptFileName;
             
 
             System.IO.File.WriteAllText(filePath, sb.ToString(), Encoding.UTF8);
 
-            AssetDatabase.ImportAsset(ScriptFile);
+            AssetDatabase.ImportAsset(filePath);
         }
 
 
@@ -68,33 +65,31 @@ namespace MacacaGames.EffectSystem.Editor
             sb.AppendLine("		}");
         }
 
-        static string GetPathToGeneratedScriptLocalization()
+        // static string GetPathToGeneratedScriptLocalization(string savePath)
+        // {
+        //     CheckAndCreateFolder(savePath);
+        //     string[] searchFolder = new [] {"Assets"};
+        //     string[] assets = AssetDatabase.FindAssets("EffectSystemScriptable", searchFolder);
+        //     if (assets.Length > 0)
+        //     {
+        //         try
+        //         {
+        //             string FilePath = AssetDatabase.GUIDToAssetPath(assets[0]);
+        //             return FilePath;
+        //         }
+        //         catch (System.Exception)
+        //         { }
+        //     }
+        //
+        //     return "Assets/EffectSystemResources/EffectSystemScriptable.cs";
+        // }
+
+        public static void CheckAndCreateFolder(string savePath)
         {
-
-            CheckAndCreateResourceFolder();
-            string[] searchFolder = new [] {"Assets"};
-            string[] assets = AssetDatabase.FindAssets("EffectSystemScriptable", searchFolder);
-            if (assets.Length > 0)
+            if (!Directory.Exists(savePath))
             {
-                try
-                {
-                    string FilePath = AssetDatabase.GUIDToAssetPath(assets[0]);
-                    return FilePath;
-                }
-                catch (System.Exception)
-                { }
-            }
-
-            return "Assets/EffectSystemResources/EffectSystemScriptable.cs";
-        }
-
-        public static void CheckAndCreateResourceFolder()
-        {
-            string effectSystemFolder =  "Assets/EffectSystemResources/";
-            if (!Directory.Exists(effectSystemFolder))
-            {
-                Directory.CreateDirectory(effectSystemFolder);
-                using (FileStream fs = File.Create(effectSystemFolder + "Auto Create by ViewSystem.txt"))
+                Directory.CreateDirectory(savePath);
+                using (FileStream fs = File.Create(savePath + "Auto Create by ViewSystem.txt"))
                 {
                     Byte[] info = System.Text.Encoding.UTF8.GetBytes("This folder and contain datas is auto Created by ViewSystem, Delete this folder or any datas may cause ViewSystem works not properly.");
                     // Add some information to the file.
