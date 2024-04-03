@@ -17,14 +17,25 @@ namespace MacacaGames.EffectSystem
 #endif
     {
         public static EffectSystem Instance;
-        public EffectCalculator calculator { get; private set; }
+
+        EffectCalculator _calculator;
+        public EffectCalculator calculator
+        {
+            get
+            {
+                if (_calculator == null)
+                {
+                    _calculator = new EffectCalculator(this);
+                }
+                return _calculator;
+            }
+        }
 
 
         public Dictionary<string, TimerTicker> timerTickers = new Dictionary<string, TimerTicker>();
         public void Awake()
         {
             Instance = this;
-            calculator = new EffectCalculator(this);
 #if !Server
          if (effectViewPoolFolder == null)
             {
@@ -34,6 +45,7 @@ namespace MacacaGames.EffectSystem
             
             AddTimerTicker(EffectSystemScriptableBuiltIn.TimerTickerId.Default);
         }
+        
         #region TimeManagement
 
 
@@ -382,7 +394,7 @@ namespace MacacaGames.EffectSystem
             if (q.Count == 0)
             {
                 //pool沒有東西的話就生出來，並標記為pooled
-                effect = Activator.CreateInstance(QueryEffectTypeWithDefault(type),args: EffectSystem.Instance) as EffectInstanceBase;
+                effect = Activator.CreateInstance(QueryEffectTypeWithDefault(type),args: this) as EffectInstanceBase;
                 effect.isPooled = true;
             }
             else
