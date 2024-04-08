@@ -59,6 +59,7 @@ namespace MacacaGames.EffectSystem
                 // Debug.Log($"real Tick(float {delta})");
                 currentTime -= delta;
                 OnTimerTick();
+                TimerCheck();
             }
         }
 
@@ -67,46 +68,23 @@ namespace MacacaGames.EffectSystem
             isStop = false;
             isPause = false;
             currentTime = -1;
-            ClearChecking();
         }
 
         public void Start(float targetTime)
         {
-            // Debug.Log($"Start counting: {targetTime}");
             currentTime = targetTime;
-            // checkingCoroutine = CoroutineManager.Instance.StartCoroutine(TimerChecking());
             isIgnoreTimerChecking = targetTime <= 0;
-            checkingTask = TimerChecking();
             OnTimerStart();
         }
 
-        // Coroutine checkingCoroutine;
-        private Task checkingTask;
-        CancellationTokenSource cancellationTokenSource;
-        const float checkInterval = 0.033f; // 30fps
-        async Task TimerChecking()
+        protected virtual void TimerCheck()
         {
             if(isIgnoreTimerChecking) return;
             
-            cancellationTokenSource = new CancellationTokenSource();
-            while (cancellationTokenSource.IsCancellationRequested == false)
+            if (currentTime <= 0 || Mathf.Approximately(currentTime, 0))
             {
-                if (currentTime <= 0 || Mathf.Approximately(currentTime, 0))
-                {
-                    cancellationTokenSource.Dispose();
-                    break;
-                }
-                await Task.Delay(TimeSpan.FromSeconds(checkInterval));
+                OnTimerComplete();
             }
-            OnTimerComplete();
-        }
-        void ClearChecking()
-        {
-            if (checkingTask != null && checkingTask.IsCompleted == false)
-            {
-                cancellationTokenSource.Cancel();
-            }
-            cancellationTokenSource?.Dispose();
         }
 
         public void Stop()
