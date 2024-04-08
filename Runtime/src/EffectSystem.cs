@@ -12,9 +12,6 @@ using MacacaGames.EffectSystem.Model;
 namespace MacacaGames.EffectSystem
 {
     public class EffectSystem
-#if !Server
-            : MonoBehaviour
-#endif
     {
         public static EffectSystem Instance;
 
@@ -33,13 +30,16 @@ namespace MacacaGames.EffectSystem
 
 
         public Dictionary<string, TimerTicker> timerTickers = new Dictionary<string, TimerTicker>();
-        public void Awake()
+        public void Init()
         {
             Instance = this;
 #if !Server
+            
+            
          if (effectViewPoolFolder == null)
-            {
-                effectViewPoolFolder = transform;
+         {
+             var go = new GameObject("EffectSystem_effectViewPool");
+                effectViewPoolFolder = go.transform;
             }   
 #endif
             
@@ -221,7 +221,7 @@ namespace MacacaGames.EffectSystem
 
             if (q.Count == 0)
             {
-                GameObject instance = Instantiate(viewInfo.prefab);
+                GameObject instance = GameObject.Instantiate(viewInfo.prefab);
 
                 effectView = instance.GetComponent<EffectViewBase>();
 
