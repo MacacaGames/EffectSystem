@@ -108,10 +108,10 @@ namespace MacacaGames.EffectSystem
         #endregion
 
         #region EffectDefine
-        static Type effectInstanceBaseType = typeof(EffectInstanceBase);
-        static Dictionary<string, Type> EffectTypeInstanceCache = new Dictionary<string, Type>();
+         Type effectInstanceBaseType = typeof(EffectInstanceBase);
+         Dictionary<string, Type> EffectTypeInstanceCache = new Dictionary<string, Type>();
 
-        static Type QueryEffectTypeWithDefault(string effectType)
+         Type QueryEffectTypeWithDefault(string effectType)
         {
             string typeFullName = $"Effect_{effectType}";
             Type result = effectInstanceBaseType;
@@ -366,7 +366,7 @@ namespace MacacaGames.EffectSystem
         #region EffectPool
 
         //EffectPool <EffectSystemScriptable.EffectType, EffectBase>
-        static Dictionary<string, Queue<EffectInstanceBase>> effectPoolQuery = new Dictionary<string, Queue<EffectInstanceBase>>();
+         Dictionary<string, Queue<EffectInstanceBase>> effectPoolQuery = new Dictionary<string, Queue<EffectInstanceBase>>();
 
         EffectInstanceBase RequestEffect(string type)
         {
@@ -423,7 +423,7 @@ namespace MacacaGames.EffectSystem
 #endif
         }
 
-        public static void RecoveryEffectBase(EffectInstanceBase effect, string type)
+        public  void RecoveryEffectBase(EffectInstanceBase effect, string type)
         {
 #if (USE_POOL)
 
@@ -437,7 +437,7 @@ namespace MacacaGames.EffectSystem
         }
 
         //EffectCondition
-        static Queue<EffectCondition> effectConditionPool = new Queue<EffectCondition>();
+         Queue<EffectCondition> effectConditionPool = new Queue<EffectCondition>();
 
         #endregion
 
@@ -472,7 +472,7 @@ namespace MacacaGames.EffectSystem
         }
 
         // ///<summary>將已存在的Effect實體賦予指定的Level。</summary>
-        // static EffectBase SetLevel(EffectBase effect, int level)
+        //  EffectBase SetLevel(EffectBase effect, int level)
         // {
         //     effect.input = level;
         //     return effect;
@@ -481,17 +481,17 @@ namespace MacacaGames.EffectSystem
         #endregion
         #region Effect效果說明與數值顯示
 #if !Server
-        public static string GetDefaultEffectsDescription(EffectGroup effectGroup)
+        public  string GetDefaultEffectsDescription(EffectGroup effectGroup)
         {
             return string.Join("\n", GetDefaultEffectsDescriptions(effectGroup.effects));
         }
 
-        public static string GetDefaultEffectsDescription(IEnumerable<EffectInfo> infos)
+        public  string GetDefaultEffectsDescription(IEnumerable<EffectInfo> infos)
         {
             return string.Join("\n", GetDefaultEffectsDescriptions(infos));
         }
 
-        public static IEnumerable<string> GetDefaultEffectsDescriptions(IEnumerable<EffectInfo> infos)
+        public  IEnumerable<string> GetDefaultEffectsDescriptions(IEnumerable<EffectInfo> infos)
         {
             return infos.Select(_ => GetDefaultEffectDescription(_));
         }
@@ -501,7 +501,7 @@ namespace MacacaGames.EffectSystem
         /// </summary>
         /// <param name="info"></param>
         /// <returns></returns>
-        public static string GetDefaultEffectDescription(EffectInfo info)
+        public  string GetDefaultEffectDescription(EffectInfo info)
         {
             if (EffectDataProvider.GetEffectDescriptionString == null)
             {
@@ -517,12 +517,12 @@ namespace MacacaGames.EffectSystem
             return result;
         }
 
-        public static string GetCustomEffectsDescription(string str, EffectGroup effectGroups)
+        public  string GetCustomEffectsDescription(string str, EffectGroup effectGroups)
         {
             return GetCustomEffectsDescription(str, effectGroups.effects);
         }
 
-        public static string GetCustomEffectsDescription(string str, IEnumerable<EffectInfo> infos)
+        public  string GetCustomEffectsDescription(string str, IEnumerable<EffectInfo> infos)
         {
             for (int i = 0; i < 50; i++)
             {
@@ -539,7 +539,7 @@ namespace MacacaGames.EffectSystem
             return str;
         }
 
-        static string GetCustomEffectDescription(string str, EffectInfo info)
+         string GetCustomEffectDescription(string str, EffectInfo info)
         {
 
             string param = GetTargetParam();
@@ -688,7 +688,7 @@ namespace MacacaGames.EffectSystem
             }
         }
 
-        internal static string GetEffectInfoTypeIdString(EffectInfo info)
+        internal  string GetEffectInfoTypeIdString(EffectInfo info)
         {
             if (string.IsNullOrEmpty(info.id))
                 return QueryEffectTypeWithDefault(info.type).Name;
@@ -696,7 +696,7 @@ namespace MacacaGames.EffectSystem
                 return $"#{info.id}";
         }
 
-        static string ReplaceEffectAffix(string des)
+         string ReplaceEffectAffix(string des)
         {
             const string affixHead = "{Affix_";
             const string affixFoot = "}";
@@ -727,7 +727,7 @@ namespace MacacaGames.EffectSystem
             return des;
         }
 
-        static void ValidEffectDescription(string str)
+         void ValidEffectDescription(string str)
         {
             if (str.Contains("{"))
             {
@@ -736,8 +736,8 @@ namespace MacacaGames.EffectSystem
         }
 
         //MAGIC 正規表達式
-        static Regex pattern = new Regex(@" *[0-9]+ *%*");
-        public static string GetColorNumberDescription(string text, string colorHex)
+         Regex pattern = new Regex(@" *[0-9]+ *%*");
+        public  string GetColorNumberDescription(string text, string colorHex)
         {
             if (colorHex[0] != '#')
                 colorHex = $"#{colorHex}";
