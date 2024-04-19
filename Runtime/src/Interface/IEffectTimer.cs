@@ -22,6 +22,10 @@ namespace MacacaGames.EffectSystem
         /// <param name="timer"></param>
         public void AddTimer(IEffectTimer timer)
         {
+            if(waitForAddTimer.Contains(timer))
+            {
+                return;
+            }
             waitForAddTimer.Enqueue(timer);
         }
 
