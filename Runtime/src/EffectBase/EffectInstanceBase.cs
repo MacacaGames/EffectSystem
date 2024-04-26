@@ -45,6 +45,10 @@ namespace MacacaGames.EffectSystem
         /// <summary>此EffectType所取得的層數上下限，若超過則會擠掉最舊的effect。</summary>
         public virtual int countLimit => int.MaxValue;
         
+        /// <summary>maintainTime timer的ID，用來決定該由哪種timer來迭代冷卻。</summary>
+        public virtual string maintainTimeTimerId => EffectSystemScriptableBuiltIn.TimerTickerId.Default;
+        /// <summary>cooldown timer的ID，用來決定該由哪種timer來迭代冷卻。</summary>
+        public virtual string cooldownTimeTimerId => EffectSystemScriptableBuiltIn.TimerTickerId.Default;
 
         /// <summary>標記此Effect的Tag。</summary>
         public List<string> tags = new List<string> { };
@@ -61,10 +65,8 @@ namespace MacacaGames.EffectSystem
 
             if (condition != null)
             {
-                effectSystem.RemoveFromTimerTicker(EffectSystemScriptableBuiltIn.TimerTickerId.Default,
-                    condition.maintainTimeTimer);
-                effectSystem.RemoveFromTimerTicker(EffectSystemScriptableBuiltIn.TimerTickerId.Default,
-                    condition.cooldownTimeTimer);
+                effectSystem.RemoveFromTimerTicker(maintainTimeTimerId, condition.maintainTimeTimer);
+                effectSystem.RemoveFromTimerTicker(cooldownTimeTimerId, condition.cooldownTimeTimer);
                 condition = null;
             }
 
@@ -102,10 +104,8 @@ namespace MacacaGames.EffectSystem
             EffectViewOnStart();
 
             // Sould be Add before Start(), since in some case the effect may deactive immiditily after start, then the condition will be null
-            effectSystem.AddToTimerTicker(EffectSystemScriptableBuiltIn.TimerTickerId.Default,
-                condition.maintainTimeTimer);
-            effectSystem.AddToTimerTicker(EffectSystemScriptableBuiltIn.TimerTickerId.Default,
-                condition.cooldownTimeTimer);
+            effectSystem.AddToTimerTicker(maintainTimeTimerId, condition.maintainTimeTimer);
+            effectSystem.AddToTimerTicker(cooldownTimeTimerId, condition.cooldownTimeTimer);
             condition.Start();
 
             OnStart();
@@ -187,10 +187,8 @@ namespace MacacaGames.EffectSystem
 
         public void End()
         {
-            effectSystem.RemoveFromTimerTicker(EffectSystemScriptableBuiltIn.TimerTickerId.Default,
-                condition.maintainTimeTimer);
-            effectSystem.RemoveFromTimerTicker(EffectSystemScriptableBuiltIn.TimerTickerId.Default,
-                condition.cooldownTimeTimer);
+            effectSystem.RemoveFromTimerTicker(maintainTimeTimerId, condition.maintainTimeTimer);
+            effectSystem.RemoveFromTimerTicker(cooldownTimeTimerId, condition.cooldownTimeTimer);
 
             if (isUsing == false)
             {
