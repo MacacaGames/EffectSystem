@@ -75,7 +75,7 @@ namespace MacacaGames.EffectSystem
             info = effectInfo;
 
             ClearViewList();
-            tags = effectInfo.tags != null ? effectInfo.tags : new List<string>();
+            tags = effectInfo.tags = new List<string>();
 
             if (condition == null)
             {
