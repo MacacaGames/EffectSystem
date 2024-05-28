@@ -1,1 +1,5 @@
 .docfx_project/obj
+Model/bin
+Model/obj
+Runtime/bin
+Runtime/obj
