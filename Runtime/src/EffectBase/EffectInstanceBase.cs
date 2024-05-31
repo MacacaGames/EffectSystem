@@ -75,7 +75,7 @@ namespace MacacaGames.EffectSystem
             info = effectInfo;
 
             ClearViewList();
-            tags = effectInfo.tags = new List<string>();
+            tags = effectInfo.tags  != null ? effectInfo.tags.Take(effectInfo.tags.Count).ToList() : new List<string>();
 
             if (condition == null)
             {
