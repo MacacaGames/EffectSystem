@@ -76,6 +76,7 @@ namespace MacacaGames.EffectSystem
         bool IsFinish { get; }
 
         float CurrentTime { get; }
+        float StartTime { get; }
 
         /// <summary>
         /// Start a timer with target time

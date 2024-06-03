@@ -36,14 +36,21 @@ namespace MacacaGames.EffectSystem
         {
             get
             {
-
                 return currentTime;
+            }
+        }
+        public float StartTime
+        {
+            get
+            {
+                return startTime;
             }
         }
 
         bool isPause = false;
         bool isStop = false;
         float currentTime = -1;
+        float startTime = -1;
         bool isIgnoreTimerChecking = false;
 
         public string GetId()
@@ -72,6 +79,7 @@ namespace MacacaGames.EffectSystem
 
         public void Start(float targetTime)
         {
+            startTime = targetTime;
             currentTime = targetTime;
             isIgnoreTimerChecking = targetTime <= 0;
             OnTimerStart();
