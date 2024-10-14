@@ -6,44 +6,59 @@ namespace MacacaGames.EffectSystem
     public interface IEffectableObject
     {
         /// <summary>
-        /// Get the display name of an IEffectableObject
-        /// Not really required, but very helpful when debugging
-        /// </summary>
-        /// <returns></returns>
-        string GetDisplayName();
-        Transform GetEffectViewParent(string viewRoot);
+    /// Gets the display name of the IEffectableObject.
+    /// Not strictly required, but very helpful for debugging.
+    /// </summary>
+    /// <returns></returns>
+    string GetDisplayName();
 
-        /// <summary>
-        /// Detect if a Effect can be request or not
-        /// </summary>
-        /// <param name="info"></param>
-        /// <returns>If false, then system automatically reject a add effect request</returns>
-        bool ApprovedAddEffect(EffectInfo info);
+    /// <summary>
+    /// Retrieves the parent Transform for the effect view based on the viewRoot.
+    /// </summary>
+    /// <param name="viewRoot"></param>
+    /// <returns></returns>
+    Transform GetEffectViewParent(string viewRoot);
 
-        /// <summary>
-        /// Fire once when an Effect Instance is Active
-        /// </summary>
-        /// <param name="info"></param>
-        void OnEffectActive(EffectInfo info);
+    /// <summary>
+    /// Determines whether this IEffectableObject accepts the application of the 
+    /// provided info. This method should only include checks and should not perform 
+    /// any operations on the effect.
+    /// </summary>
+    /// <param name="info"></param>
+    /// <returns>Returns false if this IEffectableObject reject the effect request.</returns>
+    bool ApprovedAddEffect(EffectInfo info);
 
-        /// <summary>
-        /// Fire once when an Effect Instance is DeActive
-        /// </summary>
-        /// <param name="info"></param>
-        void OnEffectDeactive(EffectInfo info);
+    /// <summary>
+    /// Triggered when an Effect Instance becomes active.
+    /// </summary>
+    /// <param name="info"></param>
+    void OnEffectActive(EffectInfo info);
 
-        // void OnEffectConditionActive(string condition, EffectTriggerConditionInfo info);
+    /// <summary>
+    /// Triggered when an Effect Instance becomes inactive.
+    /// </summary>
+    /// <param name="info"></param>
+    void OnEffectDeactive(EffectInfo info);
 
-        bool IsAlive();
+    /// <summary>
+    /// Determines if the object is still "alive".
+    /// </summary>
+    /// <returns></returns>
+    bool IsAlive();
 
-        /// <summary>
-        /// Due to the real runtime value is maintain by the IffectableObject, so you should use this to get the acctual value
-        /// e.g. Current_ATK = ATK_Constant * ATK_Ratio
-        /// So only using EffectSystem.GetEffectSum() is not enough
-        /// </summary>
-        /// <param name="parameterKey"></param>
-        /// <returns></returns>
-        float GetRuntimeValue(string parameterKey);
+    /// <summary>
+    /// Since the actual runtime values are maintained by the IEffectableObject, 
+    /// implement the values needed for your game.
+    /// For example, ATK_Current = ATK_Constant * ATK_Ratio.
+    /// </summary>
+    /// <param name="parameterKey"></param>
+    /// <returns></returns>
+    float GetRuntimeValue(string parameterKey);
+
+    /// <summary>
+    /// Destroys the IEffectableObject.
+    /// </summary>
+    void DestoryEffectableObject();
 
     }
 }
