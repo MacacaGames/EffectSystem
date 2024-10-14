@@ -25,7 +25,7 @@ namespace MacacaGames.EffectSystem
             isActive = false;
 
             cooldownTimeTimer = new DefaultTimerBase(
-                null, OnColdDownTimeEnd, null, null,null
+                null, OnCooldownTimeEnd, null, null,null
             );
             maintainTimeTimer = new DefaultTimerBase(
                null, OnMaintainTimeEnd, null, null,null
@@ -96,7 +96,7 @@ namespace MacacaGames.EffectSystem
                 return;
             }
 
-            //檢查ColdDown
+            //檢查Cooldown
             if (cooldownTimeTimer.IsCounting == true)
             {
                 return;
@@ -196,12 +196,12 @@ namespace MacacaGames.EffectSystem
             effectInstance.OnDeactive(info);
         }
 
-        void OnColdDownTimeEnd()
+        void OnCooldownTimeEnd()
         {
             if (effectInstance.RemoveSleepyEffect())
                 return;
 
-            effectInstance.OnColdownEnd();
+            effectInstance.OnCooldownEnd();
             if (effectInfo.logic == EffectLifeCycleLogic.ReactiveAfterCooldownEnd)
             {
                 OnActive(new EffectTriggerConditionInfo

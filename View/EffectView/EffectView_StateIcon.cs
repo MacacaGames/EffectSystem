@@ -103,9 +103,9 @@ namespace MacacaGames.EffectSystem
             CompareTriggerFlag(DisplayTrigger.OnEnd);
         }
 
-        public override void OnColdDownEnd()
+        public override void OnCooldownEnd()
         {
-            base.OnColdDownEnd();
+            base.OnCooldownEnd();
 
             CompareTriggerFlag(DisplayTrigger.OnCDEnd);
         }

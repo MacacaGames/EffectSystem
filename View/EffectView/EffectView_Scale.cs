@@ -31,9 +31,9 @@ namespace MacacaGames.EffectSystem
         [SerializeField]
         float onEndScale = 1;
         [SerializeField]
-        GameObject[] onColdDownEndParticle = new GameObject[0];
+        GameObject[] onCooldownEndParticle = new GameObject[0];
         [SerializeField]
-        float onColdDownEndScale = 1;
+        float onCooldownEndScale = 1;
 
         List<(GameObject, Vector3)> recoverHistory = new List<(GameObject, Vector3)>();
 
@@ -95,11 +95,11 @@ namespace MacacaGames.EffectSystem
             }
         }
 
-        public override void OnColdDownEnd()
+        public override void OnCooldownEnd()
         {
-            base.OnColdDownEnd();
+            base.OncooldownEnd();
 
-            foreach (var p in onColdDownEndParticle)
+            foreach (var p in onCooldownEndParticle)
             {
                 p.transform.DOScale(onEndScale, scaleSec);
                 recoverHistory.Add((p.gameObject, p.transform.localScale));

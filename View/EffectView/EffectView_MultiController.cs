@@ -52,13 +52,13 @@ namespace MacacaGames.EffectSystem
             }
         }
 
-        public override void OnColdDownEnd()
+        public override void OnCooldownEnd()
         {
             base.OnEnd();
 
             foreach (var el in effectViews)
             {
-                el.OnColdDownEnd();
+                el.OnCooldownEnd();
             }
         }
 

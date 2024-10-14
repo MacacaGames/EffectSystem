@@ -229,17 +229,17 @@ namespace MacacaGames.EffectSystem
         }
 
         /// <summary>
-        /// Excude when the colddown is finish
+        /// Excude when the cooldown is end
         /// </summary>
-        public virtual void OnColdownEnd()
+        public virtual void OnCooldownEnd()
         {
-            EffectViewOnColdDownEnd();
+            EffectViewOnCooldownEnd();
         }
 
-        public virtual void EffectViewOnColdDownEnd()
+        public virtual void EffectViewOnCooldownEnd()
         {
             foreach (var effectView in effectViewList)
-                effectView.OnColdDownEnd();
+                effectView.OnCooldownEnd();
         }
 
 

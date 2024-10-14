@@ -80,7 +80,7 @@ public class EffectInfoDrawer : OdinValueDrawer<EffectInfo >
 
 
                 EditorGUILayout.LabelField("CD(s)", GUILayout.Width(detailLabelWidth));
-                effectInfo.coldDownTime = EditorGUILayout.FloatField(effectInfo.coldDownTime, GUILayout.Width(50));
+                effectInfo.cooldownTime = EditorGUILayout.FloatField(effectInfo.cooldownTime, GUILayout.Width(50));
 
             }
         }
@@ -242,14 +242,14 @@ public override void OnGUI(Rect position, SerializedProperty property, GUIConten
         }
     }
 
-    if (isUnfold == false && GUIColdDownTimeActiveCondition() ||
+    if (isUnfold == false && GUICooldownTimeActiveCondition() ||
         isUnfold == true)
     {
         using (var horizon = new GUILayout.HorizontalScope())
         {
             EditorGUILayout.LabelField("", GUILayout.Width(tabWidth));
             EditorGUILayout.LabelField("CD(s)", GUILayout.Width(detailLabelWidth));
-            EditorGUILayout.PropertyField(property.FindPropertyRelative("coldDownTime"), new GUIContent(""));
+            EditorGUILayout.PropertyField(property.FindPropertyRelative("cooldownTime"), new GUIContent(""));
         }
     }
 
@@ -276,9 +276,9 @@ public override void OnGUI(Rect position, SerializedProperty property, GUIConten
                 property.FindPropertyRelative("deactiveCondition").enumValueIndex != (int)DeactiveCondition.None;
         }
 
-        bool GUIColdDownTimeActiveCondition()
+        bool GUICooldownTimeActiveCondition()
         {
-            return property.FindPropertyRelative("coldDownTime").floatValue > 0 && HasSetCondition();
+            return property.FindPropertyRelative("cooldownTime").floatValue > 0 && HasSetCondition();
         }
     }
 

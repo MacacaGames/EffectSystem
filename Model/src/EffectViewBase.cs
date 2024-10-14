@@ -36,7 +36,7 @@ namespace MacacaGames.EffectSystem
         AudioInfo[] onEndAudio = new AudioInfo[0];
 
         //[SerializeField]  //不常用到，所以先不顯示
-        AudioInfo[] onColdDownEndAudio = new AudioInfo[0];
+        AudioInfo[] onCooldownEndAudio = new AudioInfo[0];
         AudioInfo[] OnEffectApplyAudio = new AudioInfo[0];
 
 
@@ -82,9 +82,9 @@ namespace MacacaGames.EffectSystem
             }
         }
 
-        public virtual void OnColdDownEnd()
+        public virtual void OnCooldownEnd()
         {
-            foreach (var audioInfo in onColdDownEndAudio)
+            foreach (var audioInfo in onCooldownEndAudio)
             {
                 //AudioController.Instance.PlayOneShot(audioInfo.audioName);
                 Debug.Log("FMODUnity and PlayOneShot is not implemented, plaease fix it !!!!");
@@ -93,7 +93,7 @@ namespace MacacaGames.EffectSystem
 
         public virtual void OnEffectApply()
         {
-            foreach (var audioInfo in onColdDownEndAudio)
+            foreach (var audioInfo in onCooldownEndAudio)
             {
                 //AudioController.Instance.PlayOneShot(audioInfo.audioName);
                 Debug.Log("FMODUnity and PlayOneShot is not implemented, plaease fix it !!!!");

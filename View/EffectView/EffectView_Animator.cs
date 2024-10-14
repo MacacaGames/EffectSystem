@@ -63,7 +63,7 @@ namespace MacacaGames.EffectSystem
 
         }
 
-        public override void OnColdDownEnd()
+        public override void OnCooldownEnd()
         {
             ResetAnimatorTrigger();
 

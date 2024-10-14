@@ -20,7 +20,7 @@ public class EffectView_Particle : EffectViewBase
     ParticleSystem[] onEndParticle = new ParticleSystem[0];
     
     [SerializeField]
-    ParticleSystem[] onColdDownEndParticle = new ParticleSystem[0];
+    ParticleSystem[] onCooldownEndParticle = new ParticleSystem[0];
 
       [SerializeField]
     ParticleSystem[] OnEffectApplyParticle = new ParticleSystem[0];
@@ -68,11 +68,11 @@ public class EffectView_Particle : EffectViewBase
         }
     }
 
-    public override void OnColdDownEnd()
+    public override void OnCooldownEnd()
     {
-        base.OnColdDownEnd();
+        base.OnCooldownEnd();
 
-        foreach (var p in onColdDownEndParticle)
+        foreach (var p in onCooldownEndParticle)
         {
             p.Play();
         }

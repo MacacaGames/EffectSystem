@@ -20,7 +20,7 @@ namespace MacacaGames.EffectSystem
         string[] onEndParticle = new string[0];
 
         [SerializeField]
-        string[] onColdDownEndParticle = new string[0];
+        string[] onCooldownEndParticle = new string[0];
 
 
 
@@ -64,11 +64,11 @@ namespace MacacaGames.EffectSystem
             }
         }
 
-        public override void OnColdDownEnd()
+        public override void OnCooldownEnd()
         {
-            base.OnColdDownEnd();
+            base.OnCooldownEnd();
 
-            foreach (var p in onColdDownEndParticle)
+            foreach (var p in onCooldownEndParticle)
             {
                 Play(p);
             }
