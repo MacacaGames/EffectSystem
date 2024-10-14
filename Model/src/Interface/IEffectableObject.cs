@@ -55,10 +55,5 @@ namespace MacacaGames.EffectSystem
     /// <returns></returns>
     float GetRuntimeValue(string parameterKey);
 
-    /// <summary>
-    /// Destroys the IEffectableObject.
-    /// </summary>
-    void DestoryEffectableObject();
-
     }
 }
