@@ -80,7 +80,7 @@ namespace MacacaGames.EffectSystem
             {
                 foreach (var requirement in effectInfo.activeRequirementLists)
                 {
-                    if (requirement.IsRequirementsFullfilled(info) == false)
+                    if (requirement.IsRequirementsFulfilled(info) == false)
                     {
                         Debug.Log($"[Effect Debug] {info} 的 ActiveRequirementList {requirement} 條件不符合，無法啟動");
                         return;
@@ -159,7 +159,7 @@ namespace MacacaGames.EffectSystem
             {
                 foreach (var requirement in effectInfo.deactiveRequirementLists)
                 {
-                    if (requirement.IsRequirementsFullfilled(info) == false)
+                    if (requirement.IsRequirementsFulfilled(info) == false)
                     {
                         Debug.Log($"[Effect Debug] {info} 的 ActiveRequirementList {requirement} 條件不符合，無法deactive");
                         return;
