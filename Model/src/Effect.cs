@@ -23,7 +23,7 @@ namespace MacacaGames.EffectSystem.Model
         public float activeProbability; // Active、Deacitve機率，0-100
         public float deactiveProbability;
         public float maintainTime;
-        public int cooldownTime;
+        public float cooldownTime;
         public EffectLifeCycleLogic logic;
         public string colliderType;
         public List<string> subInfoIds;
