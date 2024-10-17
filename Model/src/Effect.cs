@@ -20,7 +20,7 @@ namespace MacacaGames.EffectSystem.Model
         public string deactiveCondition;
         public List<string> deactiveRequirement;
         public TriggerTransType triggerTransType;
-        public float activeProbability; // Active、Deacitve機率，0-100
+        public float activeProbability; // Active機率，0~1
         public float deactiveProbability;
         public float maintainTime;
         public int cooldownTime;
@@ -214,8 +214,8 @@ namespace MacacaGames.EffectSystem.Model
         public string id;
         public string conditionParameter;
         public ConditionLogic requirementLogic;
-        public bool isCheckOwner;
         public int conditionValue;
+        public bool isCheckOwner;
 
         public bool IsRequirementsFullfilled(EffectTriggerConditionInfo info)
         {

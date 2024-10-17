@@ -781,7 +781,7 @@ namespace MacacaGames.EffectSystem
         #region 取得Effect的Value總和
 
         /// <summary>
-        /// Get the sum value of the EffectType on an IEffectableObject
+        /// Gets the total value of all effects of the specified type on an IEffectableObject.
         /// </summary>
         /// <param name="target">The target IEffectableObject</param>
         /// <param name="effectType">The EffectType</param>
@@ -815,6 +815,7 @@ namespace MacacaGames.EffectSystem
         /// </summary>
         /// <param name="owner">The target IEffectableObjectt.</param>
         /// <param name="effectInfos">The EffectGroup to be added to the owner.</param>
+        /// <param name="source">The source of the effect, it can be used to store where this effect comes from </param>
         /// <param name="tags">Tags to be added to the EffectInstance for easier management. </param>
         public List<EffectInstanceBase> AddRequestedEffects(IEffectableObject owner, EffectGroup effectGroup, object source = null, params string[] tags)
         {
@@ -826,6 +827,7 @@ namespace MacacaGames.EffectSystem
         /// </summary>
         /// <param name="owner">The target IEffectableObjectt.</param>
         /// <param name="effectInfos">The EffectInfos to be added to the owner.</param>
+        ///   /// &lt;param name="source"&gt;The source of the effect, it can be used to store where this effect comes from &lt;/param&gt;
         /// <param name="tags">Tags to be added to the EffectInstance for easier management. </param>
         public List<EffectInstanceBase> AddRequestedEffects(IEffectableObject owner, IEnumerable<EffectInfo> effectInfos, object source = null, params string[] tags)
         {
@@ -1107,7 +1109,7 @@ namespace MacacaGames.EffectSystem
             return effects;
         }
         /// <summary>
-        /// Get Effect Instance by type
+        /// Get Effect Instance List by type
         /// </summary>
         /// <param name="owner">The target IEffectableObject</param>
         /// <param name="tag"></param>
