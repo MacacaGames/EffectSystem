@@ -23,7 +23,7 @@ namespace MacacaGames.EffectSystem.Model
         public float activeProbability; // Active機率，0~1
         public float deactiveProbability;
         public float maintainTime;
-        public int cooldownTime;
+        public float cooldownTime;
         public EffectLifeCycleLogic logic;
         public string colliderType;
         public List<string> subInfoIds;
@@ -217,36 +217,36 @@ namespace MacacaGames.EffectSystem.Model
         public int conditionValue;
         public bool isCheckOwner;
 
-        public bool IsRequirementsFullfilled(EffectTriggerConditionInfo info)
+        public bool IsRequirementsFulfilled(EffectTriggerConditionInfo info)
         {
             var effectable = isCheckOwner ? info.owner : info.anchor;
             var sourceValue = (int)System.MathF.Floor(effectable.GetRuntimeValue(conditionParameter));
-            bool IsRequirementFullfilled = true;
+            bool IsRequirementFulfilled = true;
             switch (requirementLogic)
             {
                 case ConditionLogic.None:
-                    IsRequirementFullfilled = true;
+                    IsRequirementFulfilled = true;
                     break;
                 case ConditionLogic.Greater:
-                    IsRequirementFullfilled = sourceValue > conditionValue;
+                    IsRequirementFulfilled = sourceValue > conditionValue;
                     break;
                 case ConditionLogic.GreaterEqual:
-                    IsRequirementFullfilled = sourceValue >= conditionValue;
+                    IsRequirementFulfilled = sourceValue >= conditionValue;
                     break;
                 case ConditionLogic.Equal:
-                    IsRequirementFullfilled = sourceValue == conditionValue;
+                    IsRequirementFulfilled = sourceValue == conditionValue;
                     break;
                 case ConditionLogic.LessEqual:
-                    IsRequirementFullfilled = sourceValue <= conditionValue;
+                    IsRequirementFulfilled = sourceValue <= conditionValue;
                     break;
                 case ConditionLogic.Less:
-                    IsRequirementFullfilled = sourceValue < conditionValue;
+                    IsRequirementFulfilled = sourceValue < conditionValue;
                     break;
                 default:
-                    IsRequirementFullfilled = false;
+                    IsRequirementFulfilled = false;
                     break;
             }
-            return IsRequirementFullfilled;
+            return IsRequirementFulfilled;
         }
     }
 
