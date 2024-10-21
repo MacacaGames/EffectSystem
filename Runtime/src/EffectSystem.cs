@@ -33,14 +33,14 @@ namespace MacacaGames.EffectSystem
         public void Init()
         {
             Instance = this;
-#if !Server
             
+#if UNITY_STANDALONE || UNITY_IOS || UNITY_ANDROID
             
          if (effectViewPoolFolder == null)
          {
              var go = new GameObject("EffectSystem_effectViewPool");
                 effectViewPoolFolder = go.transform;
-            }   
+         }   
 #endif
 
             AddTimerTicker(EffectSystemScriptableBuiltIn.TimerTickerId.Default);
@@ -50,7 +50,7 @@ namespace MacacaGames.EffectSystem
 
 
         /// <summary>
-        /// Add a timer Ticker to the system
+        /// Create a Timer Ticker for the system
         /// </summary>
         /// <param name="Id">The ticker's Id</param>  
         public void AddTimerTicker(string Id)
@@ -58,7 +58,7 @@ namespace MacacaGames.EffectSystem
             timerTickers.TryAdd(Id, new TimerTicker(Id));
         }
         /// <summary>
-        /// remove the timer Ticker
+        /// Remove the timer Ticker from the system
         /// </summary>
         /// <param name="Id">The ticker's Id</param>  
         public void RemoveTimerTicker(string Id)
@@ -79,6 +79,11 @@ namespace MacacaGames.EffectSystem
             }
         }
 
+        /// <summary>
+        /// Add a IEffectTimer to a TimerTicker
+        /// </summary>
+        /// <param name="Id"> The id of the TimerTicker</param>
+        /// <param name="effectTimer"> The IEffectTimer to be added</param>
         public void AddToTimerTicker(string Id, IEffectTimer effectTimer)
         {
             if (timerTickers.TryGetValue(Id, out TimerTicker timerTicker))
@@ -91,6 +96,11 @@ namespace MacacaGames.EffectSystem
             }
         }
 
+        /// <summary>
+        /// Remove a IEffectTimer from a TimerTicker
+        /// </summary>
+        /// <param name="Id">The id of the TimerTicker</param>
+        /// <param name="effectTimer"> The IEffectTimer to be removed</param>
         public void RemoveFromTimerTicker(string Id, IEffectTimer effectTimer)
         {
             if (timerTickers.TryGetValue(Id, out TimerTicker timerTicker))
@@ -207,7 +217,7 @@ namespace MacacaGames.EffectSystem
         Transform effectViewPoolFolder;
         public Dictionary<GameObject, Queue<EffectViewBase>> effectViewPool = new Dictionary<GameObject, Queue<EffectViewBase>>();
 
-#if !Server
+#if UNITY_STANDALONE || UNITY_IOS || UNITY_ANDROID
 
         public EffectViewBase RequestEffectView(EffectInfo info, EffectViewInfo viewInfo, IEffectableObject owner)
         {
@@ -480,7 +490,7 @@ namespace MacacaGames.EffectSystem
 
         #endregion
         #region Effect效果說明與數值顯示
-#if !Server
+#if UNITY_STANDALONE || UNITY_IOS || UNITY_ANDROID
         public  string GetDefaultEffectsDescription(EffectGroup effectGroup)
         {
             return string.Join("\n", GetDefaultEffectsDescriptions(effectGroup.effects));
