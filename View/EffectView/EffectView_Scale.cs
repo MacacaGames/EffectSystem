@@ -97,7 +97,7 @@ namespace MacacaGames.EffectSystem
 
         public override void OnCooldownEnd()
         {
-            base.OncooldownEnd();
+            base.OnCooldownEnd();
 
             foreach (var p in onCooldownEndParticle)
             {
