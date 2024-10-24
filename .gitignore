@@ -3,3 +3,6 @@ Model/bin
 Model/obj
 Runtime/bin
 Runtime/obj
+
+# Mac desktop service store files
+.DS_Store
