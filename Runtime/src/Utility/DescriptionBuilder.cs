@@ -6,13 +6,13 @@ using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using UnityEngine;
 using MacacaGames;
 using MacacaGames.EffectSystem.Model;
+using UnityEngine;
 
 namespace MacacaGames
 {
-    public class DescriptionBuilder : MonoBehaviour
+    public class DescriptionBuilder
     {
         /// <summary>
         /// 將描述中的params替換成script中的值
@@ -229,14 +229,11 @@ namespace MacacaGames
 
         #region Testing
 
-        public TestClass testClass = new TestClass();
+        public static TestClass testClass = new TestClass();
 
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                Debug.Log(GetDescriptionFormat("{[name]} is Lv.{[level]} and hp:{{[hp]}}, Deal {[atk]} damage to enemy. {[sss[0]]} and {[sss[1]]} in sss", testClass));
-            }
+        public static void RunTest()
+        { 
+            Debug.Log(GetDescriptionFormat("{[name]} is Lv.{[level]} and hp:{{[hp]}}, Deal {[atk]} damage to enemy. {[sss[0]]} and {[sss[1]]} in sss", testClass));
         }
 
         #endregion
