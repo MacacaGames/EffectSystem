@@ -21,31 +21,36 @@ The system uses tables to combine various buffs, debuffs, or special effects, wi
 
 # Installation
 
-### Option 1: OpenUPM (Recommended)
-
-```sh
-openupm add com.macacagames.effectsystem
-```
-
-### Option 2: Unity Package Manager
+### Option 1: Unity Package Manager
 Add the following to your project's manifest.json file:
 ```json
 {
     "dependencies": {
         "com.macacagames.utility": "https://github.com/MacacaGames/MacacaUtility.git",
-        "com.macacagames.effectsystem": "https://github.com/MacacaGames/EffectSystem.git"
+         "com.macacagames.effectsystem.editor": "git@github.com:MacacaGames/EffectSystem.git?path=Editor/src",
+        "comm.acacagames.effectsystem.model": "git@github.com:MacacaGames/EffectSystem.git?path=Model/src",
+        "com.macacagames.effectsystem.runtime": "git@github.com:MacacaGames/EffectSystem.git?path=Runtime/src",
+        "com.macacagames.effectsystem.view": "git@github.com:MacacaGames/EffectSystem.git?path=View",
     }
 }
 ```
 
-### Option 3: Git SubModule
+### Option 2: Git SubModule
 Add the EffectSystem as a Git submodule:
 ```bash
-git submodule add https://github.com/MacacaGames/EffectSystem.git Assets/MacacaEffectSystem
+git submodule add https://github.com/MacacaGames/EffectSystem.git MyPackages
 ```
 > Note: EffectSystem depends on MacacaUtility, so you also need to add MacacaUtility as a Git submodule:
-```bash
-git submodule add https://github.com/MacacaGames/MacacaUtility.git Assets/MacacaUtility
+```json
+{
+    "dependencies": {
+        "com.macacagames.utility": "https://github.com/MacacaGames/MacacaUtility.git",
+        "com.macacagames.effectsystem.editor": "file:../MyPackages/EffectSystem/Editor/src",
+        "comm.acacagames.effectsystem.model": "file:../MyPackages/EffectSystem/Model/src",
+        "com.macacagames.effectsystem.runtime": "file:../MyPackages/EffectSystem/Runtime/src",
+        "com.macacagames.effectsystem.view": "file:../MyPackages/EffectSystem/View",
+    }
+}
 ```
 ---
 
