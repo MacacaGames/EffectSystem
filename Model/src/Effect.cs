@@ -190,8 +190,8 @@ namespace MacacaGames.EffectSystem.Model
         public string id;
         public string conditionParameter;
         public ConditionLogic requirementLogic;
-        public bool isCheckOwner;
         public int conditionValue;
+        public bool isCheckOwner;
 
         public bool IsRequirementsFulfilled(EffectTriggerConditionInfo info)
         {
