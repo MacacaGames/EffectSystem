@@ -13,23 +13,22 @@ namespace MacacaGames.EffectSystem.Model
     {
         public string id;
         public string type;
-        public EffectTaxonomy taxonomy;
         public float value;
         public string activeCondition;
         public List<string> activeRequirement;
+        public float activeProbability; // Active、Deacitve機率，0-100
         public string deactiveCondition;
         public List<string> deactiveRequirement;
-        public TriggerTransType triggerTransType;
-        public float activeProbability; // Active機率，0~1
         public float deactiveProbability;
         public float maintainTime;
         public float cooldownTime;
         public EffectLifeCycleLogic logic;
-        public string colliderType;
-        public List<string> subInfoIds;
-        public Dictionary<string, string> parameters;
-        public List<string> viewInfoIds;
+        public TriggerTransType triggerTransType;
         public List<string> tags;
+        public List<string> subInfoIds;
+        public List<string> viewInfoIds;
+        public Dictionary<string, string> parameters;
+        
         [MessagePack.IgnoreMember, Newtonsoft.Json.JsonIgnore]
         List<EffectInfo> _subInfos;
         [MessagePack.IgnoreMember, Newtonsoft.Json.JsonIgnore]
@@ -126,29 +125,6 @@ namespace MacacaGames.EffectSystem.Model
             }
 
             return "(無錯誤訊息)";
-        }
-
-        public EffectInfo GetTypeDomain()
-        {
-            return new EffectInfo
-            {
-                type = type,
-                taxonomy = EffectTaxonomy.Domain,
-            };
-        }
-
-        public EffectInfo GetTypeKingdom()
-        {
-            return new EffectInfo
-            {
-                type = type,
-                taxonomy = EffectTaxonomy.Kingdom,
-                activeCondition = activeCondition,
-                triggerTransType = triggerTransType,
-                deactiveCondition = deactiveCondition,
-                cooldownTime = cooldownTime,
-                maintainTime = maintainTime,
-            };
         }
 
         static FieldInfo[] fields = null;
