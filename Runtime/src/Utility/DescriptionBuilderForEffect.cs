@@ -8,8 +8,6 @@ using System.Threading.Tasks;
 using UnityEngine;
 using MacacaGames;
 using MacacaGames.EffectSystem.Model;
-using MacacaGames.GameSystem;
-using ProjectInfinity.Model;
 
 
 public class DescriptionBuilderForEffect : DescriptionBuilder
