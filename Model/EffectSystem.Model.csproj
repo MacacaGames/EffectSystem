@@ -13,8 +13,8 @@
     <ItemGroup>
         <PackageReference Include="IdentityServer4.AspNetIdentity" Version="4.1.2" />
         <PackageReference Include="MessagePack.AspNetCoreMvcFormatter" Version="2.4.35" />
-        <PackageReference Include="MessagePack.UnityShims" Version="2.5.108" />
-        <PackageReference Include="MessagePack" Version="2.5.108" />
+        <PackageReference Include="MessagePack.UnityShims" Version="2.5.187" />
+        <PackageReference Include="MessagePack" Version="2.5.187" />
     </ItemGroup>
 
 
