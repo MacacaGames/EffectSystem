@@ -16,7 +16,7 @@ namespace MacacaGames.EffectSystem.Model
         public float value;
         public string activeCondition;
         public List<string> activeRequirement;
-        public float activeProbability; // Active、Deacitve機率，0-100
+        public float activeProbability; // Active、Deacitve機率，0-1
         public string deactiveCondition;
         public List<string> deactiveRequirement;
         public float deactiveProbability;

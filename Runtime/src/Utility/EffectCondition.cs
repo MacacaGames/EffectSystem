@@ -90,7 +90,7 @@ namespace MacacaGames.EffectSystem
 
             var random = new System.Random();
             //檢查機率觸發
-            if (random.NextDouble() >= effectInfo.activeProbability && effectInfo.activeProbability != 0F)
+            if (random.NextDouble() <= effectInfo.activeProbability && effectInfo.activeProbability != 0F)
             {
                 //Debug.Log("Active 機率沒中！");
                 return;
@@ -173,7 +173,7 @@ namespace MacacaGames.EffectSystem
             {
                 var random = new System.Random();
                 //檢查機率觸發
-                if (effectInfo.deactiveProbability != 0F && random.NextDouble() >= effectInfo.deactiveProbability)
+                if (effectInfo.deactiveProbability != 0F && random.NextDouble() <= effectInfo.deactiveProbability)
                 {
                     Debug.Log("Dective 機率沒中！");
                     return;
