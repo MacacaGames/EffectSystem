@@ -33,15 +33,6 @@ namespace MacacaGames.EffectSystem
         public void Init()
         {
             Instance = this;
-            
-#if UNITY_STANDALONE || UNITY_IOS || UNITY_ANDROID
-            
-         if (effectViewPoolFolder == null)
-         {
-             var go = new GameObject("EffectSystem_effectViewPool");
-                effectViewPoolFolder = go.transform;
-         }   
-#endif
 
             AddTimerTicker(EffectSystemScriptableBuiltIn.TimerTickerId.Default);
         }
@@ -162,6 +153,9 @@ namespace MacacaGames.EffectSystem
 
         #endregion
 
+        #region System Action
+        public Action<EffectInstanceBase> OnEffectAdded = null;
+        #endregion
 
 
 
@@ -212,63 +206,24 @@ namespace MacacaGames.EffectSystem
         #endregion
 
 
+        
 
+        // public EffectViewBase RequestEffectView(EffectInfo info, EffectViewInfo viewInfo, IEffectableObject owner)
+        // {
+        //     if (effectViewPool.TryGetValue(viewInfo.prefab, out var q) == false)
+        //     {
+        //         q = new Queue<EffectViewBase>();
+        //         effectViewPool.Add(viewInfo.prefab, q);
+        //     }
+        // }
 
-        Transform effectViewPoolFolder;
-        public Dictionary<GameObject, Queue<EffectViewBase>> effectViewPool = new Dictionary<GameObject, Queue<EffectViewBase>>();
-
-#if UNITY_STANDALONE || UNITY_IOS || UNITY_ANDROID
-
-        public EffectViewBase RequestEffectView(EffectInfo info, EffectViewInfo viewInfo, IEffectableObject owner)
-        {
-            if (effectViewPool.TryGetValue(viewInfo.prefab, out var q) == false)
-            {
-                q = new Queue<EffectViewBase>();
-                effectViewPool.Add(viewInfo.prefab, q);
-            }
-
-            EffectViewBase effectView = null;
-
-            if (q.Count == 0)
-            {
-                GameObject instance = GameObject.Instantiate(viewInfo.prefab);
-
-                effectView = instance.GetComponent<EffectViewBase>();
-
-                if (effectView != null)
-                {
-                    NormalizeTransform(effectView.transform, owner.GetEffectViewParent(viewInfo.viewRootType));
-                    effectView.Init(info, viewInfo);
-                }
-                else
-                {
-                    throw new Exception("[EffectView] 在EffectView上找不到EffectViewBase。");
-                }
-            }
-            else
-            {
-                effectView = q.Dequeue();
-                NormalizeTransform(effectView.transform, owner.GetEffectViewParent(viewInfo.viewRootType));
-            }
-            
-            return effectView;
-            
-            void NormalizeTransform(Transform t, Transform parent)
-            {
-                t.SetParent(parent);
-                t.localPosition = Vector3.zero;
-                t.localScale = Vector3.one;
-            }
-        }
-
-        public void RecoveryEffectView(EffectViewBase effectView)
-        {
-            var queryKey = effectView.viewInfo.prefab;
-
-            effectViewPool[queryKey].Enqueue(effectView);
-            effectView.transform.SetParent(effectViewPoolFolder);
-        }
-#endif
+        // public void RecoveryEffectView(EffectViewBase effectView)
+        // {
+        //     var queryKey = effectView.viewInfo.prefab;
+        //
+        //     effectViewPool[queryKey].Enqueue(effectView);
+        //     effectView.transform.SetParent(effectViewPoolFolder);
+        // }
 
 
         #region Condition
@@ -890,6 +845,7 @@ namespace MacacaGames.EffectSystem
             effectList.Add(effect);
             effect.Start();
 
+            OnEffectAdded?.Invoke(effect);
             return effect;
 #if (UNITY_EDITOR)
             OnEffectChange?.Invoke();   //Callback

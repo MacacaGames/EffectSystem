@@ -28,7 +28,7 @@ namespace MacacaGames.EffectSystem
                 null, OnCooldownTimeEnd, null, null,null
             );
             maintainTimeTimer = new DefaultTimerBase(
-               null, OnMaintainTimeEnd, null, null,null
+               null, OnMaintainTimeEnd, null, null,OnTick
            );
         }
 
@@ -209,6 +209,11 @@ namespace MacacaGames.EffectSystem
                     owner = effectInstance.owner
                 });
             }
+        }
+
+        void OnTick()
+        {
+            effectInstance.OnTick();
         }
 
         void OnMaintainTimeEnd()

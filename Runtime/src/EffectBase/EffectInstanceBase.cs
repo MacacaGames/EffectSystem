@@ -18,8 +18,6 @@ namespace MacacaGames.EffectSystem
             this.effectSystem = effectSystem;
         }
 
-        List<EffectViewBase> effectViewList = new List<EffectViewBase>();
-
         public float input
         {
             get { return info.value; }
@@ -53,6 +51,18 @@ namespace MacacaGames.EffectSystem
         /// <summary>標記此Effect的Tag。</summary>
         public List<string> tags = new List<string> { };
 
+        public Action OnEffectStart;
+
+        public Action OnEffectActive;
+
+        public Action OnEffectDeactive;
+
+        public Action OnEffectEnd;
+
+        public Action OnCEffectooldownEnd;
+        
+        public Action OnEffectTick;
+
         public virtual string GetEditorInfo()
         {
             return "";
@@ -74,18 +84,12 @@ namespace MacacaGames.EffectSystem
 
             info = effectInfo;
 
-            ClearViewList();
             tags = effectInfo.tags  != null ? effectInfo.tags.Take(effectInfo.tags.Count).ToList() : new List<string>();
 
             if (condition == null)
             {
                 condition = new EffectCondition(this);
             }
-        }
-
-        public virtual void ClearViewList()
-        {
-            effectViewList.Clear();
         }
 
         public void Start()
@@ -99,9 +103,6 @@ namespace MacacaGames.EffectSystem
             condition = new EffectCondition(this);
 
             effectSystem.RegistEffectTriggerCondition(this);
-            AddEffectView(this);
-
-            EffectViewOnStart();
 
             // Sould be Add before Start(), since in some case the effect may deactive immiditily after start, then the condition will be null
             effectSystem.AddToTimerTicker(maintainTimeTimerId, condition.maintainTimeTimer);
@@ -111,17 +112,12 @@ namespace MacacaGames.EffectSystem
             OnStart();
         }
 
-        public virtual void EffectViewOnStart()
-        {
-            foreach (var effectView in effectViewList)
-                effectView.OnStart();
-        }
-
         /// <summary>
         /// Excude when an Effect is attach
         /// </summary>
         protected virtual void OnStart()
         {
+            OnEffectStart?.Invoke();
         }
 
         /// <summary>
@@ -133,6 +129,7 @@ namespace MacacaGames.EffectSystem
             modelsCache = triggerConditionInfo.models;
             InjectModels(this);
             ExecuteActive(triggerConditionInfo);
+            OnEffectActive?.Invoke();
         }
 
         /// <summary>
@@ -144,6 +141,7 @@ namespace MacacaGames.EffectSystem
             modelsCache = triggerConditionInfo.models;
             InjectModels(this);
             ExecuteDeactive(triggerConditionInfo);
+            OnEffectDeactive?.Invoke();
         }
 
         public void ExecuteActive(EffectTriggerConditionInfo triggerConditionInfo)
@@ -152,14 +150,6 @@ namespace MacacaGames.EffectSystem
 
             //觸發 IEffectableObject 的 Callback
             owner.OnEffectActive(info);
-
-            EffectViewOnActive();
-        }
-
-        public virtual void EffectViewOnActive()
-        {
-            foreach (var effectView in effectViewList)
-                effectView.OnActive();
         }
 
         public void ExecuteDeactive(EffectTriggerConditionInfo triggerConditionInfo)
@@ -169,9 +159,6 @@ namespace MacacaGames.EffectSystem
             //觸發 IEffectableObject 的 Callback
             owner.OnEffectDeactive(info);
 
-            EffectViewOnDeactive();
-
-
             //(Flag)Deactive時自動銷毀 >> 不再啟動
             if (info.logic == EffectLifeCycleLogic.OnlyActiveOnce)
             {
@@ -179,10 +166,9 @@ namespace MacacaGames.EffectSystem
             }
         }
 
-        public virtual void EffectViewOnDeactive()
+        public void OnTick()
         {
-            foreach (var effectView in effectViewList)
-                effectView.OnDeactive();
+            OnEffectTick?.Invoke();
         }
 
         public void End()
@@ -204,10 +190,7 @@ namespace MacacaGames.EffectSystem
                 condition.End();
                 condition = null;
                 OnEnd();
-
-                EffectViewOnEnd();
-
-                RemoveEffectView(this);
+                
                 isUsing = false;
             }
 
@@ -217,15 +200,10 @@ namespace MacacaGames.EffectSystem
 #endif
         }
 
-        public virtual void EffectViewOnEnd()
-        {
-            foreach (var effectView in effectViewList)
-                effectView.OnEnd();
-        }
-
         /// <summary>當Effect被消除時執行</summary>
         protected virtual void OnEnd()
         {
+            OnEffectEnd?.Invoke();
         }
 
         /// <summary>
@@ -233,23 +211,17 @@ namespace MacacaGames.EffectSystem
         /// </summary>
         public virtual void OnCooldownEnd()
         {
-            EffectViewOnCooldownEnd();
-        }
-
-        public virtual void EffectViewOnCooldownEnd()
-        {
-            foreach (var effectView in effectViewList)
-                effectView.OnCooldownEnd();
+            OnCEffectooldownEnd?.Invoke();
         }
 
 
         //Sleep就不會再被觸發、提前移除EffectView，等待特定Trigger觸發RemoveSleepyEffect來被移除
+        // View已經和Effect本體拆分
         public bool isSleep { get; private set; }
 
         void SetSleep()
         {
             isSleep = true;
-            RemoveEffectView(this);
         }
 
         public bool RemoveSleepyEffect()
@@ -267,37 +239,6 @@ namespace MacacaGames.EffectSystem
         public void RemoveEffect()
         {
             effectSystem.RemoveEffect(owner, this);
-        }
-
-        public virtual void AddEffectView(EffectInstanceBase effect)
-        {
-#if !Server
-            if (effect.info.viewInfos == null || effect.info.viewInfos.Count == 0)
-                return;
-
-            foreach (var viewInfo in effect.info.viewInfos)
-            {
-                if (viewInfo.prefab == null)
-                    throw new Exception($"[EFFECT] {effect.GetType().Name}(Owner:{effect.owner})有未填入值的ViewInfo.prefab");
-                EffectViewBase effectView =
-                    EffectSystem.Instance.RequestEffectView(effect.info, viewInfo, effect.owner);
-                effectView.transform.rotation = Quaternion.identity; //重設旋轉角度
-                effectViewList.Add(effectView);
-            }
-#endif
-        }
-
-        public virtual void RemoveEffectView(EffectInstanceBase effect)
-        {
-#if !Server
-            foreach (var effectView in effect.effectViewList)
-            {
-                effectSystem.RecoveryEffectView(effectView);
-                //UnityEngine.Object.Destroy(viewAnimator.gameObject);
-            }
-
-            effect.effectViewList.Clear();
-#endif
         }
 
         public int GetValueInt()
