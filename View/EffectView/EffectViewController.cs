@@ -29,7 +29,7 @@ public class EffectViewController : MonoBehaviour
 
     void SpawnEffectView(EffectInstanceBase effect)
     {
-        // EffectViewBase view = Instantiate(TestView);
+        EffectViewBase view = Instantiate(TestView);
         effect.OnEffectActive += view.OnActive;
         effect.OnEffectStart += view.OnStart;
         effect.OnEffectEnd += view.OnEnd;
