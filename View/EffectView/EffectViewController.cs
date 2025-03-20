@@ -4,89 +4,44 @@ using MacacaGames.EffectSystem;
 using MacacaGames.EffectSystem.Model;
 using UnityEngine;
 
-public class EffectViewController : MonoBehaviour
+namespace MacacaGames.EffectSystem
 {
-    [SerializeField]
-    EffectViewBase TestView;
-    
-    public static EffectViewController Instance;
-    
-    public Dictionary<GameObject, Queue<EffectViewBase>> effectViewPool = new Dictionary<GameObject, Queue<EffectViewBase>>();
-    
-    public Action<EffectViewBase> onEffectViewCreated;
+    public class EffectViewController : MonoBehaviour
+    {
+        public static EffectViewController Instance;
 
-    void Awake()
-    {
-        // Test
-        Init("");
-    }
-    
-    public void Init(string viewJson)
-    {
-        EffectSystem.Instance.OnEffectAdded += SpawnEffectView;
-        Instance = this;
-    }
+        public Dictionary<GameObject, Queue<EffectViewBase>> effectViewPool =
+            new Dictionary<GameObject, Queue<EffectViewBase>>();
 
-    void SpawnEffectView(EffectInstanceBase effect)
-    {
-        EffectViewBase view = Instantiate(TestView);
-        effect.OnEffectActive += view.OnActive;
-        effect.OnEffectStart += view.OnStart;
-        effect.OnEffectEnd += view.OnEnd;
-        effect.OnEffectDeactive += view.OnDeactive;
-        effect.OnEffectTick += view.OnTick;
-        effect.OnCEffectooldownEnd += view.OnCooldownEnd;
-        view.Init(effect, new EffectViewInfo());
-        
-        onEffectViewCreated?.Invoke(view);
-    }
-    
+        public Action<EffectViewBase> onEffectViewCreated;
 
-    public EffectViewBase RequestEffectView(EffectInstanceBase effect, EffectViewInfo viewInfo)
-    {
-        if (effectViewPool.TryGetValue(viewInfo.prefab, out var q) == false)
+        private IEffectViewFactory _viewFactory;
+
+        private EffectViewResource _resource;
+
+        public void Init(IEffectViewFactory factory, EffectViewResource viewResource)
         {
-            q = new Queue<EffectViewBase>();
-            effectViewPool.Add(viewInfo.prefab, q);
-        }
-        EffectViewBase effectView = null;
+            EffectSystem.Instance.OnEffectAdded += SpawnEffectView;
+            _viewFactory = factory;
+            _viewFactory.Initialize(viewResource);
 
-        if (q.Count == 0)
+            _resource = viewResource;
+            Instance = this;
+        }
+
+        void SpawnEffectView(EffectInstanceBase effect)
         {
-            GameObject instance = GameObject.Instantiate(viewInfo.prefab);
+            EffectViewBase view = _viewFactory.CreateEffectView(effect);
+            if (view == null) return;
+            effect.OnEffectActive += view.OnActive;
+            effect.OnEffectStart += view.OnStart;
+            effect.OnEffectEnd += view.OnEnd;
+            effect.OnEffectDeactive += view.OnDeactive;
+            effect.OnEffectTick += view.OnTick;
+            effect.OnCEffectooldownEnd += view.OnCooldownEnd;
+            view.Init(effect, new EffectViewInfo());
 
-            effectView = instance.GetComponent<EffectViewBase>();
-
-            if (effectView != null)
-            {
-                NormalizeTransform(effectView.transform);
-                effectView.Init(effect, viewInfo);
-            }
-            else
-            {
-                throw new Exception("[EffectView] 在EffectView上找不到EffectViewBase。");
-            }
+            onEffectViewCreated?.Invoke(view);
         }
-        else
-        {
-            effectView = q.Dequeue();
-            NormalizeTransform(effectView.transform);
-        }
-            
-        return effectView;
-            
-        void NormalizeTransform(Transform t)
-        {
-            t.localPosition = Vector3.zero;
-            t.localScale = Vector3.one;
-        }
-    }
-
-    public void RecoveryEffectView(EffectViewBase effectView)
-    {
-        var queryKey = effectView.viewInfo.prefab;
-    
-        effectViewPool[queryKey].Enqueue(effectView);
-        // effectView.transform.SetParent(effectViewPoolFolder);
     }
 }

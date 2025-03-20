@@ -4,7 +4,7 @@ using MacacaGames.EffectSystem.Model;
 using UnityEngine;
 using MacacaGames.EffectSystem;
 
-    public abstract class EffectViewBase : MonoBehaviour
+    public class EffectViewBase : MonoBehaviour
     {
         protected EffectInstanceBase effectInstance;
         public EffectViewInfo viewInfo { get; protected set; }

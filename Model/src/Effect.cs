@@ -162,25 +162,6 @@ namespace MacacaGames.EffectSystem.Model
 
             return result;
         }
-        
-        [MessagePack.IgnoreMember, Newtonsoft.Json.JsonIgnore]
-        List<EffectViewInfo> _viewInfos;
-        [MessagePack.IgnoreMember, Newtonsoft.Json.JsonIgnore]
-        public List<EffectViewInfo> viewInfos
-        {
-            get
-            {
-                if (_viewInfos == null)
-                {
-                    if (EffectDataProvider.GetEffectViewInfo == null)
-                    {
-                        throw new Exception("Please use EffectDataProvider.SeEffectViewInfoDelegate to assign the impl");
-                    }
-                    _viewInfos = EffectDataProvider.GetEffectViewInfo?.Invoke(viewInfoIds);
-                }
-                return _viewInfos;
-            }
-        }
     }
 
     [MessagePack.MessagePackObject(true)]
