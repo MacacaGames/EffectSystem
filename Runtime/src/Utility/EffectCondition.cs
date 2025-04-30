@@ -147,6 +147,7 @@ namespace MacacaGames.EffectSystem
             {
                 //不會自毀的話才算時間
                 maintainTimeTimer.Start(effectInfo.maintainTime);
+                cooldownTimeTimer.Start(effectInfo.cooldownTime);
             }
         }
 
