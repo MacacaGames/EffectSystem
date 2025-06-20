@@ -8,8 +8,12 @@ namespace MacacaGames.EffectSystem.Model
 {
     public enum TriggerTransType
     {
+        // 跳過新觸發器
         SkipNewOne = 0,
+        // Deactive舊觸發器
         CutOldOne = 1,
+        // 復用舊觸發器，timer不重新start
+        KeepOldOneWithoutTimerReset = 2,
     }
 
     public enum EffectLifeCycleLogic

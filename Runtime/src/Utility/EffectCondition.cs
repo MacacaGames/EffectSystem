@@ -18,6 +18,7 @@ namespace MacacaGames.EffectSystem
         public IEffectTimer cooldownTimeTimer { get; private set; }
 
         public bool isActive { get; private set; }
+        public bool isFirstTimeActive { get; private set; }
 
         public EffectCondition(EffectInstanceBase effectInstance)
         {
@@ -43,6 +44,7 @@ namespace MacacaGames.EffectSystem
             }
 #endif
 
+            isFirstTimeActive = true;
             if (effectInfo.activeCondition == EffectSystemScriptableBuiltIn.ActiveCondition.OnEffectStart)
             {
                 OnActive(new EffectTriggerConditionInfo
@@ -124,6 +126,20 @@ namespace MacacaGames.EffectSystem
 
                     case TriggerTransType.SkipNewOne:
                         return;
+                    
+                    case TriggerTransType.KeepOldOneWithoutTimerReset:
+                    {
+                        if (isFirstTimeActive)
+                        {
+                            isFirstTimeActive = false;
+                        }
+                        else if (!isFirstTimeActive && maintainTimeTimer.IsFinish)
+                        {
+                            isActive = false;
+                            return;
+                        }
+                        break;
+                    }
                 }
             }
 
@@ -145,9 +161,11 @@ namespace MacacaGames.EffectSystem
             }
             else
             {
-                //不會自毀的話才算時間
-                maintainTimeTimer.Start(effectInfo.maintainTime);
-                cooldownTimeTimer.Start(effectInfo.cooldownTime);
+                if (isFirstTimeActive)
+                {
+                    //不會自毀的話才算時間
+                    maintainTimeTimer.Start(effectInfo.maintainTime);
+                }
             }
         }
 
@@ -192,7 +210,6 @@ namespace MacacaGames.EffectSystem
             isActive = false;
 
             maintainTimeTimer.Stop();
-            cooldownTimeTimer.Start(effectInfo.cooldownTime);
 
             effectInstance.OnDeactive(info);
         }
@@ -203,13 +220,6 @@ namespace MacacaGames.EffectSystem
                 return;
 
             effectInstance.OnCooldownEnd();
-            if (effectInfo.logic == EffectLifeCycleLogic.ReactiveAfterCooldownEnd)
-            {
-                OnActive(new EffectTriggerConditionInfo
-                {
-                    owner = effectInstance.owner
-                });
-            }
         }
 
         void OnMaintainTimeEnd()
