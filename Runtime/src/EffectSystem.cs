@@ -843,9 +843,10 @@ namespace MacacaGames.EffectSystem
             }
 
             effectList.Add(effect);
-            effect.Start();
 
             OnEffectAdded?.Invoke(effect);
+            effect.Start();
+            
             return effect;
 #if (UNITY_EDITOR)
             OnEffectChange?.Invoke();   //Callback
