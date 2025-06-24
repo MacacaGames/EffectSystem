@@ -15,15 +15,15 @@ namespace MacacaGames.EffectSystem
 
         public Action<EffectViewBase> onEffectViewCreated;
 
-        private IEffectViewFactory _viewFactory;
+        private List<IEffectViewFactory> _viewFactories = new List<IEffectViewFactory>();
 
         private EffectViewResource _resource;
 
         public void Init(IEffectViewFactory factory, EffectViewResource viewResource)
         {
             EffectSystem.Instance.OnEffectAdded += SpawnEffectView;
-            _viewFactory = factory;
-            _viewFactory.Initialize(viewResource);
+            _viewFactories.Add(factory);
+            factory.Initialize(viewResource);
 
             _resource = viewResource;
             Instance = this;
@@ -31,17 +31,20 @@ namespace MacacaGames.EffectSystem
 
         void SpawnEffectView(EffectInstanceBase effect)
         {
-            EffectViewBase view = _viewFactory.CreateEffectView(effect);
-            if (view == null) return;
-            effect.OnEffectActive += view.OnActive;
-            effect.OnEffectStart += view.OnStart;
-            effect.OnEffectEnd += view.OnEnd;
-            effect.OnEffectDeactive += view.OnDeactive;
-            effect.OnEffectTick += view.OnTick;
-            effect.OnCEffectooldownEnd += view.OnCooldownEnd;
-            view.Init(effect, new EffectViewInfo());
+            foreach (var factory in _viewFactories)
+            {
+                EffectViewBase view = factory.CreateEffectView(effect);
+                if (view == null) continue;
+                effect.OnEffectActive += view.OnActive;
+                effect.OnEffectStart += view.OnStart;
+                effect.OnEffectEnd += view.OnEnd;
+                effect.OnEffectDeactive += view.OnDeactive;
+                effect.OnEffectTick += view.OnTick;
+                effect.OnCEffectooldownEnd += view.OnCooldownEnd;
+                view.Init(effect, new EffectViewInfo());
 
-            onEffectViewCreated?.Invoke(view);
+                onEffectViewCreated?.Invoke(view);
+            }
         }
     }
 }
