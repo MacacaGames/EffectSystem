@@ -39,6 +39,18 @@ namespace MacacaGames.EffectSystem
     /// </summary>
     /// <param name="info"></param>
     void OnEffectDeactive(EffectInfo info);
+    
+    /// <summary>
+    /// Triggered when an Effect Instance start.
+    /// </summary>
+    /// <param name="info"></param>
+    void OnEffectStart(EffectInfo info);
+
+    /// <summary>
+    /// Triggered when an Effect Instance end.
+    /// </summary>
+    /// <param name="info"></param>
+    void OnEffectEnd(EffectInfo info);
 
     /// <summary>
     /// Determines if the object is still "alive".

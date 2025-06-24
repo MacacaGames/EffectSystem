@@ -122,6 +122,8 @@ namespace MacacaGames.EffectSystem
         /// </summary>
         protected virtual void OnStart()
         {
+            //觸發 IEffectableObject 的 Callback
+            owner.OnEffectStart(info);
         }
 
         /// <summary>
@@ -227,6 +229,8 @@ namespace MacacaGames.EffectSystem
         /// <summary>當Effect被消除時執行</summary>
         protected virtual void OnEnd()
         {
+            //觸發 IEffectableObject 的 Callback
+            owner.OnEffectEnd(info);
         }
 
         /// <summary>
