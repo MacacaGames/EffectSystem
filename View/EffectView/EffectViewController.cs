@@ -19,9 +19,13 @@ namespace MacacaGames.EffectSystem
 
         private EffectViewResource _resource;
 
-        public void Init(IEffectViewFactory factory, EffectViewResource viewResource)
+        public EffectViewController()
         {
             EffectSystem.Instance.OnEffectAdded += SpawnEffectView;
+        }
+
+        public void Init(IEffectViewFactory factory, EffectViewResource viewResource)
+        {
             _viewFactories.Add(factory);
             factory.Initialize(viewResource);
 
