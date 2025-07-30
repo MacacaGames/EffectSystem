@@ -401,5 +401,19 @@ namespace MacacaGames.EffectSystem
         }
 
         #endregion
+
+        #region 修改 EffectInfo
+
+        /// <summary>
+        /// 修改 EffectInfo 的各種數值
+        /// </summary>
+        /// <param name="parameterName">example: nameof(info.value)</param>
+        /// <param name="newValue"></param>
+        public void SetEffectInfoValue(string parameterName, object newValue)
+        {
+            info = info.SetEffectInfoValue(parameterName, newValue);
+        }
+
+        #endregion
     }
 }
