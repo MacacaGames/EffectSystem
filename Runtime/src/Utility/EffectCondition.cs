@@ -220,6 +220,13 @@ namespace MacacaGames.EffectSystem
                 return;
 
             effectInstance.OnCooldownEnd();
+            if (effectInfo.activeCondition == EffectSystemScriptableBuiltIn.ActiveCondition.OnEffectCooldownEnd)
+            {
+                OnActive(new EffectTriggerConditionInfo
+                {
+                    owner = effectInstance.owner
+                });
+            }
         }
 
         void OnMaintainTimeEnd()

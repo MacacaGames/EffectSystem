@@ -12,6 +12,7 @@ namespace MacacaGames.EffectSystem
         {
             public const string None = "None";
             public const string OnEffectStart = "OnEffectStart";
+            public const string OnEffectCooldownEnd = "OnEffectCooldownEnd";
         }
         public partial struct TimerTickerId
         {
