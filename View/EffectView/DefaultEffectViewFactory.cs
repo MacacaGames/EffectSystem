@@ -12,7 +12,7 @@ namespace MacacaGames.EffectSystem
         }
         public EffectViewBase CreateEffectView(EffectInstanceBase effectInstance)
         {
-            var prefab = _effectViewResource.GetEffectViewPrefab(effectInstance.info.id);
+            var prefab = _effectViewResource.GetEffectViewPrefab(effectInstance.info.type);
             if (prefab == null) return null;
             Object.Instantiate(prefab).TryGetComponent<EffectViewBase>(out EffectViewBase effectView);
             return effectView;
