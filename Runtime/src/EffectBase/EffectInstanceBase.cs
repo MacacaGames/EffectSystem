@@ -39,7 +39,7 @@ namespace MacacaGames.EffectSystem
 
 
         /// <summary>此EffectType所取得的數值上下限。</summary>
-        public virtual (float min, float max) sumLimit => (min: 0F, max: float.PositiveInfinity);
+        public virtual (float min, float max) sumLimit => (min: float.NegativeInfinity, max: float.PositiveInfinity);
         /// <summary>此EffectType所取得的層數上下限，若超過則會擠掉最舊的effect。</summary>
         public virtual int countLimit => int.MaxValue;
         
