@@ -12,7 +12,7 @@
     "keywords": ["Effect", "Skill"],
     "license": "MIT",
     "dependencies": {
-        "com.macacagames.utility": "1.0.23",
-        "com.neuecc.messagepack": "2.5.1-alpha"
+        "com.macacagames.utility": "1.0.23"
+    
     }
 }

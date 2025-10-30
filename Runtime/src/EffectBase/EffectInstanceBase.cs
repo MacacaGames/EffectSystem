@@ -117,7 +117,8 @@ namespace MacacaGames.EffectSystem
         /// </summary>
         protected virtual void OnStart()
         {
-            OnEffectStart?.Invoke();
+            //觸發 IEffectableObject 的 Callback
+            owner.OnEffectStart(info);
         }
 
         /// <summary>
@@ -160,7 +161,8 @@ namespace MacacaGames.EffectSystem
             owner.OnEffectDeactive(info);
 
             //(Flag)Deactive時自動銷毀 >> 不再啟動
-            if (info.logic == EffectLifeCycleLogic.OnlyActiveOnce)
+            if (info.logic == EffectLifeCycleLogic.OnlyActiveOnce 
+                || info.logic == EffectLifeCycleLogic.ReactiveAfterCooldownEnd && condition.maintainTimeTimer.IsFinish)
             {
                 SetSleep();
             }
@@ -203,7 +205,8 @@ namespace MacacaGames.EffectSystem
         /// <summary>當Effect被消除時執行</summary>
         protected virtual void OnEnd()
         {
-            OnEffectEnd?.Invoke();
+            //觸發 IEffectableObject 的 Callback
+            owner.OnEffectEnd(info);
         }
 
         /// <summary>
@@ -334,6 +337,20 @@ namespace MacacaGames.EffectSystem
                 throw new InvalidOperationException(
                     "When using EffectSystem model biding, each Type only available for one instance, if you would like to bind multiple instance of a Type use Collections(List, Array) instead.");
             }
+        }
+
+        #endregion
+
+        #region 修改 EffectInfo
+
+        /// <summary>
+        /// 修改 EffectInfo 的各種數值
+        /// </summary>
+        /// <param name="parameterName">example: nameof(info.value)</param>
+        /// <param name="newValue"></param>
+        public void SetEffectInfoValue(string parameterName, object newValue)
+        {
+            info = info.SetEffectInfoValue(parameterName, newValue);
         }
 
         #endregion
