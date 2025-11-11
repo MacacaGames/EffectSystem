@@ -1103,7 +1103,6 @@ namespace MacacaGames.EffectSystem
 
 
 
-#if (UNITY_EDITOR)
 
         //Editor階段可以在外部取得EffectQuery
         public Dictionary<string, EffectInstanceList> GetEffectQuery(IEffectableObject owner)
@@ -1121,6 +1120,7 @@ namespace MacacaGames.EffectSystem
             }
         }
 
+#if (UNITY_EDITOR)
 
 
         //Effect變動時的Callback
