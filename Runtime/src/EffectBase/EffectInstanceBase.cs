@@ -91,7 +91,7 @@ namespace MacacaGames.EffectSystem
         public void Start()
         {
 #if (USE_LOG)
-            Debug.Log(GetStartEffectLog());
+            EffectInfoExtensions.Log(GetStartEffectLog());
 #endif
 
             isUsing = true;
@@ -196,8 +196,8 @@ namespace MacacaGames.EffectSystem
             if (isUsing == false)
             {
 #if (UNITY_EDITOR)
-                Debug.LogError($"[Effect Debug] 有一個還沒Start卻呼叫End的Effect\n Owner: {owner},\n Info: {info}");
-                //Debug.Break();
+                EffectInfoExtensions.LogError($"[Effect EffectInfoExtensions] 有一個還沒Start卻呼叫End的Effect\n Owner: {owner},\n Info: {info}");
+                //EffectInfoExtensions.Break();
 #endif
             }
             else
@@ -216,7 +216,7 @@ namespace MacacaGames.EffectSystem
 
 
 #if (USE_LOG)
-            Debug.Log(GetEndEffectLog());
+            EffectInfoExtensions.Log(GetEndEffectLog());
 #endif
         }
 
@@ -261,7 +261,7 @@ namespace MacacaGames.EffectSystem
         {
             if (isSleep == true)
             {
-                Debug.Log($"Recover Sleep Effect: {info}");
+                EffectInfoExtensions.Log($"Recover Sleep Effect: {info}");
                 RemoveEffect();
                 return true;
             }

@@ -3,6 +3,7 @@ using MacacaGames.EffectSystem.Model;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
+using UnityEngine;
 
 public static class EffectInfoExtensions
 {
@@ -39,5 +40,43 @@ public static class EffectInfoExtensions
         
         // 回傳修改後的 EffectInfo 結構體
         return updatedInfo;
+    }
+
+    public static bool isShowBattleLog = true;
+    
+    public static void Log(string msg)
+    {
+        if(!isShowBattleLog) return;
+        Debug.Log(msg);
+    }
+    
+    public static void LogError(string msg)
+    {
+        if(!isShowBattleLog) return;
+        Debug.LogError(msg);
+    }
+    
+    public static void LogWarning(string msg)
+    {
+        if(!isShowBattleLog) return;
+        Debug.LogWarning(msg);
+    }
+    
+    public static void Log(Exception msg)
+    {
+        if(!isShowBattleLog) return;
+        Debug.Log(msg);
+    }
+    
+    public static void LogError(Exception msg)
+    {
+        if(!isShowBattleLog) return;
+        Debug.LogError(msg);
+    }
+    
+    public static void LogWarning(Exception msg)
+    {
+        if(!isShowBattleLog) return;
+        Debug.LogWarning(msg);
     }
 }

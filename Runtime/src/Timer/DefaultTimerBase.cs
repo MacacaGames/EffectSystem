@@ -60,10 +60,10 @@ namespace MacacaGames.EffectSystem
 
         public void Tick(float delta)
         {
-            // Debug.Log($"Tick(float {delta})");
+            // EffectInfoExtensions.Log($"Tick(float {delta})");
             if (isStop == false && isPause == false && currentTime > 0)
             {
-                // Debug.Log($"real Tick(float {delta})");
+                // EffectInfoExtensions.Log($"real Tick(float {delta})");
                 currentTime -= delta;
                 OnTimerTick();
                 TimerCheck();

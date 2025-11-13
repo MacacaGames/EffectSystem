@@ -84,7 +84,7 @@ namespace MacacaGames.EffectSystem
                 {
                     if (requirement.IsRequirementsFulfilled(info) == false)
                     {
-                        Debug.Log($"[Effect Debug] {info} 的 ActiveRequirementList {requirement} 條件不符合，無法啟動");
+                        EffectInfoExtensions.Log($"[Effect EffectInfoExtensions] {info} 的 ActiveRequirementList {requirement} 條件不符合，無法啟動");
                         return;
                     }
                 }
@@ -94,7 +94,7 @@ namespace MacacaGames.EffectSystem
             //檢查機率觸發
             if (random.NextDouble() > effectInfo.activeProbability)
             {
-                //Debug.Log("Active 機率沒中！");
+                //EffectInfoExtensions.Log("Active 機率沒中！");
                 return;
             }
 
@@ -180,7 +180,7 @@ namespace MacacaGames.EffectSystem
                 {
                     if (requirement.IsRequirementsFulfilled(info) == false)
                     {
-                        Debug.Log($"[Effect Debug] {info} 的 ActiveRequirementList {requirement} 條件不符合，無法deactive");
+                        EffectInfoExtensions.Log($"[Effect EffectInfoExtensions] {info} 的 ActiveRequirementList {requirement} 條件不符合，無法deactive");
                         return;
                     }
                 }
@@ -194,7 +194,7 @@ namespace MacacaGames.EffectSystem
                 //檢查機率觸發
                 if (random.NextDouble() > effectInfo.deactiveProbability)
                 {
-                    Debug.Log("Dective 機率沒中！");
+                    EffectInfoExtensions.Log("Dective 機率沒中！");
                     return;
                 }
 

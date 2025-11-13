@@ -92,7 +92,7 @@ namespace MacacaGames.EffectSystem
             }
             else
             {
-                Debug.LogError($"No available timer with id: {Id}, is found, do nothing, you may need to check it out!");
+                EffectInfoExtensions.LogError($"No available timer with id: {Id}, is found, do nothing, you may need to check it out!");
             }
         }
 
@@ -109,7 +109,7 @@ namespace MacacaGames.EffectSystem
             }
             else
             {
-                Debug.LogError($"No available timer with id: {Id}, is found, do nothing, you may need to check it out!");
+                EffectInfoExtensions.LogError($"No available timer with id: {Id}, is found, do nothing, you may need to check it out!");
             }
         }
 
@@ -127,7 +127,7 @@ namespace MacacaGames.EffectSystem
             Type result = effectInstanceBaseType;
             if (EffectTypeInstanceCache.TryGetValue(effectType, out result))
             {
-                Debug.LogWarning(result.ToString());
+                EffectInfoExtensions.LogWarning(result.ToString());
 
                 return result;
             }
@@ -137,18 +137,18 @@ namespace MacacaGames.EffectSystem
             {
                 if (!type.IsSubclassOf(effectInstanceBaseType))
                 {
-                    Debug.LogError($"The EffectTypeInstance implements of EffectType: {effectType}, is not inherit from MacacaGames.EffectSystem.EffectInstanceBase please checked, system will automatically fallback to MacacaGames.EffectSystem.EffectInstanceBase");
-                    Debug.LogWarning(result.ToString());
+                    EffectInfoExtensions.LogError($"The EffectTypeInstance implements of EffectType: {effectType}, is not inherit from MacacaGames.EffectSystem.EffectInstanceBase please checked, system will automatically fallback to MacacaGames.EffectSystem.EffectInstanceBase");
+                    EffectInfoExtensions.LogWarning(result.ToString());
 
                     return result;
                 }
                 EffectTypeInstanceCache.TryAdd(effectType, type);
                 result = type;
-                Debug.LogWarning(result.ToString());
+                EffectInfoExtensions.LogWarning(result.ToString());
                 return result;
             }
             result = effectInstanceBaseType;
-            Debug.LogWarning($"{effectType} implements not found, fallback to {result.ToString()}");
+            EffectInfoExtensions.LogWarning($"{effectType} implements not found, fallback to {result.ToString()}");
 
             return result;
         }
@@ -350,8 +350,8 @@ namespace MacacaGames.EffectSystem
             else
             {
 #if (UNITY_EDITOR)
-                Debug.Log($"[Effect Debug] Owner: {effect.owner},\n Condition: {activeCondition},\n Info: {effect.info}");
-                //Debug.Break();
+                EffectInfoExtensions.Log($"[Effect EffectInfoExtensions] Owner: {effect.owner},\n Condition: {activeCondition},\n Info: {effect.info}");
+                //EffectInfoExtensions.Break();
 #endif
             }
 
@@ -365,8 +365,8 @@ namespace MacacaGames.EffectSystem
             else
             {
 #if (UNITY_EDITOR)
-                Debug.Log($"[Effect Debug] Owner: {effect.owner},\n Condition: {activeCondition},\n Info: {effect.info}");
-                //Debug.Break();
+                EffectInfoExtensions.Log($"[Effect EffectInfoExtensions] Owner: {effect.owner},\n Condition: {activeCondition},\n Info: {effect.info}");
+                //EffectInfoExtensions.Break();
 #endif
             }
         }
@@ -439,7 +439,7 @@ namespace MacacaGames.EffectSystem
 
             if (effect.isUsing == true)
             {
-                Debug.LogError($"嘗試回收一個尚未End的Effect : {effect.info}");
+                EffectInfoExtensions.LogError($"嘗試回收一個尚未End的Effect : {effect.info}");
             }
 
             effectPoolQuery[type].Enqueue(effect);
@@ -843,7 +843,7 @@ namespace MacacaGames.EffectSystem
         {
             if (effectInfos == null)
             {
-                Debug.LogError("[Effect] AddRequestedEffects, Effects為null");
+                EffectInfoExtensions.LogError("[Effect] AddRequestedEffects, Effects為null");
                 return null;
             }
             List<EffectInstanceBase> result = new List<EffectInstanceBase>();
@@ -928,7 +928,7 @@ namespace MacacaGames.EffectSystem
         {
             if (owner.IsAlive() == false)
             {
-                Debug.LogError("[Effect] Effect被附加在一個死體上");
+                EffectInfoExtensions.LogError("[Effect] Effect被附加在一個死體上");
                 return null;
             }
 
@@ -956,7 +956,7 @@ namespace MacacaGames.EffectSystem
             }
             else
             {
-                //Debug.Log($"{owner}:{effectInfo.type} 當前值已達上限({effectList.GetSum()}/{effect.maxEffectValue})");
+                //EffectInfoExtensions.Log($"{owner}:{effectInfo.type} 當前值已達上限({effectList.GetSum()}/{effect.maxEffectValue})");
             }
 
             return effect;
@@ -1083,7 +1083,7 @@ namespace MacacaGames.EffectSystem
             }
             else
             {
-                Debug.LogError($"Owner查無此Type的EffectList。\nowner: {owner}, type: {effect.info.type}, info: {effect.info}");
+                EffectInfoExtensions.LogError($"Owner查無此Type的EffectList。\nowner: {owner}, type: {effect.info.type}, info: {effect.info}");
             }
 
 

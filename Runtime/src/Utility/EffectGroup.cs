@@ -31,7 +31,7 @@ namespace MacacaGames.EffectSystem
 
         public void ExportEffectToJson()
         {
-            Debug.Log(Newtonsoft.Json.JsonConvert.SerializeObject(effects));
+            EffectInfoExtensions.Log(Newtonsoft.Json.JsonConvert.SerializeObject(effects));
         }
 
         public void FromJson(string test)
