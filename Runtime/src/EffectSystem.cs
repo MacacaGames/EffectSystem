@@ -155,6 +155,7 @@ namespace MacacaGames.EffectSystem
 
         #region System Action
         public Action<EffectInstanceBase> OnEffectAdded = null;
+        public Action OnEffectStateChanged = null;
         #endregion
 
 
@@ -263,6 +264,7 @@ namespace MacacaGames.EffectSystem
         public void EffectTriggerCondition(string condition, IEffectableObject owner, IEffectableObject target = null)
         {
             EffectTriggerCondition(condition, owner, new EffectTriggerConditionInfo(owner, target));
+            OnEffectStateChanged?.Invoke();
         }
 
         public void RegistEffectTriggerCondition(EffectInstanceBase effect)
@@ -1126,7 +1128,6 @@ namespace MacacaGames.EffectSystem
         //Effect變動時的Callback
         public Action OnEffectChange;
 
-#endif
 
     }
 
