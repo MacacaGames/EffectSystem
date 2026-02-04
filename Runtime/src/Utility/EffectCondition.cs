@@ -118,6 +118,7 @@ namespace MacacaGames.EffectSystem
                 switch (effectInfo.triggerTransType)
                 {
                     case TriggerTransType.CutOldOne:
+                        isFirstTimeActive = false;
                         ForceDeactive(new EffectTriggerConditionInfo
                         {
                             owner = effectInstance.owner
@@ -125,6 +126,7 @@ namespace MacacaGames.EffectSystem
                         break;
 
                     case TriggerTransType.SkipNewOne:
+                        isFirstTimeActive = false;
                         return;
                     
                     case TriggerTransType.KeepOldOneWithoutTimerReset:
