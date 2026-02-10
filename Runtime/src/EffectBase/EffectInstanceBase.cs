@@ -173,12 +173,16 @@ namespace MacacaGames.EffectSystem
 
             EffectViewOnDeactive();
 
-
-            //(Flag)Deactive時自動銷毀 >> 不再啟動
-            if (info.logic == EffectLifeCycleLogic.OnlyActiveOnce 
-                || info.logic == EffectLifeCycleLogic.ReactiveAfterCooldownEnd && condition.maintainTimeTimer.IsFinish)
+            if (info.logic == EffectLifeCycleLogic.OnlyActiveOnce || info.logic == EffectLifeCycleLogic.None)
             {
                 SetSleep();
+                return;
+            }
+            
+            //(Flag)Deactive時自動銷毀 >> 不再啟動
+            if (info.logic == EffectLifeCycleLogic.ReactiveAfterCooldownEnd && condition.maintainTimeTimer.IsFinish)
+            {
+                condition.cooldownTimeTimer.Start(info.cooldownTime);
             }
         }
 

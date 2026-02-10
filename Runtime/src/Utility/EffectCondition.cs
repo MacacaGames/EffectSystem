@@ -148,6 +148,9 @@ namespace MacacaGames.EffectSystem
             isActive = true;
 
             effectInstance.OnActive(info);
+            
+            cooldownTimeTimer.Reset();
+            cooldownTimeTimer.Stop();
 
             if (effectInfo.deactiveCondition == EffectSystemScriptableBuiltIn.DeactiveCondition.AfterActive)
             {
@@ -212,7 +215,6 @@ namespace MacacaGames.EffectSystem
             isActive = false;
 
             maintainTimeTimer.Stop();
-
             effectInstance.OnDeactive(info);
         }
 
