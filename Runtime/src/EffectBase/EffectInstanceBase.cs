@@ -95,7 +95,7 @@ namespace MacacaGames.EffectSystem
         public void Start()
         {
 #if (USE_LOG)
-            Debug.Log(GetStartEffectLog());
+            EffectInfoExtensions.Log(GetStartEffectLog());
 #endif
 
             isUsing = true;
@@ -160,11 +160,18 @@ namespace MacacaGames.EffectSystem
             //觸發 IEffectableObject 的 Callback
             owner.OnEffectDeactive(info);
 
-            //(Flag)Deactive時自動銷毀 >> 不再啟動
-            if (info.logic == EffectLifeCycleLogic.OnlyActiveOnce 
-                || info.logic == EffectLifeCycleLogic.ReactiveAfterCooldownEnd && condition.maintainTimeTimer.IsFinish)
+            EffectViewOnDeactive();
+
+            if (info.logic == EffectLifeCycleLogic.OnlyActiveOnce || info.logic == EffectLifeCycleLogic.None)
             {
                 SetSleep();
+                return;
+            }
+            
+            //(Flag)Deactive時自動銷毀 >> 不再啟動
+            if (info.logic == EffectLifeCycleLogic.ReactiveAfterCooldownEnd && condition.maintainTimeTimer.IsFinish)
+            {
+                condition.cooldownTimeTimer.Start(info.cooldownTime);
             }
         }
 
@@ -181,8 +188,8 @@ namespace MacacaGames.EffectSystem
             if (isUsing == false)
             {
 #if (UNITY_EDITOR)
-                Debug.LogError($"[Effect Debug] 有一個還沒Start卻呼叫End的Effect\n Owner: {owner},\n Info: {info}");
-                //Debug.Break();
+                EffectInfoExtensions.LogError($"[Effect EffectInfoExtensions] 有一個還沒Start卻呼叫End的Effect\n Owner: {owner},\n Info: {info}");
+                //EffectInfoExtensions.Break();
 #endif
             }
             else
@@ -198,7 +205,7 @@ namespace MacacaGames.EffectSystem
 
 
 #if (USE_LOG)
-            Debug.Log(GetEndEffectLog());
+            EffectInfoExtensions.Log(GetEndEffectLog());
 #endif
         }
 
@@ -231,7 +238,7 @@ namespace MacacaGames.EffectSystem
         {
             if (isSleep == true)
             {
-                Debug.Log($"Recover Sleep Effect: {info}");
+                EffectInfoExtensions.Log($"Recover Sleep Effect: {info}");
                 RemoveEffect();
                 return true;
             }
