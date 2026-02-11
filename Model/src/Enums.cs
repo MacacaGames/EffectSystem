@@ -21,6 +21,7 @@ namespace MacacaGames.EffectSystem.Model
         None = 0,
         OnlyActiveOnce = 1,
         ReactiveAfterCooldownEnd = 2,
+        DestroyAfterMaintainTimeEnd = 3,
     }
 
     public enum ConditionLogic

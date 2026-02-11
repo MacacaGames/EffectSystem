@@ -160,7 +160,7 @@ namespace MacacaGames.EffectSystem
             //觸發 IEffectableObject 的 Callback
             owner.OnEffectDeactive(info);
 
-            EffectViewOnDeactive();
+            // EffectViewOnDeactive();
 
             if (info.logic == EffectLifeCycleLogic.OnlyActiveOnce || info.logic == EffectLifeCycleLogic.None)
             {
