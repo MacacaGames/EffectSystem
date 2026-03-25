@@ -60,15 +60,6 @@ namespace MacacaGames.EffectSystem
 
         public void End()
         {
-            if (isActive == true)
-            {
-                OnDeactive(new EffectTriggerConditionInfo
-                {
-                    owner = effectInstance.owner
-                });
-            }
-
-            maintainTimeTimer.Stop();
         }
 
         // Active / Deactive
@@ -211,7 +202,6 @@ namespace MacacaGames.EffectSystem
         {
             if (effectInstance.RemoveSleepyEffect())
                 return;
-
             isActive = false;
 
             maintainTimeTimer.Stop();
