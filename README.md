@@ -54,6 +54,76 @@ git submodule add https://github.com/MacacaGames/EffectSystem.git MyPackages
 ```
 ---
 
+# Server-side .csproj Setup
+
+If your project uses EffectSystem on the server side (outside Unity), you need to create your own `.csproj` files since they are project-specific and not included in this repository.
+
+Create the following two files **outside** the EffectSystem submodule directory (e.g., in the same parent folder):
+
+### EffectSystem.Model.csproj
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <DefineConstants>Server</DefineConstants>
+        <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="EffectSystem/Model/src/**/*.cs" Exclude="**/*.meta" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <!-- Add your project-specific references here -->
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+        <PackageReference Include="MessagePack.AspNetCoreMvcFormatter" Version="3.1.4" />
+        <PackageReference Include="MessagePack.UnityShims" Version="3.1.4" />
+        <PackageReference Include="MessagePack" Version="3.1.4" />
+    </ItemGroup>
+</Project>
+```
+
+### EffectSystem.Runtime.csproj
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <DefineConstants>Server</DefineConstants>
+        <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="EffectSystem/Runtime/src/**/*.cs" Exclude="**/*.meta" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Reference Include="Sirenix.OdinInspector.Attributes">
+            <HintPath>EffectSystem/Runtime/Dlls/Sirenix.OdinInspector.Attributes.dll</HintPath>
+        </Reference>
+        <Reference Include="Macaca.Utility">
+            <HintPath>EffectSystem/Runtime/Dlls/Macaca.Utility.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="EffectSystem.Model.csproj" />
+    </ItemGroup>
+</Project>
+```
+
+> **Note:** Adjust `HintPath`, `ProjectReference`, and `Compile Include` paths based on where you place these files relative to the EffectSystem submodule. The DLL references (`Sirenix.OdinInspector.Attributes`, `Macaca.Utility`) and any project-specific `ProjectReference` should be configured according to your project's structure.
+
+---
+
 # Fundamentals
 
 ### EffectSystem
