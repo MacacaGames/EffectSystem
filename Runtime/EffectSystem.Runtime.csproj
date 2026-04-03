@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
+        <TargetFramework>net10.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <DefineConstants>Server</DefineConstants>
@@ -19,7 +19,6 @@
 
     <ItemGroup>
         <ProjectReference Include="../Model/EffectSystem.Model.csproj" />
-<!--        <ProjectReference Include="..\..\..\Macaca.EffectSystem.Runtime.Player.csproj" />-->
     </ItemGroup>
     
 </Project>
