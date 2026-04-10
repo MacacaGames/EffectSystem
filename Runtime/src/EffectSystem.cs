@@ -1142,6 +1142,47 @@ namespace MacacaGames.EffectSystem
 
             return effects;
         }
+
+        /// <summary>
+        /// 計算指定 owner 上符合 type 的 active effect 數量，不分配任何集合。
+        /// </summary>
+        public int GetEffectCountByType(IEffectableObject owner, string type, bool onlyGetActive = true)
+        {
+            int count = 0;
+            var effectQuery = GetEffectList(owner);
+            foreach (var effectList in effectQuery.Values)
+            {
+                foreach (var effect in effectList)
+                {
+                    if (effect.info.type == type)
+                    {
+                        if (onlyGetActive && effect.isActive == false) continue;
+                        count++;
+                    }
+                }
+            }
+            return count;
+        }
+
+        /// <summary>
+        /// 計算指定 owner 上符合 tag 的 active effect 數量，不分配任何集合。
+        /// </summary>
+        public int GetEffectCountByTag(IEffectableObject owner, string tag)
+        {
+            int count = 0;
+            var effectQuery = GetEffectList(owner);
+            foreach (var effectList in effectQuery.Values)
+            {
+                foreach (var effect in effectList)
+                {
+                    if (effect.isActive && effect.tags.Contains(tag))
+                    {
+                        count++;
+                    }
+                }
+            }
+            return count;
+        }
         #endregion
 
 
