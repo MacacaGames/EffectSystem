@@ -173,7 +173,7 @@ namespace MacacaGames.EffectSystem
 
             EffectViewOnDeactive();
 
-            if (info.logic == EffectLifeCycleLogic.OnlyActiveOnce || info.logic == EffectLifeCycleLogic.None)
+            if (info.logic == EffectLifeCycleLogic.OnlyActiveOnce || info.logic == EffectLifeCycleLogic.None || condition.maintainTimeTimer.IsFinish)
             {
                 SetSleep();
                 return;
