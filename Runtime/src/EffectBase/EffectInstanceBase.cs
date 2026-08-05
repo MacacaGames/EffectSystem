@@ -133,8 +133,16 @@ namespace MacacaGames.EffectSystem
         public virtual void OnActive(EffectTriggerConditionInfo triggerConditionInfo)
         {
             modelsCache = triggerConditionInfo.models;
-            InjectModels(this);
-            ExecuteActive(triggerConditionInfo);
+            try
+            {
+                InjectModels(this);
+                ExecuteActive(triggerConditionInfo);
+            }
+            finally
+            {
+                // 只清本次同步注入使用的 cache snapshot；成功或例外都不可由 cache 保留 request graph。
+                modelsCache = null;
+            }
         }
 
         /// <summary>
@@ -144,8 +152,16 @@ namespace MacacaGames.EffectSystem
         public virtual void OnDeactive(EffectTriggerConditionInfo triggerConditionInfo)
         {
             modelsCache = triggerConditionInfo.models;
-            InjectModels(this);
-            ExecuteDeactive(triggerConditionInfo);
+            try
+            {
+                InjectModels(this);
+                ExecuteDeactive(triggerConditionInfo);
+            }
+            finally
+            {
+                // Active／Deactive 共用相同 ownership boundary，避免 exception path 留住 request graph。
+                modelsCache = null;
+            }
         }
 
         public void ExecuteActive(EffectTriggerConditionInfo triggerConditionInfo)
@@ -339,7 +355,9 @@ namespace MacacaGames.EffectSystem
 
         #region Inject
 
-        protected static object[] modelsCache = null;
+        // 每顆 effect instance 擁有自己的暫存；不得用 process-static invocation state
+        // 串接兩個同時執行的 request／BattleCore。
+        protected object[] modelsCache = null;
 
         internal void InjectModels(object targetObject)
         {
