@@ -35,6 +35,13 @@ namespace MacacaGames.EffectSystem
 
         void SpawnEffectView(EffectInstanceBase effect)
         {
+            effect.OnEffectActive = null;
+            effect.OnEffectStart = null;
+            effect.OnEffectEnd = null;
+            effect.OnEffectDeactive = null;
+            effect.OnEffectTick = null;
+            effect.OnCEffectooldownEnd = null;
+            
             foreach (var factory in _viewFactories)
             {
                 EffectViewBase view = factory.CreateEffectView(effect);
