@@ -256,6 +256,27 @@ namespace MacacaGames.EffectSystem
         }
 
         /// <summary>
+        /// Returns whether triggering this condition would invoke a registered effect or a global observer.
+        /// Callers on hot paths can use this before constructing EffectTriggerConditionInfo, whose params/list
+        /// fields otherwise allocate even when nobody is listening.
+        /// </summary>
+        public bool HasEffectTriggerConditionListener(string condition, IEffectableObject owner)
+        {
+            if (OnEffectTriggerCondition != null)
+            {
+                return true;
+            }
+
+            if (owner == null || !effectableObjectQuery.TryGetValue(owner, out EffectableObjectInfo ownerInfo))
+            {
+                return false;
+            }
+
+            return (ownerInfo.activeCondition.TryGetValue(condition, out var activeAction) && activeAction != null)
+                   || (ownerInfo.deactiveCondition.TryGetValue(condition, out var deactiveAction) && deactiveAction != null);
+        }
+
+        /// <summary>
         /// Trigger a condition
         /// </summary>
         /// <param name="owner">The target object to apply the trigger</param>
@@ -263,6 +284,11 @@ namespace MacacaGames.EffectSystem
         /// <param name="target">The target to apply a effect, for instance a effect trigger by A object by the effect should apply to B object as target</param>
         public void EffectTriggerCondition(string condition, IEffectableObject owner, IEffectableObject target = null)
         {
+            if (!HasEffectTriggerConditionListener(condition, owner))
+            {
+                return;
+            }
+
             EffectTriggerCondition(condition, owner, new EffectTriggerConditionInfo(owner, target));
             OnEffectTriggerCondition?.Invoke();
         }
