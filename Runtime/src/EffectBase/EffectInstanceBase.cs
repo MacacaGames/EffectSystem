@@ -68,10 +68,23 @@ namespace MacacaGames.EffectSystem
             return "";
         }
 
+        void ClearViewCallbacks()
+        {
+            OnEffectStart = null;
+            OnEffectActive = null;
+            OnEffectDeactive = null;
+            OnEffectEnd = null;
+            OnEffectTick = null;
+            OnCEffectooldownEnd = null;
+        }
+
         public void Reset(EffectInfo effectInfo)
         {
             isUsing = false;
             isSleep = false;
+
+            // 保險清理
+            ClearViewCallbacks();
 
             if (condition != null)
             {
@@ -199,8 +212,10 @@ namespace MacacaGames.EffectSystem
                 condition.End();
                 condition = null;
                 OnEnd();
-                
+
                 isUsing = false;
+
+                ClearViewCallbacks();
             }
 
 
