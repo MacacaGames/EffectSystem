@@ -25,8 +25,10 @@ namespace MacacaGames.EffectSystem
             this._OnTimerStop = _OnTimerStop;
             this._OnTimerTick = _OnTimerTick;
         }
-
-        public bool IsFinish => currentTime <= 0;
+        
+        // startTime = 0 是永久效果，因此Timer不算IsFinish
+        // maintainTimeTimer 曾經啟動過並且已經結束，才會 SetSleep
+        public bool IsFinish => currentTime <= 0 && startTime > 0;
         public bool IsPause => isPause;
         public bool IsStop => isStop;
 
