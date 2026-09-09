@@ -1073,8 +1073,9 @@ namespace MacacaGames.EffectSystem
 
             if (effectQuery.TryGetValue(effect.info.type, out EffectInstanceList effectList))
             {
-                effect.End();
+                // End 回呼會同步查詢效果以刷新 UI，先移除並標記加總快取失效。
                 effectList.Remove(effect);
+                effect.End();
 
                 if (effect.isPooled)
                 {
